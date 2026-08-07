@@ -58,10 +58,36 @@
     },
     "openai_ten_proofs": {
       "commit": "94bc0feb6a9ff12c7d31d6de640a725c9d43d2b6",
+      "exact_roots": {
+        "formalization_manifest": {
+          "path": "formalization.yaml",
+          "sha256": "sha256:464eb3e11eb02d74eab5b5d87d0cbf8d28056ace00a85a5096850523e7e88ff5",
+          "url": "https://raw.githubusercontent.com/openai/ten-proofs/94bc0feb6a9ff12c7d31d6de640a725c9d43d2b6/formalization.yaml"
+        },
+        "lake_manifest": {
+          "path": "lake-manifest.json",
+          "sha256": "sha256:d366c97598e820009831d12376d4e41004b1847ac6074ec79b15bf9e1ea09d46",
+          "url": "https://raw.githubusercontent.com/openai/ten-proofs/94bc0feb6a9ff12c7d31d6de640a725c9d43d2b6/lake-manifest.json"
+        },
+        "lakefile": {
+          "path": "lakefile.toml",
+          "sha256": "sha256:9d59a0912d88d2997584b4a2dfa3cb077e06b71f91823234778e2030a1b02902",
+          "url": "https://raw.githubusercontent.com/openai/ten-proofs/94bc0feb6a9ff12c7d31d6de640a725c9d43d2b6/lakefile.toml"
+        },
+        "lean_toolchain": {
+          "path": "lean-toolchain",
+          "sha256": "sha256:2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e",
+          "url": "https://raw.githubusercontent.com/openai/ten-proofs/94bc0feb6a9ff12c7d31d6de640a725c9d43d2b6/lean-toolchain"
+        },
+        "license": {
+          "path": "LICENSE",
+          "sha256": "sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "url": "https://raw.githubusercontent.com/openai/ten-proofs/94bc0feb6a9ff12c7d31d6de640a725c9d43d2b6/LICENSE"
+        }
+      },
       "kind": "formal_library",
       "repo": "openai/ten-proofs",
       "tree": "174289e4d4958cb0509874e6e53400e098213de7",
-      "unlocked": "no content locator: the url is the repository landing page, not bytes, and this frontier retains no snapshot. The pin is the commit and tree above, both read from the GitHub API at generation time",
       "url": "https://github.com/openai/ten-proofs"
     },
     "physlib": {
@@ -126,7 +152,7 @@
     "vibemathed": {
       "homepage": "https://vibemathed.com",
       "kind": "attribution_registry",
-      "sha256": "sha256:d4c16f768a4110370b2bd47c576af447cfe6f747b2533ccfcaf86f193e0b0931",
+      "sha256": "sha256:ecb40ab98966ef80e9a31b62cee73ca29a8b3c48ed7da717d7c2110876183991",
       "url": "https://vibemathed.com/api/dataset"
     },
     "wiki": {
