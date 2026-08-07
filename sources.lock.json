@@ -14,23 +14,23 @@
       "url": "https://codetables.de/"
     },
     "erdos": {
-      "commit": "5e4e8b5fe1fcf0e6559f67dd1a6d1a8a3c805713",
+      "commit": "5e22e39e81adac467dd36bfbe33ea59c49180bdf",
       "kind": "problem_registry",
       "path": "data/problems.yaml",
       "ref": "main",
       "repo": "teorth/erdosproblems",
       "sha256": "sha256:35f69dec011de1e38db807b475f160a8a9828d3e374dd8028b356406533854e9",
-      "tree": "05610aa2ab54db79c310c0a99d533d339d937ee9",
+      "tree": "1c0d66a19f4bd7981341d6e6e565785518eeb6a4",
       "url": "https://raw.githubusercontent.com/teorth/erdosproblems/main/data/problems.yaml"
     },
     "formal_conjectures": {
-      "commit": "304b9d6dd690286ea726dfe274e258479af60e2a",
+      "commit": "59f30aa314ba225fcd9268723ce8291616df1ab0",
       "kind": "formal_statement_registry",
       "path": "data/conjectures.json",
       "ref": "main",
       "repo": "google-deepmind/formal-conjectures",
       "sha256": "sha256:c0ec2b1ecd8072aa8556bc1f220e0b6cd407ef31a21e7d2cac48b953517e9f58",
-      "tree": "1918ec5ff598809b1f2a97d4cd86340cc1fab9e8",
+      "tree": "f29ccba1cb8f867f60e4adc07abc530e69750c8e",
       "url": "https://google-deepmind.github.io/formal-conjectures/data/conjectures.json"
     },
     "gpt_erdos": {
@@ -124,6 +124,12 @@
       "sha256": "sha256:84ff932308170f4a02d2ec6df1257bce6a1cde56d7d61f850a7de3bc1a75b98e",
       "tree": "1d42e6d9d0fecef7de0c6c2a6e3cf7d58283bab8",
       "url": "https://raw.githubusercontent.com/plby/lean-proofs/main/data/sources.yaml"
+    },
+    "vibemathed": {
+      "homepage": "https://vibemathed.com",
+      "kind": "attribution_registry",
+      "sha256": "sha256:5a9b9dc34333a2ae548048fd33302e15757bb28db5423e9c53f7aa9b9a84aa06",
+      "url": "https://vibemathed.com/api/dataset"
     },
     "wiki": {
       "commit": "c8ad4309d20120c67cb97faa86daa1443acee018",

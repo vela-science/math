@@ -23,12 +23,15 @@
 # consumer cannot silently disagree with us about which of its ids is which of
 # our keys.
 #
-# On what is missing: this repository declares no acquisition it cannot pin.
-# `formal_conjectures` is the one entry whose upstream serves no commit
-# locator, and it is marked `pinnable: false` rather than dressed up as pinned.
-# Two sibling repositories once locked that identical URL at different digests
-# one day apart, which is the whole argument for saying so in the declaration
-# instead of discovering it in a lock diff.
+# On what is missing: two entries acquire bytes that no upstream commit locator
+# will return. `formal_conjectures` reads a GitHub Pages build, and `vibemathed`
+# reads a live API in front of a database whose committed export is a seed
+# rather than the record. Each locks the digest of what was served, and each
+# says so in its own note rather than borrowing a revision that would not serve
+# those bytes back. Every other entry pins a commit. Two sibling repositories
+# once locked that identical Pages URL at different digests one day apart, which
+# is the whole argument for saying it in the declaration instead of discovering
+# it in a lock diff.
 sources:
   erdos:
     source_id: source:erdos-problems
@@ -115,6 +118,44 @@ sources:
     note: >-
       re-acquired 2026-08-07 by cloning at this commit; all 57 problem ids in
       the retained registry appear in the README it serves.
+
+  vibemathed:
+    source_id: source:vibemathed
+    kind: attribution_registry
+    url: https://vibemathed.com/api/dataset
+    homepage: https://vibemathed.com
+    publisher: Rasmus Lindahl (mrconter1)
+    note: >-
+      the community-curated record of mathematical problems first solved with AI
+      assistance. What it originates is the curatorial judgment: that a given
+      problem was solved this way, and that a moderator approved the entry
+      saying so. The proofs are elsewhere, in the arXiv preprints and Lean
+      repositories each entry links out to.
+
+      Catalogue and dataset are CC BY 4.0, stated in the repository README and
+      again in the `license` field of the response itself. The site's code is
+      MIT and is not acquired here.
+
+      Acquired from the live endpoint and not from
+      github.com/mrconter1/vibemathed, whose `src/data/problems.json` is
+      committed and would be pinnable. It would also be the wrong bytes. The
+      README calls the database the source of truth and that file a seed and
+      disaster-recovery snapshot refreshed after catalogue changes, and the
+      export is lossy: checked 2026-08-07, the two agreed on all 509 entries,
+      and the committed copy still dropped `kind` from every link along with the
+      six fields the dataset serves beyond it.
+
+      So the sha256 below names a retrieval, not a revision, and it will differ
+      from the next one for reasons that are not the catalogue. The endpoint
+      serves a cached render whose envelope carries a `generated` stamp inside
+      the hashed bytes. Measured 2026-08-07 it re-rendered about every five
+      minutes: three distinct digests inside twelve, while all 509 entries
+      stayed byte-identical across every one of them. Locking it is still worth
+      doing, because it records what was served at a moment nothing else
+      records. Reading it as a pin is not, and a re-resolution that changes only
+      this digest has observed nothing. The projection adapter therefore roots
+      its records on the catalogue rather than on the envelope, and that root is
+      the one that holds still.
 
   oeis_a309370:
     source_id: source:oeis-a309370
