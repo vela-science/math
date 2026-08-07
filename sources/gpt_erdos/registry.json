@@ -1,0 +1,250 @@
+{
+  "schema": "gpt-erdos-claims.v1",
+  "source": "neelsomani/gpt-erdos README Findings table",
+  "commit": "21b48ae6b97279e9fe6781e3744e1cdd835e2cc1",
+  "snapshot_at": "2026-01-25",
+  "note": "Independent human classification of GPT-5.2-Pro candidate solutions. A claims source for cross-reference, not a proof corpus.",
+  "summary": {
+    "problems": 57,
+    "by_category": {
+      "conditional_conjecture": 4,
+      "hidden_constraints": 15,
+      "literature": 4,
+      "new_proof": 3,
+      "non_improving": 12,
+      "partial_literature": 3,
+      "subtle_error": 13,
+      "typo": 3
+    }
+  },
+  "problems": {
+    "78": {
+      "category": "hidden_constraints",
+      "category_label": "Solved as stated, hidden constraints"
+    },
+    "91": {
+      "category": "hidden_constraints",
+      "category_label": "Solved as stated, hidden constraints"
+    },
+    "142": {
+      "category": "non_improving",
+      "category_label": "Valid but non-improving proofs"
+    },
+    "161": {
+      "category": "typo",
+      "category_label": "Typos identified"
+    },
+    "180": {
+      "category": "non_improving",
+      "category_label": "Valid but non-improving proofs"
+    },
+    "274": {
+      "category": "hidden_constraints",
+      "category_label": "Solved as stated, hidden constraints"
+    },
+    "281": {
+      "category": "new_proof",
+      "category_label": "New proofs"
+    },
+    "302": {
+      "category": "non_improving",
+      "category_label": "Valid but non-improving proofs"
+    },
+    "332": {
+      "category": "non_improving",
+      "category_label": "Valid but non-improving proofs"
+    },
+    "335": {
+      "category": "subtle_error",
+      "category_label": "Subtle errors"
+    },
+    "369": {
+      "category": "hidden_constraints",
+      "category_label": "Solved as stated, hidden constraints"
+    },
+    "397": {
+      "category": "new_proof",
+      "category_label": "New proofs"
+    },
+    "514": {
+      "category": "non_improving",
+      "category_label": "Valid but non-improving proofs"
+    },
+    "517": {
+      "category": "subtle_error",
+      "category_label": "Subtle errors"
+    },
+    "524": {
+      "category": "hidden_constraints",
+      "category_label": "Solved as stated, hidden constraints"
+    },
+    "533": {
+      "category": "subtle_error",
+      "category_label": "Subtle errors"
+    },
+    "538": {
+      "category": "subtle_error",
+      "category_label": "Subtle errors"
+    },
+    "539": {
+      "category": "conditional_conjecture",
+      "category_label": "Conditional on conjectures"
+    },
+    "550": {
+      "category": "subtle_error",
+      "category_label": "Subtle errors"
+    },
+    "591": {
+      "category": "literature",
+      "category_label": "Exact literature solutions identified"
+    },
+    "602": {
+      "category": "subtle_error",
+      "category_label": "Subtle errors"
+    },
+    "647": {
+      "category": "conditional_conjecture",
+      "category_label": "Conditional on conjectures"
+    },
+    "652": {
+      "category": "new_proof",
+      "category_label": "New proofs"
+    },
+    "655": {
+      "category": "non_improving",
+      "category_label": "Valid but non-improving proofs"
+    },
+    "662": {
+      "category": "typo",
+      "category_label": "Typos identified"
+    },
+    "665": {
+      "category": "hidden_constraints",
+      "category_label": "Solved as stated, hidden constraints"
+    },
+    "686": {
+      "category": "hidden_constraints",
+      "category_label": "Solved as stated, hidden constraints"
+    },
+    "690": {
+      "category": "hidden_constraints",
+      "category_label": "Solved as stated, hidden constraints"
+    },
+    "705": {
+      "category": "subtle_error",
+      "category_label": "Subtle errors"
+    },
+    "726": {
+      "category": "non_improving",
+      "category_label": "Valid but non-improving proofs"
+    },
+    "731": {
+      "category": "subtle_error",
+      "category_label": "Subtle errors"
+    },
+    "734": {
+      "category": "subtle_error",
+      "category_label": "Subtle errors"
+    },
+    "743": {
+      "category": "conditional_conjecture",
+      "category_label": "Conditional on conjectures"
+    },
+    "783": {
+      "category": "subtle_error",
+      "category_label": "Subtle errors"
+    },
+    "788": {
+      "category": "partial_literature",
+      "category_label": "Partial literature extensions"
+    },
+    "792": {
+      "category": "non_improving",
+      "category_label": "Valid but non-improving proofs"
+    },
+    "796": {
+      "category": "non_improving",
+      "category_label": "Valid but non-improving proofs"
+    },
+    "847": {
+      "category": "literature",
+      "category_label": "Exact literature solutions identified"
+    },
+    "850": {
+      "category": "hidden_constraints",
+      "category_label": "Solved as stated, hidden constraints"
+    },
+    "858": {
+      "category": "non_improving",
+      "category_label": "Valid but non-improving proofs"
+    },
+    "864": {
+      "category": "subtle_error",
+      "category_label": "Subtle errors"
+    },
+    "866": {
+      "category": "hidden_constraints",
+      "category_label": "Solved as stated, hidden constraints"
+    },
+    "888": {
+      "category": "subtle_error",
+      "category_label": "Subtle errors"
+    },
+    "893": {
+      "category": "non_improving",
+      "category_label": "Valid but non-improving proofs"
+    },
+    "906": {
+      "category": "hidden_constraints",
+      "category_label": "Solved as stated, hidden constraints"
+    },
+    "943": {
+      "category": "hidden_constraints",
+      "category_label": "Solved as stated, hidden constraints"
+    },
+    "954": {
+      "category": "hidden_constraints",
+      "category_label": "Solved as stated, hidden constraints"
+    },
+    "969": {
+      "category": "non_improving",
+      "category_label": "Valid but non-improving proofs"
+    },
+    "1014": {
+      "category": "conditional_conjecture",
+      "category_label": "Conditional on conjectures"
+    },
+    "1021": {
+      "category": "hidden_constraints",
+      "category_label": "Solved as stated, hidden constraints"
+    },
+    "1022": {
+      "category": "typo",
+      "category_label": "Typos identified"
+    },
+    "1063": {
+      "category": "subtle_error",
+      "category_label": "Subtle errors"
+    },
+    "1084": {
+      "category": "partial_literature",
+      "category_label": "Partial literature extensions"
+    },
+    "1092": {
+      "category": "hidden_constraints",
+      "category_label": "Solved as stated, hidden constraints"
+    },
+    "1105": {
+      "category": "partial_literature",
+      "category_label": "Partial literature extensions"
+    },
+    "1129": {
+      "category": "literature",
+      "category_label": "Exact literature solutions identified"
+    },
+    "1130": {
+      "category": "literature",
+      "category_label": "Exact literature solutions identified"
+    }
+  }
+}

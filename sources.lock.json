@@ -1,0 +1,108 @@
+{
+  "sources": {
+    "alphaproof": {
+      "commit": "0647711a71183c1ea492ad60860776617ce1ea88",
+      "kind": "formal_library",
+      "repo": "google-deepmind/alphaproof-nexus-results",
+      "tree": "f5b237b85887066fac14f98a51fd059aaf952184",
+      "unlocked": "no content locator: the url is the repository landing page, not bytes, and this frontier retains no snapshot. The pin is the commit and tree above, both read from the GitHub API at generation time",
+      "url": "https://github.com/google-deepmind/alphaproof-nexus-results"
+    },
+    "codetables": {
+      "kind": "reference_only",
+      "unlocked": "reference only: the frontier records that this was consulted, not what it said, so no bytes are retained and there is no content root to compute",
+      "url": "https://codetables.de/"
+    },
+    "erdos": {
+      "commit": "6b29b7fd619c3c79a91653c7f1251ad704fb5cfa",
+      "kind": "problem_registry",
+      "path": "data/problems.yaml",
+      "ref": "main",
+      "repo": "teorth/erdosproblems",
+      "sha256": "sha256:35f69dec011de1e38db807b475f160a8a9828d3e374dd8028b356406533854e9",
+      "tree": "973d45a9e61009a1970e6ea9e423bce9885a6939",
+      "url": "https://raw.githubusercontent.com/teorth/erdosproblems/main/data/problems.yaml"
+    },
+    "formal_conjectures": {
+      "commit": "f40ecd9b3b79a7aa1a64b7d2f3b2623d4a6c3081",
+      "kind": "formal_statement_registry",
+      "path": "data/conjectures.json",
+      "ref": "main",
+      "repo": "google-deepmind/formal-conjectures",
+      "sha256": "sha256:c0ec2b1ecd8072aa8556bc1f220e0b6cd407ef31a21e7d2cac48b953517e9f58",
+      "tree": "01d33fbdbd35d5c8a00519d75be45c9cdd1601bb",
+      "url": "https://google-deepmind.github.io/formal-conjectures/data/conjectures.json"
+    },
+    "gpt_erdos": {
+      "commit": "21b48ae6b97279e9fe6781e3744e1cdd835e2cc1",
+      "kind": "frozen_snapshot",
+      "path": "sources/gpt_erdos/registry.json",
+      "paths": [
+        "README.md"
+      ],
+      "repo": "neelsomani/gpt-erdos",
+      "sha256": "sha256:c0f626a4792d6b150b79268807ea2f9316f2b09be5475fb6ee1b14f630bc1136"
+    },
+    "jayyhk": {
+      "commit": "a5ffc87b3d684fc00ea906b9e746c283740da900",
+      "kind": "proof_manifest",
+      "path": "data/problems.yaml",
+      "ref": "main",
+      "repo": "Jayyhk/erdos-lean",
+      "sha256": "sha256:eaae98288cf600fa7f647f5da03fe91d307dfe7576d718cf36239a47ed1d2efb",
+      "tree": "4072053047a13d59e2b0e96c463e64671eb960f0",
+      "url": "https://raw.githubusercontent.com/Jayyhk/erdos-lean/main/data/problems.yaml"
+    },
+    "oeis_a309370": {
+      "kind": "sequence_database",
+      "sha256": "sha256:5b6231e03be447eb7c4162e3c7b2646da898e016c915ac0401ea182e6261044c",
+      "url": "https://oeis.org/A309370?fmt=json"
+    },
+    "openai_ten_proofs": {
+      "commit": "94bc0feb6a9ff12c7d31d6de640a725c9d43d2b6",
+      "kind": "formal_library",
+      "repo": "openai/ten-proofs",
+      "tree": "174289e4d4958cb0509874e6e53400e098213de7",
+      "unlocked": "no content locator: the url is the repository landing page, not bytes, and this frontier retains no snapshot. The pin is the commit and tree above, both read from the GitHub API at generation time",
+      "url": "https://github.com/openai/ten-proofs"
+    },
+    "physlib": {
+      "commit": "e882411d1b6bcbdfdd336d4c509c6cc72e96842d",
+      "kind": "formal_library",
+      "repo": "leanprover-community/physlib",
+      "tree": "23c105e133d8c28cb5df81a8b6be52f0f25c0247",
+      "unlocked": "no content locator: the url is the repository landing page, not bytes, and this frontier retains no snapshot. The pin is the commit and tree above, both read from the GitHub API at generation time",
+      "url": "https://github.com/leanprover-community/physlib"
+    },
+    "plby": {
+      "commit": "68da20b96673899166e94638f5a7fffeb7231d35",
+      "kind": "proof_manifest",
+      "path": "data/sources.yaml",
+      "ref": "main",
+      "repo": "plby/lean-proofs",
+      "sha256": "sha256:84ff932308170f4a02d2ec6df1257bce6a1cde56d7d61f850a7de3bc1a75b98e",
+      "tree": "1d42e6d9d0fecef7de0c6c2a6e3cf7d58283bab8",
+      "url": "https://raw.githubusercontent.com/plby/lean-proofs/main/data/sources.yaml"
+    },
+    "wiki": {
+      "commit": "c8ad4309d20120c67cb97faa86daa1443acee018",
+      "kind": "frozen_snapshot",
+      "path": "sources/wiki/registry.json",
+      "paths": [
+        "AI-contributions-to-Erd\u0151s-problems.md"
+      ],
+      "repo": "teorth/erdosproblems.wiki",
+      "sha256": "sha256:65f7f510a2f2edaafbb73b6a26e365394228bc48b18d3c54e2dee5c01b7bb092"
+    },
+    "williamjblair_lean_proofs": {
+      "commit": "a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0",
+      "kind": "proof_manifest",
+      "path": "proofs.yaml",
+      "ref": "main",
+      "repo": "williamjblair/lean-proofs",
+      "sha256": "sha256:cc558c2b3a2cdee8db48bfae4a70b6c5ef307b00be3d29bd77a2d69bb9b653cb",
+      "tree": "dbbe69fa2dbdd73f5e398bbd799115dbbdc9cc27",
+      "url": "https://raw.githubusercontent.com/williamjblair/lean-proofs/main/proofs.yaml"
+    }
+  }
+}

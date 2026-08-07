@@ -1,0 +1,7378 @@
+{
+  "schema": "erdos-ai-wiki-snapshot.v1",
+  "source": "teorth/erdosproblems wiki: AI-contributions-to-Erdős-problems",
+  "wiki_commit": "c8ad4309d20120c67cb97faa86daa1443acee018",
+  "frozen_at": "2026-06-30",
+  "note": "Frozen 2026-06-30; spine = sections 1(a-d) + 2(b) formalization. Secondary 2(a)/2(c)/2(d) (literature/rewriting/computation) link out.",
+  "summary": {
+    "problems": 353,
+    "entries": 441,
+    "by_section": {
+      "1(a)": 61,
+      "1(b)": 25,
+      "1(c)": 38,
+      "1(d)": 132,
+      "2(b)": 185
+    },
+    "by_color": {
+      "green": 263,
+      "red": 17,
+      "white": 43,
+      "yellow": 118
+    }
+  },
+  "problems": {
+    "7": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "2 May, 2026",
+        "humans": [
+          "Jinook Lee"
+        ],
+        "outcome": {
+          "color": "red",
+          "label": "Incorrect proof found",
+          "lean": false
+        }
+      }
+    ],
+    "11": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Aristotle",
+          "GPT"
+        ],
+        "date": "24 Jan, 2026",
+        "outcome": {
+          "color": "red",
+          "label": "Incorrect claim made",
+          "lean": false
+        }
+      }
+    ],
+    "12": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "DeepMind prover agent"
+        ],
+        "date": "7 Apr, 2026",
+        "literature": "Erdős and Sárközy (1970)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean) (solutions to first part and second part)",
+          "lean": true
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Thinking"
+        ],
+        "date": "7 Apr, 2026",
+        "humans": [
+          "Nat Sothanaphan",
+          "Terence Tao"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "16": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Antigravity",
+          "Gemini 3.1 Pro"
+        ],
+        "date": "25 Feb, 2026",
+        "proof_to_formalize": "Chen (2023)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "21": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.5 Pro"
+        ],
+        "date": "23 Jun, 2026",
+        "humans": [
+          "Varun Sivashankar"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "24": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "23 Apr-26 May, 2026",
+        "proof_to_formalize": "Grzesik (2012)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "25": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "19 Mar, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "26": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "DeepMind prover agent"
+        ],
+        "date": "6 Apr, 2026",
+        "literature": "Ruzsa",
+        "outcome": {
+          "color": "green",
+          "label": "Solution to stronger problem",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "28 Dec, 2025",
+        "proof_to_formalize": "Ruzsa",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "31": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "GPT"
+        ],
+        "date": "24 Nov, 2025",
+        "proof_to_formalize": "Lorentz (1954), Wouter van Doorn (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "34": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "5 Feb, 2026",
+        "proof_to_formalize": "Konieczny (2015)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "36": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "29 Jun, 2026",
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "AlphaEvolve"
+        ],
+        "date": "3 Nov, 2025",
+        "literature": "Haugland (2016)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Slight improvement to past construction",
+          "lean": false
+        }
+      }
+    ],
+    "38": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "25 Apr, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "1 May, 2026",
+        "proof_to_formalize": "GPT-5.5 Pro (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "42": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.2",
+          "GPT-5.2 Pro"
+        ],
+        "date": "19 Jan, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "27 Apr, 2026",
+        "humans": [
+          "Harjas Sandhu"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.5 Pro"
+        ],
+        "date": "10 May, 2026",
+        "proof_to_formalize": "GPT-5.5 Pro (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "43": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "4 Dec, 2025",
+        "literature": "Barreto (2025)",
+        "outcome": {
+          "color": "yellow",
+          "label": "New proof of partial result (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "Claude"
+        ],
+        "date": "21 Dec, 2025",
+        "proof_to_formalize": "Barreto (2025)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "51": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "ChatGPT free version"
+        ],
+        "date": "11 Jan, 2026",
+        "outcome": {
+          "color": "red",
+          "label": "Incorrect proof found",
+          "lean": false
+        }
+      }
+    ],
+    "52": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Claude Mythos"
+        ],
+        "date": "3 Jun, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Solution to variant problem",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "28 May, 2026",
+        "humans": [
+          "Thomas Bloom",
+          "Will Sawin",
+          "Carl Schildkraut",
+          "Dmitrii Zhelezov"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Solution to variant problem",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5"
+        ],
+        "date": "28 May, 2026",
+        "humans": [
+          "Ingo Althöfer"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Improved bound to variant problem",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5"
+        ],
+        "date": "4 Jun, 2026",
+        "humans": [
+          "Boris Alexeev"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate solution to variant problem",
+          "lean": false
+        }
+      }
+    ],
+    "56": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "GPT"
+        ],
+        "date": "25 Nov, 2025-27 May, 2026",
+        "proof_to_formalize": "Ahlswede and Khachatrian (1995)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "71": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "Claude Opus 4.7",
+          "GPT-5.5"
+        ],
+        "date": "24 May, 2026",
+        "proof_to_formalize": "Bollobás (1977)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "75": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Aletheia"
+        ],
+        "date": "1 Feb, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Solution to variant problem (implicit in literature)",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "12 Apr, 2026",
+        "literature": "Erdős, Hajnal, and Szemerédi (1982)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "81": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.5 Pro"
+        ],
+        "date": "19 Jun, 2026",
+        "humans": [
+          "Wouter van Doorn"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "90": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "OpenAI internal model"
+        ],
+        "date": "20 May, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Claude Mythos"
+        ],
+        "date": "26 May, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "21 May-9 Jun, 2026",
+        "humans": [
+          "Ingo Althöfer",
+          "Michael Emmerich",
+          "Paata Ivanisvili",
+          "Tomasz Kania",
+          "leloy",
+          "mlewko",
+          "Eric Naslund",
+          "norxornor",
+          "Will Sawin",
+          "Carl Schildkraut",
+          "spiderduckpig",
+          "Tseng"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Improved explicit bound",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aleph Prover"
+        ],
+        "date": "28 May-12 Jun, 2026",
+        "proof_to_formalize": "OpenAI internal model (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "93": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "Claude Opus 4.5",
+          "Claude Opus 4.6",
+          "Gemini 3 Flash",
+          "Gemini 3 Pro",
+          "Numina Lean Agent"
+        ],
+        "date": "17 Feb, 2026",
+        "proof_to_formalize": "Altman (1963)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "94": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.2 Thinking; Seed Prover"
+        ],
+        "date": "15 Jan, 2026",
+        "proof_to_formalize": "Lefmann and Thiele (1995)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "105": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "GPT Pro"
+        ],
+        "date": "17 Nov, 2025",
+        "proof_to_formalize": "Xichuan (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "106": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "10 Dec, 2025",
+        "proof_to_formalize": "Baek, Koizumi, and Ueoro (2024)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "115": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "Claude Opus 4.6",
+          "Claude Sonnet 4.6",
+          "Gemini 3 Flash",
+          "Gemini 3.1 Pro",
+          "ulam.ai scaffold with Gemini 3 Flash and Gemini 3.1 Pro"
+        ],
+        "date": "3 Mar, 2026",
+        "proof_to_formalize": "Eremenko and Lempert (1994)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "120": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "DeepMind prover agent"
+        ],
+        "date": "14 Mar, 2026",
+        "literature": "de Reyna (1983)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Solution to variant problem (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "124": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "29 Nov, 2025",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "125": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "DeepMind prover agent"
+        ],
+        "date": "21 Feb, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Solution to variant problem (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "DeepMind prover agent"
+        ],
+        "date": "30 Mar, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "134": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "7 Feb, 2026",
+        "proof_to_formalize": "Alon",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "138": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "DeepMind prover agent"
+        ],
+        "date": "10 Apr, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Thinking"
+        ],
+        "date": "10 Apr, 2026",
+        "humans": [
+          "Nat Sothanaphan"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result of variant problem",
+          "lean": false
+        }
+      }
+    ],
+    "150": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "31 Mar, 2026",
+        "proof_to_formalize": "Bradač (2024)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "152": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "DeepMind prover agent"
+        ],
+        "date": "3 Apr, 2026",
+        "literature": "Erdős, Sárközy, and Sós (1994)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "154": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "GPT"
+        ],
+        "date": "6 Feb, 2026",
+        "proof_to_formalize": "Lindström (1998)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "164": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Codex"
+        ],
+        "date": "4 May, 2026",
+        "proof_to_formalize": "Alexeev, Barreto, Li, Lichtman, Price, Shah, Tang, and Tao (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "165": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Trellis"
+        ],
+        "date": "10 Jun, 2026",
+        "proof_to_formalize": "Hefty, Horn, King and Pfender (2025)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "176": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.5 Pro"
+        ],
+        "date": "23 Jun, 2026",
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.5 Pro"
+        ],
+        "date": "21 Jun, 2026",
+        "literature": "Hunter (2026)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "178": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "21 Apr, 2026",
+        "proof_to_formalize": "Beck (1981)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "189": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "Gemini 3 Pro"
+        ],
+        "date": "17 Dec, 2025",
+        "proof_to_formalize": "Kovač (2023)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "192": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "9-10 May, 2026",
+        "proof_to_formalize": "Keränen (1992)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "194": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "15 Apr, 2026",
+        "proof_to_formalize": "Ardal, Brown, and Jungić (2011)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "198": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "AlphaProof"
+        ],
+        "date": "2025",
+        "literature": "Baumgartner (1975)",
+        "outcome": {
+          "color": "green",
+          "label": "New proof found",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "GPT"
+        ],
+        "date": "24 Nov, 2025",
+        "proof_to_formalize": "Baumgartner (1975)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "199": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "24 Feb, 2026",
+        "proof_to_formalize": "Baumgartner (1975)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "202": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "23 Apr, 2026",
+        "humans": [
+          "Boon Suan Ho"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "30 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Unspecified"
+        ],
+        "date": "14 May, 2026",
+        "proof_to_formalize": "Boon Suan Ho and GPT-5.4 Pro (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "204": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "15 Mar, 2026",
+        "proof_to_formalize": "Adenwalla (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "205": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.2 Thinking"
+        ],
+        "date": "10 Jan, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "206": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "28 Apr, 2026",
+        "proof_to_formalize": "Kovač (2024)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "209": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "AxiomProver"
+        ],
+        "date": "19 Jun, 2026",
+        "proof_to_formalize": "Escudero (2016)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "214": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "2 Mar, 2026",
+        "proof_to_formalize": "Juhász (1979)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "218": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "GPT"
+        ],
+        "date": "28 Jan, 2026",
+        "literature": "Banks (2023)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Conditional solution",
+          "lean": false
+        }
+      }
+    ],
+    "221": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "31 Jan, 2026",
+        "proof_to_formalize": "Ruzsa (1972) + van Doorn (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "224": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.2 Thinking"
+        ],
+        "date": "14 Jan, 2026",
+        "literature": "Danzer and Grünbaum (1962)",
+        "outcome": {
+          "color": "green",
+          "label": "New proof found (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "226": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "29 Dec, 2025",
+        "proof_to_formalize": "Sato and Rankin (1974)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "229": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "28 Dec, 2025",
+        "proof_to_formalize": "Barth and Schneider (1972)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "231": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "9 May, 2026",
+        "proof_to_formalize": "Keränen (1992)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "233": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.2 Pro"
+        ],
+        "date": "18 Jan, 2026",
+        "outcome": {
+          "color": "red",
+          "label": "Incorrect (conditional) proof found",
+          "lean": false
+        }
+      }
+    ],
+    "237": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "4 Apr, 2026",
+        "proof_to_formalize": "Chen and Ding (2022)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "246": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "28 Dec, 2025",
+        "proof_to_formalize": "Birch (1959)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "251": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "15 Apr, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Solution to variant problem",
+          "lean": false
+        }
+      }
+    ],
+    "258": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "14 Apr, 2026",
+        "literature": "Tao and Teräväinen (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "14 Apr, 2026",
+        "proof_to_formalize": "GPT-5.4 Pro (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "259": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "21 Apr, 2026",
+        "proof_to_formalize": "Chen and Ruzsa (1999)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "263": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Aristotle",
+          "Claude Opus 4.7",
+          "GPT-5.5 Pro"
+        ],
+        "date": "9 May, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean) (solution to second part)",
+          "lean": true
+        }
+      }
+    ],
+    "264": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "18 Dec, 2025",
+        "literature": "Kovač and Tao (2024)",
+        "outcome": {
+          "color": "yellow",
+          "label": "New proof of partial result (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "268": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "13 Apr-26 May, 2026",
+        "proof_to_formalize": "Kovač (2024)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "275": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "20 Jan, 2026",
+        "proof_to_formalize": "Balister, Bollobas, Morris, Sahasrabudhe, and Tiba (2020)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "280": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "18 Apr, 2026",
+        "proof_to_formalize": "Cambie (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "281": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "GPT-5.2 Pro"
+        ],
+        "date": "17 Jan, 2026",
+        "literature": "Davenport and Erdős (1936) + Rogers (in Halberstam-Roth (1966))",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "Gemini 3 Flash"
+        ],
+        "date": "19 Jan, 2026",
+        "proof_to_formalize": "GPT-5.2 Pro (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "283": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "3 May, 2026",
+        "humans": [
+          "Kevin Barreto",
+          "Liam Price"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "28 Mar, 2026",
+        "proof_to_formalize": "van Doorn (2025)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Formalization",
+          "lean": true
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Claude Opus 4.7",
+          "GPT-5.5 Pro"
+        ],
+        "date": "6 May, 2026",
+        "proof_to_formalize": "Barreto, GPT-5.5 Pro, and Price (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "288": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Thinking"
+        ],
+        "date": "3 May, 2026",
+        "humans": [
+          "Ritvik Nayak"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result",
+          "lean": false
+        }
+      }
+    ],
+    "290": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "14 Jan, 2026",
+        "proof_to_formalize": "van Doorn (2024)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "296": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "22 Apr-26 May, 2026",
+        "proof_to_formalize": "Hunter and Sawhney",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "303": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Seed Prover"
+        ],
+        "date": "21 Dec, 2025",
+        "proof_to_formalize": "Brown and Rödl (1991)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "306": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Claude",
+          "Claude Code"
+        ],
+        "date": "17 Jun, 2026",
+        "humans": [
+          "Shisheng Li"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Unspecified"
+        ],
+        "date": "19 Jun, 2026",
+        "humans": [
+          "Yuren Tang"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "314": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "1 Apr, 2026",
+        "proof_to_formalize": "Lim and Steinerberger (2024)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "315": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "31 Jan, 2026",
+        "proof_to_formalize": "Kamio (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "326": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "Codex",
+          "GPT-5.5"
+        ],
+        "date": "20 May-14 Jun, 2026",
+        "humans": [
+          "Aron Bhalla"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "327": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5",
+          "Rethlas"
+        ],
+        "date": "13 May, 2026",
+        "humans": [
+          "Yu Leon Liu"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result",
+          "lean": false
+        }
+      }
+    ],
+    "328": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "AxiomProver"
+        ],
+        "date": "19 Jun, 2026",
+        "proof_to_formalize": "Nešetřil and Rödl (1985)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "330": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "24 Apr, 2026",
+        "humans": [
+          "David Turturean"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.5 Pro"
+        ],
+        "date": "5 May, 2026",
+        "proof_to_formalize": "GPT-5.5 Pro and Turturean (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "331": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "31 Jan, 2026",
+        "proof_to_formalize": "Ruzsa",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "333": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "Claude Opus 4.5",
+          "GPT-5.2 Pro"
+        ],
+        "date": "25 Dec, 2025",
+        "literature": "Erdős and Newman (1977)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "337": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "10 Dec, 2025",
+        "proof_to_formalize": "Ruzsa and Turjányi (1985)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "342": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.2 Pro",
+          "GPT-5.4 Pro"
+        ],
+        "date": "20 Jan-23 Mar, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "345": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "GPT"
+        ],
+        "date": "16 May, 2026",
+        "humans": [
+          "Wouter van Doorn"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "346": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.5 Pro"
+        ],
+        "date": "19 Jun, 2026",
+        "literature": "Burr and Erdős (1981)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Solution to variant problem (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Codex",
+          "GPT"
+        ],
+        "date": "21 Jun, 2026",
+        "humans": [
+          "Kenta Kitamura"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "347": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "Claude Opus",
+          "Codex",
+          "GPT"
+        ],
+        "date": "25 Oct, 2025-4 Feb, 2026",
+        "humans": [
+          "Enrique Barschkis",
+          "Wouter van Doorn",
+          "jbbaehr22",
+          "Bartosz Naskrecki",
+          "Terence Tao"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "349": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "GPT-5.2 Thinking"
+        ],
+        "date": "9 Mar, 2026",
+        "literature": "van Doorn (2026)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Improved partial result",
+          "lean": false
+        }
+      }
+    ],
+    "350": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "GPT"
+        ],
+        "date": "25 Nov, 2025",
+        "proof_to_formalize": "Ryavec (1974)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "351": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "3 May, 2026",
+        "humans": [
+          "Kevin Barreto",
+          "Liam Price"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Claude Opus 4.7",
+          "GPT-5.5 Pro"
+        ],
+        "date": "6 May, 2026",
+        "proof_to_formalize": "Barreto, GPT-5.5 Pro, and Price (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "352": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro",
+          "GPT-5.5 Pro"
+        ],
+        "date": "29 May, 2026",
+        "humans": [
+          "Aleksandar Bulj",
+          "Vjekoslav Kovač"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result of variant problem",
+          "lean": false
+        }
+      }
+    ],
+    "353": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "19-20 Jun, 2026",
+        "proof_to_formalize": "Kovač and Predojević (2024) + Koizumi (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "355": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "Gemini 3"
+        ],
+        "date": "30 Jan-13 Mar, 2026",
+        "proof_to_formalize": "van Doorn and Kovač (2025) (almost the entirety)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "358": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.2 Pro"
+        ],
+        "date": "11 Feb, 2026",
+        "outcome": {
+          "color": "red",
+          "label": "Argument with major gaps made",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.2 Thinking"
+        ],
+        "date": "13-20 Feb, 2026",
+        "humans": [
+          "Nat Sothanaphan"
+        ],
+        "outcome": {
+          "color": "red",
+          "label": "Argument with major gaps made",
+          "lean": false
+        }
+      }
+    ],
+    "363": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "10 Mar, 2026",
+        "proof_to_formalize": "Ulas (2005)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "366": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "Automated research pipeline"
+        ],
+        "date": "14 Apr, 2026",
+        "literature": "Aktaş and Murty (2017)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Conditional partial result",
+          "lean": false
+        }
+      }
+    ],
+    "367": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "Gemini Deep Think"
+        ],
+        "date": "20-22 Nov, 2025",
+        "humans": [
+          "Boris Alexeev",
+          "Wouter van Doorn",
+          "Terence Tao"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "22 Nov, 2025",
+        "proof_to_formalize": "van Doorn and Tao (2025)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "368": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "17 Feb, 2026",
+        "proof_to_formalize": "Pólya (1918)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "369": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT"
+        ],
+        "date": "26 Mar, 2026",
+        "humans": [
+          "Sky Yang"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "27 Mar, 2026",
+        "proof_to_formalize": "GPT and Yang (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "370": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "GPT"
+        ],
+        "date": "24 Nov, 2025",
+        "proof_to_formalize": "Steinerberger (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "374": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "31 Mar, 2026",
+        "humans": [
+          "Terence Tao"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "379": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Seed Prover 1.5"
+        ],
+        "date": "21 Dec, 2025",
+        "literature": "Cambie, Kovač, and Tao (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "New proof found",
+          "lean": false
+        }
+      }
+    ],
+    "380": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "31 Mar, 2026",
+        "humans": [
+          "Terence Tao"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "388": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Claude",
+          "Gemini",
+          "GPT-5.4"
+        ],
+        "date": "12-15 Mar, 2026",
+        "humans": [
+          "Malek Zribi"
+        ],
+        "outcome": {
+          "color": "red",
+          "label": "Incorrect proof found",
+          "lean": false
+        }
+      }
+    ],
+    "390": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "2 May, 2026",
+        "humans": [
+          "Samuel Mausberg"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result",
+          "lean": false
+        }
+      }
+    ],
+    "392": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Various"
+        ],
+        "date": "6 Jan-23 Feb, 2026",
+        "proof_to_formalize": "Tao (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "393": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "3 May, 2026",
+        "humans": [
+          "David Turturean"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Conditional partial result",
+          "lean": false
+        }
+      }
+    ],
+    "396": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Claude",
+          "Codex",
+          "GPT"
+        ],
+        "date": "15 Mar, 2026",
+        "humans": [
+          "Malek Zribi"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro",
+          "GPT-5.4 Thinking"
+        ],
+        "date": "5-7 Apr, 2026",
+        "humans": [
+          "Justin Dehorty",
+          "Nat Sothanaphan"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Related result",
+          "lean": false
+        }
+      }
+    ],
+    "397": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.2 Pro"
+        ],
+        "date": "10 Jan, 2026",
+        "literature": "China TST competition (2012)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "Aletheia"
+        ],
+        "date": "2 Feb, 2026",
+        "literature": "China TST competition (2012)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "399": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Codex"
+        ],
+        "date": "Feb 2026",
+        "proof_to_formalize": "Barfield (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "400": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT"
+        ],
+        "date": "22 Jun, 2026",
+        "humans": [
+          "Eric Li"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result",
+          "lean": false
+        }
+      }
+    ],
+    "401": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.2 Pro"
+        ],
+        "date": "10-11 Jan, 2026",
+        "humans": [
+          "Boris Alexeev",
+          "Kevin Barreto",
+          "Liam Price",
+          "Nat Sothanaphan"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean); solution to variant problem",
+          "lean": true
+        }
+      }
+    ],
+    "403": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "AxiomProver"
+        ],
+        "date": "19 Jun, 2026",
+        "proof_to_formalize": "Unspecified",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "411": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Claude"
+        ],
+        "date": "3 Apr, 2026",
+        "humans": [
+          "hoodieuser"
+        ],
+        "outcome": {
+          "color": "red",
+          "label": "Incorrect proof found",
+          "lean": false
+        }
+      }
+    ],
+    "415": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "19 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "418": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "GPT"
+        ],
+        "date": "22 Nov, 2025",
+        "proof_to_formalize": "Browkin and Schinzel (1995)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "419": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "31 Jan, 2026",
+        "proof_to_formalize": "Sawhney (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "423": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.2 Thinking",
+          "GPT-5.4 Thinking"
+        ],
+        "date": "11-12 Mar, 2026",
+        "humans": [
+          "Quanyu Tang",
+          "Nat Sothanaphan"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "425": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "GPT"
+        ],
+        "date": "5-17 May, 2026",
+        "proof_to_formalize": "Erdős (1938)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "426": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "20 Apr, 2026",
+        "proof_to_formalize": "Bradač and Christoph (2024)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "427": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "26 Apr, 2026",
+        "proof_to_formalize": "Pilatte",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "429": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "29 Jan, 2026",
+        "proof_to_formalize": "Weisenberg (2024)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "432": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "23 Jun, 2026",
+        "humans": [
+          "Sungchul Lee"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result",
+          "lean": false
+        }
+      }
+    ],
+    "433": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "Claude Opus 4.8",
+          "Claude Sonnet 4.6",
+          "Gemini 3 Flash",
+          "Gemini 3.1 Pro",
+          "Project Numina"
+        ],
+        "date": "24 Feb-29 May, 2026",
+        "proof_to_formalize": "Dixmier (1990)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "434": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "Claude Opus 4.8"
+        ],
+        "date": "24 Feb-29 May, 2026",
+        "proof_to_formalize": "Continued from [433] formalization",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "435": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "4 Feb, 2026",
+        "proof_to_formalize": "Cambie (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "441": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "AxiomProver"
+        ],
+        "date": "19 Jun, 2026",
+        "proof_to_formalize": "Chen and Dai (2007)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "443": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "4 Feb, 2026",
+        "proof_to_formalize": "Hegyvári (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "447": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "10 Feb, 2026",
+        "proof_to_formalize": "Kleitman (1971)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "451": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.5 Pro"
+        ],
+        "date": "26 Apr-19 Jun, 2026",
+        "humans": [
+          "Wouter van Doorn",
+          "Quanyu Tang"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "453": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "31 Jan, 2026",
+        "proof_to_formalize": "Pomerance (1979)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "456": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "4 May, 2026",
+        "humans": [
+          "David Turturean"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result (solutions to first part and second part; conditional solution to third part)",
+          "lean": false
+        }
+      }
+    ],
+    "457": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.2 Pro"
+        ],
+        "date": "2 Mar, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "459": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "11 Mar, 2026",
+        "proof_to_formalize": "Cambie (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "460": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.2"
+        ],
+        "date": "13 Jan, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Reduction to a simpler problem",
+          "lean": false
+        }
+      }
+    ],
+    "464": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "21 Jun, 2026",
+        "proof_to_formalize": "de Mathan (1980)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "476": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "31 Dec, 2025",
+        "proof_to_formalize": "Alon, Nathanson, and Ruzsa (1995)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "477": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "AlphaProof"
+        ],
+        "date": "7 Jan, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Solution to variant problem (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "480": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "28 Nov, 2025",
+        "proof_to_formalize": "Chung and Graham (1984)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "481": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "Claude"
+        ],
+        "date": "1 Dec, 2025",
+        "proof_to_formalize": "Barreto (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "484": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "15 Apr, 2026",
+        "proof_to_formalize": "Erdős, Sárközy, and Sós (1989)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "487": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "16 Feb, 2026",
+        "proof_to_formalize": "Kleitman (1971)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "488": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "27 Nov, 2025",
+        "literature": "Cambie (2025)",
+        "outcome": {
+          "color": "yellow",
+          "label": "New solution to variant problem (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.4"
+        ],
+        "date": "20 Mar, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "490": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.5 Pro"
+        ],
+        "date": "17 May, 2026",
+        "proof_to_formalize": "Szemerédi (1976)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "493": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Aristotle",
+          "GPT",
+          "Seed Prover"
+        ],
+        "date": "2025",
+        "literature": "Seamans (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "New or existing proof found (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "497": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "4 Feb, 2026",
+        "proof_to_formalize": "Kleitman (1969)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "498": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "Claude Opus",
+          "Gemini Flash",
+          "Gemini Pro"
+        ],
+        "date": "Jan 27, 2026",
+        "proof_to_formalize": "Kleitman (1965)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "499": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "29 Nov, 2025",
+        "proof_to_formalize": "Marcus and Minc (1962)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "501": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "29 May-1 Jun, 2026",
+        "humans": [
+          "Sungchul Lee"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate conditional partial result (conditional solution to first part)",
+          "lean": false
+        }
+      }
+    ],
+    "502": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "2 Feb, 2026",
+        "proof_to_formalize": "Petrov and Pohoata (2021)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "503": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.4 Pro"
+        ],
+        "date": "22 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "red",
+          "label": "Argument with major gaps made",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "27-28 May, 2026",
+        "humans": [
+          "Przemek Chojecki",
+          "Junnosuke Koizumi",
+          "RealBelgian"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "505": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "2 Feb, 2026",
+        "proof_to_formalize": "Kahn and Kalai (1993)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "507": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "AlphaEvolve"
+        ],
+        "date": "3 Nov, 2025",
+        "literature": "Friedman (2015)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Surpassed some past constructions",
+          "lean": false
+        }
+      }
+    ],
+    "512": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "22 Jun, 2026",
+        "proof_to_formalize": "McGehee, Pigno, and Smith (1981)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "513": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "GPT-5.2 Thinking"
+        ],
+        "date": "1 Mar, 2026",
+        "literature": "He and Tang (2026)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Slight improvement to past construction",
+          "lean": false
+        }
+      }
+    ],
+    "514": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "20 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (solutions to first part and second part)",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "28 Apr, 2026",
+        "humans": [
+          "Yuta Oriike"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean) (solution to third part)",
+          "lean": true
+        }
+      }
+    ],
+    "519": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "19 Apr, 2026",
+        "proof_to_formalize": "Atkinson (1961)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "521": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "25 Apr, 2026",
+        "humans": [
+          "Vjekoslav Kovač"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Solution to variant problem",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "30 Apr, 2026",
+        "humans": [
+          "Vjekoslav Kovač"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "524": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Gemini",
+          "GPT-5.2",
+          "Grok"
+        ],
+        "date": "30 Jan, 2026",
+        "literature": "Sawhney (2025)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Improved partial result",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "21 Apr, 2026",
+        "humans": [
+          "Brayden Letwin",
+          "Mehtaab Sawhney"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "535": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Thinking"
+        ],
+        "date": "27 Apr, 2026",
+        "humans": [
+          "Kireet Cheri",
+          "Sourish Kumrawat",
+          "Hrishi Sunder"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (implicit in literature)",
+          "lean": false
+        }
+      }
+    ],
+    "536": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.5 Pro"
+        ],
+        "date": "22 Jun, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "537": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "6 Feb, 2026",
+        "proof_to_formalize": "Ruzsa",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "539": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.5",
+          "ProofCouncil"
+        ],
+        "date": "10 Jun, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "540": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "15 Apr, 2026",
+        "proof_to_formalize": "Szemerédi (1970)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "541": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "GPT"
+        ],
+        "date": "30 Dec, 2025",
+        "proof_to_formalize": "Grynkiewicz (2011)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "543": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "GPT-5.2 Pro"
+        ],
+        "date": "21 Jan, 2026",
+        "literature": "Erdős and Hall (1977)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "550": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT"
+        ],
+        "date": "22 Jun, 2026",
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "582": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "5 Feb, 2026",
+        "proof_to_formalize": "Folkman (1970)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "593": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT"
+        ],
+        "date": "23 Jun, 2026",
+        "humans": [
+          "Eric Li"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "598": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.4 Pro"
+        ],
+        "date": "22 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result",
+          "lean": false
+        }
+      }
+    ],
+    "603": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "21 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.5"
+        ],
+        "date": "17 May, 2026",
+        "proof_to_formalize": "Chojecki and GPT-5.4 Pro (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "610": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.4 Pro"
+        ],
+        "date": "21 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean) (implicit in literature)",
+          "lean": true
+        }
+      }
+    ],
+    "613": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "GPT Pro"
+        ],
+        "date": "4 Nov, 2025",
+        "proof_to_formalize": "Pikhurko (2001)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "616": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Claude Sonnet 4.5",
+          "Gemini 3 Pro",
+          "GPT-5.2 Pro"
+        ],
+        "date": "18 Jan, 2026",
+        "outcome": {
+          "color": "red",
+          "label": "Incorrect proof found",
+          "lean": false
+        }
+      }
+    ],
+    "618": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "8 Feb, 2026",
+        "proof_to_formalize": "Alon",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "619": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Claude Fable 5",
+          "Codex",
+          "GPT-5.5"
+        ],
+        "date": "9 Jun, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "621": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "19 Apr, 2026",
+        "proof_to_formalize": "Norin and Sun (2016)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "623": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "4 Jun, 2026",
+        "humans": [
+          "Sungchul Lee"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "629": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "Gemini 3.1 Pro",
+          "GPT-5.4 Thinking"
+        ],
+        "date": "4 Apr, 2026",
+        "literature": "Erdős (1964) + Erdős, Rubin, and Taylor (1980)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "635": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.2 Pro"
+        ],
+        "date": "30 Jan, 2026",
+        "literature": "Elliott (1979) (reduces one part of problem to a much simpler one)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Solution to one part of problem (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "639": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "3 May, 2026",
+        "proof_to_formalize": "Keevash and Sudakov (2004)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "645": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "GPT"
+        ],
+        "date": "23 Nov, 2025",
+        "proof_to_formalize": "Brown and Landman (1999)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "646": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "27 Feb, 2026",
+        "proof_to_formalize": "Berend (1997)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "647": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "ChatGPT Deep research",
+          "DeepSeek DeepThink",
+          "Gemini"
+        ],
+        "date": "28 Jan, 2026",
+        "outcome": {
+          "color": "red",
+          "label": "Incorrect proof found",
+          "lean": false
+        }
+      }
+    ],
+    "648": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "4 Feb, 2026",
+        "proof_to_formalize": "Cambie (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "649": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "GPT"
+        ],
+        "date": "7 Feb-1 Jun, 2026",
+        "proof_to_formalize": "Tong; Sampaio",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "650": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "6-7 Mar, 2026",
+        "literature": "Erdős and Selfridge (1978)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (stronger than literature)",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "6-8 Mar, 2026",
+        "proof_to_formalize": "He, Li and Tang (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "654": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Aletheia"
+        ],
+        "date": "1 Feb, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "658": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "20 Apr, 2026",
+        "proof_to_formalize": "Solymosi (2004)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "659": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "Aletheia"
+        ],
+        "date": "2 Feb, 2026",
+        "literature": "Sheffer and Lund (2014);  Grayzel (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Gemini 3"
+        ],
+        "date": "13 Jan, 2026",
+        "humans": [
+          "Benjamin Grayzel"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "14 Jan, 2026",
+        "proof_to_formalize": "Gemini and Grayzel (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "666": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "6 Feb, 2026",
+        "proof_to_formalize": "Chung (1992), Brouwer, Dejter, and Thomassen (1993)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "671": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.5 Pro"
+        ],
+        "date": "22 Jun, 2026",
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "675": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "18 Apr, 2026",
+        "humans": [
+          "Boon Suan Ho"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "678": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "7 Jan, 2026",
+        "proof_to_formalize": "Cambie (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "679": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "12 Jan, 2026",
+        "literature": "DottedCalculator (2025)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Improved proof by reducing dependence on prime number theorem",
+          "lean": false
+        }
+      }
+    ],
+    "684": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "OpenAI internal model"
+        ],
+        "date": "31 Mar, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.2 Thinking"
+        ],
+        "date": "19 Jan, 2026",
+        "humans": [
+          "Quanyu Tang"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Thinking"
+        ],
+        "date": "2 Apr, 2026",
+        "humans": [
+          "Nat Sothanaphan"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "686": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "AlphaProof",
+          "Claude",
+          "Gemini Deep Think",
+          "GPT-5.2 Thinking",
+          "GPT-5.4 Thinking",
+          "Seed 2.0 Pro"
+        ],
+        "date": "9 Aug, 2025-15 Mar, 2026",
+        "humans": [
+          "Adenwalla",
+          "Stijn Cambie",
+          "Wouter van Doorn",
+          "Vjekoslav Kovač",
+          "Miklos",
+          "Nat Sothanaphan",
+          "Quanyu Tang",
+          "Terence Tao",
+          "vilc",
+          "Malek Zribi"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Various partial results",
+          "lean": false
+        }
+      }
+    ],
+    "689": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.2",
+          "GPT-5.5 Pro"
+        ],
+        "date": "29 Oct, 2025-2 Jun, 2026",
+        "humans": [
+          "Boris Alexeev",
+          "Przemek Chojecki",
+          "Dogmachine",
+          "jleng01",
+          "Mehtaab Sawhney",
+          "Terence Tao",
+          "Malek Zribi"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "690": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Multiscalar Fields System"
+        ],
+        "date": "8 May, 2026",
+        "humans": [
+          "Davide Crapis",
+          "Shouqiao Wang"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "692": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "2 Apr, 2026",
+        "proof_to_formalize": "Cambie (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "694": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "1 May, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "Claude Code",
+          "Claude Opus 4.7",
+          "GPT-5.5 Pro"
+        ],
+        "date": "3 May-5 Jun, 2026",
+        "proof_to_formalize": "GPT-5.5 Pro (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "696": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "Claude Code",
+          "Claude Opus 4.7",
+          "GPT-5.5 Pro"
+        ],
+        "date": "26 Apr-5 Jun, 2026",
+        "humans": [
+          "Jake Mallen",
+          "David Turturean"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "698": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "16 Jan, 2026",
+        "proof_to_formalize": "Bergman (2011)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "707": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "GPT"
+        ],
+        "date": "23 Nov, 2025",
+        "proof_to_formalize": "Hall (1947)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "716": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "20 Jun, 2026",
+        "proof_to_formalize": "Ruzsa and Szemerédi (1978)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "728": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.2 Pro"
+        ],
+        "date": "6 Jan, 2026",
+        "literature": "Pomerance (2014)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "22 Jan, 2026",
+        "proof_to_formalize": "Pomerance (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "729": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.2 Pro"
+        ],
+        "date": "8-10 Jan, 2026",
+        "literature": "Aristotle, Barreto, and GPT-5.2 Pro (2026) (full solution to [728])",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "730": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "24 Jun, 2026",
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "731": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT"
+        ],
+        "date": "27 Jun, 2026",
+        "humans": [
+          "Eric Li"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "741": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "DeepMind prover agent"
+        ],
+        "date": "31 Mar, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean) (solution to variant of first part; solution to second part)",
+          "lean": true
+        }
+      },
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "OpenAI internal model"
+        ],
+        "date": "31 Mar, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (solution to second part)",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "DeepMind prover agent"
+        ],
+        "date": "16 Apr, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "749": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Thinking"
+        ],
+        "date": "4-6 Apr, 2026",
+        "humans": [
+          "Aron Bhalla"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result;  Solution to variant problem",
+          "lean": false
+        }
+      }
+    ],
+    "750": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "3 May, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Claude Code",
+          "Claude Opus 4.7",
+          "GPT-5.5 Pro"
+        ],
+        "date": "4 May, 2026",
+        "proof_to_formalize": "Chojecki and GPT-5.5 Pro (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "751": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "GPT-5.2-Codex",
+          "GPT-5.2 Thinking"
+        ],
+        "date": "27 Jan, 2026",
+        "proof_to_formalize": "Bondy and Vince (1998)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "753": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "14 Apr, 2026",
+        "proof_to_formalize": "Alon (1992)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "756": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "15 Mar, 2026",
+        "proof_to_formalize": "Bhowmick (2024)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "760": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "23 Apr-2 Jun, 2026",
+        "proof_to_formalize": "Alon, Krivelevich, and Sudakov (1997)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "762": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "Claude Opus 4.7",
+          "GPT"
+        ],
+        "date": "8 Feb-3 Jun, 2026",
+        "proof_to_formalize": "Steiner (2024)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "765": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "16 May, 2026",
+        "proof_to_formalize": "Aigner and Ziegler (1998)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "768": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT"
+        ],
+        "date": "22 Jun, 2026",
+        "humans": [
+          "Eric Li"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "775": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "19 Apr-3 Jun, 2026",
+        "proof_to_formalize": "Gao (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "776": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.2 Thinking"
+        ],
+        "date": "11 Feb, 2026",
+        "humans": [
+          "Yixin He",
+          "Quanyu Tang"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "783": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.2"
+        ],
+        "date": "23 Jan, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "785": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "6 Mar, 2026",
+        "proof_to_formalize": "Narkiewicz (1959/60) +  Ruzsa (2015)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "788": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "GPT-5.2 Pro"
+        ],
+        "date": "20 Jan, 2026",
+        "literature": "Hunter (2025)",
+        "outcome": {
+          "color": "yellow",
+          "label": "New partial result",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "20 Jan, 2026",
+        "proof_to_formalize": "GPT-5.2 Pro (2026)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "794": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "5 Feb, 2026",
+        "proof_to_formalize": "Harris (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "798": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "8 May, 2026",
+        "proof_to_formalize": "Alon (1991)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "818": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "25 Apr, 2026",
+        "proof_to_formalize": "Solymosi (2009)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "819": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5",
+          "Rethlas"
+        ],
+        "date": "15 May, 2026",
+        "humans": [
+          "Yu Leon Liu"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result",
+          "lean": false
+        }
+      }
+    ],
+    "835": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "AlphaProof"
+        ],
+        "date": "26 Dec, 2025",
+        "proof_to_formalize": "Likely folklore",
+        "outcome": {
+          "color": "yellow",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "836": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "27 Apr, 2026",
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result (solution to second part)",
+          "lean": false
+        }
+      }
+    ],
+    "844": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "26 Apr, 2026",
+        "proof_to_formalize": "Chvátal (1974) + Weisenberg",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "845": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "8 Jan, 2026 (one form of result), 21 Jan, 2026 (second form)",
+        "proof_to_formalize": "van Doorn and Everts (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "846": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "DeepMind prover agent; OpenAI internal model (independently)"
+        ],
+        "date": "21-25 Feb, 2026",
+        "literature": "Reiher, Rödl, and Sales (2024)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean);  Full solution",
+          "lean": true
+        }
+      }
+    ],
+    "848": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Gemini 3.1 Pro",
+          "GPT-5.2 Thinking",
+          "GPT-5.4 Thinking"
+        ],
+        "date": "5-23 Mar, 2026",
+        "literature": "Sawhney (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Derived explicit bound;  Partial result of variant problem",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Claude Opus 4.6",
+          "GPT-5.4"
+        ],
+        "date": "12-15 Mar, 2026",
+        "humans": [
+          "Malek Zribi"
+        ],
+        "outcome": {
+          "color": "red",
+          "label": "Incorrect proof found",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5"
+        ],
+        "date": "12 Oct-20 Nov, 2025",
+        "humans": [
+          "Mehtaab Sawhney",
+          "Mark Sellke"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "Claude",
+          "GPT-5.2"
+        ],
+        "date": "28 Jan, 2026",
+        "proof_to_formalize": "Sawhney (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "851": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "GPT-5.2 Pro"
+        ],
+        "date": "Feb 5, 2026",
+        "literature": "Matthews (1982);  Green and Sawhney (unpublished)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (building upon  Romanoff (1934))",
+          "lean": false
+        }
+      }
+    ],
+    "852": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4"
+        ],
+        "date": "15 Apr, 2026",
+        "humans": [
+          "Aron Bhalla"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "24 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki",
+          "David Turturean"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result",
+          "lean": false
+        }
+      }
+    ],
+    "856": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "15 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "858": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "15 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "862": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "21 Jan, 2026",
+        "proof_to_formalize": "Saxton and Thomason (2015)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "863": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "22 Apr, 2026",
+        "humans": [
+          "Boon Suan Ho"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "865": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "21-22 Jun, 2026",
+        "humans": [
+          "Ricky Cipollini"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "866": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.3 Instant"
+        ],
+        "date": "4 May, 2026",
+        "humans": [
+          "Wouter van Doorn"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "867": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "7 Apr, 2026",
+        "proof_to_formalize": "Freud (1993)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "868": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "GPT-5.2 multi-agent system"
+        ],
+        "date": "13 Jan, 2026",
+        "literature": "Erdős and Nathanson (1989)",
+        "outcome": {
+          "color": "yellow",
+          "label": "New partial result",
+          "lean": false
+        }
+      }
+    ],
+    "870": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro",
+          "GPT-5.5 Pro"
+        ],
+        "date": "24 Apr-May 2, 2026",
+        "humans": [
+          "David Turturean"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "871": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Claude Opus 4.5",
+          "Gemini 3 Pro"
+        ],
+        "date": "5 Jan, 2026",
+        "literature": "Erdős and Nathanson (1989)",
+        "outcome": {
+          "color": "green",
+          "label": "Existing partial result upgraded to full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "872": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.2 Pro"
+        ],
+        "date": "16 Feb, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "16 Apr, 2026",
+        "humans": [
+          "Om_Buddhdev_sensho"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "29 Apr, 2026",
+        "humans": [
+          "Jonas Silva"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result",
+          "lean": false
+        }
+      }
+    ],
+    "873": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Thinking"
+        ],
+        "date": "29 Apr, 2026",
+        "humans": [
+          "Ritvik Nayak"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Thinking"
+        ],
+        "date": "30 Apr, 2026",
+        "humans": [
+          "Ingo Althöfer"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result",
+          "lean": false
+        }
+      }
+    ],
+    "875": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.5 Pro"
+        ],
+        "date": "7 May, 2026",
+        "humans": [
+          "Lech Mazur"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "888": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Claude Opus 4.5",
+          "Gemini 3 Pro",
+          "GPT-5.2 Thinking"
+        ],
+        "date": "18 Jan, 2026",
+        "outcome": {
+          "color": "red",
+          "label": "Incorrect proof found",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.5 Pro"
+        ],
+        "date": "25 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "896": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "26 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "897": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "Archivara",
+          "Aristotle"
+        ],
+        "date": "26 Dec, 2025",
+        "literature": "Wirsing (1981)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "27 Nov, 2025",
+        "proof_to_formalize": "Erdős and Wirsing (1975)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "898": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "Gemini 3 Flash"
+        ],
+        "date": "28 Jan, 2026",
+        "proof_to_formalize": "Barrow and Mordell (1937)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "904": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "18 Apr, 2026",
+        "proof_to_formalize": "Bollobás and Nikiforov (2005)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "905": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.4"
+        ],
+        "date": "7 Apr, 2026",
+        "proof_to_formalize": "Khadžiivanov and Nikiforov (1979)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "906": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Unspecified"
+        ],
+        "date": "25 Apr, 2026",
+        "humans": [
+          "Adriano Almeida"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "25 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "907": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "7 Apr, 2026",
+        "proof_to_formalize": "de Bruijn (1951)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "914": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "15 Apr, 2026",
+        "proof_to_formalize": "Kierstead and Kostochka (2008)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "923": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "20 Apr, 2026",
+        "proof_to_formalize": "Rödl (1977)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "927": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "5 Jun, 2026",
+        "proof_to_formalize": "Spencer (1971)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "931": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Claude",
+          "GPT-5.4"
+        ],
+        "date": "12 Mar-8 Jun, 2026",
+        "humans": [
+          "Adenwalla",
+          "Malek Zribi"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "935": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "Aletheia"
+        ],
+        "date": "1 Feb, 2026",
+        "literature": "van Doorn (2025) (solution to one part of [367])",
+        "outcome": {
+          "color": "yellow",
+          "label": "Solution to one part of problem",
+          "lean": false
+        }
+      }
+    ],
+    "942": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Gemini"
+        ],
+        "date": "23 Nov, 2025",
+        "literature": "Erdős (unpublished, 1976)",
+        "outcome": {
+          "color": "yellow",
+          "label": "New proof found",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "Claude Opus 4.8",
+          "Codex",
+          "GPT-5.5"
+        ],
+        "date": "13-14 Jun, 2026",
+        "humans": [
+          "Scott Hughes"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "943": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "3 Feb-18 Mar, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "947": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "GPT"
+        ],
+        "date": "2 Feb, 2026",
+        "proof_to_formalize": "Mirsky and Newman + Davenport and Rado",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "948": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.5 Pro"
+        ],
+        "date": "21 Jun, 2026",
+        "literature": "Erdős and Galvin (1991)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "949": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "AlphaProof"
+        ],
+        "date": "7 Jan, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Solution to variant problem (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "951": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.2 Pro"
+        ],
+        "date": "27 Jan, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Solution to variant problem",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "AlphaEvolve"
+        ],
+        "date": "28 Jan, 2026",
+        "literature": "Barreto, GPT-5.2 Pro, and Price (2026) + GPT-5.2 Thinking and Sothanaphan (2026) (solution to variant problem)",
+        "outcome": {
+          "color": "yellow",
+          "label": "New solution to variant problem",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.2 Thinking"
+        ],
+        "date": "28 Jan, 2026",
+        "humans": [
+          "Nat Sothanaphan"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "New solution to variant problem",
+          "lean": false
+        }
+      }
+    ],
+    "953": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "27 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "956": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "GPT-5.5 Pro"
+        ],
+        "date": "27 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "958": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "27 Dec, 2025",
+        "literature": "Clemen, Dumitrescu, and Liu (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "New proof found (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Seed Prover 1.5"
+        ],
+        "date": "19 Dec, 2025",
+        "proof_to_formalize": "Clemen, Dumitrescu, and Liu (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "960": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "OpenAI internal model"
+        ],
+        "date": "9 Apr, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "963": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Gemini 3 Pro"
+        ],
+        "date": "22 Jan, 2026",
+        "outcome": {
+          "color": "red",
+          "label": "Argument with major gaps made",
+          "lean": false
+        }
+      }
+    ],
+    "964": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Antigravity",
+          "Aristotle",
+          "Gemini"
+        ],
+        "date": "14 Feb, 2026",
+        "proof_to_formalize": "Eberhard (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "966": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "25 Feb, 2026",
+        "literature": "Spencer (unpublished)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "967": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "19 Dec, 2025",
+        "proof_to_formalize": "Yip (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "974": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "27 Apr, 2026",
+        "proof_to_formalize": "Tijdeman (1966)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "976": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4"
+        ],
+        "date": "16 Apr, 2026",
+        "humans": [
+          "Aron Bhalla"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Conditional partial result",
+          "lean": false
+        }
+      }
+    ],
+    "983": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "30 Apr, 2026",
+        "literature": "Erdős (1970)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (solution to first part)",
+          "lean": false
+        }
+      }
+    ],
+    "986": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Claude",
+          "OpenAI internal model"
+        ],
+        "date": "27 May-16 Jun, 2026",
+        "humans": [
+          "Domagoj Bradač"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Trellis"
+        ],
+        "date": "10 Jun, 2026",
+        "proof_to_formalize": "Bradač (2026)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "987": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "OpenAI internal model"
+        ],
+        "date": "9 Apr, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "990": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "OpenAI internal model"
+        ],
+        "date": "9 Apr, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "10 Apr, 2026",
+        "proof_to_formalize": "OpenAI internal model (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "995": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "21 Apr, 2026",
+        "humans": [
+          "Boon Suan Ho"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "996": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "21 Apr, 2026",
+        "humans": [
+          "Boon Suan Ho"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "997": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "OpenAI internal model"
+        ],
+        "date": "31 Mar, 2026",
+        "literature": "Benatar (2014)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "1 Apr, 2026",
+        "proof_to_formalize": "OpenAI internal model (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1000": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle",
+          "GPT"
+        ],
+        "date": "28 Dec, 2025",
+        "proof_to_formalize": "Haight",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1004": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "29 Apr, 2026",
+        "literature": "Pollack, Pomerance, and Treviño (2013)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (implicit in literature)",
+          "lean": false
+        }
+      }
+    ],
+    "1007": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "19 Jan, 2026",
+        "literature": "House (2013);  Chaffee and Noble (2016)",
+        "outcome": {
+          "color": "green",
+          "label": "New proof found (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "19 Jan, 2026",
+        "proof_to_formalize": "House (2013)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1008": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "17 Jan, 2026",
+        "proof_to_formalize": "Conlon, Fox, and Sudakov (2014)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1014": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "OpenAI internal model"
+        ],
+        "date": "23 Apr, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "1022": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "22 Jan, 2026",
+        "proof_to_formalize": "KoishiChan (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1023": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "10 Feb, 2026",
+        "proof_to_formalize": "Kleitman (1971)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1026": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "7 Dec, 2025",
+        "literature": "Tidor, Wang, and Yang (2016)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "AlphaEvolve",
+          "Aristotle",
+          "Gemini",
+          "GPT"
+        ],
+        "date": "8 Dec, 2025",
+        "humans": [
+          "Boris Alexeev",
+          "Stijn Cambie",
+          "Terence Tao",
+          "Lawrence Wu"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "1028": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "19 Jan, 2026",
+        "proof_to_formalize": "Erdős (1963); Erdős and Spencer (1971)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1032": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.5 Pro"
+        ],
+        "date": "7 May, 2026",
+        "literature": "Luo, Ma, and Yang (2023)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Improved partial result (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "1033": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "27 Jun, 2026",
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result",
+          "lean": false
+        }
+      }
+    ],
+    "1034": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "4 Dec, 2025",
+        "proof_to_formalize": "Ma and Tang (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1036": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "20 Jan, 2026",
+        "proof_to_formalize": "Shelah (1998)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1037": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "19 Jan, 2026",
+        "proof_to_formalize": "Cambie, Chan, and Hunter (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1038": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "AlphaEvolve",
+          "Claude Fable 5",
+          "Codex",
+          "GPT-5.2 Thinking",
+          "GPT-5.4 Thinking",
+          "GPT-5.5"
+        ],
+        "date": "16 Dec, 2025-10 Jun, 2026",
+        "humans": [
+          "catsflowers5544",
+          "jspier",
+          "Junnosuke Koizumi",
+          "Kenneth Mendoza",
+          "Nat Sothanaphan",
+          "Terence Tao",
+          "Hua Xu"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "1039": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "7 May, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Aristotle",
+          "Claude Opus 4.6"
+        ],
+        "date": "6-8 Mar, 2026",
+        "humans": [
+          "Houi"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.5"
+        ],
+        "date": "15 May, 2026",
+        "proof_to_formalize": "GPT-5.5 Pro (2026)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1040": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Aletheia"
+        ],
+        "date": "1 Feb, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Solution to one part of problem;  incorrect solution to other part",
+          "lean": false
+        }
+      }
+    ],
+    "1041": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.4 Thinking"
+        ],
+        "date": "22 Apr, 2026",
+        "outcome": {
+          "color": "red",
+          "label": "Argument with major gaps made",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Claude Opus 4.6",
+          "Gemini 3.1 Pro",
+          "GPT-5.4"
+        ],
+        "date": "17-24 Mar, 2026",
+        "humans": [
+          "shtuka"
+        ],
+        "outcome": {
+          "color": "red",
+          "label": "Argument with major gaps made",
+          "lean": false
+        }
+      }
+    ],
+    "1043": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "28 Dec, 2025",
+        "literature": "Pommerenke (1961)",
+        "outcome": {
+          "color": "green",
+          "label": "New proof found (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "GPT"
+        ],
+        "date": "30 Dec, 2025",
+        "literature": "Pommerenke (1961); Aristotle",
+        "outcome": {
+          "color": "green",
+          "label": "New proof found",
+          "lean": false
+        }
+      }
+    ],
+    "1044": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.2 Pro"
+        ],
+        "date": "5 Jan, 2026",
+        "outcome": {
+          "color": "red",
+          "label": "Incorrect claim made",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "28 Apr, 2026",
+        "proof_to_formalize": "Tang (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1047": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "21 Jan, 2026",
+        "literature": "Goodman (1966)",
+        "outcome": {
+          "color": "green",
+          "label": "New proof found (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "1048": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "28 Jan, 2026",
+        "literature": "Pommerenke (1961)",
+        "outcome": {
+          "color": "green",
+          "label": "Proof found (Lean), which is a specific case of Pommerenke",
+          "lean": true
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "27 Jan, 2026",
+        "proof_to_formalize": "Pommerenke (1961)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1051": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Aletheia"
+        ],
+        "date": "29 Jan, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "1054": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "Claude Opus 4.8",
+          "GPT-5.5 Pro",
+          "Principia Math"
+        ],
+        "date": "22-23 Jun, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "1061": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT"
+        ],
+        "date": "24 Jun, 2026",
+        "humans": [
+          "Eric Li"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "1062": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "19 Apr, 2026",
+        "humans": [
+          "Damek Davis"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "1067": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aleph Prover",
+          "Aristotle"
+        ],
+        "date": "28 Jan, 2026",
+        "proof_to_formalize": "Bowler and Pitz (2024)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1070": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.5"
+        ],
+        "date": "29 Jun, 2026",
+        "humans": [
+          "Ákos Dúcz",
+          "Dániel Varga"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "1071": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aleph Prover",
+          "Aristotle",
+          "GPT"
+        ],
+        "date": "29 Jan, 2026 (second part); 12 Feb, 2026 (first part)",
+        "proof_to_formalize": "Danzer; Alexeev (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1080": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "28 Dec, 2025",
+        "proof_to_formalize": "De Caen and Székely (1992)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1082": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "DeepMind prover agent"
+        ],
+        "date": "14 Feb, 2026",
+        "literature": "Fishburn (2002)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Counterexample to one part (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "1089": [
+      {
+        "section": "1(b)",
+        "section_name": "AI alongside literature",
+        "ai_systems": [
+          "Aletheia"
+        ],
+        "date": "1 Feb, 2026",
+        "literature": "Bannai and Bannai (1981)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution found",
+          "lean": false
+        }
+      }
+    ],
+    "1090": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Aristotle",
+          "Gemini 3 Flash"
+        ],
+        "date": "27 Feb, 2026",
+        "literature": "Graham and Selfridge (unpublished, ~1975)",
+        "outcome": {
+          "color": "green",
+          "label": "Proof found (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "1091": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "OpenAI internal model"
+        ],
+        "date": "9 Apr, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "1092": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "28 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "1095": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "30 Dec, 2025",
+        "literature": "Ecklund, Erdős, and Selfridge (1975)",
+        "outcome": {
+          "color": "yellow",
+          "label": "New proof of (slightly weaker) partial result (Lean)",
+          "lean": true
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Claude Opus 4.6",
+          "Gemini 3.1 Pro",
+          "GPT-5.4 Pro"
+        ],
+        "date": "13 Mar, 2026",
+        "humans": [
+          "shtuka"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "20 Jun, 2026",
+        "proof_to_formalize": "Konyagin (1999)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1097": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "AlphaEvolve"
+        ],
+        "date": "3 Nov, 2025",
+        "literature": "Lemm (2015)",
+        "outcome": {
+          "color": "yellow",
+          "label": "Slight improvement to past construction",
+          "lean": false
+        }
+      }
+    ],
+    "1098": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "25 Apr, 2026",
+        "proof_to_formalize": "Neumann (1976)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1101": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "27 Apr, 2026",
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result (solution to second part)",
+          "lean": false
+        }
+      }
+    ],
+    "1102": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "23 Feb, 2026",
+        "proof_to_formalize": "van Doorn and Tao (2025)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1121": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "16 Apr, 2026",
+        "proof_to_formalize": "Goodman and Goodman (1945)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1125": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "11 Apr, 2026",
+        "proof_to_formalize": "Laczkovich (1984)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1126": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "27 Feb, 2026",
+        "proof_to_formalize": "de Bruijn (1966)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1131": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "26 Apr, 2026",
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result",
+          "lean": false
+        }
+      }
+    ],
+    "1132": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "AlphaEvolve",
+          "Claude",
+          "Gemini Pro",
+          "GPT-5.4 Pro"
+        ],
+        "date": "2 Feb-24 Mar, 2026",
+        "humans": [
+          "Terence Tao"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "1133": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "29 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "1134": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "AxiomProver"
+        ],
+        "date": "19 Jun, 2026",
+        "proof_to_formalize": "Unspecified",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1136": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "19 Apr, 2026",
+        "proof_to_formalize": "Müller (2011)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1138": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro",
+          "GPT-5.5 Thinking"
+        ],
+        "date": "25 Apr, 2026",
+        "humans": [
+          "Kireet Cheri",
+          "Sourish Kumrawat",
+          "Hrishi Sunder"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "4 May, 2026",
+        "proof_to_formalize": "Cheri, Kumrawat, and Sunder (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1139": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.2 Pro",
+          "GPT-5.5 Pro"
+        ],
+        "date": "26 Jan-19 Jun, 2026",
+        "humans": [
+          "Przemek Chojecki",
+          "gavinsherry",
+          "Liam Price",
+          "Terence Tao"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "1141": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "OpenAI internal model"
+        ],
+        "date": "9 Apr, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.2 Pro",
+          "GPT-5.2 Thinking"
+        ],
+        "date": "25 Jan, 2026",
+        "humans": [
+          "Quanyu Tang"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result of variant problem",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "11 Apr, 2026",
+        "proof_to_formalize": "OpenAI internal model (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1143": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "29 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (implicit in literature)",
+          "lean": false
+        }
+      }
+    ],
+    "1148": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Gemini 3 Pro",
+          "Gemini 3.1 Pro",
+          "GPT-5.2 Pro",
+          "GPT-5.2 Thinking",
+          "GPT-5.4 Pro"
+        ],
+        "date": "24 Jan-16 Mar, 2026",
+        "humans": [
+          "Ingo Althöfer",
+          "Przemek Chojecki",
+          "Wouter van Doorn"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "19 May, 2026",
+        "humans": [
+          "Ingo Althöfer",
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Solution to stronger problem",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Claude Opus 4.6",
+          "Gemini 3.1",
+          "GPT-5.4",
+          "UlamAI Prover"
+        ],
+        "date": "17 Mar, 2026",
+        "proof_to_formalize": "Chojecki (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1151": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "30 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Codex",
+          "GPT"
+        ],
+        "date": "6 May, 2026",
+        "proof_to_formalize": "Chojecki (2026) (main part)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1153": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "AlphaEvolve",
+          "Claude",
+          "Gemini Pro",
+          "GPT-5.2 Thinking",
+          "GPT-5.4 Pro"
+        ],
+        "date": "2 Feb-24 Mar, 2026",
+        "humans": [
+          "Aron Bhalla",
+          "Nat Sothanaphan",
+          "Terence Tao"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "1177": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT"
+        ],
+        "date": "23 Jun, 2026",
+        "humans": [
+          "Eric Li"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "1183": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "18 Mar, 2026",
+        "humans": [
+          "Przemek Chojecki",
+          "Quanyu Tang"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      }
+    ],
+    "1187": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.5"
+        ],
+        "date": "12 May, 2026",
+        "proof_to_formalize": "Trivial (second part)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1190": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "23 Apr, 2026",
+        "humans": [
+          "Boon Suan Ho"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "30 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Unspecified"
+        ],
+        "date": "14 May, 2026",
+        "proof_to_formalize": "Boon Suan Ho and GPT-5.4 Pro (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1193": [
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Aristotle"
+        ],
+        "date": "13 Apr, 2026",
+        "proof_to_formalize": "Trivial",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1194": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "23 Apr, 2026",
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "Codex",
+          "GPT-5.5 Pro"
+        ],
+        "date": "2 May, 2026",
+        "humans": [
+          "Lech Mazur"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "1195": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "19 Apr, 2026",
+        "humans": [
+          "Boon Suan Ho"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "1196": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "13 Apr, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      },
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Thinking"
+        ],
+        "date": "16 Apr, 2026",
+        "humans": [
+          "Nat Sothanaphan"
+        ],
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (stronger than literature)",
+          "lean": false
+        }
+      },
+      {
+        "section": "2(b)",
+        "section_name": "Formalization",
+        "ai_systems": [
+          "Gauss"
+        ],
+        "date": "16 Apr, 2026",
+        "proof_to_formalize": "GPT-5.4 Pro (2026)",
+        "outcome": {
+          "color": "green",
+          "label": "Formalization",
+          "lean": true
+        }
+      }
+    ],
+    "1197": [
+      {
+        "section": "1(c)",
+        "section_name": "AI building on literature",
+        "ai_systems": [
+          "Aristotle",
+          "Claude Opus 4.7",
+          "GPT-5.4 Pro"
+        ],
+        "date": "13 Apr-21 Jun, 2026",
+        "literature": "Buczolich and Mauldin (1999)",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "1201": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "30 Apr, 2026",
+        "humans": [
+          "Przemek Chojecki"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate full solution",
+          "lean": false
+        }
+      }
+    ],
+    "1202": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "1 Apr, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ],
+    "1208": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.5 Pro"
+        ],
+        "date": "14 Jun, 2026",
+        "humans": [
+          "Sungchul Lee"
+        ],
+        "outcome": {
+          "color": "white",
+          "label": "Candidate partial result",
+          "lean": false
+        }
+      }
+    ],
+    "1209": [
+      {
+        "section": "1(d)",
+        "section_name": "AI collaborating with humans",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "15 Apr, 2026",
+        "humans": [
+          "Enrique Barschkis"
+        ],
+        "outcome": {
+          "color": "yellow",
+          "label": "Partial result (Lean)",
+          "lean": true
+        }
+      }
+    ],
+    "1217": [
+      {
+        "section": "1(a)",
+        "section_name": "AI standalone",
+        "ai_systems": [
+          "GPT-5.4 Pro"
+        ],
+        "date": "16 Apr, 2026",
+        "outcome": {
+          "color": "green",
+          "label": "Full solution",
+          "lean": false
+        }
+      }
+    ]
+  }
+}

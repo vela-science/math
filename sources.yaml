@@ -1,0 +1,131 @@
+# The sources this repository observes.
+#
+# A Source is a provenance boundary: an external system read exactly and never
+# governed. Nothing here carries Standing. A Claim in this repository is
+# admitted by a Decision, and the Decision names the bytes it ruled on — which
+# is why an entry moving records what upstream serves now and leaves accepted
+# state undisturbed.
+#
+# `sources.lock.json` records the exact content hash, and the GitHub commit
+# where one is resolvable, at generation time. Regenerate it with the shared
+# resolver and check the committed one, offline, with `--check`:
+#
+#     uvx --from "git+https://github.com/vela-science/vela#subdirectory=packages/vela-source-manifest" vela-source-lock
+#     uvx --from "git+https://github.com/vela-science/vela#subdirectory=packages/vela-source-manifest" vela-source-lock --check
+#
+# Every hash in the lock is computed from bytes the resolver fetched. The fix
+# for a `--check` failure is to run the generator again, never to edit the lock
+# so it agrees. A hand-entered hash is a claim about a retrieval that did not
+# happen.
+#
+# `source_id` is the identifier the release-scoped source registry publishes
+# each entry under. It is stated here rather than mapped downstream, so a
+# consumer cannot silently disagree with us about which of its ids is which of
+# our keys.
+#
+# On what is missing: this repository declares no acquisition it cannot pin.
+# `formal_conjectures` is the one entry whose upstream serves no commit
+# locator, and it is marked `pinnable: false` rather than dressed up as pinned.
+# Two sibling repositories once locked that identical URL at different digests
+# one day apart, which is the whole argument for saying so in the declaration
+# instead of discovering it in a lock diff.
+sources:
+  erdos:
+    source_id: source:erdos-problems
+    kind: problem_registry
+    repo: teorth/erdosproblems
+    ref: main
+    path: data/problems.yaml
+    url: https://raw.githubusercontent.com/teorth/erdosproblems/main/data/problems.yaml
+    note: the Erdős problem catalogue; the Problems this repository maps
+
+  formal_conjectures:
+    source_id: source:formal-conjectures
+    kind: formal_statement_registry
+    repo: google-deepmind/formal-conjectures
+    ref: main
+    path: data/conjectures.json
+    url: https://google-deepmind.github.io/formal-conjectures/data/conjectures.json
+    note: >-
+      a GitHub Pages build with no commit locator, so the lock records the
+      digest of what was served and cannot bind a revision. Observations from
+      this source name their retrieval time and nothing stronger.
+
+  plby:
+    source_id: source:plby-lean-proofs
+    kind: proof_manifest
+    repo: plby/lean-proofs
+    ref: main
+    path: data/sources.yaml
+    url: https://raw.githubusercontent.com/plby/lean-proofs/main/data/sources.yaml
+
+  jayyhk:
+    source_id: source:jayyhk-erdos-lean
+    kind: proof_manifest
+    repo: Jayyhk/erdos-lean
+    ref: main
+    path: data/problems.yaml
+    url: https://raw.githubusercontent.com/Jayyhk/erdos-lean/main/data/problems.yaml
+
+  williamjblair_lean_proofs:
+    source_id: source:williamjblair-lean-proofs
+    kind: proof_manifest
+    repo: williamjblair/lean-proofs
+    ref: main
+    path: proofs.yaml
+    url: https://raw.githubusercontent.com/williamjblair/lean-proofs/main/proofs.yaml
+
+  alphaproof:
+    source_id: source:alphaproof-nexus-results
+    kind: formal_library
+    repo: google-deepmind/alphaproof-nexus-results
+    commit: 0647711a71183c1ea492ad60860776617ce1ea88
+    url: https://github.com/google-deepmind/alphaproof-nexus-results
+
+  openai_ten_proofs:
+    source_id: source:openai-ten-proofs
+    kind: formal_library
+    repo: openai/ten-proofs
+    commit: 94bc0feb6a9ff12c7d31d6de640a725c9d43d2b6
+    url: https://github.com/openai/ten-proofs
+
+  wiki:
+    source_id: source:erdos-ai-contributions-wiki
+    kind: frozen_snapshot
+    repo: teorth/erdosproblems.wiki
+    commit: c8ad4309d20120c67cb97faa86daa1443acee018
+    path: sources/wiki/registry.json
+    paths:
+      - AI-contributions-to-Erdős-problems.md
+    note: the retired AI-contributions wiki, frozen 2026-06-30
+
+  gpt_erdos:
+    source_id: source:gpt-erdos
+    kind: frozen_snapshot
+    repo: neelsomani/gpt-erdos
+    commit: 21b48ae6b97279e9fe6781e3744e1cdd835e2cc1
+    path: sources/gpt_erdos/registry.json
+    paths:
+      - README.md
+
+  oeis_a309370:
+    source_id: source:oeis-a309370
+    kind: sequence_database
+    url: https://oeis.org/A309370?fmt=json
+    note: Sidon subsets of the binary cube
+
+  physlib:
+    source_id: source:physlib
+    kind: formal_library
+    repo: leanprover-community/physlib
+    commit: e882411d1b6bcbdfdd336d4c509c6cc72e96842d
+    url: https://github.com/leanprover-community/physlib
+
+  codetables:
+    source_id: source:codetables-stabilizer
+    kind: reference_only
+    url: https://codetables.de/
+    note: >-
+      referenced, never acquired. Quantum code parameters are checked against
+      it by a human reading it; nothing here is derived from a fetch, so the
+      lock records no digest.
