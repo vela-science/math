@@ -97,7 +97,11 @@ sources:
     path: sources/wiki/registry.json
     paths:
       - AI-contributions-to-Erdős-problems.md
-    note: the retired AI-contributions wiki, frozen 2026-06-30
+    note: >-
+      the retired AI-contributions wiki. Re-acquired 2026-08-07 rather than
+      inherited: git ls-remote returns this commit as HEAD, and the live page
+      opens "The wiki is no longer updated. The latest data is as of Jun 30,
+      2026", so the pin is both current and terminal.
 
   gpt_erdos:
     source_id: source:gpt-erdos
@@ -107,6 +111,9 @@ sources:
     path: sources/gpt_erdos/registry.json
     paths:
       - README.md
+    note: >-
+      re-acquired 2026-08-07 by cloning at this commit; all 57 problem ids in
+      the retained registry appear in the README it serves.
 
   oeis_a309370:
     source_id: source:oeis-a309370
