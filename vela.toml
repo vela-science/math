@@ -1,0 +1,15 @@
+schema = "vela.repository-profile.v1"
+repository_id = "vrepo_56d3fdfcd34ff5c3"
+name = "Vela Mathematics"
+summary = "Which mathematical assertions has this authority admitted on exact, reproducible evidence, and what remains unresolved?"
+maintainers = []
+
+[scope]
+question = "Which mathematical assertions has this authority admitted on exact, reproducible evidence, and what remains unresolved?"
+includes = []
+excludes = []
+
+[license]
+content = "CC-BY-4.0"
+code = "Apache-2.0"
+data = "varies"
