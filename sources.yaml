@@ -179,6 +179,18 @@ sources:
       its records on the catalogue rather than on the envelope, and that root is
       the one that holds still.
 
+      Two consequences, stated here so nobody has to rediscover them. `--check
+      --refetch` can never be green for this entry: the digest recorded at
+      generation is stale within minutes by construction, and the refetch will
+      report it as though upstream had moved. And every regeneration of this
+      lock churns this one entry whatever it was run for, so a lock diff touching
+      an unrelated source will carry a `vibemathed` digest change alongside it,
+      and a reviewer cannot tell that apart from the catalogue actually moving.
+      Three regenerations on 2026-08-07 produced three digests, about twenty
+      minutes apart, over an unchanged catalogue. The honest reading of a moved
+      digest here is no reading at all; use the adapter's catalogue root, which
+      moves only when an entry does.
+
   oeis_a309370:
     source_id: source:oeis-a309370
     kind: sequence_database
