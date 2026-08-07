@@ -87,6 +87,7 @@ sources:
     kind: formal_library
     repo: openai/ten-proofs
     commit: 94bc0feb6a9ff12c7d31d6de640a725c9d43d2b6
+    tree: 174289e4d4958cb0509874e6e53400e098213de7
     url: https://github.com/openai/ten-proofs
 
   wiki:
@@ -126,7 +127,40 @@ sources:
     kind: formal_library
     repo: leanprover-community/physlib
     commit: e882411d1b6bcbdfdd336d4c509c6cc72e96842d
+    tree: 23c105e133d8c28cb5df81a8b6be52f0f25c0247
     url: https://github.com/leanprover-community/physlib
+    exact_roots:
+      license:
+        path: LICENSE
+        sha256: sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4
+      lean_toolchain:
+        path: lean-toolchain
+        sha256: sha256:cc346fd7850a83fb7af3902dfc378f74d8eb8c59c6d34322488269ebfe7615b1
+      lakefile:
+        path: lakefile.toml
+        sha256: sha256:9b6608c26fa30873fb8d823eadd7f66835992389a80c3e44b62e9803c8c65c01
+      lake_manifest:
+        path: lake-manifest.json
+        sha256: sha256:a9531c3978f21e50cb72cc89c2a7644b296bee59a7f2ff92ca2408aac4a67311
+      ai_policy:
+        path: AI-POLICY.md
+        sha256: sha256:a639a2c51091911123600a376c7556b52d92ffd324b041df2e2a66ec7597ed49
+      agent_guidance:
+        path: AGENTS.md
+        sha256: sha256:487a9754f996304b173dd871326a094f4552d27df7151d60c56d83374e7711ca
+      api_map_guide:
+        path: docs/API_MAP_GUIDE.md
+        sha256: sha256:0663b6828ab7635bd69a1bc5913d75c5f1b81640071f43f3db0e5e10f5d29ad1
+      review_guidelines:
+        path: docs/ReviewGuidelines.md
+        sha256: sha256:e28f680f6fc0767840942aaa48da28bd9983cd48db8beec4ab77dafb4dbdab0b
+    note: >-
+      the eight files the adapter verifies byte for byte. This entry is the
+      declaration and the acquisition mirrors it; they were four commits apart
+      until 2026-08-07, with the code winning silently because the adapter
+      skipped root verification for any revision that was not its own constant.
+      None of the eight files changed across those commits, so moving to the
+      commit above changed the pin and no root.
 
   codetables:
     source_id: source:codetables-stabilizer

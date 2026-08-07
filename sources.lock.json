@@ -14,23 +14,23 @@
       "url": "https://codetables.de/"
     },
     "erdos": {
-      "commit": "6b29b7fd619c3c79a91653c7f1251ad704fb5cfa",
+      "commit": "5e4e8b5fe1fcf0e6559f67dd1a6d1a8a3c805713",
       "kind": "problem_registry",
       "path": "data/problems.yaml",
       "ref": "main",
       "repo": "teorth/erdosproblems",
       "sha256": "sha256:35f69dec011de1e38db807b475f160a8a9828d3e374dd8028b356406533854e9",
-      "tree": "973d45a9e61009a1970e6ea9e423bce9885a6939",
+      "tree": "05610aa2ab54db79c310c0a99d533d339d937ee9",
       "url": "https://raw.githubusercontent.com/teorth/erdosproblems/main/data/problems.yaml"
     },
     "formal_conjectures": {
-      "commit": "f40ecd9b3b79a7aa1a64b7d2f3b2623d4a6c3081",
+      "commit": "304b9d6dd690286ea726dfe274e258479af60e2a",
       "kind": "formal_statement_registry",
       "path": "data/conjectures.json",
       "ref": "main",
       "repo": "google-deepmind/formal-conjectures",
       "sha256": "sha256:c0ec2b1ecd8072aa8556bc1f220e0b6cd407ef31a21e7d2cac48b953517e9f58",
-      "tree": "01d33fbdbd35d5c8a00519d75be45c9cdd1601bb",
+      "tree": "1918ec5ff598809b1f2a97d4cd86340cc1fab9e8",
       "url": "https://google-deepmind.github.io/formal-conjectures/data/conjectures.json"
     },
     "gpt_erdos": {
@@ -68,10 +68,51 @@
     },
     "physlib": {
       "commit": "e882411d1b6bcbdfdd336d4c509c6cc72e96842d",
+      "exact_roots": {
+        "agent_guidance": {
+          "path": "AGENTS.md",
+          "sha256": "sha256:487a9754f996304b173dd871326a094f4552d27df7151d60c56d83374e7711ca",
+          "url": "https://raw.githubusercontent.com/leanprover-community/physlib/e882411d1b6bcbdfdd336d4c509c6cc72e96842d/AGENTS.md"
+        },
+        "ai_policy": {
+          "path": "AI-POLICY.md",
+          "sha256": "sha256:a639a2c51091911123600a376c7556b52d92ffd324b041df2e2a66ec7597ed49",
+          "url": "https://raw.githubusercontent.com/leanprover-community/physlib/e882411d1b6bcbdfdd336d4c509c6cc72e96842d/AI-POLICY.md"
+        },
+        "api_map_guide": {
+          "path": "docs/API_MAP_GUIDE.md",
+          "sha256": "sha256:0663b6828ab7635bd69a1bc5913d75c5f1b81640071f43f3db0e5e10f5d29ad1",
+          "url": "https://raw.githubusercontent.com/leanprover-community/physlib/e882411d1b6bcbdfdd336d4c509c6cc72e96842d/docs/API_MAP_GUIDE.md"
+        },
+        "lake_manifest": {
+          "path": "lake-manifest.json",
+          "sha256": "sha256:a9531c3978f21e50cb72cc89c2a7644b296bee59a7f2ff92ca2408aac4a67311",
+          "url": "https://raw.githubusercontent.com/leanprover-community/physlib/e882411d1b6bcbdfdd336d4c509c6cc72e96842d/lake-manifest.json"
+        },
+        "lakefile": {
+          "path": "lakefile.toml",
+          "sha256": "sha256:9b6608c26fa30873fb8d823eadd7f66835992389a80c3e44b62e9803c8c65c01",
+          "url": "https://raw.githubusercontent.com/leanprover-community/physlib/e882411d1b6bcbdfdd336d4c509c6cc72e96842d/lakefile.toml"
+        },
+        "lean_toolchain": {
+          "path": "lean-toolchain",
+          "sha256": "sha256:cc346fd7850a83fb7af3902dfc378f74d8eb8c59c6d34322488269ebfe7615b1",
+          "url": "https://raw.githubusercontent.com/leanprover-community/physlib/e882411d1b6bcbdfdd336d4c509c6cc72e96842d/lean-toolchain"
+        },
+        "license": {
+          "path": "LICENSE",
+          "sha256": "sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "url": "https://raw.githubusercontent.com/leanprover-community/physlib/e882411d1b6bcbdfdd336d4c509c6cc72e96842d/LICENSE"
+        },
+        "review_guidelines": {
+          "path": "docs/ReviewGuidelines.md",
+          "sha256": "sha256:e28f680f6fc0767840942aaa48da28bd9983cd48db8beec4ab77dafb4dbdab0b",
+          "url": "https://raw.githubusercontent.com/leanprover-community/physlib/e882411d1b6bcbdfdd336d4c509c6cc72e96842d/docs/ReviewGuidelines.md"
+        }
+      },
       "kind": "formal_library",
       "repo": "leanprover-community/physlib",
       "tree": "23c105e133d8c28cb5df81a8b6be52f0f25c0247",
-      "unlocked": "no content locator: the url is the repository landing page, not bytes, and this frontier retains no snapshot. The pin is the commit and tree above, both read from the GitHub API at generation time",
       "url": "https://github.com/leanprover-community/physlib"
     },
     "plby": {
