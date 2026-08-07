@@ -23,15 +23,21 @@
 # consumer cannot silently disagree with us about which of its ids is which of
 # our keys.
 #
-# On what is missing: two entries acquire bytes that no upstream commit locator
-# will return. `formal_conjectures` reads a GitHub Pages build, and `vibemathed`
-# reads a live API in front of a database whose committed export is a seed
-# rather than the record. Each locks the digest of what was served, and each
-# says so in its own note rather than borrowing a revision that would not serve
-# those bytes back. Every other entry pins a commit. Two sibling repositories
-# once locked that identical Pages URL at different digests one day apart, which
-# is the whole argument for saying it in the declaration instead of discovering
-# it in a lock diff.
+# On what is missing: one entry acquires bytes that no upstream commit locator
+# will return. `vibemathed` reads a live API in front of a database whose
+# committed export is a seed rather than the record; it locks the digest of what
+# was served, and says so in its own note rather than borrowing a revision that
+# would not serve those bytes back. Every other entry pins a commit.
+#
+# `formal_conjectures` was the second such entry until 2026-08-07. Its url is
+# still a GitHub Pages build that no ref tracks and that cannot be refetched at
+# a revision — but which revision built it is a fact upstream publishes, in the
+# deployment API, and `pages_commit` records it. An artifact that cannot be
+# refetched at a commit is not the same thing as an artifact that came from no
+# commit, and the difference is the whole of that entry's note. Two sibling
+# repositories once locked that identical Pages URL at different digests one day
+# apart, which is the argument for saying this in the declaration instead of
+# discovering it in a lock diff.
 sources:
   erdos:
     source_id: source:erdos-problems
@@ -46,13 +52,29 @@ sources:
     source_id: source:formal-conjectures
     kind: formal_statement_registry
     repo: google-deepmind/formal-conjectures
-    ref: main
-    path: data/conjectures.json
     url: https://google-deepmind.github.io/formal-conjectures/data/conjectures.json
+    pages_commit: 59f30aa314ba225fcd9268723ce8291616df1ab0
+    pages_commit_resolved: "2026-08-07T20:33:42Z"
     note: >-
-      a GitHub Pages build with no commit locator, so the lock records the
-      digest of what was served and cannot bind a revision. Observations from
-      this source name their retrieval time and nothing stronger.
+      the Lean declarations are what this entry binds, and they pin. `ref: main`
+      and `path: data/conjectures.json` are gone because both were false:
+      that path is tracked nowhere in the repository — the file is written into
+      a Pages build by .github/workflows/build-and-docs.yml — and Pages lags
+      pushes, so `main` is the revision those bytes are guaranteed not to have
+      come from. The lock was pairing a digest of one revision's build with
+      whatever `main` resolved to that minute, which is right or wrong by
+      timing alone: at 20:11 on the day this was rewritten the served build was
+      304b9d6d while `main` was already 59f30aa3, and nine minutes later Pages
+      redeployed and the two agreed again. `pages_commit` is what the deployment
+      API answers, read at `pages_commit_resolved`, and is the revision the
+      Frontier checks out. The bytes are lossy as well as
+      unfetchable: that workflow runs the repository's own extractor with
+      `--exclude=statement,docstring,moduleDocstrings`, so no revision of this
+      url carries a formal statement, and every one of the 3,551 records
+      projected from it had none. The statements come from the same extractor
+      without those exclusions, against the exact checkout of `pages_commit`.
+      Both halves are retained exactly, under the repository's Apache-2.0
+      licence, because neither can be fetched back.
 
   plby:
     source_id: source:plby-lean-proofs

@@ -24,13 +24,11 @@
       "url": "https://raw.githubusercontent.com/teorth/erdosproblems/main/data/problems.yaml"
     },
     "formal_conjectures": {
-      "commit": "59f30aa314ba225fcd9268723ce8291616df1ab0",
       "kind": "formal_statement_registry",
-      "path": "data/conjectures.json",
-      "ref": "main",
+      "pages_commit": "59f30aa314ba225fcd9268723ce8291616df1ab0",
+      "pages_commit_resolved": "2026-08-07T20:33:42Z",
       "repo": "google-deepmind/formal-conjectures",
       "sha256": "sha256:c0ec2b1ecd8072aa8556bc1f220e0b6cd407ef31a21e7d2cac48b953517e9f58",
-      "tree": "f29ccba1cb8f867f60e4adc07abc530e69750c8e",
       "url": "https://google-deepmind.github.io/formal-conjectures/data/conjectures.json"
     },
     "gpt_erdos": {
@@ -128,7 +126,7 @@
     "vibemathed": {
       "homepage": "https://vibemathed.com",
       "kind": "attribution_registry",
-      "sha256": "sha256:5a9b9dc34333a2ae548048fd33302e15757bb28db5423e9c53f7aa9b9a84aa06",
+      "sha256": "sha256:d4c16f768a4110370b2bd47c576af447cfe6f747b2533ccfcaf86f193e0b0931",
       "url": "https://vibemathed.com/api/dataset"
     },
     "wiki": {
