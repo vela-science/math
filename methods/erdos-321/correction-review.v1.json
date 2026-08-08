@@ -1,0 +1,20 @@
+{
+  "schema": "vela.verification-method.v1",
+  "profile": "correction-review-v1",
+  "property": "correction_faithfulness",
+  "question": "Does the corrected record state what the sources say, where the record it corrects did not?",
+  "procedure": [
+    "Read evidence/erdos-321/definition-correspondence.v1.json and take its two disputed statements: that Admissible and the subset condition are the same predicate, and that no fixed formal statement exists.",
+    "Resolve source:williamjblair-lean-proofs to commit a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0 and read starfleet/erdos-321/Research/Basic.lean.",
+    "Resolve source:formal-conjectures to pages commit 59f30aa314ba225fcd9268723ce8291616df1ab0 and read every declaration in FormalConjectures/ErdosProblems/321.lean, including those attributed research solved.",
+    "For each disputed statement, record whether the source supports it, contradicts it, or is silent.",
+    "Read evidence/erdos-321/definition-correspondence.v2.json and record whether each of its statements is supported by the same sources."
+  ],
+  "finding": "Both disputed v1 statements are contradicted by the sources. Basic.lean line 23 defines Admissible N A as A subset Finset.Icc 1 N and Valid A, a conjunction, so pairing it against the subset condition alone is a one-way implication rather than an identity. 321.lean carries erdos_321.variants.lower and erdos_321.variants.upper, both attributed research solved, both complete statements about R N with no answer(sorry), so the unqualified claim that no fixed formal statement exists is false. The v2 record states both correctly and adds that the comparison against those two variants was not performed.",
+  "outcome_reasoning": "Pass, and scoped narrowly: this checks that v2 says what the sources say about the two statements v1 got wrong. It does not re-derive the denotational conclusion, which both records share and which v1's kernel and definition verifications already covered.",
+  "environment": {
+    "inputs_are_exact_bytes": true,
+    "network_required": false,
+    "independence": "This review reads the two sources directly at their pinned commits. It was prompted by an adversarial review of the v1 record rather than by the producer, and it reaches the sources independently of that review's summary."
+  }
+}
