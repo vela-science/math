@@ -1,0 +1,20 @@
+{
+  "schema": "vela.verification-method.v1",
+  "profile": "lean-kernel-attestation-read-v1",
+  "property": "lean_kernel_acceptance",
+  "question": "Did the Lean kernel accept starfleet/erdos-321's terminal theorem, under a clean axiom footprint, at the exact commit this Submission names?",
+  "procedure": [
+    "Resolve source:williamjblair-lean-proofs to commit a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0 as pinned in math/sources.lock.json.",
+    "Confirm the working tree at that commit is clean.",
+    "Read starfleet/faithfulness.json and take the entry whose problem is 321.",
+    "Read its proof_gate field.",
+    "Read the repository's CI definition (.github/workflows/starfleet.yml) to establish what that gate runs: lake build, then scripts/check_axioms.sh, which fails on sorry or on any axiom outside [propext, Classical.choice, Quot.sound]."
+  ],
+  "what_this_verifier_did": "Read a recorded CI attestation at an exact commit.",
+  "what_this_verifier_did_not_do": "Re-run Lean. No lake build, no kernel invocation, and no Mathlib compilation was performed by this verifier.",
+  "environment": {
+    "inputs_are_exact_bytes": true,
+    "network_required": false,
+    "reason_no_rebuild": "A Mathlib build is roughly thirty minutes and would establish the same proposition this attestation already records. Re-running it is worth doing; recording that it was not done is worth doing either way, and is the difference between a scoped verification and an overstated one."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "vela.verification-method.v1",
+  "profile": "definition-correspondence-v1",
+  "property": "definition_correspondence",
+  "question": "Do the definitions the Lean development quantifies over denote the same objects as Formal Conjectures' definitions for problem 321, at the exact commits this Submission names?",
+  "procedure": [
+    "Resolve source:formal-conjectures to pages commit 59f30aa314ba225fcd9268723ce8291616df1ab0 as declared in math/sources.yaml.",
+    "Read FormalConjectures/ErdosProblems/321.lean and extract Erdos321.R with the two predicates it quantifies over.",
+    "Resolve source:williamjblair-lean-proofs to commit a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0 and read starfleet/erdos-321's Valid, reciprocalSubsetSum, Admissible and extremalSize.",
+    "Pair each definition with its counterpart and state the bridge that identifies them, or record that none exists.",
+    "Record the comparison as same or different per pair. A pair with no stated bridge is different, not assumed same."
+  ],
+  "finding": "All four pairs correspond, each by a bridge stated on the evidence record. The two injectivity predicates are the same predicate written two ways; (n : Q)^-1 and (1 : Q) / n are the same rational; both range over Finset.Icc 1 N; and a finite sup over a family containing the empty set agrees with the supremum of the same cardinalities.",
+  "environment": {
+    "inputs_are_exact_bytes": true,
+    "network_required": false,
+    "independence": "This verifier read both sources directly at their pinned commits. It agrees with the producer's own faithfulness record, which is corroboration rather than independence, and that overlap is disclosed on the record."
+  }
+}

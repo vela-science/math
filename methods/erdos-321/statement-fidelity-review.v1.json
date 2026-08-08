@@ -1,0 +1,20 @@
+{
+  "schema": "vela.verification-method.v1",
+  "profile": "statement-fidelity-review-v1",
+  "property": "statement_fidelity",
+  "question": "Does the Lean development discharge a Formal Conjectures statement of Erdos problem 321, such that proving it would say something about the problem?",
+  "procedure": [
+    "Resolve source:formal-conjectures to pages commit 59f30aa314ba225fcd9268723ce8291616df1ab0 as declared in math/sources.yaml.",
+    "Read every research-open declaration in FormalConjectures/ErdosProblems/321.lean.",
+    "For each, read the right-hand side of the statement being asserted.",
+    "Where that right-hand side is answer(sorry), record that there is no fixed statement to compare against, and that neither a match nor a mismatch can be observed.",
+    "Read the file's own formalisation note on trivial and sub-optimal solutions to the asymptotic variants."
+  ],
+  "finding": "erdos_321 states R N = answer(sorry). Its isTheta, isBigO and isLittleO variants each state a relation against answer(sorry) as well. No fixed formal statement of problem 321 exists at this commit, so the development can neither match one nor fail to match one. The two solved variants (lower and upper) are Bleicher-Erdos bounds and are not what this development targets.",
+  "outcome_reasoning": "This is inconclusive, not pass and not fail. A pass would assert the development faithfully represents the problem; a fail would assert it does not. Both require a statement to compare against, and at this commit there is none. Erdos 522 in this same repository is the fail case: there the statement exists and is vacuous. Reporting either as pass, which a single scalar gate does, is what this separation exists to prevent.",
+  "environment": {
+    "inputs_are_exact_bytes": true,
+    "network_required": false,
+    "independence": "This review reads the Formal Conjectures declarations directly. It agrees with the producer's own faithfulness record, which is corroboration rather than independence, and that overlap is disclosed on the record."
+  }
+}
