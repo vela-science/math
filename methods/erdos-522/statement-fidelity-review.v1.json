@@ -1,0 +1,20 @@
+{
+  "schema": "vela.verification-method.v1",
+  "profile": "statement-fidelity-review-v1",
+  "property": "statement_fidelity",
+  "question": "Does the Formal Conjectures declaration erdos_522 faithfully represent Erdos problem 522, such that proving it would say something about the problem?",
+  "procedure": [
+    "Resolve source:formal-conjectures to pages commit 59f30aa314ba225fcd9268723ce8291616df1ab0 as declared in math/sources.yaml.",
+    "Read the erdos_522 declaration and every definition it quantifies over.",
+    "For each hypothesis, ask whether any object satisfies it.",
+    "Where a hypothesis is unsatisfiable, record that the implication is vacuous and that discharging it establishes nothing about the source problem.",
+    "Compare against the independent reading already recorded in starfleet/faithfulness.json, whose faithfulness.status for this problem is blocked and whose definitions_compared list is empty."
+  ],
+  "finding": "erdos_522 quantifies over KacCoefficients whose h_unif uses the defaulted volume on a two-point subset of the complex numbers. Nothing measurable satisfies it. The statement is therefore vacuously true and constrains nothing about Erdos problem 522. Filed upstream as google-deepmind/formal-conjectures#4386.",
+  "outcome_reasoning": "This is a fail, not an error and not inconclusive. The check ran to completion and returned a definite answer: the statement is not faithful. An error would mean the check could not be performed; inconclusive would mean the evidence was insufficient. Neither is true here.",
+  "environment": {
+    "inputs_are_exact_bytes": true,
+    "network_required": false,
+    "independence": "This review reads the Formal Conjectures declaration directly. It agrees with the producer's own faithfulness record, which is corroboration rather than independence, and that overlap is disclosed on the record."
+  }
+}
