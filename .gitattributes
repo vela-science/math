@@ -2,5 +2,4 @@
 .vela/** -filter -ident -working-tree-encoding -merge -text
 records/** -filter -ident -working-tree-encoding -merge -text
 artifacts/** -filter -ident -working-tree-encoding -merge -text
-frontier.toml -filter -ident -working-tree-encoding -merge diff text eol=lf
-targets.json -filter -ident -working-tree-encoding -merge diff text eol=lf
+vela.toml -filter -ident -working-tree-encoding -merge diff text eol=lf

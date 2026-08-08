@@ -66,8 +66,8 @@ sources:
       timing alone: at 20:11 on the day this was rewritten the served build was
       304b9d6d while `main` was already 59f30aa3, and nine minutes later Pages
       redeployed and the two agreed again. `pages_commit` is what the deployment
-      API answers, read at `pages_commit_resolved`, and is the revision the
-      Frontier checks out. The bytes are lossy as well as
+      API answers, read at `pages_commit_resolved`, and is the revision this
+      repository checks out. The bytes are lossy as well as
       unfetchable: that workflow runs the repository's own extractor with
       `--exclude=statement,docstring,moduleDocstrings`, so no revision of this
       url carries a formal statement, and every one of the 3,551 records

@@ -2,7 +2,7 @@
 
 Which mathematical assertions has this authority admitted on exact, reproducible evidence, and what remains unresolved?
 
-This is a Vela Frontier. Git stores exact Claims, Submissions, Verification Records, Decisions, and authority history. Derived views are rebuildable.
+This is a Vela repository. Git stores exact Claims, Submissions, Verification Records, Decisions, and authority history. Derived views are rebuildable.
 
 ## Operator loop
 
