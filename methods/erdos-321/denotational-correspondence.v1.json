@@ -1,0 +1,20 @@
+{
+  "schema": "vela.verification-method.v1",
+  "profile": "denotational-correspondence-v1",
+  "property": "definition_correspondence",
+  "question": "Do Star Fleet's extremalSize and Formal Conjectures' Erdos321.R denote the same quantity at the pinned source commits?",
+  "procedure": [
+    "Read the exact Formal Conjectures and Star Fleet source snapshots retained under evidence/erdos-321/translation/sources/.",
+    "Compare reciprocalSubsetSum with rational reciprocal summation and compare Valid with injectivity on the powerset.",
+    "Treat Admissible as the conjunction of the interval-subset and Valid predicates, rather than as a fourth independent predicate.",
+    "Compare Finset.sup card over candidateSets with sSup over the same finite nonempty set of cardinalities, including the empty-family boundary.",
+    "Check the resulting account against evidence/erdos-321/definition-correspondence.v2.json."
+  ],
+  "finding": "At the pinned commits, reciprocalSubsetSum is the same rational-valued function, Valid is the same injectivity predicate, Admissible combines the same two side conditions, and extremalSize takes the same supremum as Erdos321.R. Thus extremalSize N = Erdos321.R N. This is three distinct correspondences plus their conjunction, not four independent pairwise identities.",
+  "outcome_reasoning": "Pass for denotational correspondence only. The method does not compare the terminal theorem with the fixed lower or upper solved variants and does not establish a resolution or an optimal bound.",
+  "environment": {
+    "inputs_are_exact_bytes": true,
+    "network_required": false,
+    "independence": "The verifier reads retained source snapshots directly. It shares those source bytes with the producer and discloses that dependency."
+  }
+}
