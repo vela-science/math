@@ -1,0 +1,4 @@
+# The recovery bundle is a distribution artifact, not a scientific Decision.
+# This identity is deliberately different from the repository authority and is
+# constrained to the vela-bundle signature namespace.
+bundle@vela.space namespaces="vela-bundle" ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDZ+fwqljQBzprznZmeAY3KwHVrKOaW+/z5GflVwilG5 Vela release distribution

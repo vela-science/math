@@ -1,0 +1,87 @@
+{
+  "schema": "vela.predecessor-continuity.v1",
+  "captured_at": "2026-08-09T06:45:09Z",
+  "source": {
+    "vela_release": "0.971.0",
+    "git_commit": "27cb6e407f1d42177169c2a02ccd337e1c7bdcc6",
+    "git_tree": "8aab0f13d529664e2ebbd822c301d076932f69df",
+    "recovery_bundle": {
+      "name": "math-v0.971.0-predecessor.bundle",
+      "sha256": "sha256:c66893d71f65e7ace8901636db32e5bd3fa973bbb5ea39e8d5cb0ce5ddf28175",
+      "ref": "27cb6e407f1d42177169c2a02ccd337e1c7bdcc6 refs/heads/main",
+      "complete_history": true,
+      "signature_sha256": "sha256:acea64140e0bde9a7bd4296e63a9d730e0ad238e71fe985ec29a04b7ce87581e",
+      "signature_namespace": "vela-bundle",
+      "signer_identity": "bundle@vela.space",
+      "signer_fingerprint": "SHA256:MX3Eo1o9S5pLnx2kiNyAy2aME7PAWDtvqtUBljJst1M"
+    }
+  },
+  "repository": {
+    "id": "vrepo_8b32ff6fa11cdb5fa0bb8a043c7d6941",
+    "origin_id": "vro_3cfb63bdb525a407",
+    "profile_root": "sha256:53f2f444dbf3eed37bac4a80da06bc95217cba7ff8f76b29f9e8ca3d103ef1a7",
+    "origin_root": "sha256:7437b73c0d8da00ac160689bed40c8171e51fe27dbc1e53f7d6038ad7bd28163",
+    "repository_root": "sha256:fc53ce1e2accd3e5243887ea2db1104f480d7e6b7823ac3e1c0a1c01e1067fcc",
+    "authority_keyset_root": "sha256:a7fdba7d805d89e7b7b2271431bd64db2e7e6612a24c9d633b525980deda7975",
+    "authority_policy_root": "sha256:b1c56d112498fc699b949ddc6964f7a8cb1bcb2f7ab2d1535ff7760bff48efe3"
+  },
+  "integrity": {
+    "replay": "verified",
+    "strict": "pass",
+    "blocker_count": 0
+  },
+  "counts": {
+    "claims": 1,
+    "accepted_claims": 1,
+    "pending_claims": 0,
+    "proposals": 3,
+    "accepted_review": 2,
+    "rejected_review": 1,
+    "submissions": 3,
+    "verifications": 6,
+    "artifacts": 3
+  },
+  "accepted_claims": [
+    {
+      "claim_id": "vcl_8ea6c5aa6c39f13cd1e1209b8723957f16d291f7365ed7fb4e15b56ec7c48aed",
+      "claim_root": "sha256:ccbecbe743d7c32d5f24c5984f19f77cf308144ef98443648f2f20fec79cf464",
+      "revision": 2,
+      "assertion_kind": "theoretical",
+      "assertion": "The Lean development starfleet/erdos-321 establishes a two-sided asymptotic bound on extremalSize, which denotes the same quantity as Formal Conjectures' Erdos321.R at pages commit 59f30aa3, and which therefore supplies a candidate answer for erdos_321.variants.isTheta rather than a proof of it.",
+      "decision_event_id": "vev_532d3c2fde91d780",
+      "decision_event_root": "sha256:6fc49137306a266875d631fd58bf5ab4e275f39aa8f3e99fc2181b8aeabe145a"
+    }
+  ],
+  "decision_history": [
+    {
+      "proposal_id": "vpr_4da076890ae8d64d",
+      "proposal_root": "sha256:5d3792dec94457662d92aaeedee190eaa03da6056919e5e250d587c6dd237416",
+      "standing": "accepted",
+      "event_id": "vev_0de727effcf285b0",
+      "event_root": "sha256:97ff38eaa394f1802137eb2a40fbb6f4f3b4ba0fe822a14c46cba6aba6a96017"
+    },
+    {
+      "proposal_id": "vpr_956dbffaee6c1660",
+      "proposal_root": "sha256:73253aac27ae5584fda4df79e5fd5e18308347e50907e4c8621854fbafe3ca6b",
+      "standing": "rejected",
+      "event_id": "vev_05749c51ccb31a25",
+      "event_root": "sha256:12d24bbc41d3cbe30e6f72390790c4c16ae13dc729527a37b3efe966bd7caf7b"
+    },
+    {
+      "proposal_id": "vpr_c1c8b5b2c7db20e9",
+      "proposal_root": "sha256:ede7799d16eaeef2ffa0bb460905d6ab1646dbb4125996f018655ba831084588",
+      "standing": "accepted",
+      "event_id": "vev_532d3c2fde91d780",
+      "event_root": "sha256:6fc49137306a266875d631fd58bf5ab4e275f39aa8f3e99fc2181b8aeabe145a"
+    }
+  ],
+  "continuity_boundary": {
+    "successor_protocol_release": "0.972.1",
+    "standing_carried_forward": false,
+    "required_successor_operations": [
+      "authenticated_submission",
+      "scoped_verification",
+      "authorized_human_decision"
+    ]
+  }
+}
