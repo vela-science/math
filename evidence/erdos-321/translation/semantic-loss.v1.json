@@ -1,0 +1,47 @@
+{
+  "case": "erdos:321",
+  "declared_losses": [
+    {
+      "authority_effect": "none",
+      "detail": "The reference map compares definitions and theorem statements, not Lean proof terms or the transitive dependency cone.",
+      "kind": "proof-term-omission"
+    },
+    {
+      "authority_effect": "none",
+      "detail": "Whitespace, comments, declaration order, and notation spelling are absent from the semantic fact set; exact source snapshots remain retained.",
+      "kind": "normalization-to-semantic-facts"
+    },
+    {
+      "authority_effect": "blocks any claim of statement fidelity to those variants",
+      "detail": "The Star Fleet terminal theorem is not compared with erdos_321.variants.lower or .upper.",
+      "kind": "unperformed-statement-comparison"
+    },
+    {
+      "authority_effect": "none; Verification scope remains unchanged",
+      "detail": "The kernel gate is the retained CI attestation at the pinned Star Fleet commit; this experiment does not rerun Lean.",
+      "kind": "attestation-read-not-rebuild"
+    },
+    {
+      "authority_effect": "experiment cannot support general accuracy or productivity claims",
+      "detail": "No independent expert-labelled semantic-diff corpus or review-time baseline exists yet.",
+      "kind": "single-reviewer-ground-truth"
+    }
+  ],
+  "does_not_establish": [
+    "That Erdős problem 321 is resolved or that the bound is optimal.",
+    "That the semantic diff is accurate beyond this one corrected case.",
+    "That a Web Annotation link or provenance record is Verification or acceptance."
+  ],
+  "reference_resolution": {
+    "ambiguous": 0,
+    "approximate": 0,
+    "exact": 4,
+    "failure_rule": "A quote that is absent or non-unique stops generation; it is never attached heuristically.",
+    "unresolved": 0
+  },
+  "schema": "vela.source-experiment.semantic-loss.v1",
+  "source_roots": {
+    "formal_conjectures_sha256": "sha256:601d8486743aede6803feaaefc7bbb73f0aa8873d0296a6a1c5400fd86c32357",
+    "starfleet_sha256": "sha256:6f8edd294e9a5dfb2475468c23518722a736798ea3e6e51822f826c1e4672a74"
+  }
+}

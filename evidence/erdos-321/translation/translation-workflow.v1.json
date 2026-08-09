@@ -1,0 +1,13 @@
+{
+  "authority_effect": "none",
+  "determinism": "All committed outputs are functions of retained bytes and constants in build.py; --check performs no network access.",
+  "name": "Erdős 321 source-to-formalization translation",
+  "schema": "vela.source-experiment.translation-workflow.v1",
+  "steps": [
+    "verify retained source snapshot digests",
+    "resolve every Web Annotation quote exactly once and record character positions",
+    "compare the closed correction fact set",
+    "emit the explicit loss report",
+    "bind inputs, activity, agent, and outputs in RO-Crate and PROV-O"
+  ]
+}

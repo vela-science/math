@@ -1,0 +1,65 @@
+{
+  "algorithm": {
+    "canonicalization": "RFC 8785",
+    "generated_prose_in_fact_set": false,
+    "name": "closed-fact-comparison",
+    "version": 1
+  },
+  "case": "erdos:321",
+  "correction_impact": {
+    "predecessor_claim_id": "vcl_7dcd3ce703085fd34b2710229e0e68c1b661688050b352261821ef9bb376524a",
+    "review_reason_changed": true,
+    "scientific_conclusion_changed": false,
+    "standing_effect": "successor accepted; predecessor retained as corrected history",
+    "successor_claim_id": "vcl_8ea6c5aa6c39f13cd1e1209b8723957f16d291f7365ed7fb4e15b56ec7c48aed"
+  },
+  "fact_set_root": "sha256:14bb0ea1fbfd4115f257d3c5264df9a232a7e78afb999768f058d3b42f62e147",
+  "facts": [
+    {
+      "after": "extremalSize N = R N",
+      "before": "extremalSize N = R N",
+      "confidence": "established-at-pinned-sources",
+      "fact": "denotational_conclusion",
+      "materiality": "unchanged"
+    },
+    {
+      "after": "three distinct correspondences plus a conjunction that reuses two of them",
+      "before": "four pairwise-identical definitions",
+      "confidence": "exact-source-comparison",
+      "fact": "correspondence_structure",
+      "materiality": "corrected-derivation"
+    },
+    {
+      "after": "Admissible implies the interval-subset condition and additionally requires Valid",
+      "before": "Admissible is identical to the interval-subset condition",
+      "confidence": "exact-source-comparison",
+      "fact": "admissible_relation",
+      "materiality": "false-converse-removed"
+    },
+    {
+      "after": "no fixed statement exists for the open question; fixed solved lower and upper variants are present",
+      "before": "no fixed formal statement exists in the file",
+      "confidence": "exact-source-comparison",
+      "fact": "fixed_statement_availability",
+      "materiality": "scope-caveat-added"
+    },
+    {
+      "after": "identified but not compared",
+      "before": "not identified",
+      "confidence": "declared-gap",
+      "fact": "solved_variant_comparison",
+      "materiality": "next-valid-work"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "../definition-correspondence.v1.json",
+      "sha256": "fcae425fe42d4eb03dc6f8da248dec09701fdba8639f57aae5d79b4a2a65fc4f"
+    },
+    {
+      "path": "../definition-correspondence.v2.json",
+      "sha256": "e7c303b037c3ad9491bec761cf7e48b6833b2fe54dbe71f603da1a24123322c2"
+    }
+  ],
+  "schema": "vela.source-experiment.semantic-diff.v1"
+}

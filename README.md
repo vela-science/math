@@ -21,3 +21,17 @@ vela review inbox . --json
 vela review accept . <vpr_id> --reason "<reason>" --if-entry-root sha256:... --json
 vela replay . --json
 ```
+
+## Source-local experiments
+
+- [Erdős 321 translation](evidence/erdos-321/translation/README.md) retains exact
+  Lean source snapshots and derives W3C Web Annotations, a rooted semantic fact
+  diff, an explicit loss report, and a Workflow Run RO-Crate. It is
+  non-canonical evidence and has no authority effect.
+
+## Protocol continuity
+
+- [Vela 0.971.0 predecessor inventory](continuity/v0.971.0-predecessor.json)
+  anchors the last replay-verified prior-generation state. The inventory is
+  provenance, not Standing; current assertions still require the full operator
+  loop in the new generation.
