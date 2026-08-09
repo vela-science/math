@@ -1,0 +1,321 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.3/context",
+    "https://w3id.org/ro/terms/workflow-run/context",
+    {
+      "prov": "http://www.w3.org/ns/prov#"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        },
+        {
+          "@id": "https://w3id.org/ro/crate/1.3"
+        }
+      ]
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.3"
+        },
+        {
+          "@id": "https://w3id.org/ro/wfrun/workflow/0.5"
+        }
+      ],
+      "datePublished": "2026-08-09",
+      "description": "Exact cross-source references, a deterministic correction diff, declared semantic losses, and retrospective provenance for the corrected Erdős 321 definition correspondence.",
+      "hasPart": [
+        {
+          "@id": "reference-annotations.v1.json"
+        },
+        {
+          "@id": "semantic-diff.v1.json"
+        },
+        {
+          "@id": "semantic-loss.v1.json"
+        },
+        {
+          "@id": "source-snapshots.v1.json"
+        },
+        {
+          "@id": "translation-workflow.v1.json"
+        },
+        {
+          "@id": "build.py"
+        },
+        {
+          "@id": "sources/formal-conjectures-321.lean"
+        },
+        {
+          "@id": "sources/starfleet-basic.lean"
+        },
+        {
+          "@id": "https://raw.githubusercontent.com/vela-science/math/27cb6e407f1d42177169c2a02ccd337e1c7bdcc6/evidence/erdos-321/definition-correspondence.v1.json"
+        },
+        {
+          "@id": "https://raw.githubusercontent.com/vela-science/math/27cb6e407f1d42177169c2a02ccd337e1c7bdcc6/evidence/erdos-321/definition-correspondence.v2.json"
+        }
+      ],
+      "license": {
+        "@id": "https://spdx.org/licenses/CC-BY-4.0"
+      },
+      "mainEntity": {
+        "@id": "build.py"
+      },
+      "name": "Erdős 321 source-to-formalization translation experiment"
+    },
+    {
+      "@id": "build.py",
+      "@type": [
+        "File",
+        "SoftwareSourceCode",
+        "ComputationalWorkflow",
+        "https://bioschemas.org/ComputationalWorkflow"
+      ],
+      "conformsTo": {
+        "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+      },
+      "name": "Deterministic Erdős 321 translation builder",
+      "programmingLanguage": {
+        "@id": "#python"
+      }
+    },
+    {
+      "@id": "#python",
+      "@type": "ComputerLanguage",
+      "name": "Python 3",
+      "url": "https://www.python.org/"
+    },
+    {
+      "@id": "#translation-run",
+      "@type": [
+        "CreateAction",
+        "prov:Activity"
+      ],
+      "actionStatus": "CompletedActionStatus",
+      "agent": {
+        "@id": "#codex-agent"
+      },
+      "endTime": "2026-08-09T07:01:38Z",
+      "instrument": {
+        "@id": "build.py"
+      },
+      "name": "Build the Erdős 321 translation records",
+      "object": [
+        {
+          "@id": "https://raw.githubusercontent.com/vela-science/math/27cb6e407f1d42177169c2a02ccd337e1c7bdcc6/evidence/erdos-321/definition-correspondence.v1.json"
+        },
+        {
+          "@id": "https://raw.githubusercontent.com/vela-science/math/27cb6e407f1d42177169c2a02ccd337e1c7bdcc6/evidence/erdos-321/definition-correspondence.v2.json"
+        },
+        {
+          "@id": "sources/formal-conjectures-321.lean"
+        },
+        {
+          "@id": "sources/starfleet-basic.lean"
+        }
+      ],
+      "prov:generated": [
+        {
+          "@id": "reference-annotations.v1.json"
+        },
+        {
+          "@id": "semantic-diff.v1.json"
+        },
+        {
+          "@id": "semantic-loss.v1.json"
+        },
+        {
+          "@id": "source-snapshots.v1.json"
+        }
+      ],
+      "prov:used": [
+        {
+          "@id": "https://raw.githubusercontent.com/vela-science/math/27cb6e407f1d42177169c2a02ccd337e1c7bdcc6/evidence/erdos-321/definition-correspondence.v1.json"
+        },
+        {
+          "@id": "https://raw.githubusercontent.com/vela-science/math/27cb6e407f1d42177169c2a02ccd337e1c7bdcc6/evidence/erdos-321/definition-correspondence.v2.json"
+        },
+        {
+          "@id": "sources/formal-conjectures-321.lean"
+        },
+        {
+          "@id": "sources/starfleet-basic.lean"
+        }
+      ],
+      "prov:wasAssociatedWith": {
+        "@id": "#codex-agent"
+      },
+      "result": [
+        {
+          "@id": "reference-annotations.v1.json"
+        },
+        {
+          "@id": "semantic-diff.v1.json"
+        },
+        {
+          "@id": "semantic-loss.v1.json"
+        },
+        {
+          "@id": "source-snapshots.v1.json"
+        }
+      ],
+      "startTime": "2026-08-09T07:01:38Z"
+    },
+    {
+      "@id": "#codex-agent",
+      "@type": [
+        "SoftwareApplication",
+        "prov:Agent"
+      ],
+      "name": "Codex workspace agent"
+    },
+    {
+      "@id": "https://w3id.org/ro/crate/1.1",
+      "@type": "CreativeWork",
+      "name": "RO-Crate Metadata Specification 1.1"
+    },
+    {
+      "@id": "https://w3id.org/ro/crate/1.3",
+      "@type": "CreativeWork",
+      "name": "RO-Crate Metadata Specification 1.3"
+    },
+    {
+      "@id": "https://w3id.org/ro/wfrun/workflow/0.5",
+      "@type": "CreativeWork",
+      "name": "Workflow Run Crate profile 0.5"
+    },
+    {
+      "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0",
+      "@type": "CreativeWork",
+      "name": "Workflow RO-Crate profile 1.0"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/vela-science/math/27cb6e407f1d42177169c2a02ccd337e1c7bdcc6/evidence/erdos-321/definition-correspondence.v1.json",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "sha256": "fcae425fe42d4eb03dc6f8da248dec09701fdba8639f57aae5d79b4a2a65fc4f",
+      "version": "27cb6e407f1d42177169c2a02ccd337e1c7bdcc6"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/vela-science/math/27cb6e407f1d42177169c2a02ccd337e1c7bdcc6/evidence/erdos-321/definition-correspondence.v2.json",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "sha256": "e7c303b037c3ad9491bec761cf7e48b6833b2fe54dbe71f603da1a24123322c2",
+      "version": "27cb6e407f1d42177169c2a02ccd337e1c7bdcc6"
+    },
+    {
+      "@id": "sources/formal-conjectures-321.lean",
+      "@type": [
+        "File",
+        "SoftwareSourceCode",
+        "prov:Entity"
+      ],
+      "contentUrl": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/59f30aa314ba225fcd9268723ce8291616df1ab0/FormalConjectures/ErdosProblems/321.lean",
+      "sha256": "601d8486743aede6803feaaefc7bbb73f0aa8873d0296a6a1c5400fd86c32357",
+      "version": "59f30aa314ba225fcd9268723ce8291616df1ab0"
+    },
+    {
+      "@id": "sources/starfleet-basic.lean",
+      "@type": [
+        "File",
+        "SoftwareSourceCode",
+        "prov:Entity"
+      ],
+      "contentUrl": "https://raw.githubusercontent.com/williamjblair/lean-proofs/a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0/starfleet/erdos-321/Research/Basic.lean",
+      "sha256": "6f8edd294e9a5dfb2475468c23518722a736798ea3e6e51822f826c1e4672a74",
+      "version": "a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0"
+    },
+    {
+      "@id": "reference-annotations.v1.json",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "encodingFormat": "application/ld+json",
+      "prov:wasGeneratedBy": {
+        "@id": "#translation-run"
+      },
+      "sha256": "287ae43d322c014b16138fd618a7ed850a51c9ad01cbbf9cdb8f7a690f9caf94"
+    },
+    {
+      "@id": "semantic-diff.v1.json",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "encodingFormat": "application/json",
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://raw.githubusercontent.com/vela-science/math/27cb6e407f1d42177169c2a02ccd337e1c7bdcc6/evidence/erdos-321/definition-correspondence.v1.json"
+        },
+        {
+          "@id": "https://raw.githubusercontent.com/vela-science/math/27cb6e407f1d42177169c2a02ccd337e1c7bdcc6/evidence/erdos-321/definition-correspondence.v2.json"
+        }
+      ],
+      "prov:wasGeneratedBy": {
+        "@id": "#translation-run"
+      },
+      "sha256": "0bd0b53b69934d391a9482452c38c8adaf7833ca7f2870c2ce03fc873caf13c5"
+    },
+    {
+      "@id": "semantic-loss.v1.json",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "encodingFormat": "application/json",
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "https://raw.githubusercontent.com/vela-science/math/27cb6e407f1d42177169c2a02ccd337e1c7bdcc6/evidence/erdos-321/definition-correspondence.v1.json"
+        },
+        {
+          "@id": "https://raw.githubusercontent.com/vela-science/math/27cb6e407f1d42177169c2a02ccd337e1c7bdcc6/evidence/erdos-321/definition-correspondence.v2.json"
+        }
+      ],
+      "prov:wasGeneratedBy": {
+        "@id": "#translation-run"
+      },
+      "sha256": "c76294a540fe1d0a04573603d40524f6094dbf5eaea0536752085bcc6a699fd6"
+    },
+    {
+      "@id": "source-snapshots.v1.json",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "encodingFormat": "application/json",
+      "prov:wasGeneratedBy": {
+        "@id": "#translation-run"
+      },
+      "sha256": "518b17d19fde6432daff41ff26ba9ef8eec8da60bd4e5333d79435e196bbe3a6"
+    },
+    {
+      "@id": "translation-workflow.v1.json",
+      "@type": [
+        "File",
+        "prov:Entity"
+      ],
+      "encodingFormat": "application/json",
+      "prov:wasGeneratedBy": {
+        "@id": "#translation-run"
+      },
+      "sha256": "ad98261b75ed4ede4effe644ee14eca5d9f6b43c64746b075078f145140237cf"
+    }
+  ]
+}

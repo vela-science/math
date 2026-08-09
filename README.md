@@ -21,3 +21,10 @@ vela review inbox . --json
 vela review accept . <vpr_id> --reason "<reason>" --if-entry-root sha256:... --json
 vela replay . --json
 ```
+
+## Source-local experiments
+
+- [Erdős 321 translation](evidence/erdos-321/translation/README.md) retains exact
+  Lean source snapshots and derives W3C Web Annotations, a rooted semantic fact
+  diff, an explicit loss report, and a Workflow Run RO-Crate. It is
+  non-canonical evidence and has no authority effect.

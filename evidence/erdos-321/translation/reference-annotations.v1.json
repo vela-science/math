@@ -1,0 +1,235 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld",
+    {
+      "vela": "https://vela.space/ns/translation#"
+    }
+  ],
+  "id": "urn:vela:reference-collection:erdos-321:v1",
+  "items": [
+    {
+      "body": {
+        "format": "text/plain",
+        "language": "en",
+        "purpose": "describing",
+        "type": "TextualBody",
+        "value": "The rational functions are extensionally equal: n⁻¹ = 1 / n."
+      },
+      "id": "urn:vela:reference:erdos-321:reciprocal-sum",
+      "motivation": "linking",
+      "target": [
+        {
+          "selector": [
+            {
+              "exact": "def reciprocalSubsetSum (S : Finset ℕ) : ℚ :=\n  ∑ n ∈ S, ((n : ℚ)⁻¹)",
+              "prefix": "cals of the elements of `S`. -/\n",
+              "suffix": "\n\n/-- All subset sums of recipro",
+              "type": "TextQuoteSelector"
+            },
+            {
+              "end": 436,
+              "start": 368,
+              "type": "TextPositionSelector"
+            }
+          ],
+          "source": "https://raw.githubusercontent.com/williamjblair/lean-proofs/a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0/starfleet/erdos-321/Research/Basic.lean",
+          "type": "SpecificResource"
+        },
+        {
+          "selector": [
+            {
+              "exact": "(fun (S : Finset ℕ) ↦ ∑ n ∈ S, (1 : ℚ) / n)",
+              "prefix": "t.Icc 1 N)\n      (_ : Set.InjOn ",
+              "suffix": " A.powerset) }\n\n/--\nLet $R(N)$ b",
+              "type": "TextQuoteSelector"
+            },
+            {
+              "end": 1062,
+              "start": 1019,
+              "type": "TextPositionSelector"
+            }
+          ],
+          "source": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/59f30aa314ba225fcd9268723ce8291616df1ab0/FormalConjectures/ErdosProblems/321.lean",
+          "type": "SpecificResource"
+        }
+      ],
+      "type": "Annotation",
+      "vela:authorityEffect": "none",
+      "vela:label": "reciprocalSubsetSum ↔ reciprocal-sum lambda",
+      "vela:precision": "exact"
+    },
+    {
+      "body": {
+        "format": "text/plain",
+        "language": "en",
+        "purpose": "describing",
+        "type": "TextualBody",
+        "value": "The quantified equality implication is Set.InjOn on A.powerset."
+      },
+      "id": "urn:vela:reference:erdos-321:validity",
+      "motivation": "linking",
+      "target": [
+        {
+          "selector": [
+            {
+              "exact": "def Valid (A : Finset ℕ) : Prop :=\n  ∀ S ∈ A.powerset, ∀ T ∈ A.powerset,\n    reciprocalSubsetSum S = reciprocalSubsetSum T → S = T",
+              "prefix": "ocals from `A` are distinct. -/\n",
+              "suffix": "\n\n/-- `A` is one of the sets all",
+              "type": "TextQuoteSelector"
+            },
+            {
+              "end": 629,
+              "start": 499,
+              "type": "TextPositionSelector"
+            }
+          ],
+          "source": "https://raw.githubusercontent.com/williamjblair/lean-proofs/a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0/starfleet/erdos-321/Research/Basic.lean",
+          "type": "SpecificResource"
+        },
+        {
+          "selector": [
+            {
+              "exact": "Set.InjOn (fun (S : Finset ℕ) ↦ ∑ n ∈ S, (1 : ℚ) / n) A.powerset",
+              "prefix": " A ⊆ Finset.Icc 1 N)\n      (_ : ",
+              "suffix": ") }\n\n/--\nLet $R(N)$ be the size ",
+              "type": "TextQuoteSelector"
+            },
+            {
+              "end": 1073,
+              "start": 1009,
+              "type": "TextPositionSelector"
+            }
+          ],
+          "source": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/59f30aa314ba225fcd9268723ce8291616df1ab0/FormalConjectures/ErdosProblems/321.lean",
+          "type": "SpecificResource"
+        }
+      ],
+      "type": "Annotation",
+      "vela:authorityEffect": "none",
+      "vela:label": "Valid ↔ Set.InjOn",
+      "vela:precision": "exact"
+    },
+    {
+      "body": {
+        "format": "text/plain",
+        "language": "en",
+        "purpose": "describing",
+        "type": "TextualBody",
+        "value": "Admissible is the conjunction of the subset and injectivity conditions; it is not identical to either condition alone."
+      },
+      "id": "urn:vela:reference:erdos-321:admissibility",
+      "motivation": "linking",
+      "target": [
+        {
+          "selector": [
+            {
+              "exact": "def Admissible (N : ℕ) (A : Finset ℕ) : Prop :=\n  A ⊆ Finset.Icc 1 N ∧ Valid A",
+              "prefix": "roblem 321 at parameter `N`. -/\n",
+              "suffix": "\n\n/-- The finite collection over",
+              "type": "TextQuoteSelector"
+            },
+            {
+              "end": 786,
+              "start": 708,
+              "type": "TextPositionSelector"
+            }
+          ],
+          "source": "https://raw.githubusercontent.com/williamjblair/lean-proofs/a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0/starfleet/erdos-321/Research/Basic.lean",
+          "type": "SpecificResource"
+        },
+        {
+          "selector": [
+            {
+              "exact": "A ⊆ Finset.Icc 1 N",
+              "prefix": ") : ℕ :=\n  sSup { #A | (A) (_ : ",
+              "suffix": ")\n      (_ : Set.InjOn (fun (S :",
+              "type": "TextQuoteSelector"
+            },
+            {
+              "end": 996,
+              "start": 978,
+              "type": "TextPositionSelector"
+            }
+          ],
+          "source": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/59f30aa314ba225fcd9268723ce8291616df1ab0/FormalConjectures/ErdosProblems/321.lean",
+          "type": "SpecificResource"
+        },
+        {
+          "selector": [
+            {
+              "exact": "Set.InjOn (fun (S : Finset ℕ) ↦ ∑ n ∈ S, (1 : ℚ) / n) A.powerset",
+              "prefix": " A ⊆ Finset.Icc 1 N)\n      (_ : ",
+              "suffix": ") }\n\n/--\nLet $R(N)$ be the size ",
+              "type": "TextQuoteSelector"
+            },
+            {
+              "end": 1073,
+              "start": 1009,
+              "type": "TextPositionSelector"
+            }
+          ],
+          "source": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/59f30aa314ba225fcd9268723ce8291616df1ab0/FormalConjectures/ErdosProblems/321.lean",
+          "type": "SpecificResource"
+        }
+      ],
+      "type": "Annotation",
+      "vela:authorityEffect": "none",
+      "vela:label": "Admissible ↔ both set-builder side conditions",
+      "vela:precision": "exact"
+    },
+    {
+      "body": {
+        "format": "text/plain",
+        "language": "en",
+        "purpose": "describing",
+        "type": "TextualBody",
+        "value": "Both take the maximum cardinality of the same finite nonempty family; this bridge uses the three references above."
+      },
+      "id": "urn:vela:reference:erdos-321:extremal-value",
+      "motivation": "linking",
+      "target": [
+        {
+          "selector": [
+            {
+              "exact": "noncomputable def candidateSets (N : ℕ) : Finset (Finset ℕ) := by\n  classical\n  exact (Finset.Icc 1 N).powerset.filter Valid\n\n/-- The exact answer to Erdős Problem 321 at parameter `N`. -/\nnoncomputable def extremalSize (N : ℕ) : ℕ :=\n  (candidateSets N).sup Finset.card",
+              "prefix": " which the maximum is taken. -/\n",
+              "suffix": "\n\n/-- Every admissible set has c",
+              "type": "TextQuoteSelector"
+            },
+            {
+              "end": 1120,
+              "start": 850,
+              "type": "TextPositionSelector"
+            }
+          ],
+          "source": "https://raw.githubusercontent.com/williamjblair/lean-proofs/a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0/starfleet/erdos-321/Research/Basic.lean",
+          "type": "SpecificResource"
+        },
+        {
+          "selector": [
+            {
+              "exact": "noncomputable def R (N : ℕ) : ℕ :=\n  sSup { #A | (A) (_ : A ⊆ Finset.Icc 1 N)\n      (_ : Set.InjOn (fun (S : Finset ℕ) ↦ ∑ n ∈ S, (1 : ℚ) / n) A.powerset) }",
+              "prefix": "distinct for $S\\subseteq A$.\n-/\n",
+              "suffix": "\n\n/--\nLet $R(N)$ be the size of ",
+              "type": "TextQuoteSelector"
+            },
+            {
+              "end": 1076,
+              "start": 920,
+              "type": "TextPositionSelector"
+            }
+          ],
+          "source": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/59f30aa314ba225fcd9268723ce8291616df1ab0/FormalConjectures/ErdosProblems/321.lean",
+          "type": "SpecificResource"
+        }
+      ],
+      "type": "Annotation",
+      "vela:authorityEffect": "none",
+      "vela:label": "extremalSize ↔ R",
+      "vela:precision": "exact"
+    }
+  ],
+  "label": "Erdős 321 exact definition references",
+  "total": 4,
+  "type": "AnnotationCollection"
+}

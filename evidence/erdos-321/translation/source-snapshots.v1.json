@@ -1,0 +1,17 @@
+{
+  "schema": "vela.source-experiment.snapshots.v1",
+  "sources": [
+    {
+      "commit": "59f30aa314ba225fcd9268723ce8291616df1ab0",
+      "content_url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/59f30aa314ba225fcd9268723ce8291616df1ab0/FormalConjectures/ErdosProblems/321.lean",
+      "path": "sources/formal-conjectures-321.lean",
+      "sha256": "sha256:601d8486743aede6803feaaefc7bbb73f0aa8873d0296a6a1c5400fd86c32357"
+    },
+    {
+      "commit": "a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0",
+      "content_url": "https://raw.githubusercontent.com/williamjblair/lean-proofs/a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0/starfleet/erdos-321/Research/Basic.lean",
+      "path": "sources/starfleet-basic.lean",
+      "sha256": "sha256:6f8edd294e9a5dfb2475468c23518722a736798ea3e6e51822f826c1e4672a74"
+    }
+  ]
+}
