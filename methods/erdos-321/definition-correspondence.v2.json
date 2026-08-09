@@ -1,0 +1,19 @@
+{
+  "schema": "vela.verification-method.v1",
+  "profile": "definition-correspondence-v2",
+  "property": "definition_correspondence",
+  "question": "Does the Submission's claim of four pairwise-identical defining notions follow from the two pinned source snapshots?",
+  "procedure": [
+    "Read evidence/erdos-321/definition-correspondence.v1.json and extract its four claimed pairs.",
+    "Read evidence/erdos-321/definition-correspondence.v2.json and the exact source snapshots retained under evidence/erdos-321/translation/sources/.",
+    "Check each pair against the source definitions, distinguishing a predicate from a conjunction containing that predicate.",
+    "Return pass only if all four pairwise-identity claims are true as written."
+  ],
+  "finding": "The denotational conclusion extremalSize N = R N is supported, but the Submission's stronger statement that four defining notions correspond exactly is false as written. Admissible N A is the conjunction A subset Finset.Icc 1 N and Valid A; it is not identical to the subset condition alone. There are three distinct correspondences plus the conjunction that combines two of them.",
+  "outcome_reasoning": "Fail for the exact registered property asserted by this Submission. This does not reject the denotational conclusion; a corrected Submission can state that conclusion without the false pairwise-count claim.",
+  "environment": {
+    "inputs_are_exact_bytes": true,
+    "network_required": false,
+    "independence": "The method checks the retained source snapshots directly and discloses that the v2 evidence first identified the mismatch."
+  }
+}
