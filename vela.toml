@@ -1,5 +1,5 @@
 schema = "vela.repository-profile.v1"
-repository_id = "vrepo_8b32ff6fa11cdb5fa0bb8a043c7d6941"
+repository_id = "8115c538-7688-40b7-ab75-3c4765bf3c19"
 name = "Vela Mathematics"
 summary = "Which mathematical assertions has this authority admitted on exact, reproducible evidence, and what remains unresolved?"
 maintainers = []
@@ -12,4 +12,4 @@ excludes = []
 [license]
 content = "CC-BY-4.0"
 code = "Apache-2.0"
-data = "varies"
+data = "NOASSERTION"
