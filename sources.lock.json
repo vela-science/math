@@ -5,12 +5,12 @@
       "kind": "formal_library",
       "repo": "google-deepmind/alphaproof-nexus-results",
       "tree": "f5b237b85887066fac14f98a51fd059aaf952184",
-      "unlocked": "no content locator: the url is the repository landing page, not bytes, and this frontier retains no snapshot. The pin is the commit and tree above, both read from the GitHub API at generation time",
+      "unlocked": "no content locator: the url is the repository landing page, not bytes, and this repository retains no snapshot. The pin is the commit and tree above, both read from the GitHub API at generation time",
       "url": "https://github.com/google-deepmind/alphaproof-nexus-results"
     },
     "codetables": {
       "kind": "reference_only",
-      "unlocked": "reference only: the frontier records that this was consulted, not what it said, so no bytes are retained and there is no content root to compute",
+      "unlocked": "reference only: the repository records that this was consulted, not what it said, so no bytes are retained and there is no content root to compute",
       "url": "https://codetables.de/"
     },
     "erdos": {
