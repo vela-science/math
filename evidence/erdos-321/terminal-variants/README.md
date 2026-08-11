@@ -51,6 +51,11 @@ historical CI environment.
 - `reader_protocol.py` fixes the append-only event-chain, enrollment,
   assignment, completion, timing, and custody-root algorithms; its literal
   vectors are in `reader_protocol_test.py`.
+- `reader_run.py` is the operator for the frozen study. It initializes a
+  private custody directory, assigns eligible readers, records rooted raw
+  responses and timing, audits every retained byte, and computes only the
+  preregistered first-period estimator. `reader_run_test.py` exercises a full
+  two-reader crossover plus withdrawal and hostile custody files.
 - `evidence_rooting.py` is the small shared canonical JSON/rooting subset.
 - `build.py` reads only pinned local Git objects and emits deterministic JSON.
 - `test_build.py` exercises determinism, roots, rights, and refusal boundaries.
@@ -91,3 +96,45 @@ are excluded from that run and may never be pooled with human evidence.
 Because the instrument is public, later observations must exclude prior
 authors/reviewers, retain access and timing provenance, and never be described
 as blinded or held-out.
+
+## Operate the preregistered run
+
+The custodian uses a fresh parent-owned directory. `init` creates the run at
+mode `0700`; attestations, raw responses, period records, and the append-only
+ledger remain mode `0600`. The exact pinned `lean-proofs` object store is read
+only to verify the terminal source bytes supplied during each period.
+
+```bash
+python3 -B evidence/erdos-321/terminal-variants/reader_run.py init \
+  /private/custody/erdos-321-reader-run --custodian 'custodian:<id>'
+
+python3 -B evidence/erdos-321/terminal-variants/reader_run.py enroll \
+  /private/custody/erdos-321-reader-run \
+  --participant-id human-001 --attestation /private/intake/human-001.txt \
+  --occurred-at 2026-08-15T12:00:00Z
+
+python3 -B evidence/erdos-321/terminal-variants/reader_run.py opened-materials \
+  /private/custody/erdos-321-reader-run --participant-id human-001 \
+  --opened-at 2026-08-15T12:05:00Z > /private/intake/human-001-opened.json
+
+python3 -B evidence/erdos-321/terminal-variants/reader_run.py record-period \
+  /private/custody/erdos-321-reader-run --participant-id human-001 \
+  --response /private/intake/human-001-response.json \
+  --opened-materials /private/intake/human-001-opened.json \
+  --lean-proofs-repo /path/to/lean-proofs \
+  --timer-started-at 2026-08-15T12:05:00Z \
+  --timer-stopped-at 2026-08-15T12:25:00Z \
+  --monotonic-started-ns 1000000000 --monotonic-stopped-ns 1200000000000 \
+  --occurred-at 2026-08-15T12:25:00Z
+
+python3 -B evidence/erdos-321/terminal-variants/reader_run.py audit \
+  /private/custody/erdos-321-reader-run --lean-proofs-repo /path/to/lean-proofs
+python3 -B evidence/erdos-321/terminal-variants/reader_run.py analyze \
+  /private/custody/erdos-321-reader-run --lean-proofs-repo /path/to/lean-proofs \
+  --as-of 2026-10-08T00:00:00Z
+```
+
+The participant response is the exact JSON shape in
+`participant-packet.v0.1.json`. Scoring occurs only after raw response custody.
+The result keeps second-period answers outside the primary estimator and makes
+no acceptance, adoption, scientific-lift, or reviewer-efficiency claim.

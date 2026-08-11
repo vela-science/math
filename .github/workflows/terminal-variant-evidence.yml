@@ -74,6 +74,8 @@ jobs:
           evidence/erdos-321/terminal-variants/reader-instrument.v0.1.json
           evidence/erdos-321/terminal-variants/reader_protocol.py
           evidence/erdos-321/terminal-variants/reader_protocol_test.py
+          evidence/erdos-321/terminal-variants/reader_run.py
+          evidence/erdos-321/terminal-variants/reader_run_test.py
           evidence/erdos-321/terminal-variants/reader_scorer.py
           evidence/erdos-321/terminal-variants/source-lock.v0.1.json
           evidence/erdos-321/terminal-variants/test_build.py
@@ -94,6 +96,7 @@ jobs:
           test "$(grep -Foc "$bundle_root" README.md)" -eq 1
           python3 -B evidence/erdos-321/terminal-variants/test_build.py
           python3 -B evidence/erdos-321/terminal-variants/reader_protocol_test.py
+          python3 -B evidence/erdos-321/terminal-variants/reader_run_test.py
           test -z "$(find evidence/erdos-321/terminal-variants -type d -name __pycache__ -print -quit)"
           test -z "$(git status --porcelain=v1 --untracked-files=all)"
           git diff --check "$base"...HEAD
