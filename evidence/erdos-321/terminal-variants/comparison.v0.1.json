@@ -1,0 +1,110 @@
+{
+  "authority_effect": "none",
+  "comparison": {
+    "contradiction_status": "none_found_or_claimed",
+    "formal_bridge_status": "not_constructed",
+    "material_differences": [
+      "the terminal theorem uses real iterated logarithms beginning at log log n; the fixed variants use iterated Nat.log",
+      "the terminal theorem selects one existential adaptive depth d; the fixed variants quantify over supplied k or r satisfying different hypotheses",
+      "the terminal theorem has unspecified asymptotic constants c and C; the fixed variants state explicit coefficient shapes",
+      "the terminal and fixed products use different index coordinates, so visual similarity is not a Lean-level bridge"
+    ],
+    "per_variant_relations": [
+      {
+        "alignment_status": "index alignment only; not a variable substitution theorem",
+        "candidate_index_alignment": "k = d + 2",
+        "conclusion": "no implication in either direction is established",
+        "condition_delta": "the terminal theorem supplies terminal real-log threshold conditions, not d >= 2 or the fixed lower hypotheses after k = d + 2",
+        "constant_delta": "the terminal lower coefficient is an existential positive real c; the fixed lower coefficient is the explicit unit coefficient in its Nat-valued expression",
+        "fixed_conditions": "4 <= k and k <= Nat.log iterated k times at N",
+        "fixed_quantifiers": "for every supplied N and k",
+        "terminal_quantifiers": "there exist N0, B, c, and C such that every n at least N0 admits a depth d",
+        "variant": "lower"
+      },
+      {
+        "alignment_status": "index alignment only; not a variable substitution theorem",
+        "candidate_index_alignment": "r = d + 2",
+        "conclusion": "no implication in either direction is established",
+        "condition_delta": "r = d + 2 automatically supplies 1 <= r; the terminal theorem does not supply 1 <= Nat.log^[2*(d+2)] N or a Real.log-to-Nat.log bridge",
+        "constant_delta": "the terminal upper coefficient is an existential nonnegative real C; the fixed upper expression has the extra factor 1 / log 2 * log^[r] N",
+        "fixed_conditions": "1 <= r and 1 <= Nat.log iterated 2*r times at N",
+        "fixed_quantifiers": "for every supplied N and r",
+        "terminal_quantifiers": "there exist N0, B, c, and C such that every n at least N0 admits a depth d",
+        "variant": "upper"
+      }
+    ],
+    "shared_features": [
+      "two-sided control of the same extremal quantity after the inherited denotational bridge",
+      "an n/log n leading factor",
+      "products of iterated logarithms whose retained depth depends on logarithmic threshold conditions"
+    ],
+    "verdict": "same extremal quantity; overlapping iterated-log scale family; not the same statement; no implication or equivalence is established in either direction"
+  },
+  "content_root": "sha256:808c9ba973d36b0ed79366ae04357c04e2c5b2c0aa5a04967f90ad09eabba699",
+  "content_root_definition": "sha256 of RFC-8785 JSON after removing only content_root",
+  "does_not_establish": [
+    "that the terminal theorem proves either fixed Formal Conjectures variant",
+    "that either fixed variant proves the terminal theorem",
+    "that Erdős Problem 321 is resolved or that the bound is optimal",
+    "that a green CI definition is an independently reproduced CI run",
+    "that the Formal Conjectures lower or upper proof bodies are kernel evidence; both retained bodies use sorry",
+    "that verification or this comparison has Decision or Standing authority"
+  ],
+  "format": "vela.math.erdos321-terminal-variant-comparison.v0.1",
+  "index_expansion_evidence": {
+    "bridge_status": "descriptive source comparison only; no Lean theorem equates these index systems",
+    "fixed_lower_index": "Finset.Icc 3 k over Nat.log iterates",
+    "fixed_upper_index": "Finset.Icc 3 r plus a separate Nat.log iterate at r",
+    "terminal_definition": "terminalReciprocalScale n d = n / Real.log n * iteratedLogTailProduct d (Real.log (Real.log n))",
+    "terminal_product_reading": "the source docstring identifies factors log_3 n through log_(d+2) n"
+  },
+  "next_obligation": "construct and kernel-check explicit bridges between the real-log terminal coordinates and each Nat.log fixed-variant hypothesis before asserting implication",
+  "problem": "erdos:321",
+  "quantity_boundary": {
+    "basis": "evidence/erdos-321/definition-correspondence.v2.json",
+    "claim": "Star Fleet extremalSize N and Formal Conjectures R N denote the same quantity at the pinned commits",
+    "not_reproved_here": true,
+    "status": "inherited established correspondence"
+  },
+  "source_locators": {
+    "fixed_variants": {
+      "commit": "59f30aa314ba225fcd9268723ce8291616df1ab0",
+      "declarations": [
+        "Erdos321.erdos_321.variants.lower",
+        "Erdos321.erdos_321.variants.upper"
+      ],
+      "path": "FormalConjectures/ErdosProblems/321.lean",
+      "raw_sha256": "sha256:601d8486743aede6803feaaefc7bbb73f0aa8873d0296a6a1c5400fd86c32357",
+      "repository": "https://github.com/google-deepmind/formal-conjectures.git",
+      "retained_math_path": "evidence/erdos-321/translation/sources/formal-conjectures-321.lean"
+    },
+    "terminal": {
+      "commit": "a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0",
+      "declaration": "Erdos321.erdos321_asymptotic",
+      "path": "starfleet/erdos-321/Research/FinalAsymptotic.lean",
+      "raw_sha256": "sha256:63dd7ba024ec235a47c1b90c638acae758a50f2d0ee4267e0f69b22cd5d9c0b5",
+      "repository": "https://github.com/williamjblair/lean-proofs.git"
+    }
+  },
+  "source_lock_root": "sha256:128edd2b0b58597ca05c7c0049ab20c10c9e6ef4e06c2c3ff8371752123a103b",
+  "statements": {
+    "fixed_lower": {
+      "declaration": "Erdos321.erdos_321.variants.lower",
+      "proof_body_status": "retained statement has `by sorry`; this is not kernel proof evidence",
+      "scale": "N / Nat.log N times a finite product of natural iterated logs indexed 3 through k",
+      "shape": "pointwise lower bound for every natural k satisfying 4 <= k and k <= Nat.log iterated k times at N"
+    },
+    "fixed_upper": {
+      "declaration": "Erdos321.erdos_321.variants.upper",
+      "proof_body_status": "retained statement has `by sorry`; this is not kernel proof evidence",
+      "scale": "an explicit natural-log-indexed factor times N / Nat.log N and a product indexed 3 through r",
+      "shape": "pointwise upper bound for every natural r satisfying 1 <= r and 1 <= Nat.log iterated 2*r times at N"
+    },
+    "terminal": {
+      "constants": "existential N0, B, c, C with B at least 192, c positive, C nonnegative",
+      "declaration": "Erdos321.erdos321_asymptotic",
+      "scale": "n / Real.log n times an iterated real-log tail product",
+      "shape": "eventual two-sided real bounds at an existential terminal depth d selected for each n"
+    }
+  }
+}

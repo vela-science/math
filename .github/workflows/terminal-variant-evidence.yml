@@ -1,0 +1,99 @@
+name: terminal-variant-evidence
+
+on:
+  pull_request:
+    paths:
+      - "AGENTS.md"
+      - "README.md"
+      - "evidence/erdos-321/terminal-variants/**"
+      - ".github/workflows/terminal-variant-evidence.yml"
+  push:
+    branches: [main]
+    paths:
+      - "AGENTS.md"
+      - "README.md"
+      - "evidence/erdos-321/terminal-variants/**"
+      - ".github/workflows/terminal-variant-evidence.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Acquire complete pinned source object stores
+        env:
+          SOURCE_ROOT: ${{ runner.temp }}/terminal-variant-sources
+        run: |
+          set -euo pipefail
+          mkdir -p "$SOURCE_ROOT"
+          git clone --no-tags https://github.com/williamjblair/lean-proofs.git "$SOURCE_ROOT/lean-proofs"
+          git clone --no-tags https://github.com/leanprover-community/mathlib4.git "$SOURCE_ROOT/mathlib4"
+          git clone --no-tags https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git "$SOURCE_ROOT/pnt"
+          git -C "$SOURCE_ROOT/lean-proofs" cat-file -e a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0^{commit}
+          git -C "$SOURCE_ROOT/mathlib4" cat-file -e fabf563a7c95a166b8d7b6efca11c8b4dc9d911f^{commit}
+          git -C "$SOURCE_ROOT/pnt" cat-file -e a7eb3a8ae4bde79292fb5f04c32cd5ab6d8f226c^{commit}
+
+      - name: Verify rooted comparison and preregistration
+        env:
+          VELA_LEAN_PROOFS_REPO: ${{ runner.temp }}/terminal-variant-sources/lean-proofs
+          VELA_MATHLIB_REPO: ${{ runner.temp }}/terminal-variant-sources/mathlib4
+          VELA_PNT_REPO: ${{ runner.temp }}/terminal-variant-sources/pnt
+        run: |
+          set -euo pipefail
+          git remote set-url origin https://github.com/vela-science/math.git
+          base=fdb23666e7b5385a62cc97c58086bc67bd4e7fa9
+          exposed=a6a31a528ee86ab79c2aaf4e71e43fc63f4a4e98
+          git cat-file -e "${exposed}^{commit}"
+          git merge-base --is-ancestor "$base" HEAD
+          if git merge-base --is-ancestor "$exposed" HEAD; then
+            echo "exposed StandingBench overlay entered the integration branch" >&2
+            exit 1
+          fi
+          expected="${RUNNER_TEMP}/terminal-variant-expected-paths"
+          observed="${RUNNER_TEMP}/terminal-variant-observed-paths"
+          cat >"$expected" <<'EOF'
+          .github/workflows/terminal-variant-evidence.yml
+          AGENTS.md
+          README.md
+          evidence/erdos-321/terminal-variants/README.md
+          evidence/erdos-321/terminal-variants/build.py
+          evidence/erdos-321/terminal-variants/comparison.v0.1.json
+          evidence/erdos-321/terminal-variants/evidence_rooting.py
+          evidence/erdos-321/terminal-variants/participant-packet.v0.1.json
+          evidence/erdos-321/terminal-variants/plan.v0.1.json
+          evidence/erdos-321/terminal-variants/reader-instrument.v0.1.json
+          evidence/erdos-321/terminal-variants/reader_protocol.py
+          evidence/erdos-321/terminal-variants/reader_protocol_test.py
+          evidence/erdos-321/terminal-variants/reader_scorer.py
+          evidence/erdos-321/terminal-variants/source-lock.v0.1.json
+          evidence/erdos-321/terminal-variants/test_build.py
+          EOF
+          git diff --name-only "$base"...HEAD | LC_ALL=C sort >"$observed"
+          diff -u "$expected" "$observed"
+          test -z "$(git diff --name-only "$base"...HEAD -- .vela records methods continuity)"
+          python3 -B evidence/erdos-321/terminal-variants/build.py \
+            --lean-proofs-repo "$VELA_LEAN_PROOFS_REPO" \
+            --mathlib-repo "$VELA_MATHLIB_REPO" \
+            --pnt-repo "$VELA_PNT_REPO" \
+            --check
+          bundle_root="$(python3 -B evidence/erdos-321/terminal-variants/build.py \
+            --lean-proofs-repo "$VELA_LEAN_PROOFS_REPO" \
+            --mathlib-repo "$VELA_MATHLIB_REPO" \
+            --pnt-repo "$VELA_PNT_REPO" \
+            --check --print-root)"
+          test "$(grep -Foc "$bundle_root" README.md)" -eq 1
+          python3 -B evidence/erdos-321/terminal-variants/test_build.py
+          python3 -B evidence/erdos-321/terminal-variants/reader_protocol_test.py
+          test -z "$(find evidence/erdos-321/terminal-variants -type d -name __pycache__ -print -quit)"
+          test -z "$(git status --porcelain=v1 --untracked-files=all)"
+          git diff --check "$base"...HEAD

@@ -1,0 +1,169 @@
+{
+  "assignment_schedule": {
+    "completion_cutoff": "2026-10-07T23:59:59Z",
+    "maximum_enrollment": 18,
+    "participant_classes": {
+      "human": {
+        "allocation": "sequential alternation between baseline_first and treatment_first",
+        "initial_sequence": "baseline_first",
+        "target": 12
+      },
+      "model": {
+        "allocation": "none",
+        "status": "excluded_from_this_preregistered_run",
+        "target": 0
+      }
+    },
+    "recruitment_cutoff": "2026-09-30T23:59:59Z",
+    "status": "frozen_pre_enrollment",
+    "unit": "eligible human reader"
+  },
+  "arms": {
+    "baseline": {
+      "common_participant_packet_root": "sha256:35f6c06a1bf8f7abc46caea502f9ccd45db6a569da6856d04f03a2c386266bbe",
+      "delivery_manifest_root": "sha256:81ba42a892481daa65de62ea68534f9e66f758691579ef1ca745ca14aee05bdf",
+      "material_ids": ["participant_packet", "quantity_bridge", "terminal_source", "fixed_source"]
+    },
+    "treatment": {
+      "common_participant_packet_root": "sha256:35f6c06a1bf8f7abc46caea502f9ccd45db6a569da6856d04f03a2c386266bbe",
+      "delivery_manifest_root": "sha256:a6408fb805db95b631d8b5a5b083d0927d64dd224acd78b4531f862f2439744a",
+      "material_ids": ["participant_packet", "quantity_bridge", "terminal_source", "fixed_source", "comparison"]
+    }
+  },
+  "authority_effect": "none",
+  "content_root": "sha256:db06c21a6a0d4f24c91dc59903dad0245326edd2311dbdeb3d88ed39640067e7",
+  "content_root_definition": "sha256 of RFC-8785 JSON after removing only content_root",
+  "custody": {
+    "eligibility_attestation_raw_root": "sha256 of exact submitted UTF-8 bytes without newline normalization",
+    "future_manifest_contract": {
+      "format": "vela.math.cold-reader-custody-manifest.v0.1",
+      "logical_location": "custody://vela-math/erdos-321/terminal-variants/v0.1/<run_id>/manifest.v0.1.json",
+      "required_members": ["run_id", "plan_root", "source_lock_root", "comparison_root", "instrument_root", "participant_packet_root", "baseline_delivery_manifest_root", "treatment_delivery_manifest_root", "ledger_head_root", "period_record_roots", "created_at", "custodian"],
+      "run_id": "UTC basic timestamp plus 16 lowercase hexadecimal random characters, frozen before enrollment"
+    },
+    "period_record_content_root": "sha256 of RFC-8785 JSON after removing only period_record_root",
+    "per_period_record": [
+      "participant_id",
+      "participant_class",
+      "assignment",
+      "period",
+      "arm",
+      "delivery_manifest_root",
+      "materials_opened",
+      "timer_started_at",
+      "timer_stopped_at",
+      "monotonic_started_ns",
+      "monotonic_stopped_ns",
+      "elapsed_monotonic_ns",
+      "response",
+      "response_raw_root",
+      "response_content_root",
+      "eligibility_attestation_raw_root",
+      "period_record_root"
+    ],
+    "response_content_root": "sha256 of RFC-8785 JSON for the parsed response object",
+    "response_raw_root": "sha256 of exact submitted UTF-8 bytes without newline normalization",
+    "retain_verbatim_response": true,
+    "retain_timing_and_access_provenance": true
+  },
+  "eligibility": {
+    "exclude": [
+      "authors or prior reviewers of this evidence unit or the underlying theorem",
+      "readers who previously accessed comparison.v0.1.json",
+      "readers who previously accessed plan.v0.1.json",
+      "readers who previously accessed the root or unit README answer text",
+      "readers who previously accessed reader-instrument.v0.1.json, reader_scorer.py, or any scoring key",
+      "readers who accessed another participant's completed response",
+      "synthetic or model observations presented as human cold-reader evidence"
+    ],
+    "required_attestation": "none of the exclusions applied before first-period materials were opened"
+  },
+  "format": "vela.math.erdos321-terminal-variant-reader-instrument.v0.1",
+  "material_catalog": {
+    "comparison": {"byte_length": 6881, "content_root": "sha256:808c9ba973d36b0ed79366ae04357c04e2c5b2c0aa5a04967f90ad09eabba699", "mode": "100644", "path": "comparison.v0.1.json", "raw_sha256": "sha256:0f26a4586bbeac08d07f4d0f8b5d1507751830913d41747a64f2c8203c08af58"},
+    "fixed_source": {"byte_length": 4534, "mode": "100644", "path": "evidence/erdos-321/translation/sources/formal-conjectures-321.lean", "raw_sha256": "sha256:601d8486743aede6803feaaefc7bbb73f0aa8873d0296a6a1c5400fd86c32357"},
+    "participant_packet": {"byte_length": 4470, "content_root": "sha256:35f6c06a1bf8f7abc46caea502f9ccd45db6a569da6856d04f03a2c386266bbe", "mode": "100644", "path": "participant-packet.v0.1.json", "raw_sha256": "sha256:7f099605bdbac52b063df722c18a8dd9edcb00b0eba985461e637d0b896f08c1"},
+    "quantity_bridge": {"byte_length": 6189, "mode": "100644", "path": "evidence/erdos-321/definition-correspondence.v2.json", "raw_sha256": "sha256:e7c303b037c3ad9491bec761cf7e48b6833b2fe54dbe71f603da1a24123322c2"},
+    "terminal_source": {"byte_length": 2316, "mode": "100644", "path": "starfleet/erdos-321/Research/FinalAsymptotic.lean", "raw_sha256": "sha256:63dd7ba024ec235a47c1b90c638acae758a50f2d0ee4267e0f69b22cd5d9c0b5"}
+  },
+  "material_manifest_root_definition": "sha256 of RFC-8785 JSON array of exact material_catalog rows in arm material_ids order",
+  "measurements": [
+    {"name": "correct_implication_classification", "status": "not_measured", "value": null},
+    {"name": "cued_material_difference_classification", "status": "not_measured", "value": null},
+    {"name": "source_identities_cited", "status": "not_measured", "value": null},
+    {"name": "authority_boundary_preserved", "status": "not_measured", "value": null},
+    {"name": "elapsed_reader_minutes", "status": "not_measured", "value": null},
+    {"name": "source_files_opened", "status": "not_measured", "value": null},
+    {"name": "pre_key_confidence", "status": "not_measured", "value": null}
+  ],
+  "observed_enrollment_ledger": {
+    "append_only": true,
+    "entry_root_definition": "sha256 of RFC-8785 JSON after removing only entry_root",
+    "event_types": ["enrolled", "period_completed", "withdrawn"],
+    "initial_empty_document": {"entries": [], "format": "vela.math.cold-reader-enrollment-ledger.v0.1"},
+    "initial_empty_root": "sha256:d0618456606a009d6abdb5b8b6baaad00562e97cc484be45e1a9efd678fe8f9a",
+    "invariants": [
+      "event sequence numbers are contiguous from 1 and every previous_entry_root equals the preceding entry_root",
+      "participant IDs are unique at enrollment; later events must reference an enrolled participant",
+      "enrollment ordinal is contiguous and odd/even ordinals derive baseline_first/treatment_first",
+      "no enrollment occurs after recruitment cutoff, 12 completions, or 18 enrollments",
+      "withdrawn readers may be replaced only before the enrollment stop; no event occurs after completion cutoff",
+      "period completion order is exactly 1 then 2; the twelfth completion stops new enrollment, while already-enrolled readers may finish or withdraw through the completion cutoff"
+    ],
+    "status": "not_created"
+  },
+  "participant_packet_path": "participant-packet.v0.1.json",
+  "participant_packet_root": "sha256:35f6c06a1bf8f7abc46caea502f9ccd45db6a569da6856d04f03a2c386266bbe",
+  "periods": {
+    "first": "assigned arm; sole cold-read period and primary analysis",
+    "second": "other arm; exposed follow-up reported separately, never as an independent cold read"
+  },
+  "primary_analysis": {
+    "analysis_population": "first-period responses of the first 12 eligible human readers ordered by second-period completion event; if fewer than 12 finish by cutoff, all eligible two-period completers",
+    "component_reporting": "report each of the 11 binary scoring components by first-period arm; do not pool human and model observations",
+    "estimator": "mean deterministic_total in treatment_first period 1 minus mean deterministic_total in baseline_first period 1",
+    "exact_arithmetic": "retain integer component sums and denominators; report each mean and difference as an unreduced numerator/denominator pair before any decimal rendering",
+    "missingness": "report missing and withdrawn readers; do not impute or replace after the recruitment cutoff",
+    "second_period_exclusion": "exclude every second-period response from the primary estimator",
+    "under_recruitment_rule": "if the target is not reached, status is incomplete_at_frozen_cutoff; denominator is the count of eligible humans completing both periods by cutoff; report their participant IDs, arm assignment, and source period-record roots, leaving unavailable participant-level measurements not_measured/null"
+  },
+  "run_gate": "do not enroll until this instrument, participant packet, source-lock, comparison, plan, empty observed-ledger root, response custody location, and timer procedure are rooted and frozen",
+  "sample_and_stopping": {
+    "eligible_human_target": 12,
+    "stopping_rule": "stop enrollment at the earliest of 12 eligible human readers completing both periods, the recruitment cutoff, or 18 enrollments; stop all period collection at the completion cutoff",
+    "under_recruitment": "use primary_analysis.under_recruitment_rule without changing the target, cutoff, denominator, or source-ID contract"
+  },
+  "implementation_locks": [
+    {"byte_length": 2159, "mode": "100644", "path": "evidence_rooting.py", "raw_sha256": "sha256:fc86e1ea26b69998d2fa77ae6974aacac3f31bd90048259f740b34989b83983b"},
+    {"byte_length": 10401, "mode": "100644", "path": "reader_protocol.py", "raw_sha256": "sha256:386c11ada4ffbfc3aceca249fc0d149600b998d0a738ada27b5916e95b0f67ac"},
+    {"byte_length": 6513, "mode": "100644", "path": "reader_scorer.py", "raw_sha256": "sha256:358525edd54ceb37ca70df8611e12cc207b4efcf634957e588cf08f88a20bcbd"}
+  ],
+  "scoring_key": {
+    "authority_classification": "none",
+    "deterministic_total_points": 11,
+    "material_difference_evidence": {
+      "constants": ["span_03", "span_06", "span_07"],
+      "depth_selection": ["span_01", "span_04", "span_06", "span_07"],
+      "logarithm_domain": ["span_02", "span_06", "span_07"],
+      "quantifier_conditions": ["span_04", "span_06", "span_07"]
+    },
+    "material_difference_metric": "cued classification with exact per-dimension evidence locators; not unaided recall",
+    "next_proof_obligation_classification": "kernel_checked_real_nat_log_bridge_before_implication",
+    "next_proof_obligation_evidence": ["span_01", "span_02", "span_06", "span_07"],
+    "quantity_classification": "same_extremal_quantity_under_inherited_correspondence",
+    "quantity_evidence": ["span_08"],
+    "relation_lower": "neither_established",
+    "relation_lower_evidence": ["span_04", "span_06"],
+    "relation_upper": "neither_established",
+    "relation_upper_evidence": ["span_04", "span_07"],
+    "source_identity_tokens": ["terminal_source", "fixed_source"]
+  },
+  "status": "frozen_not_run",
+  "timer": {
+    "elapsed_definition": "elapsed_monotonic_ns = monotonic_stopped_ns - monotonic_started_ns; reader minutes are the exact rational elapsed_monotonic_ns / 60000000000",
+    "raw_values": "retain nonnegative integer monotonic_started_ns and monotonic_stopped_ns from the same monotonic nanosecond clock",
+    "start": "capture monotonic_started_ns immediately before the assigned period's materials become accessible",
+    "stop": "capture monotonic_stopped_ns immediately after the period response bytes are durably received",
+    "wall_clock": "retain RFC 3339 UTC timer_started_at and timer_stopped_at for custody only; never derive duration from wall clock"
+  }
+}

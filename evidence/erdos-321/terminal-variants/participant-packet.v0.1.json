@@ -1,0 +1,37 @@
+{
+  "authority_effect": "none",
+  "content_root": "sha256:35f6c06a1bf8f7abc46caea502f9ccd45db6a569da6856d04f03a2c386266bbe",
+  "content_root_definition": "sha256 of RFC-8785 JSON after removing only content_root",
+  "evidence_locator_catalog": {
+    "span_01": {"lines": "5-9", "path": "starfleet/erdos-321/Research/FinalAsymptotic.lean", "raw_sha256": "sha256:776ce5beac10e69c3e2e4a57b28a14e952a12fb187efedca6cae4ac222923dfa", "source": "lean-proofs:a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0"},
+    "span_02": {"lines": "11-15", "path": "starfleet/erdos-321/Research/FinalAsymptotic.lean", "raw_sha256": "sha256:6162f06950324d5ec616d6f29ae63dc5c1182adec9ff51ed3b90e0b23742aa09", "source": "lean-proofs:a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0"},
+    "span_03": {"lines": "19-20", "path": "starfleet/erdos-321/Research/FinalAsymptotic.lean", "raw_sha256": "sha256:08cef01dde62b35a56630ade6321ed335cfa6dc741f1292f2f0ac72723d0e112", "source": "lean-proofs:a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0"},
+    "span_04": {"lines": "21-24", "path": "starfleet/erdos-321/Research/FinalAsymptotic.lean", "raw_sha256": "sha256:fe4f947de701582d55449d05d769928742665bde3668fc8c8e1159fa666269e9", "source": "lean-proofs:a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0"},
+    "span_05": {"lines": "31-37", "path": "evidence/erdos-321/translation/sources/formal-conjectures-321.lean", "raw_sha256": "sha256:4a7311ace04ebb8e44d00ed340f0dab95f55ea11eeeb74f3bf24266f34ec018f", "source": "vela-math:fdb23666e7b5385a62cc97c58086bc67bd4e7fa9"},
+    "span_06": {"lines": "93-95", "path": "evidence/erdos-321/translation/sources/formal-conjectures-321.lean", "raw_sha256": "sha256:fe84e6ee101f978d63e60751777bafba1eeed629aa7df4f818646293c81a6b86", "source": "vela-math:fdb23666e7b5385a62cc97c58086bc67bd4e7fa9"},
+    "span_07": {"lines": "108-110", "path": "evidence/erdos-321/translation/sources/formal-conjectures-321.lean", "raw_sha256": "sha256:5fc596d348f8d619f61f2bf0616e52f5b2a8e267aa310ec6e401d969657bb9e6", "source": "vela-math:fdb23666e7b5385a62cc97c58086bc67bd4e7fa9"},
+    "span_08": {"lines": "34-63", "path": "evidence/erdos-321/definition-correspondence.v2.json", "raw_sha256": "sha256:2885ac8613f583ef83bbcdd4a503a18a00f94e5563830a0683d1d5cbdcc8531b", "source": "vela-math:fdb23666e7b5385a62cc97c58086bc67bd4e7fa9"}
+  },
+  "format": "vela.math.erdos321-terminal-variant-participant-packet.v0.1",
+  "problem": "erdos:321",
+  "prompt": "Using only the provided materials, compare the terminal theorem with each fixed variant. State the quantity, relationship, material differences, source identities, authority boundary, and next proof obligation supported by those materials.",
+  "response_schema": {
+    "authority_classification": ["none", "verification", "decision", "standing"],
+    "confidence_percent": "integer from 0 through 100 recorded before any scoring-key access",
+    "material_difference_rows": {
+      "classification_token": ["constants", "dependency_version", "depth_selection", "logarithm_domain", "optimality", "proof_completion", "quantifier_conditions", "statement_type", "other"],
+      "evidence_locators": "nonempty unique array drawn from evidence_locator_catalog",
+      "explanation": "nonempty participant-authored text"
+    },
+    "next_proof_obligation_classification": ["kernel_checked_real_nat_log_bridge_before_implication", "other"],
+    "next_proof_obligation_evidence_locators": "nonempty unique array drawn from evidence_locator_catalog",
+    "quantity_classification": ["same_extremal_quantity_under_inherited_correspondence", "different_quantity", "not_established"],
+    "quantity_evidence_locators": "nonempty unique array drawn from evidence_locator_catalog",
+    "relation_lower": ["terminal_implies_fixed", "fixed_implies_terminal", "equivalent", "neither_established"],
+    "relation_lower_evidence_locators": "nonempty unique array drawn from evidence_locator_catalog",
+    "relation_upper": ["terminal_implies_fixed", "fixed_implies_terminal", "equivalent", "neither_established"],
+    "relation_upper_evidence_locators": "nonempty unique array drawn from evidence_locator_catalog",
+    "source_identity_tokens": ["definition_source", "fixed_source", "terminal_source"]
+  },
+  "scoring_disclosure": "No expected answers or scoring key are included in this participant-facing packet. Classification options are cued; every selected material-difference classification requires participant-authored explanation and exact evidence locators."
+}
