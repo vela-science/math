@@ -1,0 +1,58 @@
+{
+  "authority_effect": "none",
+  "comparison_root": "sha256:808c9ba973d36b0ed79366ae04357c04e2c5b2c0aa5a04967f90ad09eabba699",
+  "content_root": "sha256:4067903b9ea8f1fa9d6d0b536846190653a3e029352c6f24eb5540592f570678",
+  "content_root_definition": "sha256 of RFC-8785 JSON after removing only content_root",
+  "format": "vela.math.erdos321-terminal-variant-cold-reader-plan.v0.1",
+  "participant_packet_path": "participant-packet.v0.1.json",
+  "participant_packet_root": "sha256:35f6c06a1bf8f7abc46caea502f9ccd45db6a569da6856d04f03a2c386266bbe",
+  "population": "readers who did not author or review this evidence unit or the underlying theorem",
+  "problem": "erdos:321",
+  "public_instrument_boundary": "the plan and expected classifications are public; this is not a secret held-out or blinded benchmark",
+  "reader_instrument_path": "reader-instrument.v0.1.json",
+  "reader_instrument_root": "sha256:db06c21a6a0d4f24c91dc59903dad0245326edd2311dbdeb3d88ed39640067e7",
+  "reporting": {
+    "measurements": [
+      {
+        "name": "correct_implication_classification",
+        "status": "not_measured",
+        "value": null
+      },
+      {
+        "name": "cued_material_difference_classification",
+        "status": "not_measured",
+        "value": null
+      },
+      {
+        "name": "source_identities_cited",
+        "status": "not_measured",
+        "value": null
+      },
+      {
+        "name": "authority_boundary_preserved",
+        "status": "not_measured",
+        "value": null
+      },
+      {
+        "name": "elapsed_reader_minutes",
+        "status": "not_measured",
+        "value": null
+      },
+      {
+        "name": "source_files_opened",
+        "status": "not_measured",
+        "value": null
+      },
+      {
+        "name": "pre_key_confidence",
+        "status": "not_measured",
+        "value": null
+      }
+    ],
+    "no_acceptance_claim_from_correct_answers": true,
+    "retain_verbatim_responses_and_timing_provenance": true,
+    "separate_human_model_and_authority_outcomes": true
+  },
+  "source_lock_root": "sha256:128edd2b0b58597ca05c7c0049ab20c10c9e6ef4e06c2c3ff8371752123a103b",
+  "status": "preregistered_not_run"
+}

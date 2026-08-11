@@ -6,8 +6,7 @@ Agents must not invoke `vela review accept` or `vela review reject`, access repo
 
 ```bash
 vela status . --json
-vela next . --limit 1 --json
-vela start <target> --json
+vela claims . --json
 vela submit --repo . --claim <bounded-claim> --type computational --replayability exact --artifact <path>:<kind> --caveat <limit> --as agent:<name> --json
 vela verification record . <vpr_id> --profile <profile> --method <committed-method> --outcome <outcome> --does-not-establish <limit> --as verifier:<name> --json
 vela review inbox . --json

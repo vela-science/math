@@ -8,7 +8,7 @@ This is a Vela repository. Git stores exact Claims, Submissions, Verification Re
 
 ```bash
 vela status . --json
-vela next . --limit 1 --json
+vela claims . --json
 vela submit --repo . --claim "<bounded result>" --type computational --replayability exact --artifact <path>:<kind> --caveat "<limit>" --as agent:<name> --json
 
 # Verification binds method bytes already retained at the current Git commit.
@@ -28,6 +28,12 @@ vela replay . --json
   Lean source snapshots and derives W3C Web Annotations, a rooted semantic fact
   diff, an explicit loss report, and a Workflow Run RO-Crate. It is
   non-canonical evidence and has no authority effect.
+- [Erdős 321 terminal-variant comparison](evidence/erdos-321/terminal-variants/README.md)
+  roots the pinned terminal theorem, proof environment, rights boundary, and a
+  bounded comparison with the retained fixed variants. It is non-canonical
+  evidence, preregisters an unrun cold-reader measurement, and has no authority
+  effect. Generated bundle root:
+  `sha256:bd7b7eee6eb5e2e8f654898207bf05168ea6e7dd1d72f3a1a46a685a64f8f322`.
 
 ## Protocol continuity
 
