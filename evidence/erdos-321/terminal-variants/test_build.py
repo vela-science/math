@@ -260,7 +260,8 @@ def main() -> int:
         *(f"evidence/erdos-321/terminal-variants/{name}" for name in (
             "README.md", "build.py", "comparison.v0.1.json", "plan.v0.1.json",
             "evidence_rooting.py", "participant-packet.v0.1.json", "reader-instrument.v0.1.json",
-            "reader_protocol.py", "reader_protocol_test.py", "reader_scorer.py",
+            "reader_protocol.py", "reader_protocol_test.py", "reader_run.py",
+            "reader_run_test.py", "reader_scorer.py",
             "source-lock.v0.1.json", "test_build.py",
         )),
     }
