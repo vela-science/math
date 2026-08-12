@@ -33,6 +33,7 @@ jobs:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Set up pinned Bun
         uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
@@ -114,7 +115,18 @@ jobs:
           evidence/erdos-321/workbench-compatibility/workbench-note.json
           evidence/erdos-321/workbench-compatibility/workbench-result.json
           EOF
-          git diff --name-only "$base"...HEAD | LC_ALL=C sort >"$observed"
+          # This workflow owns the terminal-evidence tranche, not every later
+          # file added to main. Keep the closed inventory check scoped to the
+          # surfaces above so independent evidence packages cannot invalidate
+          # an otherwise unchanged retained experiment.
+          git diff --name-only "$base"...HEAD -- \
+            .github/workflows/terminal-variant-evidence.yml \
+            AGENTS.md \
+            README.md \
+            evidence/erdos-321/external-workbench-return \
+            evidence/erdos-321/terminal-variants \
+            evidence/erdos-321/workbench-compatibility \
+            | LC_ALL=C sort >"$observed"
           diff -u "$expected" "$observed"
           test -z "$(git diff --name-only "$base"...HEAD -- .vela records methods continuity)"
           python3 -B evidence/erdos-321/terminal-variants/build.py \

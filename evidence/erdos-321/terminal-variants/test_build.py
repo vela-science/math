@@ -257,6 +257,9 @@ def main() -> int:
 
     expected_paths = {
         "AGENTS.md", "README.md", ".github/workflows/terminal-variant-evidence.yml",
+        *(f"evidence/erdos-321/external-workbench-return/{name}" for name in (
+            "README.md", "return-contract.v0.1.json", "test_verify_return.py", "verify_return.py",
+        )),
         *(f"evidence/erdos-321/terminal-variants/{name}" for name in (
             "README.md", "build.py", "comparison.v0.1.json", "plan.v0.1.json",
             "evidence_rooting.py", "participant-packet.v0.1.json", "reader-instrument.v0.1.json",
@@ -287,15 +290,42 @@ def main() -> int:
     checkout = "actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803"
     assert workflow_contract.count(checkout) == 1
     assert "actions/checkout@v" not in workflow_contract
+    assert workflow_contract.count("persist-credentials: false") == 1
     assert workflow_contract.index(setup_bun) < workflow_contract.index(
         "bun install --cwd evidence/erdos-321/workbench-compatibility --frozen-lockfile"
     )
     assert "restricted StandingBench paths entered main history" in workflow_contract
+    assert 'git diff --name-only "$base"...HEAD -- \\\n' in workflow_contract
+    assert 'evidence/erdos-321/external-workbench-return \\\n' in workflow_contract
+    assert 'git diff --name-only "$base"...HEAD |' not in workflow_contract
     assert 'git diff --check "$base"...HEAD' in workflow_contract
     unit_readme = (HERE / "README.md").read_text()
     assert "python3 evidence/erdos-321/terminal-variants/" not in unit_readme
-    changed_paths = set(BUILD.run_git(BUILD.ROOT, "diff", "--name-only", BUILD.MATH_COMMIT).decode().splitlines())
-    changed_paths.update(BUILD.run_git(BUILD.ROOT, "ls-files", "--others", "--exclude-standard").decode().splitlines())
+    changed_paths = set(BUILD.run_git(
+        BUILD.ROOT,
+        "diff",
+        "--name-only",
+        BUILD.MATH_COMMIT,
+        "--",
+        ".github/workflows/terminal-variant-evidence.yml",
+        "AGENTS.md",
+        "README.md",
+        "evidence/erdos-321/external-workbench-return",
+        "evidence/erdos-321/terminal-variants",
+        "evidence/erdos-321/workbench-compatibility",
+    ).decode().splitlines())
+    changed_paths.update(
+        path for path in BUILD.run_git(
+            BUILD.ROOT, "ls-files", "--others", "--exclude-standard",
+        ).decode().splitlines()
+        if path == ".github/workflows/terminal-variant-evidence.yml"
+        or path in {"AGENTS.md", "README.md"}
+        or path.startswith((
+            "evidence/erdos-321/external-workbench-return/",
+            "evidence/erdos-321/terminal-variants/",
+            "evidence/erdos-321/workbench-compatibility/",
+        ))
+    )
     assert changed_paths == expected_paths
     assert BUILD.run_git(BUILD.ROOT, "diff", "--", ".vela", "records", "methods", "continuity") == b""
     assert BUILD.run_git(BUILD.ROOT, "merge-base", "--is-ancestor", BUILD.MATH_COMMIT, "HEAD") == b""
