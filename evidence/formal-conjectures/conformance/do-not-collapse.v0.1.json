@@ -1,0 +1,287 @@
+{
+  "schema": "vela.math.fc-audit.do-not-collapse.v0.1",
+  "matrix_root_definition": "sha256 of RFC 8785 canonical JSON after removing only matrix_root",
+  "matrix_root": "sha256:81c088354d7aa247aa50c655566a5971aa21ccbaded1823867357b6a3c7735b6",
+  "authority_effect": "none",
+  "program_contract": {
+    "document": "VELA_ECOSYSTEM_CONVERGENCE_EXECUTION_MEMO_2026-08-12.md",
+    "sha256": "4dfef11f56497fe029204919e810dcfb9d8a9597a767681bd17155c57f1f6fda",
+    "section": "12.1 Cross-layer conformance rules"
+  },
+  "reviewed_sources": {
+    "core": {
+      "repository": "https://github.com/vela-science/vela.git",
+      "commit": "f61abcee4edd2d8a33fa181f4aac6eade82c6edf",
+      "protocol_manifest_root": "sha256:b93f359a435e9c7f5d48e6a123ee823644bbe6117e162815c6f967a11eef2e84",
+      "custody": {
+        "visibility": "public",
+        "acquisition": "anonymous Git HTTPS at the exact commit",
+        "license": "Apache-2.0 OR MIT",
+        "reconstructibility": "The reviewed source commit is publicly fetchable and the protocol manifest root is independently pinned here."
+      },
+      "verification_outcomes": [
+        "pass",
+        "fail",
+        "inconclusive",
+        "error"
+      ]
+    },
+    "math": {
+      "repository": "https://github.com/vela-science/math.git",
+      "commit": "79998d341606892e435caf3ec53cedd384b5b52f",
+      "phase_0_packet_manifest_sha256": "3f4879db9ae16aa1f106a499d70635a8180f0fbd6db82074f44307d894b0f1c9",
+      "custody": {
+        "visibility": "public",
+        "acquisition": "anonymous Git HTTPS at the exact commit",
+        "license": "No repository-wide license was declared in the reviewed tree.",
+        "reconstructibility": "The reviewed source commit and complete Phase 0 packet are publicly fetchable; reuse rights must not be inferred from public visibility."
+      }
+    },
+    "web": {
+      "repository": "https://github.com/vela-science/vela-web.git",
+      "commit": "9feb69750834a076a13e066905107da61a976407",
+      "custody": {
+        "visibility": "private",
+        "acquisition": "authorized private Git checkout at the exact commit",
+        "license": "Software is Apache-2.0 OR MIT; original editorial content is CC BY 4.0 unless otherwise marked.",
+        "reconstructibility": "This public Math packet does not copy or disclose private Web source. A public reader cannot reconstruct the reviewed Web implementation; WEB-03 must prove its parser, mapper, renderer, and refusal paths inside the authorized private repository."
+      }
+    }
+  },
+  "planes": [
+    {
+      "id": "source_observation",
+      "authority_effect": "none",
+      "examples": [
+        "Formal Conjectures audit core",
+        "Formal Conjectures observation envelope",
+        "GitHub review or merge status"
+      ]
+    },
+    {
+      "id": "activity_preparation",
+      "authority_effect": "none",
+      "examples": [
+        "Target",
+        "Approach",
+        "Attempt",
+        "Research Block",
+        "unsigned Submission draft"
+      ]
+    },
+    {
+      "id": "portable_signed_object",
+      "authority_effect": "none",
+      "examples": [
+        "signed Submission",
+        "signed Verification Record"
+      ]
+    },
+    {
+      "id": "repository_authority",
+      "authority_effect": "human_decision_only",
+      "examples": [
+        "authorized human Decision",
+        "admitted Event"
+      ]
+    },
+    {
+      "id": "derived_read",
+      "authority_effect": "none",
+      "examples": [
+        "Standing",
+        "Proposal status",
+        "Frontier",
+        "projection"
+      ]
+    }
+  ],
+  "root_domains": [
+    "fc_audit_core",
+    "fc_audit_observation",
+    "source_content",
+    "artifact",
+    "claim",
+    "submission",
+    "verification",
+    "proposal",
+    "repository",
+    "authority",
+    "projection"
+  ],
+  "rules": [
+    {
+      "id": "fc_pass_is_not_standing",
+      "producer_state": "Formal Conjectures audit outcome pass",
+      "consumer_state": "source observation only",
+      "required_behavior": "Retain pass on the source axis while leaving local Math Standing unchanged until an authorized human Decision admits an Event.",
+      "forbidden_collapse": "pass to accepted Standing",
+      "falsifier": "Any adapter, projection, style, or copy presents the source pass as accepted local Standing."
+    },
+    {
+      "id": "publication_is_not_decision",
+      "producer_state": "Formal Conjectures review, merge, source publication, or package publication",
+      "consumer_state": "external community observation",
+      "required_behavior": "Retain the native status and provenance without emitting or implying a Vela Decision.",
+      "forbidden_collapse": "review or publication to Vela Decision",
+      "falsifier": "A consumer labels a merge or published package as a local Decision or accepted transition."
+    },
+    {
+      "id": "proposal_status_is_derived",
+      "producer_state": "canonical Proposal bytes",
+      "consumer_state": "derived Proposal read",
+      "required_behavior": "Compute status from retained events and related objects; canonical Proposal payloads carry no trusted status field.",
+      "forbidden_collapse": "derived status into producer-written canonical state",
+      "falsifier": "A canonical Proposal accepts or trusts an embedded status field."
+    },
+    {
+      "id": "frontier_has_no_identifier",
+      "producer_state": "bounded unresolved-state query",
+      "consumer_state": "derived Frontier",
+      "required_behavior": "Identify the Repository and exact query inputs; do not mint, retain, or route on a canonical Frontier id.",
+      "forbidden_collapse": "derived query into canonical object identity",
+      "falsifier": "A Frontier id is serialized, persisted, or treated as an authority boundary."
+    },
+    {
+      "id": "projection_root_is_not_typed_source_identity",
+      "producer_state": "projection root",
+      "consumer_state": "derived read cache identity",
+      "required_behavior": "Reject a projection root supplied where a typed source, Artifact, Claim, Submission, Verification, Proposal, Repository, or authority root is required.",
+      "forbidden_collapse": "projection identity into a canonical typed root domain",
+      "falsifier": "Equal hexadecimal payloads are accepted across different root fields or schema domains."
+    },
+    {
+      "id": "producer_signature_is_not_reviewer_authority",
+      "producer_state": "valid producer signature over exact bytes",
+      "consumer_state": "authenticated producer input",
+      "required_behavior": "Authenticate the bytes and signer only; verifier eligibility, reviewer authority, and Decision authority remain separately evaluated.",
+      "forbidden_collapse": "producer authentication into verifier or reviewer authorization",
+      "falsifier": "A producer signature grants verification eligibility, reviewer status, or Decision authority."
+    },
+    {
+      "id": "unsigned_draft_is_not_submission",
+      "producer_state": "unsigned Web draft and payload root",
+      "consumer_state": "activity-plane preparation",
+      "required_behavior": "Keep the draft non-authoritative until the exact validated payload crosses the local DSSE signing boundary and the signed object is imported under Repository policy.",
+      "forbidden_collapse": "activity draft into protocol Submission",
+      "falsifier": "Hosted activity or a payload root alone is presented as a signed Submission or producer authorization."
+    },
+    {
+      "id": "unavailable_is_not_verification_failure",
+      "producer_state": "Formal Conjectures audit outcome unavailable",
+      "consumer_state": "missing or unavailable source evidence",
+      "required_behavior": "Retain unavailable on the source axis and refuse automatic Vela Verification conversion.",
+      "forbidden_collapse": "unavailable into pass, fail, error, or inconclusive Verification outcome",
+      "falsifier": "An adapter emits unavailable as a protocol outcome or maps it to a different protocol outcome."
+    }
+  ],
+  "fc_outcome_conversion": [
+    {
+      "fc_outcome": "pass",
+      "source_axis": "pass",
+      "automatic_verification": false,
+      "possible_protocol_outcome_after_local_policy_and_signing": "pass"
+    },
+    {
+      "fc_outcome": "fail",
+      "source_axis": "fail",
+      "automatic_verification": false,
+      "possible_protocol_outcome_after_local_policy_and_signing": "fail"
+    },
+    {
+      "fc_outcome": "inconclusive",
+      "source_axis": "inconclusive",
+      "automatic_verification": false,
+      "possible_protocol_outcome_after_local_policy_and_signing": "inconclusive"
+    },
+    {
+      "fc_outcome": "error",
+      "source_axis": "error",
+      "automatic_verification": false,
+      "possible_protocol_outcome_after_local_policy_and_signing": "error"
+    },
+    {
+      "fc_outcome": "unavailable",
+      "source_axis": "unavailable",
+      "automatic_verification": false,
+      "possible_protocol_outcome_after_local_policy_and_signing": null
+    }
+  ],
+  "adapter_requirements": [
+    {
+      "id": "unsupported_schema_and_version_refusal",
+      "requirement": "MATH-01 and WEB-03 accept only an explicitly supported audit schema and version and fail closed before projection or conversion on every other value.",
+      "falsifier": "An absent, unknown, future, or malformed schema/version is parsed best-effort or projected as current."
+    },
+    {
+      "id": "field_and_schema_typed_roots",
+      "requirement": "Every root is full and unshortened, and each field and schema domain is validated separately; equal hexadecimal payloads never authorize cross-domain substitution.",
+      "falsifier": "A shortened root, bare digest, wrong-domain root, or projection root is accepted in a canonical source, Artifact, Claim, Submission, Verification, Proposal, Repository, or authority field."
+    },
+    {
+      "id": "exact_source_revision_and_drift",
+      "requirement": "The adapter retains exact native object identity, native revision, audit core root, observation root, and update-detection evidence; changed source bytes or identity require a new observation and review.",
+      "falsifier": "A mutable branch, changed source artifact, reused native id, or drifted root silently resolves to the prior imported state."
+    },
+    {
+      "id": "complete_bounded_reads",
+      "requirement": "The adapter declares completeness, pagination, exact bounds, and refusal behavior, then rejects truncation, incomplete pages, duplicate identities, or inputs beyond those bounds.",
+      "falsifier": "A partial or over-limit source read is presented as complete, or pagination state is omitted without refusal."
+    },
+    {
+      "id": "copied_or_referenced_custody",
+      "requirement": "Each retained field and artifact declares whether bytes were copied or referenced and binds an exact locator, digest, access class, and custody limitation appropriate to that choice.",
+      "falsifier": "Referenced bytes are presented as retained, copied bytes lack an exact digest, or a private locator is exposed through a public projection."
+    },
+    {
+      "id": "interpreting_implementation_identity",
+      "requirement": "Every derived meaning names the exact interpreting implementation, method, version, and configuration required to reproduce it.",
+      "falsifier": "A later reader cannot identify which implementation interpreted the source bytes, or a different implementation is accepted under the same derived identity."
+    },
+    {
+      "id": "license_access_and_public_redaction",
+      "requirement": "The adapter preserves native license and access facts, distinguishes public visibility from reuse rights, and applies an explicit public-redaction policy without claiming inaccessible evidence is public.",
+      "falsifier": "Public visibility is treated as a license, private custody is labeled public, or a public consumer receives a private locator or restricted content."
+    },
+    {
+      "id": "reconstructibility_and_loss",
+      "requirement": "The adapter declares meanings preserved, meanings omitted or approximated, facts unreconstructible by a later reader, and the exact evidence needed to reproduce every retained derivation.",
+      "falsifier": "A lossy projection claims source equivalence, an omitted condition disappears, or reconstruction requires undisclosed private operator context."
+    },
+    {
+      "id": "deletion_tombstone_and_mutability",
+      "requirement": "Each source field is classified immutable, mutable, or observation-time only, and the adapter declares deletion, tombstone, disappearance, and replacement behavior without rewriting historical observations.",
+      "falsifier": "A disappeared or replaced source is silently deleted, rebound, or treated as if its historical observation never existed."
+    }
+  ],
+  "acceptance": {
+    "required_rule_ids": [
+      "fc_pass_is_not_standing",
+      "publication_is_not_decision",
+      "proposal_status_is_derived",
+      "frontier_has_no_identifier",
+      "projection_root_is_not_typed_source_identity",
+      "producer_signature_is_not_reviewer_authority",
+      "unsigned_draft_is_not_submission",
+      "unavailable_is_not_verification_failure"
+    ],
+    "required_adapter_requirement_ids": [
+      "unsupported_schema_and_version_refusal",
+      "field_and_schema_typed_roots",
+      "exact_source_revision_and_drift",
+      "complete_bounded_reads",
+      "copied_or_referenced_custody",
+      "interpreting_implementation_identity",
+      "license_access_and_public_redaction",
+      "reconstructibility_and_loss",
+      "deletion_tombstone_and_mutability"
+    ],
+    "adapter_gate": "MATH-01 and WEB-03 must test every anti-collapse rule and adapter requirement against their real parser, mapper, renderer, custody, bounded-read, drift-detection, and refusal paths before freeze.",
+    "does_not_establish": [
+      "A Formal Conjectures audit is a Vela Verification.",
+      "A source review, merge, or publication is a Vela Decision.",
+      "Any local Math Standing.",
+      "External adoption or independent validation."
+    ]
+  }
+}

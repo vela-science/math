@@ -24,6 +24,13 @@ vela replay . --json
 
 ## Source-local experiments
 
+- [Formal Conjectures Phase 0 packet](evidence/formal-conjectures/audit-pilot/README.md)
+  freezes five exact source cases, the evaluation method, retained observations,
+  and explicit incomplete gates. The companion
+  [cross-layer conformance matrix](evidence/formal-conjectures/conformance/README.md)
+  prevents audit, activity, projection, signature, Decision, and Standing
+  concepts from collapsing when later adapters are implemented. Both are
+  source-local evidence with no authority effect.
 - [Erdős 321 translation](evidence/erdos-321/translation/README.md) retains exact
   Lean source snapshots and derives W3C Web Annotations, a rooted semantic fact
   diff, an explicit loss report, and a Workflow Run RO-Crate. It is

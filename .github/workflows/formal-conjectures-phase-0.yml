@@ -32,6 +32,7 @@ jobs:
         run: |
           set -euo pipefail
           python3 -B evidence/formal-conjectures/audit-pilot/test_phase_0.py
+          python3 -B evidence/formal-conjectures/conformance/test_do_not_collapse.py
           while IFS= read -r -d '' document; do
             python3 -B -m json.tool "$document" >/dev/null
           done < <(find evidence/formal-conjectures methods/formal-conjectures -type f -name '*.json' -print0)
