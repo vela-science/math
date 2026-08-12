@@ -5,6 +5,7 @@ on:
     paths:
       - "AGENTS.md"
       - "README.md"
+      - "evidence/erdos-321/external-workbench-return/**"
       - "evidence/erdos-321/terminal-variants/**"
       - "evidence/erdos-321/workbench-compatibility/**"
       - ".github/workflows/terminal-variant-evidence.yml"
@@ -13,6 +14,7 @@ on:
     paths:
       - "AGENTS.md"
       - "README.md"
+      - "evidence/erdos-321/external-workbench-return/**"
       - "evidence/erdos-321/terminal-variants/**"
       - "evidence/erdos-321/workbench-compatibility/**"
       - ".github/workflows/terminal-variant-evidence.yml"
@@ -78,6 +80,10 @@ jobs:
           .github/workflows/terminal-variant-evidence.yml
           AGENTS.md
           README.md
+          evidence/erdos-321/external-workbench-return/README.md
+          evidence/erdos-321/external-workbench-return/return-contract.v0.1.json
+          evidence/erdos-321/external-workbench-return/test_verify_return.py
+          evidence/erdos-321/external-workbench-return/verify_return.py
           evidence/erdos-321/terminal-variants/README.md
           evidence/erdos-321/terminal-variants/build.py
           evidence/erdos-321/terminal-variants/comparison.v0.1.json
@@ -125,6 +131,7 @@ jobs:
           python3 -B evidence/erdos-321/terminal-variants/test_build.py
           python3 -B evidence/erdos-321/terminal-variants/reader_protocol_test.py
           python3 -B evidence/erdos-321/terminal-variants/reader_run_test.py
+          python3 -B evidence/erdos-321/external-workbench-return/test_verify_return.py
           workbench_root="sha256:0271f0d9d385b2c834ccf461a8e004165ad579e6b12f2ab2f2f44e824e68f625"
           test "$(grep -Foc "$workbench_root" README.md)" -eq 1
           python3 -B evidence/erdos-321/workbench-compatibility/verify.py --expected-root "$workbench_root"
@@ -141,6 +148,7 @@ jobs:
           assert actual == expected
           PY
           test -z "$(find evidence/erdos-321/terminal-variants -type d -name __pycache__ -print -quit)"
+          test -z "$(find evidence/erdos-321/external-workbench-return -type d -name __pycache__ -print -quit)"
           test -z "$(find evidence/erdos-321/workbench-compatibility -type d -name __pycache__ -print -quit)"
           test -z "$(git status --porcelain=v1 --untracked-files=all)"
           git diff --check "$base"...HEAD

@@ -1,0 +1,72 @@
+{
+  "authority_effect": "none",
+  "content_root": "sha256:15a596b0d27e07289ec55be6fa051ee39259eca29bb46ca51bd87fc938e17dfd",
+  "content_root_definition": "sha256 of RFC-8785 JSON after removing only content_root",
+  "format": "vela.math.external-workbench-return-contract.v0.1",
+  "operator_attestation": {
+    "format": "vela.external-workbench-operator-attestation.v1",
+    "maximum_bytes": 16384,
+    "operation_control": "separately_controlled",
+    "relationship_to_experiment_operator": "not_same_operator",
+    "required_fields": [
+      "format",
+      "operator_id",
+      "controller_id",
+      "relationship_to_experiment_operator",
+      "operation_control",
+      "repository_authority_credentials_used",
+      "scientific_decision_authority_used",
+      "attested_at",
+      "identity_evidence_method",
+      "identity_evidence_locator",
+      "identity_evidence_root"
+    ]
+  },
+  "packet": {
+    "maximum_result_bytes": 65536,
+    "packet_root": "sha256:62004075572072cb96ccdf3f869ad3cf261d1abd39e826624d49b026dd57d92d",
+    "path": "../workbench-compatibility/target-packet.json",
+    "raw_sha256": "sha256:0dce153d8fc00b23b1dc761878be95e29e01e19336b3857db02aac110378c46c"
+  },
+  "receipt": {
+    "externality_status": "operator_attested_not_independently_verified",
+    "format": "vela.math.external-workbench-return-receipt.v0.1",
+    "scientific_status_by_result": {
+      "candidate_returned": "unverified_candidate",
+      "no_candidate": "no_candidate_returned",
+      "refused": "workbench_refused"
+    }
+  },
+  "required_nonclaims": [
+    "This external workbench return is not a Vela Verification, Decision, Event, or Standing.",
+    "Activity signatures authenticate activity, not scientific truth.",
+    "Automated conformance does not establish human acceptance.",
+    "An operator attestation does not by itself establish independent adoption.",
+    "Artifact roots establish byte identity, not scientific correctness."
+  ],
+  "result": {
+    "format": "vela.workbench-result.v1",
+    "required_fields": [
+      "authority_effect",
+      "workbench",
+      "packet_root",
+      "activity_event_ids",
+      "result_status",
+      "artifact_roots",
+      "nonclaims"
+    ],
+    "statuses": [
+      "candidate_returned",
+      "no_candidate",
+      "refused"
+    ],
+    "workbench_fields": [
+      "name",
+      "repository",
+      "commit",
+      "operator_id",
+      "operation_id"
+    ]
+  },
+  "status": "ready_for_external_operator"
+}

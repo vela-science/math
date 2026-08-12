@@ -44,6 +44,10 @@ vela replay . --json
   `sha256:0271f0d9d385b2c834ccf461a8e004165ad579e6b12f2ab2f2f44e824e68f625`.
   Both identities were operated by the same experimenter, so this is execution
   compatibility evidence, not independent adoption or scientific authority.
+- [External-workbench return boundary](evidence/erdos-321/external-workbench-return/README.md)
+  strictly retains a future separately operated result as an unverified,
+  non-authoritative receipt. Schema conformance does not establish operator
+  independence, scientific correctness, adoption, or human acceptance.
 
 ## Protocol continuity
 
