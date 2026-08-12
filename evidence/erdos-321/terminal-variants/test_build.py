@@ -284,9 +284,13 @@ def main() -> int:
     setup_bun = "oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6"
     assert workflow_contract.count(setup_bun) == 1
     assert workflow_contract.count("bun-version: 1.3.12") == 1
+    checkout = "actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803"
+    assert workflow_contract.count(checkout) == 1
+    assert "actions/checkout@v" not in workflow_contract
     assert workflow_contract.index(setup_bun) < workflow_contract.index(
         "bun install --cwd evidence/erdos-321/workbench-compatibility --frozen-lockfile"
     )
+    assert "restricted StandingBench paths entered main history" in workflow_contract
     assert 'git diff --check "$base"...HEAD' in workflow_contract
     unit_readme = (HERE / "README.md").read_text()
     assert "python3 evidence/erdos-321/terminal-variants/" not in unit_readme
@@ -295,11 +299,10 @@ def main() -> int:
     assert changed_paths == expected_paths
     assert BUILD.run_git(BUILD.ROOT, "diff", "--", ".vela", "records", "methods", "continuity") == b""
     assert BUILD.run_git(BUILD.ROOT, "merge-base", "--is-ancestor", BUILD.MATH_COMMIT, "HEAD") == b""
-    a6 = "a6a31a528ee86ab79c2aaf4e71e43fc63f4a4e98"
-    assert subprocess.run(
-        ["git", "--no-replace-objects", "-C", str(BUILD.ROOT), "merge-base", "--is-ancestor", a6, "HEAD"],
-        check=False, env=BUILD.git_environment(), stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-    ).returncode == 1
+    assert BUILD.run_git(
+        BUILD.ROOT, "log", "--format=", "--name-only", f"{BUILD.MATH_COMMIT}..HEAD", "--",
+        "evidence/erdos-321/standingbench",
+    ) == b""
     bundle_root = f"sha256:{BUILD.sha256_hex(BUILD.jcs(BUILD.output_inventory(baseline_outputs)))}"
     assert (BUILD.ROOT / "README.md").read_text().count(bundle_root) == 1
     assert not any(path.name == "__pycache__" for path in BUILD.ROOT.rglob("__pycache__"))
