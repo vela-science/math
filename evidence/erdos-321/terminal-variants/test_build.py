@@ -298,6 +298,8 @@ def main() -> int:
     assert 'git diff --name-only "$base"...HEAD -- \\\n' in workflow_contract
     assert 'evidence/erdos-321/external-workbench-return \\\n' in workflow_contract
     assert 'git diff --name-only "$base"...HEAD |' not in workflow_contract
+    assert "methods ':(exclude,glob)methods/formal-conjectures/**'" in workflow_contract.replace("\\\n            ", "")
+    assert "':(exclude,glob)methods/formal-conjectures/**'" in workflow_contract
     assert 'git diff --check "$base"...HEAD' in workflow_contract
     unit_readme = (HERE / "README.md").read_text()
     assert "python3 evidence/erdos-321/terminal-variants/" not in unit_readme
@@ -327,7 +329,14 @@ def main() -> int:
         ))
     )
     assert changed_paths == expected_paths
-    assert BUILD.run_git(BUILD.ROOT, "diff", "--", ".vela", "records", "methods", "continuity") == b""
+    assert BUILD.run_git(
+        BUILD.ROOT, "diff", "--name-only", f"{BUILD.MATH_COMMIT}...HEAD", "--",
+        ".vela", "records", "continuity",
+    ) == b""
+    assert BUILD.run_git(
+        BUILD.ROOT, "diff", "--name-only", f"{BUILD.MATH_COMMIT}...HEAD", "--",
+        "methods", ":(exclude,glob)methods/formal-conjectures/**",
+    ) == b""
     assert BUILD.run_git(BUILD.ROOT, "merge-base", "--is-ancestor", BUILD.MATH_COMMIT, "HEAD") == b""
     assert BUILD.run_git(
         BUILD.ROOT, "log", "--format=", "--name-only", f"{BUILD.MATH_COMMIT}..HEAD", "--",

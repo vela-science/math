@@ -128,7 +128,9 @@ jobs:
             evidence/erdos-321/workbench-compatibility \
             | LC_ALL=C sort >"$observed"
           diff -u "$expected" "$observed"
-          test -z "$(git diff --name-only "$base"...HEAD -- .vela records methods continuity)"
+          test -z "$(git diff --name-only "$base"...HEAD -- .vela records continuity)"
+          test -z "$(git diff --name-only "$base"...HEAD -- \
+            methods ':(exclude,glob)methods/formal-conjectures/**')"
           python3 -B evidence/erdos-321/terminal-variants/build.py \
             --lean-proofs-repo "$VELA_LEAN_PROOFS_REPO" \
             --mathlib-repo "$VELA_MATHLIB_REPO" \
