@@ -1,0 +1,53 @@
+{
+  "schema": "vela.math.fc-audit.github-check-observation.v0.1",
+  "authority_effect": "none",
+  "repository": "google-deepmind/formal-conjectures",
+  "pull_request_number": 3959,
+  "head_commit": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+  "observed_at": "2026-08-12T19:57:18Z",
+  "normalization": {
+    "description": "Selected primary GitHub REST API fields retained as normalized evidence and sorted by numeric record id. These bytes are not a canonical GitHub response.",
+    "api_version": "2022-11-28",
+    "media_type": "application/vnd.github+json"
+  },
+  "sources": {
+    "check_runs": {
+      "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/868cc092aeb713dbf8027883c5fa575e550cfae9/check-runs?per_page=100",
+      "api_total_count": 6,
+      "retained_record_count": 1,
+      "selection_rule": "Retain the named Build project run used by the mechanical claim; other check runs are outside that claim.",
+      "records": [
+        {
+          "app": {
+            "id": 15368,
+            "name": "GitHub Actions",
+            "owner_login": "github",
+            "slug": "github-actions"
+          },
+          "completed_at": "2026-05-09T20:01:21Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/25608941188/job/75175625578",
+          "external_id": "5e99a7f4-e796-56a6-a190-889858e11cb4",
+          "head_sha": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/25608941188/job/75175625578",
+          "id": 75175625578,
+          "name": "Build project",
+          "started_at": "2026-05-09T18:44:31Z",
+          "status": "completed"
+        }
+      ]
+    }
+  },
+  "mechanical_claim": {
+    "property": "repository_build_check",
+    "scope": "exact_head_repository_build_check",
+    "result": "pass",
+    "evidence_check_run_ids": [
+      75175625578
+    ]
+  },
+  "limitations": [
+    "This is an observation of a GitHub-hosted check, not a local reproduction.",
+    "A passing build does not establish proof-artifact identity, statement fidelity, or Vela Standing."
+  ]
+}

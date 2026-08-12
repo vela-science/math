@@ -1,0 +1,46 @@
+{
+  "schema": "vela.math.fc-audit.github-reviews-observation.v0.1",
+  "authority_effect": "none",
+  "repository": "google-deepmind/formal-conjectures",
+  "pull_request_number": 3959,
+  "observed_at": "2026-08-12T19:53:13Z",
+  "acquisition_method": {
+    "api": "GitHub REST API",
+    "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/3959/reviews",
+    "api_version": "2022-11-28",
+    "media_type": "application/vnd.github+json"
+  },
+  "normalization": "Selected primary GitHub REST API fields retained as normalized evidence and sorted by review id. These bytes are not a canonical GitHub response.",
+  "reviews": [
+    {
+      "id": 4253914465,
+      "state": "COMMENTED",
+      "commit_id": "30c63898f32c0c7d05a6830504195d7f896451f0",
+      "submitted_at": "2026-05-08T17:03:18Z"
+    },
+    {
+      "id": 4254105870,
+      "state": "COMMENTED",
+      "commit_id": "30c63898f32c0c7d05a6830504195d7f896451f0",
+      "submitted_at": "2026-05-08T17:30:41Z"
+    },
+    {
+      "id": 4257427080,
+      "state": "COMMENTED",
+      "commit_id": "30c63898f32c0c7d05a6830504195d7f896451f0",
+      "submitted_at": "2026-05-09T08:29:33Z"
+    },
+    {
+      "id": 4257427318,
+      "state": "APPROVED",
+      "commit_id": "30c63898f32c0c7d05a6830504195d7f896451f0",
+      "submitted_at": "2026-05-09T08:29:49Z"
+    },
+    {
+      "id": 4257691834,
+      "state": "COMMENTED",
+      "commit_id": "30c63898f32c0c7d05a6830504195d7f896451f0",
+      "submitted_at": "2026-05-09T11:17:06Z"
+    }
+  ]
+}

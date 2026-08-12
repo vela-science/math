@@ -1,0 +1,42 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.com/google-deepmind/formal-conjectures/pull/4877#pullrequestreview-4910337056"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4877"
+      }
+    },
+    "author_association": "COLLABORATOR",
+    "body": "Thanks, LGTM for change to ErdosProblems/80",
+    "commit_id": "4f7a1158da406e086606c1ae0d5fcbd353e3ed87",
+    "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/4877#pullrequestreview-4910337056",
+    "id": 4910337056,
+    "node_id": "PRR_kwDOOogmB88AAAABJK3MIA",
+    "pull_request_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4877",
+    "state": "COMMENTED",
+    "submitted_at": "2026-08-11T20:14:09Z",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/3491627?u=315f5464f4bc43fde3f4223201229650e9bd500b&v=4",
+      "events_url": "https://api.github.com/users/mo271/events{/privacy}",
+      "followers_url": "https://api.github.com/users/mo271/followers",
+      "following_url": "https://api.github.com/users/mo271/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mo271/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.com/mo271",
+      "id": 3491627,
+      "login": "mo271",
+      "node_id": "MDQ6VXNlcjM0OTE2Mjc=",
+      "organizations_url": "https://api.github.com/users/mo271/orgs",
+      "received_events_url": "https://api.github.com/users/mo271/received_events",
+      "repos_url": "https://api.github.com/users/mo271/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/mo271/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mo271/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/mo271",
+      "user_view_type": "public"
+    }
+  }
+]

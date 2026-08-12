@@ -1,0 +1,27 @@
+{
+  "schema": "vela.math.fc-audit.github-pr-observation.v0.1",
+  "authority_effect": "none",
+  "repository": "google-deepmind/formal-conjectures",
+  "observed_at": "2026-08-12T19:55:48Z",
+  "acquisition_method": {
+    "api": "GitHub REST API",
+    "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/1237",
+    "api_version": "2022-11-28",
+    "media_type": "application/vnd.github+json"
+  },
+  "normalization": "Selected primary GitHub REST API fields retained as normalized evidence. These bytes are not a canonical GitHub response.",
+  "number": 1237,
+  "title": "feat(ErdosProblems): 887",
+  "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/1237",
+  "state": "closed",
+  "merged": true,
+  "merged_at": "2026-01-13T20:56:01Z",
+  "merge_commit_sha": "21eefec13ae34f35a2fa30069e023a916a32e9d2",
+  "base": {
+    "sha": "a91ab6df34970fdd0fd8c919e693b2ba81fa4fbb"
+  },
+  "head": {
+    "sha": "288608562e684a2f3c97ba0ce960a2649a71370b"
+  },
+  "changed_files": 1
+}

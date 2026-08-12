@@ -1,0 +1,49 @@
+{
+  "schema": "vela.math.fc-audit.semantic-fidelity-witness.v0.1",
+  "authority_effect": "none",
+  "repository": "google-deepmind/formal-conjectures",
+  "pull_request_number": 1237,
+  "base_commit": "a91ab6df34970fdd0fd8c919e693b2ba81fa4fbb",
+  "head_commit": "288608562e684a2f3c97ba0ce960a2649a71370b",
+  "recorded_at": "2026-08-12T19:58:00Z",
+  "source_file": {
+    "path": "FormalConjectures/ErdosProblems/887.lean",
+    "git_blob_sha": "6feb58b9272ce638aba6da5ca7ee8ebf7785e0b8",
+    "bytes_sha256": "3e4c9376ebfa464985a2da4ac3b8401b1b54d64be1075368032eced0700706c5",
+    "bytes_length": 2307,
+    "acquisition_method": {
+      "api": "GitHub contents REST API",
+      "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/contents/FormalConjectures/ErdosProblems/887.lean?ref=288608562e684a2f3c97ba0ce960a2649a71370b",
+      "accept": "application/vnd.github.raw+json",
+      "api_version": "2022-11-28"
+    }
+  },
+  "declaration": "Erdos887.erdos_887",
+  "source_claim": "The declaration's own docstring asks for one absolute constant K such that every positive C and all sufficiently large n satisfy the divisor bound.",
+  "formal_shape": "forall C > 0, eventually n, divisor_count C n <= answer(sorry)",
+  "defect": "The answer slot occurs inside the binders for C and n, so it may depend on both. That is weaker than one absolute K outside those binders.",
+  "concrete_witness": "For each bound expression under the binders, choose answer to be that same expression; reflexivity proves bound <= bound. The answer therefore need not be an absolute constant.",
+  "review_guide": {
+    "repository": "williamjblair/formal-conjectures",
+    "commit": "70e8ddfdb5095873e0fbb45447d3649d5412ff3a",
+    "path": "REVIEW_MATH.md",
+    "sha256": "bc10a92b25047a46225221c7ecb090a5b3e9ac174fd44f6d1f6042d7c6971700",
+    "lines": "123-129",
+    "lineage_note": "The guide names the later-refactored declaration parts.i, but describes the same answer-under-C-and-n binder shape and the same le_refl witness. This record applies that witness directly to the exact PR 1237 head bytes."
+  },
+  "semantic_fidelity_result": "fail",
+  "provenance": {
+    "record_preparer": "Codex AI agent performing source-grounded packet transcription and exact-ref binding under the assigned Math Phase 0 task",
+    "preparer_authority": "advisory_record_preparation_only",
+    "human_source_local_basis": "The human-authored REVIEW_MATH record at commit 70e8ddfdb5095873e0fbb45447d3649d5412ff3a marks the Erdős 887 answer-under-C-and-n scope defect confirmed and gives the le_refl witness.",
+    "exact_head_application": "The retained PR 1237 head bytes contain the same documented semantic form under the prior declaration name erdos_887; this packet binds the cited confirmed finding to that exact blob and records the declaration-rename lineage.",
+    "ground_truth_class": "human_source_local_confirmed_finding_with_ai_assisted_exact_ref_binding",
+    "authority_effect": "none"
+  },
+  "limitations": [
+    "This is a source-local evaluation witness, not an upstream maintainer Decision.",
+    "AI packet preparation does not itself supply human ground truth or create a Math Repository Decision; the conclusion is attributed to the cited human-authored confirmed finding.",
+    "It does not establish that any later refactor or correction has been accepted.",
+    "It does not turn the passing repository build into a failing mechanical check."
+  ]
+}

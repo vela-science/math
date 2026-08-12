@@ -1,0 +1,38 @@
+{
+  "schema": "vela.math.fc-audit.github-pr-files-observation.v0.1",
+  "authority_effect": "none",
+  "repository": "google-deepmind/formal-conjectures",
+  "pull_request_number": 4830,
+  "expected_head_commit": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+  "observed_at": "2026-08-12T19:43:55Z",
+  "acquisition_method": {
+    "api": "GitHub REST API",
+    "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4830/files?per_page=100",
+    "api_version": "2022-11-28",
+    "media_type": "application/vnd.github+json",
+    "command_shape": "gh api --paginate ... /repos/{owner}/{repo}/pulls/{number}/files?per_page=100"
+  },
+  "normalization": {
+    "description": "Selected primary GitHub REST API fields retained as normalized evidence and sorted by filename. These bytes are not a canonical GitHub response.",
+    "pagination": "all pages requested with per_page=100"
+  },
+  "files": [
+    {
+      "additions": 105,
+      "blob_url": "https://github.com/google-deepmind/formal-conjectures/blob/e2e2a6064b474781d3b5b4a32e3d77956d6968da/FormalConjectures%2FErdosProblems%2F80.lean",
+      "changes": 105,
+      "contents_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/contents/FormalConjectures%2FErdosProblems%2F80.lean?ref=e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+      "deletions": 0,
+      "filename": "FormalConjectures/ErdosProblems/80.lean",
+      "previous_filename": null,
+      "raw_url": "https://github.com/google-deepmind/formal-conjectures/raw/e2e2a6064b474781d3b5b4a32e3d77956d6968da/FormalConjectures%2FErdosProblems%2F80.lean",
+      "sha": "9dd6a9933931fcfbeea61eac777d4155dacb9eb1",
+      "status": "added"
+    }
+  ],
+  "limitations": [
+    "GitHub's pull-request files response is mutable community observation state and is not fixture identity by itself.",
+    "The separately retained pull-request snapshot binds the exact base and head commits.",
+    "Patch text is intentionally omitted; each file record retains its exact Git blob SHA and immutable commit-qualified contents URL."
+  ]
+}

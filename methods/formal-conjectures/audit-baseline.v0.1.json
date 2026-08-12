@@ -1,0 +1,479 @@
+{
+  "schema": "vela.math.fc-audit.evaluation-method.v0.1",
+  "method_id": "fc-audit-paired-review-baseline-v0.1",
+  "status": "protocol_design_incomplete_results_not_collected",
+  "authority_effect": "none",
+  "question": "For the same frozen Formal Conjectures pull-request bytes, does the per-PR audit record reduce evidence-location, review, continuation, and reproduction effort without hiding semantic defects or crossing an authority boundary?",
+  "evaluation_units": {
+    "review_observation": "One declared participant reviews one frozen base-head fixture under one transport condition.",
+    "handoff_pair": "One sender review observation and one distinct receiver continuation observation are linked by the same study-random handoff_id, frozen fixture, condition, and rooted condition-packet identity.",
+    "unit_noncollapse_rule": "A review observation cannot by itself produce H5 continuation outcomes. H5 requires both linked observations and explicit receiver context; different pseudonyms do not imply independence."
+  },
+  "fixture_selection": {
+    "path": "evidence/formal-conjectures/audit-pilot/phase-0-fixture-selection.v0.1.json",
+    "sha256": "0043cf876cb2c645565aad620c404f58e03665e9f4afb66ab5bfdae0a724f3c8",
+    "required_fixture_count": 5,
+    "required_roles": [
+      "clean_control_candidate_pending_review",
+      "conditional_proof",
+      "mechanical_pass_semantic_fail",
+      "vacuous_or_boundary_defect",
+      "unavailable_tool_or_missing_artifact"
+    ],
+    "unfulfilled_target_role": "clean_source_faithful",
+    "ground_truth_completion_rule": "The selected control candidate does not fulfill clean_source_faithful until a witness-backed exact-head human review is retained. Five selected cases are not five completed ground-truth fixtures."
+  },
+  "hypothesis_plan": {
+    "registration_status": "planned_not_fully_preregistered",
+    "claim_gate": "H2 and H5 are the planned Phase 0 primary hypotheses, but no support, rejection, effect, or uncertainty claim is permitted until the precollection design supplement is frozen and root-bound to this method.",
+    "primary_phase_0": [
+      {
+        "id": "H2_verification_efficiency",
+        "claim": "For matched frozen inputs, the FC audit condition reduces active expert review effort while maintaining or improving detection of consequential defects relative to plain Git and current review artifacts.",
+        "primary_outcomes": [
+          "review_effort_seconds",
+          "reviewer_minutes_per_consequential_issue",
+          "defects_beyond_compilation",
+          "advisory_false_positives",
+          "advisory_false_negatives"
+        ],
+        "claim_rule": "Report raw pairs and uncertainty. Do not claim support if effort improves by hiding, missing, or misclassifying a consequential defect."
+      },
+      {
+        "id": "H5_retained_packet_handoff",
+        "claim": "For matched frozen inputs, the retained FC audit packet lowers continuation and reproduction effort without requiring private operator context.",
+        "primary_outcomes": [
+          "continuation_seconds",
+          "reproduction_latency_seconds",
+          "missing_or_ambiguous_provenance_fields",
+          "metadata_burden_seconds",
+          "participant_abandonment"
+        ],
+        "claim_rule": "The second participant must work only from the retained condition packet. Report missing context rather than supplying private operator knowledge; faster handoff cannot compensate for an authority-boundary violation."
+      }
+    ],
+    "later_integrated_pilot": [
+      {
+        "id": "H1_promotion",
+        "claim": "A rooted candidate can cross the local-signing and human-authorized promotion boundary with less reconstruction work and no hosted authority creep.",
+        "outcomes": [
+          "evidence_location_seconds",
+          "metadata_burden_seconds",
+          "participant_abandonment",
+          "authority_boundary_violations"
+        ],
+        "phase_0_status": "not_tested"
+      },
+      {
+        "id": "H3_correction_propagation",
+        "claim": "Within one declared bounded relation slice, source-local dependency and reassessment projections reduce recovery time and increase correct classification coverage without over-invalidating unaffected relations.",
+        "outcomes": [
+          "correction_recovery_seconds",
+          "affected_descendants_reassessed_fraction",
+          "correction_false_alarm_count"
+        ],
+        "phase_0_status": "not_tested",
+        "authority_limit": "The relation slice and any `depends`-based impact are derived review context. They do not move Standing; only a later human-authorized Decision admitting a `corrects` or `supersedes` transition can do so."
+      },
+      {
+        "id": "H6_portability",
+        "claim": "A rooted agent-produced handoff crosses the selected workbench or repository boundary without semantic rewriting and remains reviewable without private operator context.",
+        "outcomes": [
+          "unsupported_claims_reaching_expert_review",
+          "missing_or_ambiguous_provenance_fields",
+          "manual_semantic_repair_seconds",
+          "manual_semantic_repair_count"
+        ],
+        "phase_0_status": "not_tested"
+      }
+    ],
+    "not_preregistered_in_this_packet": [
+      "H4 interoperability requires a selected external handoff and remains outside Phase 0; manual semantic repair is retained as a later descriptive outcome.",
+      "H7 governance pluralism is an architecture and external-community question, not an outcome this five-case internal packet can establish."
+    ]
+  },
+  "conditions": {
+    "control": {
+      "id": "plain-git-and-current-review-artifacts",
+      "description": "The participant receives the exact base and head commits, pull-request discussion, native check output, and any existing source or proof locators. No generated FC audit record or audit-derived projection is provided."
+    },
+    "treatment": {
+      "id": "same-inputs-plus-fc-pr-audit",
+      "description": "The participant receives exactly the control information plus the canonical per-PR audit record and its projection. The audit may reorganize but may not add private information unavailable to the control."
+    },
+    "matching_rule": "Control and treatment use identical frozen source bytes, declared evidence, access policy, and task wording. Any extra treatment-only retrieval invalidates the pair until the control receives the same information.",
+    "order_rule": "Counterbalance condition order across participants or cases. Record order and prior exposure; do not compare a naive first attempt with a fully familiar second attempt without labeling the carryover limit."
+  },
+  "precollection_design_gate": {
+    "status": "incomplete_blocking_inference",
+    "required_rooted_supplement_fields": [
+      "target_sample_and_recruitment_frame",
+      "participant_and_session_eligibility",
+      "exclusion_and_missing-session_rules",
+      "fixture_by_condition_allocation",
+      "counterbalance_schedule",
+      "stopping_rule",
+      "primary_estimands",
+      "estimator_and_uncertainty_method",
+      "claim_thresholds_and_multiplicity_rule",
+      "deviation_and_amendment_policy"
+    ],
+    "current_gaps": [
+      "No target participant or handoff-pair sample is selected.",
+      "No eligibility, allocation, or concrete counterbalance schedule is frozen.",
+      "No stopping rule, estimator, uncertainty method, or claim threshold is frozen."
+    ],
+    "collection_rule": "Do not collect inferential H2 or H5 observations until the supplement is frozen before exposure to outcome data. A same-operator rehearsal may test instrumentation only and must remain descriptively labeled.",
+    "claim_rule": "Until the supplement is frozen and bound by exact SHA-256, report only design status and instrumentation results; do not claim H2 or H5 support, rejection, effect size, uncertainty, evaluation success, or interface disposition from outcomes."
+  },
+  "participant_declaration": {
+    "review_observation_required_fields": [
+      "observation_id",
+      "fixture_id",
+      "condition",
+      "participant_id_pseudonym",
+      "started_at",
+      "completed_at",
+      "role",
+      "formal_conjectures_experience",
+      "lean_experience",
+      "prior_fixture_exposure",
+      "condition_order",
+      "operator_overlap",
+      "access_limits",
+      "prepared_fixture_or_audit"
+    ],
+    "h5_sender_review_required_fields": [
+      "observation_id",
+      "handoff_id",
+      "fixture_id",
+      "condition",
+      "condition_packet_root",
+      "participant_id_pseudonym",
+      "started_at",
+      "completed_at",
+      "role",
+      "formal_conjectures_experience",
+      "lean_experience",
+      "prior_fixture_exposure",
+      "condition_order",
+      "operator_overlap",
+      "access_limits",
+      "prepared_fixture_or_audit"
+    ],
+    "receiver_continuation_observation_required_fields": [
+      "observation_id",
+      "handoff_id",
+      "fixture_id",
+      "condition",
+      "condition_packet_root",
+      "participant_id_pseudonym",
+      "started_at",
+      "completed_at",
+      "role",
+      "formal_conjectures_experience",
+      "lean_experience",
+      "prior_fixture_exposure",
+      "condition_order",
+      "operator_overlap",
+      "access_limits",
+      "prepared_fixture_or_audit",
+      "used_only_condition_packet",
+      "independence_classification",
+      "independence_basis"
+    ],
+    "handoff_pair_required_fields": [
+      "handoff_id",
+      "fixture_id",
+      "condition",
+      "condition_packet_root",
+      "source_review_observation_id",
+      "receiver_continuation_observation_id",
+      "sender_participant_id_pseudonym",
+      "receiver_participant_id_pseudonym",
+      "receiver_role",
+      "receiver_formal_conjectures_experience",
+      "receiver_lean_experience",
+      "receiver_prior_fixture_exposure",
+      "receiver_condition_order",
+      "receiver_operator_overlap",
+      "receiver_access_limits",
+      "receiver_prepared_fixture_or_audit",
+      "receiver_used_only_condition_packet",
+      "independence_classification",
+      "independence_basis",
+      "sender_completed_at",
+      "receiver_started_at",
+      "receiver_completed_at"
+    ],
+    "handoff_id_rule": "Assign a study-local random identifier that reveals neither participant identity and appears on the sender review, receiver continuation, and handoff-pair records. The re-identification key remains outside Git under the participant-data policy.",
+    "cross_record_rule": "The pair, sender review, and receiver continuation must agree exactly on handoff_id, fixture_id, condition, condition_packet_root, participant pseudonyms, copied receiver context, and copied timestamps. Observation ids must be distinct and resolve to the two retained observations; sender completion must not follow receiver start, and receiver start must not follow receiver completion.",
+    "independence_rule": "A same-operator rehearsal is allowed but must be labeled non-independent. Independent validation requires a receiver who did not prepare the fixture, audit result, or source observation and who uses only the rooted condition packet. Distinct participant pseudonyms are necessary for a two-person handoff but are never sufficient evidence of independence."
+  },
+  "participant_data_handling": {
+    "pseudonym_policy": "Assign a study-local random pseudonym that is not derived from a participant name, email address, GitHub handle, account id, or other public identity. Keep any re-identification key outside this public Repository.",
+    "public_packet_prohibitions": [
+      "participant names, email addresses, handles, account ids, or contact details",
+      "private pull-request comments, direct messages, unpublished review notes, or restricted artifact contents",
+      "credentials, tokens, cookies, private keys, session identifiers, or private locators",
+      "free text that is not reviewed for accidental identity or private-context disclosure"
+    ],
+    "private_raw_custody": "If consented private raw notes or recordings are required, store them encrypted outside Git under the named study custodian; grant access only to the minimum named evaluation personnel and record the lawful or consent basis separately.",
+    "retention_and_deletion": "Set a participant-approved retention period before collection. Delete private raw material and any re-identification key at that deadline or upon a valid earlier withdrawal request where feasible; retain only the redacted aggregate and audit trail allowed by the consent terms.",
+    "public_release": "Publish only pseudonymous task fields needed for the planned measures after the precollection design is frozen, redacted evidence excerpts when authorized, and aggregates that do not enable re-identification. Review small-cell and free-text disclosures before release.",
+    "incident_rule": "Do not commit a suspected secret or private participant datum. Stop collection, quarantine the material outside Git, notify the study custodian, rotate any exposed credential, and record only a public-safe incident disposition."
+  },
+  "tasks": [
+    {
+      "id": "locate-evidence",
+      "prompt": "Locate the exact changed statement, every declared proof artifact, each check result, and the base and head identities. Record missing or ambiguous fields.",
+      "stop_condition": "The participant either records all requested locators or states that a requested item is unavailable."
+    },
+    {
+      "id": "classify-checks",
+      "prompt": "Separate mechanical checks, semantic-fidelity findings, artifact availability, and external community status. Preserve conditions and does-not-establish limits.",
+      "stop_condition": "Every observed result is assigned to one layer without inferring acceptance from pass."
+    },
+    {
+      "id": "review-fidelity",
+      "prompt": "Compare the exact Lean statement with its source and report a witness-backed verdict or an explicit inconclusive result.",
+      "stop_condition": "The participant records CLEAN, ACCEPT WITH NITS, NEEDS REVISION, or an explicit unresolved question, with the source locator and witness rules from the review guide."
+    },
+    {
+      "id": "reproduce-artifact",
+      "prompt": "Follow the retained commands or artifact locator far enough to reproduce or scope the claimed mechanical result. Record unavailable tools or bytes separately from failures.",
+      "stop_condition": "The artifact is reproduced, a retained attestation is scoped, or the attempt ends with fail, error, inconclusive, or unavailable and an exact reason."
+    },
+    {
+      "id": "handoff-continuation",
+      "prompt": "A receiver distinct from the sender continues from the rooted retained condition packet and explains the result, limits, and next unresolved obligation without private operator context.",
+      "stop_condition": "The linked receiver continuation observation gives a correct layer-separated account or identifies the missing provenance that prevents continuation.",
+      "required_linkage": "handoff_id, source_review_observation_id, receiver_continuation_observation_id, sender and receiver pseudonyms, condition_packet_root, receiver context, and sender/receiver timestamps"
+    }
+  ],
+  "measures": [
+    {
+      "id": "evidence_location_seconds",
+      "type": "duration_seconds",
+      "start": "The participant opens the condition packet.",
+      "stop": "The locate-evidence task reaches its stop condition.",
+      "required_context": [
+        "condition",
+        "fixture_id",
+        "participant_id_pseudonym"
+      ]
+    },
+    {
+      "id": "review_effort_seconds",
+      "type": "active_duration_seconds",
+      "start": "The participant starts the classify-checks task.",
+      "stop": "The fidelity verdict or unresolved question is retained.",
+      "pause_rule": "Pause the clock for unrelated work, network outage, build queue time, and scheduled waiting; record those durations separately."
+    },
+    {
+      "id": "reviewer_minutes_per_consequential_issue",
+      "type": "derived_minutes_per_confirmed_issue",
+      "numerator": "review_effort_seconds divided by 60",
+      "denominator": "Count of distinct witness-backed consequential issues confirmed by human ground truth within the review's declared scope.",
+      "zero_denominator_rule": "Report undefined with the raw reviewer minutes and zero confirmed issues; never report zero minutes per issue."
+    },
+    {
+      "id": "reproduction_latency_seconds",
+      "type": "elapsed_duration_seconds",
+      "start": "The participant begins the reproduce-artifact task.",
+      "stop": "The reproduce-artifact task reaches its stop condition.",
+      "required_terminal_states": [
+        "pass",
+        "fail",
+        "inconclusive",
+        "error",
+        "unavailable"
+      ]
+    },
+    {
+      "id": "continuation_seconds",
+      "type": "active_duration_seconds",
+      "start": "The linked receiver starts from the rooted retained condition packet.",
+      "stop": "The linked receiver continuation task reaches its stop condition.",
+      "required_context": [
+        "handoff_id",
+        "source_review_observation_id",
+        "receiver_continuation_observation_id",
+        "sender_participant_id_pseudonym",
+        "receiver_participant_id_pseudonym",
+        "condition_packet_root",
+        "receiver_prior_fixture_exposure",
+        "receiver_operator_overlap",
+        "receiver_access_limits",
+        "receiver_prepared_fixture_or_audit"
+      ],
+      "invalid_if": "The sender and receiver are the same participant, linkage or receiver context is missing, the receiver receives private operator context, or independence is inferred only from different pseudonyms. Same-operator rehearsals may be retained descriptively but do not test H5's second-participant claim."
+    },
+    {
+      "id": "defects_beyond_compilation",
+      "type": "count_with_identifiers",
+      "rule": "Count only witness-backed defects absent from the mechanical check layer. Do not count fixture labels or unresolved leads as findings."
+    },
+    {
+      "id": "advisory_false_positives",
+      "type": "count_with_identifiers",
+      "rule": "Count an advisory finding only after human ground truth rejects its concrete claim."
+    },
+    {
+      "id": "advisory_false_negatives",
+      "type": "count_with_identifiers",
+      "rule": "Count a missed finding only after human ground truth confirms a defect within the advisory review's declared scope."
+    },
+    {
+      "id": "missing_or_ambiguous_provenance_fields",
+      "type": "count_with_field_paths",
+      "rule": "Record each missing or ambiguous field path once per condition and fixture."
+    },
+    {
+      "id": "metadata_burden_seconds",
+      "type": "active_duration_seconds",
+      "rule": "Record participant time spent adding, repairing, or reformatting metadata required by the condition, excluding ordinary mathematical review and artifact reproduction."
+    },
+    {
+      "id": "participant_abandonment",
+      "type": "categorical_event_with_reason",
+      "allowed_states": [
+        "completed",
+        "abandoned_burden",
+        "abandoned_access",
+        "abandoned_tooling",
+        "abandoned_other"
+      ],
+      "rule": "Retain elapsed and active time, last completed task, and participant-authored reason. Do not drop abandoned sessions from the denominator."
+    },
+    {
+      "id": "unsupported_claims_reaching_expert_review",
+      "type": "count_with_claim_identifiers",
+      "rule": "Count a claim when it reaches the human fidelity-review task without an exact supporting artifact or with support that does not establish the claimed scope. Record whether native preflight or the FC audit surfaced it before substantive review."
+    },
+    {
+      "id": "authority_boundary_violations",
+      "type": "count_with_evidence",
+      "rule": "Count any output or action that treats a check, model finding, projection, merge observation, or Workspace activity as a Vela Decision or change in Standing. Target is zero; absence must be tested, not assumed."
+    },
+    {
+      "id": "stale_anchor_conflicts_caught",
+      "type": "count_with_evidence",
+      "rule": "Collect only in the later Workspace pilot. This Phase 0 FC review protocol records the measure as not applicable rather than zero."
+    },
+    {
+      "id": "correction_recovery_seconds",
+      "type": "elapsed_duration_seconds",
+      "rule": "Collect only in the correction pilot, from receipt of the exact correction root to classified affected, unaffected, unresolved, and basis-unavailable relations within the declared bounded relation slice."
+    },
+    {
+      "id": "affected_descendants_reassessed_fraction",
+      "type": "derived_fraction",
+      "numerator": "Affected descendants with a completed human or policy-scoped reassessment.",
+      "denominator": "All affected descendants in the human-reviewed ground truth for the declared bounded relation slice.",
+      "rule": "Collect only in the correction pilot. Report the slice's source roots, coverage, omissions, loss, and affected, unaffected, unresolved, and basis-unavailable counts alongside the fraction."
+    },
+    {
+      "id": "correction_false_alarm_count",
+      "type": "count_with_relation_identifiers",
+      "rule": "Collect only in the correction pilot. Count unaffected relations inside the declared bounded slice that are incorrectly presented as requiring correction, using human-reviewed source-local relation ground truth."
+    },
+    {
+      "id": "manual_semantic_repair_seconds",
+      "type": "active_duration_seconds",
+      "rule": "Collect only in a later cross-workbench or cross-repository handoff. Measure manual work needed to preserve or reconstruct meaning after syntactically valid import."
+    },
+    {
+      "id": "manual_semantic_repair_count",
+      "type": "count_with_field_or_relation_identifiers",
+      "rule": "Collect only in a later cross-workbench or cross-repository handoff. Count each manual semantic rewrite required for the receiving system to preserve the source meaning."
+    }
+  ],
+  "ground_truth": {
+    "mechanical": "Use exact native check artifacts and reproducible commands, retaining fail, error, inconclusive, and unavailable as distinct states.",
+    "semantic": "Use a human-authored source-local finding or human domain review with exact source locators and concrete witnesses. An AI-prepared packet must identify its preparer and the human/source-local basis separately; model output alone is not ground truth and packet preparation is not a Math Decision.",
+    "ai_review": "AI review is advisory observation by default. It becomes a Vela Verification only when a local Repository policy recognizes the verifier, the method is committed, inputs are exact, the record is correctly signed, and the normal Repository boundary accepts it. The FC audit artifact itself never mints a Vela Verification.",
+    "community": "Read only exact time-scoped FC events from the community's authoritative system; do not mint or predict maintainer status. An FC review, approval, merge, rejection, or correction is an external observation for Math, not a Math Repository Decision.",
+    "vela": "This evaluation creates no Vela Verification, Decision, Event, or Standing. Only an authorized human Math Repository Decision through the normal signed protocol can change local Math Standing."
+  },
+  "collection_stages": [
+    {
+      "id": "baseline",
+      "condition": "plain-git-and-current-review-artifacts",
+      "required_before": "The participant sees any generated FC audit artifact for that fixture.",
+      "status": "blocked_pending_rooted_precollection_design_supplement"
+    },
+    {
+      "id": "final",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "required_before": "EVAL-01 completion",
+      "status": "blocked_pending_rooted_precollection_design_supplement"
+    }
+  ],
+  "handoff_collection_rule": "After the precollection design gate is satisfied, each H5 comparison requires a rooted sender review observation plus a distinct linked receiver continuation observation and handoff-pair record in each matched condition. A missing or disagreeing record is an incomplete handoff, never zero continuation time.",
+  "analysis_rules": [
+    "Report raw per-case observations before any aggregate.",
+    "Pair control and treatment only when the matching rule holds.",
+    "Report missing values as missing, not zero.",
+    "Separate active reviewer effort from build or network wait time.",
+    "Do not infer causal improvement from a same-operator or non-counterbalanced rehearsal.",
+    "Do not compute H5 continuation outcomes from a single participant or from an unlinked sender/receiver pair, and do not infer receiver independence from pseudonyms.",
+    "Retain cases where the audit is slower or less accurate.",
+    "Report fixture-construction knowledge and prior exposure as limitations.",
+    "Later correction results apply only to the declared bounded relation slice and its disclosed coverage; descriptive dependency projections and reassessment obligations are not protocol authority and do not move Standing.",
+    "Do not report external adoption, independent validation, or scientific lift from internal evaluation."
+  ],
+  "interface_disposition": {
+    "allowed": [
+      "continue",
+      "revise",
+      "retain_source_locally",
+      "retire"
+    ],
+    "rule": "Final EVAL-01 analysis assigns one allowed disposition to each new interface. A triggered kill criterion prohibits continue until a retained evidence-based decision records a credible bounded correction; safety and authority boundaries may not be waived to keep an interface. Kill decisions apply to the interface, not the underlying source contribution or scientific question."
+  },
+  "kill_criteria": [
+    {
+      "id": "hides_or_collapses_known_result",
+      "trigger": "The interface hides a known fidelity defect or collapses unavailable, error, or inconclusive into a result.",
+      "required_disposition": "revise, retain_source_locally, or retire"
+    },
+    {
+      "id": "burden_without_scientific_benefit",
+      "trigger": "The interface increases reviewer burden without improving consequential-issue discovery, continuation, correction recovery, or reproducibility.",
+      "required_disposition": "revise, retain_source_locally, or retire"
+    },
+    {
+      "id": "unsupported_claim_triage_failure",
+      "trigger": "The interface causes unsupported agent or advisory claims to reach expert review at an unacceptable rate under the later rooted and frozen evaluation context.",
+      "required_disposition": "revise, retain_source_locally, or retire"
+    },
+    {
+      "id": "manual_semantic_repair",
+      "trigger": "The interface requires material manual semantic repair after handoff.",
+      "required_disposition": "revise, retain_source_locally, or retire"
+    },
+    {
+      "id": "metadata_abandonment_or_bypass",
+      "trigger": "The interface's metadata burden causes repeated abandonment or bypass.",
+      "required_disposition": "revise, retain_source_locally, or retire"
+    },
+    {
+      "id": "semantic_or_authority_loss",
+      "trigger": "The interface cannot preserve local authority, disagreement, correction, or exact source identity.",
+      "required_disposition": "revise, retain_source_locally, or retire"
+    },
+    {
+      "id": "simpler_transport_performs_as_well",
+      "trigger": "A simpler matched transport performs as well with lower maintenance cost.",
+      "required_disposition": "retain_source_locally or retire; continue only the simpler transport"
+    }
+  ],
+  "does_not_establish": [
+    "That the FC audit improves review before paired results are collected.",
+    "That a faster review is a more accurate review.",
+    "That a receiver is independent merely because a separate pseudonym or handoff record is present.",
+    "That the clean_source_faithful target role or FC-03 exit is met before exact-head human ground truth is retained.",
+    "That any check outcome is a community or Vela Decision."
+  ]
+}

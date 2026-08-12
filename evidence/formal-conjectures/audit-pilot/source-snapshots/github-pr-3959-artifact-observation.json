@@ -1,0 +1,33 @@
+{
+  "schema": "vela.math.fc-audit.formal-proof-artifact-observation.v0.1",
+  "authority_effect": "none",
+  "repository": "google-deepmind/formal-conjectures",
+  "pull_request_number": 3959,
+  "head_commit": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+  "observed_at": "2026-08-12T19:56:00Z",
+  "acquisition_method": {
+    "api": "GitHub contents REST API",
+    "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/contents/FormalConjectures/Paper/Rupert.lean?ref=868cc092aeb713dbf8027883c5fa575e550cfae9",
+    "accept": "application/vnd.github.raw+json",
+    "api_version": "2022-11-28"
+  },
+  "source_file": {
+    "path": "FormalConjectures/Paper/Rupert.lean",
+    "git_blob_sha": "48c343f0d12c1dffb7953a5d2426e0d13a914bad",
+    "bytes_sha256": "49bec542e7c93319ca4a1c4a2b0b3a18bf72baaf7621416a30685e311a6ef7cf",
+    "bytes_length": 4750
+  },
+  "declaration": "is_every_convex_polyhedron_rupert",
+  "formal_proof_locator": "https://github.com/jcreedcmu/Noperthedron",
+  "locator_class": "mutable_repository_root_without_file_or_revision",
+  "artifact_identity_resolution": "unavailable_exact_file_and_revision_at_fixture_head",
+  "disambiguating_later_observation": {
+    "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4895-correction-observation.json",
+    "relationship": "later_open_source_local_correction_identifies_multiple_candidate_routes_and_selects_one"
+  },
+  "does_not_establish": [
+    "That no formal proof exists.",
+    "That any candidate proof fails.",
+    "That the later correction has been merged or adopted."
+  ]
+}

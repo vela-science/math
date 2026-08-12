@@ -1,0 +1,37 @@
+{
+  "schema": "vela.math.fc-audit.github-correction-observation.v0.1",
+  "authority_effect": "none",
+  "repository": "google-deepmind/formal-conjectures",
+  "pull_request_number": 4895,
+  "observed_at": "2026-08-12T19:53:13Z",
+  "acquisition_method": {
+    "api": "GitHub REST API",
+    "pull_request_endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4895",
+    "files_endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4895/files?per_page=100",
+    "api_version": "2022-11-28",
+    "media_type": "application/vnd.github+json"
+  },
+  "normalization": "Selected primary GitHub REST API fields and the correction author's exact locator rationale retained as normalized source-local observation. These bytes are not a canonical GitHub response or a Math Decision.",
+  "pull_request": {
+    "title": "Point `formal_proof` links at files rather than commit and landing pages",
+    "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/4895",
+    "state": "open",
+    "merged": false,
+    "base_commit": "0bd22d91e6408fb47c3e31ff54200b0d8f740fa6",
+    "head_commit": "de55e8708b89b2cb5c3d8a910169bf3e71fc3ac0"
+  },
+  "affected_file": {
+    "filename": "FormalConjectures/Paper/Rupert.lean",
+    "blob_sha": "c0c627f4bfa97fe7ede9db06efc38d57b2b8cbce",
+    "contents_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/contents/FormalConjectures%2FPaper%2FRupert.lean?ref=de55e8708b89b2cb5c3d8a910169bf3e71fc3ac0",
+    "source_bytes_sha256": "5a693bd78d0f9e57d676583c25f3d62b699956c549d8d6ec2f3c043af7f1dffd",
+    "source_bytes_length": 4827,
+    "pinned_locator": "https://github.com/jcreedcmu/Noperthedron/blob/1ee88118097acc9db768b44b3c6ea9f60a4e4b67/KernelCaseAnalysis/ProofOfMainTheorem.lean#L21"
+  },
+  "author_rationale": [
+    "The prior Rupert locator named a repository root rather than a file.",
+    "MainTheorem.lean only states the proposition; the repository offers a kernel proof, a native_decide proof, and an executable.",
+    "The correction selects the kernel proof and pins both its revision and declaration line."
+  ],
+  "interpretation": "This open correction is evidence that exact artifact identity was unresolved at PR 3959's exact head. It is not evidence that PR 4895 has been adopted and does not establish whether any proof succeeds or fails."
+}

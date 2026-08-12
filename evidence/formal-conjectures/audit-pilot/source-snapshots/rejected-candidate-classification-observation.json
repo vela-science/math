@@ -1,0 +1,47 @@
+{
+  "schema": "vela.math.fc-audit.rejected-candidate-classification.v0.1",
+  "authority_effect": "none",
+  "recorded_at": "2026-08-12T19:58:00Z",
+  "purpose": "Prevent two investigated candidates from being misclassified as unavailable proof artifacts.",
+  "candidates": [
+    {
+      "candidate": "formal-conjectures-pr-3941-erdos-38",
+      "fixture_head": "9ee318a33db201e150e81ee3fc348b442e257b3d",
+      "metadata_locator": "https://www.erdosproblems.com/forum/thread/38#post-6131",
+      "resolution": "resolvable_to_immutable_raw_gist_proof_bytes",
+      "immutable_proof_url": "https://gist.githubusercontent.com/madeve-unipi/690d2bd8f6e8304ba8b456f9db559747/raw/481e3c35de8dce7af70ec440e4e121f084a61860/Erdos38.lean",
+      "observed_http_status": 200,
+      "observed_content_type": "text/plain; charset=utf-8",
+      "observed_bytes_length": 96334,
+      "observed_bytes_sha256": "a1fc6bfcf7f03d0794fe48c3415acc31e6966b75efbf7cc8a9adb7c4ca7f49e4",
+      "acquisition_method": "Follow the explicit live.lean-lang.org URL in forum post 6131 and read its revision-pinned raw gist url parameter; fetch that URL with redirects enabled.",
+      "classification_nonclaim": "This proves artifact resolution, not proof validity, statement fidelity, or upstream acceptance."
+    },
+    {
+      "candidate": "formal-conjectures-pr-4883-erdos-316-and-399",
+      "fixture_head": "cd55698a2a76d0ab4c8b6ba6dbfd463aec453cdc",
+      "metadata_form": "formal_proof using formal_conjectures at empty string",
+      "resolution": "intentional_in_source_proof_semantics_not_missing_artifact",
+      "exact_source_observations": [
+        {
+          "path": "FormalConjectures/ErdosProblems/316.lean",
+          "git_blob_sha": "819b319a22077164471703d62be032693f877a35",
+          "bytes_sha256": "aab02b887aafc1f9fe8ca4340e6d398e0b6835919c44a0a13e3b80a793f35318",
+          "bytes_length": 3666
+        },
+        {
+          "path": "FormalConjectures/ErdosProblems/399.lean",
+          "git_blob_sha": "f7c51670e460754a9a0031476d22887ccaacb2c2",
+          "bytes_sha256": "b2b88bdfcde4d10f50a960e7d18277e3fb6a03b00e77f8642badc5b836c8d97b",
+          "bytes_length": 3475
+        }
+      ],
+      "primary_source": {
+        "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4883",
+        "observed_at": "2026-08-12T19:56:00Z",
+        "body_claim": "The empty link is valid for the formal_conjectures kind, where the proof is the statement itself; both declarations contain proof terms and the sorries are on variants."
+      },
+      "classification_nonclaim": "This classifies the metadata convention only; it does not independently re-run or certify either proof."
+    }
+  ]
+}

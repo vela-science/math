@@ -1,0 +1,257 @@
+{
+  "schema": "vela.math.fc-audit.github-check-observation.v0.1",
+  "authority_effect": "none",
+  "repository": "google-deepmind/formal-conjectures",
+  "pull_request_number": 4830,
+  "head_commit": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+  "observed_at": "2026-08-12T19:37:09Z",
+  "normalization": {
+    "description": "Selected primary GitHub REST API fields retained as normalized evidence and sorted by numeric record id. These bytes are not a canonical GitHub response.",
+    "api_version": "2022-11-28",
+    "media_type": "application/vnd.github+json"
+  },
+  "sources": {
+    "check_runs": {
+      "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/e2e2a6064b474781d3b5b4a32e3d77956d6968da/check-runs?per_page=100",
+      "total_count": 12,
+      "records": [
+        {
+          "app": {
+            "id": 42202,
+            "name": "Google CLA",
+            "owner_login": "google",
+            "slug": "google-cla"
+          },
+          "completed_at": "2026-08-09T12:24:38Z",
+          "conclusion": "success",
+          "details_url": "https://cla.developers.google.com/about",
+          "external_id": "",
+          "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/runs/93244173945",
+          "id": 93244173945,
+          "name": "cla/google",
+          "started_at": "2026-08-09T12:24:31Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "id": 15368,
+            "name": "GitHub Actions",
+            "owner_login": "github",
+            "slug": "github-actions"
+          },
+          "completed_at": "2026-08-09T12:24:38Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244175824",
+          "external_id": "dcbf80b4-53c7-5170-bdf1-340b5899f934",
+          "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244175824",
+          "id": 93244175824,
+          "name": "check-changes",
+          "started_at": "2026-08-09T12:24:33Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "id": 15368,
+            "name": "GitHub Actions",
+            "owner_login": "github",
+            "slug": "github-actions"
+          },
+          "completed_at": "2026-08-09T12:24:38Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208245/job/93244175963",
+          "external_id": "a6e81242-ddd2-52d9-89a5-09c8679df590",
+          "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208245/job/93244175963",
+          "id": 93244175963,
+          "name": "labeler",
+          "started_at": "2026-08-09T12:24:34Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "id": 15368,
+            "name": "GitHub Actions",
+            "owner_login": "github",
+            "slug": "github-actions"
+          },
+          "completed_at": "2026-08-09T13:00:59Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209312/job/93244178114",
+          "external_id": "4706cfe5-8db8-5195-9716-be9d13fd3b0b",
+          "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209312/job/93244178114",
+          "id": 93244178114,
+          "name": "Build project",
+          "started_at": "2026-08-09T12:24:36Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "id": 15368,
+            "name": "GitHub Actions",
+            "owner_login": "github",
+            "slug": "github-actions"
+          },
+          "completed_at": "2026-08-09T12:24:40Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209341/job/93244178160",
+          "external_id": "5c5f5f5f-30b2-5f93-a73f-5b2f71a8dc3d",
+          "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209341/job/93244178160",
+          "id": 93244178160,
+          "name": "check-copyright",
+          "started_at": "2026-08-09T12:24:35Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "id": 15368,
+            "name": "GitHub Actions",
+            "owner_login": "github",
+            "slug": "github-actions"
+          },
+          "completed_at": "2026-08-09T12:24:50Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209312/job/93244178161",
+          "external_id": "84fe85ae-2375-5e86-9c4a-6288b7cba166",
+          "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209312/job/93244178161",
+          "id": 93244178161,
+          "name": "Test scripts",
+          "started_at": "2026-08-09T12:24:35Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "id": 15368,
+            "name": "GitHub Actions",
+            "owner_login": "github",
+            "slug": "github-actions"
+          },
+          "completed_at": "2026-08-09T12:25:16Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209317/job/93244178253",
+          "external_id": "2ad95d92-9808-5863-93b5-0330ca987360",
+          "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209317/job/93244178253",
+          "id": 93244178253,
+          "name": "scan-pr",
+          "started_at": "2026-08-09T12:24:35Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "id": 15368,
+            "name": "GitHub Actions",
+            "owner_login": "github",
+            "slug": "github-actions"
+          },
+          "completed_at": "2026-08-09T12:24:39Z",
+          "conclusion": "skipped",
+          "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244188952",
+          "external_id": "fc809602-9104-5142-a474-5fd0e58998d7",
+          "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244188952",
+          "id": 93244188952,
+          "name": "zizmor-config",
+          "started_at": "2026-08-09T12:24:39Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "id": 15368,
+            "name": "GitHub Actions",
+            "owner_login": "github",
+            "slug": "github-actions"
+          },
+          "completed_at": "2026-08-09T12:24:39Z",
+          "conclusion": "skipped",
+          "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244189159",
+          "external_id": "2b81b033-f805-5ac1-8c57-3b6a669c90ce",
+          "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244189159",
+          "id": 93244189159,
+          "name": "zizmor-upload",
+          "started_at": "2026-08-09T12:24:39Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "id": 15368,
+            "name": "GitHub Actions",
+            "owner_login": "github",
+            "slug": "github-actions"
+          },
+          "completed_at": "2026-08-09T12:24:39Z",
+          "conclusion": "skipped",
+          "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244189228",
+          "external_id": "d4bb823c-3516-5071-85ed-b289d98beb4a",
+          "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244189228",
+          "id": 93244189228,
+          "name": "zizmor-scan",
+          "started_at": "2026-08-09T12:24:39Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "id": 15368,
+            "name": "GitHub Actions",
+            "owner_login": "github",
+            "slug": "github-actions"
+          },
+          "completed_at": "2026-08-09T12:24:39Z",
+          "conclusion": "skipped",
+          "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244189344",
+          "external_id": "dbfe39c1-ef52-5878-8fb2-7dab3b1a9b44",
+          "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244189344",
+          "id": 93244189344,
+          "name": "zizmor-output",
+          "started_at": "2026-08-09T12:24:39Z",
+          "status": "completed"
+        },
+        {
+          "app": {
+            "id": 15368,
+            "name": "GitHub Actions",
+            "owner_login": "github",
+            "slug": "github-actions"
+          },
+          "completed_at": "2026-08-09T13:00:59Z",
+          "conclusion": "skipped",
+          "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209312/job/93248023193",
+          "external_id": "b3c95d7c-5dfb-591a-9ded-c82411f47cf9",
+          "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209312/job/93248023193",
+          "id": 93248023193,
+          "name": "deploy",
+          "started_at": "2026-08-09T13:00:59Z",
+          "status": "completed"
+        }
+      ]
+    },
+    "commit_status": {
+      "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/e2e2a6064b474781d3b5b4a32e3d77956d6968da/status?per_page=100",
+      "state": "pending",
+      "total_count": 0,
+      "records": [],
+      "interpretation": "This legacy combined-status endpoint has no status records for this commit. Its aggregate state is retained but does not override exact GitHub Check Run conclusions."
+    }
+  },
+  "mechanical_claim": {
+    "property": "The GitHub Check Run named `Build project` for this exact head completed with conclusion `success`.",
+    "result": "pass",
+    "evidence_check_run_ids": [
+      93244178114
+    ],
+    "scope": "exact_head_repository_build_check",
+    "does_not_establish": [
+      "That every check run succeeded; skipped and unrelated checks remain separately retained.",
+      "That the pull request is semantically faithful, accepted, merged, or current.",
+      "That any Vela Repository changed Standing."
+    ]
+  }
+}

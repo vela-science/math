@@ -1,0 +1,47 @@
+{
+  "schema": "vela.math.fc-audit.semantic-fidelity-witness.v0.1",
+  "authority_effect": "none",
+  "repository": "google-deepmind/formal-conjectures",
+  "pull_request_number": 4830,
+  "base_commit": "5fe1f74ad497d950e4c2094879ab10708907f7c6",
+  "head_commit": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+  "recorded_at": "2026-08-12T19:59:00Z",
+  "source_file": {
+    "path": "FormalConjectures/ErdosProblems/80.lean",
+    "git_blob_sha": "9dd6a9933931fcfbeea61eac777d4155dacb9eb1",
+    "bytes_sha256": "519cc02b3389c89bc87c16d548c6b028e6bb2c1c3bad410a1758f470de18de4e",
+    "bytes_length": 4176,
+    "acquisition_method": {
+      "api": "GitHub contents REST API",
+      "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/contents/FormalConjectures/ErdosProblems/80.lean?ref=e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+      "accept": "application/vnd.github.raw+json",
+      "api_version": "2022-11-28"
+    }
+  },
+  "declaration": "Erdos80.erdos_80 and Erdos80.erdos_80.variants.log",
+  "formal_shape": "Both declarations quantify over every real c with 0 < c; Admissible c G requires c * n^2 <= edge_count G, and f c n is sInf of qualifying book numbers with sInf of the empty Nat set equal to zero.",
+  "concrete_witness": "Choose c = 2. A simple graph on n vertices has at most n(n-1)/2 edges, strictly less than 2*n^2 for positive n; no graph is admissible, so f 2 n = 0. The eventual positive lower-bound conclusions fail for this empty class, independently of the intended book problem.",
+  "corrective_observation": {
+    "pull_request": 4877,
+    "base_commit": "9118d083ffca1536f521f9a7d103201f537ea670",
+    "head_commit": "2249b2b6e85bafaa276ed8307bef77cbdb467dce",
+    "status_at_observation": "open_review_required",
+    "author_statement": "Statements only, no proofs affected; PR 4877 proposes c < 1/2 and explicitly gives c = 2 as the witness against PR 4830."
+  },
+  "semantic_fidelity_result": "fail",
+  "witness_class": "unsatisfiable_hypothesis_boundary",
+  "provenance": {
+    "record_preparer": "Codex AI agent performing source-grounded packet transcription and exact-ref binding under the assigned Math Phase 0 task",
+    "preparer_authority": "advisory_record_preparation_only",
+    "human_source_local_basis": "The human-authored corrective PR 4877 explicitly says 'My error, from #4830', gives c = 2 as the witness against the exact PR 4830 statements, and proposes c < 1/2.",
+    "exact_head_application": "PR 4877 identifies PR 4830 as the defective source; this packet retains PR 4830's exact head blob and the same finite-graph bound described in the correction body.",
+    "ground_truth_class": "human_source_local_exact_correction_with_ai_assisted_packet_transcription",
+    "authority_effect": "none"
+  },
+  "limitations": [
+    "The open corrective PR is source-local observation, not an adopted upstream Decision.",
+    "AI packet preparation does not itself supply human ground truth or create a Math Repository Decision; the conclusion is attributed to the cited human-authored corrective observation.",
+    "This witness does not change the historical merge or passing build observation.",
+    "It does not establish that every declaration in the file is defective."
+  ]
+}

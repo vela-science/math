@@ -1,0 +1,31 @@
+{
+  "schema": "vela.math.fc-audit.github-pr-observation.v0.1",
+  "authority_effect": "none",
+  "repository": "google-deepmind/formal-conjectures",
+  "observed_at": "2026-08-12T19:53:13Z",
+  "acquisition_method": {
+    "api": "GitHub REST API",
+    "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/3959",
+    "api_version": "2022-11-28",
+    "media_type": "application/vnd.github+json"
+  },
+  "normalization": "Selected primary GitHub REST API fields retained as normalized evidence. These bytes are not a canonical GitHub response.",
+  "number": 3959,
+  "title": "chore: update status of Rupert problem, adding link to paper and formalization",
+  "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/3959",
+  "state": "closed",
+  "merged": true,
+  "merged_at": "2026-05-09T20:01:35Z",
+  "merge_commit_sha": "b79a90264a301f3a23ab649710669682179d10c3",
+  "base": {
+    "sha": "99ae49df4b27d9d95877c562ab9e1fd9b7ff1dc7"
+  },
+  "head": {
+    "sha": "868cc092aeb713dbf8027883c5fa575e550cfae9"
+  },
+  "changed_files": 1,
+  "body_relevant_claims": [
+    "A complete formalization is linked at https://github.com/jcreedcmu/Noperthedron.",
+    "The linked target is a mutable repository root and identifies neither an exact revision nor one proof file."
+  ]
+}

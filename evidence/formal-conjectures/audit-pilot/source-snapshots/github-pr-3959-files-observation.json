@@ -1,0 +1,38 @@
+{
+  "schema": "vela.math.fc-audit.github-pr-files-observation.v0.1",
+  "authority_effect": "none",
+  "repository": "google-deepmind/formal-conjectures",
+  "pull_request_number": 3959,
+  "expected_head_commit": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+  "observed_at": "2026-08-12T19:53:13Z",
+  "acquisition_method": {
+    "api": "GitHub REST API",
+    "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/3959/files?per_page=100",
+    "api_version": "2022-11-28",
+    "media_type": "application/vnd.github+json",
+    "command_shape": "gh api --paginate ... /repos/{owner}/{repo}/pulls/{number}/files?per_page=100"
+  },
+  "normalization": {
+    "description": "Selected primary GitHub REST API fields retained as normalized evidence and sorted by filename. These bytes are not a canonical GitHub response.",
+    "pagination": "all pages requested with per_page=100"
+  },
+  "files": [
+    {
+      "additions": 9,
+      "blob_url": "https://github.com/google-deepmind/formal-conjectures/blob/868cc092aeb713dbf8027883c5fa575e550cfae9/FormalConjectures%2FPaper%2FRupert.lean",
+      "changes": 13,
+      "contents_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/contents/FormalConjectures%2FPaper%2FRupert.lean?ref=868cc092aeb713dbf8027883c5fa575e550cfae9",
+      "deletions": 4,
+      "filename": "FormalConjectures/Paper/Rupert.lean",
+      "previous_filename": null,
+      "raw_url": "https://github.com/google-deepmind/formal-conjectures/raw/868cc092aeb713dbf8027883c5fa575e550cfae9/FormalConjectures%2FPaper%2FRupert.lean",
+      "sha": "48c343f0d12c1dffb7953a5d2426e0d13a914bad",
+      "status": "modified"
+    }
+  ],
+  "limitations": [
+    "GitHub's pull-request files response is mutable community observation state and is not fixture identity by itself.",
+    "The separately retained pull-request snapshot binds the exact base and head commits.",
+    "Patch text is intentionally omitted; the file record retains its exact Git blob SHA and immutable commit-qualified contents URL."
+  ]
+}

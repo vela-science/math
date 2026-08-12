@@ -1,0 +1,461 @@
+{
+  "schema": "vela.math.fc-audit.fixture-selection.v0.1",
+  "recorded_at": "2026-08-12T19:59:00Z",
+  "authority_effect": "none",
+  "status": "selection_frozen_ground_truth_incomplete",
+  "program_contract": {
+    "document": "VELA_ECOSYSTEM_CONVERGENCE_EXECUTION_MEMO_2026-08-12.md",
+    "sha256": "4dfef11f56497fe029204919e810dcfb9d8a9597a767681bd17155c57f1f6fda",
+    "work_packages": [
+      "FC-03",
+      "EVAL-01"
+    ]
+  },
+  "source_baselines": {
+    "math": {
+      "repository": "vela-science/math",
+      "commit": "57de8cd3626f7bbefff2f8c4f7465480668de8dd"
+    },
+    "formal_conjectures_upstream": {
+      "repository": "google-deepmind/formal-conjectures",
+      "planning_commit": "c9052e8577118ed0ada54462bd4ef1f3beff37d6"
+    },
+    "formal_conjectures_review_guide": {
+      "repository": "williamjblair/formal-conjectures",
+      "commit": "70e8ddfdb5095873e0fbb45447d3649d5412ff3a",
+      "path": "REVIEW_MATH.md",
+      "sha256": "bc10a92b25047a46225221c7ecb090a5b3e9ac174fd44f6d1f6042d7c6971700",
+      "adoption_status": "fork_review_branch_not_upstream_adopted"
+    }
+  },
+  "selection_rules": [
+    "Every fixture identity is the ordered pair of an exact base commit and exact head commit, never a branch name.",
+    "Mechanical, semantic-fidelity, artifact-availability, and community observations remain separate.",
+    "A successful build, approval, or merge does not establish source fidelity or Vela Standing.",
+    "An FC check, review, approval, merge, or correction is a time-scoped external community observation; only an authorized human Math Repository Decision can change local Vela Math Standing.",
+    "AI review is advisory observation by default. The audit artifact never mints a Vela Verification; a later record qualifies only under an eligible local verifier policy with a committed method, exact inputs, a matching signature, and the ordinary Repository boundary.",
+    "An unavailable exact artifact identity is not a failed proof and does not imply that no proof exists.",
+    "Known semantic defects require a witness applied to the exact fixture-head source bytes; a witness rooted at a different revision cannot be projected backward.",
+    "An AI-prepared witness record must disclose the AI preparer and cite the human-authored source-local finding separately; packet transcription has no Decision authority.",
+    "Mutable GitHub state may be recorded only as a time-scoped observation and is not part of fixture identity."
+  ],
+  "completion_state": {
+    "selected_case_count": 5,
+    "frozen_source_grounded_fixture_count": 4,
+    "unfulfilled_target_role": "clean_source_faithful",
+    "selected_substitute_role": "clean_control_candidate_pending_review",
+    "fc_03_exit_met": false,
+    "semantic_basis": "The two semantic-failure records are AI-prepared exact-ref bindings whose findings are attributed to cited human-authored source-local observations; neither is a Math Repository Decision.",
+    "reason": "PR 4878 is only a control candidate until an exact-head human source-fidelity review records witness-backed ground truth."
+  },
+  "retained_source_snapshots": {
+    "acquisition": "Primary GitHub REST/content API observations and exact source-local records acquired at their individual observed_at timestamps on 2026-08-12.",
+    "normalization": "Selected, normalized evidence; no retained file is described as canonical GitHub response bytes.",
+    "artifacts": [
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-check-observation.json",
+        "sha256": "10dd0c302437d5783ec93b83b5837e7a683260f5219c7e160ca71fdec38c0966"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-fidelity-witness.json",
+        "sha256": "93a18d46c81af8f263e113a67972d3f1f95a7ddfe1e7efc44ee50508cdc8e76f"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-files-observation.json",
+        "sha256": "d02997a3d60b5020b8a1228bef9a25eb27cc2b44c8e6a436b5c108aceee8c3b1"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-reviews.json",
+        "sha256": "f2f999ea90ef76eb9609c0bb065994069d05c07308dfd331896b7a415fb40b35"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237.json",
+        "sha256": "12c713796f946b383945890e613d3a4cf29d32fa1914260d3afaa26622d789a0"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-artifact-observation.json",
+        "sha256": "2336c99493ccb7482e9506900fc39bb5ef1af1e4eeda0c39d4c97f8e6b21e60a"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-check-observation.json",
+        "sha256": "0cfe2324cd131989b9ce7c6fbd4a1dc68665859419a99fd6ae2a5f64b0dd429a"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-files-observation.json",
+        "sha256": "fea9a92118bae6a7771bf9786a28c47a7b66b12027d85f0f4e9e2ec8c1ad89ad"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-reviews.json",
+        "sha256": "fb8340680f4d51347773f8ba8d0624697b39f9e9cd39730608e6074ff0cdc84d"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959.json",
+        "sha256": "93ca95fbe74b4a30294c8687b00b15791f1de0e2ce622a680c7436bbf238b5da"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-check-observation.json",
+        "sha256": "588efba02429ba63f3a05ceb39d50138168c1c469648d683c9e4ce362da091ff"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-fidelity-witness.json",
+        "sha256": "9a8884fd0d34e5bb3460bb95881f3fa075b4c243980ee7c472ec413f9bbb79c6"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-files-observation.json",
+        "sha256": "4ab3f09e0ee75a0640b896b55d21b3bbb760988c39a74bd5bdf0cb096bc767d4"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-reviews.json",
+        "sha256": "9085fe9ef545c194c111dd0fd696cfc439c31d3959e1ef524d5df0a49e6c0e9b"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830.json",
+        "sha256": "afff0df49c5e1a8e5344f362b187b4bee1bc5e42fa3233ced2d3368550811e27"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4877-reviews.json",
+        "sha256": "681082770e00ff80ff7243e79144d0eade4d1a386e6a2c4e3502678f8f67a420"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4877.json",
+        "sha256": "2746db611a8a455dadbac8aaa4ed4d028b88204f4316002ef0038c100c24e6a8"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4878-check-observation.json",
+        "sha256": "bd9945138c331e5c967adbbb19574c21b1e7d3af953c3419656f2b552aa0ff39"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4878-files-observation.json",
+        "sha256": "b38eb5b4127fcd7f6de7077be5df00dd7178d71a82d0e79848593f4a1411b9df"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4878-reviews.json",
+        "sha256": "40201d223782597fd5efff1a943cb49b0951666fe7dfae6cbf9b678c682e0939"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4878.json",
+        "sha256": "749b79fd982001aa41efd2064a1455e05aa4d2044387cd1a3177b34598cdd31e"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884-check-observation.json",
+        "sha256": "845c59342bad2a6460e4ed24fef9e311f1987445f7c0daf4b7dfa5779f29d6a7"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884-files-observation.json",
+        "sha256": "cb2a89fcdfe8526e9614ef758e3c11a35e66671cd154a1ab53fef2071f5e1d4c"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884-reviews.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884.json",
+        "sha256": "81ea8e85a5708c1a63735b9935265a96838e003fec2b20eaa90ed5119e2a7d38"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4895-correction-observation.json",
+        "sha256": "d166e7ce9a867eadd039f4f25d05ea171c01d8d536916ab27c03bb0f4b3e0b3e"
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/rejected-candidate-classification-observation.json",
+        "sha256": "4be70465fcb6f5d9d3fef9f573f83cd4923ed4c9cba5d0f73dde9c1160ee2610"
+      }
+    ]
+  },
+  "fixtures": [
+    {
+      "id": "clean-candidate-dean-4878",
+      "target_role": "clean_source_faithful",
+      "required_role": "clean_control_candidate_pending_review",
+      "selection_status": "provisional_pending_domain_review",
+      "pull_request": {
+        "repository": "google-deepmind/formal-conjectures",
+        "number": 4878,
+        "url": "https://github.com/google-deepmind/formal-conjectures/pull/4878",
+        "base_commit": "9118d083ffca1536f521f9a7d103201f537ea670",
+        "head_commit": "521f6a64402d238f1d040edfeda42c3d8eeb0b98",
+        "changed_paths": [
+          "FormalConjectures/Arxiv/2605.02731/DeanCycles.lean"
+        ],
+        "files_observation": {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4878-files-observation.json",
+          "sha256": "b38eb5b4127fcd7f6de7077be5df00dd7178d71a82d0e79848593f4a1411b9df"
+        }
+      },
+      "source_observations": [
+        {
+          "kind": "github_review",
+          "observed_at": "2026-08-12T19:15:11Z",
+          "review_state": "APPROVED",
+          "reviewed_commit": "55772e9a889d6cdc0fdb36ab802648bdc2d2b75e"
+        },
+        {
+          "kind": "github_check_run_observation",
+          "observed_at": "2026-08-12T19:37:09Z",
+          "head_commit": "521f6a64402d238f1d040edfeda42c3d8eeb0b98",
+          "property": "exact_head_repository_build_check",
+          "mechanical_result": "pass",
+          "retained_evidence": {
+            "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4878-check-observation.json",
+            "sha256": "bd9945138c331e5c967adbbb19574c21b1e7d3af953c3419656f2b552aa0ff39",
+            "check_run_id": 94129255456
+          }
+        }
+      ],
+      "expected_checks": {
+        "mechanical": "pass",
+        "mechanical_scope": "exact_head_repository_build_check",
+        "semantic_fidelity": "pending_human_ground_truth",
+        "community_decision": "observed_approved_not_merged"
+      },
+      "selection_reason": "The exact-head one-file contribution is the candidate control. It is not labeled clean or counted as fulfilled clean ground truth until a domain reviewer completes the exact-head source comparison.",
+      "ground_truth_gap": "Compare the exact head statement and all variants to the cited sources and retain a witness-backed human verdict.",
+      "does_not_establish": [
+        "That the exact head commit is source-faithful or clean.",
+        "That collaborator approval covered the exact head's semantic fidelity.",
+        "That Vela Math accepts any claim derived from this contribution."
+      ]
+    },
+    {
+      "id": "conditional-erdos-427-4884",
+      "required_role": "conditional_proof",
+      "selection_status": "frozen",
+      "pull_request": {
+        "repository": "google-deepmind/formal-conjectures",
+        "number": 4884,
+        "url": "https://github.com/google-deepmind/formal-conjectures/pull/4884",
+        "base_commit": "df1b7937d1d97e6acecb32dfa18b4381fc645c6a",
+        "head_commit": "601aff40d6fa6c3150242144fadba5dbcc24c89c",
+        "changed_paths": [
+          "FormalConjectures/ErdosProblems/427.lean"
+        ],
+        "files_observation": {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884-files-observation.json",
+          "sha256": "cb2a89fcdfe8526e9614ef758e3c11a35e66671cd154a1ab53fef2071f5e1d4c"
+        }
+      },
+      "source_observations": [
+        {
+          "kind": "github_check_run_observation",
+          "observed_at": "2026-08-12T19:37:09Z",
+          "head_commit": "601aff40d6fa6c3150242144fadba5dbcc24c89c",
+          "property": "exact_head_repository_build_check",
+          "mechanical_result": "pass",
+          "retained_evidence": {
+            "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884-check-observation.json",
+            "sha256": "845c59342bad2a6460e4ed24fef9e311f1987445f7c0daf4b7dfa5779f29d6a7",
+            "check_run_id": 93932003906
+          }
+        },
+        {
+          "kind": "pull_request_declared_condition",
+          "condition_declaration": "erdos_427.variants.shiu",
+          "description": "The linked proof assumes Shiu's theorem and the PR retains that dependency explicitly."
+        }
+      ],
+      "expected_checks": {
+        "mechanical": "pass",
+        "mechanical_scope": "exact_head_repository_build_check",
+        "proof_artifact": "conditional_pass",
+        "required_condition": "erdos_427.variants.shiu",
+        "semantic_fidelity": "not_established_by_this_fixture",
+        "community_decision": "observed_review_required"
+      },
+      "selection_reason": "The contribution is the first repository use of conditional formal-proof metadata and falsifies any audit that collapses a conditional proof into an unconditional pass.",
+      "does_not_establish": [
+        "That Shiu's theorem is proved by the linked artifact.",
+        "That the PR will be accepted by Formal Conjectures maintainers.",
+        "That a conditional mechanical pass establishes informal statement fidelity."
+      ]
+    },
+    {
+      "id": "fidelity-erdos-887-1237",
+      "required_role": "mechanical_pass_semantic_fail",
+      "selection_status": "frozen",
+      "pull_request": {
+        "repository": "google-deepmind/formal-conjectures",
+        "number": 1237,
+        "url": "https://github.com/google-deepmind/formal-conjectures/pull/1237",
+        "base_commit": "a91ab6df34970fdd0fd8c919e693b2ba81fa4fbb",
+        "head_commit": "288608562e684a2f3c97ba0ce960a2649a71370b",
+        "changed_paths": [
+          "FormalConjectures/ErdosProblems/887.lean"
+        ],
+        "files_observation": {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-files-observation.json",
+          "sha256": "d02997a3d60b5020b8a1228bef9a25eb27cc2b44c8e6a436b5c108aceee8c3b1"
+        }
+      },
+      "source_observations": [
+        {
+          "kind": "github_check_run_observation",
+          "observed_at": "2026-08-12T19:57:18Z",
+          "head_commit": "288608562e684a2f3c97ba0ce960a2649a71370b",
+          "property": "exact_head_repository_build_check",
+          "mechanical_result": "pass",
+          "retained_evidence": {
+            "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-check-observation.json",
+            "sha256": "10dd0c302437d5783ec93b83b5837e7a683260f5219c7e160ca71fdec38c0966",
+            "check_run_id": 60275340706
+          }
+        },
+        {
+          "kind": "exact_head_semantic_fidelity_witness",
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-fidelity-witness.json",
+          "sha256": "93a18d46c81af8f263e113a67972d3f1f95a7ddfe1e7efc44ee50508cdc8e76f",
+          "source_git_blob_sha": "6feb58b9272ce638aba6da5ca7ee8ebf7785e0b8"
+        }
+      ],
+      "expected_checks": {
+        "mechanical": "pass",
+        "mechanical_scope": "exact_head_repository_build_check",
+        "semantic_fidelity": "fail",
+        "witness_class": "answer_slot_inside_parameter_binders",
+        "community_decision": "historically_merged"
+      },
+      "selection_reason": "The exact PR head's own docstring asks for one absolute K, while answer(sorry) remains under C and n; choosing the left side makes reflexivity close the weaker shape. The exact-head source blob and witness are retained.",
+      "does_not_establish": [
+        "That the native build failed.",
+        "That any later refactor retains the identical bytes.",
+        "That upstream maintainers have accepted or acted on the later review-guide finding."
+      ]
+    },
+    {
+      "id": "vacuity-erdos-80-4830",
+      "required_role": "vacuous_or_boundary_defect",
+      "selection_status": "frozen",
+      "pull_request": {
+        "repository": "google-deepmind/formal-conjectures",
+        "number": 4830,
+        "url": "https://github.com/google-deepmind/formal-conjectures/pull/4830",
+        "base_commit": "5fe1f74ad497d950e4c2094879ab10708907f7c6",
+        "head_commit": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+        "changed_paths": [
+          "FormalConjectures/ErdosProblems/80.lean"
+        ],
+        "files_observation": {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-files-observation.json",
+          "sha256": "4ab3f09e0ee75a0640b896b55d21b3bbb760988c39a74bd5bdf0cb096bc767d4"
+        }
+      },
+      "source_observations": [
+        {
+          "kind": "github_check_run_observation",
+          "observed_at": "2026-08-12T19:37:09Z",
+          "head_commit": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+          "property": "exact_head_repository_build_check",
+          "mechanical_result": "pass",
+          "retained_evidence": {
+            "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-check-observation.json",
+            "sha256": "588efba02429ba63f3a05ceb39d50138168c1c469648d683c9e4ce362da091ff",
+            "check_run_id": 93244178114
+          }
+        },
+        {
+          "kind": "exact_head_semantic_fidelity_witness",
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-fidelity-witness.json",
+          "sha256": "9a8884fd0d34e5bb3460bb95881f3fa075b4c243980ee7c472ec413f9bbb79c6",
+          "source_git_blob_sha": "9dd6a9933931fcfbeea61eac777d4155dacb9eb1"
+        },
+        {
+          "kind": "correction_pull_request",
+          "number": 4877,
+          "base_commit": "9118d083ffca1536f521f9a7d103201f537ea670",
+          "head_commit": "2249b2b6e85bafaa276ed8307bef77cbdb467dce",
+          "status_at_observation": "open_review_required"
+        }
+      ],
+      "expected_checks": {
+        "mechanical": "pass",
+        "mechanical_scope": "exact_head_repository_build_check",
+        "semantic_fidelity": "fail",
+        "witness_class": "unsatisfiable_hypothesis_boundary",
+        "community_decision": "historically_merged"
+      },
+      "selection_reason": "At the exact PR head, c = 2 makes the required edge count exceed the maximum for every positive n, so the admissible class is empty and f is zero; the exact source blob and witness are retained.",
+      "does_not_establish": [
+        "That the open correction PR has been adopted.",
+        "That every statement in the file is defective.",
+        "That the historical passing check or merge should be rewritten."
+      ]
+    },
+    {
+      "id": "unavailable-rupert-3959",
+      "required_role": "unavailable_tool_or_missing_artifact",
+      "selection_status": "frozen",
+      "pull_request": {
+        "repository": "google-deepmind/formal-conjectures",
+        "number": 3959,
+        "url": "https://github.com/google-deepmind/formal-conjectures/pull/3959",
+        "base_commit": "99ae49df4b27d9d95877c562ab9e1fd9b7ff1dc7",
+        "head_commit": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+        "changed_paths": [
+          "FormalConjectures/Paper/Rupert.lean"
+        ],
+        "files_observation": {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-files-observation.json",
+          "sha256": "fea9a92118bae6a7771bf9786a28c47a7b66b12027d85f0f4e9e2ec8c1ad89ad"
+        }
+      },
+      "source_observations": [
+        {
+          "kind": "github_check_run_observation",
+          "observed_at": "2026-08-12T19:57:18Z",
+          "head_commit": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+          "property": "exact_head_repository_build_check",
+          "mechanical_result": "pass",
+          "retained_evidence": {
+            "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-check-observation.json",
+            "sha256": "0cfe2324cd131989b9ce7c6fbd4a1dc68665859419a99fd6ae2a5f64b0dd429a",
+            "check_run_id": 75175625578
+          }
+        },
+        {
+          "kind": "exact_head_formal_proof_artifact_observation",
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-artifact-observation.json",
+          "sha256": "2336c99493ccb7482e9506900fc39bb5ef1af1e4eeda0c39d4c97f8e6b21e60a",
+          "source_git_blob_sha": "48c343f0d12c1dffb7953a5d2426e0d13a914bad"
+        },
+        {
+          "kind": "later_source_local_correction_observation",
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4895-correction-observation.json",
+          "sha256": "d166e7ce9a867eadd039f4f25d05ea171c01d8d536916ab27c03bb0f4b3e0b3e",
+          "status_at_observation": "open_not_adopted"
+        }
+      ],
+      "expected_checks": {
+        "mechanical": "pass",
+        "mechanical_scope": "exact_head_repository_build_check",
+        "formal_proof_artifact_resolution": "unavailable_exact_file_and_revision_at_fixture_head",
+        "semantic_fidelity": "not_evaluated_from_unresolved_exact_artifact_identity",
+        "community_decision": "historically_merged"
+      },
+      "selection_reason": "At the exact PR 3959 head, the metadata points only to a mutable external repository root. A later open correction records multiple candidate proof routes and selects one exact file/revision, confirming that the earlier exact artifact identity was unresolved.",
+      "does_not_establish": [
+        "That no formal proof exists.",
+        "That any candidate proof fails.",
+        "That the later corrective PR has been merged or adopted."
+      ]
+    }
+  ],
+  "rejected_candidate_guard": {
+    "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/rejected-candidate-classification-observation.json",
+    "sha256": "4be70465fcb6f5d9d3fef9f573f83cd4923ed4c9cba5d0f73dde9c1160ee2610",
+    "rules": [
+      "PR 3941 is not an unavailable-artifact fixture: its forum post resolves to revision-pinned raw Gist bytes.",
+      "PR 4883 is not an unavailable-artifact fixture: empty location with formal_conjectures denotes intentional in-source proof semantics."
+    ]
+  },
+  "open_gates": [
+    "Complete and retain a witness-backed human semantic review of exact PR 4878 head before claiming the clean_source_faithful target role or FC-03 exit.",
+    "Align selection identifiers and expected-check labels with the FC-01 schema without changing frozen base/head identities.",
+    "Materialize complete FC-03 input manifests and audit bytes in the isolated Formal Conjectures prototype.",
+    "Collect timed baseline observations under the paired review and linked two-participant handoff protocol before reporting EVAL-01 results."
+  ],
+  "does_not_establish": [
+    "Five completed ground-truth fixtures or completion of FC-03.",
+    "Formal Conjectures adoption of the fixture suite or audit schema.",
+    "Any Vela Verification, Decision, Event, or change in Standing.",
+    "Independent validation or scientific resolution of any selected problem."
+  ]
+}

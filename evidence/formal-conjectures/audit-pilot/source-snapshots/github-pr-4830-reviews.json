@@ -1,0 +1,82 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.com/google-deepmind/formal-conjectures/pull/4830#pullrequestreview-4888765813"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4830"
+      }
+    },
+    "author_association": "COLLABORATOR",
+    "body": "Thanks, looks good generally!\n\nCan you add problem 600 to the reference and have a look at the formalisation there (if they roughly agree and if they could use common concepts)",
+    "commit_id": "dea7123ec0e2bafd1c72ae6558a389d5083df76e",
+    "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/4830#pullrequestreview-4888765813",
+    "id": 4888765813,
+    "node_id": "PRR_kwDOOogmB88AAAABI2SldQ",
+    "pull_request_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4830",
+    "state": "COMMENTED",
+    "submitted_at": "2026-08-08T12:02:53Z",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/3491627?u=315f5464f4bc43fde3f4223201229650e9bd500b&v=4",
+      "events_url": "https://api.github.com/users/mo271/events{/privacy}",
+      "followers_url": "https://api.github.com/users/mo271/followers",
+      "following_url": "https://api.github.com/users/mo271/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mo271/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.com/mo271",
+      "id": 3491627,
+      "login": "mo271",
+      "node_id": "MDQ6VXNlcjM0OTE2Mjc=",
+      "organizations_url": "https://api.github.com/users/mo271/orgs",
+      "received_events_url": "https://api.github.com/users/mo271/received_events",
+      "repos_url": "https://api.github.com/users/mo271/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/mo271/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mo271/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/mo271",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.com/google-deepmind/formal-conjectures/pull/4830#pullrequestreview-4896386490"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4830"
+      }
+    },
+    "author_association": "COLLABORATOR",
+    "body": "Thanks looks good to me!",
+    "commit_id": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+    "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/4830#pullrequestreview-4896386490",
+    "id": 4896386490,
+    "node_id": "PRR_kwDOOogmB88AAAABI9jtug",
+    "pull_request_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4830",
+    "state": "APPROVED",
+    "submitted_at": "2026-08-10T11:49:37Z",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/3491627?u=315f5464f4bc43fde3f4223201229650e9bd500b&v=4",
+      "events_url": "https://api.github.com/users/mo271/events{/privacy}",
+      "followers_url": "https://api.github.com/users/mo271/followers",
+      "following_url": "https://api.github.com/users/mo271/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mo271/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.com/mo271",
+      "id": 3491627,
+      "login": "mo271",
+      "node_id": "MDQ6VXNlcjM0OTE2Mjc=",
+      "organizations_url": "https://api.github.com/users/mo271/orgs",
+      "received_events_url": "https://api.github.com/users/mo271/received_events",
+      "repos_url": "https://api.github.com/users/mo271/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/mo271/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mo271/subscriptions",
+      "type": "User",
+      "url": "https://api.github.com/users/mo271",
+      "user_view_type": "public"
+    }
+  }
+]

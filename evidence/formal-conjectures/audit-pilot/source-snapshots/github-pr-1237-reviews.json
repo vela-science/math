@@ -1,0 +1,26 @@
+{
+  "schema": "vela.math.fc-audit.github-reviews-observation.v0.1",
+  "authority_effect": "none",
+  "repository": "google-deepmind/formal-conjectures",
+  "pull_request_number": 1237,
+  "observed_at": "2026-08-12T19:55:48Z",
+  "acquisition_method": {
+    "api": "GitHub REST API",
+    "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/1237/reviews",
+    "api_version": "2022-11-28",
+    "media_type": "application/vnd.github+json"
+  },
+  "normalization": "Selected primary GitHub REST API fields retained as normalized evidence and sorted by review id. These bytes are not a canonical GitHub response.",
+  "reviews": [
+    {
+      "id": 3656943019,
+      "state": "APPROVED",
+      "commit_id": "288608562e684a2f3c97ba0ce960a2649a71370b",
+      "submitted_at": "2026-01-13T17:14:06Z"
+    }
+  ],
+  "limitations": [
+    "Earlier non-final review observations are omitted because only the exact-head approval is used by this packet.",
+    "Approval is external community state and does not establish semantic fidelity or Vela Standing."
+  ]
+}
