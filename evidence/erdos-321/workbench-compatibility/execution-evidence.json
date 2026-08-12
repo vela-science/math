@@ -1,0 +1,938 @@
+{
+  "schema": "vela.stock-buzz-execution-evidence.v1",
+  "authority_effect": "none",
+  "source": {
+    "commit": "397796c5f343db4251198f44505b1afebe88223f",
+    "custody": {
+      "canonical_top_level": true,
+      "exact_in_worktree_git_directory": true,
+      "ignored_residue_absent": true,
+      "lazy_fetch_disabled": true,
+      "partial_promisor_shallow_alternates_and_replacements_absent": true,
+      "sparse_skip_worktree_and_assume_unchanged_absent": true,
+      "required_worktree_bytes_equal_exact_git_blobs": true,
+      "all_tracked_worktree_entries_equal_pinned_tree": true
+    },
+    "license_expression": "Apache-2.0",
+    "origin": "https://github.com/block/buzz.git",
+    "source_files": {
+      "LICENSE": {
+        "byte_length": 11338,
+        "mode": "0644",
+        "raw_sha256": "sha256:108cb15997e51b75a8d18b0c1e2c52bd3879d051ab02118973387df1e4aab584",
+        "git_blob_oid": "862ee3c28647e7a58801a75236855c269c1448ae",
+        "git_mode": "100644"
+      },
+      "Cargo.lock": {
+        "byte_length": 279051,
+        "mode": "0644",
+        "raw_sha256": "sha256:3be88000aff4fdc560336bdec953a0768661348a2cc84e3859ba8f792e81a1ce",
+        "git_blob_oid": "14af380d26024398faac0dbc60beb99c50d0fbf4",
+        "git_mode": "100644"
+      },
+      "rust-toolchain.toml": {
+        "byte_length": 51,
+        "mode": "0644",
+        "raw_sha256": "sha256:f93d36efbb7a45edf8197259661273bc5d22529eccd4ff6411a851bafa493398",
+        "git_blob_oid": "f92020c65377147728672908fb7a901c0e848771",
+        "git_mode": "100644"
+      },
+      "docker-compose.yml": {
+        "byte_length": 4378,
+        "mode": "0644",
+        "raw_sha256": "sha256:1489283a177453f2788ee00f70a12ef2c9110d1ff63a38602b233946e665aa05",
+        "git_blob_oid": "e7dc09fafc46670e848bf5f4d1182a828b7228c5",
+        "git_mode": "100644"
+      }
+    },
+    "tracked_tree": {
+      "entry_count": 3862,
+      "raw_byte_length": 72386539,
+      "by_mode": {
+        "100644": 3746,
+        "100755": 66,
+        "120000": 50
+      },
+      "inventory_root": "sha256:e304b9ec4cc6d69b4cb993d228be6f8d3e43396f01513927292b04559d5ca2cf",
+      "inventory_root_definition": "sha256 of mode + NUL + UTF-8 path + NUL + Git blob oid + NUL + raw SHA-256 hex + NUL + decimal byte length + LF for every pinned-tree entry in git ls-tree byte order"
+    },
+    "tree": "aa2867f523032a0b87bfc8c70b152d6e117c9696"
+  },
+  "build": {
+    "binaries": {
+      "buzz": {
+        "byte_length": 14518384,
+        "mode": "0755",
+        "raw_sha256": "sha256:4c8c1e1fc29c6275903df3a04d9d46e9a3fd268bd9d33d2682c01d0754bd9db7"
+      },
+      "buzz-relay": {
+        "byte_length": 51015968,
+        "mode": "0755",
+        "raw_sha256": "sha256:ee91f373a636e89141afe9972089a70452e907a44449406f458fc0b01ba93069"
+      },
+      "buzz-admin": {
+        "byte_length": 9596176,
+        "mode": "0755",
+        "raw_sha256": "sha256:3bf3fc13685101cb6b04ea316e6fe712103afb9f6174411046a25573d9d5a0fb"
+      }
+    },
+    "fresh_external_target_directory": true,
+    "locked_release_build_stderr_raw_sha256": "sha256:e081dd02f36b034013fcbf1bc6bd5717808731973ba818a62f4b883a8238ed91",
+    "locked_release_build_stdout_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "runtime": {
+    "compose_file": {
+      "byte_length": 4378,
+      "mode": "0644",
+      "raw_sha256": "sha256:1489283a177453f2788ee00f70a12ef2c9110d1ff63a38602b233946e665aa05",
+      "git_blob_oid": "e7dc09fafc46670e848bf5f4d1182a828b7228c5",
+      "git_mode": "100644"
+    },
+    "images": {
+      "postgres:17-alpine": {
+        "id": "sha256:8ee7c900f4de054e8f0a3b42b8f5da38b8fba57c3ccd7c1a02be28cb0b06494f",
+        "repo_digests": [
+          "postgres@sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193"
+        ]
+      },
+      "redis:7-alpine": {
+        "id": "sha256:4ab05801a605362b921756ce9dff4893add29c678076fe49a72d8cc3278806c6",
+        "repo_digests": [
+          "redis@sha256:e7723ff73d963f5cc6d9c4643ea3d989527a402a319239054e9472a7fb9219a2"
+        ]
+      },
+      "minio/minio:latest": {
+        "id": "sha256:8f08aee614800a237906bd48114d733e5ac5bfac4ccdf731f141b0e880d7a253",
+        "repo_digests": [
+          "minio/minio@sha256:14cea493d9a34af32f524e538b8346cf79f3321eff8e708c1e2960462bd8936e"
+        ]
+      },
+      "minio/mc:latest": {
+        "id": "sha256:5dee113ef037d349ac22ab6c20193ade5c4701e2a38e3777fa1c1bec1c063ad1",
+        "repo_digests": [
+          "minio/mc@sha256:a7fe349ef4bd8521fb8497f55c6042871b2ae640607cf99d9bede5e9bdf11727"
+        ]
+      }
+    },
+    "relay_log": {
+      "byte_length": 342168,
+      "mode": "0644",
+      "raw_sha256": "sha256:018d861c46626fe9c84513f864c17ba5b092456969a6ff64874804d2b4303434",
+      "retained": false,
+      "removed_with_external_build_directory": true
+    },
+    "selected_stock_services": [
+      "postgres",
+      "redis",
+      "minio",
+      "minio-init"
+    ],
+    "toolchain": {
+      "architecture": "arm64",
+      "bun": "1.3.12",
+      "cargo": "cargo 1.95.0 (f2d3ce0bd 2026-03-21)",
+      "docker": {
+        "client": "29.2.1",
+        "server": "29.4.0"
+      },
+      "operating_system": "macOS-27.0-arm64-arm-64bit",
+      "python": "3.11.2",
+      "rustc_verbose": "rustc 1.95.0 (59807616e 2026-04-14)\nbinary: rustc\ncommit-hash: 59807616e1fa2540724bfbac14d7976d7e4a3860\ncommit-date: 2026-04-14\nhost: aarch64-apple-darwin\nrelease: 1.95.0\nLLVM version: 22.1.2",
+      "rustc_verbose_raw_sha256": "sha256:e61cba8ded8c60e985f759f74a221c4773649021477d00b44c7af411eb8c218c"
+    }
+  },
+  "activity": {
+    "channel_id": "bc0c1dca-3881-467a-b5bd-1e9cddd465ee",
+    "operator_pubkey": "f440d23ec4dffe5f9bc86fe478ef2c76e1a90abcafbe617f048f3f17121dd92a",
+    "member_pubkey": "2066c1d3a0cb596af1b1df0b288e353a4e6e23a3fd326bb11bcdd012c03ddfb6",
+    "relay_pubkey": "0caf462877f1e5128ed7d9d4880419a1bde10162c67a76b2862204968c888412",
+    "same_experimenter_operated_activity_keys": true,
+    "observations": {
+      "channel_create_receipt": {
+        "accepted": true,
+        "channel_id": "bc0c1dca-3881-467a-b5bd-1e9cddd465ee",
+        "event_id": "c67f41da830d961443c6268d65b12a29e93435219c995fac91c61202820f6174",
+        "message": ""
+      },
+      "channel_member_add_receipt": {
+        "accepted": true,
+        "event_id": "eda066bcb7be45d0de932a851005c62b2bf41519d0458557f158c8725bc39943",
+        "message": ""
+      },
+      "channel_metadata_readback": {
+        "channel_id": "bc0c1dca-3881-467a-b5bd-1e9cddd465ee",
+        "created_at": 1786503625,
+        "description": "Disposable rooted Vela target transport",
+        "name": "vela-erdos-321-bridge",
+        "pubkey": "0caf462877f1e5128ed7d9d4880419a1bde10162c67a76b2862204968c888412"
+      },
+      "channel_membership_readback": [
+        {
+          "pubkey": "f440d23ec4dffe5f9bc86fe478ef2c76e1a90abcafbe617f048f3f17121dd92a",
+          "role": "owner"
+        },
+        {
+          "pubkey": "2066c1d3a0cb596af1b1df0b288e353a4e6e23a3fd326bb11bcdd012c03ddfb6",
+          "role": "member"
+        }
+      ],
+      "message_receipts": [
+        {
+          "accepted": true,
+          "event_id": "ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5",
+          "mention_pubkeys": [],
+          "message": ""
+        },
+        {
+          "accepted": true,
+          "event_id": "973d32fac1803894a8a45a6063e90298f0d4138f6d933ed5d26897b3e7d9ac4b",
+          "mention_pubkeys": [],
+          "message": ""
+        },
+        {
+          "accepted": true,
+          "event_id": "f7b0bc3a4bff364f7d070bc23a368430c24aa2c23bb9f802a4da502218c14a01",
+          "mention_pubkeys": [],
+          "message": ""
+        }
+      ],
+      "message_readback": [
+        {
+          "content": "{\n  \"schema\": \"vela.workbench-note.v1\",\n  \"authority_effect\": \"none\",\n  \"authorship\": {\n    \"scientific_decomposition\": \"experiment_operator\",\n    \"buzz_role\": \"transport_storage_and_readback_only\"\n  },\n  \"workbench\": {\n    \"name\": \"buzz\",\n    \"repository\": \"https://github.com/block/buzz.git\",\n    \"commit\": \"397796c5f343db4251198f44505b1afebe88223f\"\n  },\n  \"packet_root\": \"sha256:62004075572072cb96ccdf3f869ad3cf261d1abd39e826624d49b026dd57d92d\",\n  \"activity\": {\n    \"channel_id\": \"bc0c1dca-3881-467a-b5bd-1e9cddd465ee\",\n    \"received_event_id\": \"ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5\"\n  },\n  \"decomposition\": [\n    {\n      \"step\": \"formalize_real_nat_log_bridge\",\n      \"deliverable\": \"A Lean lemma relating the retained Real.log and Nat.log coordinates under explicit domain hypotheses\"\n    },\n    {\n      \"step\": \"prove_index_alignment\",\n      \"deliverable\": \"Kernel-checked lower and upper index-alignment lemmas for k=d+2 and r=d+2\"\n    },\n    {\n      \"step\": \"verify_without_network\",\n      \"deliverable\": \"A pinned command and result manifest that check the candidate in a clean network-disabled environment\"\n    }\n  ],\n  \"result_status\": \"operator_authored_decomposition_transported_no_candidate\",\n  \"nonclaims\": [\n    \"The experiment operator authored this decomposition; Buzz only transported, stored, and returned its bytes.\",\n    \"Buzz performed no scientific reasoning, proof construction, or result evaluation.\",\n    \"This decomposition is disposable workspace activity, not a proof.\",\n    \"No implication or equivalence was established.\",\n    \"No Vela Submission, Verification Record, Decision, Event, or Standing was created.\"\n  ],\n  \"note_root_definition\": \"sha256 of RFC 8785 canonical JSON with note_root omitted\",\n  \"note_root\": \"sha256:e17a4a2760d17294015a5fe5cd75772723ac3c1262c52cb000ef8f209591225a\"\n}\n",
+          "created_at": 1786503624,
+          "id": "973d32fac1803894a8a45a6063e90298f0d4138f6d933ed5d26897b3e7d9ac4b",
+          "kind": 9,
+          "pubkey": "2066c1d3a0cb596af1b1df0b288e353a4e6e23a3fd326bb11bcdd012c03ddfb6",
+          "tags": [
+            [
+              "h",
+              "bc0c1dca-3881-467a-b5bd-1e9cddd465ee"
+            ],
+            [
+              "e",
+              "ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5",
+              "",
+              "reply"
+            ]
+          ]
+        },
+        {
+          "content": "{\n  \"schema\": \"vela.target-packet.v1\",\n  \"authority_effect\": \"none\",\n  \"authorship\": {\n    \"scientific_content\": \"experiment_operator\",\n    \"buzz_role\": \"transport_storage_and_readback_only\"\n  },\n  \"problem\": {\n    \"source\": \"erdos\",\n    \"native_id\": \"321\"\n  },\n  \"repository\": {\n    \"url\": \"https://github.com/vela-science/math.git\",\n    \"commit\": \"fab1c3ea6f342a491d5fdfd57fa1126970fb6e61\",\n    \"tree\": \"2668ca4c7ba345d43bc54ec951b818b469113e98\",\n    \"repository_id\": \"8115c538-7688-40b7-ab75-3c4765bf3c19\",\n    \"repository_root\": \"sha256:db4d435c2989d43c7ab88fe135865e89a6ba095429315baedb78bcbd9e90ebdc\"\n  },\n  \"current_standing\": {\n    \"claim_id\": \"vcl_3d4fd59554ccaa2b792b08abae16a8d0fe329d4901ad798fe05c6c7769c9966b\",\n    \"claim_root\": \"sha256:d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776\",\n    \"standing\": \"accepted\",\n    \"assertion\": \"The Lean development starfleet/erdos-321 establishes a two-sided asymptotic bound on extremalSize, which denotes the same quantity as Formal Conjectures' Erdos321.R at pages commit 59f30aa3, and which therefore supplies a candidate answer for erdos_321.variants.isTheta rather than a proof of it.\"\n  },\n  \"evidence\": {\n    \"path\": \"evidence/erdos-321/terminal-variants\",\n    \"bundle_root\": \"sha256:bd7b7eee6eb5e2e8f654898207bf05168ea6e7dd1d72f3a1a46a685a64f8f322\",\n    \"source_lock_root\": \"sha256:128edd2b0b58597ca05c7c0049ab20c10c9e6ef4e06c2c3ff8371752123a103b\",\n    \"comparison_root\": \"sha256:808c9ba973d36b0ed79366ae04357c04e2c5b2c0aa5a04967f90ad09eabba699\"\n  },\n  \"obligation\": \"Construct and kernel-check explicit bridges between the real-log terminal coordinates and each Nat.log fixed-variant hypothesis before asserting implication.\",\n  \"completion_contract\": {\n    \"required\": [\n      \"A source patch rooted to the exact repository commit above\",\n      \"A network-independent command that checks the proposed Lean bridge\",\n      \"A machine-readable result manifest containing exact input and output roots\",\n      \"Explicit nonclaims for any implication or equivalence not kernel-checked\"\n    ],\n    \"forbidden\": [\n      \"Changing the accepted Claim or Repository Standing\",\n      \"Treating workbench activity or execution success as Verification\",\n      \"Using participant, evaluator, or private-build StandingBench inputs\",\n      \"Accessing Repository authority keys\"\n    ]\n  },\n  \"expected_return\": {\n    \"media_type\": \"application/json\",\n    \"schema\": \"vela.workbench-result.v1\",\n    \"maximum_bytes\": 65536,\n    \"required_fields\": [\n      \"workbench\",\n      \"packet_root\",\n      \"activity_event_ids\",\n      \"result_status\",\n      \"artifact_roots\",\n      \"nonclaims\"\n    ]\n  },\n  \"nonclaims\": [\n    \"The target packet is not a Vela protocol object.\",\n    \"The experiment operator authored this packet; Buzz performs no scientific reasoning over it.\",\n    \"A Buzz event signature authenticates workspace activity, not scientific truth.\",\n    \"A returned candidate is not a Verification Record, Decision, Event, or Standing.\"\n  ],\n  \"packet_root_definition\": \"sha256 of RFC 8785 canonical JSON with packet_root omitted\",\n  \"packet_root\": \"sha256:62004075572072cb96ccdf3f869ad3cf261d1abd39e826624d49b026dd57d92d\"\n}\n",
+          "created_at": 1786503624,
+          "id": "ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5",
+          "kind": 9,
+          "pubkey": "f440d23ec4dffe5f9bc86fe478ef2c76e1a90abcafbe617f048f3f17121dd92a",
+          "tags": [
+            [
+              "h",
+              "bc0c1dca-3881-467a-b5bd-1e9cddd465ee"
+            ]
+          ]
+        },
+        {
+          "content": "{\n  \"schema\": \"vela.workbench-result.v1\",\n  \"authority_effect\": \"none\",\n  \"authorship\": {\n    \"scientific_result\": \"experiment_operator\",\n    \"buzz_role\": \"transport_storage_and_readback_only\"\n  },\n  \"workbench\": {\n    \"name\": \"buzz\",\n    \"repository\": \"https://github.com/block/buzz.git\",\n    \"commit\": \"397796c5f343db4251198f44505b1afebe88223f\",\n    \"channel_id\": \"bc0c1dca-3881-467a-b5bd-1e9cddd465ee\"\n  },\n  \"packet_root\": \"sha256:62004075572072cb96ccdf3f869ad3cf261d1abd39e826624d49b026dd57d92d\",\n  \"activity_event_ids\": [\n    \"ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5\",\n    \"973d32fac1803894a8a45a6063e90298f0d4138f6d933ed5d26897b3e7d9ac4b\"\n  ],\n  \"result_status\": \"operator_authored_result_transported_no_candidate\",\n  \"artifact_roots\": [\n    \"sha256:e17a4a2760d17294015a5fe5cd75772723ac3c1262c52cb000ef8f209591225a\"\n  ],\n  \"observations\": {\n    \"packet_round_trip_byte_identical\": true,\n    \"packet_raw_byte_length\": 3186,\n    \"packet_raw_sha256\": \"sha256:0dce153d8fc00b23b1dc761878be95e29e01e19336b3857db02aac110378c46c\",\n    \"distinct_activity_keys\": true\n  },\n  \"nonclaims\": [\n    \"This proves stock Buzz transported, stored, and read back an operator-authored rooted Vela work packet and operator-authored result.\",\n    \"Buzz performed no scientific reasoning, proof construction, or result evaluation.\",\n    \"It is not independent adoption because both actors were operated by the same experimenter.\",\n    \"No scientific candidate was produced or verified.\",\n    \"Buzz event signatures do not create a Vela Submission, Verification, Decision, Event, or Standing.\"\n  ],\n  \"result_root_definition\": \"sha256 of RFC 8785 canonical JSON with result_root omitted\",\n  \"result_root\": \"sha256:c3c3da1b8724d2e27e447aa0c525f19df39b9480f297e9ea3a81844d463b44b0\"\n}\n",
+          "created_at": 1786503624,
+          "id": "f7b0bc3a4bff364f7d070bc23a368430c24aa2c23bb9f802a4da502218c14a01",
+          "kind": 9,
+          "pubkey": "2066c1d3a0cb596af1b1df0b288e353a4e6e23a3fd326bb11bcdd012c03ddfb6",
+          "tags": [
+            [
+              "h",
+              "bc0c1dca-3881-467a-b5bd-1e9cddd465ee"
+            ],
+            [
+              "e",
+              "ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5",
+              "",
+              "root"
+            ],
+            [
+              "e",
+              "973d32fac1803894a8a45a6063e90298f0d4138f6d933ed5d26897b3e7d9ac4b",
+              "",
+              "reply"
+            ]
+          ]
+        }
+      ],
+      "migration_count": 28,
+      "migration_inventory_root": "sha256:2c6a282bb32d4dbf98eaf6e5e0af874ff71b2bc67ef4cf272815c9e802d6ac31",
+      "readiness": {
+        "attempts": 31,
+        "elapsed_milliseconds": 7661,
+        "response_raw_sha256": "sha256:31bf75f4c0a97cc1f7b60df824fa390b3be9ba014f29b63c87c698ba63d9a9fd"
+      },
+      "relay_lifecycle": [
+        {
+          "level": "INFO",
+          "message": "Starting buzz-relay"
+        },
+        {
+          "level": "INFO",
+          "message": "Config loaded"
+        },
+        {
+          "level": "INFO",
+          "message": "Postgres connected"
+        },
+        {
+          "level": "INFO",
+          "message": "Deployment community ensured"
+        },
+        {
+          "level": "INFO",
+          "message": "Health probe listener started"
+        },
+        {
+          "level": "INFO",
+          "message": "buzz-relay TCP listening"
+        },
+        {
+          "level": "INFO",
+          "message": "Audit worker drained cleanly"
+        }
+      ]
+    }
+  },
+  "command_ledger": [
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-a",
+        "--filter",
+        "name=^/buzz-",
+        "--format",
+        "{{.Names}}"
+      ],
+      "command_id": "inventory_before_containers",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 0,
+      "stdout_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "network",
+        "ls",
+        "--filter",
+        "name=^buzz-net$",
+        "--format",
+        "{{.Name}}"
+      ],
+      "command_id": "inventory_before_networks",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 0,
+      "stdout_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "volume",
+        "ls",
+        "--filter",
+        "name=^buzz-(postgres|minio|prometheus)-data$",
+        "--format",
+        "{{.Name}}"
+      ],
+      "command_id": "inventory_before_volumes",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 0,
+      "stdout_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "cargo",
+        "build",
+        "--locked",
+        "--release",
+        "-p",
+        "buzz-cli",
+        "-p",
+        "buzz-relay",
+        "-p",
+        "buzz-admin"
+      ],
+      "command_id": "cargo_locked_release_build",
+      "exit_code": 0,
+      "stderr_byte_length": 17325,
+      "stderr_raw_sha256": "sha256:e081dd02f36b034013fcbf1bc6bd5717808731973ba818a62f4b883a8238ed91",
+      "stdout_byte_length": 0,
+      "stdout_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "rustc",
+        "-vV"
+      ],
+      "command_id": "rustc_verbose_version",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 192,
+      "stdout_raw_sha256": "sha256:e61cba8ded8c60e985f759f74a221c4773649021477d00b44c7af411eb8c218c"
+    },
+    {
+      "argv": [
+        "bun",
+        "--version"
+      ],
+      "command_id": "bun_version",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 7,
+      "stdout_raw_sha256": "sha256:324a5044f2eb3dab8147b7a64c1b1ab56b89aa4cf8980e6e42f972b622dc82df"
+    },
+    {
+      "argv": [
+        "cargo",
+        "-V"
+      ],
+      "command_id": "cargo_version",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 36,
+      "stdout_raw_sha256": "sha256:c10ec31b8c6e6e2693cf65fc1971b41edbc3da1ae7db6f9f3f36c4823f8dcab5"
+    },
+    {
+      "argv": [
+        "docker",
+        "version",
+        "--format",
+        "{\"client\":\"{{.Client.Version}}\",\"server\":\"{{.Server.Version}}\"}"
+      ],
+      "command_id": "docker_version",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 38,
+      "stdout_raw_sha256": "sha256:bc303183a0fedda9527dc0a914fda737be87e1865212637ae76e5909f8671390"
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "--project-name",
+        "vela-stock-buzz-proof",
+        "--file",
+        "docker-compose.yml",
+        "--project-directory",
+        ".",
+        "pull",
+        "postgres",
+        "redis",
+        "minio",
+        "minio-init"
+      ],
+      "command_id": "compose_pull",
+      "exit_code": 0,
+      "stderr_byte_length": 262,
+      "stderr_raw_sha256": "sha256:4c06b4b2dae166189e731bf38e6f6851ae78548b4cac541f58e8449bc17614c4",
+      "stdout_byte_length": 0,
+      "stdout_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "--project-name",
+        "vela-stock-buzz-proof",
+        "--file",
+        "docker-compose.yml",
+        "--project-directory",
+        ".",
+        "up",
+        "-d",
+        "--wait",
+        "--wait-timeout",
+        "60",
+        "postgres",
+        "redis",
+        "minio"
+      ],
+      "command_id": "compose_up",
+      "exit_code": 0,
+      "stderr_byte_length": 777,
+      "stderr_raw_sha256": "sha256:ac70077af9fd5d91b6729e9c5247ea1a960cc905c564db583e419a351504dc01",
+      "stdout_byte_length": 0,
+      "stdout_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "--project-name",
+        "vela-stock-buzz-proof",
+        "--file",
+        "docker-compose.yml",
+        "--project-directory",
+        ".",
+        "up",
+        "--no-deps",
+        "--abort-on-container-exit",
+        "--exit-code-from",
+        "minio-init",
+        "minio-init"
+      ],
+      "command_id": "compose_minio_init",
+      "exit_code": 0,
+      "stderr_byte_length": 267,
+      "stderr_raw_sha256": "sha256:d2418d878f96f92a88b9c6d368fb2def7b48c44e5600952517cc860f2da32393",
+      "stdout_byte_length": 262,
+      "stdout_raw_sha256": "sha256:37668992342f64a15fbcb4383c39ce3811651cf2fc4d251e7d31d502a263f4b8"
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "postgres:17-alpine",
+        "--format",
+        "{\"id\":\"{{.Id}}\",\"repo_digests\":{{json .RepoDigests}}}"
+      ],
+      "command_id": "image_inspect_postgres_17-alpine",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 181,
+      "stdout_raw_sha256": "sha256:276dd2eefcbbd7596e74f1012cc74dbeff7cea64cb39c84521b95d14e5674b67"
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "redis:7-alpine",
+        "--format",
+        "{\"id\":\"{{.Id}}\",\"repo_digests\":{{json .RepoDigests}}}"
+      ],
+      "command_id": "image_inspect_redis_7-alpine",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 178,
+      "stdout_raw_sha256": "sha256:c7c48591454b60493ca25bffaf8efa3faed64d419fc022aa47f8b4d0651ca192"
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "minio/minio:latest",
+        "--format",
+        "{\"id\":\"{{.Id}}\",\"repo_digests\":{{json .RepoDigests}}}"
+      ],
+      "command_id": "image_inspect_minio_minio_latest",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 184,
+      "stdout_raw_sha256": "sha256:e89570f7f3c36302e3d3fa9ba31fb944182e5488a52405bd82ec0cc21eb6fc43"
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "minio/mc:latest",
+        "--format",
+        "{\"id\":\"{{.Id}}\",\"repo_digests\":{{json .RepoDigests}}}"
+      ],
+      "command_id": "image_inspect_minio_mc_latest",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 181,
+      "stdout_raw_sha256": "sha256:bae464e8938b62468f9d314921da0f1372c386bf0deb4c900969d5b126430563"
+    },
+    {
+      "argv": [
+        "target/release/buzz-admin",
+        "migrate"
+      ],
+      "command_id": "buzz_database_migrate",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 30,
+      "stdout_raw_sha256": "sha256:97a0c4f17cdbe0541e8a514a448640dfd2b5d21a39a0e53384777dd07d2d2ca3"
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "buzz-postgres",
+        "psql",
+        "-U",
+        "buzz",
+        "-d",
+        "buzz",
+        "-Atqc",
+        "<allowlisted-migration-readback-sql>"
+      ],
+      "command_id": "migration_database_readback",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 5140,
+      "stdout_raw_sha256": "sha256:6eb4c3851ab1fec47be8d19fc188382f005ebbe53e611e04cf88bab6f2750293"
+    },
+    {
+      "argv": [
+        "buzz",
+        "channels",
+        "create",
+        "--name",
+        "vela-erdos-321-bridge",
+        "--type",
+        "stream",
+        "--visibility",
+        "open",
+        "--description",
+        "Disposable rooted Vela target transport"
+      ],
+      "command_id": "buzz_channel_create",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 161,
+      "stdout_raw_sha256": "sha256:985b5f32baed6ca651cacd512a88e0b45b3dd0d696e78639c5a73f4fb7e3cc5e"
+    },
+    {
+      "argv": [
+        "buzz",
+        "channels",
+        "add-member",
+        "--channel",
+        "bc0c1dca-3881-467a-b5bd-1e9cddd465ee",
+        "--pubkey",
+        "2066c1d3a0cb596af1b1df0b288e353a4e6e23a3fd326bb11bcdd012c03ddfb6",
+        "--role",
+        "member"
+      ],
+      "command_id": "buzz_channel_add_member",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 109,
+      "stdout_raw_sha256": "sha256:8ac15157aa200cb845a3585319b49b376905500c57ee4f7038675b64d459b276"
+    },
+    {
+      "argv": [
+        "buzz",
+        "channels",
+        "get",
+        "--channel",
+        "bc0c1dca-3881-467a-b5bd-1e9cddd465ee"
+      ],
+      "command_id": "buzz_channel_get",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 241,
+      "stdout_raw_sha256": "sha256:9e5e4846e015283c540bb65e6ca93e92a8d05c37a99eac4f2effc139fed74d7b"
+    },
+    {
+      "argv": [
+        "buzz",
+        "channels",
+        "members",
+        "--channel",
+        "bc0c1dca-3881-467a-b5bd-1e9cddd465ee"
+      ],
+      "command_id": "buzz_channel_members",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 189,
+      "stdout_raw_sha256": "sha256:0130c01b16f00b5622d4881a7aa44ee32dd400197b08a93931f5d3aa08667465"
+    },
+    {
+      "argv": [
+        "buzz",
+        "messages",
+        "send",
+        "--channel",
+        "bc0c1dca-3881-467a-b5bd-1e9cddd465ee",
+        "--content",
+        "-"
+      ],
+      "command_id": "buzz_target_send",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 130,
+      "stdout_raw_sha256": "sha256:c5c949c1c4d99394ce619a9a825bfe7460a8a524f91bc9d534c102a4ff913222"
+    },
+    {
+      "argv": [
+        "buzz",
+        "messages",
+        "get",
+        "--channel",
+        "bc0c1dca-3881-467a-b5bd-1e9cddd465ee",
+        "--limit",
+        "50"
+      ],
+      "command_id": "buzz_target_readback",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 3661,
+      "stdout_raw_sha256": "sha256:afae9ca00cc30dddb4bf0dcec5706f11ce4abc97858dc611c49c6489e417c1b3"
+    },
+    {
+      "argv": [
+        "buzz",
+        "messages",
+        "send",
+        "--channel",
+        "bc0c1dca-3881-467a-b5bd-1e9cddd465ee",
+        "--content",
+        "-",
+        "--reply-to",
+        "ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5"
+      ],
+      "command_id": "buzz_note_send",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 130,
+      "stdout_raw_sha256": "sha256:686be1434586b1153f87d90f09ff4f3359b04f355c4401d10be8316ccef0b6c6"
+    },
+    {
+      "argv": [
+        "buzz",
+        "messages",
+        "send",
+        "--channel",
+        "bc0c1dca-3881-467a-b5bd-1e9cddd465ee",
+        "--content",
+        "-",
+        "--reply-to",
+        "973d32fac1803894a8a45a6063e90298f0d4138f6d933ed5d26897b3e7d9ac4b"
+      ],
+      "command_id": "buzz_result_send",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 130,
+      "stdout_raw_sha256": "sha256:411dc5d59946c1cf29adbdd6e9dba8023edeecf6218fb2ca514d53bd378e825f"
+    },
+    {
+      "argv": [
+        "buzz",
+        "messages",
+        "get",
+        "--channel",
+        "bc0c1dca-3881-467a-b5bd-1e9cddd465ee",
+        "--limit",
+        "50"
+      ],
+      "command_id": "buzz_message_readback",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 8317,
+      "stdout_raw_sha256": "sha256:ec3423922641262b6d041fee70a4396d3be960b9fbc49b25867af4d3977bdc7e"
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "buzz-postgres",
+        "psql",
+        "-U",
+        "buzz",
+        "-d",
+        "buzz",
+        "-Atqc",
+        "<allowlisted-three-event-readback-sql>"
+      ],
+      "command_id": "raw_event_database_readback",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 8784,
+      "stdout_raw_sha256": "sha256:e2a4d5b3084215f5d6058f68149883fd9da5f956bb838413b65385030f471247"
+    },
+    {
+      "argv": [
+        "target/release/buzz-relay"
+      ],
+      "command_id": "buzz_relay_runtime",
+      "exit_code": 0,
+      "expected_signal": "SIGTERM",
+      "runtime_milliseconds": 13229,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 342168,
+      "stdout_raw_sha256": "sha256:018d861c46626fe9c84513f864c17ba5b092456969a6ff64874804d2b4303434"
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "--project-name",
+        "vela-stock-buzz-proof",
+        "--file",
+        "docker-compose.yml",
+        "--project-directory",
+        ".",
+        "down",
+        "-v",
+        "--remove-orphans"
+      ],
+      "command_id": "compose_down",
+      "exit_code": 0,
+      "stderr_byte_length": 731,
+      "stderr_raw_sha256": "sha256:0924dfb9c06acd7efd5d44ae18db5360bf32529c33435bcb623c94436269d34a",
+      "stdout_byte_length": 0,
+      "stdout_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-a",
+        "--filter",
+        "name=^/buzz-",
+        "--format",
+        "{{.Names}}"
+      ],
+      "command_id": "inventory_after_containers",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 0,
+      "stdout_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "network",
+        "ls",
+        "--filter",
+        "name=^buzz-net$",
+        "--format",
+        "{{.Name}}"
+      ],
+      "command_id": "inventory_after_networks",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 0,
+      "stdout_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "volume",
+        "ls",
+        "--filter",
+        "name=^buzz-(postgres|minio|prometheus)-data$",
+        "--format",
+        "{{.Name}}"
+      ],
+      "command_id": "inventory_after_volumes",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 0,
+      "stdout_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "bun",
+        "install",
+        "--frozen-lockfile"
+      ],
+      "command_id": "nostr_tools_frozen_install",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 86,
+      "stdout_raw_sha256": "sha256:8dbc04aef51e9db760bcc2b636baec1860a16a684beba3d46913ff7f70df3a88"
+    },
+    {
+      "argv": [
+        "bun",
+        "run",
+        "verify-nostr.mjs"
+      ],
+      "command_id": "nostr_tools_cross_implementation_verify",
+      "exit_code": 0,
+      "stderr_byte_length": 0,
+      "stderr_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_byte_length": 479,
+      "stdout_raw_sha256": "sha256:2d1a801f73abf5ca98d0cfb6e95c3079dd9e7d2c29ea4f676aa846ea6ac4afdb"
+    }
+  ],
+  "teardown": {
+    "before": {
+      "containers": [],
+      "networks": [],
+      "volumes": []
+    },
+    "after": {
+      "containers": [],
+      "networks": [],
+      "volumes": []
+    },
+    "disposable_containers_network_and_volumes_absent": true,
+    "external_build_directory_and_relay_log_absent": true
+  },
+  "protected_vela_state": {
+    "before": {
+      "diff_byte_length": 0,
+      "diff_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status_byte_length": 0,
+      "status_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "after": {
+      "diff_byte_length": 0,
+      "diff_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status_byte_length": 0,
+      "status_raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "changed": false
+  },
+  "cross_implementation_signature_verification": {
+    "authority_effect": "none",
+    "event_ids": [
+      "ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5",
+      "973d32fac1803894a8a45a6063e90298f0d4138f6d933ed5d26897b3e7d9ac4b",
+      "f7b0bc3a4bff364f7d070bc23a368430c24aa2c23bb9f802a4da502218c14a01"
+    ],
+    "events_verified": 3,
+    "nostr_tools_version": "2.23.12",
+    "package_lock_raw_sha256": "sha256:24d16de3ddb2eb0ea11a97fd0a69f5f5c4b7d4350487647f3fb11bcfe8505f10",
+    "verifier": "nostr-tools",
+    "verification_scope": "cross_implementation_signature_only"
+  },
+  "privacy": {
+    "ephemeral_private_keys_passed_only_via_buzz_child_process_environments": true,
+    "private_keys_retained": false,
+    "private_keys_serialized": false,
+    "raw_relay_log_scanned_for_all_three_private_keys_before_hash_and_removal": true,
+    "participant_or_evaluator_inputs_used": false,
+    "repository_authority_credentials_used": false
+  },
+  "nonclaims": [
+    "This same-experimenter run proves stock Buzz runtime compatibility, not independent adoption.",
+    "The experiment operator authored the scientific packet, decomposition, and result; Buzz only transported, stored, and returned their bytes.",
+    "Buzz performed no scientific reasoning, proof construction, or result evaluation.",
+    "Buzz activity is not a Vela Submission, Verification, Decision, Event, or Standing.",
+    "No scientific candidate was produced and no authority state changed."
+  ],
+  "execution_root_definition": "sha256 of RFC 8785 canonical JSON with execution_root omitted",
+  "execution_root": "sha256:0b40ebeabfc554fee7362746b4426951958a75e57b68d7ef1cd1470f4d3c980a"
+}

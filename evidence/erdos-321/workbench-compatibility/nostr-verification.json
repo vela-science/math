@@ -1,0 +1,13 @@
+{
+  "authority_effect": "none",
+  "event_ids": [
+    "ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5",
+    "973d32fac1803894a8a45a6063e90298f0d4138f6d933ed5d26897b3e7d9ac4b",
+    "f7b0bc3a4bff364f7d070bc23a368430c24aa2c23bb9f802a4da502218c14a01"
+  ],
+  "events_verified": 3,
+  "nostr_tools_version": "2.23.12",
+  "package_lock_raw_sha256": "sha256:24d16de3ddb2eb0ea11a97fd0a69f5f5c4b7d4350487647f3fb11bcfe8505f10",
+  "verifier": "nostr-tools",
+  "verification_scope": "cross_implementation_signature_only"
+}

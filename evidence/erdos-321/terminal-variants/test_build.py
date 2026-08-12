@@ -264,9 +264,29 @@ def main() -> int:
             "reader_run_test.py", "reader_scorer.py",
             "source-lock.v0.1.json", "test_build.py",
         )),
+        *(f"evidence/erdos-321/workbench-compatibility/{name}" for name in (
+            "README.md", "bun.lock", "events.json", "execution-evidence.json",
+            "nostr-verification.json", "package.json", "run-manifest.json", "run.py",
+            "target-packet.json", "test_run.py", "test_verify.py", "verify-nostr.mjs", "verify.py",
+            "workbench-note.json", "workbench-result.json",
+        )),
     }
     workflow_contract = (BUILD.ROOT / ".github/workflows/terminal-variant-evidence.yml").read_text()
     assert workflow_contract.count('- "README.md"') == 2
+    assert "python3 -B evidence/erdos-321/workbench-compatibility/verify.py" in workflow_contract
+    workbench_root = "sha256:0271f0d9d385b2c834ccf461a8e004165ad579e6b12f2ab2f2f44e824e68f625"
+    assert (BUILD.ROOT / "README.md").read_text().count(workbench_root) == 1
+    assert workflow_contract.count(workbench_root) == 1
+    assert "evidence/erdos-321/workbench-compatibility/run.py" in workflow_contract
+    assert "evidence/erdos-321/workbench-compatibility/test_run.py" in workflow_contract
+    assert "evidence/erdos-321/workbench-compatibility/test_verify.py" in workflow_contract
+    assert "bun install --cwd evidence/erdos-321/workbench-compatibility --frozen-lockfile" in workflow_contract
+    setup_bun = "oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6"
+    assert workflow_contract.count(setup_bun) == 1
+    assert workflow_contract.count("bun-version: 1.3.12") == 1
+    assert workflow_contract.index(setup_bun) < workflow_contract.index(
+        "bun install --cwd evidence/erdos-321/workbench-compatibility --frozen-lockfile"
+    )
     assert 'git diff --check "$base"...HEAD' in workflow_contract
     unit_readme = (HERE / "README.md").read_text()
     assert "python3 evidence/erdos-321/terminal-variants/" not in unit_readme

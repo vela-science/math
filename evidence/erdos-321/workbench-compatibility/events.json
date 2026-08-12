@@ -1,0 +1,90 @@
+{
+  "schema": "vela.stock-buzz-activity-events.v1",
+  "authority_effect": "none",
+  "channel_id": "bc0c1dca-3881-467a-b5bd-1e9cddd465ee",
+  "roles": [
+    {
+      "content_file": "target-packet.json",
+      "event_id": "ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5",
+      "role": "target_packet"
+    },
+    {
+      "content_file": "workbench-note.json",
+      "event_id": "973d32fac1803894a8a45a6063e90298f0d4138f6d933ed5d26897b3e7d9ac4b",
+      "role": "workbench_note"
+    },
+    {
+      "content_file": "workbench-result.json",
+      "event_id": "f7b0bc3a4bff364f7d070bc23a368430c24aa2c23bb9f802a4da502218c14a01",
+      "role": "workbench_result"
+    }
+  ],
+  "events": [
+    {
+      "id": "ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5",
+      "sig": "36b8eb2df4c2221745b02e6eca032ae5250d84b2bf01f5fcc201492cfe15c1113d8d46b363cda3e68791663af0ec068b6882008a62a3fec5cd4c1a57eb3a2cb0",
+      "kind": 9,
+      "tags": [
+        [
+          "h",
+          "bc0c1dca-3881-467a-b5bd-1e9cddd465ee"
+        ]
+      ],
+      "pubkey": "f440d23ec4dffe5f9bc86fe478ef2c76e1a90abcafbe617f048f3f17121dd92a",
+      "content": "{\n  \"schema\": \"vela.target-packet.v1\",\n  \"authority_effect\": \"none\",\n  \"authorship\": {\n    \"scientific_content\": \"experiment_operator\",\n    \"buzz_role\": \"transport_storage_and_readback_only\"\n  },\n  \"problem\": {\n    \"source\": \"erdos\",\n    \"native_id\": \"321\"\n  },\n  \"repository\": {\n    \"url\": \"https://github.com/vela-science/math.git\",\n    \"commit\": \"fab1c3ea6f342a491d5fdfd57fa1126970fb6e61\",\n    \"tree\": \"2668ca4c7ba345d43bc54ec951b818b469113e98\",\n    \"repository_id\": \"8115c538-7688-40b7-ab75-3c4765bf3c19\",\n    \"repository_root\": \"sha256:db4d435c2989d43c7ab88fe135865e89a6ba095429315baedb78bcbd9e90ebdc\"\n  },\n  \"current_standing\": {\n    \"claim_id\": \"vcl_3d4fd59554ccaa2b792b08abae16a8d0fe329d4901ad798fe05c6c7769c9966b\",\n    \"claim_root\": \"sha256:d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776\",\n    \"standing\": \"accepted\",\n    \"assertion\": \"The Lean development starfleet/erdos-321 establishes a two-sided asymptotic bound on extremalSize, which denotes the same quantity as Formal Conjectures' Erdos321.R at pages commit 59f30aa3, and which therefore supplies a candidate answer for erdos_321.variants.isTheta rather than a proof of it.\"\n  },\n  \"evidence\": {\n    \"path\": \"evidence/erdos-321/terminal-variants\",\n    \"bundle_root\": \"sha256:bd7b7eee6eb5e2e8f654898207bf05168ea6e7dd1d72f3a1a46a685a64f8f322\",\n    \"source_lock_root\": \"sha256:128edd2b0b58597ca05c7c0049ab20c10c9e6ef4e06c2c3ff8371752123a103b\",\n    \"comparison_root\": \"sha256:808c9ba973d36b0ed79366ae04357c04e2c5b2c0aa5a04967f90ad09eabba699\"\n  },\n  \"obligation\": \"Construct and kernel-check explicit bridges between the real-log terminal coordinates and each Nat.log fixed-variant hypothesis before asserting implication.\",\n  \"completion_contract\": {\n    \"required\": [\n      \"A source patch rooted to the exact repository commit above\",\n      \"A network-independent command that checks the proposed Lean bridge\",\n      \"A machine-readable result manifest containing exact input and output roots\",\n      \"Explicit nonclaims for any implication or equivalence not kernel-checked\"\n    ],\n    \"forbidden\": [\n      \"Changing the accepted Claim or Repository Standing\",\n      \"Treating workbench activity or execution success as Verification\",\n      \"Using participant, evaluator, or private-build StandingBench inputs\",\n      \"Accessing Repository authority keys\"\n    ]\n  },\n  \"expected_return\": {\n    \"media_type\": \"application/json\",\n    \"schema\": \"vela.workbench-result.v1\",\n    \"maximum_bytes\": 65536,\n    \"required_fields\": [\n      \"workbench\",\n      \"packet_root\",\n      \"activity_event_ids\",\n      \"result_status\",\n      \"artifact_roots\",\n      \"nonclaims\"\n    ]\n  },\n  \"nonclaims\": [\n    \"The target packet is not a Vela protocol object.\",\n    \"The experiment operator authored this packet; Buzz performs no scientific reasoning over it.\",\n    \"A Buzz event signature authenticates workspace activity, not scientific truth.\",\n    \"A returned candidate is not a Verification Record, Decision, Event, or Standing.\"\n  ],\n  \"packet_root_definition\": \"sha256 of RFC 8785 canonical JSON with packet_root omitted\",\n  \"packet_root\": \"sha256:62004075572072cb96ccdf3f869ad3cf261d1abd39e826624d49b026dd57d92d\"\n}\n",
+      "created_at": 1786503624
+    },
+    {
+      "id": "973d32fac1803894a8a45a6063e90298f0d4138f6d933ed5d26897b3e7d9ac4b",
+      "sig": "4962c1f4e091eb553d1d73abcff23fc95abbea058f7a55b521924d425c9415a7e33775a1e2c50b183a48d4d880041feb921e4c35dfc661703154caa7f81ac87d",
+      "kind": 9,
+      "tags": [
+        [
+          "h",
+          "bc0c1dca-3881-467a-b5bd-1e9cddd465ee"
+        ],
+        [
+          "e",
+          "ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5",
+          "",
+          "reply"
+        ]
+      ],
+      "pubkey": "2066c1d3a0cb596af1b1df0b288e353a4e6e23a3fd326bb11bcdd012c03ddfb6",
+      "content": "{\n  \"schema\": \"vela.workbench-note.v1\",\n  \"authority_effect\": \"none\",\n  \"authorship\": {\n    \"scientific_decomposition\": \"experiment_operator\",\n    \"buzz_role\": \"transport_storage_and_readback_only\"\n  },\n  \"workbench\": {\n    \"name\": \"buzz\",\n    \"repository\": \"https://github.com/block/buzz.git\",\n    \"commit\": \"397796c5f343db4251198f44505b1afebe88223f\"\n  },\n  \"packet_root\": \"sha256:62004075572072cb96ccdf3f869ad3cf261d1abd39e826624d49b026dd57d92d\",\n  \"activity\": {\n    \"channel_id\": \"bc0c1dca-3881-467a-b5bd-1e9cddd465ee\",\n    \"received_event_id\": \"ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5\"\n  },\n  \"decomposition\": [\n    {\n      \"step\": \"formalize_real_nat_log_bridge\",\n      \"deliverable\": \"A Lean lemma relating the retained Real.log and Nat.log coordinates under explicit domain hypotheses\"\n    },\n    {\n      \"step\": \"prove_index_alignment\",\n      \"deliverable\": \"Kernel-checked lower and upper index-alignment lemmas for k=d+2 and r=d+2\"\n    },\n    {\n      \"step\": \"verify_without_network\",\n      \"deliverable\": \"A pinned command and result manifest that check the candidate in a clean network-disabled environment\"\n    }\n  ],\n  \"result_status\": \"operator_authored_decomposition_transported_no_candidate\",\n  \"nonclaims\": [\n    \"The experiment operator authored this decomposition; Buzz only transported, stored, and returned its bytes.\",\n    \"Buzz performed no scientific reasoning, proof construction, or result evaluation.\",\n    \"This decomposition is disposable workspace activity, not a proof.\",\n    \"No implication or equivalence was established.\",\n    \"No Vela Submission, Verification Record, Decision, Event, or Standing was created.\"\n  ],\n  \"note_root_definition\": \"sha256 of RFC 8785 canonical JSON with note_root omitted\",\n  \"note_root\": \"sha256:e17a4a2760d17294015a5fe5cd75772723ac3c1262c52cb000ef8f209591225a\"\n}\n",
+      "created_at": 1786503624
+    },
+    {
+      "id": "f7b0bc3a4bff364f7d070bc23a368430c24aa2c23bb9f802a4da502218c14a01",
+      "sig": "574780fb256ce55421de179cd0e1154838f8117974a9574212b2caa23de620b246369e82cf0327689b936becd886f55c33206d4c558d59e915e9c74cbd252782",
+      "kind": 9,
+      "tags": [
+        [
+          "h",
+          "bc0c1dca-3881-467a-b5bd-1e9cddd465ee"
+        ],
+        [
+          "e",
+          "ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5",
+          "",
+          "root"
+        ],
+        [
+          "e",
+          "973d32fac1803894a8a45a6063e90298f0d4138f6d933ed5d26897b3e7d9ac4b",
+          "",
+          "reply"
+        ]
+      ],
+      "pubkey": "2066c1d3a0cb596af1b1df0b288e353a4e6e23a3fd326bb11bcdd012c03ddfb6",
+      "content": "{\n  \"schema\": \"vela.workbench-result.v1\",\n  \"authority_effect\": \"none\",\n  \"authorship\": {\n    \"scientific_result\": \"experiment_operator\",\n    \"buzz_role\": \"transport_storage_and_readback_only\"\n  },\n  \"workbench\": {\n    \"name\": \"buzz\",\n    \"repository\": \"https://github.com/block/buzz.git\",\n    \"commit\": \"397796c5f343db4251198f44505b1afebe88223f\",\n    \"channel_id\": \"bc0c1dca-3881-467a-b5bd-1e9cddd465ee\"\n  },\n  \"packet_root\": \"sha256:62004075572072cb96ccdf3f869ad3cf261d1abd39e826624d49b026dd57d92d\",\n  \"activity_event_ids\": [\n    \"ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5\",\n    \"973d32fac1803894a8a45a6063e90298f0d4138f6d933ed5d26897b3e7d9ac4b\"\n  ],\n  \"result_status\": \"operator_authored_result_transported_no_candidate\",\n  \"artifact_roots\": [\n    \"sha256:e17a4a2760d17294015a5fe5cd75772723ac3c1262c52cb000ef8f209591225a\"\n  ],\n  \"observations\": {\n    \"packet_round_trip_byte_identical\": true,\n    \"packet_raw_byte_length\": 3186,\n    \"packet_raw_sha256\": \"sha256:0dce153d8fc00b23b1dc761878be95e29e01e19336b3857db02aac110378c46c\",\n    \"distinct_activity_keys\": true\n  },\n  \"nonclaims\": [\n    \"This proves stock Buzz transported, stored, and read back an operator-authored rooted Vela work packet and operator-authored result.\",\n    \"Buzz performed no scientific reasoning, proof construction, or result evaluation.\",\n    \"It is not independent adoption because both actors were operated by the same experimenter.\",\n    \"No scientific candidate was produced or verified.\",\n    \"Buzz event signatures do not create a Vela Submission, Verification, Decision, Event, or Standing.\"\n  ],\n  \"result_root_definition\": \"sha256 of RFC 8785 canonical JSON with result_root omitted\",\n  \"result_root\": \"sha256:c3c3da1b8724d2e27e447aa0c525f19df39b9480f297e9ea3a81844d463b44b0\"\n}\n",
+      "created_at": 1786503624
+    }
+  ],
+  "nonclaims": [
+    "These signatures authenticate disposable local Buzz transport, storage, and readback activity only.",
+    "The experiment operator authored the scientific packet, decomposition, and result; Buzz performed no scientific reasoning.",
+    "Both activity identities were operated by the same experimenter.",
+    "No independent adoption, scientific candidate, Vela Submission, Verification, Decision, Event, or Standing is established."
+  ]
+}

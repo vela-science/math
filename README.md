@@ -34,6 +34,16 @@ vela replay . --json
   evidence, preregisters an unrun cold-reader measurement, and has no authority
   effect. Generated bundle root:
   `sha256:bd7b7eee6eb5e2e8f654898207bf05168ea6e7dd1d72f3a1a46a685a64f8f322`.
+- [Buzz external-workbench compatibility](evidence/erdos-321/workbench-compatibility/README.md)
+  freezes an exact-source locked build and native CLI/relay execution at Buzz
+  commit `397796c5f343db4251198f44505b1afebe88223f`, including channel/member
+  readback, three cross-implementation signature checks, exact runtime roots,
+  and complete disposable teardown. The scientific packet, decomposition, and
+  result were authored by the experiment operator; Buzz transported, stored,
+  and read back the bytes and performed no scientific reasoning. Aggregate evidence root:
+  `sha256:0271f0d9d385b2c834ccf461a8e004165ad579e6b12f2ab2f2f44e824e68f625`.
+  Both identities were operated by the same experimenter, so this is execution
+  compatibility evidence, not independent adoption or scientific authority.
 
 ## Protocol continuity
 

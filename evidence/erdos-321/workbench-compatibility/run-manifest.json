@@ -1,0 +1,102 @@
+{
+  "schema": "vela.stock-buzz-compatibility-run.v2",
+  "authority_effect": "none",
+  "captured_at": "2026-08-12T03:00:31.005031Z",
+  "math_source": {
+    "commit": "fab1c3ea6f342a491d5fdfd57fa1126970fb6e61",
+    "tree": "2668ca4c7ba345d43bc54ec951b818b469113e98",
+    "repository_root": "sha256:db4d435c2989d43c7ab88fe135865e89a6ba095429315baedb78bcbd9e90ebdc"
+  },
+  "buzz_source": {
+    "commit": "397796c5f343db4251198f44505b1afebe88223f",
+    "tree": "aa2867f523032a0b87bfc8c70b152d6e117c9696",
+    "origin": "https://github.com/block/buzz.git"
+  },
+  "activity": {
+    "channel_id": "bc0c1dca-3881-467a-b5bd-1e9cddd465ee",
+    "event_ids": [
+      "ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5",
+      "973d32fac1803894a8a45a6063e90298f0d4138f6d933ed5d26897b3e7d9ac4b",
+      "f7b0bc3a4bff364f7d070bc23a368430c24aa2c23bb9f802a4da502218c14a01"
+    ],
+    "distinct_activity_keys": 2,
+    "same_experimenter_operated_both_keys": true
+  },
+  "files": {
+    "events.json": {
+      "byte_length": 10412,
+      "mode": "0644",
+      "raw_sha256": "sha256:78b1b555acb0e82fef095442d3ba1251f15ac66e121fbc51fa5e220d24af72c0"
+    },
+    "execution-evidence.json": {
+      "byte_length": 38681,
+      "mode": "0644",
+      "raw_sha256": "sha256:13ebbafcb10a5c15d3403b85aa47739b694a5f07e372c5e23f20996a13500d5d"
+    },
+    "nostr-verification.json": {
+      "byte_length": 526,
+      "mode": "0644",
+      "raw_sha256": "sha256:00875da1c20d1af5a70322e401fe7f8324c60f955c924f225e9b6a3d695fc96d"
+    },
+    "target-packet.json": {
+      "byte_length": 3186,
+      "mode": "0644",
+      "raw_sha256": "sha256:0dce153d8fc00b23b1dc761878be95e29e01e19336b3857db02aac110378c46c"
+    },
+    "workbench-note.json": {
+      "byte_length": 1854,
+      "mode": "0644",
+      "raw_sha256": "sha256:65c439a463601ca4f1c7e825b23f24ad1858e8c9854c72e0b5ba7ce6c77ceec9"
+    },
+    "workbench-result.json": {
+      "byte_length": 1789,
+      "mode": "0644",
+      "raw_sha256": "sha256:5af5ccf14611b84111cbca3e7f6b642916452845ed812bcb3ce7add3f834b4a8"
+    },
+    "package.json": {
+      "byte_length": 96,
+      "mode": "0644",
+      "raw_sha256": "sha256:9d65726f4c88c2a6be115f4fbe12476b656acd669de1c67cf182c1c187e40a24"
+    },
+    "bun.lock": {
+      "byte_length": 1884,
+      "mode": "0644",
+      "raw_sha256": "sha256:24d16de3ddb2eb0ea11a97fd0a69f5f5c4b7d4350487647f3fb11bcfe8505f10"
+    },
+    "run.py": {
+      "byte_length": 44925,
+      "mode": "0644",
+      "raw_sha256": "sha256:d75e4c2fb8be871b44eeb81472525262a180fbaa8fb0ab6b6d79f55f0a29a80d"
+    },
+    "test_run.py": {
+      "byte_length": 10446,
+      "mode": "0644",
+      "raw_sha256": "sha256:113b73aa7abbebc5d8f97ee1fe4f6e973a322e21b0c66bc39b6d440deb4fa651"
+    },
+    "test_verify.py": {
+      "byte_length": 5278,
+      "mode": "0644",
+      "raw_sha256": "sha256:005364cb1680565de7c5ee4bc81a6fb666a0095dca223defa77c0baf3422688f"
+    },
+    "verify.py": {
+      "byte_length": 20318,
+      "mode": "0644",
+      "raw_sha256": "sha256:fd3b5d340d6b473e26175902113816d93fab361d49cca8ee7b164cfeabcb52d7"
+    },
+    "verify-nostr.mjs": {
+      "byte_length": 954,
+      "mode": "0644",
+      "raw_sha256": "sha256:b16572726b5459bb8c65d008fb90c3c871b0153e67d2e8b734132a6a35de4a49"
+    }
+  },
+  "execution_root": "sha256:0b40ebeabfc554fee7362746b4426951958a75e57b68d7ef1cd1470f4d3c980a",
+  "result": {
+    "status": "stock_buzz_transported_operator_authored_activity_no_candidate",
+    "buzz_scientific_reasoning": false,
+    "independent_adoption": false,
+    "scientific_candidate_produced": false,
+    "scientific_state_changed": false
+  },
+  "aggregate_evidence_root_definition": "sha256 of RFC 8785 canonical JSON with aggregate_evidence_root omitted",
+  "aggregate_evidence_root": "sha256:0271f0d9d385b2c834ccf461a8e004165ad579e6b12f2ab2f2f44e824e68f625"
+}

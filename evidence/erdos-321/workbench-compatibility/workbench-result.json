@@ -1,0 +1,38 @@
+{
+  "schema": "vela.workbench-result.v1",
+  "authority_effect": "none",
+  "authorship": {
+    "scientific_result": "experiment_operator",
+    "buzz_role": "transport_storage_and_readback_only"
+  },
+  "workbench": {
+    "name": "buzz",
+    "repository": "https://github.com/block/buzz.git",
+    "commit": "397796c5f343db4251198f44505b1afebe88223f",
+    "channel_id": "bc0c1dca-3881-467a-b5bd-1e9cddd465ee"
+  },
+  "packet_root": "sha256:62004075572072cb96ccdf3f869ad3cf261d1abd39e826624d49b026dd57d92d",
+  "activity_event_ids": [
+    "ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5",
+    "973d32fac1803894a8a45a6063e90298f0d4138f6d933ed5d26897b3e7d9ac4b"
+  ],
+  "result_status": "operator_authored_result_transported_no_candidate",
+  "artifact_roots": [
+    "sha256:e17a4a2760d17294015a5fe5cd75772723ac3c1262c52cb000ef8f209591225a"
+  ],
+  "observations": {
+    "packet_round_trip_byte_identical": true,
+    "packet_raw_byte_length": 3186,
+    "packet_raw_sha256": "sha256:0dce153d8fc00b23b1dc761878be95e29e01e19336b3857db02aac110378c46c",
+    "distinct_activity_keys": true
+  },
+  "nonclaims": [
+    "This proves stock Buzz transported, stored, and read back an operator-authored rooted Vela work packet and operator-authored result.",
+    "Buzz performed no scientific reasoning, proof construction, or result evaluation.",
+    "It is not independent adoption because both actors were operated by the same experimenter.",
+    "No scientific candidate was produced or verified.",
+    "Buzz event signatures do not create a Vela Submission, Verification, Decision, Event, or Standing."
+  ],
+  "result_root_definition": "sha256 of RFC 8785 canonical JSON with result_root omitted",
+  "result_root": "sha256:c3c3da1b8724d2e27e447aa0c525f19df39b9480f297e9ea3a81844d463b44b0"
+}

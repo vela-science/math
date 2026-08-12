@@ -1,0 +1,42 @@
+{
+  "schema": "vela.workbench-note.v1",
+  "authority_effect": "none",
+  "authorship": {
+    "scientific_decomposition": "experiment_operator",
+    "buzz_role": "transport_storage_and_readback_only"
+  },
+  "workbench": {
+    "name": "buzz",
+    "repository": "https://github.com/block/buzz.git",
+    "commit": "397796c5f343db4251198f44505b1afebe88223f"
+  },
+  "packet_root": "sha256:62004075572072cb96ccdf3f869ad3cf261d1abd39e826624d49b026dd57d92d",
+  "activity": {
+    "channel_id": "bc0c1dca-3881-467a-b5bd-1e9cddd465ee",
+    "received_event_id": "ae5de33b84ce45f83a7bac4789781e285cf2a9bc02b64070c33cc1b9ce3365c5"
+  },
+  "decomposition": [
+    {
+      "step": "formalize_real_nat_log_bridge",
+      "deliverable": "A Lean lemma relating the retained Real.log and Nat.log coordinates under explicit domain hypotheses"
+    },
+    {
+      "step": "prove_index_alignment",
+      "deliverable": "Kernel-checked lower and upper index-alignment lemmas for k=d+2 and r=d+2"
+    },
+    {
+      "step": "verify_without_network",
+      "deliverable": "A pinned command and result manifest that check the candidate in a clean network-disabled environment"
+    }
+  ],
+  "result_status": "operator_authored_decomposition_transported_no_candidate",
+  "nonclaims": [
+    "The experiment operator authored this decomposition; Buzz only transported, stored, and returned its bytes.",
+    "Buzz performed no scientific reasoning, proof construction, or result evaluation.",
+    "This decomposition is disposable workspace activity, not a proof.",
+    "No implication or equivalence was established.",
+    "No Vela Submission, Verification Record, Decision, Event, or Standing was created."
+  ],
+  "note_root_definition": "sha256 of RFC 8785 canonical JSON with note_root omitted",
+  "note_root": "sha256:e17a4a2760d17294015a5fe5cd75772723ac3c1262c52cb000ef8f209591225a"
+}
