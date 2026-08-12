@@ -28,7 +28,7 @@ jobs:
     env:
       PYTHONDONTWRITEBYTECODE: "1"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
         with:
           fetch-depth: 0
 
@@ -63,11 +63,13 @@ jobs:
           set -euo pipefail
           git remote set-url origin https://github.com/vela-science/math.git
           base=fdb23666e7b5385a62cc97c58086bc67bd4e7fa9
-          exposed=a6a31a528ee86ab79c2aaf4e71e43fc63f4a4e98
-          git cat-file -e "${exposed}^{commit}"
+          git cat-file -e "${base}^{commit}"
           git merge-base --is-ancestor "$base" HEAD
-          if git merge-base --is-ancestor "$exposed" HEAD; then
-            echo "exposed StandingBench overlay entered the integration branch" >&2
+          restricted_history="${RUNNER_TEMP}/restricted-standingbench-history"
+          git log --format= --name-only "$base"..HEAD -- \
+            evidence/erdos-321/standingbench >"$restricted_history"
+          if test -s "$restricted_history"; then
+            echo "restricted StandingBench paths entered main history" >&2
             exit 1
           fi
           expected="${RUNNER_TEMP}/terminal-variant-expected-paths"
