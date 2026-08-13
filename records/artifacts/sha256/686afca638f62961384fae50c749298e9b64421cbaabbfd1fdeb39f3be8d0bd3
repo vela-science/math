@@ -1,0 +1,108 @@
+{
+  "authority_effect": "none",
+  "candidate_alignments": [
+    {
+      "establishes": "displayed product endpoint alignment only",
+      "substitution": "k = d + 2",
+      "variant": "lower"
+    },
+    {
+      "establishes": "displayed product endpoint alignment only",
+      "substitution": "r = d + 2",
+      "variant": "upper"
+    }
+  ],
+  "content_root": "sha256:098e9fa958a17a59bdb4b618f48c4b7032d6543d05bf1a2eab1c62b6d195f147",
+  "disposition": {
+    "claim": "At the exact retained source revisions, the terminal theorem and structural comparison do not establish implication to either fixed Nat.log variant.",
+    "next_action": "Retain both relations as unresolved. Reopen only with a rooted common-source port and an explicit kernel-checked bridge theorem.",
+    "relation_lower": "unresolved",
+    "relation_upper": "unresolved",
+    "status": "unsupported_by_retained_basis"
+  },
+  "does_not_establish": [
+    "No mathematical impossibility of a bridge is claimed.",
+    "Neither terminal nor fixed statement is shown false.",
+    "The candidate index substitutions are not variable-substitution theorems.",
+    "No fresh terminal or fixed theorem execution is claimed.",
+    "This record is not a Vela Verification, Decision, or Standing change."
+  ],
+  "execution": {
+    "common_exact_interpreter": "unavailable",
+    "kernel_bridge_result": "not_observed",
+    "reason": "the retained projects use Lean 4.31.0 and Lean 4.27.0 and retain no cross-version port or bridge module",
+    "source_identity_check": "pass",
+    "source_statement_check": "pass"
+  },
+  "missing_bridges": [
+    {
+      "id": "lower_hypothesis",
+      "required": "4 <= d + 2 and d + 2 <= Nat.log^[d + 2] n",
+      "retained_theorem": null,
+      "terminal_basis": "d <= n and a Real.log tower around Real.log (Real.log n)"
+    },
+    {
+      "id": "upper_hypothesis",
+      "required": "1 <= d + 2 and 1 <= Nat.log^[2 * (d + 2)] n",
+      "retained_theorem": null,
+      "terminal_basis": "terminal real-log threshold conditions"
+    },
+    {
+      "id": "coordinate_product",
+      "required": "an exact coercion and equality or inequality between the Nat.log product and iteratedLogTailProduct",
+      "retained_theorem": null,
+      "terminal_basis": "real-valued recursive logarithm product"
+    },
+    {
+      "id": "constants",
+      "required": "a theorem relating existential c and C to the fixed explicit coefficients",
+      "retained_theorem": null,
+      "terminal_basis": "existential positive c and nonnegative C"
+    }
+  ],
+  "problem": "erdos:321",
+  "question": "Do the retained terminal theorem premises establish either fixed Nat.log variant after the candidate endpoint substitutions?",
+  "schema": "vela.math.erdos321-terminal-bridge-disposition.v1",
+  "sources": {
+    "comparison": {
+      "content_root": "sha256:808c9ba973d36b0ed79366ae04357c04e2c5b2c0aa5a04967f90ad09eabba699",
+      "path": "evidence/erdos-321/terminal-variants/comparison.v0.1.json",
+      "raw_sha256": "sha256:0f26a4586bbeac08d07f4d0f8b5d1507751830913d41747a64f2c8203c08af58",
+      "size": 6881
+    },
+    "fixed_variants": {
+      "commit": "59f30aa314ba225fcd9268723ce8291616df1ab0",
+      "git_blob_sha1": "e58fa81d7f81badaeca1e29dde1e1e1435d1d635",
+      "path": "FormalConjectures/ErdosProblems/321.lean",
+      "raw_sha256": "sha256:601d8486743aede6803feaaefc7bbb73f0aa8873d0296a6a1c5400fd86c32357",
+      "repository": "https://github.com/google-deepmind/formal-conjectures.git",
+      "size": 4534,
+      "toolchain": {
+        "commit": "59f30aa314ba225fcd9268723ce8291616df1ab0",
+        "git_blob_sha1": "2bb276aae9b280aaa44fa3c21d2be1d4bc0c9862",
+        "path": "lean-toolchain",
+        "raw_sha256": "sha256:e695e6e5d8e7a8be4d6cf159dfb995847993d26c6cc450353a86f387279025b9",
+        "repository": "https://github.com/google-deepmind/formal-conjectures.git",
+        "size": 24,
+        "value": "leanprover/lean4:v4.27.0"
+      }
+    },
+    "terminal": {
+      "commit": "a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0",
+      "git_blob_sha1": "414d30123ecb0224087ad0e8b4e573d259d65255",
+      "path": "starfleet/erdos-321/Research/FinalAsymptotic.lean",
+      "raw_sha256": "sha256:63dd7ba024ec235a47c1b90c638acae758a50f2d0ee4267e0f69b22cd5d9c0b5",
+      "repository": "https://github.com/williamjblair/lean-proofs.git",
+      "size": 2316,
+      "toolchain": {
+        "commit": "a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0",
+        "git_blob_sha1": "18640c8b066b182147f324d3aefd8ee48ee45238",
+        "path": "starfleet/erdos-321/lean-toolchain",
+        "raw_sha256": "sha256:efac0b94923b2d8b6840cd35be9177ad0fc5ab2332f4f4311c98712cee92fdee",
+        "repository": "https://github.com/williamjblair/lean-proofs.git",
+        "size": 25,
+        "value": "leanprover/lean4:v4.31.0"
+      }
+    }
+  }
+}
