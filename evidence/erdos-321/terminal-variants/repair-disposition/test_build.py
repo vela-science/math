@@ -17,6 +17,10 @@ SPEC = importlib.util.spec_from_file_location("bridge_disposition", HERE / "buil
 assert SPEC and SPEC.loader
 BUILD = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(BUILD)
+REMAP_SPEC = importlib.util.spec_from_file_location("bridge_remap", HERE / "build_remap.py")
+assert REMAP_SPEC and REMAP_SPEC.loader
+REMAP = importlib.util.module_from_spec(REMAP_SPEC)
+REMAP_SPEC.loader.exec_module(REMAP)
 LEAN_PROOFS = Path(os.environ.get("VELA_LEAN_PROOFS_REPO", HERE.parents[4] / "lean-proofs"))
 FORMAL = Path(os.environ.get("VELA_FORMAL_CONJECTURES_REPO", HERE.parents[4] / "formal-conjectures"))
 
@@ -72,6 +76,15 @@ class RepairDispositionTest(unittest.TestCase):
         self.assertIn("no mathematical impossibility", joined)
         self.assertIn("not a vela verification", joined)
         self.assertEqual(len(retained["missing_bridges"]), 4)
+
+    def test_current_remap_closes_only_the_bounded_investigation(self):
+        retained = json.loads((HERE / "correction-remap.v1.json").read_text())
+        self.assertEqual(REMAP.build(), retained)
+        self.assertEqual(retained["repair_obligation"]["current_status"], "closed_unsupported_by_retained_basis")
+        self.assertTrue(retained["accepted_scope_claim"]["verifications"][1]["independent_of_producer"])
+        self.assertEqual(retained["accepted_scope_claim"]["decision"]["actor_class"], "agent")
+        self.assertTrue(all(relation["current"] == "unresolved" for relation in retained["relation_remap"]))
+        self.assertEqual(retained["authority_effect"], "none")
 
 
 if __name__ == "__main__":

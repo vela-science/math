@@ -25,3 +25,11 @@ python3 -B evidence/erdos-321/terminal-variants/repair-disposition/test_build.py
 
 The record has no authority effect by itself. Vela Submission, Verification,
 Decision, and replay remain separate.
+
+`correction-remap.v1.json` records the later completed loop without rewriting
+the historical cold-reader packet. One producer-context AI review is retained
+as complementary evidence; a separately attributed OpenAI Codex agent review
+satisfies the declared independence requirement. An attributed agent Decision
+then accepted the bounded negative scope Claim under Repository authority.
+Both scientific relations remain unresolved, while the narrower investigation
+obligation is closed as `unsupported_by_retained_basis`.

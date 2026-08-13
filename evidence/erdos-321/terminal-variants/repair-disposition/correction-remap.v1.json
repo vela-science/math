@@ -1,0 +1,122 @@
+{
+  "accepted_scope_claim": {
+    "applied_event": {
+      "path": ".vela/authority/events/vev_072db31131b6c541.json",
+      "raw_sha256": "sha256:357581e4ef00665c1cd1be5abd6e9bf52df13b3fd7444e4a801c3764c2437f6b",
+      "size": 1687
+    },
+    "claim": {
+      "id": "vcl_c2934683423e1961929339fdef54a49a92b268d329992b79a31b336608427cfc",
+      "path": "records/claims/sha256/d344ca99e2d23e01fbe730e5333fc834fe15e710215ad595c1abe4cd83a04a13.json",
+      "raw_sha256": "sha256:d344ca99e2d23e01fbe730e5333fc834fe15e710215ad595c1abe4cd83a04a13",
+      "size": 882
+    },
+    "decision": {
+      "actor_class": "agent",
+      "actor_id": "agent:codex-terminal-repair-decision",
+      "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+      "path": ".vela/authority/events/vev_b9917b1940133d68.json",
+      "raw_sha256": "sha256:03d233ad4e69571703648858c0747ea939c374896e283acda065b937c2d46dc0",
+      "reason": "Accept the exact negative scope conclusion: the retained terminal theorem and comparison do not establish either fixed Nat.log implication; retain both relations unresolved.",
+      "repository_after": "sha256:ae41be4a91265d91967344459fa12583314ec05c5a0ebc74d8b0136195879511",
+      "repository_before": "sha256:baec391f680f4234a563677fe7f2fe0dc3c838cdbf9cfc520622ad90a0d9fd55",
+      "session_ref": "evidence://erdos-321/terminal-variants/repair-disposition/repair-disposition.v1.json",
+      "size": 1424
+    },
+    "proposal": {
+      "id": "vpr_4cce463df6f23e2b",
+      "path": "records/proposals/sha256/4cce463df6f23e2b31f7ac329bc82af8ca096bf96b564cf2f3a461950b0f3aea.json",
+      "raw_sha256": "sha256:4cce463df6f23e2b31f7ac329bc82af8ca096bf96b564cf2f3a461950b0f3aea",
+      "size": 786
+    },
+    "submission": {
+      "path": "records/submissions/sha256/c050f50fe0f91bd278e7470525fdcd0e6ed71b8c713cedb0246c13adcc566ca8.json",
+      "raw_sha256": "sha256:c050f50fe0f91bd278e7470525fdcd0e6ed71b8c713cedb0246c13adcc566ca8",
+      "size": 1699
+    },
+    "verifications": [
+      {
+        "actor_class": "agent",
+        "actor_id": "agent:codex-terminal-bridge-review",
+        "independent_of_producer": false,
+        "method": {
+          "environment_root": "sha256:7a46c6ce151a0c049a8d9b96202f1b7f2aa96c0b5b416df93f8d47058737d405",
+          "implementation": "methods/erdos-321/terminal-bridge-scope-review-gpt-5.6-sol.v1.json",
+          "profile": "erdos-321-terminal-bridge-scope-gpt-5.6-sol-v1"
+        },
+        "outcome": "pass",
+        "path": "records/verifications/sha256/223429dabd56a629bfe7737cffdf97cb099e3fd060691b3d0e35a278fb5ef225.json",
+        "property": "terminal_bridge_scope",
+        "raw_sha256": "sha256:223429dabd56a629bfe7737cffdf97cb099e3fd060691b3d0e35a278fb5ef225",
+        "shared_dependencies": [
+          "same Math repository, exact retained source package, and OpenAI/Codex operator context"
+        ],
+        "size": 2340
+      },
+      {
+        "actor_class": "agent",
+        "actor_id": "agent:codex-levers-claims-research",
+        "independent_of_producer": true,
+        "method": {
+          "environment_root": "sha256:ae933947c8b96cd10d925dd0b28a01b152a1bb74eea459d51993e6fa547fffa5",
+          "implementation": "methods/erdos-321/terminal-bridge-scope-openai-codex-peer.v1.json",
+          "profile": "erdos-321-terminal-bridge-scope-openai-codex-peer-v1"
+        },
+        "outcome": "pass",
+        "path": "records/verifications/sha256/203ca47346ff9282392265188f6f6e7c6fc84d1d7fca11b89f295913c35b9a1c.json",
+        "property": "terminal_bridge_scope",
+        "raw_sha256": "sha256:203ca47346ff9282392265188f6f6e7c6fc84d1d7fca11b89f295913c35b9a1c",
+        "shared_dependencies": [
+          "retained definition-correspondence.v2 same-quantity correspondence",
+          "Math-retained comparison and repair-disposition builder",
+          "same local source clones and OpenAI/Codex operator infrastructure"
+        ],
+        "size": 2540
+      }
+    ]
+  },
+  "authority_effect": "none",
+  "case": "erdos:321",
+  "content_root": "sha256:b0aeb164a1cc9b5e6110186631703f9e104e0f8e9942f538848a49534ba2f8c9",
+  "content_root_definition": "sha256 of canonical JSON after removing only content_root",
+  "historical_impact": {
+    "content_root": "sha256:e43ca42426ca54c55703baaee351657015019fae36e7e627f6cda0d44b22d513",
+    "path": "evidence/erdos-321/correction-impact/correction-impact.v1.json",
+    "raw_sha256": "sha256:44228f0ecf806f5f9c6a19237b0259cd6a26c4dc923e38a10b943db390512bb0",
+    "size": 19704
+  },
+  "nonclaims": [
+    "Closing the bounded investigation does not prove that no bridge exists.",
+    "Both terminal-to-fixed relations remain unresolved rather than unaffected.",
+    "The source-local remap reports the accepted Claim and has no authority effect of its own.",
+    "Actor class is provenance; the independent Verification and Decision are evaluated by method, scope, independence, and Repository authority."
+  ],
+  "relation_remap": [
+    {
+      "current": "unresolved",
+      "id": "terminal_to_fixed_lower",
+      "prior": "unresolved",
+      "reason": "The accepted negative scope Claim establishes that the retained basis does not prove the implication; it does not supply a bridge theorem."
+    },
+    {
+      "current": "unresolved",
+      "id": "terminal_to_fixed_upper",
+      "prior": "unresolved",
+      "reason": "The accepted negative scope Claim establishes that the retained basis does not prove the implication; it does not supply a bridge theorem."
+    }
+  ],
+  "repair_disposition": {
+    "content_root": "sha256:098e9fa958a17a59bdb4b618f48c4b7032d6543d05bf1a2eab1c62b6d195f147",
+    "path": "evidence/erdos-321/terminal-variants/repair-disposition/repair-disposition.v1.json",
+    "raw_sha256": "sha256:686afca638f62961384fae50c749298e9b64421cbaabbfd1fdeb39f3be8d0bd3",
+    "size": 4800
+  },
+  "repair_obligation": {
+    "closure_claim_id": "vcl_c2934683423e1961929339fdef54a49a92b268d329992b79a31b336608427cfc",
+    "current_status": "closed_unsupported_by_retained_basis",
+    "prior_status": "open",
+    "reopen_only_if": "A rooted common-source port or new retained evidence supplies an explicit bridge candidate for kernel checking.",
+    "standing_effect": "none"
+  },
+  "schema": "vela.math.erdos321-terminal-bridge-remap.v1"
+}
