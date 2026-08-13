@@ -29,8 +29,10 @@ vela replay . --json
   and explicit incomplete gates. The companion
   [cross-layer conformance matrix](evidence/formal-conjectures/conformance/README.md)
   prevents audit, activity, projection, signature, Decision, and Standing
-  concepts from collapsing when later adapters are implemented. Both are
-  source-local evidence with no authority effect.
+  concepts from collapsing. The
+  [strict source adapter](evidence/formal-conjectures/source-adapter/README.md)
+  retains and validates the public audit records, then emits a rooted bounded
+  read projection. All three are source-local evidence with no authority effect.
 - [Erdős 321 translation](evidence/erdos-321/translation/README.md) retains exact
   Lean source snapshots and derives W3C Web Annotations, a rooted semantic fact
   diff, an explicit loss report, and a Workflow Run RO-Crate. It is
