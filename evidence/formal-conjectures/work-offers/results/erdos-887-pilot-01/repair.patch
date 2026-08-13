@@ -1,0 +1,8 @@
+diff --git a/FormalConjectures/ErdosProblems/887.lean b/FormalConjectures/ErdosProblems/887.lean
+--- a/FormalConjectures/ErdosProblems/887.lean
++++ b/FormalConjectures/ErdosProblems/887.lean
+@@ -35,2 +35,2 @@
+-theorem erdos_887 : ∀ C > (0 : ℝ), ∀ᶠ n in atTop,
+-    #{ d ∈ Ioo ⌊√n⌋ ⌈√n + C * n^((1 : ℝ) / 4)⌉ | d ∣ n } ≤ answer(sorry) := by
++theorem erdos_887 : answer(sorry) ↔ ∃ K, ∀ C > (0 : ℝ), ∀ᶠ n in atTop,
++    #{ d ∈ Ioo ⌊√n⌋ ⌈√n + C * n^((1 : ℝ) / 4)⌉ | d ∣ n } ≤ K := by
