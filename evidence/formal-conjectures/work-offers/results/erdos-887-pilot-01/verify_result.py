@@ -14,7 +14,7 @@ HERE = Path(__file__).resolve().parent
 RESULT = HERE / "result.v1.json"
 CHECK = HERE / "lean-check.v1.json"
 PATCH = HERE / "repair.patch"
-PACKET = HERE.parents[1] / "packets/erdos-887-pr-1237-fidelity-repair.v1.json"
+PACKET = HERE / "target-packet.v1.json"
 
 
 class ResultError(ValueError):
@@ -56,24 +56,6 @@ def raw_root(raw: bytes) -> str:
     return "sha256:" + hashlib.sha256(raw).hexdigest()
 
 
-def historical_packet_root(packet: dict[str, Any]) -> str:
-    """Recover the pre-execution-component packet root used by pilot 01."""
-    historical = copy.deepcopy(packet)
-    historical.pop("execution_components", None)
-    historical["expected_return"]["required_fields"] = [
-        "target_id",
-        "packet_root",
-        "producer",
-        "result_status",
-        "source_patch_root",
-        "check_result_root",
-        "semantic_review",
-        "source_roots",
-        "nonclaims",
-    ]
-    return root(historical, "packet_root")
-
-
 def verify() -> dict[str, Any]:
     packet = load(PACKET)
     check = load(CHECK)
@@ -85,7 +67,9 @@ def verify() -> dict[str, Any]:
         raise ResultError("unsupported check schema")
     if result.get("authority_effect") != "none" or check.get("authority_effect") != "none":
         raise ResultError("result or check claims authority")
-    if result.get("target_id") != packet["target"]["id"] or result.get("packet_root") != historical_packet_root(packet):
+    if packet.get("packet_root") != root(packet, "packet_root"):
+        raise ResultError("historical Target packet root drift")
+    if result.get("target_id") != packet["target"]["id"] or result.get("packet_root") != packet["packet_root"]:
         raise ResultError("Target or packet root drift")
     expected_patch_root = raw_root(patch_raw)
     if result.get("source_patch_root") != expected_patch_root:

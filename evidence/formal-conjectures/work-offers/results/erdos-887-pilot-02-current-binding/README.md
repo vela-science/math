@@ -4,6 +4,10 @@ This directory retains a new execution of the current public `erdos:887` work
 offer. It does not overwrite or rebind `erdos-887-pilot-01`. The result carries
 the complete `vela.execution-binding.v1` published by the current index and is
 rooted to its packet, producer profile, verifier capsule, and result contract.
+`target-packet.v1.json` and `work-offer-index.v1.json` retain the exact offer
+bytes that were current for this execution. Later Repository writes may advance
+the live offer; the result remains verifiable against these retained inputs and
+must then be classified as historical rather than silently rebound.
 
 The producer used a fresh detached local checkout of Formal Conjectures commit
 `288608562e684a2f3c97ba0ce960a2649a71370b`, applied `repair.patch`, and checked

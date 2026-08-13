@@ -14,8 +14,8 @@ from typing import Any
 HERE = Path(__file__).resolve().parent
 WORK_OFFERS = HERE.parents[1]
 REPO_ROOT = WORK_OFFERS.parents[2]
-PACKET = WORK_OFFERS / "packets/erdos-887-pr-1237-fidelity-repair.v1.json"
-INDEX = WORK_OFFERS / "index.v1.json"
+PACKET = HERE / "target-packet.v1.json"
+INDEX = HERE / "work-offer-index.v1.json"
 PATCH = HERE / "repair.patch"
 CHECK = HERE / "lean-check.v1.json"
 RESULT = HERE / "result.v1.json"
@@ -79,17 +79,17 @@ def raw_root(raw: bytes) -> str:
     return "sha256:" + hashlib.sha256(raw).hexdigest()
 
 
-def current_binding() -> tuple[dict[str, Any], dict[str, Any]]:
+def retained_execution_binding() -> tuple[dict[str, Any], dict[str, Any]]:
     packet = load(PACKET)
     index = load(INDEX)
     targets = index.get("targets")
     if not isinstance(targets, list) or len(targets) != 1 or targets[0].get("id") != "erdos:887":
-        raise ResultBuildError("current work-offer inventory drift")
+        raise ResultBuildError("retained work-offer inventory drift")
     binding = targets[0].get("execution_binding")
     if not isinstance(binding, dict) or binding.get("schema") != "vela.execution-binding.v1":
-        raise ResultBuildError("current execution binding is missing")
+        raise ResultBuildError("retained execution binding is missing")
     if binding.get("packet_root") != packet.get("packet_root") or packet.get("packet_root") != root(packet, "packet_root"):
-        raise ResultBuildError("current packet binding drift")
+        raise ResultBuildError("retained packet binding drift")
     components = packet.get("execution_components")
     expected = {
         "schema": "vela.execution-binding.v1",
@@ -232,7 +232,7 @@ def validate_result(result: dict[str, Any], binding: dict[str, Any]) -> None:
 
 
 def build() -> tuple[dict[str, Any], bytes, dict[str, Any], bytes]:
-    packet, binding = current_binding()
+    packet, binding = retained_execution_binding()
     check = build_check(binding)
     check_raw = canonical(check) + b"\n"
     patch_raw = PATCH.read_bytes()

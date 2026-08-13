@@ -23,8 +23,18 @@ class ResultTest(unittest.TestCase):
         self.assertEqual(result["target_id"], "erdos:887")
         self.assertEqual(result["authority_effect"], "none")
         self.assertEqual(result["semantic_review"]["status"], "pending")
-        self.assertEqual(result["packet_root"], MODULE.historical_packet_root(packet))
-        self.assertNotEqual(result["packet_root"], packet["packet_root"])
+        self.assertEqual(result["packet_root"], packet["packet_root"])
+        self.assertNotIn("execution_components", packet)
+
+    def test_historical_packet_drift_refuses(self) -> None:
+        changed = copy.deepcopy(MODULE.load(MODULE.PACKET))
+        changed["repository"]["repository_root"] = "sha256:" + "0" * 64
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "packet.json"
+            path.write_bytes(MODULE.canonical(changed) + b"\n")
+            with patch.object(MODULE, "PACKET", path):
+                with self.assertRaisesRegex(MODULE.ResultError, "historical Target packet root drift"):
+                    MODULE.verify()
 
     def test_target_or_authority_drift_refuses(self) -> None:
         original = MODULE.load(MODULE.RESULT)

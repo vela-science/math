@@ -23,11 +23,24 @@ CAPSULE_SPEC.loader.exec_module(CAPSULE)
 
 
 class CurrentResultTest(unittest.TestCase):
+    def retained_capsule_binding(self) -> dict[str, str]:
+        original_load = CAPSULE.load
+
+        def retained_load(path: Path):
+            if path == CAPSULE.PACKET:
+                return original_load(BUILD.PACKET)
+            if path == CAPSULE.INDEX:
+                return original_load(BUILD.INDEX)
+            return original_load(path)
+
+        with patch.object(CAPSULE, "load", side_effect=retained_load):
+            return CAPSULE.verify_binding()
+
     def test_frozen_result_matches_current_binding_and_capsule(self) -> None:
         check, check_raw, result, result_raw = BUILD.build()
         self.assertEqual(BUILD.CHECK.read_bytes(), check_raw)
         self.assertEqual(BUILD.RESULT.read_bytes(), result_raw)
-        binding = CAPSULE.verify_binding()
+        binding = self.retained_capsule_binding()
         self.assertEqual(result["execution_binding"], binding)
         self.assertEqual(result["packet_root"], binding["packet_root"])
         self.assertEqual(CAPSULE.verify_result(BUILD.RESULT, binding), result["result_root"])
@@ -75,7 +88,7 @@ class CurrentResultTest(unittest.TestCase):
         def changed_load(path: Path):
             return changed if path == BUILD.INVENTORY else original_load(path)
 
-        _, binding = BUILD.current_binding()
+        _, binding = BUILD.retained_execution_binding()
         with patch.object(BUILD, "load", side_effect=changed_load):
             with self.assertRaisesRegex(BUILD.ResultBuildError, "dependency source HEAD evidence drift"):
                 BUILD.build_check(binding)
@@ -87,6 +100,17 @@ class CurrentResultTest(unittest.TestCase):
         self.assertNotEqual(historical["packet_root"], current["packet_root"])
         self.assertNotEqual(historical["result_root"], current["result_root"])
 
+    def test_retained_result_is_valid_but_stale_against_live_offer(self) -> None:
+        _, retained_binding = BUILD.retained_execution_binding()
+        live_binding = CAPSULE.verify_binding()
+        self.assertNotEqual(retained_binding["packet_root"], live_binding["packet_root"])
+        self.assertEqual(
+            CAPSULE.verify_result(BUILD.RESULT, retained_binding),
+            BUILD.load(BUILD.RESULT)["result_root"],
+        )
+        with self.assertRaisesRegex(CAPSULE.BindingError, "execution binding drift"):
+            CAPSULE.verify_result(BUILD.RESULT, live_binding)
+
     def test_changed_stage_and_retained_manifest_refuse(self) -> None:
         transcript = BUILD.load(BUILD.TRANSCRIPT)
         changed = copy.deepcopy(transcript)
@@ -97,7 +121,7 @@ class CurrentResultTest(unittest.TestCase):
         def changed_load(path: Path):
             return changed if path == BUILD.TRANSCRIPT else original_load(path)
 
-        _, binding = BUILD.current_binding()
+        _, binding = BUILD.retained_execution_binding()
         with patch.object(BUILD, "load", side_effect=changed_load):
             with self.assertRaisesRegex(BUILD.ResultBuildError, "execution transcript stage binding drift"):
                 BUILD.build_check(binding)
@@ -110,7 +134,7 @@ class CurrentResultTest(unittest.TestCase):
                     BUILD.build_check(binding)
 
     def test_binding_authority_and_human_review_drift_refuse(self) -> None:
-        _, binding = BUILD.current_binding()
+        _, binding = BUILD.retained_execution_binding()
         _, _, result, _ = BUILD.build()
         cases = []
         changed = copy.deepcopy(result)
