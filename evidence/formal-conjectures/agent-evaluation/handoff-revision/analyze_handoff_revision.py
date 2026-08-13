@@ -20,6 +20,8 @@ DESIGN = HERE / "handoff-revision-design.v0.2.json"
 ALLOCATION = HERE / "handoff-revision-allocation.v0.2.json"
 SCHEMA = HERE / "receiver-output.schema.v0.2.json"
 RUNNER = HERE / "run_handoff_revision.py"
+AMENDMENT = HERE / "execution-amendment.v0.2.json"
+FAILED_MANIFEST = HERE / "failed-attempt-01-invalid-schema" / "failure-manifest.v0.2.json"
 RUNS = HERE / "runs"
 INDEX = HERE / "handoff-revision-observation-index.v0.2.json"
 RESULTS = HERE / "handoff-revision-results.v0.2.json"
@@ -147,7 +149,7 @@ def main() -> None:
         disposition, rationale = "retain_source_locally", "The compact handoff does not reduce paired receiver time."
     else:
         disposition, rationale = "revise", "The compact handoff misses at least one frozen threshold."
-    index: dict[str, Any] = {"schema": "vela.math.fc-audit.handoff-revision-observation-index.v0.2", "authority_effect": "none", "design": descriptor(DESIGN), "allocation": descriptor(ALLOCATION), "observation_count": len(observations), "observations": sorted(observations, key=lambda item: item["path"]), "rows": rows}
+    index: dict[str, Any] = {"schema": "vela.math.fc-audit.handoff-revision-observation-index.v0.2", "authority_effect": "none", "design": descriptor(DESIGN), "allocation": descriptor(ALLOCATION), "execution_amendment": descriptor(AMENDMENT), "failed_attempt": descriptor(FAILED_MANIFEST), "observation_count": len(observations), "observations": sorted(observations, key=lambda item: item["path"]), "rows": rows}
     index["index_root"] = root(index, "index_root")
     INDEX.write_text(json.dumps(index, indent=2) + "\n")
     results: dict[str, Any] = {
@@ -156,6 +158,8 @@ def main() -> None:
         "authority_effect": "none",
         "design": descriptor(DESIGN),
         "allocation": descriptor(ALLOCATION),
+        "execution_amendment": descriptor(AMENDMENT),
+        "failed_attempt": descriptor(FAILED_MANIFEST),
         "observation_index": descriptor(INDEX),
         "analysis_implementation": descriptor(Path(__file__).resolve()),
         "model_provenance": load(DESIGN)["reviewer_policy"],

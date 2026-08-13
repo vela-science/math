@@ -1,0 +1,25 @@
+{
+  "schema": "vela.math.fc-audit.handoff-revision-execution-amendment.v0.2",
+  "authority_effect": "none",
+  "attempt": "failed-attempt-01-invalid-schema",
+  "failure": {
+    "stage": "provider response-schema validation before model inference",
+    "provider_code": "invalid_json_schema",
+    "cause": "retained_issue_codes used the unsupported uniqueItems JSON Schema keyword",
+    "affected_contexts": 30,
+    "model_outputs": 0
+  },
+  "correction": {
+    "change": "remove uniqueItems from the provider-facing schema and enforce issue-code uniqueness in the retained runner",
+    "outcome_fields_changed": false,
+    "allocation_changed": false,
+    "prompt_changed": false,
+    "sample_changed": false
+  },
+  "rerun_rule": "one amended run of the same 30 predeclared contexts is permitted because the failed attempt produced no model output; retain both attempts",
+  "nonclaims": [
+    "the failed attempt is not an outcome observation",
+    "the amendment does not authorize retry after a model output",
+    "no authority or Standing effect"
+  ]
+}

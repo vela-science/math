@@ -1,0 +1,467 @@
+{
+  "schema": "vela.math.fc-audit.handoff-revision-failed-attempt.v0.2",
+  "authority_effect": "none",
+  "attempt": "failed-attempt-01-invalid-schema",
+  "observation_count": 30,
+  "terminal_states": {
+    "error": 30
+  },
+  "model_output_count": 0,
+  "files": [
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s01-02--compact_attributed_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:90d5950da68367e1715803c057e24f493d0b0ec88bf4c2a0fc8c1b2a6eb486a0"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s01-02--compact_attributed_handoff.observation.json",
+      "size": 1524,
+      "raw_sha256": "sha256:20bf278afd9878b44d3713ab37e8ae8da78c4f2246cb18f07f58526f8ef67f9b"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s01-02--compact_attributed_handoff.stderr.txt",
+      "size": 146,
+      "raw_sha256": "sha256:31ae1361085aec32edb2f486698ed2580571b6d10337fce136f74bc8d447f9ba"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s01-02--legacy_full_audit_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:47e999a5611b986733a30c93ff68a38212185a9b27a0c1a382341d1c7caad60b"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s01-02--legacy_full_audit_handoff.observation.json",
+      "size": 1518,
+      "raw_sha256": "sha256:91aabdb3ce85eb476ff4dbf4adffe1c1d1861a8a04d045d65ac15feba4a0f0d4"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s01-02--legacy_full_audit_handoff.stderr.txt",
+      "size": 146,
+      "raw_sha256": "sha256:0ac7dd02964d2c170f32a290ef69f3db1c94fc6d47697206a189eeff21669fa6"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s01-04--compact_attributed_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:bd8f9bd20bc228c62b91dcd33011afe950bccf8a40f50d149e4743db6e1a4a10"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s01-04--compact_attributed_handoff.observation.json",
+      "size": 1514,
+      "raw_sha256": "sha256:1945366fbcb5f53b31658e4ae6a41edb1c2ffca32cccb5c376efbbc93ffadf7d"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s01-04--compact_attributed_handoff.stderr.txt",
+      "size": 146,
+      "raw_sha256": "sha256:af694646c0ff983605ff15422cc2629b8fc81ce7dec2b209ba9582937714c5a8"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s01-04--legacy_full_audit_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:9aeca21e28c80c889ba804bd9a7c20eb09b78adda0e18ece19c5cdfa15aa0ff1"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s01-04--legacy_full_audit_handoff.observation.json",
+      "size": 1509,
+      "raw_sha256": "sha256:ddda216eb940d887b14f4af012317b48efacea7cd3cb97299dee438bcc804c84"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s01-04--legacy_full_audit_handoff.stderr.txt",
+      "size": 146,
+      "raw_sha256": "sha256:5a25372bff169a346ef5da5a969d71eea318b7650b70608b0c43aa81c40c00c7"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-01--compact_attributed_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:842d5d570aa8f352b5ce0a9342503cee60f06a55867d720548430d9613521c81"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-01--compact_attributed_handoff.observation.json",
+      "size": 1548,
+      "raw_sha256": "sha256:592b14a53a881f9085fad3acd99a3fb20f65fcdd6941c865047d64f60fdc05ba"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-01--compact_attributed_handoff.stderr.txt",
+      "size": 146,
+      "raw_sha256": "sha256:1072ae474fa657f769dd0eba3cacf3632de88932f9b192bf4a815fd985ef036e"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-01--legacy_full_audit_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:2f4ce44412421ee4c3de1b9db95ff0409445b3b0172ce7bb9d9441b4c9498923"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-01--legacy_full_audit_handoff.observation.json",
+      "size": 1542,
+      "raw_sha256": "sha256:974dc0add6e99cc5a29fc054b720f7aafc48ea6a33b98318ef04323e9250d2c7"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-01--legacy_full_audit_handoff.stderr.txt",
+      "size": 146,
+      "raw_sha256": "sha256:e399e84c39da0e0078212d0adeb1dac5b54ddba3211bfd7a3c6e8d9c041921fd"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-03--compact_attributed_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:dea8b4f5652dfd8ff81134976efde9bf4008d28f19d3f1fcf95a29f3a0fbf879"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-03--compact_attributed_handoff.observation.json",
+      "size": 1516,
+      "raw_sha256": "sha256:42297d0606d72f2092450051e733588153496da46c430746c001f39dcba8513c"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-03--compact_attributed_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-03--legacy_full_audit_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:a48b6b4c6dd9fa2a5a2f20678b52f823d2d8098b6bacd8eded1982eced16b6c6"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-03--legacy_full_audit_handoff.observation.json",
+      "size": 1511,
+      "raw_sha256": "sha256:939b455414cb82b0aef7213d00f909b74847842c5b912fe49075d457b7b25eff"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-03--legacy_full_audit_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-05--compact_attributed_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:161d16b7c5c587d5975e946d0975e9517fd24ca1367d4ba3951da8db3dcffce9"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-05--compact_attributed_handoff.observation.json",
+      "size": 1516,
+      "raw_sha256": "sha256:e65245f1bcded4510edb71fdcbf682f012158d6c897d4f23b601dd2c09d8acb1"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-05--compact_attributed_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-05--legacy_full_audit_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:600fcd69edad7631bc669415743d1121288dc4d319533a87dceaf2c4512d5475"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-05--legacy_full_audit_handoff.observation.json",
+      "size": 1511,
+      "raw_sha256": "sha256:b92b545a8ae9cf96c39b7da5b26204a9c0045edf8e282ccda48ff48e1040b1ef"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s02-05--legacy_full_audit_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s03-03--compact_attributed_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:63d1d70ffbe665d95facc176cd5bca3e43b7d3329f227e137505e331917be573"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s03-03--compact_attributed_handoff.observation.json",
+      "size": 1516,
+      "raw_sha256": "sha256:75bd2e9e152d18b91ea93565f3fbe45d555bb8d7b1e8b5f6b71c365657f8613f"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s03-03--compact_attributed_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s03-03--legacy_full_audit_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:405661a249f419d2cc57b835e1c048f9a1ee38c610eed00f793e6c772b34291c"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s03-03--legacy_full_audit_handoff.observation.json",
+      "size": 1511,
+      "raw_sha256": "sha256:7e8d917ee501fcbbf3b50b6a73f0dc3a7bb7c2c5c516331c95842b8f259423c6"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s03-03--legacy_full_audit_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s03-04--compact_attributed_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:35504dba67540dce09b6752756fa51722c8a80b4cb3eebe12d1c6048c000a453"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s03-04--compact_attributed_handoff.observation.json",
+      "size": 1512,
+      "raw_sha256": "sha256:6669ee8bb65d8b1770938d2664b3ad5d2a728216891e8bd2c1c33776e14285b9"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s03-04--compact_attributed_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s03-04--legacy_full_audit_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:31d90c3afee72d0771bb82f8dbb4d9b16564fd584f0033c7c1cbde19b210f7dc"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s03-04--legacy_full_audit_handoff.observation.json",
+      "size": 1506,
+      "raw_sha256": "sha256:e4d197f51759b5cd28f6263f7c018cdc4aa1a3f1587225b2e8c70cd4c4d2cbc9"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s03-04--legacy_full_audit_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-01--compact_attributed_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:8683b87db2e313486683581f12ffc0714d157977b17e591f378bdfa487a09099"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-01--compact_attributed_handoff.observation.json",
+      "size": 1546,
+      "raw_sha256": "sha256:7f7832b05a94d754adfbeeba5fd9e79103ab12ca8927ee8604cb4a9a289835d2"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-01--compact_attributed_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-01--legacy_full_audit_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:0e30afd44ae14e3e8da2c7e002f7cd52e47dcbe41fa166fff43dc0447d0dee4b"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-01--legacy_full_audit_handoff.observation.json",
+      "size": 1541,
+      "raw_sha256": "sha256:a06118954c7c1e29914fb8697eda1d42f6a4b873e71e58bd954ba0681f8c3ce9"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-01--legacy_full_audit_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-02--compact_attributed_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:d027c53ac7f32229af2df3b08f9a69be9d1f12e6dc08cf76ed6aef7f1da40808"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-02--compact_attributed_handoff.observation.json",
+      "size": 1523,
+      "raw_sha256": "sha256:7eac4c8ab287a34d43eb92203b8f221c00c32c2ba44d9d169b05ced0b5f86d23"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-02--compact_attributed_handoff.stderr.txt",
+      "size": 146,
+      "raw_sha256": "sha256:630033fbc84294e86bb3d5906b16b422d48ec777f72b0c2c9a63eae5333cc3c0"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-02--legacy_full_audit_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:82c06b30b86d836045b998acb846555638bf105adf7ec773b2be503e99cec690"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-02--legacy_full_audit_handoff.observation.json",
+      "size": 1517,
+      "raw_sha256": "sha256:eac144c2ac91efce3df2d22579eed62be46e4380af7a504cb8832b7c039541b4"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-02--legacy_full_audit_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-05--compact_attributed_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:53b33132c3bc5cb8e188ab88cf0ce7ad7d40729825d81587838b1d52ad17d819"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-05--compact_attributed_handoff.observation.json",
+      "size": 1515,
+      "raw_sha256": "sha256:d63ce00abdcc4f258594351aae6721f33496e4922480403cef50933667d8f9d1"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-05--compact_attributed_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-05--legacy_full_audit_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:54674af730d07d2b864394ea12a240c751ec4c2d2e99ef46db2b2eac9925101f"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-05--legacy_full_audit_handoff.observation.json",
+      "size": 1511,
+      "raw_sha256": "sha256:5b89df50b8f763958d93da3bc16eaab3d6edf2a05408c04dbffe5ce39b4c6045"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s04-05--legacy_full_audit_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s05-02--compact_attributed_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:70d392005892cf37d028a5019bfa1780600711528ea3437b9e5f2bbee294adf5"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s05-02--compact_attributed_handoff.observation.json",
+      "size": 1522,
+      "raw_sha256": "sha256:04975ebfc7a77be881ab7bca42529b79af710c7e39b681505b3f640fcc3fff28"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s05-02--compact_attributed_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s05-02--legacy_full_audit_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:b9994c98ccb77c9bf099b833f2e15288e948a61ed9ef20e1c811b5ecbf246a78"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s05-02--legacy_full_audit_handoff.observation.json",
+      "size": 1519,
+      "raw_sha256": "sha256:75200630cdc92ced301ef3db96d50178c03e9dd71528c8cb2354f2ed4374277e"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s05-02--legacy_full_audit_handoff.stderr.txt",
+      "size": 146,
+      "raw_sha256": "sha256:5c6536415e130ed90e864d044326e789e0899dced603f0b8cd2422b1879fc159"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s05-03--compact_attributed_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:c2f714efeda75037327372338cfd634e31d449c067337efd4bd900a9533cb663"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s05-03--compact_attributed_handoff.observation.json",
+      "size": 1516,
+      "raw_sha256": "sha256:d614fce4903d50233e1ae4996c7aa0da1a317b57262cd25d4703122e42e6232c"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s05-03--compact_attributed_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s05-03--legacy_full_audit_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:18ce6c9b51e2249b35eaa8c374b160185bb01c56567d15c8562bab07c2f5d1c5"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s05-03--legacy_full_audit_handoff.observation.json",
+      "size": 1511,
+      "raw_sha256": "sha256:fd42e8decfb1ee0888db095e30b7b2bb4d56e9ff56ed16edcb7a1f12ecf1fd92"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s05-03--legacy_full_audit_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-01--compact_attributed_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:6a250d7d3d02ff44c2377349543b3f2a8a502e5b94fc6dcdffe17cf5f4d80c33"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-01--compact_attributed_handoff.observation.json",
+      "size": 1546,
+      "raw_sha256": "sha256:90e8d6db42e191e7e9fe69a0e6e05b0c728d5d06bc86fa126eeda83ae76c7c20"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-01--compact_attributed_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-01--legacy_full_audit_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:c782dd2f607add63118c75725e64a28eef53185d4264f25acd7ecaf1a73d64ef"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-01--legacy_full_audit_handoff.observation.json",
+      "size": 1540,
+      "raw_sha256": "sha256:9fc37ae92560d6e5d01903dc13aa08c9a9850b897721a1457f601184925e2400"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-01--legacy_full_audit_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-04--compact_attributed_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:7489f0ae4309f2f9358b1109205cabfa1b596a4ee18b167be179eff12b6967f2"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-04--compact_attributed_handoff.observation.json",
+      "size": 1511,
+      "raw_sha256": "sha256:fa505f30cb40ab8c26354453dad4b4f5726584f666ae81dfaf0f253e40c5feab"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-04--compact_attributed_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-04--legacy_full_audit_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:df2e1e88ffe1aa8fa2cf3a60b65083e2c6890a600870330c93655b0d43c90a57"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-04--legacy_full_audit_handoff.observation.json",
+      "size": 1506,
+      "raw_sha256": "sha256:c07addf3a45471b73cfa4a7892e964da516893487d39fa77a61a9d243203406c"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-04--legacy_full_audit_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-05--compact_attributed_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:0dac78c1fd67bc3eb067dbcfc1bbef832608ad1dfe01ee2e6246ee4c8c5ddf30"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-05--compact_attributed_handoff.observation.json",
+      "size": 1515,
+      "raw_sha256": "sha256:337515e409eac2061f470b339587fa78bee8a26da097627e1d2fbeb5a80b96ed"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-05--compact_attributed_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-05--legacy_full_audit_handoff.events.jsonl",
+      "size": 885,
+      "raw_sha256": "sha256:092eabcf6d3082bae4e4e613697a4206adbe7530ba9c2efe7fd7cc00312e67f9"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-05--legacy_full_audit_handoff.observation.json",
+      "size": 1511,
+      "raw_sha256": "sha256:781a99fefe28652fa3e7e03ee100c8c827b066ce00467d59079bdf9c9daa6c9e"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/runs/s06-05--legacy_full_audit_handoff.stderr.txt",
+      "size": 0,
+      "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "does_not_establish": [
+    "No model outcome was observed.",
+    "The failure is an execution finding, not evidence about either handoff interface."
+  ],
+  "failure_root": "sha256:0d4523207f7d6685e0286ed779349320f325dcc81f59f67000fbffa29ef7d89e"
+}

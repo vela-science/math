@@ -30,3 +30,9 @@ python3 -B evidence/formal-conjectures/agent-evaluation/handoff-revision/analyze
 The design and allocation are frozen before receiver execution. Runs are
 append-only: an existing observation causes the runner to refuse rather than
 retry.
+
+The first execution attempt is retained under
+`failed-attempt-01-invalid-schema/`. The provider rejected `uniqueItems` before
+inference in all 30 contexts, so the attempt contains no model output. The
+rooted execution amendment removes that unsupported keyword, keeps the outcome
+schema and allocation fixed, and permits one amended run.

@@ -1,0 +1,34 @@
+{
+  "schema": "vela.math.fc-audit.handoff-revision-observation.v0.2",
+  "authority_effect": "none",
+  "observation_id": "agent-eval-handoff-s04-01::handoff-revision-v0.2::legacy_full_audit_handoff",
+  "pair_id": "agent-eval-handoff-s04-01::handoff-revision-v0.2",
+  "fixture_id": "clean-source-faithful-min-modulus-4829",
+  "condition": "legacy_full_audit_handoff",
+  "task_context_id": "agent:codex-eval-receiver-v02-legacy_full_audit_handoff-s04-clean-source-faithful-min-modulus-4829",
+  "packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa",
+  "runner": {
+    "model": "gpt-5.6-sol",
+    "runtime": "codex-cli 0.145.0",
+    "reasoning_effort": "high"
+  },
+  "started_at": "2026-08-13T21:29:32.211Z",
+  "completed_at": "2026-08-13T21:29:33.596Z",
+  "elapsed_seconds": 1.3841089579509571,
+  "terminal_state": "error",
+  "return_code": 1,
+  "usage": null,
+  "output": null,
+  "events": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s04-01--legacy_full_audit_handoff.events.jsonl",
+    "size": 885,
+    "raw_sha256": "sha256:0e30afd44ae14e3e8da2c7e002f7cd52e47dcbe41fa166fff43dc0447d0dee4b"
+  },
+  "stderr": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s04-01--legacy_full_audit_handoff.stderr.txt",
+    "size": 0,
+    "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "parse_error": null,
+  "observation_root": "sha256:df1ca742ea4122e3677790bad01a8ec31e5f868ca418af988968c5b1eaf45f48"
+}

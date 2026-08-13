@@ -20,6 +20,7 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[3]
 ALLOCATION = HERE / "handoff-revision-allocation.v0.2.json"
 SCHEMA_PATH = HERE / "receiver-output.schema.v0.2.json"
+AMENDMENT_PATH = HERE / "execution-amendment.v0.2.json"
 RUNS = HERE / "runs"
 MODEL = "gpt-5.6-sol"
 RUNTIME = "codex-cli 0.145.0"
@@ -133,6 +134,8 @@ def run_one(assignment: dict[str, Any]) -> dict[str, Any]:
             if output is None:
                 raise ValueError("missing output")
             jsonschema.Draft202012Validator(load(SCHEMA_PATH)).validate(output)
+            if len(output["retained_issue_codes"]) != len(set(output["retained_issue_codes"])):
+                raise ValueError("output repeats an issue code")
             expected = {
                 "fixture_id": assignment["fixture_id"],
                 "condition": assignment["condition"],
@@ -165,6 +168,7 @@ def run_one(assignment: dict[str, Any]) -> dict[str, Any]:
         "task_context_id": assignment["receiver_task_context_id"],
         "packet_root": assignment["packet_root"],
         "runner": {"model": MODEL, "runtime": RUNTIME, "reasoning_effort": "high"},
+        "execution_amendment": {"path": AMENDMENT_PATH.relative_to(REPO).as_posix(), "raw_sha256": digest(AMENDMENT_PATH.read_bytes())},
         "started_at": started_at,
         "completed_at": now(),
         "elapsed_seconds": elapsed,

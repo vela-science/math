@@ -11,7 +11,7 @@
     "packet_root": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
     "sender_output_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
     "retained_verdict": {"enum": ["clean", "minor_issues", "needs_revision", "inconclusive", "unavailable", "error"]},
-    "retained_issue_codes": {"type": "array", "uniqueItems": true, "items": {"enum": ["conditional_proof_dependency", "answer_slot_scope", "vacuous_hypothesis", "exact_artifact_identity_unavailable", "other"]}},
+    "retained_issue_codes": {"type": "array", "items": {"enum": ["conditional_proof_dependency", "answer_slot_scope", "vacuous_hypothesis", "exact_artifact_identity_unavailable", "other"]}},
     "provenance_bindings": {
       "type": "object",
       "additionalProperties": false,

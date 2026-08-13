@@ -86,6 +86,13 @@ class HandoffRevisionTest(unittest.TestCase):
         del partial["provenance_bindings"]["source_commit"]
         self.assertRaises(jsonschema.ValidationError, validator.validate, partial)
 
+    def test_failed_attempt_is_complete_and_pre_inference(self):
+        manifest = load(HERE / "failed-attempt-01-invalid-schema/failure-manifest.v0.2.json")
+        self.assertEqual(manifest["observation_count"], 30)
+        self.assertEqual(manifest["terminal_states"], {"error": 30})
+        self.assertEqual(manifest["model_output_count"], 0)
+        self.assertEqual(manifest["failure_root"], root(manifest, "failure_root"))
+
 
 if __name__ == "__main__":
     unittest.main()
