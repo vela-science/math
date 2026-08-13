@@ -1,0 +1,34 @@
+{
+  "schema": "vela.math.fc-audit.agent-handoff-receiver-output.v0.2",
+  "fixture_id": "vacuity-erdos-80-4830",
+  "condition": "legacy_full_audit_handoff",
+  "packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+  "sender_output_sha256": "sha256:03f1f2b6854a43b2430e76250f8d603161515061c18517747aa860d8c09be338",
+  "retained_verdict": "needs_revision",
+  "retained_issue_codes": [
+    "vacuous_hypothesis"
+  ],
+  "provenance_bindings": {
+    "source_commit": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+    "source_path": "FormalConjectures/ErdosProblems/80.lean",
+    "source_raw_sha256": "sha256:519cc02b3389c89bc87c16d548c6b028e6bb2c1c3bad410a1758f470de18de4e",
+    "sender_output_sha256": "sha256:03f1f2b6854a43b2430e76250f8d603161515061c18517747aa860d8c09be338",
+    "original_packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+    "evidence_locators_retained": true,
+    "authority_effect": "none"
+  },
+  "continuation_summary": "Confirmed the sender's needs_revision verdict and vacuous_hypothesis issue. At the exact source artifact, Admissible requires c·n² edges while both growth statements quantify over every c > 0. The retained witness c = 2, n = 100 requires 20000 edges although a simple graph has at most 4950, so the admissible set is empty and f is 0; the exact-head build pass does not cure this semantic defect.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [],
+  "next_action": "Restrict c to a satisfiable density range, such as 0 < c < 1/2, in both growth statements, then mechanically build and semantically review the revised exact artifact.",
+  "unsupported_claims": [],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The successful exact-head build check does not establish semantic fidelity or mathematical truth.",
+    "Skipped and unrelated checks are not established as successful.",
+    "PR review, approval, merge, or commit does not establish acceptance, Standing, or any Vela Decision.",
+    "The retained vacuity witness does not establish a complete replacement theorem.",
+    "This receiver continuation has no authority effect."
+  ],
+  "confidence": "high"
+}

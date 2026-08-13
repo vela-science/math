@@ -1,0 +1,52 @@
+{
+  "schema": "vela.math.fc-audit.handoff-revision-program-disposition.v0.2",
+  "authority_effect": "none",
+  "result": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/handoff-revision-results.v0.2.json",
+    "results_root": "sha256:939dea44230b5f8dce0c3d948b255351caec64d0e640b7cc9ad4f6512df78f35",
+    "frozen_hypothesis_supported": false,
+    "frozen_interface_disposition": "revise"
+  },
+  "measured_evidence": {
+    "paired_elapsed_compact_to_legacy_ratio": 0.9138522863671479,
+    "paired_elapsed_interval_90": [
+      0.8725227265984798,
+      0.9556297321002772
+    ],
+    "input_tokens": {
+      "legacy": 478709,
+      "compact": 225085
+    },
+    "verdict_correct": {
+      "legacy": 13,
+      "compact": 13,
+      "denominator": 15
+    },
+    "expected_issue_detected": {
+      "legacy": 15,
+      "compact": 15,
+      "denominator": 15
+    },
+    "provenance_complete": {
+      "legacy": 15,
+      "compact": 15,
+      "denominator": 15
+    },
+    "authority_violations": 0
+  },
+  "decision": {
+    "action": "adopt_compact_handoff_for_receiver_input",
+    "reason": "The compact handoff preserves measured quality, provenance, and authority boundaries while using less than half the input tokens. The observed time reduction is bounded but does not meet the frozen 20 percent threshold.",
+    "next_evaluation": "none_required_for_internal_completion",
+    "revisit_gate": "a real receiver failure, a second consumer requiring omitted bytes, or a materially different model or workflow",
+    "retained_fallback": "the exact full audit bundle remains available by its rooted locators"
+  },
+  "does_not_establish": [
+    "The frozen latency hypothesis remains unsupported.",
+    "The result does not rank humans and agents.",
+    "The result does not establish population-level reviewer quality.",
+    "The program disposition has no Formal Conjectures or Vela authority effect."
+  ],
+  "content_root_definition": "sha256 of canonical JSON after removing only content_root",
+  "content_root": "sha256:30b6bf62eea20234b0296c7a92b882be8b6f07317a0340556e45480d02a19a8a"
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "vela.math.fc-audit.agent-handoff-receiver-output.v0.2",
+  "fixture_id": "conditional-erdos-427-4884",
+  "condition": "compact_attributed_handoff",
+  "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+  "sender_output_sha256": "sha256:eaea6e7c100d21fe272c070b31159a30f99d387f1690a3e014b6d20391575b72",
+  "retained_verdict": "minor_issues",
+  "retained_issue_codes": [
+    "conditional_proof_dependency"
+  ],
+  "provenance_bindings": {
+    "source_commit": "601aff40d6fa6c3150242144fadba5dbcc24c89c",
+    "source_path": "FormalConjectures/ErdosProblems/427.lean",
+    "source_raw_sha256": "sha256:be54dc1ed87c382e3ec3895f2568278e5c4fec186671b363ec8edd917ac60d71",
+    "sender_output_sha256": "sha256:eaea6e7c100d21fe272c070b31159a30f99d387f1690a3e014b6d20391575b72",
+    "original_packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+    "evidence_locators_retained": true,
+    "authority_effect": "none"
+  },
+  "continuation_summary": "Confirmed the sender's minor_issues verdict and conditional_proof_dependency code. The exact-head source and retained metadata identify erdos_427 as a conditional formal proof depending on Erdos427.erdos_427.variants.shiu; the successful build does not discharge that dependency or establish an unconditional proof. The compact material retains exact source, declaration, linked-proof, check-run, and pull-request locators.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [],
+  "next_action": "Independently inspect or execute the exact content-addressed linked proof and discharge `Erdos427.erdos_427.variants.shiu` before claiming an unconditional formal proof.",
+  "unsupported_claims": [
+    "The retained metadata review does not execute or establish correctness of the linked proof.",
+    "The successful repository build does not discharge ShiuTheorem or establish an unconditional formal proof."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "Acceptance, merge, or Standing.",
+    "Mathematical truth or unconditional proof correctness.",
+    "Success of skipped or unlisted checks.",
+    "Independent execution or semantic verification of the external linked proof."
+  ],
+  "confidence": "high"
+}

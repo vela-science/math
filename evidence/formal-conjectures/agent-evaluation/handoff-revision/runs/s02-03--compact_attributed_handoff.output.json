@@ -1,0 +1,32 @@
+{
+  "schema": "vela.math.fc-audit.agent-handoff-receiver-output.v0.2",
+  "fixture_id": "fidelity-erdos-887-1237",
+  "condition": "compact_attributed_handoff",
+  "packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+  "sender_output_sha256": "sha256:73c0cef9643b0693d4b8c39145934e0326282db9876ff7c128968aa610914291",
+  "retained_verdict": "needs_revision",
+  "retained_issue_codes": [
+    "answer_slot_scope"
+  ],
+  "provenance_bindings": {
+    "source_commit": "288608562e684a2f3c97ba0ce960a2649a71370b",
+    "source_path": "FormalConjectures/ErdosProblems/887.lean",
+    "source_raw_sha256": "sha256:3e4c9376ebfa464985a2da4ac3b8401b1b54d64be1075368032eced0700706c5",
+    "sender_output_sha256": "sha256:73c0cef9643b0693d4b8c39145934e0326282db9876ff7c128968aa610914291",
+    "original_packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+    "evidence_locators_retained": true,
+    "authority_effect": "none"
+  },
+  "continuation_summary": "Confirmed the sender's needs_revision verdict and answer_slot_scope issue: erdos_887 places the answer slot inside the C and eventual n binders, so it does not denote one absolute constant K, while variant_i retains the intended outer existential scope. The supplied compact handoff preserves exact source, audit, build, and pull-request locators sufficient to continue this review.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [],
+  "next_action": "Revise erdos_887 so the answer slot denotes a single K outside the C and n binders, then mechanically check and independently review the revised exact artifact.",
+  "unsupported_claims": [],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The successful exact-head build establishes neither source fidelity nor mathematical truth.",
+    "The GitHub approval and merge do not establish acceptance, Vela Standing, or this advisory review's correctness.",
+    "The retained GitHub check observation is not a local build reproduction."
+  ],
+  "confidence": "high"
+}

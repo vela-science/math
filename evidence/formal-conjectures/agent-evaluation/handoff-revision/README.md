@@ -36,3 +36,21 @@ The first execution attempt is retained under
 inference in all 30 contexts, so the attempt contains no model output. The
 rooted execution amendment removes that unsupported keyword, keeps the outcome
 schema and allocation fixed, and permits one amended run.
+
+## Result
+
+The amended run completed all 30 fresh receiver contexts. The compact handoff
+preserved the same 13/15 exact verdicts, 15/15 expected issue detections, 15/15
+complete provenance bindings, zero unexpected issue codes, and zero authority
+violations as the full bundle.
+
+Its paired elapsed ratio was `0.9139`; the 90% sender-pair interval was
+`0.8725` to `0.9556`. That is a bounded observed improvement, but it misses the
+frozen `<= 0.80` support threshold. The hypothesis and generated interface
+disposition therefore remain `false` and `revise`. Input use fell from 478,709
+to 225,085 tokens, while output and reasoning tokens also fell.
+
+`program-disposition.v0.2.json` records a separate operational choice: adopt
+the compact handoff for receiver input and keep the full audit available by
+rooted locator. It does not rewrite the negative threshold result or require
+another evaluation before internal closeout.

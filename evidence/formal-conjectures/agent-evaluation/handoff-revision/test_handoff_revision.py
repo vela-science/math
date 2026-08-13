@@ -93,6 +93,19 @@ class HandoffRevisionTest(unittest.TestCase):
         self.assertEqual(manifest["model_output_count"], 0)
         self.assertEqual(manifest["failure_root"], root(manifest, "failure_root"))
 
+    def test_program_disposition_preserves_the_negative_threshold_result(self):
+        result = load(HERE / "handoff-revision-results.v0.2.json")
+        disposition = load(HERE / "program-disposition.v0.2.json")
+        self.assertEqual(disposition["content_root"], root(disposition, "content_root"))
+        self.assertEqual(disposition["result"]["results_root"], result["results_root"])
+        self.assertFalse(disposition["result"]["frozen_hypothesis_supported"])
+        self.assertEqual(disposition["result"]["frozen_interface_disposition"], "revise")
+        self.assertEqual(
+            disposition["decision"]["action"],
+            "adopt_compact_handoff_for_receiver_input",
+        )
+        self.assertEqual(disposition["measured_evidence"]["authority_violations"], 0)
+
 
 if __name__ == "__main__":
     unittest.main()

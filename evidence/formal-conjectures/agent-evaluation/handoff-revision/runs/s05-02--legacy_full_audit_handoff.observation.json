@@ -1,0 +1,48 @@
+{
+  "schema": "vela.math.fc-audit.handoff-revision-observation.v0.2",
+  "authority_effect": "none",
+  "observation_id": "agent-eval-handoff-s05-02::handoff-revision-v0.2::legacy_full_audit_handoff",
+  "pair_id": "agent-eval-handoff-s05-02::handoff-revision-v0.2",
+  "fixture_id": "conditional-erdos-427-4884",
+  "condition": "legacy_full_audit_handoff",
+  "task_context_id": "agent:codex-eval-receiver-v02-legacy_full_audit_handoff-s05-conditional-erdos-427-4884",
+  "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+  "runner": {
+    "model": "gpt-5.6-sol",
+    "runtime": "codex-cli 0.145.0",
+    "reasoning_effort": "high"
+  },
+  "execution_amendment": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/execution-amendment.v0.2.json",
+    "raw_sha256": "sha256:21d5424c41e13af53e1e3e94417dce5966231eae15d3632ba46645949e698b7b"
+  },
+  "started_at": "2026-08-13T21:32:42.864Z",
+  "completed_at": "2026-08-13T21:32:59.938Z",
+  "elapsed_seconds": 17.072805707925,
+  "terminal_state": "success",
+  "return_code": 0,
+  "usage": {
+    "input_tokens": 33751,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 800,
+    "reasoning_output_tokens": 203
+  },
+  "output": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s05-02--legacy_full_audit_handoff.output.json",
+    "size": 2339,
+    "raw_sha256": "sha256:b475be185f595e03b3c86ac639883882ce577622501abbda74a0f3fdaf98012d"
+  },
+  "events": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s05-02--legacy_full_audit_handoff.events.jsonl",
+    "size": 2621,
+    "raw_sha256": "sha256:b1f797a2ab56b19d71ce9e744579a702bd46333465ee4555dd821fcf296d35b9"
+  },
+  "stderr": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s05-02--legacy_full_audit_handoff.stderr.txt",
+    "size": 0,
+    "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "parse_error": null,
+  "observation_root": "sha256:04e98f7bba83d32d55eb9ad1be07e4b6fe906553141624c7a7e196cf03151f30"
+}

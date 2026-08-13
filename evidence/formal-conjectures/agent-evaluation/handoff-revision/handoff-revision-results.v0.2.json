@@ -1,0 +1,106 @@
+{
+  "schema": "vela.math.fc-audit.handoff-revision-results.v0.2",
+  "status": "complete",
+  "authority_effect": "none",
+  "design": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/handoff-revision-design.v0.2.json",
+    "size": 2976,
+    "raw_sha256": "sha256:840bd48d6137fd7d9cb9dc1641adab1904736069a3dc99d2688d250e1757b1f9"
+  },
+  "allocation": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/handoff-revision-allocation.v0.2.json",
+    "size": 58869,
+    "raw_sha256": "sha256:67d7bbffc4f5f85726bca50ef1cd8ed4f1fcf135e2d66dfff7d988c9e0612650"
+  },
+  "execution_amendment": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/execution-amendment.v0.2.json",
+    "size": 1055,
+    "raw_sha256": "sha256:21d5424c41e13af53e1e3e94417dce5966231eae15d3632ba46645949e698b7b"
+  },
+  "failed_attempt": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/failure-manifest.v0.2.json",
+    "size": 26709,
+    "raw_sha256": "sha256:e6c704b5a12f17ad27249e1ea0d15a9a3b911a3ecb113af86c18b46ba2455a06"
+  },
+  "observation_index": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/handoff-revision-observation-index.v0.2.json",
+    "size": 35257,
+    "raw_sha256": "sha256:399bd0824235ef0be3ac05886e4c021230af3ed1af025f3b0818859fa201b018"
+  },
+  "analysis_implementation": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/analyze_handoff_revision.py",
+    "size": 9996,
+    "raw_sha256": "sha256:866ba7a36a34d2a2f14da0ac83bae10f935a4929aa796d931818f9e0ce9e0cb2"
+  },
+  "model_provenance": {
+    "actor_class": "agent",
+    "model": "gpt-5.6-sol",
+    "provider": "openai",
+    "runtime": "codex-cli 0.145.0",
+    "reasoning_effort": "high",
+    "session_policy": "one fresh ephemeral task context per sender-condition receiver observation",
+    "quality_rule": "actor class is provenance, not a quality rank"
+  },
+  "paired_elapsed_compact_to_legacy_ratio": 0.9138522863671479,
+  "paired_elapsed_interval": {
+    "method": "sender-pair bootstrap",
+    "resamples": 10000,
+    "level": 0.9,
+    "lower": 0.8725227265984798,
+    "upper": 0.9556297321002772
+  },
+  "quality_counts": {
+    "verdict_correct": {
+      "legacy_full_audit_handoff": 13,
+      "compact_attributed_handoff": 13
+    },
+    "expected_issue_detected": {
+      "legacy_full_audit_handoff": 15,
+      "compact_attributed_handoff": 15
+    },
+    "unexpected_issue": {
+      "legacy_full_audit_handoff": 0,
+      "compact_attributed_handoff": 0
+    },
+    "provenance_complete": {
+      "legacy_full_audit_handoff": 15,
+      "compact_attributed_handoff": 15
+    },
+    "authority_violation": {
+      "legacy_full_audit_handoff": 0,
+      "compact_attributed_handoff": 0
+    }
+  },
+  "usage_totals": {
+    "input_tokens": {
+      "legacy_full_audit_handoff": 478709,
+      "compact_attributed_handoff": 225085
+    },
+    "cached_input_tokens": {
+      "legacy_full_audit_handoff": 33024,
+      "compact_attributed_handoff": 33024
+    },
+    "output_tokens": {
+      "legacy_full_audit_handoff": 12579,
+      "compact_attributed_handoff": 11315
+    },
+    "reasoning_output_tokens": {
+      "legacy_full_audit_handoff": 3421,
+      "compact_attributed_handoff": 2652
+    }
+  },
+  "hypothesis_supported": false,
+  "interface_disposition": {
+    "value": "revise",
+    "rationale": "The compact handoff misses at least one frozen threshold."
+  },
+  "limits": [
+    "not a human-versus-agent comparison",
+    "not institutional, provider, or model-family independence",
+    "not a general model benchmark",
+    "not Formal Conjectures acceptance or maintainer review",
+    "not a Vela Verification or Decision",
+    "no authority or Standing effect"
+  ],
+  "results_root": "sha256:939dea44230b5f8dce0c3d948b255351caec64d0e640b7cc9ad4f6512df78f35"
+}

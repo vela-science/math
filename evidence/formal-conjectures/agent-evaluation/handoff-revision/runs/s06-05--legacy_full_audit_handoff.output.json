@@ -1,0 +1,39 @@
+{
+  "schema": "vela.math.fc-audit.agent-handoff-receiver-output.v0.2",
+  "fixture_id": "unavailable-rupert-3959",
+  "condition": "legacy_full_audit_handoff",
+  "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+  "sender_output_sha256": "sha256:7ead6c4b6c30d333461ef46554b48a1fdfb55c70eb4c1f7ffe2b733afba79a9e",
+  "retained_verdict": "unavailable",
+  "retained_issue_codes": [
+    "exact_artifact_identity_unavailable"
+  ],
+  "provenance_bindings": {
+    "source_commit": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+    "source_path": "FormalConjectures/Paper/Rupert.lean",
+    "source_raw_sha256": "sha256:49bec542e7c93319ca4a1c4a2b0b3a18bf72baaf7621416a30685e311a6ef7cf",
+    "sender_output_sha256": "sha256:7ead6c4b6c30d333461ef46554b48a1fdfb55c70eb4c1f7ffe2b733afba79a9e",
+    "original_packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+    "evidence_locators_retained": true,
+    "authority_effect": "none"
+  },
+  "continuation_summary": "The sender verdict and issue code are confirmed. At head 868cc092aeb713dbf8027883c5fa575e550cfae9, Rupert.is_every_convex_polyhedron_rupert names only the mutable repository root https://github.com/jcreedcmu/Noperthedron as its Lean 4 formal proof, without an immutable revision or exact proof file. The exact-head repository build passed, but the retained Comparator availability attempt found no executable and no comparison ran; source fidelity therefore remains inconclusive and exact external proof-artifact identity remains unavailable.",
+  "reproduction_terminal_state": "unavailable",
+  "missing_provenance_fields": [],
+  "next_action": "Pin the external formalization to an immutable commit and exact proof file, then run a retained statement/proof comparison against Rupert.is_every_convex_polyhedron_rupert at head 868cc092aeb713dbf8027883c5fa575e550cfae9.",
+  "unsupported_claims": [
+    "The linked external formalization proves the exact Lean statement at the PR head.",
+    "The repository build establishes proof correctness or source fidelity.",
+    "The merged and approved PR establishes acceptance, Vela Decision, or Standing."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "mathematical truth",
+    "external proof-artifact identity",
+    "proof correctness",
+    "source fidelity",
+    "acceptance",
+    "Standing"
+  ],
+  "confidence": "high"
+}

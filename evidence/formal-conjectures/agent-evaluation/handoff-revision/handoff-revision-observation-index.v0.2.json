@@ -1,0 +1,870 @@
+{
+  "schema": "vela.math.fc-audit.handoff-revision-observation-index.v0.2",
+  "authority_effect": "none",
+  "design": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/handoff-revision-design.v0.2.json",
+    "size": 2976,
+    "raw_sha256": "sha256:840bd48d6137fd7d9cb9dc1641adab1904736069a3dc99d2688d250e1757b1f9"
+  },
+  "allocation": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/handoff-revision-allocation.v0.2.json",
+    "size": 58869,
+    "raw_sha256": "sha256:67d7bbffc4f5f85726bca50ef1cd8ed4f1fcf135e2d66dfff7d988c9e0612650"
+  },
+  "execution_amendment": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/execution-amendment.v0.2.json",
+    "size": 1055,
+    "raw_sha256": "sha256:21d5424c41e13af53e1e3e94417dce5966231eae15d3632ba46645949e698b7b"
+  },
+  "failed_attempt": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/failed-attempt-01-invalid-schema/failure-manifest.v0.2.json",
+    "size": 26709,
+    "raw_sha256": "sha256:e6c704b5a12f17ad27249e1ea0d15a9a3b911a3ecb113af86c18b46ba2455a06"
+  },
+  "observation_count": 30,
+  "observations": [
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s01-02--compact_attributed_handoff.observation.json",
+      "size": 2151,
+      "raw_sha256": "sha256:60f5dd31c1daccdf30c27f1c8a74c47437ba3ba6c404740a7327fae921a31cb0",
+      "observation_root": "sha256:9a9f55d4a805b28313be241cbd3df8d1b10d6ecac52b3adbc96be15acf5aff6a"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s01-02--legacy_full_audit_handoff.observation.json",
+      "size": 2146,
+      "raw_sha256": "sha256:4152cb45a148a410e7ed951a23b4b6b685c94aaa59242559c546b96777c3c13b",
+      "observation_root": "sha256:e2a0edfecece80e20a18d0ed6e78d64451572beaed239a5e376cc3cc5c6a499a"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s01-04--compact_attributed_handoff.observation.json",
+      "size": 2142,
+      "raw_sha256": "sha256:8589da897598e4e392131a291be86e6761b9e155dd65be8602d139c77b1e5d8f",
+      "observation_root": "sha256:3b9df1710cdbf742c47cf8412cea8647351b09b5b2ef5b8c131ed7c42064042b"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s01-04--legacy_full_audit_handoff.observation.json",
+      "size": 2135,
+      "raw_sha256": "sha256:63a7661c5a149d1cc430115dc72eb31410e43a15b16bcaf353dff0c475d60d68",
+      "observation_root": "sha256:221b00f3c2cb06f239aacf49b8c145ea0e198020d27f10b22ea4105a1ae85546"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s02-01--compact_attributed_handoff.observation.json",
+      "size": 2176,
+      "raw_sha256": "sha256:969ba5f64d2d3589c8f80514c9e11c6b6cd8f4c1300dd0feb6396e401bab096c",
+      "observation_root": "sha256:fa39aa137e59ffcd17dd5bfeb678ee7271ae39ce17b093ac63d71661d8b2d48e"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s02-01--legacy_full_audit_handoff.observation.json",
+      "size": 2169,
+      "raw_sha256": "sha256:5680bdc5dcd25f2f3180eeebef1cdb8a1de7689e27c8dd8077676cd6de2004bd",
+      "observation_root": "sha256:7da083645fba6ee766391ede80222ef5d2334db15cf67cca83d007674a845540"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s02-03--compact_attributed_handoff.observation.json",
+      "size": 2143,
+      "raw_sha256": "sha256:9bd7cac3db62dd4fa3ce96312ddda7675e8ccf69d5a36a68a530579dc0d3a3f8",
+      "observation_root": "sha256:42a5f38d4f1ffb7c1680e2e6491271cdfe571148b3d00abcf78d343383664692"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s02-03--legacy_full_audit_handoff.observation.json",
+      "size": 2138,
+      "raw_sha256": "sha256:2de78ec21717c1a4b026d70eede5a8acbbc2fa5b11f0fd6e3f1b5508dea75159",
+      "observation_root": "sha256:9876d7fb2102725e1b93a8d4b225f51d23f9a71fd58207b61fbd8ba0216f4fc8"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s02-05--compact_attributed_handoff.observation.json",
+      "size": 2144,
+      "raw_sha256": "sha256:59582337bed8e8418f16ba03e92a3d33a2641c7f8a21687cb5cac4e1cd639527",
+      "observation_root": "sha256:de6a7c45bb75f5891e653988dd5e29c5da3b4f65692cf68e4d2565330ca72d98"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s02-05--legacy_full_audit_handoff.observation.json",
+      "size": 2139,
+      "raw_sha256": "sha256:13b003ce01e4d868fae73dc3de477d65d8168cb0246b7ba7c67b4a602b9b64ce",
+      "observation_root": "sha256:819f61c3fcbda639068448b472df02a8d98588cfa6733b89310e89e8cfa1f5d5"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s03-03--compact_attributed_handoff.observation.json",
+      "size": 2144,
+      "raw_sha256": "sha256:c44136b9d736ff9a8d374841a6107a9d5f629f400da162123b3cf1529193d805",
+      "observation_root": "sha256:9bedc544690b48fe8bfecc99d8d5267dc120c14e2980e74109bf81f2da35a9c8"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s03-03--legacy_full_audit_handoff.observation.json",
+      "size": 2138,
+      "raw_sha256": "sha256:469c68bf2d541ac62a4169171019866ed50c50a27e64f37ce80f8bc258e3f73a",
+      "observation_root": "sha256:47d3fae80aadfd7cea3bc244600d2e53a30ba6ab300f65cfb9865c5b78463ef6"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s03-04--compact_attributed_handoff.observation.json",
+      "size": 2145,
+      "raw_sha256": "sha256:803e7694036913be54c481e08a7bf7104feea5109aee1f2f175289e6aa6da82b",
+      "observation_root": "sha256:c87944708b307701d963c971b576d00c47e1d763d4bd2198e983304d70f28fd1"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s03-04--legacy_full_audit_handoff.observation.json",
+      "size": 2138,
+      "raw_sha256": "sha256:016c4da7bf9ce47acb31c94e87bb5cb96ede8afcfad2dc29f2e400e1add6721b",
+      "observation_root": "sha256:a9a839cda3bd2d757d0ec5fa3a1a6b2cb95c497134423616997b4d05e82b8a34"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s04-01--compact_attributed_handoff.observation.json",
+      "size": 2178,
+      "raw_sha256": "sha256:bfc5d780a27d644fd6e8b3134c791738659520f16d0294a71ee94aea57872bcc",
+      "observation_root": "sha256:62fa2e412fbe781afcd2c629f0b5ab35d7051aa8c2b04392e344328e1341e7f4"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s04-01--legacy_full_audit_handoff.observation.json",
+      "size": 2167,
+      "raw_sha256": "sha256:db5988abcd8e707c41a9cd62c2e036acf83ebdd6cd13943456a706ed765a1d51",
+      "observation_root": "sha256:1a6cdfb5f30c3c2a314d9fcfd32fe2ae29ba49601dbf4154fec04726c9b46e31"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s04-02--compact_attributed_handoff.observation.json",
+      "size": 2150,
+      "raw_sha256": "sha256:ae99a301248380826549d4faf3bf34d01ac759fdf39d07dda4e8125eb101d7bb",
+      "observation_root": "sha256:ef210a696efb5f1097d2e5a17822017c6b2b960dc21342e18cce6c4c8375fd2c"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s04-02--legacy_full_audit_handoff.observation.json",
+      "size": 2143,
+      "raw_sha256": "sha256:7dd91042347517ce0dd7d6e60a59b8154273974d940df0853282fd98e224c0e4",
+      "observation_root": "sha256:4ee38624fda0dae7c3b5f74d9f267185dd11236a5b2e3971742fb060a8e085dc"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s04-05--compact_attributed_handoff.observation.json",
+      "size": 2144,
+      "raw_sha256": "sha256:ce7200b30f2c2cd29a4aa5a7a31c52e1b82bc29386dc20e08559c34a08cb57e9",
+      "observation_root": "sha256:3f88f289944f12d09f391c9b5b30b9d8beb7aa0785da011d8e2b67eb494f50a8"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s04-05--legacy_full_audit_handoff.observation.json",
+      "size": 2138,
+      "raw_sha256": "sha256:386cdfacdbbaa5e41dc604a8c923cead2ed314a25b88ffc08a9efd241b64ab58",
+      "observation_root": "sha256:eb8d6a369fbf0731e9fb0494c118a3b9440984b054663427199b329b79e7c07c"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s05-02--compact_attributed_handoff.observation.json",
+      "size": 2149,
+      "raw_sha256": "sha256:a3921e55756e77aacd5ed9a0fc685da8a190a1fc724668a8d67e1d1646db2604",
+      "observation_root": "sha256:34dd71fcd9f7f16e5c9f4ea947820b3105f2b1fba95994ae16c0017db9165661"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s05-02--legacy_full_audit_handoff.observation.json",
+      "size": 2141,
+      "raw_sha256": "sha256:4f026ae89505959e5fe921600e897f9a82552a3b6f69674ef3ce051a5c1d4cc7",
+      "observation_root": "sha256:04e98f7bba83d32d55eb9ad1be07e4b6fe906553141624c7a7e196cf03151f30"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s05-03--compact_attributed_handoff.observation.json",
+      "size": 2142,
+      "raw_sha256": "sha256:20e31dc01e2e15e55c3a4fede07fbb2c8214776e72856c9fab53ca03e7082b76",
+      "observation_root": "sha256:584012029ccacad5acf0549d0581f0be7f0a7a2af19735d935d4088a392900aa"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s05-03--legacy_full_audit_handoff.observation.json",
+      "size": 2142,
+      "raw_sha256": "sha256:02f2e67d8f4b37ad6107afc38bac7aa00f9c68dc0529f77181dc86ae12902866",
+      "observation_root": "sha256:6389e9ac32c1dd42144c7ffd2bafce24f6bceea4eb86d8557c06828989f90485"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s06-01--compact_attributed_handoff.observation.json",
+      "size": 2174,
+      "raw_sha256": "sha256:4c3aa612e9ff04c67f4158c72aeb9611739dd0185ab11ed0c4c0056fb0c825b4",
+      "observation_root": "sha256:3d57ce6b5c51a15fe287de788d4c2bb40d49985477e6aafc3f5d46476373ee9e"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s06-01--legacy_full_audit_handoff.observation.json",
+      "size": 2167,
+      "raw_sha256": "sha256:ffa056e54884988afe6d8075d3804fb4519e4a6888d3175cc7afe8761719a6d8",
+      "observation_root": "sha256:e1df4a7459db77971b1429ef64b5272d83bf7655b4bca938938b9734b6f90f95"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s06-04--compact_attributed_handoff.observation.json",
+      "size": 2139,
+      "raw_sha256": "sha256:84c0d6bb1986de14cd18104997c36a484bf15c113bdb21ed525ed80b1434584f",
+      "observation_root": "sha256:ce60c3a4c149ac30daa3278865d9171bf6e103db2ec45afdd0a8f1505f3972d4"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s06-04--legacy_full_audit_handoff.observation.json",
+      "size": 2137,
+      "raw_sha256": "sha256:a21a4e9ac4426f2c99b25269522d11dfcb1750d9835345d40fd135f7b8f3d2a7",
+      "observation_root": "sha256:314814397e92adc1b63d063af7ff482a1914098b4588bf5ccf1ec0d0de6c8572"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s06-05--compact_attributed_handoff.observation.json",
+      "size": 2148,
+      "raw_sha256": "sha256:6a197c9d7f63c0d32ab7cc222c7956af7080de557e97f1247b3c9116339f3f75",
+      "observation_root": "sha256:9c5ac1b2e45c277826eaefa8c18e5a18719beeef7cd7736f6bf1d3bc84451f12"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/runs/s06-05--legacy_full_audit_handoff.observation.json",
+      "size": 2138,
+      "raw_sha256": "sha256:6f0218b68a0c6d6ff5600839a1512695ec01adca0ff650351a156076d60eb2d9",
+      "observation_root": "sha256:7b4a2b0ef2e82659050422fc6bf4ac5d15650078a3ea26eea5b57e308ba3b022"
+    }
+  ],
+  "rows": [
+    {
+      "pair_id": "agent-eval-handoff-s01-02::handoff-revision-v0.2",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "compact_attributed_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 17.15282312501222,
+      "usage": {
+        "input_tokens": 15048,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 720,
+        "reasoning_output_tokens": 122
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:9a9f55d4a805b28313be241cbd3df8d1b10d6ecac52b3adbc96be15acf5aff6a"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s01-02::handoff-revision-v0.2",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "legacy_full_audit_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 18.030001209001057,
+      "usage": {
+        "input_tokens": 33758,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 779,
+        "reasoning_output_tokens": 129
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:e2a0edfecece80e20a18d0ed6e78d64451572beaed239a5e376cc3cc5c6a499a"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s01-04::handoff-revision-v0.2",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "compact_attributed_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 18.281363209011033,
+      "usage": {
+        "input_tokens": 14979,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 760,
+        "reasoning_output_tokens": 202
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:3b9df1710cdbf742c47cf8412cea8647351b09b5b2ef5b8c131ed7c42064042b"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s01-04::handoff-revision-v0.2",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "legacy_full_audit_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 19.28042850003112,
+      "usage": {
+        "input_tokens": 41588,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 845,
+        "reasoning_output_tokens": 231
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:221b00f3c2cb06f239aacf49b8c145ea0e198020d27f10b22ea4105a1ae85546"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s02-01::handoff-revision-v0.2",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "compact_attributed_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 16.143782250001095,
+      "usage": {
+        "input_tokens": 15129,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 671,
+        "reasoning_output_tokens": 170
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:fa39aa137e59ffcd17dd5bfeb678ee7271ae39ce17b093ac63d71661d8b2d48e"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s02-01::handoff-revision-v0.2",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "legacy_full_audit_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 17.53377662494313,
+      "usage": {
+        "input_tokens": 27085,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 700,
+        "reasoning_output_tokens": 148
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:7da083645fba6ee766391ede80222ef5d2334db15cf67cca83d007674a845540"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s02-03::handoff-revision-v0.2",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "compact_attributed_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 17.21078020904679,
+      "usage": {
+        "input_tokens": 14877,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 831,
+        "reasoning_output_tokens": 283
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:42a5f38d4f1ffb7c1680e2e6491271cdfe571148b3d00abcf78d343383664692"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s02-03::handoff-revision-v0.2",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "legacy_full_audit_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 18.515997209004126,
+      "usage": {
+        "input_tokens": 27023,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 860,
+        "reasoning_output_tokens": 299
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:9876d7fb2102725e1b93a8d4b225f51d23f9a71fd58207b61fbd8ba0216f4fc8"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s02-05::handoff-revision-v0.2",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "compact_attributed_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 16.220526000019163,
+      "usage": {
+        "input_tokens": 14976,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 775,
+        "reasoning_output_tokens": 140
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:de6a7c45bb75f5891e653988dd5e29c5da3b4f65692cf68e4d2565330ca72d98"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s02-05::handoff-revision-v0.2",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "legacy_full_audit_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 20.930280665983446,
+      "usage": {
+        "input_tokens": 30111,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1006,
+        "reasoning_output_tokens": 350
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:819f61c3fcbda639068448b472df02a8d98588cfa6733b89310e89e8cfa1f5d5"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s03-03::handoff-revision-v0.2",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "compact_attributed_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 18.160359957953915,
+      "usage": {
+        "input_tokens": 14886,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 846,
+        "reasoning_output_tokens": 313
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:9bedc544690b48fe8bfecc99d8d5267dc120c14e2980e74109bf81f2da35a9c8"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s03-03::handoff-revision-v0.2",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "legacy_full_audit_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 17.480626542004757,
+      "usage": {
+        "input_tokens": 27025,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 775,
+        "reasoning_output_tokens": 198
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:47d3fae80aadfd7cea3bc244600d2e53a30ba6ab300f65cfb9865c5b78463ef6"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s03-04::handoff-revision-v0.2",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "compact_attributed_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 22.098484250018373,
+      "usage": {
+        "input_tokens": 15150,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1062,
+        "reasoning_output_tokens": 425
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:c87944708b307701d963c971b576d00c47e1d763d4bd2198e983304d70f28fd1"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s03-04::handoff-revision-v0.2",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "legacy_full_audit_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 19.040751082939096,
+      "usage": {
+        "input_tokens": 41744,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 923,
+        "reasoning_output_tokens": 255
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:a9a839cda3bd2d757d0ec5fa3a1a6b2cb95c497134423616997b4d05e82b8a34"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s04-01::handoff-revision-v0.2",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "compact_attributed_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 17.395263792015612,
+      "usage": {
+        "input_tokens": 15141,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 713,
+        "reasoning_output_tokens": 159
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:62fa2e412fbe781afcd2c629f0b5ab35d7051aa8c2b04392e344328e1341e7f4"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s04-01::handoff-revision-v0.2",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "legacy_full_audit_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 20.49223237496335,
+      "usage": {
+        "input_tokens": 27092,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 894,
+        "reasoning_output_tokens": 292
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:1a6cdfb5f30c3c2a314d9fcfd32fe2ae29ba49601dbf4154fec04726c9b46e31"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s04-02::handoff-revision-v0.2",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "compact_attributed_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 16.595834958017804,
+      "usage": {
+        "input_tokens": 15087,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 782,
+        "reasoning_output_tokens": 202
+      },
+      "score": {
+        "verdict_correct": false,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:ef210a696efb5f1097d2e5a17822017c6b2b960dc21342e18cce6c4c8375fd2c"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s04-02::handoff-revision-v0.2",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "legacy_full_audit_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 17.54295174998697,
+      "usage": {
+        "input_tokens": 33799,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 827,
+        "reasoning_output_tokens": 213
+      },
+      "score": {
+        "verdict_correct": false,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:4ee38624fda0dae7c3b5f74d9f267185dd11236a5b2e3971742fb060a8e085dc"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s04-05::handoff-revision-v0.2",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "compact_attributed_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 16.9046098330291,
+      "usage": {
+        "input_tokens": 14967,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 762,
+        "reasoning_output_tokens": 153
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:3f88f289944f12d09f391c9b5b30b9d8beb7aa0785da011d8e2b67eb494f50a8"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s04-05::handoff-revision-v0.2",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "legacy_full_audit_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 18.126223667059094,
+      "usage": {
+        "input_tokens": 30105,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 825,
+        "reasoning_output_tokens": 149
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:eb8d6a369fbf0731e9fb0494c118a3b9440984b054663427199b329b79e7c07c"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s05-02::handoff-revision-v0.2",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "compact_attributed_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 15.029319416033104,
+      "usage": {
+        "input_tokens": 15041,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 668,
+        "reasoning_output_tokens": 81
+      },
+      "score": {
+        "verdict_correct": false,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:34dd71fcd9f7f16e5c9f4ea947820b3105f2b1fba95994ae16c0017db9165661"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s05-02::handoff-revision-v0.2",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "legacy_full_audit_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 17.072805707925,
+      "usage": {
+        "input_tokens": 33751,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 800,
+        "reasoning_output_tokens": 203
+      },
+      "score": {
+        "verdict_correct": false,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:04e98f7bba83d32d55eb9ad1be07e4b6fe906553141624c7a7e196cf03151f30"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s05-03::handoff-revision-v0.2",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "compact_attributed_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 12.607718707993627,
+      "usage": {
+        "input_tokens": 14872,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 559,
+        "reasoning_output_tokens": 0
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:584012029ccacad5acf0549d0581f0be7f0a7a2af19735d935d4088a392900aa"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s05-03::handoff-revision-v0.2",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "legacy_full_audit_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 15.516373041900806,
+      "usage": {
+        "input_tokens": 27012,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 724,
+        "reasoning_output_tokens": 142
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:6389e9ac32c1dd42144c7ffd2bafce24f6bceea4eb86d8557c06828989f90485"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s06-01::handoff-revision-v0.2",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "compact_attributed_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 15.602181874914095,
+      "usage": {
+        "input_tokens": 15000,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 651,
+        "reasoning_output_tokens": 123
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:3d57ce6b5c51a15fe287de788d4c2bb40d49985477e6aafc3f5d46476373ee9e"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s06-01::handoff-revision-v0.2",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "legacy_full_audit_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 16.46247129200492,
+      "usage": {
+        "input_tokens": 26949,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 753,
+        "reasoning_output_tokens": 210
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:e1df4a7459db77971b1429ef64b5272d83bf7655b4bca938938b9734b6f90f95"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s06-04::handoff-revision-v0.2",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "compact_attributed_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 15.99109154206235,
+      "usage": {
+        "input_tokens": 14994,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 744,
+        "reasoning_output_tokens": 138
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:ce60c3a4c149ac30daa3278865d9171bf6e103db2ec45afdd0a8f1505f3972d4"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s06-04::handoff-revision-v0.2",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "legacy_full_audit_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 21.37057074997574,
+      "usage": {
+        "input_tokens": 41599,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 948,
+        "reasoning_output_tokens": 332
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:314814397e92adc1b63d063af7ff482a1914098b4588bf5ccf1ec0d0de6c8572"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s06-05::handoff-revision-v0.2",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "compact_attributed_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 19.172462332993746,
+      "usage": {
+        "input_tokens": 14938,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 771,
+        "reasoning_output_tokens": 141
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:9c5ac1b2e45c277826eaefa8c18e5a18719beeef7cd7736f6bf1d3bc84451f12"
+    },
+    {
+      "pair_id": "agent-eval-handoff-s06-05::handoff-revision-v0.2",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "legacy_full_audit_handoff",
+      "terminal_state": "success",
+      "elapsed_seconds": 20.293531749979593,
+      "usage": {
+        "input_tokens": 30068,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 920,
+        "reasoning_output_tokens": 270
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "unexpected_issue": false,
+        "provenance_complete": true,
+        "authority_violation": false
+      },
+      "observation_root": "sha256:7b4a2b0ef2e82659050422fc6bf4ac5d15650078a3ea26eea5b57e308ba3b022"
+    }
+  ],
+  "index_root": "sha256:7cb6b2bb5fe751ffaf6b52c1e93ad8a07030c303ccbad51c8755f9db06c0751e"
+}

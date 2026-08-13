@@ -1,0 +1,37 @@
+{
+  "schema": "vela.math.fc-audit.agent-handoff-receiver-output.v0.2",
+  "fixture_id": "conditional-erdos-427-4884",
+  "condition": "legacy_full_audit_handoff",
+  "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+  "sender_output_sha256": "sha256:9fd8c8c26bd04fb7b00b42db25774905f8603e37cfdb68cf9ce4b54449a2ea34",
+  "retained_verdict": "inconclusive",
+  "retained_issue_codes": [
+    "conditional_proof_dependency"
+  ],
+  "provenance_bindings": {
+    "source_commit": "601aff40d6fa6c3150242144fadba5dbcc24c89c",
+    "source_path": "FormalConjectures/ErdosProblems/427.lean",
+    "source_raw_sha256": "sha256:be54dc1ed87c382e3ec3895f2568278e5c4fec186671b363ec8edd917ac60d71",
+    "sender_output_sha256": "sha256:9fd8c8c26bd04fb7b00b42db25774905f8603e37cfdb68cf9ce4b54449a2ea34",
+    "original_packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+    "evidence_locators_retained": true,
+    "authority_effect": "none"
+  },
+  "continuation_summary": "The sender verdict is confirmed. At the bound head, Erdos427.erdos_427 explicitly marks its linked Lean proof as conditional on Erdos427.erdos_427.variants.shiu. Exact locators are retained for the declaration, assumption, linked proof, metadata audit, observation, and successful Build project check run 93932003906. Those materials scope the dependency and mechanical success but do not independently execute or compare the linked proof or establish full source fidelity. The retained community observation shows the pull request open, review-required, and unmerged; none of these review or check facts confers acceptance or Standing.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [],
+  "next_action": "Independently compare and reproduce the exact retained linked proof against Erdos427.erdos_427 and its stated ShiuTheorem assumption, then verify the formal statement against an independent source.",
+  "unsupported_claims": [
+    "The supplied review does not independently establish that the linked proof correctly derives the exact Lean statement from ShiuTheorem.",
+    "The bundle does not provide an independent source comparison sufficient to establish full semantic fidelity."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "Mathematical truth or proof correctness.",
+    "An unconditional or complete formal proof of Erdos427.erdos_427.",
+    "Full source fidelity.",
+    "Acceptance, merge, or Standing.",
+    "That every check ran or succeeded."
+  ],
+  "confidence": "high"
+}

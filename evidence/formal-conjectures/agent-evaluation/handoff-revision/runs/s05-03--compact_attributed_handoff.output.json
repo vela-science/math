@@ -1,0 +1,32 @@
+{
+  "schema": "vela.math.fc-audit.agent-handoff-receiver-output.v0.2",
+  "fixture_id": "fidelity-erdos-887-1237",
+  "condition": "compact_attributed_handoff",
+  "packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+  "sender_output_sha256": "sha256:999aec0510935e9da0eba39d7baafee0b68e8d538ed6721094611d6de32deb4b",
+  "retained_verdict": "needs_revision",
+  "retained_issue_codes": [
+    "answer_slot_scope"
+  ],
+  "provenance_bindings": {
+    "source_commit": "288608562e684a2f3c97ba0ce960a2649a71370b",
+    "source_path": "FormalConjectures/ErdosProblems/887.lean",
+    "source_raw_sha256": "sha256:3e4c9376ebfa464985a2da4ac3b8401b1b54d64be1075368032eced0700706c5",
+    "sender_output_sha256": "sha256:999aec0510935e9da0eba39d7baafee0b68e8d538ed6721094611d6de32deb4b",
+    "original_packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+    "evidence_locators_retained": true,
+    "authority_effect": "none"
+  },
+  "continuation_summary": "Confirmed the sender's needs_revision verdict and answer_slot_scope issue. The theorem places the answer slot after the C and eventual-n binders, allowing the selected constant to vary by bound instance instead of expressing one absolute K; the retained exact evidence locators support this review. The exact-head build passed, but that mechanical result does not resolve the semantic-fidelity failure.",
+  "reproduction_terminal_state": "completed",
+  "missing_provenance_fields": [],
+  "next_action": "Revise Erdos887.erdos_887 so the answer constant is selected outside the C and n binders, then rerun the exact-head build and obtain an independent semantic-fidelity review.",
+  "unsupported_claims": [],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The passing exact-head build does not establish semantic fidelity or mathematical truth.",
+    "The GitHub approval and merge do not establish acceptance, Vela Standing, or maintainer endorsement of this advisory verdict.",
+    "The retained audit disposition is advisory and does not establish a merge decision."
+  ],
+  "confidence": "high"
+}
