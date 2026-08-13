@@ -4,11 +4,17 @@
 from __future__ import annotations
 
 import json
+import hashlib
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
 FILES = sorted(ROOT.glob("statement-fidelity-*.v1.json"))
+REPORTS = sorted(
+    (ROOT.parents[1] / "evidence/formal-conjectures/reviews").glob(
+        "*-statement-fidelity.v1.json"
+    )
+)
 FIELDS = {
     "schema",
     "profile",
@@ -77,7 +83,34 @@ def main() -> None:
         assert "does not accept" in nonclaims
         assert "Standing" in nonclaims
     assert kinds == {"ai_model", "human"}
-    print(f"review provenance methods: {len(methods)} pass")
+    assert len(REPORTS) == 1, "expected the retained Erdős 887 AI review"
+    report = load_strict(REPORTS[0])
+    assert report["schema"] == "vela.math.attributed-review-report.v1"
+    assert report["authority_effect"] == "none"
+    assert report["outcome"] in {"pass", "fail", "inconclusive", "error"}
+    assert report["reviewer"]["kind"] == "ai_model"
+    assert report["reviewer"]["attested_by_actor_id"].startswith("agent:")
+    assert report["independence"]["independent"] is False
+    assert report["independence"]["declared_independent_of"] == []
+    assert report["findings"] and isinstance(report["findings"], list)
+    assert isinstance(report["unsupported_clauses"], list)
+    assert isinstance(report["ambiguous_clauses"], list)
+    assert report["out_of_scope"] and isinstance(report["out_of_scope"], list)
+    method_path = ROOT.parents[1] / report["method"]["path"]
+    observed_method_root = "sha256:" + hashlib.sha256(method_path.read_bytes()).hexdigest()
+    assert report["method"]["root"] == observed_method_root
+    assert report["does_not_establish"] == methods[0]["does_not_establish"]
+    for root in (
+        report["subject"]["proposal_root"],
+        report["inputs"]["formal_conjectures"]["content_root"],
+        report["inputs"]["repair"]["raw_sha256"],
+        report["inputs"]["repair"]["repaired_content_root"],
+        report["inputs"]["execution_result"]["root"],
+        report["inputs"]["execution_result"]["check_result_root"],
+        report["inputs"]["execution_result"]["packet_root"],
+    ):
+        assert isinstance(root, str) and root.startswith("sha256:") and len(root) == 71
+    print(f"review provenance methods: {len(methods)}; reports: {len(REPORTS)} pass")
 
 
 if __name__ == "__main__":
