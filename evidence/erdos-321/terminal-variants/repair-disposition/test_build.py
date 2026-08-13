@@ -23,11 +23,32 @@ FORMAL = Path(os.environ.get("VELA_FORMAL_CONJECTURES_REPO", HERE.parents[4] / "
 
 class RepairDispositionTest(unittest.TestCase):
     def test_review_method_is_canonical(self):
-        path = REPO / "methods/erdos-321/terminal-bridge-scope-review-gpt-5.6-sol.v1.json"
+        for name in (
+            "terminal-bridge-scope-review-gpt-5.6-sol.v1.json",
+            "terminal-bridge-scope-openai-codex-peer.v1.json",
+        ):
+            path = REPO / "methods/erdos-321" / name
+            raw = path.read_bytes()
+            value = json.loads(raw)
+            canonical = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
+            self.assertEqual(raw, canonical + b"\n")
+
+    def test_independent_review_binds_exact_inputs_and_honest_provenance(self):
+        path = HERE / "independent-review.v1.json"
         raw = path.read_bytes()
-        value = json.loads(raw)
-        canonical = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
+        review = json.loads(raw)
+        canonical = json.dumps(review, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
         self.assertEqual(raw, canonical + b"\n")
+        method_path = REPO / review["method"]["path"]
+        self.assertEqual(
+            review["method"]["raw_sha256"],
+            "sha256:" + __import__("hashlib").sha256(method_path.read_bytes()).hexdigest(),
+        )
+        self.assertEqual(review["outcome"], "pass")
+        self.assertTrue(review["independence"]["independent"])
+        self.assertIn("agent:codex-terminal-bridge-disposition", review["independence"]["declared_independent_of"])
+        self.assertEqual(review["reviewer"]["identifier"], "codex-subagent-unreported-model")
+        self.assertIsNone(review["reviewer"]["version"])
 
     def test_exact_sources_produce_retained_record(self):
         observed = BUILD.build(LEAN_PROOFS.resolve(), FORMAL.resolve())
