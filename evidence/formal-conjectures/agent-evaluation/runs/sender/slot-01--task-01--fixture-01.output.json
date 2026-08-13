@@ -1,0 +1,32 @@
+{
+  "schema": "vela.math.fc-audit.agent-sender-output.v0.1",
+  "fixture_id": "clean-source-faithful-min-modulus-4829",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:34f9ce1e77b28e8ebcd9a49f57f4e976a890eabda546594d24ae588b465554fc",
+  "verdict": "clean",
+  "issue_codes": [],
+  "mechanical_status": "pass",
+  "source_fidelity": "pass",
+  "artifact_availability": "exact",
+  "community_status": "merged",
+  "evidence_locators": [
+    "FormalConjectures/Arxiv/2607.08366/MinModulus.lean@0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c; blob 4c68a8c3788f805e29588bfefdac1fec079e9193; theorem min_modulus",
+    "FormalConjectures/Arxiv/2607.08366/MinModulus.lean@0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c; theorem exists_isValidMod_minModulus; formal_proof https://github.com/jarfo/min-modulus/blob/e7c78dd63955092b5f8d8a5fa826476337c0f4be/MinModulus/UniqueSums.lean#L837-L838",
+    "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-check-observation.json; check run 93244176232; head 0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+    "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-files-observation.json; complete file list; expected head 0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+    "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829.json; base 5fe1f74ad497d950e4c2094879ab10708907f7c6; head 0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+    "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-reviews.json; review 4910223499"
+  ],
+  "witness": "The changed open statement places answer(sorry) around the whole proposition and then quantifies n, N, and A exactly as described: 2 ≤ n, 0 < N, N < 2^n - 2^(Nat.log 2 n), #A = n, and ¬ IsValidMod A. IsValidMod expresses uniqueness of the all-ones multiplicity among multisets of size #A with the same residue sum. The separate upper-bound theorem asserts existence at minModulus n and carries a commit-pinned formal-proof locator. No retained conditional dependency, binder-scope change, or vacuous boundary is present.",
+  "unsupported_claims": [],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "Mathematical truth of the open conjecture",
+    "Independent reproduction of the external formal proof bytes",
+    "Community acceptance beyond the observed approval and merge",
+    "Formal Conjectures maintainer acceptance as a separate authority determination",
+    "Vela Verification, Decision, or Standing"
+  ],
+  "next_obligation": null,
+  "confidence": "high"
+}

@@ -1,0 +1,1220 @@
+{
+  "schema": "vela.math.fc-audit.agent-condition-bundle.v0.1",
+  "authority_effect": "none",
+  "fixture_id": "unavailable-rupert-3959",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+  "condition_packet": {
+    "schema": "vela.math.fc-audit.condition-packet.v0.1",
+    "packet_id": "unavailable-rupert-3959::same-inputs-plus-fc-pr-audit",
+    "condition": "same-inputs-plus-fc-pr-audit",
+    "authority_effect": "none",
+    "fixture_id": "unavailable-rupert-3959",
+    "task_wording": [
+      {
+        "id": "locate-evidence",
+        "prompt": "Locate the exact changed statement, every declared proof artifact, each check result, and the base and head identities. Record missing or ambiguous fields.",
+        "stop_condition": "The participant either records all requested locators or states that a requested item is unavailable."
+      },
+      {
+        "id": "classify-checks",
+        "prompt": "Separate mechanical checks, semantic-fidelity findings, artifact availability, and external community status. Preserve conditions and does-not-establish limits.",
+        "stop_condition": "Every observed result is assigned to one layer without inferring acceptance from pass."
+      },
+      {
+        "id": "review-fidelity",
+        "prompt": "Compare the exact Lean statement with its source and report a witness-backed verdict or an explicit inconclusive result.",
+        "stop_condition": "The participant records CLEAN, ACCEPT WITH NITS, NEEDS REVISION, or an explicit unresolved question, with the source locator and witness rules from the review guide."
+      },
+      {
+        "id": "reproduce-artifact",
+        "prompt": "Follow the retained commands or artifact locator far enough to reproduce or scope the claimed mechanical result. Record unavailable tools or bytes separately from failures.",
+        "stop_condition": "The artifact is reproduced, a retained attestation is scoped, or the attempt ends with fail, error, inconclusive, or unavailable and an exact reason."
+      },
+      {
+        "id": "handoff-continuation",
+        "prompt": "A receiver distinct from the sender continues from the rooted retained condition packet and explains the result, limits, and next unresolved obligation without private operator context.",
+        "stop_condition": "The linked receiver continuation observation gives a correct layer-separated account or identifies the missing provenance that prevents continuation."
+      }
+    ],
+    "pull_request": {
+      "repository": "google-deepmind/formal-conjectures",
+      "number": 3959,
+      "url": "https://github.com/google-deepmind/formal-conjectures/pull/3959",
+      "base_commit": "99ae49df4b27d9d95877c562ab9e1fd9b7ff1dc7",
+      "head_commit": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+      "changed_paths": [
+        "FormalConjectures/Paper/Rupert.lean"
+      ],
+      "files_observation": {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-files-observation.json",
+        "sha256": "fea9a92118bae6a7771bf9786a28c47a7b66b12027d85f0f4e9e2ec8c1ad89ad"
+      }
+    },
+    "source_repository_url": "https://github.com/google-deepmind/formal-conjectures.git",
+    "source_setup_commands": [
+      [
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/google-deepmind/formal-conjectures.git",
+        "$SOURCE_CHECKOUT"
+      ],
+      [
+        "git",
+        "-C",
+        "$SOURCE_CHECKOUT",
+        "checkout",
+        "--detach",
+        "868cc092aeb713dbf8027883c5fa575e550cfae9"
+      ]
+    ],
+    "public_source_command": [
+      "git",
+      "-C",
+      "$SOURCE_CHECKOUT",
+      "show",
+      "868cc092aeb713dbf8027883c5fa575e550cfae9:FormalConjectures/Paper/Rupert.lean"
+    ],
+    "shared_evidence": [
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-check-observation.json",
+        "raw_sha256": "sha256:0cfe2324cd131989b9ce7c6fbd4a1dc68665859419a99fd6ae2a5f64b0dd429a",
+        "size": 2194
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-files-observation.json",
+        "raw_sha256": "sha256:fea9a92118bae6a7771bf9786a28c47a7b66b12027d85f0f4e9e2ec8c1ad89ad",
+        "size": 2049
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-reviews.json",
+        "raw_sha256": "sha256:fb8340680f4d51347773f8ba8d0624697b39f9e9cd39730608e6074ff0cdc84d",
+        "size": 1520
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959.json",
+        "raw_sha256": "sha256:93ca95fbe74b4a30294c8687b00b15791f1de0e2ce622a680c7436bbf238b5da",
+        "size": 1304
+      }
+    ],
+    "access_limits": "Public source and the files named by this packet only. Do not use private operator context or outcome labels from another condition.",
+    "treatment_evidence": [
+      {
+        "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/unavailable-rupert-3959/expected-core.json",
+        "raw_sha256": "sha256:73c2b98ae0def8759b2948eb928d4c8412e67ab5541085149568c6b56c7c4f73",
+        "size": 19168
+      },
+      {
+        "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/unavailable-rupert-3959/expected-observation.json",
+        "raw_sha256": "sha256:aecc170adba2ff0dc964ee4d0e165b91a5d36f2048290666f720b6c3054c44c8",
+        "size": 6921
+      }
+    ],
+    "does_not_establish": [
+      "The packet label does not reveal the expected fixture outcome to the participant.",
+      "A review answer is not a Formal Conjectures maintainer action or Vela Decision."
+    ],
+    "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6"
+  },
+  "public_source": {
+    "fixture_id": "unavailable-rupert-3959",
+    "repository": "google-deepmind/formal-conjectures",
+    "commit": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+    "source_path": "FormalConjectures/Paper/Rupert.lean",
+    "git_blob_sha1": "48c343f0d12c1dffb7953a5d2426e0d13a914bad",
+    "source_url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/868cc092aeb713dbf8027883c5fa575e550cfae9/FormalConjectures/Paper/Rupert.lean",
+    "local_path": "evidence/formal-conjectures/agent-evaluation/public-source/unavailable-rupert-3959/Rupert.lean",
+    "size": 4750,
+    "raw_sha256": "sha256:49bec542e7c93319ca4a1c4a2b0b3a18bf72baaf7621416a30685e311a6ef7cf",
+    "content_utf8": "/-\nCopyright 2025 The Formal Conjectures Authors.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n-/\n\nimport FormalConjectures.Util.ProblemImports\n\n/-!\n# Is Every Convex Polyhedron Rupert?\n\nA polyhedron is Rupert if one can cut a hole in it and pass another\ncopy of the same polyhedron through that hole.\n\nMore formally: a convex body in ℝ³ is a compact, convex set with\nnonempty interior. A convex body X is said to be Rupert if there are\ntwo affine transforms T₁, T₂ ∈ SE(3) such that π(T₁(X)) ⊆\nint(π(T₂(X))), where π : ℝ³ → ℝ² is the evident projection, and int\ndenotes topological interior.\n\nNot all convex bodies are Rupert. For example,\n- the unit ball is not Rupert\n- the circular cylinder of unit diameter and height\n  closed on each end by disks is not Rupert\n\nHowever, many convex polyhedra are Rupert. All Platonic solids, and\nmost Archimedean and Catalan solids are known to be Rupert.\n\nQuestion: are all convex polyhedra with nonempty interior Rupert?\n\n*References:*\n\n* [Platonic Passages](https://www.researchgate.net/publication/314715434_Platonic_Passages),\n  R. P. Jerrard, J. E. Wetzel, and L. Yuan., Math. Mag., 90(2):87–98,\n  2017. conjectures (\"with a certain hesitancy\") that perhaps all\n  convex polyhedra are Rupert.\n\n* However, [An Algorithmic Approach to Rupert's Problem](https://arxiv.org/pdf/2112.13754#cite.JeWeYu17)\n  describes experimental evidence to suggest that three Archimedean\n  solids may not be Rupert.\n\n* [Optimizing for the Rupert property](https://arxiv.org/abs/2210.00601)\n  is the source of some of the Catalan solid results, and has more\n  results for Johnson polyhedra as well.\n\n* [This video by David Renshaw](https://www.youtube.com/watch?v=evKFok65t_E) visualizes\n  known results for Platonic, Archimedean, and Catalan solids.\n\n* This problem's name comes from the fact that it is a generalization\n  of [Prince Rupert's Cube](https://en.wikipedia.org/wiki/Prince_Rupert%27s_cube).\n\n* [A convex polyhedron without Rupert's property](https://arxiv.org/abs/2508.18475),\n  Jakob Steininger and Sergey Yurkevich, 2025. Constructs a convex polyhedron and\n  a proof that it is not Rupert, resolving the open question.\n\n-/\n\nnamespace Rupert\n\nopen scoped Matrix\n\nabbrev SO3 := Matrix.specialOrthogonalGroup (Fin 3) ℝ\n\nscoped notation \"ℝ²\" => Fin 2 → ℝ\nscoped notation \"ℝ³\" => Fin 3 → ℝ\n\n/--\nThe result of transforming a subset of ℝ³ by a chosen rotation and offset,\nand then projected to ℝ².\n-/\ndef transformed_shadow (X : Set ℝ³) (offset : ℝ²) (rotation : SO3) : Set ℝ² :=\n  (fun p ↦ offset + (rotation *ᵥ p) ∘ Fin.castSucc) '' X\n\n/--\nA convex polyhedron (given as a finite collection of vertices) is Rupert if\nthere are two rotations in ℝ³ (called \"inner\" and \"outer\") and a translation in ℝ²\nsuch that the \"inner shadow\" (the projection to ℝ² of the inner rotation applied\nto the polyhedron, then translated) fits in the interior of the \"outer shadow\"\n(the projection to ℝ² of the outer rotation applied to the polyhedron)\n\n[Note: The restriction to (polyhedra determined by the convex hulls of)\n*finite* sets of vertices here is deliberate. Were we to generalize to\narbitrary subsets of ℝⁿ we'd probably want to make the containment\nrelation more strict, e.g.\n  closure inner_shadow ⊆ interior outer_shadow\nto rule out, e.g. the open ball being Rupert. However, we didn't\nobserve any such generalization in the literature yet, so we stuck to\nwhat was in the citations above.]\n-/\ndef IsRupert (vertices : Finset ℝ³) : Prop :=\n   ∃ (inner_rotation : SO3) (inner_offset : ℝ²) (outer_rotation : SO3),\n   let inner_shadow := transformed_shadow (convexHull ℝ vertices) inner_offset inner_rotation\n   let outer_shadow := transformed_shadow (convexHull ℝ vertices) 0 outer_rotation\n   inner_shadow ⊆ interior outer_shadow\n\n/--\nThere exists a convex polyhedron with nonempty interior for which the Rupert property does\nnot hold.\n-/\n@[category research solved, AMS 52, formal_proof using lean4 at \"https://github.com/jcreedcmu/Noperthedron\"]\ntheorem is_every_convex_polyhedron_rupert :\n    answer(False) ↔ ∀ (vertices : Finset ℝ³),\n       (interior (convexHull ℝ vertices : Set ℝ³)).Nonempty → IsRupert vertices := by\n sorry\n"
+  },
+  "shared_evidence": [
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-check-observation.json",
+      "raw_sha256": "sha256:0cfe2324cd131989b9ce7c6fbd4a1dc68665859419a99fd6ae2a5f64b0dd429a",
+      "size": 2194,
+      "content": {
+        "schema": "vela.math.fc-audit.github-check-observation.v0.1",
+        "authority_effect": "none",
+        "repository": "google-deepmind/formal-conjectures",
+        "pull_request_number": 3959,
+        "head_commit": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+        "observed_at": "2026-08-12T19:57:18Z",
+        "normalization": {
+          "description": "Selected primary GitHub REST API fields retained as normalized evidence and sorted by numeric record id. These bytes are not a canonical GitHub response.",
+          "api_version": "2022-11-28",
+          "media_type": "application/vnd.github+json"
+        },
+        "sources": {
+          "check_runs": {
+            "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/868cc092aeb713dbf8027883c5fa575e550cfae9/check-runs?per_page=100",
+            "api_total_count": 6,
+            "retained_record_count": 1,
+            "selection_rule": "Retain the named Build project run used by the mechanical claim; other check runs are outside that claim.",
+            "records": [
+              {
+                "app": {
+                  "id": 15368,
+                  "name": "GitHub Actions",
+                  "owner_login": "github",
+                  "slug": "github-actions"
+                },
+                "completed_at": "2026-05-09T20:01:21Z",
+                "conclusion": "success",
+                "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/25608941188/job/75175625578",
+                "external_id": "5e99a7f4-e796-56a6-a190-889858e11cb4",
+                "head_sha": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+                "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/25608941188/job/75175625578",
+                "id": 75175625578,
+                "name": "Build project",
+                "started_at": "2026-05-09T18:44:31Z",
+                "status": "completed"
+              }
+            ]
+          }
+        },
+        "mechanical_claim": {
+          "property": "repository_build_check",
+          "scope": "exact_head_repository_build_check",
+          "result": "pass",
+          "evidence_check_run_ids": [
+            75175625578
+          ]
+        },
+        "limitations": [
+          "This is an observation of a GitHub-hosted check, not a local reproduction.",
+          "A passing build does not establish proof-artifact identity, statement fidelity, or Vela Standing."
+        ]
+      }
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-files-observation.json",
+      "raw_sha256": "sha256:fea9a92118bae6a7771bf9786a28c47a7b66b12027d85f0f4e9e2ec8c1ad89ad",
+      "size": 2049,
+      "content": {
+        "schema": "vela.math.fc-audit.github-pr-files-observation.v0.1",
+        "authority_effect": "none",
+        "repository": "google-deepmind/formal-conjectures",
+        "pull_request_number": 3959,
+        "expected_head_commit": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+        "observed_at": "2026-08-12T19:53:13Z",
+        "acquisition_method": {
+          "api": "GitHub REST API",
+          "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/3959/files?per_page=100",
+          "api_version": "2022-11-28",
+          "media_type": "application/vnd.github+json",
+          "command_shape": "gh api --paginate ... /repos/{owner}/{repo}/pulls/{number}/files?per_page=100"
+        },
+        "normalization": {
+          "description": "Selected primary GitHub REST API fields retained as normalized evidence and sorted by filename. These bytes are not a canonical GitHub response.",
+          "pagination": "all pages requested with per_page=100"
+        },
+        "files": [
+          {
+            "additions": 9,
+            "blob_url": "https://github.com/google-deepmind/formal-conjectures/blob/868cc092aeb713dbf8027883c5fa575e550cfae9/FormalConjectures%2FPaper%2FRupert.lean",
+            "changes": 13,
+            "contents_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/contents/FormalConjectures%2FPaper%2FRupert.lean?ref=868cc092aeb713dbf8027883c5fa575e550cfae9",
+            "deletions": 4,
+            "filename": "FormalConjectures/Paper/Rupert.lean",
+            "previous_filename": null,
+            "raw_url": "https://github.com/google-deepmind/formal-conjectures/raw/868cc092aeb713dbf8027883c5fa575e550cfae9/FormalConjectures%2FPaper%2FRupert.lean",
+            "sha": "48c343f0d12c1dffb7953a5d2426e0d13a914bad",
+            "status": "modified"
+          }
+        ],
+        "limitations": [
+          "GitHub's pull-request files response is mutable community observation state and is not fixture identity by itself.",
+          "The separately retained pull-request snapshot binds the exact base and head commits.",
+          "Patch text is intentionally omitted; the file record retains its exact Git blob SHA and immutable commit-qualified contents URL."
+        ]
+      }
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-reviews.json",
+      "raw_sha256": "sha256:fb8340680f4d51347773f8ba8d0624697b39f9e9cd39730608e6074ff0cdc84d",
+      "size": 1520,
+      "content": {
+        "schema": "vela.math.fc-audit.github-reviews-observation.v0.1",
+        "authority_effect": "none",
+        "repository": "google-deepmind/formal-conjectures",
+        "pull_request_number": 3959,
+        "observed_at": "2026-08-12T19:53:13Z",
+        "acquisition_method": {
+          "api": "GitHub REST API",
+          "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/3959/reviews",
+          "api_version": "2022-11-28",
+          "media_type": "application/vnd.github+json"
+        },
+        "normalization": "Selected primary GitHub REST API fields retained as normalized evidence and sorted by review id. These bytes are not a canonical GitHub response.",
+        "reviews": [
+          {
+            "id": 4253914465,
+            "state": "COMMENTED",
+            "commit_id": "30c63898f32c0c7d05a6830504195d7f896451f0",
+            "submitted_at": "2026-05-08T17:03:18Z"
+          },
+          {
+            "id": 4254105870,
+            "state": "COMMENTED",
+            "commit_id": "30c63898f32c0c7d05a6830504195d7f896451f0",
+            "submitted_at": "2026-05-08T17:30:41Z"
+          },
+          {
+            "id": 4257427080,
+            "state": "COMMENTED",
+            "commit_id": "30c63898f32c0c7d05a6830504195d7f896451f0",
+            "submitted_at": "2026-05-09T08:29:33Z"
+          },
+          {
+            "id": 4257427318,
+            "state": "APPROVED",
+            "commit_id": "30c63898f32c0c7d05a6830504195d7f896451f0",
+            "submitted_at": "2026-05-09T08:29:49Z"
+          },
+          {
+            "id": 4257691834,
+            "state": "COMMENTED",
+            "commit_id": "30c63898f32c0c7d05a6830504195d7f896451f0",
+            "submitted_at": "2026-05-09T11:17:06Z"
+          }
+        ]
+      }
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959.json",
+      "raw_sha256": "sha256:93ca95fbe74b4a30294c8687b00b15791f1de0e2ce622a680c7436bbf238b5da",
+      "size": 1304,
+      "content": {
+        "schema": "vela.math.fc-audit.github-pr-observation.v0.1",
+        "authority_effect": "none",
+        "repository": "google-deepmind/formal-conjectures",
+        "observed_at": "2026-08-12T19:53:13Z",
+        "acquisition_method": {
+          "api": "GitHub REST API",
+          "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/3959",
+          "api_version": "2022-11-28",
+          "media_type": "application/vnd.github+json"
+        },
+        "normalization": "Selected primary GitHub REST API fields retained as normalized evidence. These bytes are not a canonical GitHub response.",
+        "number": 3959,
+        "title": "chore: update status of Rupert problem, adding link to paper and formalization",
+        "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/3959",
+        "state": "closed",
+        "merged": true,
+        "merged_at": "2026-05-09T20:01:35Z",
+        "merge_commit_sha": "b79a90264a301f3a23ab649710669682179d10c3",
+        "base": {
+          "sha": "99ae49df4b27d9d95877c562ab9e1fd9b7ff1dc7"
+        },
+        "head": {
+          "sha": "868cc092aeb713dbf8027883c5fa575e550cfae9"
+        },
+        "changed_files": 1,
+        "body_relevant_claims": [
+          "A complete formalization is linked at https://github.com/jcreedcmu/Noperthedron.",
+          "The linked target is a mutable repository root and identifies neither an exact revision nor one proof file."
+        ]
+      }
+    }
+  ],
+  "treatment_evidence": [
+    {
+      "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/unavailable-rupert-3959/expected-core.json",
+      "raw_sha256": "sha256:73c2b98ae0def8759b2948eb928d4c8412e67ab5541085149568c6b56c7c4f73",
+      "size": 19168,
+      "content": {
+        "checks": [
+          {
+            "assumptions": [],
+            "conditions": [],
+            "does_not_establish": [
+              "attempted_invocation",
+              "comparison_result",
+              "merge_decision",
+              "proof_correctness",
+              "source_fidelity"
+            ],
+            "evidence": [
+              {
+                "kind": "packet-inspection-observation",
+                "locator": "comparator-packet-observation.json",
+                "sha256": "sha256:16db1276ba826db42ed51949ad0e63b95b22c2d70e9e01d7799afd9775409b7a",
+                "statement": "A retained packet inspection found no exact Comparator executable, toolchain lock, invocation, or execution result in scope.",
+                "witness": ""
+              }
+            ],
+            "id": "comparator-packet-identity",
+            "implementation": {
+              "kind": "retained_procedure",
+              "locator": "comparator-packet-procedure.json",
+              "name": "comparator-packet-inspection",
+              "root": "sha256:433b6e6384b73eec47e09d11213c5140114a492073aad9e7aad4b1abb4d46f8a",
+              "version": "1"
+            },
+            "inputs": [
+              {
+                "artifact_id": "head-source",
+                "id": "head-lean-blob",
+                "kind": "git-blob",
+                "locator": "FormalConjectures/Paper/Rupert.lean@868cc092aeb713dbf8027883c5fa575e550cfae9",
+                "root": "sha256:49bec542e7c93319ca4a1c4a2b0b3a18bf72baaf7621416a30685e311a6ef7cf"
+              },
+              {
+                "artifact_id": "comparator-procedure",
+                "id": "method",
+                "kind": "retained-procedure",
+                "locator": "comparator-packet-procedure.json",
+                "root": "sha256:433b6e6384b73eec47e09d11213c5140114a492073aad9e7aad4b1abb4d46f8a"
+              },
+              {
+                "artifact_id": "comparator-observation",
+                "id": "observation",
+                "kind": "packet-inspection-observation",
+                "locator": "comparator-packet-observation.json",
+                "root": "sha256:16db1276ba826db42ed51949ad0e63b95b22c2d70e9e01d7799afd9775409b7a"
+              },
+              {
+                "artifact_id": "repository-authority",
+                "id": "repository-authority",
+                "kind": "normalized-repository-result",
+                "locator": "PullRequestAuditCoreSnapshot.result",
+                "root": "sha256:ed59eaf75b4440c7946ff86a50fa3c06cbc41d3146dc3c330f8e2f0573150047"
+              },
+              {
+                "artifact_id": "repository-query",
+                "id": "repository-query",
+                "kind": "graphql-query",
+                "locator": "PullRequestAuditCoreSnapshot",
+                "root": "sha256:ea66d6fc53eaee9f08ab7cb5312f06e5353c647c0e4db9ad97827eafc293319e"
+              },
+              {
+                "artifact_id": "repository-request",
+                "id": "repository-request",
+                "kind": "request-identity",
+                "locator": "PullRequestAuditCoreSnapshot.request",
+                "root": "sha256:c57967316a7b74472b8bee53a9cb73cdf953e5ffc87cb1b1fc36625fe2ecf72e"
+              },
+              {
+                "artifact_id": "typed-result-comparator-packet-identity",
+                "id": "typed-result",
+                "kind": "typed-result",
+                "locator": "typed-result/deterministic_adapter/formal_conjectures_pr_audit",
+                "root": "sha256:ec2069c5e463afbbf4ddc2f1ecaac86ecc8eb52ae6eec0d3b58f11a8c19f9efe"
+              }
+            ],
+            "kind": "metadata",
+            "limitations": [
+              "This packet-inspection check alone does not establish attempted invocation; the separate Comparator tool-availability check carries the retained attempt."
+            ],
+            "mode": "retained_replay",
+            "outcome": "unavailable",
+            "proofs": [],
+            "property": "comparator-packet-identity",
+            "role": "producer",
+            "scope": {
+              "declarations": [
+                "Rupert.is_every_convex_polyhedron_rupert"
+              ],
+              "paths": [
+                "FormalConjectures/Paper/Rupert.lean"
+              ],
+              "revision": "head"
+            },
+            "severity": "none"
+          },
+          {
+            "assumptions": [],
+            "conditions": [],
+            "does_not_establish": [
+              "comparison_result",
+              "merge_decision",
+              "proof_absence",
+              "proof_failure",
+              "proof_incorrectness",
+              "source_fidelity"
+            ],
+            "evidence": [
+              {
+                "kind": "tool-invocation-result",
+                "locator": "comparator-missing-tool-invocation.json",
+                "sha256": "sha256:1f967eb7e8abdf4be2e5b90e415434b493ee8229f3b5d4997ac98f7b93326600",
+                "statement": "A real inert Comparator availability invocation was attempted under the declared closed PATH; no executable resolved and no process started.",
+                "witness": ""
+              }
+            ],
+            "id": "comparator-tool-availability",
+            "implementation": {
+              "kind": "retained_procedure",
+              "locator": "missing-tool-invocation-procedure.py",
+              "name": "comparator-availability-preflight",
+              "root": "sha256:c5a5a8ee435dbe381ae533cad2030d1ad35b2c1de4317d63fd66548fbdc3376e",
+              "version": "1"
+            },
+            "inputs": [
+              {
+                "artifact_id": "head-source",
+                "id": "head-lean-blob",
+                "kind": "git-blob",
+                "locator": "FormalConjectures/Paper/Rupert.lean@868cc092aeb713dbf8027883c5fa575e550cfae9",
+                "root": "sha256:49bec542e7c93319ca4a1c4a2b0b3a18bf72baaf7621416a30685e311a6ef7cf"
+              },
+              {
+                "artifact_id": "comparator-invocation-result",
+                "id": "invocation-result",
+                "kind": "tool-invocation-result",
+                "locator": "comparator-missing-tool-invocation.json",
+                "root": "sha256:1f967eb7e8abdf4be2e5b90e415434b493ee8229f3b5d4997ac98f7b93326600"
+              },
+              {
+                "artifact_id": "comparator-invocation-procedure",
+                "id": "method",
+                "kind": "python-source",
+                "locator": "missing-tool-invocation-procedure.py",
+                "root": "sha256:c5a5a8ee435dbe381ae533cad2030d1ad35b2c1de4317d63fd66548fbdc3376e"
+              },
+              {
+                "artifact_id": "repository-authority",
+                "id": "repository-authority",
+                "kind": "normalized-repository-result",
+                "locator": "PullRequestAuditCoreSnapshot.result",
+                "root": "sha256:ed59eaf75b4440c7946ff86a50fa3c06cbc41d3146dc3c330f8e2f0573150047"
+              },
+              {
+                "artifact_id": "repository-query",
+                "id": "repository-query",
+                "kind": "graphql-query",
+                "locator": "PullRequestAuditCoreSnapshot",
+                "root": "sha256:ea66d6fc53eaee9f08ab7cb5312f06e5353c647c0e4db9ad97827eafc293319e"
+              },
+              {
+                "artifact_id": "repository-request",
+                "id": "repository-request",
+                "kind": "request-identity",
+                "locator": "PullRequestAuditCoreSnapshot.request",
+                "root": "sha256:c57967316a7b74472b8bee53a9cb73cdf953e5ffc87cb1b1fc36625fe2ecf72e"
+              },
+              {
+                "artifact_id": "typed-result-comparator-tool-availability",
+                "id": "typed-result",
+                "kind": "typed-result",
+                "locator": "typed-result/deterministic_adapter/formal_conjectures_pr_audit",
+                "root": "sha256:0fe9c98169e2caabe5f6a3f06560be2912f462b19f10d712d34b7e39bad37cdd"
+              }
+            ],
+            "kind": "mechanical",
+            "limitations": [
+              "Unavailable is scoped to the Comparator executable in the declared environment; no proof comparison ran."
+            ],
+            "mode": "retained_replay",
+            "outcome": "unavailable",
+            "proofs": [],
+            "property": "comparator-tool-availability",
+            "role": "producer",
+            "scope": {
+              "declarations": [
+                "Rupert.is_every_convex_polyhedron_rupert"
+              ],
+              "paths": [
+                "FormalConjectures/Paper/Rupert.lean"
+              ],
+              "revision": "head"
+            },
+            "severity": "none"
+          },
+          {
+            "assumptions": [],
+            "conditions": [],
+            "does_not_establish": [
+              "merge_decision",
+              "proof_correctness",
+              "source_fidelity"
+            ],
+            "evidence": [
+              {
+                "kind": "github-check-run",
+                "locator": "https://github.com/google-deepmind/formal-conjectures/actions/runs/25608941188/job/75175625578",
+                "sha256": "sha256:a23c1a088d181e869144ba146789ea7b974c5d6120b8d831b41b098066dd1a54",
+                "statement": "The exact PR head completed the repository Build project job successfully.",
+                "witness": ""
+              }
+            ],
+            "id": "exact-head-build",
+            "implementation": {
+              "kind": "github_actions_workflow",
+              "locator": ".github/workflows/build-and-docs.yml@868cc092aeb713dbf8027883c5fa575e550cfae9",
+              "name": "build-and-docs",
+              "root": "sha256:8841d7fe334bc84abe5d72ae923be08510e5bf661edfc4e15ed135abffaac39c",
+              "version": "1"
+            },
+            "inputs": [
+              {
+                "artifact_id": "base-source",
+                "id": "base-lean-blob",
+                "kind": "git-blob",
+                "locator": "FormalConjectures/Paper/Rupert.lean@99ae49df4b27d9d95877c562ab9e1fd9b7ff1dc7",
+                "root": "sha256:fc118aad528350a7f9f8a59fa4a96969d51f381f82cf83b3586a337e67ab81c6"
+              },
+              {
+                "artifact_id": "build-job",
+                "id": "build-job",
+                "kind": "github-check-run",
+                "locator": "https://github.com/google-deepmind/formal-conjectures/actions/runs/25608941188/job/75175625578",
+                "root": "sha256:a23c1a088d181e869144ba146789ea7b974c5d6120b8d831b41b098066dd1a54"
+              },
+              {
+                "artifact_id": "head-source",
+                "id": "head-lean-blob",
+                "kind": "git-blob",
+                "locator": "FormalConjectures/Paper/Rupert.lean@868cc092aeb713dbf8027883c5fa575e550cfae9",
+                "root": "sha256:49bec542e7c93319ca4a1c4a2b0b3a18bf72baaf7621416a30685e311a6ef7cf"
+              },
+              {
+                "artifact_id": "repository-authority",
+                "id": "repository-authority",
+                "kind": "normalized-repository-result",
+                "locator": "PullRequestAuditCoreSnapshot.result",
+                "root": "sha256:ed59eaf75b4440c7946ff86a50fa3c06cbc41d3146dc3c330f8e2f0573150047"
+              },
+              {
+                "artifact_id": "repository-query",
+                "id": "repository-query",
+                "kind": "graphql-query",
+                "locator": "PullRequestAuditCoreSnapshot",
+                "root": "sha256:ea66d6fc53eaee9f08ab7cb5312f06e5353c647c0e4db9ad97827eafc293319e"
+              },
+              {
+                "artifact_id": "repository-request",
+                "id": "repository-request",
+                "kind": "request-identity",
+                "locator": "PullRequestAuditCoreSnapshot.request",
+                "root": "sha256:c57967316a7b74472b8bee53a9cb73cdf953e5ffc87cb1b1fc36625fe2ecf72e"
+              },
+              {
+                "artifact_id": "typed-result-exact-head-build",
+                "id": "typed-result",
+                "kind": "typed-result",
+                "locator": "typed-result/retained_external_result/github_actions",
+                "root": "sha256:af931d6a9186e5616e75e287536a02e0b76873d5184a3725178d559523e1a541"
+              },
+              {
+                "artifact_id": "method-workflow",
+                "id": "workflow",
+                "kind": "workflow",
+                "locator": ".github/workflows/build-and-docs.yml@868cc092aeb713dbf8027883c5fa575e550cfae9",
+                "root": "sha256:8841d7fe334bc84abe5d72ae923be08510e5bf661edfc4e15ed135abffaac39c"
+              },
+              {
+                "artifact_id": "method-workflow-identity",
+                "id": "workflow-identity",
+                "kind": "git-object-identity",
+                "locator": ".github/workflows/build-and-docs.yml@868cc092aeb713dbf8027883c5fa575e550cfae9",
+                "root": "sha256:1076b2229da2ce44184a65b3b975a6bce67edbe77d9da417bcd0a3c79358394c"
+              }
+            ],
+            "kind": "mechanical",
+            "limitations": [
+              "A successful Lean build does not identify or compare the externally linked proof artifact."
+            ],
+            "mode": "retained_replay",
+            "outcome": "pass",
+            "proofs": [],
+            "property": "lean-build",
+            "role": "producer",
+            "scope": {
+              "declarations": [
+                "Rupert.is_every_convex_polyhedron_rupert"
+              ],
+              "paths": [
+                "FormalConjectures/Paper/Rupert.lean"
+              ],
+              "revision": "head"
+            },
+            "severity": "none"
+          },
+          {
+            "assumptions": [],
+            "conditions": [],
+            "does_not_establish": [
+              "merge_decision",
+              "proof_absence",
+              "proof_failure",
+              "proof_incorrectness",
+              "repository_has_no_matching_proof",
+              "source_fidelity"
+            ],
+            "evidence": [
+              {
+                "kind": "mutable-repository-root-metadata",
+                "locator": "FormalConjectures/Paper/Rupert.lean@868cc092aeb713dbf8027883c5fa575e550cfae9",
+                "sha256": "sha256:49bec542e7c93319ca4a1c4a2b0b3a18bf72baaf7621416a30685e311a6ef7cf",
+                "statement": "The head metadata points only to a mutable repository root with multiple candidate proof routes, not to an exact commit and file.",
+                "witness": "At PR 3959 head 868cc092, the formal_proof attribute does not identify immutable proof bytes for an independent consumer."
+              }
+            ],
+            "id": "formal-proof-artifact-identity",
+            "implementation": {
+              "kind": "retained_procedure",
+              "locator": "scripts/pr_audit.py#classify_proof_target",
+              "name": "formal-proof-target-classifier",
+              "root": "sha256:2c41ae2bd4fed8f9748ebf8c57630673ca2eb7ea3c690525ea292641590c3098",
+              "version": "1"
+            },
+            "inputs": [
+              {
+                "artifact_id": "base-source",
+                "id": "base-lean-blob",
+                "kind": "git-blob",
+                "locator": "FormalConjectures/Paper/Rupert.lean@99ae49df4b27d9d95877c562ab9e1fd9b7ff1dc7",
+                "root": "sha256:fc118aad528350a7f9f8a59fa4a96969d51f381f82cf83b3586a337e67ab81c6"
+              },
+              {
+                "artifact_id": "head-source",
+                "id": "head-lean-blob",
+                "kind": "git-blob",
+                "locator": "FormalConjectures/Paper/Rupert.lean@868cc092aeb713dbf8027883c5fa575e550cfae9",
+                "root": "sha256:49bec542e7c93319ca4a1c4a2b0b3a18bf72baaf7621416a30685e311a6ef7cf"
+              },
+              {
+                "artifact_id": "method-pr-audit",
+                "id": "method",
+                "kind": "python-source",
+                "locator": "scripts/pr_audit.py#classify_proof_target",
+                "root": "sha256:2c41ae2bd4fed8f9748ebf8c57630673ca2eb7ea3c690525ea292641590c3098"
+              },
+              {
+                "artifact_id": "repository-authority",
+                "id": "repository-authority",
+                "kind": "normalized-repository-result",
+                "locator": "PullRequestAuditCoreSnapshot.result",
+                "root": "sha256:ed59eaf75b4440c7946ff86a50fa3c06cbc41d3146dc3c330f8e2f0573150047"
+              },
+              {
+                "artifact_id": "repository-query",
+                "id": "repository-query",
+                "kind": "graphql-query",
+                "locator": "PullRequestAuditCoreSnapshot",
+                "root": "sha256:ea66d6fc53eaee9f08ab7cb5312f06e5353c647c0e4db9ad97827eafc293319e"
+              },
+              {
+                "artifact_id": "repository-request",
+                "id": "repository-request",
+                "kind": "request-identity",
+                "locator": "PullRequestAuditCoreSnapshot.request",
+                "root": "sha256:c57967316a7b74472b8bee53a9cb73cdf953e5ffc87cb1b1fc36625fe2ecf72e"
+              },
+              {
+                "artifact_id": "typed-result-formal-proof-artifact-identity",
+                "id": "typed-result",
+                "kind": "typed-result",
+                "locator": "typed-result/deterministic_adapter/formal_conjectures_pr_audit",
+                "root": "sha256:e4738d38adf997767bb86bc9d6f2254e1904107ae215d2831948d8124640a56a"
+              }
+            ],
+            "kind": "metadata",
+            "limitations": [
+              "Unavailable is scoped to exact artifact identity at this head; later metadata may pin an exact commit and file."
+            ],
+            "mode": "native",
+            "outcome": "unavailable",
+            "proofs": [
+              {
+                "conditions": [],
+                "declaration": "Rupert.is_every_convex_polyhedron_rupert",
+                "kind": "lean4",
+                "locator": "https://github.com/jcreedcmu/Noperthedron"
+              }
+            ],
+            "property": "exact-formal-proof-artifact-identity",
+            "role": "producer",
+            "scope": {
+              "declarations": [
+                "Rupert.is_every_convex_polyhedron_rupert"
+              ],
+              "paths": [
+                "FormalConjectures/Paper/Rupert.lean"
+              ],
+              "revision": "head"
+            },
+            "severity": "none"
+          }
+        ],
+        "disposition": {
+          "advisory": "unavailable",
+          "basis_check_ids": [
+            "comparator-packet-identity",
+            "comparator-tool-availability",
+            "formal-proof-artifact-identity"
+          ],
+          "nonclaims": [
+            "not_a_claim_of_mathematical_truth",
+            "not_a_claim_that_unlisted_checks_ran",
+            "not_an_acceptance_or_merge_decision",
+            "not_source_fidelity_beyond_the_listed_checks"
+          ]
+        },
+        "generator": {
+          "canonicalization": "fc-jcs-ijson-integer-v1",
+          "name": "formal-conjectures-pr-audit",
+          "noncapabilities": [
+            "git",
+            "github",
+            "lean",
+            "model",
+            "network",
+            "subprocess"
+          ],
+          "schema_version": "formal-conjectures.pr-audit-generator.v1",
+          "source": {
+            "baseline": {
+              "commit_oid": "c9052e8577118ed0ada54462bd4ef1f3beff37d6",
+              "tree_oid": "864ee77ee26a7cbd85b30558f8d9d2036f8717ed"
+            },
+            "kind": "git_baseline_with_content_addressed_overlay",
+            "overlay": {
+              "files": [
+                {
+                  "path": "audit/pr-audit-v1/schemas/formal-conjectures.pr-audit-observation.v1.schema.json",
+                  "sha256": "sha256:5e7ae0ea2d00c5e224a38865b3866b11357a071e71bdc58cfb0d16d6a2a74e7d"
+                },
+                {
+                  "path": "audit/pr-audit-v1/schemas/formal-conjectures.pr-audit.v1.schema.json",
+                  "sha256": "sha256:b581b8970673fe90b749a54a0b2df9f0ea5d6221f90f49f67f2f03602b2efc45"
+                },
+                {
+                  "path": "scripts/generate_pr_audit.py",
+                  "sha256": "sha256:ebe7961418cd37b0816db4bf72628962f36f88cb1fd4d4f9cb4c102d5b0ae070"
+                },
+                {
+                  "path": "scripts/pr_audit.py",
+                  "sha256": "sha256:2c41ae2bd4fed8f9748ebf8c57630673ca2eb7ea3c690525ea292641590c3098"
+                }
+              ],
+              "root": "sha256:8e6b99252c0bebe8b3c221a9d37a1b9b3139a383ac16371ea11ab851fb8d6f96"
+            },
+            "repository": "https://github.com/google-deepmind/formal-conjectures"
+          },
+          "version": "1.0.0"
+        },
+        "inputs": {
+          "artifact_root": "sha256:de1e41c4a4315bd48e6c8b9a7bf4869a1fa1d460f74bf4ef0fc0b5d3b183a999",
+          "artifacts": [
+            {
+              "id": "base-source",
+              "media_type": "text/x-lean",
+              "path": "inputs/base-source.lean",
+              "role": "source_file",
+              "sha256": "sha256:fc118aad528350a7f9f8a59fa4a96969d51f381f82cf83b3586a337e67ab81c6"
+            },
+            {
+              "id": "build-job",
+              "media_type": "application/json",
+              "path": "inputs/github-job-result.json",
+              "role": "tool_output",
+              "sha256": "sha256:a23c1a088d181e869144ba146789ea7b974c5d6120b8d831b41b098066dd1a54"
+            },
+            {
+              "id": "checks",
+              "media_type": "application/json",
+              "path": "inputs/checks.json",
+              "role": "check_results",
+              "sha256": "sha256:9376cfa8dedabf395f31932efed1f4d20e2e38a8e985b6eb98e645adc21d3b63"
+            },
+            {
+              "id": "comparator-invocation-procedure",
+              "media_type": "text/plain",
+              "path": "inputs/missing-tool-invocation-procedure.py",
+              "role": "method",
+              "sha256": "sha256:c5a5a8ee435dbe381ae533cad2030d1ad35b2c1de4317d63fd66548fbdc3376e"
+            },
+            {
+              "id": "comparator-invocation-result",
+              "media_type": "application/json",
+              "path": "inputs/comparator-missing-tool-invocation.json",
+              "role": "tool_output",
+              "sha256": "sha256:1f967eb7e8abdf4be2e5b90e415434b493ee8229f3b5d4997ac98f7b93326600"
+            },
+            {
+              "id": "comparator-observation",
+              "media_type": "application/json",
+              "path": "inputs/comparator-packet-observation.json",
+              "role": "tool_output",
+              "sha256": "sha256:16db1276ba826db42ed51949ad0e63b95b22c2d70e9e01d7799afd9775409b7a"
+            },
+            {
+              "id": "comparator-procedure",
+              "media_type": "application/json",
+              "path": "inputs/comparator-packet-procedure.json",
+              "role": "method",
+              "sha256": "sha256:433b6e6384b73eec47e09d11213c5140114a492073aad9e7aad4b1abb4d46f8a"
+            },
+            {
+              "id": "generator",
+              "media_type": "application/json",
+              "path": "inputs/generator.json",
+              "role": "generator_identity",
+              "sha256": "sha256:36ef37235a58c296ccf7b2fa90d09e5cb3977947c34be2b1f6dcb0361f080b6d"
+            },
+            {
+              "id": "head-source",
+              "media_type": "text/x-lean",
+              "path": "inputs/head-source.lean",
+              "role": "source_file",
+              "sha256": "sha256:49bec542e7c93319ca4a1c4a2b0b3a18bf72baaf7621416a30685e311a6ef7cf"
+            },
+            {
+              "id": "method-pr-audit",
+              "media_type": "text/plain",
+              "path": "inputs/method-pr-audit.py",
+              "role": "method",
+              "sha256": "sha256:2c41ae2bd4fed8f9748ebf8c57630673ca2eb7ea3c690525ea292641590c3098"
+            },
+            {
+              "id": "method-workflow",
+              "media_type": "text/plain",
+              "path": "inputs/method-build-and-docs.yml",
+              "role": "configuration",
+              "sha256": "sha256:8841d7fe334bc84abe5d72ae923be08510e5bf661edfc4e15ed135abffaac39c"
+            },
+            {
+              "id": "method-workflow-identity",
+              "media_type": "application/json",
+              "path": "inputs/method-build-and-docs.identity.json",
+              "role": "tool_output",
+              "sha256": "sha256:1076b2229da2ce44184a65b3b975a6bce67edbe77d9da417bcd0a3c79358394c"
+            },
+            {
+              "id": "repository",
+              "media_type": "application/json",
+              "path": "inputs/repository.json",
+              "role": "repository_snapshot",
+              "sha256": "sha256:bcce1ec8a1f9616c657fc3fe6b0783c5fa94d2e1bd58dcfae103e39a66d07960"
+            },
+            {
+              "id": "repository-authority",
+              "media_type": "application/json",
+              "path": "inputs/github-core-snapshot-result.json",
+              "role": "tool_output",
+              "sha256": "sha256:ed59eaf75b4440c7946ff86a50fa3c06cbc41d3146dc3c330f8e2f0573150047"
+            },
+            {
+              "id": "repository-query",
+              "media_type": "text/plain",
+              "path": "inputs/github-core-snapshot-query.graphql",
+              "role": "query",
+              "sha256": "sha256:ea66d6fc53eaee9f08ab7cb5312f06e5353c647c0e4db9ad97827eafc293319e"
+            },
+            {
+              "id": "repository-request",
+              "media_type": "application/json",
+              "path": "inputs/github-core-request-identity.json",
+              "role": "configuration",
+              "sha256": "sha256:c57967316a7b74472b8bee53a9cb73cdf953e5ffc87cb1b1fc36625fe2ecf72e"
+            },
+            {
+              "id": "typed-result-comparator-packet-identity",
+              "media_type": "application/json",
+              "path": "inputs/typed-result-comparator-packet-identity.json",
+              "role": "typed_result",
+              "sha256": "sha256:ec2069c5e463afbbf4ddc2f1ecaac86ecc8eb52ae6eec0d3b58f11a8c19f9efe"
+            },
+            {
+              "id": "typed-result-comparator-tool-availability",
+              "media_type": "application/json",
+              "path": "inputs/typed-result-comparator-tool-availability.json",
+              "role": "typed_result",
+              "sha256": "sha256:0fe9c98169e2caabe5f6a3f06560be2912f462b19f10d712d34b7e39bad37cdd"
+            },
+            {
+              "id": "typed-result-exact-head-build",
+              "media_type": "application/json",
+              "path": "inputs/typed-result-exact-head-build.json",
+              "role": "typed_result",
+              "sha256": "sha256:af931d6a9186e5616e75e287536a02e0b76873d5184a3725178d559523e1a541"
+            },
+            {
+              "id": "typed-result-formal-proof-artifact-identity",
+              "media_type": "application/json",
+              "path": "inputs/typed-result-formal-proof-artifact-identity.json",
+              "role": "typed_result",
+              "sha256": "sha256:e4738d38adf997767bb86bc9d6f2254e1904107ae215d2831948d8124640a56a"
+            }
+          ],
+          "generator_artifact_id": "generator",
+          "manifest_sha256": "sha256:744ba87caa8725190147149ad022716d88e93696fdf7f75a93c65780eb76c6ef",
+          "repository_artifact_id": "repository"
+        },
+        "repository": {
+          "base": {
+            "commit_oid": "99ae49df4b27d9d95877c562ab9e1fd9b7ff1dc7",
+            "tree_oid": "4d49db94887c2a560954b860fd29c57f19f2da4c"
+          },
+          "changes": [
+            {
+              "base_blob_oid": "a3cb248507ad9a9bcb4c3af7620dabebcd304f3a",
+              "base_blob_sha256": "sha256:fc118aad528350a7f9f8a59fa4a96969d51f381f82cf83b3586a337e67ab81c6",
+              "head_blob_oid": "48c343f0d12c1dffb7953a5d2426e0d13a914bad",
+              "head_blob_sha256": "sha256:49bec542e7c93319ca4a1c4a2b0b3a18bf72baaf7621416a30685e311a6ef7cf",
+              "path": "FormalConjectures/Paper/Rupert.lean",
+              "status": "modified"
+            }
+          ],
+          "comparison": {
+            "complete": true,
+            "kind": "github_pull_request_file_snapshot"
+          },
+          "head": {
+            "commit_oid": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+            "tree_oid": "b281db5858080340773cdf07b5a9ed625aef6acd"
+          },
+          "pull_request": {
+            "number": 3959,
+            "url": "https://github.com/google-deepmind/formal-conjectures/pull/3959"
+          },
+          "repository": {
+            "host": "github.com",
+            "name": "formal-conjectures",
+            "owner": "google-deepmind",
+            "url": "https://github.com/google-deepmind/formal-conjectures"
+          }
+        },
+        "root": "sha256:3213c7729a168255d79ca0956137ac89e999b82dbef66737599c5a4a1f05a77f",
+        "schema_version": "formal-conjectures.pr-audit.v1"
+      }
+    },
+    {
+      "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/unavailable-rupert-3959/expected-observation.json",
+      "raw_sha256": "sha256:aecc170adba2ff0dc964ee4d0e165b91a5d36f2048290666f720b6c3054c44c8",
+      "size": 6921,
+      "content": {
+        "core": {
+          "root": "sha256:3213c7729a168255d79ca0956137ac89e999b82dbef66737599c5a4a1f05a77f",
+          "sha256": "sha256:73c2b98ae0def8759b2948eb928d4c8412e67ab5541085149568c6b56c7c4f73"
+        },
+        "generator": {
+          "canonicalization": "fc-jcs-ijson-integer-v1",
+          "name": "formal-conjectures-pr-audit",
+          "noncapabilities": [
+            "git",
+            "github",
+            "lean",
+            "model",
+            "network",
+            "subprocess"
+          ],
+          "schema_version": "formal-conjectures.pr-audit-generator.v1",
+          "source": {
+            "baseline": {
+              "commit_oid": "c9052e8577118ed0ada54462bd4ef1f3beff37d6",
+              "tree_oid": "864ee77ee26a7cbd85b30558f8d9d2036f8717ed"
+            },
+            "kind": "git_baseline_with_content_addressed_overlay",
+            "overlay": {
+              "files": [
+                {
+                  "path": "audit/pr-audit-v1/schemas/formal-conjectures.pr-audit-observation.v1.schema.json",
+                  "sha256": "sha256:5e7ae0ea2d00c5e224a38865b3866b11357a071e71bdc58cfb0d16d6a2a74e7d"
+                },
+                {
+                  "path": "audit/pr-audit-v1/schemas/formal-conjectures.pr-audit.v1.schema.json",
+                  "sha256": "sha256:b581b8970673fe90b749a54a0b2df9f0ea5d6221f90f49f67f2f03602b2efc45"
+                },
+                {
+                  "path": "scripts/generate_pr_audit.py",
+                  "sha256": "sha256:ebe7961418cd37b0816db4bf72628962f36f88cb1fd4d4f9cb4c102d5b0ae070"
+                },
+                {
+                  "path": "scripts/pr_audit.py",
+                  "sha256": "sha256:2c41ae2bd4fed8f9748ebf8c57630673ca2eb7ea3c690525ea292641590c3098"
+                }
+              ],
+              "root": "sha256:8e6b99252c0bebe8b3c221a9d37a1b9b3139a383ac16371ea11ab851fb8d6f96"
+            },
+            "repository": "https://github.com/google-deepmind/formal-conjectures"
+          },
+          "version": "1.0.0"
+        },
+        "inputs": {
+          "artifact_root": "sha256:5d36d34b18c0da738aa1fb17d32e0078f0fa5d4c43fbd6607b9135457b3f3b43",
+          "artifacts": [
+            {
+              "id": "generator",
+              "media_type": "application/json",
+              "path": "inputs/generator.json",
+              "role": "generator_identity",
+              "sha256": "sha256:36ef37235a58c296ccf7b2fa90d09e5cb3977947c34be2b1f6dcb0361f080b6d"
+            },
+            {
+              "id": "github-observation",
+              "media_type": "application/vnd.github+json",
+              "path": "inputs/github-graphql-response.json",
+              "role": "authoritative_observation",
+              "sha256": "sha256:799dfbdba1889ed76cd7b3d43b20ee4e9902c0c9e3250ab6336ca58805d73bae"
+            },
+            {
+              "id": "github-query",
+              "media_type": "text/plain",
+              "path": "inputs/github-graphql-query.graphql",
+              "role": "query",
+              "sha256": "sha256:a503785e3ae47f873c60e26767d662f2583d60103cf43305db05ef0f5c5a4328"
+            },
+            {
+              "id": "github-receipt",
+              "media_type": "application/json",
+              "path": "inputs/github-acquisition-receipt.json",
+              "role": "acquisition_receipt",
+              "sha256": "sha256:25ad6d41b3d0ac4b60cbad66177c7844bc316e8338c1472cb3d9fdedaeb6438f"
+            },
+            {
+              "id": "provenance-comparator-preparation",
+              "media_type": "application/json",
+              "path": "inputs/comparator-packet-preparation-event.json",
+              "role": "provenance_event",
+              "sha256": "sha256:84e7aca660463b251a79bf0b2741113dada663fda2eda30684a1008d368c4ce7"
+            },
+            {
+              "id": "provenance-core-acquisition-receipt",
+              "media_type": "application/json",
+              "path": "inputs/github-core-acquisition-receipt.json",
+              "role": "provenance_event",
+              "sha256": "sha256:b90cb8432c950c07a4bade1c43593667602a464ded63bbc2500000aa9b048033"
+            },
+            {
+              "id": "provenance-core-snapshot-response",
+              "media_type": "application/vnd.github+json",
+              "path": "inputs/github-core-snapshot-response.json",
+              "role": "provenance_event",
+              "sha256": "sha256:d6d32d696ffce1e773b0193fd230335b91110b4503ed8936119f27d536e16e00"
+            },
+            {
+              "id": "provenance-job-acquisition",
+              "media_type": "application/json",
+              "path": "inputs/github-job-acquisition-receipt.json",
+              "role": "provenance_event",
+              "sha256": "sha256:148bba1a6a6e9a1fd40c5f296de05fae2c4f9822ea01c81896ff4ecd3efb3233"
+            },
+            {
+              "id": "provenance-job-response",
+              "media_type": "application/vnd.github+json",
+              "path": "inputs/github-job-response.json",
+              "role": "provenance_event",
+              "sha256": "sha256:fcfa037a6c831ec4b3a0c08a859081488ef3d27dafc25a2423938485fc1c0225"
+            },
+            {
+              "id": "provenance-workflow-acquisition",
+              "media_type": "application/json",
+              "path": "inputs/method-build-and-docs.acquisition-receipt.json",
+              "role": "provenance_event",
+              "sha256": "sha256:d7b21cc1ab244597d75ea75d2333f2d9420a3f49fe877c448618a0b3c3eb2c6c"
+            }
+          ],
+          "generator_artifact_id": "generator",
+          "manifest_sha256": "sha256:9c1b308327f4e0b1c6d83b06473a83fafc3c4b5eea123719d4862928b3a52b90",
+          "observation_artifact_id": "github-observation",
+          "provenance_artifact_ids": [
+            "provenance-comparator-preparation",
+            "provenance-core-acquisition-receipt",
+            "provenance-core-snapshot-response",
+            "provenance-job-acquisition",
+            "provenance-job-response",
+            "provenance-workflow-acquisition"
+          ],
+          "query_artifact_id": "github-query",
+          "receipt_artifact_id": "github-receipt"
+        },
+        "observed_at": "2026-08-12T20:25:24Z",
+        "pull_request": {
+          "base_commit_oid": "99ae49df4b27d9d95877c562ab9e1fd9b7ff1dc7",
+          "head_commit_oid": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+          "is_draft": false,
+          "merge_state_status": "UNKNOWN",
+          "number": 3959,
+          "review_decision": "APPROVED",
+          "reviews": [
+            {
+              "author": "jcreedcmu",
+              "commit_oid": "30c63898f32c0c7d05a6830504195d7f896451f0",
+              "id": "PRR_kwDOOogmB879jZVh",
+              "state": "COMMENTED",
+              "submitted_at": "2026-05-08T17:03:18Z"
+            },
+            {
+              "author": "dwrensha",
+              "commit_oid": "30c63898f32c0c7d05a6830504195d7f896451f0",
+              "id": "PRR_kwDOOogmB879kIEO",
+              "state": "COMMENTED",
+              "submitted_at": "2026-05-08T17:30:41Z"
+            },
+            {
+              "author": "Paul-Lez",
+              "commit_oid": "30c63898f32c0c7d05a6830504195d7f896451f0",
+              "id": "PRR_kwDOOogmB879wy6I",
+              "state": "COMMENTED",
+              "submitted_at": "2026-05-09T08:29:33Z"
+            },
+            {
+              "author": "Paul-Lez",
+              "commit_oid": "30c63898f32c0c7d05a6830504195d7f896451f0",
+              "id": "PRR_kwDOOogmB879wy92",
+              "state": "APPROVED",
+              "submitted_at": "2026-05-09T08:29:49Z"
+            },
+            {
+              "author": "dwrensha",
+              "commit_oid": "30c63898f32c0c7d05a6830504195d7f896451f0",
+              "id": "PRR_kwDOOogmB879xzi6",
+              "state": "COMMENTED",
+              "submitted_at": "2026-05-09T11:17:06Z"
+            }
+          ],
+          "state": "MERGED",
+          "updated_at": "2026-05-09T23:30:38Z",
+          "url": "https://github.com/google-deepmind/formal-conjectures/pull/3959"
+        },
+        "root": "sha256:58e97a1ee066aa947fd6a8222f865d56495506b6368233f6dc5c51e3f981ea41",
+        "schema_version": "formal-conjectures.pr-audit-observation.v1",
+        "source": {
+          "acquired_at": "2026-08-12T20:25:24Z",
+          "artifact_id": "github-observation",
+          "authority": "github_graphql",
+          "endpoint": "https://api.github.com/graphql",
+          "http_status": 200,
+          "limitations": [
+            "The receipt records public GitHub response headers and bytes; it is not a cryptographic GitHub signature."
+          ],
+          "operation_name": "PullRequestAuditObservation",
+          "query_sha256": "sha256:a503785e3ae47f873c60e26767d662f2583d60103cf43305db05ef0f5c5a4328",
+          "receipt": {
+            "acquired_at": "2026-08-12T20:25:24Z",
+            "endpoint": "https://api.github.com/graphql",
+            "http_status": 200,
+            "limitations": [
+              "The receipt records public GitHub response headers and bytes; it is not a cryptographic GitHub signature."
+            ],
+            "operation_name": "PullRequestAuditObservation",
+            "query_sha256": "sha256:a503785e3ae47f873c60e26767d662f2583d60103cf43305db05ef0f5c5a4328",
+            "request_id": "BB68:146BF1:14E3716:479FD03:6A7CD6B3",
+            "response_sha256": "sha256:799dfbdba1889ed76cd7b3d43b20ee4e9902c0c9e3250ab6336ca58805d73bae",
+            "schema_version": "formal-conjectures.pr-audit-acquisition-receipt.v1",
+            "transport": "https",
+            "variables": {
+              "name": "formal-conjectures",
+              "number": 3959,
+              "owner": "google-deepmind"
+            }
+          },
+          "receipt_sha256": "sha256:25ad6d41b3d0ac4b60cbad66177c7844bc316e8338c1472cb3d9fdedaeb6438f",
+          "request_id": "BB68:146BF1:14E3716:479FD03:6A7CD6B3",
+          "sha256": "sha256:799dfbdba1889ed76cd7b3d43b20ee4e9902c0c9e3250ab6336ca58805d73bae"
+        }
+      }
+    }
+  ],
+  "access_limits": [
+    "Use only this bundle.",
+    "Do not use network, repository, browser, memory, or private operator context.",
+    "Do not infer acceptance or Standing from a review, check, merge, or audit disposition."
+  ],
+  "bundle_root": "sha256:0fab1d6ea3c5a305aa65e07673bc37ca88a21625038790a7dd78b0c394f39bc5"
+}

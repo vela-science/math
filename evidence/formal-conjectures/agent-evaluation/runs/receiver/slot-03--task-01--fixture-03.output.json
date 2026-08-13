@@ -1,0 +1,26 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "fidelity-erdos-887-1237",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+  "sender_output_sha256": "sha256:53d53270c9ad95a82e2729b719fa10361077c5ed49a8522ebf3a50c947f8312b",
+  "retained_verdict": "needs_revision",
+  "retained_issue_codes": [
+    "answer_slot_scope"
+  ],
+  "layered_summary": "Mechanical status: a retained GitHub Build project observation reports success for exact head 288608562e684a2f3c97ba0ce960a2649a71370b, but no local build was reproduced here. Source fidelity: fail; the docstring requires one absolute K, while answer(sorry) is scoped inside the C and eventual-n binders and may vary by instance, making a reflexive bound possible. Artifact availability: the exact Lean source is identified by commit, blob SHA-1, and SHA-256, and the audit records are content-addressed; the hosted build is available only as a retained attestation in this bundle. Community status: PR 1237 was approved at the exact head and merged. Authority: none; those mechanical and community facts do not confer acceptance or Standing.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [
+    "Local Lean/build reproduction transcript and toolchain/environment identity are not supplied; only the retained exact-head hosted-check observation is available.",
+    "No separate independent-human fidelity review is supplied."
+  ],
+  "next_obligation": "Revise Erdos887.erdos_887 to existentially quantify a single K outside the C and eventual-n binders, then rerun the mechanical check and obtain an independent fidelity review of the revised exact artifact.",
+  "unsupported_claims": [],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The passing hosted build does not establish source fidelity, mathematical truth, or a local reproduction.",
+    "The approval and merge do not establish acceptance, Vela Standing, or semantic fidelity.",
+    "The retained advisory disposition is not a Formal Conjectures maintainer action or Vela Decision."
+  ],
+  "confidence": "high"
+}

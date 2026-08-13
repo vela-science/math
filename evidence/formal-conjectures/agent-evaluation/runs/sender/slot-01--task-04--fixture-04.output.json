@@ -1,0 +1,34 @@
+{
+  "schema": "vela.math.fc-audit.agent-sender-output.v0.1",
+  "fixture_id": "vacuity-erdos-80-4830",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+  "verdict": "needs_revision",
+  "issue_codes": [
+    "vacuous_hypothesis"
+  ],
+  "mechanical_status": "pass",
+  "source_fidelity": "fail",
+  "artifact_availability": "exact",
+  "community_status": "merged",
+  "evidence_locators": [
+    "FormalConjectures/ErdosProblems/80.lean@e2e2a6064b474781d3b5b4a32e3d77956d6968da (blob 9dd6a9933931fcfbeea61eac777d4155dacb9eb1)",
+    "Erdos80.Admissible",
+    "Erdos80.erdos_80",
+    "github-pr-4830-check-observation.json check run 93244178114",
+    "github-pr-4830.json (base 5fe1f74ad497d950e4c2094879ab10708907f7c6; head e2e2a6064b474781d3b5b4a32e3d77956d6968da)",
+    "expected-core.json check vacuous-hypothesis",
+    "github-pr-4877.json"
+  ],
+  "witness": "The theorem quantifies over every real c>0. Taking c=2 and n=100, Admissible requires at least 2·100²=20000 edges, while a simple graph on 100 vertices has at most 100·99/2=4950. Thus no graph is admissible, the defining set for f 2 100 is empty, and its sInf is 0. The same obstruction holds for every n at c=2, so the asserted eventual positive lower bound is false for a vacuous boundary unrelated to Erdős Problem 80.",
+  "unsupported_claims": [],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The successful Build project check establishes semantic fidelity or mathematical truth.",
+    "The merged and approved pull request constitutes acceptance or Standing.",
+    "Every check run succeeded; several retained check runs were skipped.",
+    "The advisory audit disposition is a Formal Conjectures maintainer action or Vela Decision."
+  ],
+  "next_obligation": "Revise the quantification to exclude the infeasible density range, for example by requiring 0<c<1/2, then review and mechanically check the exact revised statement.",
+  "confidence": "high"
+}

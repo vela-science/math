@@ -1,0 +1,29 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "fidelity-erdos-887-1237",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+  "sender_output_sha256": "sha256:73c0cef9643b0693d4b8c39145934e0326282db9876ff7c128968aa610914291",
+  "retained_verdict": "needs_revision",
+  "retained_issue_codes": [
+    "answer_slot_scope"
+  ],
+  "layered_summary": "Mechanical: the retained exact-head GitHub Build project check passed, but was not locally reproduced. Source fidelity: failed because erdos_887 places answer(sorry) within the C and eventual-n scopes, so it does not express one absolute K; variant_i shows the intended outer existential scope. Artifact availability: the source, commit, blob, audit, and check identities are exact, while underlying build logs and a local execution record are not supplied. Community: PR 1237 was approved at the exact head and merged. Authority: none; these observations confer neither acceptance nor Standing.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [
+    "local_build_execution_receipt",
+    "local_Lean_toolchain_and_environment_identity",
+    "full_build_job_log_bytes",
+    "independent_human_fidelity_review_result"
+  ],
+  "next_obligation": "Revise erdos_887 so a single K is quantified outside the C and n binders, then mechanically check the revised exact artifact and obtain an independent fidelity review.",
+  "unsupported_claims": [],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The retained successful build does not establish source fidelity or mathematical truth.",
+    "The GitHub approval and merge do not establish acceptance, Vela Standing, or correctness of the advisory audit.",
+    "The retained GitHub check observation does not establish a local build reproduction.",
+    "The audit disposition is advisory and is not a maintainer or Vela Decision."
+  ],
+  "confidence": "high"
+}

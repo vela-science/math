@@ -1,0 +1,32 @@
+{
+  "schema": "vela.math.fc-audit.agent-sender-output.v0.1",
+  "fixture_id": "vacuity-erdos-80-4830",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+  "verdict": "needs_revision",
+  "issue_codes": [
+    "vacuous_hypothesis"
+  ],
+  "mechanical_status": "pass",
+  "source_fidelity": "fail",
+  "artifact_availability": "exact",
+  "community_status": "merged",
+  "evidence_locators": [
+    "FormalConjectures/ErdosProblems/80.lean@e2e2a6064b474781d3b5b4a32e3d77956d6968da (blob 9dd6a9933931fcfbeea61eac777d4155dacb9eb1)",
+    "github-pr-4830-check-observation.json#check-run-93244178114",
+    "github-pr-4830.json#base-5fe1f74ad497d950e4c2094879ab10708907f7c6/head-e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+    "expected-core.json#checks/vacuous-hypothesis",
+    "github-pr-4877.json"
+  ],
+  "witness": "The exact head defines Admissible c G by c·n² ≤ |E(G)| but erdos_80 quantifies over every c > 0. Taking c = 2 and n = 100 requires at least 20000 edges, while a simple graph on 100 vertices has at most 4950. Thus the admissible set is empty, f 2 100 = sInf ∅ = 0; indeed this persists for positive n, making the eventual-growth conclusion false for a boundary unrelated to the intended problem. The retained audit independently records this witness, and PR 4877 proposes restricting c to the satisfiable range.",
+  "unsupported_claims": [],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The successful exact-head build check does not establish semantic fidelity or mathematical truth.",
+    "The skipped and unrelated checks are not established as successful.",
+    "PR approval and merge do not establish acceptance, Standing, or any Vela Decision.",
+    "The retained witness identifies the vacuity defect but does not establish a complete replacement theorem."
+  ],
+  "next_obligation": "Restrict c to a satisfiable density range, such as 0 < c < 1/2, for both growth statements and mechanically and semantically review the revised exact artifact.",
+  "confidence": "high"
+}

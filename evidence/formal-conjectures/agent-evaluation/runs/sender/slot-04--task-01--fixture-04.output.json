@@ -1,0 +1,35 @@
+{
+  "schema": "vela.math.fc-audit.agent-sender-output.v0.1",
+  "fixture_id": "vacuity-erdos-80-4830",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0",
+  "verdict": "needs_revision",
+  "issue_codes": [
+    "vacuous_hypothesis"
+  ],
+  "mechanical_status": "pass",
+  "source_fidelity": "fail",
+  "artifact_availability": "exact",
+  "community_status": "merged",
+  "evidence_locators": [
+    "FormalConjectures/ErdosProblems/80.lean@e2e2a6064b474781d3b5b4a32e3d77956d6968da: Erdos80.Admissible, Erdos80.f, Erdos80.erdos_80, Erdos80.erdos_80.variants.log",
+    "git blob 9dd6a9933931fcfbeea61eac777d4155dacb9eb1; raw sha256:519cc02b3389c89bc87c16d548c6b028e6bb2c1c3bad410a1758f470de18de4e",
+    "github-pr-4830-check-observation.json: check run 93244178114, `Build project`, conclusion `success`, head e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+    "github-pr-4830.json: base 5fe1f74ad497d950e4c2094879ab10708907f7c6, head e2e2a6064b474781d3b5b4a32e3d77956d6968da, merged true",
+    "github-pr-4877.json: correction identifies the unsatisfiable c boundary and proposes restricting c below 1/2"
+  ],
+  "witness": "Take c = 2. For every n ≥ 1, a simple graph on n vertices has at most n(n−1)/2 < 2n² edges, so no graph satisfies Admissible 2 G. Hence the set defining f 2 n is empty and f 2 n = 0 eventually. Therefore neither an eventual inequality n^ε < f 2 n nor domination of log n can hold. The universal binder ∀ c, 0 < c thus makes both questions false because of an infeasible density, rather than expressing the intended feasible-density problem.",
+  "unsupported_claims": [
+    "The PR body claims that the empty admissible case for large c does not affect the asymptotic questions; the c = 2 witness contradicts this.",
+    "The retained material reports specific `#print axioms` results, but no separate exact output artifact for those commands is included."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The successful exact-head build establishes compilation only, not semantic fidelity.",
+    "The collaborator approval and merge do not establish audit acceptance or Standing.",
+    "The skipped checks do not count as successful runs, and the legacy combined-status `pending` state does not override the exact successful Build project check.",
+    "The open correction PR and its review do not establish that the fixture itself has been repaired."
+  ],
+  "next_obligation": "Restrict both asymptotic statements to the feasible range, such as 0 < c ∧ c < 1/2, then retain and review the exact repaired source and its exact-head build result.",
+  "confidence": "high"
+}

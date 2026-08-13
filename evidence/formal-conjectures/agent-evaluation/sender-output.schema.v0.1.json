@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vela.science/schemas/fc-audit-agent-sender-output-v0.1.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "fixture_id", "condition", "packet_root", "verdict", "issue_codes", "mechanical_status", "source_fidelity", "artifact_availability", "community_status", "evidence_locators", "witness", "unsupported_claims", "authority_effect", "does_not_establish", "next_obligation", "confidence"],
+  "properties": {
+    "schema": {"type": "string", "const": "vela.math.fc-audit.agent-sender-output.v0.1"},
+    "fixture_id": {"type": "string"},
+    "condition": {"enum": ["plain-git-and-current-review-artifacts", "same-inputs-plus-fc-pr-audit"]},
+    "packet_root": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "verdict": {"enum": ["clean", "minor_issues", "needs_revision", "inconclusive", "unavailable", "error"]},
+    "issue_codes": {"type": "array", "items": {"enum": ["conditional_proof_dependency", "answer_slot_scope", "vacuous_hypothesis", "exact_artifact_identity_unavailable", "other"]}},
+    "mechanical_status": {"enum": ["pass", "fail", "unavailable", "inconclusive"]},
+    "source_fidelity": {"enum": ["pass", "fail", "unavailable", "inconclusive"]},
+    "artifact_availability": {"enum": ["exact", "ambiguous", "unavailable", "not_applicable"]},
+    "community_status": {"enum": ["merged", "open", "rejected", "unknown"]},
+    "evidence_locators": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "witness": {"type": "string", "minLength": 1},
+    "unsupported_claims": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "authority_effect": {"type": "string", "const": "none"},
+    "does_not_establish": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}},
+    "next_obligation": {"type": ["string", "null"]},
+    "confidence": {"enum": ["low", "medium", "high"]}
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "vela.math.fc-audit.agent-sender-output.v0.1",
+  "fixture_id": "conditional-erdos-427-4884",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+  "verdict": "minor_issues",
+  "issue_codes": [
+    "conditional_proof_dependency"
+  ],
+  "mechanical_status": "pass",
+  "source_fidelity": "pass",
+  "artifact_availability": "exact",
+  "community_status": "open",
+  "evidence_locators": [
+    "FormalConjectures/ErdosProblems/427.lean@601aff40d6fa6c3150242144fadba5dbcc24c89c",
+    "FormalConjectures/ErdosProblems/427.lean#Erdos427.erdos_427",
+    "FormalConjectures/ErdosProblems/427.lean#Erdos427.erdos_427.variants.shiu",
+    "https://gist.githubusercontent.com/JohnEdwardJennings/e2c6ef0daab55857b7cc9d340de7af84/raw/8ff97800e38582c71246a238e7541a9d69488cbd/Erdos427.lean",
+    "github-check-run:93932003906",
+    "https://github.com/google-deepmind/formal-conjectures/pull/4884"
+  ],
+  "witness": "At head 601aff40d6fa6c3150242144fadba5dbcc24c89c, `erdos_427` states `answer(True) ↔ erdos427`; `erdos427` quantifies over every natural n and nonzero d and requires a nonzero k whose zero-indexed consecutive-prime sum is divisible by d, matching the stated problem's positive d and k boundaries. Its proof metadata explicitly says `conditional formal_proof` and binds `assuming erdos_427.variants.shiu`. The retained linked-proof identity is immutable and content-addressed, and the supplied axiom witness shows that the derivation retains Shiu's theorem as a dependency. Exact-head check run 93932003906 reports `Build project` completed successfully. The PR observation reports state OPEN, merged false, no reviews, and review required.",
+  "unsupported_claims": [
+    "The retained metadata review does not execute or establish correctness of the linked proof.",
+    "The successful repository build does not discharge ShiuTheorem or establish an unconditional formal proof."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "Acceptance, merge, or Standing.",
+    "Mathematical truth or unconditional proof correctness.",
+    "Success of skipped or unlisted checks.",
+    "Independent execution or semantic verification of the external linked proof."
+  ],
+  "next_obligation": "Independently inspect or execute the exact content-addressed linked proof and discharge `Erdos427.erdos_427.variants.shiu` before claiming an unconditional formal proof.",
+  "confidence": "high"
+}

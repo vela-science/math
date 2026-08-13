@@ -1,0 +1,37 @@
+{
+  "schema": "vela.math.fc-audit.agent-sender-output.v0.1",
+  "fixture_id": "conditional-erdos-427-4884",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:0e0824641f75166903af3a4642d89f01ecdd0ae0b0a46a9512136e0d2bcf5191",
+  "verdict": "minor_issues",
+  "issue_codes": [
+    "conditional_proof_dependency"
+  ],
+  "mechanical_status": "pass",
+  "source_fidelity": "pass",
+  "artifact_availability": "exact",
+  "community_status": "open",
+  "evidence_locators": [
+    "FormalConjectures/ErdosProblems/427.lean at head 601aff40d6fa6c3150242144fadba5dbcc24c89c, blob 99d781c323fc09d49f688a5bd23722ea2011fd24",
+    "theorem Erdos427.erdos_427 attribute: conditional formal_proof using lean4 at immutable gist raw URL 8ff97800e38582c71246a238e7541a9d69488cbd/Erdos427.lean assuming erdos_427.variants.shiu",
+    "theorem Erdos427.erdos_427.variants.shiu : ShiuTheorem",
+    "GitHub Check Run 93932003906, Build project, conclusion success, exact head 601aff40d6fa6c3150242144fadba5dbcc24c89c",
+    "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884.json",
+    "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884-reviews.json"
+  ],
+  "witness": "The exact statement is `erdos_427 : answer(True) ↔ erdos427`, where `erdos427` quantifies over natural n and nonzero d and requires a nonempty consecutive-prime sum divisible by d; the zero-based interval `Ico n (n+k)` matches the prose's p_(n+1) through p_(n+k). Its proof annotation explicitly retains the dependency `assuming erdos_427.variants.shiu`, and the PR description identifies the linked proof's Shiu result as an axiom. Thus the statement is faithful and the dependency is honestly scoped, but the artifact is only a conditional proof. The exact-head project build passed; PR 4884 remained open with no retained reviews.",
+  "unsupported_claims": [
+    "The bundle does not independently reproduce the linked gist proof or verify its exact contents against `ShiuTheorem`.",
+    "The PR author's claim that the module-specific local build completed with no warning is self-reported; the retained mechanical attestation is the exact-head GitHub `Build project` success."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "An unconditional formal proof of Erdős Problem 427.",
+    "A formal proof of ShiuTheorem without an axiom or retained dependency.",
+    "Acceptance, Standing, maintainer approval, or merge.",
+    "That every check ran successfully; several unrelated checks were skipped.",
+    "Independent reproduction of the immutable external proof artifact from its bytes."
+  ],
+  "next_obligation": "Retrieve and verify the immutable gist artifact against the exact `ShiuTheorem` interface; discharge that theorem formally if unconditional-proof status is sought, and await an actual maintainer/community disposition separately.",
+  "confidence": "high"
+}

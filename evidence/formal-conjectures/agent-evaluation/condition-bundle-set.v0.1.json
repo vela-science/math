@@ -1,0 +1,113 @@
+{
+  "schema": "vela.math.fc-audit.agent-condition-bundle-set.v0.1",
+  "authority_effect": "none",
+  "design": {
+    "path": "evidence/formal-conjectures/agent-evaluation/agent-evaluation-design.v0.1.json",
+    "size": 5755,
+    "raw_sha256": "sha256:607322d5dd9b5cc25ca9e487b2e1c589ea4ba54ef34c67e277ff567fb611043d"
+  },
+  "source_manifest": {
+    "path": "evidence/formal-conjectures/agent-evaluation/public-source-manifest.v0.1.json",
+    "size": 4029,
+    "raw_sha256": "sha256:b958ecd23e5cbdc24f59a5192bbfbb671069486755a1f11f566de2750e59af21"
+  },
+  "condition_packet_set": {
+    "path": "evidence/formal-conjectures/audit-pilot/condition-packet-set.v0.1.json",
+    "size": 57954,
+    "raw_sha256": "sha256:2da7d57fa59ef7099845b92151e30f6b7c2473ac1d0e06a9c7d6ecf3c49c9d49"
+  },
+  "bundle_count": 10,
+  "bundles": [
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/clean-source-faithful-min-modulus-4829--plain-git-and-current-review-artifacts.json",
+      "size": 18157,
+      "raw_sha256": "sha256:4b348b176a45b49ea992c829935b281db66c7afd772c95f37feef8be437ae405",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:34f9ce1e77b28e8ebcd9a49f57f4e976a890eabda546594d24ae588b465554fc",
+      "bundle_root": "sha256:94a24cb03394331709b5050bef66bd1756c244ab34193ca36f59aff45a4165ae"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/clean-source-faithful-min-modulus-4829--same-inputs-plus-fc-pr-audit.json",
+      "size": 46712,
+      "raw_sha256": "sha256:f00626c53e7664be240566932a6605eff06bb8886bac95b2d7b71ff9ee6beb76",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa",
+      "bundle_root": "sha256:19337169bf062787f9a41a8bc3f2528d7fa7a52d69c8e66a03a6db482b0d4676"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/conditional-erdos-427-4884--plain-git-and-current-review-artifacts.json",
+      "size": 52387,
+      "raw_sha256": "sha256:07ad0c75fa5767b194663effd6c1341e301e9c36aac393e7b7ec8de67f9ce642",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:0e0824641f75166903af3a4642d89f01ecdd0ae0b0a46a9512136e0d2bcf5191",
+      "bundle_root": "sha256:deb16cdf483e6e097d647b002ab0df475a7b86ed68de06217a4c7f594fe7acca"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/conditional-erdos-427-4884--same-inputs-plus-fc-pr-audit.json",
+      "size": 75071,
+      "raw_sha256": "sha256:84e250b1d47301f7aded75d47fadcd33c186e3a5277050ea39a8e591e747f73c",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+      "bundle_root": "sha256:e2da0509420e9ef69ebb56eb956a35570a375b3b4d45b2250b4fb918213dc302"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/fidelity-erdos-887-1237--plain-git-and-current-review-artifacts.json",
+      "size": 17035,
+      "raw_sha256": "sha256:d7f66d10becf383879c83443722c8d415bad300e1d9468dd4a51cf04acea3e6e",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:702406f0ae0aaa12a8c31f64aecd19809253af52dc1ac615ec5fca723242dc88",
+      "bundle_root": "sha256:ac6bfde82ed7d0b554df09742c001679e0b9b39db7ce84ff501d038891a5ea37"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/fidelity-erdos-887-1237--same-inputs-plus-fc-pr-audit.json",
+      "size": 47322,
+      "raw_sha256": "sha256:0a7ac36567d7bbc8b847f23cc373a2a2492a98883f81419f3e2dbb09646e4686",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+      "bundle_root": "sha256:809ce9755617a37078f036eedd0307a7d0ab44a09a6b23d3ed12a0c9d721fafa"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/unavailable-rupert-3959--plain-git-and-current-review-artifacts.json",
+      "size": 20400,
+      "raw_sha256": "sha256:c59fb49559a469400b9f9408a22456ac78b45f3a6c1cf9e42496ceb7d3326e50",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a",
+      "bundle_root": "sha256:88cef0e88392c8ce945d8cb6d56920ba8cb8e24d7eeab21ffd184eaa6a8afd06"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/unavailable-rupert-3959--same-inputs-plus-fc-pr-audit.json",
+      "size": 60891,
+      "raw_sha256": "sha256:be74f9c3cc03d87336d04ade80e8c7650f63799e7303b815bff6729e3deb7fee",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+      "bundle_root": "sha256:0fab1d6ea3c5a305aa65e07673bc37ca88a21625038790a7dd78b0c394f39bc5"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/vacuity-erdos-80-4830--plain-git-and-current-review-artifacts.json",
+      "size": 84498,
+      "raw_sha256": "sha256:266e33518a06fcc6c32372ab50347794602cb4bc0814095e0eba4784fa34da54",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0",
+      "bundle_root": "sha256:f32573a749a1d4077f4206e72a5288aed0f46b155685262c3ea36b851cfd9425"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/vacuity-erdos-80-4830--same-inputs-plus-fc-pr-audit.json",
+      "size": 105746,
+      "raw_sha256": "sha256:729860290ef93a795a0fdbbcf021f6d06a61bd0d3f506fa8b13eb0d92cdf718e",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+      "bundle_root": "sha256:d7105463bb16d63b724b56b395574a6b5226eafdb33695e6310a54342177feff"
+    }
+  ],
+  "bundle_set_root": "sha256:2b55e265a5e4b0d0597c8960bcda9c050a5736f3f7fbc86e3fe1f5028aa741eb"
+}

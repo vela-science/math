@@ -1,0 +1,34 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "unavailable-rupert-3959",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a",
+  "sender_output_sha256": "sha256:be4ecea146951dfae72fc636e627675e04c7f9e526741b862eab472632c8fa0c",
+  "retained_verdict": "unavailable",
+  "retained_issue_codes": [
+    "exact_artifact_identity_unavailable"
+  ],
+  "layered_summary": "Mechanical status: the retained GitHub Build project check run 75175625578 reports success for exact head 868cc092aeb713dbf8027883c5fa575e550cfae9; this is a scoped hosted-check observation, not a local reproduction. Source fidelity: the included head source states `answer(False) ↔ ∀ vertices, (interior (convexHull ℝ vertices : Set ℝ³)).Nonempty → IsRupert vertices`, which faithfully encodes the documented negative answer. Artifact availability: unavailable, because the declared `formal_proof using lean4` locator is only the mutable Noperthedron repository root and identifies neither an immutable revision nor an exact proof file or theorem. Community status: PR 3959 is merged; the recorded APPROVED review concerns earlier commit 30c63898f32c0c7d05a6830504195d7f896451f0, not the exact head. Authority: none; these observations confer neither acceptance nor Standing.",
+  "reproduction_terminal_state": "unavailable",
+  "missing_provenance_fields": [
+    "Immutable Noperthedron commit or content identity",
+    "Exact external proof-file path",
+    "Exact external theorem/declaration locator",
+    "Artifact bytes or a commit-qualified retrieval command sufficient for exact reproduction"
+  ],
+  "next_obligation": "Provide an immutable Noperthedron revision and exact proof-file/theorem locator, then retrieve and reproduce or inspect that artifact against the declared Lean statement.",
+  "unsupported_claims": [
+    "That the mutable Noperthedron repository root identifies the exact proof artifact used for the declaration.",
+    "That the passing repository build verifies the identity or contents of the external formal proof.",
+    "That the earlier approval applies to the exact head commit.",
+    "That approval or merge confers acceptance or Standing."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The passing GitHub build does not establish external proof-artifact identity, source fidelity by itself, acceptance, or Standing.",
+    "The APPROVED review on an earlier commit does not establish exact-head approval, acceptance, or Standing.",
+    "The merged pull request is community status only and does not establish acceptance or Standing.",
+    "This receiver review is not a Formal Conjectures maintainer action or Vela Decision."
+  ],
+  "confidence": "high"
+}

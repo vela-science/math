@@ -1,0 +1,32 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "conditional-erdos-427-4884",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+  "sender_output_sha256": "sha256:eaea6e7c100d21fe272c070b31159a30f99d387f1690a3e014b6d20391575b72",
+  "retained_verdict": "minor_issues",
+  "retained_issue_codes": [
+    "conditional_proof_dependency"
+  ],
+  "layered_summary": "Mechanical status: the exact-head GitHub `Build project` check at 601aff40d6fa6c3150242144fadba5dbcc24c89c is retained as successful, but this receiver only scopes that attestation and does not reproduce it. Source fidelity: the supplied Lean statement matches the included problem wording and correctly exposes the linked proof as conditional on `Erdos427.erdos_427.variants.shiu`; however, the linked proof itself was not independently executed or semantically compared. Artifact availability: immutable locators and digests are supplied, while the linked-proof bytes, build log, and execution environment are not present directly in the JSON material. Community status: PR 4884 was OPEN, unmerged, review-required, and had no reviews at the recorded observation. Authority: none; these facts confer neither acceptance nor Standing.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [
+    "linked-proof content bytes directly available in the supplied JSON",
+    "exact Build project log and command transcript",
+    "Lean/toolchain and dependency environment identity for independent reproduction"
+  ],
+  "next_obligation": "Obtain and verify the exact linked-proof bytes against sha256:792a4b5fab29e5855fbcb1115d54e28a054d8fcf7ee2bd5589834a73b387c052, execute them in the identified Lean environment, and discharge `Erdos427.erdos_427.variants.shiu` before making any unconditional-proof claim.",
+  "unsupported_claims": [
+    "The retained metadata review independently executes or proves semantic correctness of the linked proof.",
+    "The successful repository build discharges `ShiuTheorem` or establishes an unconditional formal proof.",
+    "The retained check or audit disposition constitutes acceptance, merge approval, or Standing."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "Acceptance, merge, or Standing.",
+    "Mathematical truth or unconditional proof correctness.",
+    "Independent execution or semantic verification of the external linked proof.",
+    "Success of skipped, unlisted, or unrelated checks."
+  ],
+  "confidence": "high"
+}

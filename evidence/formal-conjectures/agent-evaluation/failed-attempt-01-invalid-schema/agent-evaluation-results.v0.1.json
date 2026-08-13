@@ -1,0 +1,182 @@
+{
+  "schema": "vela.math.fc-audit.agent-evaluation-results.v0.1",
+  "status": "incomplete",
+  "authority_effect": "none",
+  "design": {
+    "path": "evidence/formal-conjectures/agent-evaluation/agent-evaluation-design.v0.1.json",
+    "size": 5755,
+    "raw_sha256": "sha256:607322d5dd9b5cc25ca9e487b2e1c589ea4ba54ef34c67e277ff567fb611043d"
+  },
+  "allocation": {
+    "path": "evidence/formal-conjectures/agent-evaluation/agent-allocation.v0.1.json",
+    "size": 28117,
+    "raw_sha256": "sha256:0ba985477e9069ddcdfd7edeb8e4c6f62e21eadbf7dd2dfb3036d65bf223cca5"
+  },
+  "observation_index": {
+    "path": "evidence/formal-conjectures/agent-evaluation/agent-observation-index.v0.1.json",
+    "size": 82108,
+    "raw_sha256": "sha256:e9534519c64a207bee4252a1819a0add1104360c3c1c6fd8a452c48f781968d4"
+  },
+  "model_provenance": {
+    "actor_class": "agent",
+    "model": "gpt-5.6-sol",
+    "provider": "openai",
+    "runtime": "codex-cli 0.145.0",
+    "reasoning_effort": "high",
+    "session_policy": "fresh ephemeral task context for every fixture-role observation",
+    "tool_policy": "rooted local packet supplied in prompt; read-only empty working directory; no network, repository, browser, memory, plugin, app, image, computer-use, goal, workspace-dependency, or multi-agent capability",
+    "identity_policy": "unique agent task-context id; no human impersonation; the model does not claim custody of the runner's OAuth session",
+    "quality_rule": "actor class is provenance, not a quality rank"
+  },
+  "independence": {
+    "sender_receiver": "different fresh task contexts",
+    "classification": "separate_task_context_same_model_provider_runtime_operator",
+    "shared_dependencies": [
+      "OpenAI provider and GPT-5.6 Sol model family",
+      "Codex CLI 0.145.0 and its base instructions",
+      "one evaluation runner and one output schema per role",
+      "the same public fixture evidence and frozen ground truth",
+      "the same operator account and OAuth billing boundary"
+    ],
+    "nonclaims": [
+      "not institutional independence",
+      "not provider independence",
+      "not model-family independence",
+      "not a human-versus-agent comparison"
+    ]
+  },
+  "sender_H2": {
+    "totals": {
+      "assigned": 30,
+      "successful": 0,
+      "terminal_states": {
+        "error": 30
+      }
+    },
+    "elapsed_seconds_treatment_to_control_ratio": null,
+    "elapsed_seconds_cluster_interval": null,
+    "quality_counts": {
+      "verdict_correct": {
+        "control": 0,
+        "treatment": 0
+      },
+      "expected_issue_detected": {
+        "control": 0,
+        "treatment": 0
+      },
+      "consequential_issue_detected": {
+        "control": 0,
+        "treatment": 0
+      },
+      "unexpected_issue_count": {
+        "control": 0,
+        "treatment": 0
+      },
+      "unsupported_claim_count": {
+        "control": 0,
+        "treatment": 0
+      },
+      "authority_boundary_violations": {
+        "control": 0,
+        "treatment": 0
+      },
+      "missing_provenance_fields": {
+        "control": 0,
+        "treatment": 0
+      }
+    },
+    "usage_totals": {
+      "input_tokens": {
+        "control": 0,
+        "treatment": 0
+      },
+      "cached_input_tokens": {
+        "control": 0,
+        "treatment": 0
+      },
+      "output_tokens": {
+        "control": 0,
+        "treatment": 0
+      },
+      "reasoning_output_tokens": {
+        "control": 0,
+        "treatment": 0
+      }
+    }
+  },
+  "receiver_H5": {
+    "totals": {
+      "assigned": 30,
+      "successful": 0,
+      "terminal_states": {
+        "blocked_sender_failure": 30
+      }
+    },
+    "elapsed_seconds_treatment_to_control_ratio": null,
+    "elapsed_seconds_cluster_interval": null,
+    "quality_counts": {
+      "verdict_correct": {
+        "control": 0,
+        "treatment": 0
+      },
+      "expected_issue_detected": {
+        "control": 0,
+        "treatment": 0
+      },
+      "consequential_issue_detected": {
+        "control": 0,
+        "treatment": 0
+      },
+      "unexpected_issue_count": {
+        "control": 0,
+        "treatment": 0
+      },
+      "unsupported_claim_count": {
+        "control": 0,
+        "treatment": 0
+      },
+      "authority_boundary_violations": {
+        "control": 0,
+        "treatment": 0
+      },
+      "missing_provenance_fields": {
+        "control": 0,
+        "treatment": 0
+      }
+    },
+    "usage_totals": {
+      "input_tokens": {
+        "control": 0,
+        "treatment": 0
+      },
+      "cached_input_tokens": {
+        "control": 0,
+        "treatment": 0
+      },
+      "output_tokens": {
+        "control": 0,
+        "treatment": 0
+      },
+      "reasoning_output_tokens": {
+        "control": 0,
+        "treatment": 0
+      }
+    }
+  },
+  "hypothesis_support": {
+    "H2": false,
+    "H5": false
+  },
+  "interface_disposition": {
+    "value": "revise",
+    "rationale": "One or more predeclared task contexts failed; retain missing outcomes and repair only in a separately amended run."
+  },
+  "limits": [
+    "These results compare two input interfaces for one model/runtime on five fixtures; they do not rank humans and agents.",
+    "Fresh task contexts share a provider, model family, runner, operator account, and ground-truth package.",
+    "Wall-clock latency includes provider and network variability and is not pure reasoning time.",
+    "The frozen human study remains uncollected and separate.",
+    "No result is a Vela Verification, Decision, acceptance, or Standing."
+  ],
+  "results_root": "sha256:1b0222de3d2573f7df788e3798c612ebb27f1e9d7fafbecbaa216ee4d3ba5f65"
+}

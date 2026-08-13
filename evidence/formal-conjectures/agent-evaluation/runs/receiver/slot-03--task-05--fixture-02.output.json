@@ -1,0 +1,33 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "conditional-erdos-427-4884",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:0e0824641f75166903af3a4642d89f01ecdd0ae0b0a46a9512136e0d2bcf5191",
+  "sender_output_sha256": "sha256:ea60dd1af63b4faa12cec93ad44c260633b466bf9992ae7fd1b9d805d638b023",
+  "retained_verdict": "minor_issues",
+  "retained_issue_codes": [
+    "conditional_proof_dependency"
+  ],
+  "layered_summary": "Mechanical: the retained exact-head GitHub `Build project` check passed for 601aff40d6fa6c3150242144fadba5dbcc24c89c; this does not convert skipped checks or the empty legacy-status endpoint into passes. Source fidelity: the Lean statement faithfully encodes the consecutive-prime-sum question, and its annotation honestly scopes the linked proof as conditional on `erdos_427.variants.shiu`. Artifact availability: the changed source, blob identity, and pinned gist locator are exact, but the gist bytes and digest are absent, so its proof can only be scoped, not reproduced or compared with the exact `ShiuTheorem` interface. Community: PR 4884 was observed open, unmerged, and without retained reviews. Authority: none; no acceptance or Standing follows.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [
+    "linked gist artifact content bytes",
+    "linked gist artifact content digest",
+    "independent compilation or verification record for the linked gist against the exact head and `ShiuTheorem` interface",
+    "retained log and toolchain identity for the author's module-specific local build claim"
+  ],
+  "next_obligation": "Retrieve and digest the pinned gist bytes, then verify or compile that artifact against the exact head and `ShiuTheorem` interface; any maintainer disposition and any discharge of Shiu's theorem remain separate obligations.",
+  "unsupported_claims": [
+    "The bundle does not support independent reproduction or semantic verification of the linked gist proof.",
+    "The author's module-specific `lake build` success-with-no-warning claim is self-reported; only the exact-head GitHub `Build project` success is retained independently."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "An unconditional formal proof of Erdős Problem 427.",
+    "A proof of `ShiuTheorem` without an assumed or axiomatic dependency.",
+    "That the pinned gist compiles against the exact head or matches the exact `ShiuTheorem` interface.",
+    "That every check ran successfully.",
+    "Maintainer approval, acceptance, merge, or any change in Standing."
+  ],
+  "confidence": "high"
+}

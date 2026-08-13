@@ -1,0 +1,127 @@
+{
+  "schema": "vela.math.fc-audit.agent-evaluation-design.v0.1",
+  "design_id": "fc-audit-attributed-agent-feasibility-v0.1",
+  "status": "design_frozen_before_agent_outcomes",
+  "recorded_at": "2026-08-13T20:55:00Z",
+  "authority_effect": "none",
+  "relationship_to_human_design": {
+    "path": "evidence/formal-conjectures/audit-pilot/precollection-design.v0.1.json",
+    "rule": "separate study; does not amend, satisfy, replace, or pool with the frozen human study"
+  },
+  "question": "Does the retained FC audit packet improve issue detection and packet-only continuation for attributed GPT-5.6 Sol review task contexts relative to matched public source evidence alone?",
+  "reviewer_policy": {
+    "actor_class": "agent",
+    "model": "gpt-5.6-sol",
+    "provider": "openai",
+    "runtime": "codex-cli 0.145.0",
+    "reasoning_effort": "high",
+    "session_policy": "fresh ephemeral task context for every fixture-role observation",
+    "tool_policy": "rooted local packet supplied in prompt; read-only empty working directory; no network, repository, browser, memory, plugin, app, image, computer-use, goal, workspace-dependency, or multi-agent capability",
+    "identity_policy": "unique agent task-context id; no human impersonation; the model does not claim custody of the runner's OAuth session",
+    "quality_rule": "actor class is provenance, not a quality rank"
+  },
+  "independence": {
+    "sender_receiver": "different fresh task contexts",
+    "classification": "separate_task_context_same_model_provider_runtime_operator",
+    "shared_dependencies": [
+      "OpenAI provider and GPT-5.6 Sol model family",
+      "Codex CLI 0.145.0 and its base instructions",
+      "one evaluation runner and one output schema per role",
+      "the same public fixture evidence and frozen ground truth",
+      "the same operator account and OAuth billing boundary"
+    ],
+    "nonclaims": [
+      "not institutional independence",
+      "not provider independence",
+      "not model-family independence",
+      "not a human-versus-agent comparison"
+    ]
+  },
+  "sample": {
+    "allocation_slots": 6,
+    "fixtures_per_slot": 5,
+    "sender_observations": 30,
+    "receiver_observations": 30,
+    "handoff_pairs": 30,
+    "conditions": [
+      "plain-git-and-current-review-artifacts",
+      "same-inputs-plus-fc-pr-audit"
+    ],
+    "schedule_source": "audit-pilot/precollection-design.v0.1.json counterbalance_schedule",
+    "stopping_rule": "run every one of the 60 predeclared task contexts once; retain failures and do not replace, retry, add, remove, or stop based on outcomes"
+  },
+  "matched_input_rule": {
+    "shared": "condition packet, retained public evidence, and exact changed source bytes at the frozen head",
+    "treatment_only": "retained FC audit core and observation named by the frozen condition packet",
+    "source_materialization": "exact public GitHub bytes verified against the retained Git blob id before bundling",
+    "receiver_addition": "the exact sender output and its raw SHA-256"
+  },
+  "ground_truth": {
+    "clean-source-faithful-min-modulus-4829": {
+      "expected_verdict": "clean",
+      "expected_issue_codes": []
+    },
+    "conditional-erdos-427-4884": {
+      "expected_verdict": "inconclusive",
+      "expected_issue_codes": ["conditional_proof_dependency"]
+    },
+    "fidelity-erdos-887-1237": {
+      "expected_verdict": "needs_revision",
+      "expected_issue_codes": ["answer_slot_scope"],
+      "consequential_issue": true
+    },
+    "vacuity-erdos-80-4830": {
+      "expected_verdict": "needs_revision",
+      "expected_issue_codes": ["vacuous_hypothesis"],
+      "consequential_issue": true
+    },
+    "unavailable-rupert-3959": {
+      "expected_verdict": "unavailable",
+      "expected_issue_codes": ["exact_artifact_identity_unavailable"]
+    }
+  },
+  "primary_measures": {
+    "H2": [
+      "active sender elapsed seconds",
+      "consequential issue detection sensitivity",
+      "expected fixture classification accuracy",
+      "advisory false positives",
+      "unsupported claims and authority-boundary violations",
+      "input, output, and reasoning token use"
+    ],
+    "H5": [
+      "active receiver elapsed seconds",
+      "expected fixture classification preservation",
+      "missing or ambiguous provenance fields",
+      "packet-only terminal-state completion",
+      "unsupported claims and authority-boundary violations",
+      "input, output, and reasoning token use"
+    ]
+  },
+  "analysis": {
+    "raw_first": true,
+    "time_estimator": "fixture-fixed-effect treatment coefficient on log elapsed seconds, exponentiated",
+    "uncertainty": "descriptive dyad-cluster bootstrap with 10000 deterministic resamples; no population claim",
+    "quality": "exact retained counts and denominators before percentages",
+    "support_threshold": "treatment point ratio <= 0.80, no lower consequential sensitivity or classification accuracy, no added false positive or authority violation",
+    "disposition_values": ["continue", "revise", "retain_source_locally", "retire"]
+  },
+  "public_custody": {
+    "rule": "all prompts, public inputs, model outputs, timing, and usage records are public evaluation artifacts",
+    "exclusions": [
+      "OAuth tokens or credentials",
+      "local filesystem paths outside the repository",
+      "account identifiers",
+      "private session storage",
+      "unredacted environment variables"
+    ]
+  },
+  "nonclaims": [
+    "not a probability sample or general model benchmark",
+    "not evidence that agent review is better or worse than human review",
+    "not independent replication",
+    "not Formal Conjectures acceptance, merge, or maintainer review",
+    "not a Vela Verification or Decision",
+    "no authority or Standing effect"
+  ]
+}

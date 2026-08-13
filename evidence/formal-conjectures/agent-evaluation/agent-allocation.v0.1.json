@@ -1,0 +1,529 @@
+{
+  "schema": "vela.math.fc-audit.agent-allocation.v0.1",
+  "authority_effect": "none",
+  "design": {
+    "path": "evidence/formal-conjectures/agent-evaluation/agent-evaluation-design.v0.1.json",
+    "size": 5755,
+    "raw_sha256": "sha256:607322d5dd9b5cc25ca9e487b2e1c589ea4ba54ef34c67e277ff567fb611043d"
+  },
+  "bundle_set": {
+    "path": "evidence/formal-conjectures/agent-evaluation/condition-bundle-set.v0.1.json",
+    "size": 6655,
+    "raw_sha256": "sha256:5e62936426213cbba66bf1a1215d4d12fe17f3ec586f8307c611ae27ea40c236"
+  },
+  "assignment_count": 30,
+  "assignments": [
+    {
+      "slot": 1,
+      "fixture_position": 1,
+      "task_order": 1,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:34f9ce1e77b28e8ebcd9a49f57f4e976a890eabda546594d24ae588b465554fc",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/clean-source-faithful-min-modulus-4829--plain-git-and-current-review-artifacts.json",
+        "raw_sha256": "sha256:4b348b176a45b49ea992c829935b281db66c7afd772c95f37feef8be437ae405",
+        "size": 18157,
+        "bundle_root": "sha256:94a24cb03394331709b5050bef66bd1756c244ab34193ca36f59aff45a4165ae"
+      },
+      "handoff_id": "agent-eval-handoff-s01-01",
+      "sender_task_context_id": "agent:codex-eval-sender-s01-clean-source-faithful-min-modulus-4829",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s01-clean-source-faithful-min-modulus-4829"
+    },
+    {
+      "slot": 1,
+      "fixture_position": 2,
+      "task_order": 2,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/conditional-erdos-427-4884--same-inputs-plus-fc-pr-audit.json",
+        "raw_sha256": "sha256:84e250b1d47301f7aded75d47fadcd33c186e3a5277050ea39a8e591e747f73c",
+        "size": 75071,
+        "bundle_root": "sha256:e2da0509420e9ef69ebb56eb956a35570a375b3b4d45b2250b4fb918213dc302"
+      },
+      "handoff_id": "agent-eval-handoff-s01-02",
+      "sender_task_context_id": "agent:codex-eval-sender-s01-conditional-erdos-427-4884",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s01-conditional-erdos-427-4884"
+    },
+    {
+      "slot": 1,
+      "fixture_position": 3,
+      "task_order": 3,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:702406f0ae0aaa12a8c31f64aecd19809253af52dc1ac615ec5fca723242dc88",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/fidelity-erdos-887-1237--plain-git-and-current-review-artifacts.json",
+        "raw_sha256": "sha256:d7f66d10becf383879c83443722c8d415bad300e1d9468dd4a51cf04acea3e6e",
+        "size": 17035,
+        "bundle_root": "sha256:ac6bfde82ed7d0b554df09742c001679e0b9b39db7ce84ff501d038891a5ea37"
+      },
+      "handoff_id": "agent-eval-handoff-s01-03",
+      "sender_task_context_id": "agent:codex-eval-sender-s01-fidelity-erdos-887-1237",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s01-fidelity-erdos-887-1237"
+    },
+    {
+      "slot": 1,
+      "fixture_position": 4,
+      "task_order": 4,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/vacuity-erdos-80-4830--same-inputs-plus-fc-pr-audit.json",
+        "raw_sha256": "sha256:729860290ef93a795a0fdbbcf021f6d06a61bd0d3f506fa8b13eb0d92cdf718e",
+        "size": 105746,
+        "bundle_root": "sha256:d7105463bb16d63b724b56b395574a6b5226eafdb33695e6310a54342177feff"
+      },
+      "handoff_id": "agent-eval-handoff-s01-04",
+      "sender_task_context_id": "agent:codex-eval-sender-s01-vacuity-erdos-80-4830",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s01-vacuity-erdos-80-4830"
+    },
+    {
+      "slot": 1,
+      "fixture_position": 5,
+      "task_order": 5,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/unavailable-rupert-3959--plain-git-and-current-review-artifacts.json",
+        "raw_sha256": "sha256:c59fb49559a469400b9f9408a22456ac78b45f3a6c1cf9e42496ceb7d3326e50",
+        "size": 20400,
+        "bundle_root": "sha256:88cef0e88392c8ce945d8cb6d56920ba8cb8e24d7eeab21ffd184eaa6a8afd06"
+      },
+      "handoff_id": "agent-eval-handoff-s01-05",
+      "sender_task_context_id": "agent:codex-eval-sender-s01-unavailable-rupert-3959",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s01-unavailable-rupert-3959"
+    },
+    {
+      "slot": 2,
+      "fixture_position": 2,
+      "task_order": 1,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:0e0824641f75166903af3a4642d89f01ecdd0ae0b0a46a9512136e0d2bcf5191",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/conditional-erdos-427-4884--plain-git-and-current-review-artifacts.json",
+        "raw_sha256": "sha256:07ad0c75fa5767b194663effd6c1341e301e9c36aac393e7b7ec8de67f9ce642",
+        "size": 52387,
+        "bundle_root": "sha256:deb16cdf483e6e097d647b002ab0df475a7b86ed68de06217a4c7f594fe7acca"
+      },
+      "handoff_id": "agent-eval-handoff-s02-02",
+      "sender_task_context_id": "agent:codex-eval-sender-s02-conditional-erdos-427-4884",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s02-conditional-erdos-427-4884"
+    },
+    {
+      "slot": 2,
+      "fixture_position": 3,
+      "task_order": 2,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/fidelity-erdos-887-1237--same-inputs-plus-fc-pr-audit.json",
+        "raw_sha256": "sha256:0a7ac36567d7bbc8b847f23cc373a2a2492a98883f81419f3e2dbb09646e4686",
+        "size": 47322,
+        "bundle_root": "sha256:809ce9755617a37078f036eedd0307a7d0ab44a09a6b23d3ed12a0c9d721fafa"
+      },
+      "handoff_id": "agent-eval-handoff-s02-03",
+      "sender_task_context_id": "agent:codex-eval-sender-s02-fidelity-erdos-887-1237",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s02-fidelity-erdos-887-1237"
+    },
+    {
+      "slot": 2,
+      "fixture_position": 4,
+      "task_order": 3,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/vacuity-erdos-80-4830--plain-git-and-current-review-artifacts.json",
+        "raw_sha256": "sha256:266e33518a06fcc6c32372ab50347794602cb4bc0814095e0eba4784fa34da54",
+        "size": 84498,
+        "bundle_root": "sha256:f32573a749a1d4077f4206e72a5288aed0f46b155685262c3ea36b851cfd9425"
+      },
+      "handoff_id": "agent-eval-handoff-s02-04",
+      "sender_task_context_id": "agent:codex-eval-sender-s02-vacuity-erdos-80-4830",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s02-vacuity-erdos-80-4830"
+    },
+    {
+      "slot": 2,
+      "fixture_position": 5,
+      "task_order": 4,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/unavailable-rupert-3959--same-inputs-plus-fc-pr-audit.json",
+        "raw_sha256": "sha256:be74f9c3cc03d87336d04ade80e8c7650f63799e7303b815bff6729e3deb7fee",
+        "size": 60891,
+        "bundle_root": "sha256:0fab1d6ea3c5a305aa65e07673bc37ca88a21625038790a7dd78b0c394f39bc5"
+      },
+      "handoff_id": "agent-eval-handoff-s02-05",
+      "sender_task_context_id": "agent:codex-eval-sender-s02-unavailable-rupert-3959",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s02-unavailable-rupert-3959"
+    },
+    {
+      "slot": 2,
+      "fixture_position": 1,
+      "task_order": 5,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/clean-source-faithful-min-modulus-4829--same-inputs-plus-fc-pr-audit.json",
+        "raw_sha256": "sha256:f00626c53e7664be240566932a6605eff06bb8886bac95b2d7b71ff9ee6beb76",
+        "size": 46712,
+        "bundle_root": "sha256:19337169bf062787f9a41a8bc3f2528d7fa7a52d69c8e66a03a6db482b0d4676"
+      },
+      "handoff_id": "agent-eval-handoff-s02-01",
+      "sender_task_context_id": "agent:codex-eval-sender-s02-clean-source-faithful-min-modulus-4829",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s02-clean-source-faithful-min-modulus-4829"
+    },
+    {
+      "slot": 3,
+      "fixture_position": 3,
+      "task_order": 1,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/fidelity-erdos-887-1237--same-inputs-plus-fc-pr-audit.json",
+        "raw_sha256": "sha256:0a7ac36567d7bbc8b847f23cc373a2a2492a98883f81419f3e2dbb09646e4686",
+        "size": 47322,
+        "bundle_root": "sha256:809ce9755617a37078f036eedd0307a7d0ab44a09a6b23d3ed12a0c9d721fafa"
+      },
+      "handoff_id": "agent-eval-handoff-s03-03",
+      "sender_task_context_id": "agent:codex-eval-sender-s03-fidelity-erdos-887-1237",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s03-fidelity-erdos-887-1237"
+    },
+    {
+      "slot": 3,
+      "fixture_position": 4,
+      "task_order": 2,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/vacuity-erdos-80-4830--same-inputs-plus-fc-pr-audit.json",
+        "raw_sha256": "sha256:729860290ef93a795a0fdbbcf021f6d06a61bd0d3f506fa8b13eb0d92cdf718e",
+        "size": 105746,
+        "bundle_root": "sha256:d7105463bb16d63b724b56b395574a6b5226eafdb33695e6310a54342177feff"
+      },
+      "handoff_id": "agent-eval-handoff-s03-04",
+      "sender_task_context_id": "agent:codex-eval-sender-s03-vacuity-erdos-80-4830",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s03-vacuity-erdos-80-4830"
+    },
+    {
+      "slot": 3,
+      "fixture_position": 5,
+      "task_order": 3,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/unavailable-rupert-3959--plain-git-and-current-review-artifacts.json",
+        "raw_sha256": "sha256:c59fb49559a469400b9f9408a22456ac78b45f3a6c1cf9e42496ceb7d3326e50",
+        "size": 20400,
+        "bundle_root": "sha256:88cef0e88392c8ce945d8cb6d56920ba8cb8e24d7eeab21ffd184eaa6a8afd06"
+      },
+      "handoff_id": "agent-eval-handoff-s03-05",
+      "sender_task_context_id": "agent:codex-eval-sender-s03-unavailable-rupert-3959",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s03-unavailable-rupert-3959"
+    },
+    {
+      "slot": 3,
+      "fixture_position": 1,
+      "task_order": 4,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:34f9ce1e77b28e8ebcd9a49f57f4e976a890eabda546594d24ae588b465554fc",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/clean-source-faithful-min-modulus-4829--plain-git-and-current-review-artifacts.json",
+        "raw_sha256": "sha256:4b348b176a45b49ea992c829935b281db66c7afd772c95f37feef8be437ae405",
+        "size": 18157,
+        "bundle_root": "sha256:94a24cb03394331709b5050bef66bd1756c244ab34193ca36f59aff45a4165ae"
+      },
+      "handoff_id": "agent-eval-handoff-s03-01",
+      "sender_task_context_id": "agent:codex-eval-sender-s03-clean-source-faithful-min-modulus-4829",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s03-clean-source-faithful-min-modulus-4829"
+    },
+    {
+      "slot": 3,
+      "fixture_position": 2,
+      "task_order": 5,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:0e0824641f75166903af3a4642d89f01ecdd0ae0b0a46a9512136e0d2bcf5191",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/conditional-erdos-427-4884--plain-git-and-current-review-artifacts.json",
+        "raw_sha256": "sha256:07ad0c75fa5767b194663effd6c1341e301e9c36aac393e7b7ec8de67f9ce642",
+        "size": 52387,
+        "bundle_root": "sha256:deb16cdf483e6e097d647b002ab0df475a7b86ed68de06217a4c7f594fe7acca"
+      },
+      "handoff_id": "agent-eval-handoff-s03-02",
+      "sender_task_context_id": "agent:codex-eval-sender-s03-conditional-erdos-427-4884",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s03-conditional-erdos-427-4884"
+    },
+    {
+      "slot": 4,
+      "fixture_position": 4,
+      "task_order": 1,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/vacuity-erdos-80-4830--plain-git-and-current-review-artifacts.json",
+        "raw_sha256": "sha256:266e33518a06fcc6c32372ab50347794602cb4bc0814095e0eba4784fa34da54",
+        "size": 84498,
+        "bundle_root": "sha256:f32573a749a1d4077f4206e72a5288aed0f46b155685262c3ea36b851cfd9425"
+      },
+      "handoff_id": "agent-eval-handoff-s04-04",
+      "sender_task_context_id": "agent:codex-eval-sender-s04-vacuity-erdos-80-4830",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s04-vacuity-erdos-80-4830"
+    },
+    {
+      "slot": 4,
+      "fixture_position": 5,
+      "task_order": 2,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/unavailable-rupert-3959--same-inputs-plus-fc-pr-audit.json",
+        "raw_sha256": "sha256:be74f9c3cc03d87336d04ade80e8c7650f63799e7303b815bff6729e3deb7fee",
+        "size": 60891,
+        "bundle_root": "sha256:0fab1d6ea3c5a305aa65e07673bc37ca88a21625038790a7dd78b0c394f39bc5"
+      },
+      "handoff_id": "agent-eval-handoff-s04-05",
+      "sender_task_context_id": "agent:codex-eval-sender-s04-unavailable-rupert-3959",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s04-unavailable-rupert-3959"
+    },
+    {
+      "slot": 4,
+      "fixture_position": 1,
+      "task_order": 3,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/clean-source-faithful-min-modulus-4829--same-inputs-plus-fc-pr-audit.json",
+        "raw_sha256": "sha256:f00626c53e7664be240566932a6605eff06bb8886bac95b2d7b71ff9ee6beb76",
+        "size": 46712,
+        "bundle_root": "sha256:19337169bf062787f9a41a8bc3f2528d7fa7a52d69c8e66a03a6db482b0d4676"
+      },
+      "handoff_id": "agent-eval-handoff-s04-01",
+      "sender_task_context_id": "agent:codex-eval-sender-s04-clean-source-faithful-min-modulus-4829",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s04-clean-source-faithful-min-modulus-4829"
+    },
+    {
+      "slot": 4,
+      "fixture_position": 2,
+      "task_order": 4,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/conditional-erdos-427-4884--same-inputs-plus-fc-pr-audit.json",
+        "raw_sha256": "sha256:84e250b1d47301f7aded75d47fadcd33c186e3a5277050ea39a8e591e747f73c",
+        "size": 75071,
+        "bundle_root": "sha256:e2da0509420e9ef69ebb56eb956a35570a375b3b4d45b2250b4fb918213dc302"
+      },
+      "handoff_id": "agent-eval-handoff-s04-02",
+      "sender_task_context_id": "agent:codex-eval-sender-s04-conditional-erdos-427-4884",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s04-conditional-erdos-427-4884"
+    },
+    {
+      "slot": 4,
+      "fixture_position": 3,
+      "task_order": 5,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:702406f0ae0aaa12a8c31f64aecd19809253af52dc1ac615ec5fca723242dc88",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/fidelity-erdos-887-1237--plain-git-and-current-review-artifacts.json",
+        "raw_sha256": "sha256:d7f66d10becf383879c83443722c8d415bad300e1d9468dd4a51cf04acea3e6e",
+        "size": 17035,
+        "bundle_root": "sha256:ac6bfde82ed7d0b554df09742c001679e0b9b39db7ce84ff501d038891a5ea37"
+      },
+      "handoff_id": "agent-eval-handoff-s04-03",
+      "sender_task_context_id": "agent:codex-eval-sender-s04-fidelity-erdos-887-1237",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s04-fidelity-erdos-887-1237"
+    },
+    {
+      "slot": 5,
+      "fixture_position": 5,
+      "task_order": 1,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/unavailable-rupert-3959--plain-git-and-current-review-artifacts.json",
+        "raw_sha256": "sha256:c59fb49559a469400b9f9408a22456ac78b45f3a6c1cf9e42496ceb7d3326e50",
+        "size": 20400,
+        "bundle_root": "sha256:88cef0e88392c8ce945d8cb6d56920ba8cb8e24d7eeab21ffd184eaa6a8afd06"
+      },
+      "handoff_id": "agent-eval-handoff-s05-05",
+      "sender_task_context_id": "agent:codex-eval-sender-s05-unavailable-rupert-3959",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s05-unavailable-rupert-3959"
+    },
+    {
+      "slot": 5,
+      "fixture_position": 1,
+      "task_order": 2,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:34f9ce1e77b28e8ebcd9a49f57f4e976a890eabda546594d24ae588b465554fc",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/clean-source-faithful-min-modulus-4829--plain-git-and-current-review-artifacts.json",
+        "raw_sha256": "sha256:4b348b176a45b49ea992c829935b281db66c7afd772c95f37feef8be437ae405",
+        "size": 18157,
+        "bundle_root": "sha256:94a24cb03394331709b5050bef66bd1756c244ab34193ca36f59aff45a4165ae"
+      },
+      "handoff_id": "agent-eval-handoff-s05-01",
+      "sender_task_context_id": "agent:codex-eval-sender-s05-clean-source-faithful-min-modulus-4829",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s05-clean-source-faithful-min-modulus-4829"
+    },
+    {
+      "slot": 5,
+      "fixture_position": 2,
+      "task_order": 3,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/conditional-erdos-427-4884--same-inputs-plus-fc-pr-audit.json",
+        "raw_sha256": "sha256:84e250b1d47301f7aded75d47fadcd33c186e3a5277050ea39a8e591e747f73c",
+        "size": 75071,
+        "bundle_root": "sha256:e2da0509420e9ef69ebb56eb956a35570a375b3b4d45b2250b4fb918213dc302"
+      },
+      "handoff_id": "agent-eval-handoff-s05-02",
+      "sender_task_context_id": "agent:codex-eval-sender-s05-conditional-erdos-427-4884",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s05-conditional-erdos-427-4884"
+    },
+    {
+      "slot": 5,
+      "fixture_position": 3,
+      "task_order": 4,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/fidelity-erdos-887-1237--same-inputs-plus-fc-pr-audit.json",
+        "raw_sha256": "sha256:0a7ac36567d7bbc8b847f23cc373a2a2492a98883f81419f3e2dbb09646e4686",
+        "size": 47322,
+        "bundle_root": "sha256:809ce9755617a37078f036eedd0307a7d0ab44a09a6b23d3ed12a0c9d721fafa"
+      },
+      "handoff_id": "agent-eval-handoff-s05-03",
+      "sender_task_context_id": "agent:codex-eval-sender-s05-fidelity-erdos-887-1237",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s05-fidelity-erdos-887-1237"
+    },
+    {
+      "slot": 5,
+      "fixture_position": 4,
+      "task_order": 5,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/vacuity-erdos-80-4830--plain-git-and-current-review-artifacts.json",
+        "raw_sha256": "sha256:266e33518a06fcc6c32372ab50347794602cb4bc0814095e0eba4784fa34da54",
+        "size": 84498,
+        "bundle_root": "sha256:f32573a749a1d4077f4206e72a5288aed0f46b155685262c3ea36b851cfd9425"
+      },
+      "handoff_id": "agent-eval-handoff-s05-04",
+      "sender_task_context_id": "agent:codex-eval-sender-s05-vacuity-erdos-80-4830",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s05-vacuity-erdos-80-4830"
+    },
+    {
+      "slot": 6,
+      "fixture_position": 5,
+      "task_order": 1,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/unavailable-rupert-3959--same-inputs-plus-fc-pr-audit.json",
+        "raw_sha256": "sha256:be74f9c3cc03d87336d04ade80e8c7650f63799e7303b815bff6729e3deb7fee",
+        "size": 60891,
+        "bundle_root": "sha256:0fab1d6ea3c5a305aa65e07673bc37ca88a21625038790a7dd78b0c394f39bc5"
+      },
+      "handoff_id": "agent-eval-handoff-s06-05",
+      "sender_task_context_id": "agent:codex-eval-sender-s06-unavailable-rupert-3959",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s06-unavailable-rupert-3959"
+    },
+    {
+      "slot": 6,
+      "fixture_position": 4,
+      "task_order": 2,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/vacuity-erdos-80-4830--same-inputs-plus-fc-pr-audit.json",
+        "raw_sha256": "sha256:729860290ef93a795a0fdbbcf021f6d06a61bd0d3f506fa8b13eb0d92cdf718e",
+        "size": 105746,
+        "bundle_root": "sha256:d7105463bb16d63b724b56b395574a6b5226eafdb33695e6310a54342177feff"
+      },
+      "handoff_id": "agent-eval-handoff-s06-04",
+      "sender_task_context_id": "agent:codex-eval-sender-s06-vacuity-erdos-80-4830",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s06-vacuity-erdos-80-4830"
+    },
+    {
+      "slot": 6,
+      "fixture_position": 3,
+      "task_order": 3,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:702406f0ae0aaa12a8c31f64aecd19809253af52dc1ac615ec5fca723242dc88",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/fidelity-erdos-887-1237--plain-git-and-current-review-artifacts.json",
+        "raw_sha256": "sha256:d7f66d10becf383879c83443722c8d415bad300e1d9468dd4a51cf04acea3e6e",
+        "size": 17035,
+        "bundle_root": "sha256:ac6bfde82ed7d0b554df09742c001679e0b9b39db7ce84ff501d038891a5ea37"
+      },
+      "handoff_id": "agent-eval-handoff-s06-03",
+      "sender_task_context_id": "agent:codex-eval-sender-s06-fidelity-erdos-887-1237",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s06-fidelity-erdos-887-1237"
+    },
+    {
+      "slot": 6,
+      "fixture_position": 2,
+      "task_order": 4,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:0e0824641f75166903af3a4642d89f01ecdd0ae0b0a46a9512136e0d2bcf5191",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/conditional-erdos-427-4884--plain-git-and-current-review-artifacts.json",
+        "raw_sha256": "sha256:07ad0c75fa5767b194663effd6c1341e301e9c36aac393e7b7ec8de67f9ce642",
+        "size": 52387,
+        "bundle_root": "sha256:deb16cdf483e6e097d647b002ab0df475a7b86ed68de06217a4c7f594fe7acca"
+      },
+      "handoff_id": "agent-eval-handoff-s06-02",
+      "sender_task_context_id": "agent:codex-eval-sender-s06-conditional-erdos-427-4884",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s06-conditional-erdos-427-4884"
+    },
+    {
+      "slot": 6,
+      "fixture_position": 1,
+      "task_order": 5,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa",
+      "bundle": {
+        "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/clean-source-faithful-min-modulus-4829--same-inputs-plus-fc-pr-audit.json",
+        "raw_sha256": "sha256:f00626c53e7664be240566932a6605eff06bb8886bac95b2d7b71ff9ee6beb76",
+        "size": 46712,
+        "bundle_root": "sha256:19337169bf062787f9a41a8bc3f2528d7fa7a52d69c8e66a03a6db482b0d4676"
+      },
+      "handoff_id": "agent-eval-handoff-s06-01",
+      "sender_task_context_id": "agent:codex-eval-sender-s06-clean-source-faithful-min-modulus-4829",
+      "receiver_task_context_id": "agent:codex-eval-receiver-s06-clean-source-faithful-min-modulus-4829"
+    }
+  ],
+  "rule": "All assignments are frozen before model execution; failures are retained and no task is retried or replaced based on outcome.",
+  "allocation_root": "sha256:d5e86b3a57bd5e07e9025a196eedc43c7a14764b766189ff8eea65518781db01"
+}

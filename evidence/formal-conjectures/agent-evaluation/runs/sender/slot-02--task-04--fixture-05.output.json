@@ -1,0 +1,42 @@
+{
+  "schema": "vela.math.fc-audit.agent-sender-output.v0.1",
+  "fixture_id": "unavailable-rupert-3959",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+  "verdict": "unavailable",
+  "issue_codes": [
+    "exact_artifact_identity_unavailable"
+  ],
+  "mechanical_status": "pass",
+  "source_fidelity": "unavailable",
+  "artifact_availability": "unavailable",
+  "community_status": "merged",
+  "evidence_locators": [
+    "FormalConjectures/Paper/Rupert.lean@868cc092aeb713dbf8027883c5fa575e550cfae9",
+    "Rupert.is_every_convex_polyhedron_rupert",
+    "https://github.com/google-deepmind/formal-conjectures/actions/runs/25608941188/job/75175625578",
+    "https://github.com/jcreedcmu/Noperthedron",
+    "comparator-packet-observation.json",
+    "comparator-missing-tool-invocation.json",
+    "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959.json"
+  ],
+  "witness": "At head 868cc092aeb713dbf8027883c5fa575e550cfae9, the exact repository Build project check passed, but the formal_proof attribute names only the mutable repository root https://github.com/jcreedcmu/Noperthedron, with no immutable revision or proof file. The retained Comparator preflight found no executable, so no proof-to-statement comparison ran. PR 3959 was merged, but that community action has no authority effect and does not cure the missing artifact identity.",
+  "unsupported_claims": [
+    "The externally linked Lean proof proves Rupert.is_every_convex_polyhedron_rupert.",
+    "The linked proof matches the exact statement at head 868cc092aeb713dbf8027883c5fa575e550cfae9.",
+    "The passing repository build establishes external proof correctness or source fidelity.",
+    "The approval or merge establishes acceptance, Vela Decision, or Standing."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "mathematical truth",
+    "external proof correctness",
+    "source fidelity",
+    "exact external proof identity",
+    "acceptance",
+    "Vela Decision",
+    "Standing"
+  ],
+  "next_obligation": "Pin an immutable Noperthedron commit and exact proof file, retain the required toolchain and Comparator identity, and run a proof-to-statement comparison against Rupert.is_every_convex_polyhedron_rupert at head 868cc092aeb713dbf8027883c5fa575e550cfae9.",
+  "confidence": "high"
+}

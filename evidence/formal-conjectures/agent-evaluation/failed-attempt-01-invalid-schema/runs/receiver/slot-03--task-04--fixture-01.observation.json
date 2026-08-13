@@ -1,0 +1,36 @@
+{
+  "schema": "vela.math.fc-audit.agent-task-observation.v0.1",
+  "observation_id": "agent-eval-handoff-s03-01::receiver",
+  "role": "receiver",
+  "authority_effect": "none",
+  "task_context_id": "agent:codex-eval-receiver-s03-clean-source-faithful-min-modulus-4829",
+  "slot": 3,
+  "task_order": 4,
+  "fixture_id": "clean-source-faithful-min-modulus-4829",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:34f9ce1e77b28e8ebcd9a49f57f4e976a890eabda546594d24ae588b465554fc",
+  "handoff_id": "agent-eval-handoff-s03-01",
+  "runner": null,
+  "independence_classification": "not_evaluated_sender_failed",
+  "bundle": {
+    "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/clean-source-faithful-min-modulus-4829--plain-git-and-current-review-artifacts.json",
+    "raw_sha256": "sha256:4b348b176a45b49ea992c829935b281db66c7afd772c95f37feef8be437ae405",
+    "size": 18157,
+    "bundle_root": "sha256:94a24cb03394331709b5050bef66bd1756c244ab34193ca36f59aff45a4165ae"
+  },
+  "started_at": "2026-08-13T21:00:20.824Z",
+  "completed_at": "2026-08-13T21:00:20.824Z",
+  "elapsed_seconds": null,
+  "terminal_state": "blocked_sender_failure",
+  "return_code": null,
+  "usage": null,
+  "output": null,
+  "event_log": null,
+  "stderr_log": null,
+  "parse_error": "sender terminal state: error",
+  "does_not_establish": [
+    "No receiver task ran, so missing duration and outcome are not zero.",
+    "This record has no authority or Standing effect."
+  ],
+  "observation_root": "sha256:8b562d7fe9dae1660125d64b4c0c04333bd52f188475e45277736fa9634ec7c4"
+}

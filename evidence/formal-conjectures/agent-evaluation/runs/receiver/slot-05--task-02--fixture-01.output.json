@@ -1,0 +1,28 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "clean-source-faithful-min-modulus-4829",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:34f9ce1e77b28e8ebcd9a49f57f4e976a890eabda546594d24ae588b465554fc",
+  "sender_output_sha256": "sha256:02169a2fd02002f2f31d11d8a965ce5bbe9a1f6468381b12e6f46187d86c9c04",
+  "retained_verdict": "clean",
+  "retained_issue_codes": [],
+  "layered_summary": "Mechanical: the retained GitHub observation reports Build project succeeded for exact head 0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c, but this bundle permits only scoping that attestation, not rerunning it. Source fidelity: the answer slot governs the complete open proposition, whose bounds, positivity condition, cardinality, and IsValidMod conclusion match the supplied Conjecture 1 description; no conditional-proof, scope, or vacuity defect is evident. Artifact availability: the changed Lean source has commit, blob, SHA-256, and supplied bytes; the separately declared solved-theorem proof has a commit-pinned locator but no retained proof bytes or digest. Community: one collaborator approval and a merged PR are observed. Authority: all observations have no authority effect and establish neither acceptance nor Standing.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [
+    "Retained build logs and independently executable build environment/toolchain/dependency identities",
+    "Bytes or content digest for the commit-pinned external formal-proof artifact"
+  ],
+  "next_obligation": "Independently reproduce the exact-head repository build and retrieve or hash the commit-pinned external proof artifact if proof-artifact verification beyond locator-level scoping is required.",
+  "unsupported_claims": [
+    "The sender's unqualified artifact_availability value \"exact\" overstates the supplied evidence if it includes the external formal-proof artifact, for which only a commit-pinned locator—not retained bytes or a content digest—is present."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "Mathematical truth of the open conjecture",
+    "Independent reproduction of the exact-head build",
+    "Verification of the external formal-proof artifact's contents",
+    "Community acceptance or Standing from the build, approval, merge, or Git commit",
+    "Vela Verification, Decision, or Standing"
+  ],
+  "confidence": "high"
+}

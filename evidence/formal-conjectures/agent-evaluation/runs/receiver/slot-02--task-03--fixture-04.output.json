@@ -1,0 +1,34 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "vacuity-erdos-80-4830",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0",
+  "sender_output_sha256": "sha256:2c0c7c3c9cedbea07f44c4ba448ebffe15d36f78fc85f7f457825c2fbe50e6bb",
+  "retained_verdict": "needs_revision",
+  "retained_issue_codes": [
+    "vacuous_hypothesis"
+  ],
+  "layered_summary": "Mechanical status: retained GitHub check run 93244178114 reports Build project success for exact head e2e2a6064b474781d3b5b4a32e3d77956d6968da; skipped checks and the empty legacy-status result remain separate. Source fidelity: needs revision because both asymptotic statements quantify over every c > 0 although Admissible is eventually empty for infeasible densities; c = 2 supplies a witness and forces f 2 n = 0 for n ≥ 1. Artifact availability: the exact fixture source bytes, blob identity, base/head commits, and check observation are supplied, but the build was not independently rerun and the exact corrected statement/check artifact is not in this rooted condition. Community status: PR 4830 was approved and merged, while PR 4877 was an open, favorably reviewed corrective PR at observation time. Authority: none; neither status establishes acceptance or Standing.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [
+    "Independent build transcript and toolchain identity for head e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+    "Retained outputs for the PR description's declared #print axioms checks",
+    "Exact corrected source bytes and immutable commit identity for the proposed PR 4877 change",
+    "Exact-head mechanical check result for the corrected artifact",
+    "Immutable retained content of the cited external problem statement for direct source comparison"
+  ],
+  "next_obligation": "Restrict both asymptotic statements to the satisfiable density range, for example 0 < c and c < 1/2, then retain the exact corrected source identity and independently attributable mechanical-check artifact and review that corrected statement against the source.",
+  "unsupported_claims": [
+    "The PR 4830 description claims that infeasible large c does not affect the asymptotic questions; c = 2 contradicts this because both retained statements quantify over every c > 0.",
+    "The supplied bundle does not substantiate the PR description's claimed #print axioms outputs with retained output bytes."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The successful exact-head build does not establish semantic fidelity, acceptance, or Standing.",
+    "PR 4830's approval and merge do not establish acceptance or Standing.",
+    "The open corrective PR 4877 and its favorable review do not establish that the correction was merged or alter the exact fixture artifact.",
+    "The scoped retained check observation is not an independent reproduction of the build.",
+    "A Git commit, review, merge, or audit disposition does not establish Vela Standing."
+  ],
+  "confidence": "high"
+}

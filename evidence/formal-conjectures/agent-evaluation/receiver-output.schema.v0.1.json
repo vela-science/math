@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vela.science/schemas/fc-audit-agent-receiver-output-v0.1.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "fixture_id", "condition", "packet_root", "sender_output_sha256", "retained_verdict", "retained_issue_codes", "layered_summary", "reproduction_terminal_state", "missing_provenance_fields", "next_obligation", "unsupported_claims", "authority_effect", "does_not_establish", "confidence"],
+  "properties": {
+    "schema": {"type": "string", "const": "vela.math.fc-audit.agent-receiver-output.v0.1"},
+    "fixture_id": {"type": "string"},
+    "condition": {"enum": ["plain-git-and-current-review-artifacts", "same-inputs-plus-fc-pr-audit"]},
+    "packet_root": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "sender_output_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "retained_verdict": {"enum": ["clean", "minor_issues", "needs_revision", "inconclusive", "unavailable", "error"]},
+    "retained_issue_codes": {"type": "array", "items": {"enum": ["conditional_proof_dependency", "answer_slot_scope", "vacuous_hypothesis", "exact_artifact_identity_unavailable", "other"]}},
+    "layered_summary": {"type": "string", "minLength": 1},
+    "reproduction_terminal_state": {"enum": ["completed", "scoped", "unavailable", "fail", "error", "inconclusive"]},
+    "missing_provenance_fields": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "next_obligation": {"type": ["string", "null"]},
+    "unsupported_claims": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "authority_effect": {"type": "string", "const": "none"},
+    "does_not_establish": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}},
+    "confidence": {"enum": ["low", "medium", "high"]}
+  }
+}

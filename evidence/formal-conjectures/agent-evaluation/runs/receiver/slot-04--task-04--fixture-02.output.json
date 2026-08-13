@@ -1,0 +1,31 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "conditional-erdos-427-4884",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+  "sender_output_sha256": "sha256:b7c421b0c58a006c49222d1aac47174a36a2786a125f52165f8dc2739bd26a41",
+  "retained_verdict": "minor_issues",
+  "retained_issue_codes": [
+    "conditional_proof_dependency"
+  ],
+  "layered_summary": "Mechanical status: exact-head GitHub check run 93932003906 records `Build project` as successful, while other retained runs include skipped checks and the legacy combined-status endpoint has no status records. Source fidelity: the visible Lean statement matches the included divisibility wording and explicitly marks the linked proof conditional on Erdos427.erdos_427.variants.shiu; however, fidelity and correctness of the linked proof itself remain unverified. Artifact availability: the head source and linked-proof identities are pinned by commit/hash and locator, but the supplied JSON does not include the linked-proof bytes or an execution transcript, so independent reproduction is only scoped to retained attestations. Community status: PR 4884 was OPEN, BLOCKED, REVIEW_REQUIRED, unmerged, and had no retained reviews at the observation time. Authority: none; these observations do not confer acceptance or Standing.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [
+    "linked-proof bytes within the supplied JSON material",
+    "linked-proof execution transcript and environment identity",
+    "witness-backed semantic comparison between the linked proof's axiom and the declared ShiuTheorem dependency"
+  ],
+  "next_obligation": "Execute the exact linked proof identified by sha256:792a4b5fab29e5855fbcb1115d54e28a054d8fcf7ee2bd5589834a73b387c052 and produce a witness-backed semantic comparison with Erdos427.erdos_427 and Erdos427.erdos_427.variants.shiu, or independently discharge the ShiuTheorem dependency.",
+  "unsupported_claims": [
+    "An unqualified source-fidelity pass for the linked proof is unsupported because the retained metadata review neither executed it nor semantically compared its axiom with ShiuTheorem.",
+    "Independent reproduction of the linked proof is unsupported from the supplied JSON because its exact identity is retained but its bytes and execution record are not included."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "An unconditional proof of Erdos427.erdos_427",
+    "Correctness of the linked proof or mathematical truth of ShiuTheorem",
+    "Success of every check run",
+    "Acceptance, merge, maintainer approval, Vela Decision, or Standing"
+  ],
+  "confidence": "high"
+}

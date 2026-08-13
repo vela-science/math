@@ -1,0 +1,39 @@
+{
+  "schema": "vela.math.fc-audit.agent-execution-amendment.v0.1",
+  "amendment_id": "agent-evaluation-schema-contract-repair-v0.1",
+  "recorded_at": "2026-08-13T21:02:00Z",
+  "authority_effect": "none",
+  "scope": "execution harness only",
+  "failed_attempt": {
+    "path": "evidence/formal-conjectures/agent-evaluation/failed-attempt-01-invalid-schema/agent-evaluation-results.v0.1.json",
+    "size": 5573,
+    "raw_sha256": "sha256:3bdc37dea2a93046aaef395374e604594f7ea2540172c81c824771347c05dab7",
+    "results_root": "sha256:1b0222de3d2573f7df788e3798c612ebb27f1e9d7fafbecbaa216ee4d3ba5f65",
+    "sender_terminal_states": {"error": 30},
+    "receiver_terminal_states": {"blocked_sender_failure": 30},
+    "model_review_outputs": 0
+  },
+  "cause": "The response-format API rejected both role schemas before inference because const-only properties omitted an explicit JSON Schema type.",
+  "correction": [
+    "Add type string beside const for schema and authority_effect in both output schemas.",
+    "Remove uniqueItems from issue-code arrays because the response-format subset rejects that keyword; the offline validator still checks semantic duplicates.",
+    "Retain the complete first attempt and its incomplete disposition.",
+    "Execute the same frozen allocation once under a new run directory; do not reuse any failed task context."
+  ],
+  "unchanged": [
+    "research question",
+    "model and reasoning setting",
+    "fixtures and exact source bytes",
+    "control and treatment bundles",
+    "allocation schedule",
+    "ground truth",
+    "measures and support thresholds",
+    "analysis method"
+  ],
+  "rerun_authorization_basis": "The API rejected the invalid schema before any model review output existed, so there is no observed review outcome on which the repair could be conditioned.",
+  "nonclaims": [
+    "The failed attempt is not evidence for or against either review condition.",
+    "The amendment does not permit outcome-based retries after model output.",
+    "No authority or Standing effect."
+  ]
+}

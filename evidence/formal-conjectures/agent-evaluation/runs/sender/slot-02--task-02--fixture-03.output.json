@@ -1,0 +1,31 @@
+{
+  "schema": "vela.math.fc-audit.agent-sender-output.v0.1",
+  "fixture_id": "fidelity-erdos-887-1237",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+  "verdict": "needs_revision",
+  "issue_codes": [
+    "answer_slot_scope"
+  ],
+  "mechanical_status": "pass",
+  "source_fidelity": "fail",
+  "artifact_availability": "exact",
+  "community_status": "merged",
+  "evidence_locators": [
+    "FormalConjectures/ErdosProblems/887.lean@288608562e684a2f3c97ba0ce960a2649a71370b",
+    "git-blob:6feb58b9272ce638aba6da5ca7ee8ebf7785e0b8",
+    "https://github.com/google-deepmind/formal-conjectures/actions/runs/20965023898/job/60275340706",
+    "https://github.com/google-deepmind/formal-conjectures/pull/1237",
+    "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/fidelity-erdos-887-1237/expected-core.json"
+  ],
+  "witness": "The docstring asks for one absolute constant K valid for every C and all sufficiently large n, but erdos_887 places answer(sorry) inside both the C binder and the eventual n binder. For each bound instance the slot can equal the left-hand divisor count, making the inequality close by reflexivity; it therefore does not express one absolute K. The separately declared variant_i has the intended outer ∃ K scope.",
+  "unsupported_claims": [],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The successful exact-head build establishes neither source fidelity nor mathematical truth.",
+    "The GitHub approval and merge do not establish acceptance, Vela Standing, or this advisory review's correctness.",
+    "The retained GitHub check observation is not a local build reproduction."
+  ],
+  "next_obligation": "Revise erdos_887 so the answer slot denotes a single K outside the C and n binders, then mechanically check and independently review the revised exact artifact.",
+  "confidence": "high"
+}

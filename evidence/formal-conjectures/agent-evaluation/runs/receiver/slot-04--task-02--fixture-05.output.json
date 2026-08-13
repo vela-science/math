@@ -1,0 +1,38 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "unavailable-rupert-3959",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+  "sender_output_sha256": "sha256:25ae62598332a3dcf165eafb088e806e8716a00da29bb44123e5ed566c0da2c7",
+  "retained_verdict": "unavailable",
+  "retained_issue_codes": [
+    "exact_artifact_identity_unavailable"
+  ],
+  "layered_summary": "Mechanical: the retained exact-head GitHub Build project passed, but no statement-to-proof comparison ran because the Comparator executable, toolchain lock, invocation, and result were unavailable. Source fidelity: inconclusive; the exact PR-head declaration is identified, but it cannot be compared with external proof bytes. Artifact availability: unavailable; the formal_proof locator is only a mutable Noperthedron repository root, without an immutable commit or exact proof file. Community status: PR 3959 was approved and merged. Authority: none; the build, review, merge, and audit disposition confer neither acceptance nor Standing.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [
+    "immutable Noperthedron commit identity",
+    "exact external proof-file path and byte identity",
+    "Comparator executable identity and retained bytes",
+    "Comparator toolchain lock",
+    "statement-to-proof Comparator invocation",
+    "statement-to-proof Comparator execution result"
+  ],
+  "next_obligation": "Pin an immutable Noperthedron commit and exact proof file, retain the Comparator executable and toolchain identity, and run the statement-to-proof comparison against Rupert.is_every_convex_polyhedron_rupert at PR head 868cc092aeb713dbf8027883c5fa575e550cfae9.",
+  "unsupported_claims": [
+    "The mutable Noperthedron repository-root link identifies the exact proof artifact.",
+    "The external proof matches the exact Lean declaration at head 868cc092aeb713dbf8027883c5fa575e550cfae9.",
+    "The passing repository build establishes external proof correctness or source fidelity.",
+    "The approval or merge establishes acceptance or Standing."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "mathematical truth",
+    "external proof correctness",
+    "source fidelity",
+    "exact external proof-artifact identity",
+    "acceptance",
+    "Standing"
+  ],
+  "confidence": "high"
+}

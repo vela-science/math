@@ -1,0 +1,84 @@
+{
+  "schema": "vela.math.fc-audit.agent-task-observation.v0.1",
+  "observation_id": "agent-eval-handoff-s02-04::receiver",
+  "role": "receiver",
+  "authority_effect": "none",
+  "task_context_id": "agent:codex-eval-receiver-s02-vacuity-erdos-80-4830",
+  "slot": 2,
+  "task_order": 3,
+  "fixture_id": "vacuity-erdos-80-4830",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0",
+  "handoff_id": "agent-eval-handoff-s02-04",
+  "runner": {
+    "model": "gpt-5.6-sol",
+    "provider": "openai",
+    "runtime": "codex-cli 0.145.0",
+    "reasoning_effort": "high",
+    "session_policy": "fresh_ephemeral_task_context",
+    "disabled_features": [
+      "plugins",
+      "apps",
+      "memories",
+      "browser_use",
+      "in_app_browser",
+      "computer_use",
+      "image_generation",
+      "goals",
+      "workspace_dependencies",
+      "multi_agent",
+      "shell_tool",
+      "unified_exec"
+    ],
+    "sandbox": "read-only",
+    "working_directory": "empty_temporary_directory_not_retained"
+  },
+  "independence_classification": "separate_task_context_same_model_provider_runtime_operator",
+  "bundle": {
+    "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/vacuity-erdos-80-4830--plain-git-and-current-review-artifacts.json",
+    "raw_sha256": "sha256:266e33518a06fcc6c32372ab50347794602cb4bc0814095e0eba4784fa34da54",
+    "size": 84498,
+    "bundle_root": "sha256:f32573a749a1d4077f4206e72a5288aed0f46b155685262c3ea36b851cfd9425"
+  },
+  "started_at": "2026-08-13T21:08:43.236Z",
+  "completed_at": "2026-08-13T21:09:21.545Z",
+  "elapsed_seconds": 38.308799,
+  "terminal_state": "success",
+  "return_code": 0,
+  "usage": {
+    "input_tokens": 35342,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1219,
+    "reasoning_output_tokens": 516
+  },
+  "output": {
+    "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-02--task-03--fixture-04.output.json",
+    "size": 3117,
+    "raw_sha256": "sha256:faae13835fa0f8b171a180e2b6abf8ff9031a0105d83d0a8df3ea45bad5df0e0"
+  },
+  "event_log": {
+    "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-02--task-03--fixture-04.events.jsonl",
+    "size": 3400,
+    "raw_sha256": "sha256:fa0054d0586c9d91aaa35280c91ff0d49250d539290d5deb480e761039082ced",
+    "normalization": [
+      "home path replaced with $USER_HOME",
+      "temporary task path replaced with $TASK_DIR"
+    ]
+  },
+  "stderr_log": {
+    "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-02--task-03--fixture-04.stderr.txt",
+    "size": 146,
+    "raw_sha256": "sha256:b3bac6bda6e19735c66cc1ae8aad80124d7a73683224c915e7323b978de3a542",
+    "normalization": [
+      "home path replaced with $USER_HOME",
+      "temporary task path replaced with $TASK_DIR"
+    ]
+  },
+  "parse_error": null,
+  "does_not_establish": [
+    "This attributed agent task output is advisory evidence, not acceptance or Standing.",
+    "Separate task contexts sharing a model and provider are not institutionally independent."
+  ],
+  "observation_root": "sha256:b4a63d0619fdfaebdc4a8e8b4859470814ac7a1ae6db3bb5598f8645849c0959"
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "vela.math.fc-audit.agent-sender-output.v0.1",
+  "fixture_id": "clean-source-faithful-min-modulus-4829",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa",
+  "verdict": "clean",
+  "issue_codes": [],
+  "mechanical_status": "pass",
+  "source_fidelity": "pass",
+  "artifact_availability": "exact",
+  "community_status": "merged",
+  "evidence_locators": [
+    "FormalConjectures/Arxiv/2607.08366/MinModulus.lean@0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c (blob 4c68a8c3788f805e29588bfefdac1fec079e9193; sha256:abb822a6dd603f95a9c9d773c199399222539c9cd91c8a124a3cc5429d9da416)",
+    "MinModulus.min_modulus: answer(sorry) ↔ ∀ n N : ℕ, 2 ≤ n → 0 < N → N < minModulus n → ∀ A : Finset (ZMod N), #A = n → ¬ IsValidMod A",
+    "https://github.com/jarfo/min-modulus/blob/e7c78dd63955092b5f8d8a5fa826476337c0f4be/MinModulus/UniqueSums.lean#L837-L838",
+    "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208430/job/93244176232",
+    "https://github.com/google-deepmind/formal-conjectures/pull/4829#issuecomment-5227429390",
+    "https://github.com/google-deepmind/formal-conjectures/pull/4829#pullrequestreview-4910223499",
+    "https://github.com/google-deepmind/formal-conjectures/pull/4829"
+  ],
+  "witness": "The exact-head theorem quantifies every n and positive modulus N below 2^n − 2^(Nat.log 2 n), then every n-element residue set A, and asserts that A is not valid. This matches the stated Conjecture 1. The 0 < N guard is substantive: it excludes ZMod 0 = ℤ, where the supplied {1, 2} counterexample would otherwise falsify the boundary case. The retained source-author review explicitly judged the statement faithful, and the reviewed theorem block has the same SHA-256 bytes at the final head. No proof dependency is retained for the open min_modulus declaration, and answer scopes the complete conjecture rather than changing a binder.",
+  "unsupported_claims": [],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "mathematical truth of Conjecture 1",
+    "correctness or reproduction of the separately declared external formal proof for exists_isValidMod_minModulus",
+    "source fidelity beyond MinModulus.min_modulus",
+    "community or maintainer acceptance inferred from the build pass alone",
+    "Vela Verification, Decision, acceptance, or Standing"
+  ],
+  "next_obligation": null,
+  "confidence": "high"
+}

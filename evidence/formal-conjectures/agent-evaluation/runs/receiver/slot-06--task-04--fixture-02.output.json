@@ -1,0 +1,32 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "conditional-erdos-427-4884",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:0e0824641f75166903af3a4642d89f01ecdd0ae0b0a46a9512136e0d2bcf5191",
+  "sender_output_sha256": "sha256:313dd5d48f6a465c766584ef7512f7c4ec362451e7c6d7977d2b3f4d83b97f6d",
+  "retained_verdict": "inconclusive",
+  "retained_issue_codes": [
+    "conditional_proof_dependency"
+  ],
+  "layered_summary": "Mechanical: exact-head GitHub check run 93932003906 reports Build project completed successfully; other successful and skipped runs remain separate, and no local reproduction is provided. Source fidelity: the Lean metadata explicitly makes erdos_427 conditional on erdos_427.variants.shiu, but the pinned gist bytes and authoritative problem-source contents are absent, so the sender's full fidelity pass and claim that Shiu exhausts the external proof's dependencies are not independently witnessed. Artifact availability: the source file, blob, commits, and pinned gist identity are exact, while the gist artifact bytes are unavailable in the bundle. Community: the retained snapshot shows PR 4884 open, unmerged, and with no reviews. Authority: none; these observations confer neither acceptance nor Standing.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [
+    "Exact bytes and retained digest of the pinned Erdős 427 gist revision",
+    "Authoritative external problem-source content needed for an independent statement-fidelity comparison",
+    "Build logs or locally retained reproduction transcript for check run 93932003906"
+  ],
+  "next_obligation": "Acquire and hash the exact pinned gist bytes, then inspect the complete proof for every axiom or external dependency and verify that erdos_427.variants.shiu exhaustively represents them; separately retain the authoritative problem statement if full statement fidelity is required.",
+  "unsupported_claims": [
+    "The sender's source_fidelity pass is not fully supported because neither the pinned gist bytes nor authoritative external problem-source contents are retained.",
+    "The bundle does not establish that Shiu's theorem is the external proof's only assumption.",
+    "The GitHub success attestation does not show an independent local reproduction or retain the underlying build logs."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "A successful exact-head build check does not establish semantic fidelity, acceptance, merge, or Standing.",
+    "An open, mergeable pull request or a Git commit does not constitute maintainer acceptance or a Vela Decision.",
+    "The conditional metadata does not establish an unconditional proof of Erdős Problem 427.",
+    "The pinned artifact locator establishes identity but not the unavailable artifact's contents."
+  ],
+  "confidence": "high"
+}

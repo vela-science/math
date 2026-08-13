@@ -1,0 +1,30 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "vacuity-erdos-80-4830",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+  "sender_output_sha256": "sha256:5e63d10b5b3dc8f186df6ac9e97e926ba764e8b4aacdf5eb91272342a714ab65",
+  "retained_verdict": "needs_revision",
+  "retained_issue_codes": [
+    "vacuous_hypothesis"
+  ],
+  "layered_summary": "Mechanical status: GitHub Check Run 93244178114 records `Build project` success for exact head e2e2a6064b474781d3b5b4a32e3d77956d6968da; skipped and unrelated checks remain separate. Source fidelity: fail. Both asymptotic statements quantify over every c>0, but at c=2 no simple n-vertex graph is admissible because 2*n^2 exceeds the maximum n*(n-1)/2 edges, so the defining set for f is empty and f 2 n=0; the retained n=100 witness requires 20000 edges when at most 4950 exist. Artifact availability: the exact changed Lean source, blob identity, base/head commits, normalized check observation, and retained audit artifacts are available; independent execution is only scoped because build logs, execution environment, and claimed axiom-print outputs are not supplied. Community status: PR 4830 was approved and merged, while corrective PR 4877 was open in the retained observation. Authority: none; neither community action nor this advisory audit establishes acceptance or Standing.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [
+    "Full command, workflow definition, toolchain/dependency identities, logs, and produced artifacts for GitHub Check Run 93244178114 are not included, so its successful exact-head build is a retained attestation rather than an independently reproduced execution.",
+    "The PR-body claim that `lake --wfail build` was clean lacks retained local command output and execution-environment provenance.",
+    "The claimed `#print axioms` outputs for the three proved declarations are not retained, although their exact Lean proof bodies are present in the source blob.",
+    "Exact commit-qualified revised source bytes and mechanical check evidence for the proposed PR 4877 correction are not included."
+  ],
+  "next_obligation": "Produce an exact revised artifact restricting both asymptotic statements to a satisfiable density range such as 0<c<1/2, bind its commit and blob identities, run and retain reproducible mechanical checks, and perform a fresh semantic-fidelity review of those exact bytes.",
+  "unsupported_claims": [],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The exact-head build success does not establish semantic fidelity, mathematical truth, acceptance, merge suitability, or Standing.",
+    "Approval and merge of PR 4830 do not establish acceptance or Standing in this evaluation.",
+    "The advisory audit establishes the exhibited vacuity defect, not a replacement theorem or the truth of a corrected conjecture.",
+    "The retained observation of PR 4877 does not establish that its proposed correction was merged, mechanically verified, or semantically sufficient.",
+    "Skipped or unrelated checks are not established as successful."
+  ],
+  "confidence": "high"
+}

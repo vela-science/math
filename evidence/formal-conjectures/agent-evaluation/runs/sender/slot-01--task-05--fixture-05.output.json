@@ -1,0 +1,33 @@
+{
+  "schema": "vela.math.fc-audit.agent-sender-output.v0.1",
+  "fixture_id": "unavailable-rupert-3959",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a",
+  "verdict": "unavailable",
+  "issue_codes": [
+    "exact_artifact_identity_unavailable"
+  ],
+  "mechanical_status": "pass",
+  "source_fidelity": "pass",
+  "artifact_availability": "unavailable",
+  "community_status": "merged",
+  "evidence_locators": [
+    "FormalConjectures/Paper/Rupert.lean@868cc092aeb713dbf8027883c5fa575e550cfae9 (blob 48c343f0d12c1dffb7953a5d2426e0d13a914bad)",
+    "theorem Rupert.is_every_convex_polyhedron_rupert",
+    "formal_proof annotation: https://github.com/jcreedcmu/Noperthedron",
+    "github-pr-3959-check-observation.json: check run 75175625578",
+    "github-pr-3959.json: base 99ae49df4b27d9d95877c562ab9e1fd9b7ff1dc7, head 868cc092aeb713dbf8027883c5fa575e550cfae9"
+  ],
+  "witness": "The source asks whether every finite-vertex convex polyhedron with nonempty interior is Rupert and cites a constructed counterexample. The Lean theorem places answer(False) outside the universal statement and expresses precisely that universal claim using the same nonempty-interior boundary. The exact-head repository build check passed. However, the declared proof artifact is only a mutable repository-root URL, with no revision or proof-file locator, so its exact identity and reproduction cannot be resolved from the packet.",
+  "unsupported_claims": [
+    "The claim that the linked Noperthedron repository provides a complete formalization at an exact reproducible artifact identity."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The passing hosted build does not establish external proof-artifact identity, acceptance, or Vela Standing.",
+    "The approved review and merged pull request do not establish acceptance or Vela Standing.",
+    "This advisory verdict is not a Formal Conjectures maintainer action or Vela Decision."
+  ],
+  "next_obligation": "Provide an immutable Noperthedron revision and exact proof-file/theorem locator, then reproduce or scope that proof against the stated Rupert theorem.",
+  "confidence": "high"
+}

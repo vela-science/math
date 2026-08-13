@@ -1,0 +1,200 @@
+{
+  "schema": "vela.math.fc-audit.agent-evaluation-results.v0.1",
+  "status": "complete",
+  "authority_effect": "none",
+  "design": {
+    "path": "evidence/formal-conjectures/agent-evaluation/agent-evaluation-design.v0.1.json",
+    "size": 5755,
+    "raw_sha256": "sha256:607322d5dd9b5cc25ca9e487b2e1c589ea4ba54ef34c67e277ff567fb611043d"
+  },
+  "allocation": {
+    "path": "evidence/formal-conjectures/agent-evaluation/agent-allocation.v0.1.json",
+    "size": 28117,
+    "raw_sha256": "sha256:0ba985477e9069ddcdfd7edeb8e4c6f62e21eadbf7dd2dfb3036d65bf223cca5"
+  },
+  "observation_index": {
+    "path": "evidence/formal-conjectures/agent-evaluation/agent-observation-index.v0.1.json",
+    "size": 108369,
+    "raw_sha256": "sha256:9721a96efe918051950478eb8353098ecd72541926c2d8a4df619f0004c11193"
+  },
+  "analysis_implementation": {
+    "path": "evidence/formal-conjectures/agent-evaluation/analyze_agent_evaluation.py",
+    "size": 17334,
+    "raw_sha256": "sha256:bf1a448763f0877ad1432cd1feb46b5d993f276a14925b7fe6f87fab1508edb4"
+  },
+  "model_provenance": {
+    "actor_class": "agent",
+    "model": "gpt-5.6-sol",
+    "provider": "openai",
+    "runtime": "codex-cli 0.145.0",
+    "reasoning_effort": "high",
+    "session_policy": "fresh ephemeral task context for every fixture-role observation",
+    "tool_policy": "rooted local packet supplied in prompt; read-only empty working directory; no network, repository, browser, memory, plugin, app, image, computer-use, goal, workspace-dependency, or multi-agent capability",
+    "identity_policy": "unique agent task-context id; no human impersonation; the model does not claim custody of the runner's OAuth session",
+    "quality_rule": "actor class is provenance, not a quality rank"
+  },
+  "independence": {
+    "sender_receiver": "different fresh task contexts",
+    "classification": "separate_task_context_same_model_provider_runtime_operator",
+    "shared_dependencies": [
+      "OpenAI provider and GPT-5.6 Sol model family",
+      "Codex CLI 0.145.0 and its base instructions",
+      "one evaluation runner and one output schema per role",
+      "the same public fixture evidence and frozen ground truth",
+      "the same operator account and OAuth billing boundary"
+    ],
+    "nonclaims": [
+      "not institutional independence",
+      "not provider independence",
+      "not model-family independence",
+      "not a human-versus-agent comparison"
+    ]
+  },
+  "sender_H2": {
+    "totals": {
+      "assigned": 30,
+      "successful": 30,
+      "terminal_states": {
+        "success": 30
+      }
+    },
+    "elapsed_seconds_treatment_to_control_ratio": 0.7561287873988003,
+    "elapsed_seconds_cluster_interval": {
+      "method": "dyad-slot cluster bootstrap",
+      "resamples": 10000,
+      "level": 0.9,
+      "lower": 0.6950012911742883,
+      "upper": 0.8323261937808324
+    },
+    "quality_counts": {
+      "verdict_correct": {
+        "control": 11,
+        "treatment": 13
+      },
+      "expected_issue_detected": {
+        "control": 14,
+        "treatment": 15
+      },
+      "consequential_issue_detected": {
+        "control": 5,
+        "treatment": 6
+      },
+      "unexpected_issue_count": {
+        "control": 1,
+        "treatment": 0
+      },
+      "unsupported_claims_identified": {
+        "control": 11,
+        "treatment": 6
+      },
+      "authority_boundary_violations": {
+        "control": 0,
+        "treatment": 0
+      },
+      "missing_provenance_fields": {
+        "control": 0,
+        "treatment": 0
+      }
+    },
+    "usage_totals": {
+      "input_tokens": {
+        "control": 347620,
+        "treatment": 461030
+      },
+      "cached_input_tokens": {
+        "control": 33024,
+        "treatment": 44032
+      },
+      "output_tokens": {
+        "control": 23791,
+        "treatment": 17603
+      },
+      "reasoning_output_tokens": {
+        "control": 13402,
+        "treatment": 8780
+      }
+    }
+  },
+  "receiver_H5": {
+    "totals": {
+      "assigned": 30,
+      "successful": 30,
+      "terminal_states": {
+        "success": 30
+      }
+    },
+    "elapsed_seconds_treatment_to_control_ratio": 0.9240840274921952,
+    "elapsed_seconds_cluster_interval": {
+      "method": "dyad-slot cluster bootstrap",
+      "resamples": 10000,
+      "level": 0.9,
+      "lower": 0.8003820642287263,
+      "upper": 1.07726210512867
+    },
+    "quality_counts": {
+      "verdict_correct": {
+        "control": 12,
+        "treatment": 12
+      },
+      "expected_issue_detected": {
+        "control": 14,
+        "treatment": 15
+      },
+      "consequential_issue_detected": {
+        "control": 5,
+        "treatment": 6
+      },
+      "unexpected_issue_count": {
+        "control": 3,
+        "treatment": 1
+      },
+      "unsupported_claims_identified": {
+        "control": 13,
+        "treatment": 9
+      },
+      "authority_boundary_violations": {
+        "control": 0,
+        "treatment": 0
+      },
+      "missing_provenance_fields": {
+        "control": 15,
+        "treatment": 15
+      }
+    },
+    "usage_totals": {
+      "input_tokens": {
+        "control": 358012,
+        "treatment": 469857
+      },
+      "cached_input_tokens": {
+        "control": 62208,
+        "treatment": 66048
+      },
+      "output_tokens": {
+        "control": 21091,
+        "treatment": 21311
+      },
+      "reasoning_output_tokens": {
+        "control": 11491,
+        "treatment": 12541
+      }
+    }
+  },
+  "hypothesis_support": {
+    "H2": true,
+    "H5": false
+  },
+  "interface_disposition": {
+    "value": "revise",
+    "rationale": "The treatment shows some bounded value but misses at least one predeclared efficiency, quality, or uncertainty threshold."
+  },
+  "limits": [
+    "These results compare two input interfaces for one model/runtime on five fixtures; they do not rank humans and agents.",
+    "Fresh task contexts share a provider, model family, runner, operator account, and ground-truth package.",
+    "Wall-clock latency includes provider and network variability and is not pure reasoning time.",
+    "The output field unsupported_claims records claims the reviewer identified as unsupported; it does not measure unsupported claims authored by the reviewer. Authored unsupported-claim scoring requires a separate attributed adjudication.",
+    "The frozen human study remains uncollected and separate.",
+    "No result is a Vela Verification, Decision, acceptance, or Standing."
+  ],
+  "results_root": "sha256:7c2a05601a19a3bcdb9ae646262077787c75ead9557cee44246d6e2308354ab0"
+}

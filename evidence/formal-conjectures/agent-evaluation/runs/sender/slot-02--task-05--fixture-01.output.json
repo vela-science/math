@@ -1,0 +1,35 @@
+{
+  "schema": "vela.math.fc-audit.agent-sender-output.v0.1",
+  "fixture_id": "clean-source-faithful-min-modulus-4829",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa",
+  "verdict": "clean",
+  "issue_codes": [],
+  "mechanical_status": "pass",
+  "source_fidelity": "pass",
+  "artifact_availability": "exact",
+  "community_status": "merged",
+  "evidence_locators": [
+    "FormalConjectures/Arxiv/2607.08366/MinModulus.lean@0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c#MinModulus.min_modulus",
+    "FormalConjectures/Arxiv/2607.08366/MinModulus.lean@0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c#MinModulus.exists_isValidMod_minModulus",
+    "https://github.com/jarfo/min-modulus/blob/e7c78dd63955092b5f8d8a5fa826476337c0f4be/MinModulus/UniqueSums.lean#L837-L838",
+    "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208430/job/93244176232",
+    "https://github.com/google-deepmind/formal-conjectures/pull/4829#issuecomment-5227429390",
+    "https://github.com/google-deepmind/formal-conjectures/pull/4829#pullrequestreview-4910223499",
+    "base:5fe1f74ad497d950e4c2094879ab10708907f7c6",
+    "head:0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+    "sha256:7a6318a1874a297e7003f20cf005f46285a6e92ab49571d95996fdbccd3a197f"
+  ],
+  "witness": "At the exact head, `min_modulus` places the answer slot outside an equivalence with the complete proposition: for every n≥2 and positive N below `2^n - 2^(Nat.log 2 n)`, every n-element subset of ZMod N is not valid. This matches the stated Conjecture 1. The `0 < N` guard excludes the documented ZMod 0 counterexample, while `2 ≤ n` excludes the trivial subsingleton boundary without making the conjecture vacuous. The exact-head build check succeeded, and the retained source-author review explicitly judged this declaration faithful.",
+  "unsupported_claims": [],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "mathematical truth of Conjecture 1",
+    "acceptance or Standing",
+    "Vela Verification or Vela Decision",
+    "source fidelity of declarations outside the reviewed `min_modulus` statement",
+    "proof correctness beyond the scoped mechanical build and pinned artifact identity"
+  ],
+  "next_obligation": null,
+  "confidence": "high"
+}

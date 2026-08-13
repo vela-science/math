@@ -1,0 +1,31 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "unavailable-rupert-3959",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a",
+  "sender_output_sha256": "sha256:e67f9c1d55ec61816592391ab018276406715393358286a93d331b390cf7aa2a",
+  "retained_verdict": "unavailable",
+  "retained_issue_codes": [
+    "exact_artifact_identity_unavailable"
+  ],
+  "layered_summary": "Mechanical status: the retained GitHub observation reports that Build project check 75175625578 passed for exact head 868cc092aeb713dbf8027883c5fa575e550cfae9; this is a scoped hosted attestation, not a local reproduction and not validation of the external proof. Source fidelity: the exact Lean statement faithfully encodes a negative answer by placing answer(False) opposite the universal Rupert claim while retaining the finite-vertex convex-hull and nonempty-interior boundary. Artifact availability: unavailable—the formal_proof annotation and PR body provide only the mutable Noperthedron repository root, while the checked-in theorem body is sorry; no immutable artifact revision or exact proof declaration is identified. Community status: PR 3959 is merged, and an approval is observed only at earlier commit 30c63898f32c0c7d05a6830504195d7f896451f0, not the retained head. Authority: none; none of these observations establishes acceptance or Standing.",
+  "reproduction_terminal_state": "unavailable",
+  "missing_provenance_fields": [
+    "Immutable Noperthedron revision or content identity",
+    "Exact Noperthedron proof-file path",
+    "Exact proof theorem/declaration locator corresponding to Rupert.is_every_convex_polyhedron_rupert",
+    "Content digest for the declared external proof artifact"
+  ],
+  "next_obligation": "Provide an immutable Noperthedron revision and exact proof-file/theorem locator, bind its bytes to a digest, then reproduce or scope that proof against the exact Rupert theorem statement at head 868cc092aeb713dbf8027883c5fa575e550cfae9.",
+  "unsupported_claims": [
+    "That the mutable Noperthedron repository-root link identifies a complete formalization at an exact, reproducible artifact identity corresponding to the stated Rupert theorem."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The hosted passing build establishes neither the identity nor correctness of the external proof artifact.",
+    "The source-fidelity finding establishes statement correspondence, not proof acceptance or Vela Standing.",
+    "The approval, merge, and Git commit identities do not establish acceptance or Vela Standing.",
+    "This receiver verdict is not a Formal Conjectures maintainer action or Vela Decision."
+  ],
+  "confidence": "high"
+}

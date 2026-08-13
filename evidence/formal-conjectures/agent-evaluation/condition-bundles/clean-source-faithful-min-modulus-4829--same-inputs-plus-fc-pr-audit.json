@@ -1,0 +1,927 @@
+{
+  "schema": "vela.math.fc-audit.agent-condition-bundle.v0.1",
+  "authority_effect": "none",
+  "fixture_id": "clean-source-faithful-min-modulus-4829",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa",
+  "condition_packet": {
+    "schema": "vela.math.fc-audit.condition-packet.v0.1",
+    "packet_id": "clean-source-faithful-min-modulus-4829::same-inputs-plus-fc-pr-audit",
+    "condition": "same-inputs-plus-fc-pr-audit",
+    "authority_effect": "none",
+    "fixture_id": "clean-source-faithful-min-modulus-4829",
+    "task_wording": [
+      {
+        "id": "locate-evidence",
+        "prompt": "Locate the exact changed statement, every declared proof artifact, each check result, and the base and head identities. Record missing or ambiguous fields.",
+        "stop_condition": "The participant either records all requested locators or states that a requested item is unavailable."
+      },
+      {
+        "id": "classify-checks",
+        "prompt": "Separate mechanical checks, semantic-fidelity findings, artifact availability, and external community status. Preserve conditions and does-not-establish limits.",
+        "stop_condition": "Every observed result is assigned to one layer without inferring acceptance from pass."
+      },
+      {
+        "id": "review-fidelity",
+        "prompt": "Compare the exact Lean statement with its source and report a witness-backed verdict or an explicit inconclusive result.",
+        "stop_condition": "The participant records CLEAN, ACCEPT WITH NITS, NEEDS REVISION, or an explicit unresolved question, with the source locator and witness rules from the review guide."
+      },
+      {
+        "id": "reproduce-artifact",
+        "prompt": "Follow the retained commands or artifact locator far enough to reproduce or scope the claimed mechanical result. Record unavailable tools or bytes separately from failures.",
+        "stop_condition": "The artifact is reproduced, a retained attestation is scoped, or the attempt ends with fail, error, inconclusive, or unavailable and an exact reason."
+      },
+      {
+        "id": "handoff-continuation",
+        "prompt": "A receiver distinct from the sender continues from the rooted retained condition packet and explains the result, limits, and next unresolved obligation without private operator context.",
+        "stop_condition": "The linked receiver continuation observation gives a correct layer-separated account or identifies the missing provenance that prevents continuation."
+      }
+    ],
+    "pull_request": {
+      "repository": "google-deepmind/formal-conjectures",
+      "number": 4829,
+      "url": "https://github.com/google-deepmind/formal-conjectures/pull/4829",
+      "base_commit": "5fe1f74ad497d950e4c2094879ab10708907f7c6",
+      "head_commit": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+      "changed_paths": [
+        "FormalConjectures/Arxiv/2607.08366/MinModulus.lean"
+      ],
+      "files_observation": {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-files-observation.json",
+        "sha256": "3ffa087bdf5891eb77ce9ce48fc1ee48ec2d6d33de9645640f5c32d0471b0488"
+      }
+    },
+    "source_repository_url": "https://github.com/google-deepmind/formal-conjectures.git",
+    "source_setup_commands": [
+      [
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/google-deepmind/formal-conjectures.git",
+        "$SOURCE_CHECKOUT"
+      ],
+      [
+        "git",
+        "-C",
+        "$SOURCE_CHECKOUT",
+        "checkout",
+        "--detach",
+        "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c"
+      ]
+    ],
+    "public_source_command": [
+      "git",
+      "-C",
+      "$SOURCE_CHECKOUT",
+      "show",
+      "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c:FormalConjectures/Arxiv/2607.08366/MinModulus.lean"
+    ],
+    "shared_evidence": [
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-check-observation.json",
+        "raw_sha256": "sha256:aa0a67a3a5a342586efdda4b1215eeefabc782d4eee1da5b8d8e3bad9f85d5dd",
+        "size": 2189
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-files-observation.json",
+        "raw_sha256": "sha256:3ffa087bdf5891eb77ce9ce48fc1ee48ec2d6d33de9645640f5c32d0471b0488",
+        "size": 1342
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-reviews.json",
+        "raw_sha256": "sha256:c7e5b6bef186f4a635b63f3425a52da219354fe9aa54632748c9399599251600",
+        "size": 1027
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829.json",
+        "raw_sha256": "sha256:7a6ab239791ac3c2b65be27666858feaa88bd31918d65417a1c05dca628caba2",
+        "size": 1018
+      }
+    ],
+    "access_limits": "Public source and the files named by this packet only. Do not use private operator context or outcome labels from another condition.",
+    "treatment_evidence": [
+      {
+        "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/clean-source-faithful-min-modulus-4829/expected-core.json",
+        "raw_sha256": "sha256:feaf8dd36c7bc4361c67af09bea9af7f20051ee2f933d4234ffda5715be91f52",
+        "size": 13206
+      },
+      {
+        "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/clean-source-faithful-min-modulus-4829/expected-observation.json",
+        "raw_sha256": "sha256:51e8597d930a90ae23f4379dd7ca67d23b173fe36f8b7874b2eb436aeb968c28",
+        "size": 5153
+      }
+    ],
+    "does_not_establish": [
+      "The packet label does not reveal the expected fixture outcome to the participant.",
+      "A review answer is not a Formal Conjectures maintainer action or Vela Decision."
+    ],
+    "packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa"
+  },
+  "public_source": {
+    "fixture_id": "clean-source-faithful-min-modulus-4829",
+    "repository": "google-deepmind/formal-conjectures",
+    "commit": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+    "source_path": "FormalConjectures/Arxiv/2607.08366/MinModulus.lean",
+    "git_blob_sha1": "4c68a8c3788f805e29588bfefdac1fec079e9193",
+    "source_url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c/FormalConjectures/Arxiv/2607.08366/MinModulus.lean",
+    "local_path": "evidence/formal-conjectures/agent-evaluation/public-source/clean-source-faithful-min-modulus-4829/MinModulus.lean",
+    "size": 3982,
+    "raw_sha256": "sha256:abb822a6dd603f95a9c9d773c199399222539c9cd91c8a124a3cc5429d9da416",
+    "content_utf8": "/-\nCopyright 2026 The Formal Conjectures Authors.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n-/\n\nimport FormalConjecturesUtil\n\n/-!\n# Minimum modulus for the unique multiset-sum problem\n\n*References:*\n- [arxiv/2607.08366](https://arxiv.org/abs/2607.08366)\n  **Minimum modulus for the unique multiset-sum problem**\n  by *José A. R. Fonollosa*\n- [jarfo/min-modulus](https://github.com/jarfo/min-modulus), the author's Lean development of\n  the paper's Main Theorem. Section 7 of the paper describes it.\n\nThe paper's Main Theorem fixes the super-increasing set $\\{2^k - 1\\}$ and pins the least modulus\nat which *it* is valid. Conjecture 1 says no other set of $n$ residues does better, and is open.\n-/\n\nopen Finset\n\nnamespace Arxiv.«2607.08366»\n\nvariable {N : ℕ}\n\n/-- `A` is *valid mod* `N` when the all-ones multiset is the only multiset of size `#A` drawn\nfrom `A` whose sum matches `∑ a ∈ A, a`.\n\n`m a` is how many copies of `a` the multiset uses, so the all-ones multiset is `m = 1`. -/\ndef IsValidMod (A : Finset (ZMod N)) : Prop :=\n  ∀ m : ZMod N → ℕ, ∑ a ∈ A, m a = #A → ∑ a ∈ A, (m a : ZMod N) * a = ∑ a ∈ A, a →\n    ∀ a ∈ A, m a = 1\n\n/-- The least modulus admitting a valid set of `n` residues, conjecturally\n$2^n - 2^{\\lfloor\\log_2 n\\rfloor}$. -/\ndef minModulus (n : ℕ) : ℕ := 2 ^ n - 2 ^ (Nat.log 2 n)\n\n/--\n**Conjecture 1 (Fonollosa, 2026).** For every $n \\geq 2$ and every\n$N < 2^n - 2^{\\lfloor \\log_2 n\\rfloor}$, no set of $n$ residues mod $N$ is valid.\n\nEquivalently the super-increasing set $\\{2^k - 1 : 0 \\leq k \\leq n-1\\}$ attains the least\nvalid modulus, which is `minModulus n`.\n\n`0 < N` excludes `N = 0`, where `ZMod 0` is `ℤ` rather than a finite modulus and `{1, 2}` is\nvalid, which would make the statement false for a reason unrelated to the question.\n-/\n@[category research open, AMS 11]\ntheorem min_modulus :\n    answer(sorry) ↔ ∀ n N : ℕ, 2 ≤ n → 0 < N → N < minModulus n →\n      ∀ A : Finset (ZMod N), #A = n → ¬ IsValidMod A := by\n  sorry\n\n/--\n**Theorem A (Fonollosa, 2026).** `minModulus n` admits a valid set of `n` residues, the\nsuper-increasing set $\\{2^k - 1 : 0 \\leq k \\leq n - 1\\}$. This bounds the least valid modulus\nfrom above; that no smaller modulus works is the open half, stated in `min_modulus`.\n-/\n@[category research solved, AMS 11,\n  formal_proof using lean4 at\n    \"https://github.com/jarfo/min-modulus/blob/e7c78dd63955092b5f8d8a5fa826476337c0f4be/MinModulus/UniqueSums.lean#L837-L838\"]\ntheorem exists_isValidMod_minModulus (n : ℕ) (hn : 2 ≤ n) :\n    ∃ A : Finset (ZMod (minModulus n)), #A = n ∧ IsValidMod A := by\n  sorry\n\n/-- The all-ones multiset always has the right size and the right sum, so `IsValidMod` is a\nuniqueness statement rather than an existence one. -/\n@[category API, AMS 11]\ntheorem one_sum_eq (A : Finset (ZMod N)) :\n    ∑ _a ∈ A, (1 : ℕ) = #A ∧ ∑ a ∈ A, ((1 : ℕ) : ZMod N) * a = ∑ a ∈ A, a :=\n  ⟨by simp, by simp⟩\n\n/-- A set with fewer than two elements is valid for a silly reason, so the conjecture asks\nabout `2 ≤ n`: with `#A ≤ 1` the only multiset of size `#A` drawn from `A` is the all-ones one. -/\n@[category API, AMS 11]\ntheorem isValidMod_of_subsingleton {A : Finset (ZMod N)} (hA : #A ≤ 1) : IsValidMod A := by\n  intro m hsize _ a ha\n  rcases Finset.card_le_one.mp hA with h\n  have : A = {a} := Finset.eq_singleton_iff_unique_mem.mpr ⟨ha, fun b hb => h b hb a ha⟩\n  subst this\n  simpa using hsize\n\nend Arxiv.«2607.08366»\n"
+  },
+  "shared_evidence": [
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-check-observation.json",
+      "raw_sha256": "sha256:aa0a67a3a5a342586efdda4b1215eeefabc782d4eee1da5b8d8e3bad9f85d5dd",
+      "size": 2189,
+      "content": {
+        "schema": "vela.math.fc-audit.github-check-observation.v0.1",
+        "authority_effect": "none",
+        "repository": "google-deepmind/formal-conjectures",
+        "pull_request_number": 4829,
+        "head_commit": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+        "observed_at": "2026-08-13T12:05:03Z",
+        "normalization": {
+          "description": "Selected primary GitHub REST API fields retained as normalized evidence and sorted by numeric record id. These bytes are not a canonical GitHub response.",
+          "api_version": "2022-11-28",
+          "media_type": "application/vnd.github+json"
+        },
+        "sources": {
+          "check_runs": {
+            "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c/check-runs?per_page=100",
+            "total_count": 12,
+            "records": [
+              {
+                "app": {
+                  "id": 15368,
+                  "name": "GitHub Actions",
+                  "owner_login": "github",
+                  "slug": "github-actions"
+                },
+                "completed_at": "2026-08-09T13:01:41Z",
+                "conclusion": "success",
+                "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208430/job/93244176232",
+                "external_id": "4950a055-0c3d-595a-868b-22e3b0403861",
+                "head_sha": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+                "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208430/job/93244176232",
+                "id": 93244176232,
+                "name": "Build project",
+                "started_at": "2026-08-09T12:24:34Z",
+                "status": "completed"
+              }
+            ]
+          },
+          "commit_statuses": {
+            "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c/status",
+            "combined_state": "pending",
+            "total_count": 0,
+            "records": []
+          }
+        },
+        "mechanical_claim": {
+          "scope": "exact_head_repository_build_check",
+          "result": "pass",
+          "evidence_check_run_ids": [
+            93244176232
+          ],
+          "does_not_establish": [
+            "source-statement fidelity",
+            "mathematical truth",
+            "community acceptance",
+            "Vela Verification, Decision, or Standing"
+          ]
+        }
+      }
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-files-observation.json",
+      "raw_sha256": "sha256:3ffa087bdf5891eb77ce9ce48fc1ee48ec2d6d33de9645640f5c32d0471b0488",
+      "size": 1342,
+      "content": {
+        "schema": "vela.math.fc-audit.github-files-observation.v0.1",
+        "authority_effect": "none",
+        "repository": "google-deepmind/formal-conjectures",
+        "pull_request_number": 4829,
+        "expected_head_commit": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+        "observed_at": "2026-08-13T12:05:03Z",
+        "normalization": {
+          "description": "Selected primary GitHub REST API fields retained in response order. These bytes are not a canonical GitHub response.",
+          "api_version": "2022-11-28",
+          "media_type": "application/vnd.github+json"
+        },
+        "source": {
+          "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4829/files?per_page=100",
+          "complete": true,
+          "page_count": 1
+        },
+        "files": [
+          {
+            "filename": "FormalConjectures/Arxiv/2607.08366/MinModulus.lean",
+            "status": "added",
+            "sha": "4c68a8c3788f805e29588bfefdac1fec079e9193",
+            "contents_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/contents/FormalConjectures%2FArxiv%2F2607.08366%2FMinModulus.lean?ref=0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c"
+          }
+        ],
+        "limitations": [
+          "GitHub pull-request file state is mutable community observation state and is not fixture identity by itself.",
+          "Patch text is omitted; the record retains the exact Git blob SHA and commit-qualified contents URL."
+        ]
+      }
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-reviews.json",
+      "raw_sha256": "sha256:c7e5b6bef186f4a635b63f3425a52da219354fe9aa54632748c9399599251600",
+      "size": 1027,
+      "content": {
+        "schema": "vela.math.fc-audit.github-reviews-observation.v0.1",
+        "authority_effect": "none",
+        "repository": "google-deepmind/formal-conjectures",
+        "pull_request_number": 4829,
+        "observed_at": "2026-08-13T12:05:03Z",
+        "source": {
+          "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4829/reviews?per_page=100",
+          "api_version": "2022-11-28"
+        },
+        "reviews": [
+          {
+            "id": 4910223499,
+            "state": "APPROVED",
+            "body": "Thanks, LGTM!",
+            "commit_id": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+            "submitted_at": "2026-08-11T19:58:39Z",
+            "author_association": "COLLABORATOR",
+            "user": {
+              "login": "mo271",
+              "id": 3491627,
+              "html_url": "https://github.com/mo271"
+            },
+            "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/4829#pullrequestreview-4910223499"
+          }
+        ],
+        "limitations": [
+          "Approval is a community observation, not source-fidelity ground truth by itself and not a Vela Decision."
+        ]
+      }
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829.json",
+      "raw_sha256": "sha256:7a6ab239791ac3c2b65be27666858feaa88bd31918d65417a1c05dca628caba2",
+      "size": 1018,
+      "content": {
+        "schema": "vela.math.fc-audit.github-pull-request-observation.v0.1",
+        "authority_effect": "none",
+        "number": 4829,
+        "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/4829",
+        "state": "closed",
+        "merged": true,
+        "merged_at": "2026-08-11T21:39:26Z",
+        "created_at": "2026-08-07T17:31:42Z",
+        "updated_at": "2026-08-11T21:39:27Z",
+        "base": {
+          "sha": "5fe1f74ad497d950e4c2094879ab10708907f7c6"
+        },
+        "head": {
+          "sha": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c"
+        },
+        "changed_files": 1,
+        "additions": 96,
+        "deletions": 0,
+        "observed_at": "2026-08-13T12:05:03Z",
+        "source": {
+          "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4829",
+          "api_version": "2022-11-28",
+          "media_type": "application/vnd.github+json"
+        },
+        "limitations": [
+          "This is a normalized selection of public GitHub REST fields, not the raw response bytes or a GitHub signature.",
+          "Merge state is a community observation and has no Vela authority effect."
+        ]
+      }
+    }
+  ],
+  "treatment_evidence": [
+    {
+      "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/clean-source-faithful-min-modulus-4829/expected-core.json",
+      "raw_sha256": "sha256:feaf8dd36c7bc4361c67af09bea9af7f20051ee2f933d4234ffda5715be91f52",
+      "size": 13206,
+      "content": {
+        "checks": [
+          {
+            "assumptions": [],
+            "conditions": [],
+            "does_not_establish": [
+              "lean_build",
+              "mathematical_truth",
+              "merge_decision",
+              "source_fidelity"
+            ],
+            "evidence": [
+              {
+                "kind": "git-blob-identity",
+                "locator": "FormalConjectures/Arxiv/2607.08366/MinModulus.lean@0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+                "sha256": "sha256:abb822a6dd603f95a9c9d773c199399222539c9cd91c8a124a3cc5429d9da416",
+                "statement": "The retained final path has an exact Git blob OID and SHA-256 content root.",
+                "witness": ""
+              }
+            ],
+            "id": "snapshot-identity",
+            "implementation": {
+              "kind": "retained_procedure",
+              "locator": "scripts/pr_audit.py",
+              "name": "pr-audit-snapshot-validator",
+              "root": "sha256:2c41ae2bd4fed8f9748ebf8c57630673ca2eb7ea3c690525ea292641590c3098",
+              "version": "1"
+            },
+            "inputs": [
+              {
+                "artifact_id": "head-source",
+                "id": "head-lean-blob",
+                "kind": "git-blob",
+                "locator": "FormalConjectures/Arxiv/2607.08366/MinModulus.lean@0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+                "root": "sha256:abb822a6dd603f95a9c9d773c199399222539c9cd91c8a124a3cc5429d9da416"
+              },
+              {
+                "artifact_id": "method-pr-audit",
+                "id": "method",
+                "kind": "python-source",
+                "locator": "scripts/pr_audit.py",
+                "root": "sha256:2c41ae2bd4fed8f9748ebf8c57630673ca2eb7ea3c690525ea292641590c3098"
+              },
+              {
+                "artifact_id": "repository-authority",
+                "id": "repository-authority",
+                "kind": "normalized-repository-result",
+                "locator": "PullRequestAuditCoreSnapshot.result",
+                "root": "sha256:30cfc527ae9870c4a41de8146cdf576042b40c599290c2352802d32dd23ace5f"
+              },
+              {
+                "artifact_id": "repository-query",
+                "id": "repository-query",
+                "kind": "graphql-query",
+                "locator": "PullRequestAuditCoreSnapshot",
+                "root": "sha256:ea66d6fc53eaee9f08ab7cb5312f06e5353c647c0e4db9ad97827eafc293319e"
+              },
+              {
+                "artifact_id": "repository-request",
+                "id": "repository-request",
+                "kind": "request-identity",
+                "locator": "PullRequestAuditCoreSnapshot.request",
+                "root": "sha256:76c8e842b50e00bbe4c5741ee33c28906399065066c4d63c87816d305cd84641"
+              },
+              {
+                "artifact_id": "typed-result-snapshot-identity",
+                "id": "typed-result",
+                "kind": "typed-result",
+                "locator": "typed-result/deterministic_adapter/formal_conjectures_pr_audit",
+                "root": "sha256:ec1f6abbd36e0704e865935769ed765ff2829b6487ce0be11d3c9921371fdbd7"
+              }
+            ],
+            "kind": "mechanical",
+            "limitations": [
+              "Exact byte identity is separate from the human source-fidelity judgment."
+            ],
+            "mode": "retained_replay",
+            "outcome": "pass",
+            "proofs": [],
+            "property": "immutable-input-identity",
+            "role": "producer",
+            "scope": {
+              "declarations": [
+                "MinModulus.min_modulus"
+              ],
+              "paths": [
+                "FormalConjectures/Arxiv/2607.08366/MinModulus.lean"
+              ],
+              "revision": "head"
+            },
+            "severity": "none"
+          },
+          {
+            "assumptions": [],
+            "conditions": [],
+            "does_not_establish": [
+              "lean_build",
+              "mathematical_truth",
+              "merge_decision",
+              "proof_correctness"
+            ],
+            "evidence": [
+              {
+                "kind": "source-author-review",
+                "locator": "https://github.com/google-deepmind/formal-conjectures/pull/4829#issuecomment-5227429390",
+                "sha256": "sha256:8e9107794109066b556f6d40bcd706a4c84d45cab7e6c3baa83e18b90364dffd",
+                "statement": "The paper author explicitly found the open theorem statement faithful to Conjecture 1 and supplied the zero-modulus witness for its guard.",
+                "witness": "The reviewed theorem block is unchanged through the applied revision and exact final head; the final head has a retained maintainer approval."
+              }
+            ],
+            "id": "source-statement-fidelity",
+            "implementation": {
+              "kind": "human_review_guide",
+              "locator": "human-source-fidelity-method.json",
+              "name": "retained-source-fidelity-chain",
+              "root": "sha256:5160a68f4c1bf6cf20c1c0baf0b36040601a4b624ea62f3878d1f4e579416794",
+              "version": "1"
+            },
+            "inputs": [
+              {
+                "artifact_id": "applied-source",
+                "id": "applied-lean-blob",
+                "kind": "git-blob",
+                "locator": "FormalConjectures/Arxiv/2607.08366/MinModulus.lean@225c54f1deb0a9e6043465a5c768295740895ccf",
+                "root": "sha256:abb822a6dd603f95a9c9d773c199399222539c9cd91c8a124a3cc5429d9da416"
+              },
+              {
+                "artifact_id": "applied-review-response-body",
+                "id": "applied-review-response-body",
+                "kind": "human-review-body",
+                "locator": "https://github.com/google-deepmind/formal-conjectures/pull/4829#issuecomment-5228066477",
+                "root": "sha256:025fc83a538261701889168daf8c007779989549159534194ab46311ee1d3efa"
+              },
+              {
+                "artifact_id": "exact-head-approval-body",
+                "id": "exact-head-approval-body",
+                "kind": "human-review-body",
+                "locator": "https://github.com/google-deepmind/formal-conjectures/pull/4829#pullrequestreview-4910223499",
+                "root": "sha256:50fb366fc1eab571e74fc0543f52f4326fa50a91c16d77f81505d5d958eed4cc"
+              },
+              {
+                "artifact_id": "head-source",
+                "id": "head-lean-blob",
+                "kind": "git-blob",
+                "locator": "FormalConjectures/Arxiv/2607.08366/MinModulus.lean@0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+                "root": "sha256:abb822a6dd603f95a9c9d773c199399222539c9cd91c8a124a3cc5429d9da416"
+              },
+              {
+                "artifact_id": "human-source-fidelity-review",
+                "id": "human-review",
+                "kind": "human-review-observation",
+                "locator": "https://github.com/google-deepmind/formal-conjectures/pull/4829#issuecomment-5227429390",
+                "root": "sha256:8e9107794109066b556f6d40bcd706a4c84d45cab7e6c3baa83e18b90364dffd"
+              },
+              {
+                "artifact_id": "human-source-fidelity-method",
+                "id": "method",
+                "kind": "human-review-guide",
+                "locator": "human-source-fidelity-method.json",
+                "root": "sha256:5160a68f4c1bf6cf20c1c0baf0b36040601a4b624ea62f3878d1f4e579416794"
+              },
+              {
+                "artifact_id": "repository-authority",
+                "id": "repository-authority",
+                "kind": "normalized-repository-result",
+                "locator": "PullRequestAuditCoreSnapshot.result",
+                "root": "sha256:30cfc527ae9870c4a41de8146cdf576042b40c599290c2352802d32dd23ace5f"
+              },
+              {
+                "artifact_id": "repository-query",
+                "id": "repository-query",
+                "kind": "graphql-query",
+                "locator": "PullRequestAuditCoreSnapshot",
+                "root": "sha256:ea66d6fc53eaee9f08ab7cb5312f06e5353c647c0e4db9ad97827eafc293319e"
+              },
+              {
+                "artifact_id": "repository-request",
+                "id": "repository-request",
+                "kind": "request-identity",
+                "locator": "PullRequestAuditCoreSnapshot.request",
+                "root": "sha256:76c8e842b50e00bbe4c5741ee33c28906399065066c4d63c87816d305cd84641"
+              },
+              {
+                "artifact_id": "review-context-source",
+                "id": "review-context-lean-blob",
+                "kind": "git-blob",
+                "locator": "FormalConjectures/Arxiv/2607.08366/MinModulus.lean@61fd97db4c6533c007d6e7857b2eb94fcdf90463",
+                "root": "sha256:da888073c89c610e99a039a133198369bc8e3b5fcbc8a0a61209184be2c387f3"
+              },
+              {
+                "artifact_id": "source-author-review-body",
+                "id": "source-author-review-body",
+                "kind": "human-review-body",
+                "locator": "https://github.com/google-deepmind/formal-conjectures/pull/4829#issuecomment-5227429390",
+                "root": "sha256:647c6cbf06860be8f7de3dc6274de8059f5d5184aa28bf38f3fe39c78b931b35"
+              },
+              {
+                "artifact_id": "typed-result-source-statement-fidelity",
+                "id": "typed-result",
+                "kind": "typed-result",
+                "locator": "typed-result/human_reviewer/jarfo",
+                "root": "sha256:209a543a22d9e8f89c25568e6ae3dcce93efd0cc425a3228e22435490d5e9d12"
+              }
+            ],
+            "kind": "semantic",
+            "limitations": [
+              "The source-author comment is a public GitHub observation, not a cryptographic signature; the packet binds its exact identity and text to retained source revisions.",
+              "This check covers the open min_modulus declaration only, not every declaration or the truth of Conjecture 1."
+            ],
+            "mode": "human_review",
+            "outcome": "pass",
+            "proofs": [],
+            "property": "source-statement-fidelity",
+            "role": "independent",
+            "scope": {
+              "declarations": [
+                "MinModulus.min_modulus"
+              ],
+              "paths": [
+                "FormalConjectures/Arxiv/2607.08366/MinModulus.lean"
+              ],
+              "revision": "head"
+            },
+            "severity": "none"
+          }
+        ],
+        "disposition": {
+          "advisory": "clean",
+          "basis_check_ids": [
+            "source-statement-fidelity"
+          ],
+          "nonclaims": [
+            "not_a_claim_of_mathematical_truth",
+            "not_a_claim_that_unlisted_checks_ran",
+            "not_an_acceptance_or_merge_decision",
+            "not_source_fidelity_beyond_the_listed_checks"
+          ]
+        },
+        "generator": {
+          "canonicalization": "fc-jcs-ijson-integer-v1",
+          "name": "formal-conjectures-pr-audit",
+          "noncapabilities": [
+            "git",
+            "github",
+            "lean",
+            "model",
+            "network",
+            "subprocess"
+          ],
+          "schema_version": "formal-conjectures.pr-audit-generator.v1",
+          "source": {
+            "baseline": {
+              "commit_oid": "c9052e8577118ed0ada54462bd4ef1f3beff37d6",
+              "tree_oid": "864ee77ee26a7cbd85b30558f8d9d2036f8717ed"
+            },
+            "kind": "git_baseline_with_content_addressed_overlay",
+            "overlay": {
+              "files": [
+                {
+                  "path": "audit/pr-audit-v1/schemas/formal-conjectures.pr-audit-observation.v1.schema.json",
+                  "sha256": "sha256:5e7ae0ea2d00c5e224a38865b3866b11357a071e71bdc58cfb0d16d6a2a74e7d"
+                },
+                {
+                  "path": "audit/pr-audit-v1/schemas/formal-conjectures.pr-audit.v1.schema.json",
+                  "sha256": "sha256:b581b8970673fe90b749a54a0b2df9f0ea5d6221f90f49f67f2f03602b2efc45"
+                },
+                {
+                  "path": "scripts/generate_pr_audit.py",
+                  "sha256": "sha256:ebe7961418cd37b0816db4bf72628962f36f88cb1fd4d4f9cb4c102d5b0ae070"
+                },
+                {
+                  "path": "scripts/pr_audit.py",
+                  "sha256": "sha256:2c41ae2bd4fed8f9748ebf8c57630673ca2eb7ea3c690525ea292641590c3098"
+                }
+              ],
+              "root": "sha256:8e6b99252c0bebe8b3c221a9d37a1b9b3139a383ac16371ea11ab851fb8d6f96"
+            },
+            "repository": "https://github.com/google-deepmind/formal-conjectures"
+          },
+          "version": "1.0.0"
+        },
+        "inputs": {
+          "artifact_root": "sha256:dbe38ab6410de7896d2caea755500e19f05e26c4924ef4d1c5d554875916da05",
+          "artifacts": [
+            {
+              "id": "applied-review-response-body",
+              "media_type": "text/plain",
+              "path": "inputs/applied-review-response.txt",
+              "role": "tool_output",
+              "sha256": "sha256:025fc83a538261701889168daf8c007779989549159534194ab46311ee1d3efa"
+            },
+            {
+              "id": "applied-source",
+              "media_type": "text/x-lean",
+              "path": "inputs/applied-source.lean",
+              "role": "source_file",
+              "sha256": "sha256:abb822a6dd603f95a9c9d773c199399222539c9cd91c8a124a3cc5429d9da416"
+            },
+            {
+              "id": "checks",
+              "media_type": "application/json",
+              "path": "inputs/checks.json",
+              "role": "check_results",
+              "sha256": "sha256:27a74ce364cdddee44d20bd2d80fdc796304926f7aa7d7cd05da5c1d05c52192"
+            },
+            {
+              "id": "exact-head-approval-body",
+              "media_type": "text/plain",
+              "path": "inputs/exact-head-approval.txt",
+              "role": "tool_output",
+              "sha256": "sha256:50fb366fc1eab571e74fc0543f52f4326fa50a91c16d77f81505d5d958eed4cc"
+            },
+            {
+              "id": "generator",
+              "media_type": "application/json",
+              "path": "inputs/generator.json",
+              "role": "generator_identity",
+              "sha256": "sha256:36ef37235a58c296ccf7b2fa90d09e5cb3977947c34be2b1f6dcb0361f080b6d"
+            },
+            {
+              "id": "head-source",
+              "media_type": "text/x-lean",
+              "path": "inputs/head-source.lean",
+              "role": "source_file",
+              "sha256": "sha256:abb822a6dd603f95a9c9d773c199399222539c9cd91c8a124a3cc5429d9da416"
+            },
+            {
+              "id": "human-source-fidelity-method",
+              "media_type": "application/json",
+              "path": "inputs/human-source-fidelity-method.json",
+              "role": "method",
+              "sha256": "sha256:5160a68f4c1bf6cf20c1c0baf0b36040601a4b624ea62f3878d1f4e579416794"
+            },
+            {
+              "id": "human-source-fidelity-review",
+              "media_type": "application/json",
+              "path": "inputs/human-source-fidelity-review.json",
+              "role": "tool_output",
+              "sha256": "sha256:8e9107794109066b556f6d40bcd706a4c84d45cab7e6c3baa83e18b90364dffd"
+            },
+            {
+              "id": "method-pr-audit",
+              "media_type": "text/plain",
+              "path": "inputs/method-pr-audit.py",
+              "role": "method",
+              "sha256": "sha256:2c41ae2bd4fed8f9748ebf8c57630673ca2eb7ea3c690525ea292641590c3098"
+            },
+            {
+              "id": "repository",
+              "media_type": "application/json",
+              "path": "inputs/repository.json",
+              "role": "repository_snapshot",
+              "sha256": "sha256:73008ba85a9e610435ee12509dd2a6f3fe0672863bc9d14685affaf63abd5ee2"
+            },
+            {
+              "id": "repository-authority",
+              "media_type": "application/json",
+              "path": "inputs/github-core-snapshot-result.json",
+              "role": "tool_output",
+              "sha256": "sha256:30cfc527ae9870c4a41de8146cdf576042b40c599290c2352802d32dd23ace5f"
+            },
+            {
+              "id": "repository-query",
+              "media_type": "text/plain",
+              "path": "inputs/github-core-snapshot-query.graphql",
+              "role": "query",
+              "sha256": "sha256:ea66d6fc53eaee9f08ab7cb5312f06e5353c647c0e4db9ad97827eafc293319e"
+            },
+            {
+              "id": "repository-request",
+              "media_type": "application/json",
+              "path": "inputs/github-core-request-identity.json",
+              "role": "configuration",
+              "sha256": "sha256:76c8e842b50e00bbe4c5741ee33c28906399065066c4d63c87816d305cd84641"
+            },
+            {
+              "id": "review-context-source",
+              "media_type": "text/x-lean",
+              "path": "inputs/review-context-source.lean",
+              "role": "source_file",
+              "sha256": "sha256:da888073c89c610e99a039a133198369bc8e3b5fcbc8a0a61209184be2c387f3"
+            },
+            {
+              "id": "source-author-review-body",
+              "media_type": "text/plain",
+              "path": "inputs/source-author-review.txt",
+              "role": "tool_output",
+              "sha256": "sha256:647c6cbf06860be8f7de3dc6274de8059f5d5184aa28bf38f3fe39c78b931b35"
+            },
+            {
+              "id": "typed-result-snapshot-identity",
+              "media_type": "application/json",
+              "path": "inputs/typed-result-snapshot-identity.json",
+              "role": "typed_result",
+              "sha256": "sha256:ec1f6abbd36e0704e865935769ed765ff2829b6487ce0be11d3c9921371fdbd7"
+            },
+            {
+              "id": "typed-result-source-statement-fidelity",
+              "media_type": "application/json",
+              "path": "inputs/typed-result-source-statement-fidelity.json",
+              "role": "typed_result",
+              "sha256": "sha256:209a543a22d9e8f89c25568e6ae3dcce93efd0cc425a3228e22435490d5e9d12"
+            }
+          ],
+          "generator_artifact_id": "generator",
+          "manifest_sha256": "sha256:61fab3397a2e24f463be6e463632d1d8d1fa92c77ec4c74fb96e6878977dee40",
+          "repository_artifact_id": "repository"
+        },
+        "repository": {
+          "base": {
+            "commit_oid": "5fe1f74ad497d950e4c2094879ab10708907f7c6",
+            "tree_oid": "ab398d8cf338f90ca240c93b4a8a6d2583a93315"
+          },
+          "changes": [
+            {
+              "base_blob_oid": null,
+              "base_blob_sha256": null,
+              "head_blob_oid": "4c68a8c3788f805e29588bfefdac1fec079e9193",
+              "head_blob_sha256": "sha256:abb822a6dd603f95a9c9d773c199399222539c9cd91c8a124a3cc5429d9da416",
+              "path": "FormalConjectures/Arxiv/2607.08366/MinModulus.lean",
+              "status": "added"
+            }
+          ],
+          "comparison": {
+            "complete": true,
+            "kind": "github_pull_request_file_snapshot"
+          },
+          "head": {
+            "commit_oid": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+            "tree_oid": "8fab282d6af58b35db7d82ef02d53167dce0fe60"
+          },
+          "pull_request": {
+            "number": 4829,
+            "url": "https://github.com/google-deepmind/formal-conjectures/pull/4829"
+          },
+          "repository": {
+            "host": "github.com",
+            "name": "formal-conjectures",
+            "owner": "google-deepmind",
+            "url": "https://github.com/google-deepmind/formal-conjectures"
+          }
+        },
+        "root": "sha256:7a6318a1874a297e7003f20cf005f46285a6e92ab49571d95996fdbccd3a197f",
+        "schema_version": "formal-conjectures.pr-audit.v1"
+      }
+    },
+    {
+      "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/clean-source-faithful-min-modulus-4829/expected-observation.json",
+      "raw_sha256": "sha256:51e8597d930a90ae23f4379dd7ca67d23b173fe36f8b7874b2eb436aeb968c28",
+      "size": 5153,
+      "content": {
+        "core": {
+          "root": "sha256:7a6318a1874a297e7003f20cf005f46285a6e92ab49571d95996fdbccd3a197f",
+          "sha256": "sha256:feaf8dd36c7bc4361c67af09bea9af7f20051ee2f933d4234ffda5715be91f52"
+        },
+        "generator": {
+          "canonicalization": "fc-jcs-ijson-integer-v1",
+          "name": "formal-conjectures-pr-audit",
+          "noncapabilities": [
+            "git",
+            "github",
+            "lean",
+            "model",
+            "network",
+            "subprocess"
+          ],
+          "schema_version": "formal-conjectures.pr-audit-generator.v1",
+          "source": {
+            "baseline": {
+              "commit_oid": "c9052e8577118ed0ada54462bd4ef1f3beff37d6",
+              "tree_oid": "864ee77ee26a7cbd85b30558f8d9d2036f8717ed"
+            },
+            "kind": "git_baseline_with_content_addressed_overlay",
+            "overlay": {
+              "files": [
+                {
+                  "path": "audit/pr-audit-v1/schemas/formal-conjectures.pr-audit-observation.v1.schema.json",
+                  "sha256": "sha256:5e7ae0ea2d00c5e224a38865b3866b11357a071e71bdc58cfb0d16d6a2a74e7d"
+                },
+                {
+                  "path": "audit/pr-audit-v1/schemas/formal-conjectures.pr-audit.v1.schema.json",
+                  "sha256": "sha256:b581b8970673fe90b749a54a0b2df9f0ea5d6221f90f49f67f2f03602b2efc45"
+                },
+                {
+                  "path": "scripts/generate_pr_audit.py",
+                  "sha256": "sha256:ebe7961418cd37b0816db4bf72628962f36f88cb1fd4d4f9cb4c102d5b0ae070"
+                },
+                {
+                  "path": "scripts/pr_audit.py",
+                  "sha256": "sha256:2c41ae2bd4fed8f9748ebf8c57630673ca2eb7ea3c690525ea292641590c3098"
+                }
+              ],
+              "root": "sha256:8e6b99252c0bebe8b3c221a9d37a1b9b3139a383ac16371ea11ab851fb8d6f96"
+            },
+            "repository": "https://github.com/google-deepmind/formal-conjectures"
+          },
+          "version": "1.0.0"
+        },
+        "inputs": {
+          "artifact_root": "sha256:d519460d1f94ca0ff290697c81695966c04ea379599c4197ca35f65605515a5e",
+          "artifacts": [
+            {
+              "id": "generator",
+              "media_type": "application/json",
+              "path": "inputs/generator.json",
+              "role": "generator_identity",
+              "sha256": "sha256:36ef37235a58c296ccf7b2fa90d09e5cb3977947c34be2b1f6dcb0361f080b6d"
+            },
+            {
+              "id": "github-observation",
+              "media_type": "application/vnd.github+json",
+              "path": "inputs/github-graphql-response.json",
+              "role": "authoritative_observation",
+              "sha256": "sha256:e83e79788f478c61e0d1d3359a31cd503d8a762e2c4a844b4f05984c036adcc6"
+            },
+            {
+              "id": "github-query",
+              "media_type": "text/plain",
+              "path": "inputs/github-graphql-query.graphql",
+              "role": "query",
+              "sha256": "sha256:a503785e3ae47f873c60e26767d662f2583d60103cf43305db05ef0f5c5a4328"
+            },
+            {
+              "id": "github-receipt",
+              "media_type": "application/json",
+              "path": "inputs/github-acquisition-receipt.json",
+              "role": "acquisition_receipt",
+              "sha256": "sha256:c9cafc1eacae08929778e4659e9bd6475fef1d91d2cf74cda922ffa74fb19186"
+            },
+            {
+              "id": "provenance-core-acquisition-receipt",
+              "media_type": "application/json",
+              "path": "inputs/github-core-acquisition-receipt.json",
+              "role": "provenance_event",
+              "sha256": "sha256:c5855fe2570e2268bbc82fa7f838a7c5ee5ec2976ce0406ae9c9d2f72d5b8326"
+            },
+            {
+              "id": "provenance-core-snapshot-response",
+              "media_type": "application/vnd.github+json",
+              "path": "inputs/github-core-snapshot-response.json",
+              "role": "provenance_event",
+              "sha256": "sha256:a670d08805c175dfd6f419fa00b72eb3946660817da35320f90580c9e40276a2"
+            }
+          ],
+          "generator_artifact_id": "generator",
+          "manifest_sha256": "sha256:e37b7a634153ed6ecb29c0be8fe5b7e94ede013f18241cae35fdbbfce1f77830",
+          "observation_artifact_id": "github-observation",
+          "provenance_artifact_ids": [
+            "provenance-core-acquisition-receipt",
+            "provenance-core-snapshot-response"
+          ],
+          "query_artifact_id": "github-query",
+          "receipt_artifact_id": "github-receipt"
+        },
+        "observed_at": "2026-08-13T11:50:00Z",
+        "pull_request": {
+          "base_commit_oid": "5fe1f74ad497d950e4c2094879ab10708907f7c6",
+          "head_commit_oid": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+          "is_draft": false,
+          "merge_state_status": "UNKNOWN",
+          "number": 4829,
+          "review_decision": "APPROVED",
+          "reviews": [
+            {
+              "author": "mo271",
+              "commit_oid": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+              "id": "PRR_kwDOOogmB88AAAABJKwQiw",
+              "state": "APPROVED",
+              "submitted_at": "2026-08-11T19:58:39Z"
+            }
+          ],
+          "state": "MERGED",
+          "updated_at": "2026-08-11T21:39:27Z",
+          "url": "https://github.com/google-deepmind/formal-conjectures/pull/4829"
+        },
+        "root": "sha256:4e1cb38e1937b8dc9010f219ff28b80aa8ebf2d7c9ffa94ffa2a8b46686c2892",
+        "schema_version": "formal-conjectures.pr-audit-observation.v1",
+        "source": {
+          "acquired_at": "2026-08-13T11:50:00Z",
+          "artifact_id": "github-observation",
+          "authority": "github_graphql",
+          "endpoint": "https://api.github.com/graphql",
+          "http_status": 200,
+          "limitations": [
+            "The receipt records public GitHub response headers and bytes; it is not a cryptographic GitHub signature."
+          ],
+          "operation_name": "PullRequestAuditObservation",
+          "query_sha256": "sha256:a503785e3ae47f873c60e26767d662f2583d60103cf43305db05ef0f5c5a4328",
+          "receipt": {
+            "acquired_at": "2026-08-13T11:50:00Z",
+            "endpoint": "https://api.github.com/graphql",
+            "http_status": 200,
+            "limitations": [
+              "The receipt records public GitHub response headers and bytes; it is not a cryptographic GitHub signature."
+            ],
+            "operation_name": "PullRequestAuditObservation",
+            "query_sha256": "sha256:a503785e3ae47f873c60e26767d662f2583d60103cf43305db05ef0f5c5a4328",
+            "request_id": "not-retained",
+            "response_sha256": "sha256:e83e79788f478c61e0d1d3359a31cd503d8a762e2c4a844b4f05984c036adcc6",
+            "schema_version": "formal-conjectures.pr-audit-acquisition-receipt.v1",
+            "transport": "https",
+            "variables": {
+              "name": "formal-conjectures",
+              "number": 4829,
+              "owner": "google-deepmind"
+            }
+          },
+          "receipt_sha256": "sha256:c9cafc1eacae08929778e4659e9bd6475fef1d91d2cf74cda922ffa74fb19186",
+          "request_id": "not-retained",
+          "sha256": "sha256:e83e79788f478c61e0d1d3359a31cd503d8a762e2c4a844b4f05984c036adcc6"
+        }
+      }
+    }
+  ],
+  "access_limits": [
+    "Use only this bundle.",
+    "Do not use network, repository, browser, memory, or private operator context.",
+    "Do not infer acceptance or Standing from a review, check, merge, or audit disposition."
+  ],
+  "bundle_root": "sha256:19337169bf062787f9a41a8bc3f2528d7fa7a52d69c8e66a03a6db482b0d4676"
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "vela.math.fc-audit.agent-public-source-manifest.v0.1",
+  "authority_effect": "none",
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "repository": "google-deepmind/formal-conjectures",
+      "commit": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+      "source_path": "FormalConjectures/Arxiv/2607.08366/MinModulus.lean",
+      "git_blob_sha1": "4c68a8c3788f805e29588bfefdac1fec079e9193",
+      "source_url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c/FormalConjectures/Arxiv/2607.08366/MinModulus.lean",
+      "local_path": "evidence/formal-conjectures/agent-evaluation/public-source/clean-source-faithful-min-modulus-4829/MinModulus.lean",
+      "size": 3982,
+      "raw_sha256": "sha256:abb822a6dd603f95a9c9d773c199399222539c9cd91c8a124a3cc5429d9da416"
+    },
+    {
+      "fixture_id": "conditional-erdos-427-4884",
+      "repository": "google-deepmind/formal-conjectures",
+      "commit": "601aff40d6fa6c3150242144fadba5dbcc24c89c",
+      "source_path": "FormalConjectures/ErdosProblems/427.lean",
+      "git_blob_sha1": "99d781c323fc09d49f688a5bd23722ea2011fd24",
+      "source_url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/601aff40d6fa6c3150242144fadba5dbcc24c89c/FormalConjectures/ErdosProblems/427.lean",
+      "local_path": "evidence/formal-conjectures/agent-evaluation/public-source/conditional-erdos-427-4884/427.lean",
+      "size": 3144,
+      "raw_sha256": "sha256:be54dc1ed87c382e3ec3895f2568278e5c4fec186671b363ec8edd917ac60d71"
+    },
+    {
+      "fixture_id": "fidelity-erdos-887-1237",
+      "repository": "google-deepmind/formal-conjectures",
+      "commit": "288608562e684a2f3c97ba0ce960a2649a71370b",
+      "source_path": "FormalConjectures/ErdosProblems/887.lean",
+      "git_blob_sha1": "6feb58b9272ce638aba6da5ca7ee8ebf7785e0b8",
+      "source_url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/288608562e684a2f3c97ba0ce960a2649a71370b/FormalConjectures/ErdosProblems/887.lean",
+      "local_path": "evidence/formal-conjectures/agent-evaluation/public-source/fidelity-erdos-887-1237/887.lean",
+      "size": 2307,
+      "raw_sha256": "sha256:3e4c9376ebfa464985a2da4ac3b8401b1b54d64be1075368032eced0700706c5"
+    },
+    {
+      "fixture_id": "unavailable-rupert-3959",
+      "repository": "google-deepmind/formal-conjectures",
+      "commit": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+      "source_path": "FormalConjectures/Paper/Rupert.lean",
+      "git_blob_sha1": "48c343f0d12c1dffb7953a5d2426e0d13a914bad",
+      "source_url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/868cc092aeb713dbf8027883c5fa575e550cfae9/FormalConjectures/Paper/Rupert.lean",
+      "local_path": "evidence/formal-conjectures/agent-evaluation/public-source/unavailable-rupert-3959/Rupert.lean",
+      "size": 4750,
+      "raw_sha256": "sha256:49bec542e7c93319ca4a1c4a2b0b3a18bf72baaf7621416a30685e311a6ef7cf"
+    },
+    {
+      "fixture_id": "vacuity-erdos-80-4830",
+      "repository": "google-deepmind/formal-conjectures",
+      "commit": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+      "source_path": "FormalConjectures/ErdosProblems/80.lean",
+      "git_blob_sha1": "9dd6a9933931fcfbeea61eac777d4155dacb9eb1",
+      "source_url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/e2e2a6064b474781d3b5b4a32e3d77956d6968da/FormalConjectures/ErdosProblems/80.lean",
+      "local_path": "evidence/formal-conjectures/agent-evaluation/public-source/vacuity-erdos-80-4830/80.lean",
+      "size": 4176,
+      "raw_sha256": "sha256:519cc02b3389c89bc87c16d548c6b028e6bb2c1c3bad410a1758f470de18de4e"
+    }
+  ],
+  "nonclaims": [
+    "The retained bytes do not establish source fidelity or correctness.",
+    "Public availability does not create Verification, Decision, or Standing."
+  ],
+  "manifest_root": "sha256:ea9163d7250e9666a56a89bec3e0f3cac2f9e5be29712f9caa7e376c20d840c0"
+}

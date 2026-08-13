@@ -1,0 +1,36 @@
+{
+  "schema": "vela.math.fc-audit.agent-task-observation.v0.1",
+  "observation_id": "agent-eval-handoff-s02-05::receiver",
+  "role": "receiver",
+  "authority_effect": "none",
+  "task_context_id": "agent:codex-eval-receiver-s02-unavailable-rupert-3959",
+  "slot": 2,
+  "task_order": 4,
+  "fixture_id": "unavailable-rupert-3959",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+  "handoff_id": "agent-eval-handoff-s02-05",
+  "runner": null,
+  "independence_classification": "not_evaluated_sender_failed",
+  "bundle": {
+    "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/unavailable-rupert-3959--same-inputs-plus-fc-pr-audit.json",
+    "raw_sha256": "sha256:be74f9c3cc03d87336d04ade80e8c7650f63799e7303b815bff6729e3deb7fee",
+    "size": 60891,
+    "bundle_root": "sha256:0fab1d6ea3c5a305aa65e07673bc37ca88a21625038790a7dd78b0c394f39bc5"
+  },
+  "started_at": "2026-08-13T21:00:20.822Z",
+  "completed_at": "2026-08-13T21:00:20.822Z",
+  "elapsed_seconds": null,
+  "terminal_state": "blocked_sender_failure",
+  "return_code": null,
+  "usage": null,
+  "output": null,
+  "event_log": null,
+  "stderr_log": null,
+  "parse_error": "sender terminal state: error",
+  "does_not_establish": [
+    "No receiver task ran, so missing duration and outcome are not zero.",
+    "This record has no authority or Standing effect."
+  ],
+  "observation_root": "sha256:cc071f65e77c48dcfc3886c0889e86b8476085f2846baab1f41bfd77f5d7cde2"
+}

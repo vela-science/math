@@ -1,0 +1,35 @@
+{
+  "schema": "vela.math.fc-audit.agent-sender-output.v0.1",
+  "fixture_id": "unavailable-rupert-3959",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a",
+  "verdict": "unavailable",
+  "issue_codes": [
+    "exact_artifact_identity_unavailable"
+  ],
+  "mechanical_status": "pass",
+  "source_fidelity": "pass",
+  "artifact_availability": "unavailable",
+  "community_status": "merged",
+  "evidence_locators": [
+    "FormalConjectures/Paper/Rupert.lean@868cc092aeb713dbf8027883c5fa575e550cfae9#theorem is_every_convex_polyhedron_rupert",
+    "git-blob:48c343f0d12c1dffb7953a5d2426e0d13a914bad",
+    "github-pr-3959-check-observation.json#check-run-75175625578",
+    "github-pr-3959.json#base.sha",
+    "github-pr-3959.json#head.sha",
+    "github-pr-3959.json#body_relevant_claims",
+    "https://github.com/jcreedcmu/Noperthedron"
+  ],
+  "witness": "At head 868cc092aeb713dbf8027883c5fa575e550cfae9, the changed theorem states `answer(False) ↔ ∀ vertices, interior(convexHull ℝ vertices).Nonempty → IsRupert vertices`, matching the cited resolution by a counterexample. The exact-head repository build check 75175625578 succeeded. However, the declared Lean proof artifact is only the mutable repository-root URL https://github.com/jcreedcmu/Noperthedron, with no revision or proof-file locator, so its exact external identity and correspondence to this statement cannot be resolved from the bundle.",
+  "unsupported_claims": [
+    "The claim that the mutable Noperthedron repository root supplies a complete formalization corresponding to this exact theorem is not supported by an immutable revision and proof-file identity."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The passing hosted build establishes neither external proof-artifact identity nor local reproduction.",
+    "The source-fidelity assessment does not establish acceptance or Standing.",
+    "The approval and merge are community observations, not a Formal Conjectures maintainer action or Vela Decision."
+  ],
+  "next_obligation": "Provide an immutable Noperthedron commit and exact proof-file/theorem locator, then verify that artifact against the Rupert statement and reproduce its claimed Lean result.",
+  "confidence": "high"
+}

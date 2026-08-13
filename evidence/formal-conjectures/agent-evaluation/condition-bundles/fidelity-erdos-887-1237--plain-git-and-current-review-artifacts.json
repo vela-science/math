@@ -1,0 +1,294 @@
+{
+  "schema": "vela.math.fc-audit.agent-condition-bundle.v0.1",
+  "authority_effect": "none",
+  "fixture_id": "fidelity-erdos-887-1237",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:702406f0ae0aaa12a8c31f64aecd19809253af52dc1ac615ec5fca723242dc88",
+  "condition_packet": {
+    "schema": "vela.math.fc-audit.condition-packet.v0.1",
+    "packet_id": "fidelity-erdos-887-1237::plain-git-and-current-review-artifacts",
+    "condition": "plain-git-and-current-review-artifacts",
+    "authority_effect": "none",
+    "fixture_id": "fidelity-erdos-887-1237",
+    "task_wording": [
+      {
+        "id": "locate-evidence",
+        "prompt": "Locate the exact changed statement, every declared proof artifact, each check result, and the base and head identities. Record missing or ambiguous fields.",
+        "stop_condition": "The participant either records all requested locators or states that a requested item is unavailable."
+      },
+      {
+        "id": "classify-checks",
+        "prompt": "Separate mechanical checks, semantic-fidelity findings, artifact availability, and external community status. Preserve conditions and does-not-establish limits.",
+        "stop_condition": "Every observed result is assigned to one layer without inferring acceptance from pass."
+      },
+      {
+        "id": "review-fidelity",
+        "prompt": "Compare the exact Lean statement with its source and report a witness-backed verdict or an explicit inconclusive result.",
+        "stop_condition": "The participant records CLEAN, ACCEPT WITH NITS, NEEDS REVISION, or an explicit unresolved question, with the source locator and witness rules from the review guide."
+      },
+      {
+        "id": "reproduce-artifact",
+        "prompt": "Follow the retained commands or artifact locator far enough to reproduce or scope the claimed mechanical result. Record unavailable tools or bytes separately from failures.",
+        "stop_condition": "The artifact is reproduced, a retained attestation is scoped, or the attempt ends with fail, error, inconclusive, or unavailable and an exact reason."
+      },
+      {
+        "id": "handoff-continuation",
+        "prompt": "A receiver distinct from the sender continues from the rooted retained condition packet and explains the result, limits, and next unresolved obligation without private operator context.",
+        "stop_condition": "The linked receiver continuation observation gives a correct layer-separated account or identifies the missing provenance that prevents continuation."
+      }
+    ],
+    "pull_request": {
+      "repository": "google-deepmind/formal-conjectures",
+      "number": 1237,
+      "url": "https://github.com/google-deepmind/formal-conjectures/pull/1237",
+      "base_commit": "a91ab6df34970fdd0fd8c919e693b2ba81fa4fbb",
+      "head_commit": "288608562e684a2f3c97ba0ce960a2649a71370b",
+      "changed_paths": [
+        "FormalConjectures/ErdosProblems/887.lean"
+      ],
+      "files_observation": {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-files-observation.json",
+        "sha256": "d02997a3d60b5020b8a1228bef9a25eb27cc2b44c8e6a436b5c108aceee8c3b1"
+      }
+    },
+    "source_repository_url": "https://github.com/google-deepmind/formal-conjectures.git",
+    "source_setup_commands": [
+      [
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/google-deepmind/formal-conjectures.git",
+        "$SOURCE_CHECKOUT"
+      ],
+      [
+        "git",
+        "-C",
+        "$SOURCE_CHECKOUT",
+        "checkout",
+        "--detach",
+        "288608562e684a2f3c97ba0ce960a2649a71370b"
+      ]
+    ],
+    "public_source_command": [
+      "git",
+      "-C",
+      "$SOURCE_CHECKOUT",
+      "show",
+      "288608562e684a2f3c97ba0ce960a2649a71370b:FormalConjectures/ErdosProblems/887.lean"
+    ],
+    "shared_evidence": [
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-check-observation.json",
+        "raw_sha256": "sha256:10dd0c302437d5783ec93b83b5837e7a683260f5219c7e160ca71fdec38c0966",
+        "size": 2168
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-files-observation.json",
+        "raw_sha256": "sha256:d02997a3d60b5020b8a1228bef9a25eb27cc2b44c8e6a436b5c108aceee8c3b1",
+        "size": 2067
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-reviews.json",
+        "raw_sha256": "sha256:f2f999ea90ef76eb9609c0bb065994069d05c07308dfd331896b7a415fb40b35",
+        "size": 1072
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237.json",
+        "raw_sha256": "sha256:12c713796f946b383945890e613d3a4cf29d32fa1914260d3afaa26622d789a0",
+        "size": 1015
+      }
+    ],
+    "access_limits": "Public source and the files named by this packet only. Do not use private operator context or outcome labels from another condition.",
+    "treatment_evidence": [],
+    "does_not_establish": [
+      "The packet label does not reveal the expected fixture outcome to the participant.",
+      "A review answer is not a Formal Conjectures maintainer action or Vela Decision."
+    ],
+    "packet_root": "sha256:702406f0ae0aaa12a8c31f64aecd19809253af52dc1ac615ec5fca723242dc88"
+  },
+  "public_source": {
+    "fixture_id": "fidelity-erdos-887-1237",
+    "repository": "google-deepmind/formal-conjectures",
+    "commit": "288608562e684a2f3c97ba0ce960a2649a71370b",
+    "source_path": "FormalConjectures/ErdosProblems/887.lean",
+    "git_blob_sha1": "6feb58b9272ce638aba6da5ca7ee8ebf7785e0b8",
+    "source_url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/288608562e684a2f3c97ba0ce960a2649a71370b/FormalConjectures/ErdosProblems/887.lean",
+    "local_path": "evidence/formal-conjectures/agent-evaluation/public-source/fidelity-erdos-887-1237/887.lean",
+    "size": 2307,
+    "raw_sha256": "sha256:3e4c9376ebfa464985a2da4ac3b8401b1b54d64be1075368032eced0700706c5",
+    "content_utf8": "/-\nCopyright 2025 The Formal Conjectures Authors.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n-/\n\nimport FormalConjectures.Util.ProblemImports\n\nopen Filter Finset Real\n\n/-!\n# Erdős Problem 887\n\n*Reference:* [erdosproblems.com/887](https://www.erdosproblems.com/887)\n-/\n\n\nnamespace Erdos887\n\n/--\nIs there an absolute constant $K$ such that, for every $C > 0$, if $n$ is sufficiently large then\n$n$ has at most $K$ divisors in $(n^{\\frac{1}{2}}, n^{\\frac{1}{2}} + C n^{\\frac{1}{4}})$.\n-/\n@[category research open, AMS 11]\ntheorem erdos_887 : ∀ C > (0 : ℝ), ∀ᶠ n in atTop,\n    #{ d ∈ Ioo ⌊√n⌋ ⌈√n + C * n^((1 : ℝ) / 4)⌉ | d ∣ n } ≤ answer(sorry) := by\n  sorry\n\n/--\nIs there an absolute constant $K$ such that, for every $C > 0$, if $n$ is sufficiently large then\n$n$ has at most $K$ divisors in $(n^{\\frac{1}{2}}, n^{\\frac{1}{2}} + C n^{\\frac{1}{4}})$.\n-/\n@[category research open, AMS 11]\ntheorem erdos_887.variant_i : ∃ K, ∀ C > (0 : ℝ), ∀ᶠ n in atTop,\n    #{ d ∈ Ioo ⌊√n⌋ ⌈√n  + C * n^((1 : ℝ) / 4)⌉ | d ∣ n } ≤ K := by\n  sorry\n\n/--\nA question of Erdős and Rosenfeld, who proved that there are infinitely many $n$ with $4$ divisors\nin $(n^{\\frac{1}{2}}, n^{\\frac{1}{2}} + n^{\\frac{1}{4}})$.\n-/\n@[category research solved, AMS 11]\ntheorem erdos_887.variant_ii :\n    Infinite {n : ℤ | (#{ d ∈ Ioo ⌊√n⌋ ⌈√n + n^((1 : ℝ) / 4)⌉ | d ∣ n } = 4)} := by\n  sorry\n\n/--\nErdős and Rosenfeld, ask whether $4$ is the best possible $K$ for the infinitude of $n$\nwith $K$ divisors in $(n^{\\frac{1}{2}}, n^{\\frac{1}{2}} + n^{\\frac{1}{4}})$.\n-/\n@[category research open, AMS 11]\ntheorem erdos_887.variant_iii :\n    IsGreatest\n      {K | Infinite {n : ℤ | (#{ d ∈ Ioo ⌊√n⌋ ⌈√n + n^((1 : ℝ) / 4)⌉ | d ∣ n } = K)}} 4 := by\n  sorry\n\n\nend Erdos887\n"
+  },
+  "shared_evidence": [
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-check-observation.json",
+      "raw_sha256": "sha256:10dd0c302437d5783ec93b83b5837e7a683260f5219c7e160ca71fdec38c0966",
+      "size": 2168,
+      "content": {
+        "schema": "vela.math.fc-audit.github-check-observation.v0.1",
+        "authority_effect": "none",
+        "repository": "google-deepmind/formal-conjectures",
+        "pull_request_number": 1237,
+        "head_commit": "288608562e684a2f3c97ba0ce960a2649a71370b",
+        "observed_at": "2026-08-12T19:57:18Z",
+        "normalization": {
+          "description": "Selected primary GitHub REST API fields retained as normalized evidence and sorted by numeric record id. These bytes are not a canonical GitHub response.",
+          "api_version": "2022-11-28",
+          "media_type": "application/vnd.github+json"
+        },
+        "sources": {
+          "check_runs": {
+            "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/288608562e684a2f3c97ba0ce960a2649a71370b/check-runs?per_page=100",
+            "api_total_count": 6,
+            "retained_record_count": 1,
+            "selection_rule": "Retain the named Build project run used by the mechanical claim; other check runs are outside that claim.",
+            "records": [
+              {
+                "app": {
+                  "id": 15368,
+                  "name": "GitHub Actions",
+                  "owner_login": "github",
+                  "slug": "github-actions"
+                },
+                "completed_at": "2026-01-13T20:55:59Z",
+                "conclusion": "success",
+                "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/20965023898/job/60275340706",
+                "external_id": "5c5dfe71-124d-57e1-968a-b500110a50e0",
+                "head_sha": "288608562e684a2f3c97ba0ce960a2649a71370b",
+                "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/20965023898/job/60275340706",
+                "id": 60275340706,
+                "name": "Build project",
+                "started_at": "2026-01-13T20:23:48Z",
+                "status": "completed"
+              }
+            ]
+          }
+        },
+        "mechanical_claim": {
+          "property": "repository_build_check",
+          "scope": "exact_head_repository_build_check",
+          "result": "pass",
+          "evidence_check_run_ids": [
+            60275340706
+          ]
+        },
+        "limitations": [
+          "This is an observation of a GitHub-hosted check, not a local reproduction.",
+          "A passing build does not establish statement fidelity or Vela Standing."
+        ]
+      }
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-files-observation.json",
+      "raw_sha256": "sha256:d02997a3d60b5020b8a1228bef9a25eb27cc2b44c8e6a436b5c108aceee8c3b1",
+      "size": 2067,
+      "content": {
+        "schema": "vela.math.fc-audit.github-pr-files-observation.v0.1",
+        "authority_effect": "none",
+        "repository": "google-deepmind/formal-conjectures",
+        "pull_request_number": 1237,
+        "expected_head_commit": "288608562e684a2f3c97ba0ce960a2649a71370b",
+        "observed_at": "2026-08-12T19:55:48Z",
+        "acquisition_method": {
+          "api": "GitHub REST API",
+          "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/1237/files?per_page=100",
+          "api_version": "2022-11-28",
+          "media_type": "application/vnd.github+json",
+          "command_shape": "gh api --paginate ... /repos/{owner}/{repo}/pulls/{number}/files?per_page=100"
+        },
+        "normalization": {
+          "description": "Selected primary GitHub REST API fields retained as normalized evidence and sorted by filename. These bytes are not a canonical GitHub response.",
+          "pagination": "all pages requested with per_page=100"
+        },
+        "files": [
+          {
+            "additions": 68,
+            "blob_url": "https://github.com/google-deepmind/formal-conjectures/blob/288608562e684a2f3c97ba0ce960a2649a71370b/FormalConjectures%2FErdosProblems%2F887.lean",
+            "changes": 68,
+            "contents_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/contents/FormalConjectures%2FErdosProblems%2F887.lean?ref=288608562e684a2f3c97ba0ce960a2649a71370b",
+            "deletions": 0,
+            "filename": "FormalConjectures/ErdosProblems/887.lean",
+            "previous_filename": null,
+            "raw_url": "https://github.com/google-deepmind/formal-conjectures/raw/288608562e684a2f3c97ba0ce960a2649a71370b/FormalConjectures%2FErdosProblems%2F887.lean",
+            "sha": "6feb58b9272ce638aba6da5ca7ee8ebf7785e0b8",
+            "status": "added"
+          }
+        ],
+        "limitations": [
+          "GitHub's pull-request files response is mutable community observation state and is not fixture identity by itself.",
+          "The separately retained pull-request snapshot binds the exact base and head commits.",
+          "Patch text is intentionally omitted; the file record retains its exact Git blob SHA and immutable commit-qualified contents URL."
+        ]
+      }
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-reviews.json",
+      "raw_sha256": "sha256:f2f999ea90ef76eb9609c0bb065994069d05c07308dfd331896b7a415fb40b35",
+      "size": 1072,
+      "content": {
+        "schema": "vela.math.fc-audit.github-reviews-observation.v0.1",
+        "authority_effect": "none",
+        "repository": "google-deepmind/formal-conjectures",
+        "pull_request_number": 1237,
+        "observed_at": "2026-08-12T19:55:48Z",
+        "acquisition_method": {
+          "api": "GitHub REST API",
+          "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/1237/reviews",
+          "api_version": "2022-11-28",
+          "media_type": "application/vnd.github+json"
+        },
+        "normalization": "Selected primary GitHub REST API fields retained as normalized evidence and sorted by review id. These bytes are not a canonical GitHub response.",
+        "reviews": [
+          {
+            "id": 3656943019,
+            "state": "APPROVED",
+            "commit_id": "288608562e684a2f3c97ba0ce960a2649a71370b",
+            "submitted_at": "2026-01-13T17:14:06Z"
+          }
+        ],
+        "limitations": [
+          "Earlier non-final review observations are omitted because only the exact-head approval is used by this packet.",
+          "Approval is external community state and does not establish semantic fidelity or Vela Standing."
+        ]
+      }
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237.json",
+      "raw_sha256": "sha256:12c713796f946b383945890e613d3a4cf29d32fa1914260d3afaa26622d789a0",
+      "size": 1015,
+      "content": {
+        "schema": "vela.math.fc-audit.github-pr-observation.v0.1",
+        "authority_effect": "none",
+        "repository": "google-deepmind/formal-conjectures",
+        "observed_at": "2026-08-12T19:55:48Z",
+        "acquisition_method": {
+          "api": "GitHub REST API",
+          "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/1237",
+          "api_version": "2022-11-28",
+          "media_type": "application/vnd.github+json"
+        },
+        "normalization": "Selected primary GitHub REST API fields retained as normalized evidence. These bytes are not a canonical GitHub response.",
+        "number": 1237,
+        "title": "feat(ErdosProblems): 887",
+        "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/1237",
+        "state": "closed",
+        "merged": true,
+        "merged_at": "2026-01-13T20:56:01Z",
+        "merge_commit_sha": "21eefec13ae34f35a2fa30069e023a916a32e9d2",
+        "base": {
+          "sha": "a91ab6df34970fdd0fd8c919e693b2ba81fa4fbb"
+        },
+        "head": {
+          "sha": "288608562e684a2f3c97ba0ce960a2649a71370b"
+        },
+        "changed_files": 1
+      }
+    }
+  ],
+  "treatment_evidence": [],
+  "access_limits": [
+    "Use only this bundle.",
+    "Do not use network, repository, browser, memory, or private operator context.",
+    "Do not infer acceptance or Standing from a review, check, merge, or audit disposition."
+  ],
+  "bundle_root": "sha256:ac6bfde82ed7d0b554df09742c001679e0b9b39db7ce84ff501d038891a5ea37"
+}

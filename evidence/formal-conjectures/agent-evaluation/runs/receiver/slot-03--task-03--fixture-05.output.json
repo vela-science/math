@@ -1,0 +1,31 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "unavailable-rupert-3959",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a",
+  "sender_output_sha256": "sha256:279bb86a8a93a8648af66ed4e85b3df2f080fb4d4b7ec1eb501007c35f2c5b88",
+  "retained_verdict": "unavailable",
+  "retained_issue_codes": [
+    "exact_artifact_identity_unavailable"
+  ],
+  "layered_summary": "Mechanical status: the retained GitHub check observation records Build project check-run 75175625578 succeeding at exact head 868cc092aeb713dbf8027883c5fa575e550cfae9; this is a hosted attestation, not a local reproduction. Source fidelity: the exact theorem states `answer(False) ↔ ∀ vertices, interior(convexHull ℝ vertices).Nonempty → IsRupert vertices`, consistent with the cited counterexample resolution, but correspondence to the declared external formalization cannot be verified. Artifact availability: unavailable because the declaration supplies only the mutable Noperthedron repository root, without an immutable revision or exact proof-file/theorem locator. Community status: PR 3959 was approved and merged, recorded only as mutable community observation. Authority: none; no acceptance, Standing, Formal Conjectures maintainer action, or Vela Decision follows.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [
+    "immutable Noperthedron commit identity",
+    "exact external proof-file path",
+    "exact external theorem or declaration locator",
+    "evidence binding the external artifact to the Rupert statement",
+    "artifact-specific Lean reproduction command and retained result"
+  ],
+  "next_obligation": "Provide an immutable Noperthedron commit and exact proof-file/theorem locator, bind that artifact to the Rupert statement, and reproduce its claimed Lean result.",
+  "unsupported_claims": [
+    "The mutable Noperthedron repository-root URL alone supplies a complete formalization corresponding to this exact theorem."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The hosted passing build does not establish local reproduction or the identity and validity of the external proof artifact.",
+    "The source-fidelity assessment does not establish acceptance or Standing.",
+    "The approval and merge do not establish a Formal Conjectures maintainer action or Vela Decision."
+  ],
+  "confidence": "high"
+}

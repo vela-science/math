@@ -1,0 +1,2565 @@
+{
+  "schema": "vela.math.fc-audit.agent-observation-index.v0.1",
+  "authority_effect": "none",
+  "design": {
+    "path": "evidence/formal-conjectures/agent-evaluation/agent-evaluation-design.v0.1.json",
+    "size": 5755,
+    "raw_sha256": "sha256:607322d5dd9b5cc25ca9e487b2e1c589ea4ba54ef34c67e277ff567fb611043d"
+  },
+  "allocation": {
+    "path": "evidence/formal-conjectures/agent-evaluation/agent-allocation.v0.1.json",
+    "size": 28117,
+    "raw_sha256": "sha256:0ba985477e9069ddcdfd7edeb8e4c6f62e21eadbf7dd2dfb3036d65bf223cca5"
+  },
+  "execution_implementation": {
+    "runner": {
+      "path": "evidence/formal-conjectures/agent-evaluation/run_agent_evaluation.py",
+      "size": 16455,
+      "raw_sha256": "sha256:5ce2e2241447ef4ab22849c163591e3d49a47476aeeb53d35fc845cf9ecbfa61"
+    },
+    "sender_output_schema": {
+      "path": "evidence/formal-conjectures/agent-evaluation/sender-output.schema.v0.1.json",
+      "size": 1983,
+      "raw_sha256": "sha256:9a3635bc141b1a8ca7677e49b2528a5f34aafe4a61387494b8babc1f30841bff"
+    },
+    "receiver_output_schema": {
+      "path": "evidence/formal-conjectures/agent-evaluation/receiver-output.schema.v0.1.json",
+      "size": 1873,
+      "raw_sha256": "sha256:9f6fbe10b526530fd0a67229b2b7fa55bd2e0725a9be21502cdc8450b851ba5f"
+    },
+    "amendment": {
+      "path": "evidence/formal-conjectures/agent-evaluation/execution-amendment.v0.1.json",
+      "size": 2032,
+      "raw_sha256": "sha256:fc0aca5efaa59985536314539930f81c175c3ff46d9f06f1019bac94862944ae"
+    },
+    "runtime": "codex-cli 0.145.0",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "high"
+  },
+  "observation_count": 60,
+  "observations": [
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-01--task-01--fixture-01.observation.json",
+      "size": 3278,
+      "raw_sha256": "sha256:32fdb6e00594c73283e1941ce399bc51a859fbed05ced8358e8496410f82de3f",
+      "observation_root": "sha256:a3487b38aa7bfc7c7934d99ead4f9966dc44745511d77205c97805022950268f",
+      "role": "receiver",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-01--task-02--fixture-02.observation.json",
+      "size": 3222,
+      "raw_sha256": "sha256:6b89af747f5928710ea1286a612470aacacdb4b30cac6251a3b7b781bb6eb09a",
+      "observation_root": "sha256:3dc9a7e7e8d65f18300e2d88c6715c1fa5d5cd748fa9a1f7d8f7ed84ffd4a932",
+      "role": "receiver",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-01--task-03--fixture-03.observation.json",
+      "size": 3234,
+      "raw_sha256": "sha256:9ccab23a70a3585bcdf5f22c688630f353fea27ffb1bc02fa21394b78bfcd2b6",
+      "observation_root": "sha256:e661b489ece84f5fd40492f10cbd993bf5bdc8e7d346627fb06b726d65beadd0",
+      "role": "receiver",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-01--task-04--fixture-04.observation.json",
+      "size": 3209,
+      "raw_sha256": "sha256:587eda9613283bbce5985511217ab0f619f1f96ec4be24134622f243fc11b725",
+      "observation_root": "sha256:f43fda8285571be1344e74656f3f5728a5c56d9d0430b960ccb3518f77897e5f",
+      "role": "receiver",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-01--task-05--fixture-05.observation.json",
+      "size": 3234,
+      "raw_sha256": "sha256:ad52a69e84f25dfb13860cbdbbf7869114fc978d4bc493365ecd467e58b6e50e",
+      "observation_root": "sha256:ddb81b27406fb1d3551f67f0a657ab77e4d6e8d051f41d05222dac379cadd8f1",
+      "role": "receiver",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-02--task-01--fixture-02.observation.json",
+      "size": 3243,
+      "raw_sha256": "sha256:4805fc31ad9b414b19c3d2899a66639dbafb25968c46cee0f18a733c7e3fdf8f",
+      "observation_root": "sha256:532fd9be6dd49d64804551a1bfbb9b865f9fab435222f31fd1485ca912185d15",
+      "role": "receiver",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-02--task-02--fixture-03.observation.json",
+      "size": 3213,
+      "raw_sha256": "sha256:48c76e4a137d50a486c39628e20eb77688f568f09cced60d33d1e95200f8ce9b",
+      "observation_root": "sha256:7c0f102c72435597c295ecd16e2c72c867af39bd530ebb7b5f76dfb17d86d9ad",
+      "role": "receiver",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-02--task-03--fixture-04.observation.json",
+      "size": 3229,
+      "raw_sha256": "sha256:2dd724e74732e8506aa1fe31093ada0c0f63e2b3b236315cc2a742333b13ee2d",
+      "observation_root": "sha256:b4a63d0619fdfaebdc4a8e8b4859470814ac7a1ae6db3bb5598f8645849c0959",
+      "role": "receiver",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-02--task-04--fixture-05.observation.json",
+      "size": 3217,
+      "raw_sha256": "sha256:2018616224c3a6bfb06abe69780440ae4d2ed42e44a9b754b8cbcd53c333ccd7",
+      "observation_root": "sha256:e0306e4764768ebd53c558074497dbf38c9815c10e51e4b589359e3e0c129cd1",
+      "role": "receiver",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-02--task-05--fixture-01.observation.json",
+      "size": 3263,
+      "raw_sha256": "sha256:e183a9f991ce28dbc80e53779b5a8e045bf3c92182d9224fff49466aaeaa0d80",
+      "observation_root": "sha256:6592c5687cdb89bd16860f991fd33c1428300cbd748e98f9fbe89addb5f078b3",
+      "role": "receiver",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-03--task-01--fixture-03.observation.json",
+      "size": 3212,
+      "raw_sha256": "sha256:c742983d95580ae690eba34646d59575e8f693ce651007a57d7e75eb89058c51",
+      "observation_root": "sha256:f02bd482bec6cf9168daf5092772bb2f8737d7b9833f2fa2bb902660d1a183df",
+      "role": "receiver",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-03--task-02--fixture-04.observation.json",
+      "size": 3208,
+      "raw_sha256": "sha256:5b04997dc854b82ded5b4d61196fb5cf6014bfa3a74eb30fe181f188b2c7988e",
+      "observation_root": "sha256:e4fe2334f68e9528d1d2ab4824668eeba0496d52d30a15e0db226472239fb255",
+      "role": "receiver",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-03--task-03--fixture-05.observation.json",
+      "size": 3236,
+      "raw_sha256": "sha256:476efd93d74929834beb32f42a8a18c424d5588c22c0da0b4d4a7341ecdac3e3",
+      "observation_root": "sha256:c21c30c5ff75c3fc3883c59035c3a327aad071026ee6a4519feac2e04c5b326c",
+      "role": "receiver",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-03--task-04--fixture-01.observation.json",
+      "size": 3279,
+      "raw_sha256": "sha256:2f14f17416e350a61d01bfc4748f291b5dd4687cd8c840d6f2a7f2fa6a458a26",
+      "observation_root": "sha256:591c150420d75c29ab78157dd680419a059385994695e0de64e628bade6e20a5",
+      "role": "receiver",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-03--task-05--fixture-02.observation.json",
+      "size": 3243,
+      "raw_sha256": "sha256:fef95b860b1c44613d2aa451edd39f65cd707e22a2dfdb324d165a8cca3bedbf",
+      "observation_root": "sha256:a74e75c6666226299003bf429d0ecf3852dfae5a028a22cb26167fe8cb5b0f08",
+      "role": "receiver",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-04--task-01--fixture-04.observation.json",
+      "size": 3227,
+      "raw_sha256": "sha256:4e4fe077e2cc3a8be2851f5abb3ea2e00b474889810af83989fab4e1ab7f522c",
+      "observation_root": "sha256:495314186397033135393a0af359b556a1b0850e3e3e9f7e4426f471bd56463d",
+      "role": "receiver",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-04--task-02--fixture-05.observation.json",
+      "size": 3216,
+      "raw_sha256": "sha256:f38ddbdd27fb0bdd52bdc5d102d3b59974b17320fd05b8b080ae4a574cb1c9ae",
+      "observation_root": "sha256:9cf9e531cb7186315274a9c6da3725fe3a790fbf8e30cb0f65c027735177b053",
+      "role": "receiver",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-04--task-03--fixture-01.observation.json",
+      "size": 3262,
+      "raw_sha256": "sha256:55bc61c7b9c9dce064a4ad6f57d3aa840439d712f3dd7dfce489edd7f4582357",
+      "observation_root": "sha256:6714e917907c3d6093ec4a5e41fad05dcf182c92fd22e2c56236f9191a555f9d",
+      "role": "receiver",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-04--task-04--fixture-02.observation.json",
+      "size": 3222,
+      "raw_sha256": "sha256:118cd4a763689cc1f80f0bdac5a9803c44970d76127610e184f72259cfe32afa",
+      "observation_root": "sha256:f15de1261ed63549a616ac430c8624707d4aa4c53fad01b65abcbca802c1c5b8",
+      "role": "receiver",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-04--task-05--fixture-03.observation.json",
+      "size": 3236,
+      "raw_sha256": "sha256:a10d3000c6c6559a8e60eda0cba0c760817abf0b9072354eb627b0e61d460233",
+      "observation_root": "sha256:5cc15a93b35d7e987e0b802b0fcba50693afef70b1968315e3bf24e81f323fee",
+      "role": "receiver",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-05--task-01--fixture-05.observation.json",
+      "size": 3232,
+      "raw_sha256": "sha256:682b667332daab9c2f6cddc8c3ea2ff088d712bcf251170c5a479607c08ec12b",
+      "observation_root": "sha256:92c0b339232b3739a44be69ebf5dd7681c3829bc2231d0c70918c975bf5b22ab",
+      "role": "receiver",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-05--task-02--fixture-01.observation.json",
+      "size": 3282,
+      "raw_sha256": "sha256:3d9fe7e05a7d40da4c1d1d4171ba6c6db096040fe8fea499583053e94c372f45",
+      "observation_root": "sha256:5ad67b7828c0c897d89de64f07aefc8aa531a6c773a9adb6fa9ab28460be57fb",
+      "role": "receiver",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-05--task-03--fixture-02.observation.json",
+      "size": 3223,
+      "raw_sha256": "sha256:917f15f1713d070de26a342ed9da776b568b73c26e02842abe6a81e406fe8f79",
+      "observation_root": "sha256:e4b78b5d5d44c900b3b522c1738f99293af6cb6cc475de7d0b6a6e0539d20b01",
+      "role": "receiver",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-05--task-04--fixture-03.observation.json",
+      "size": 3217,
+      "raw_sha256": "sha256:211d9e41357baf7e614896490625c2e141f82e41432ecc686efb829e659c3a02",
+      "observation_root": "sha256:76a5838e15f01d81b9207222cff36fd7b1b5ef00f1b020f9b5952694c8dfc6d6",
+      "role": "receiver",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-05--task-05--fixture-04.observation.json",
+      "size": 3230,
+      "raw_sha256": "sha256:29046e24715b7e148a24d2e6641f1e76b5abde57ae8bfee17abb686b9e1f7636",
+      "observation_root": "sha256:d965c8cd308ff43ecb45c205b619baaccd2a214cce1f3169b9e970adae154a4d",
+      "role": "receiver",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-06--task-01--fixture-05.observation.json",
+      "size": 3215,
+      "raw_sha256": "sha256:75bd5c376bb5630fe3447c8d1a1383a2b8c559e933124e428078d4bc3bec71bd",
+      "observation_root": "sha256:2f47917b767c54f1419a2b6ca57c0dba1abaab19e5d7658bd737748d5c42a064",
+      "role": "receiver",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-06--task-02--fixture-04.observation.json",
+      "size": 3208,
+      "raw_sha256": "sha256:233bc00b8626953695d60236274f94c5855df26e35614549381eae68adb602dd",
+      "observation_root": "sha256:ce3c32f9932b1b3153d48478ab36f56d6b170ba3df6445851c49284341205b9e",
+      "role": "receiver",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-06--task-03--fixture-03.observation.json",
+      "size": 3237,
+      "raw_sha256": "sha256:984f0aae1ecc8134c640be427fdbee72c5b6a4ee8e85ec43ed6cedbb5cee80fa",
+      "observation_root": "sha256:89e7a7f1e3dfe3eae680657dd1e304788c33b7ee46b6c580423d142b4ac5dbbc",
+      "role": "receiver",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-06--task-04--fixture-02.observation.json",
+      "size": 3246,
+      "raw_sha256": "sha256:71d555f5c1bea13f91d5e7be7c4fe1d7e746084fa01f57c7dfd12a3800ad8948",
+      "observation_root": "sha256:41c637273973179d5babe840b547a1d8cfc1701c90b7812ee82eecd9c43b3ca3",
+      "role": "receiver",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-06--task-05--fixture-01.observation.json",
+      "size": 3259,
+      "raw_sha256": "sha256:02b50e17412c4a9bdda0c87dd840e68eb66344e1dbb16f26c754e831ef800990",
+      "observation_root": "sha256:f5b33b30eda8cc923fbbab1e87ac3784118f58843fb57118683c895f9e555505",
+      "role": "receiver",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-01--task-01--fixture-01.observation.json",
+      "size": 3266,
+      "raw_sha256": "sha256:f3062945b4b1bcdad86790767c1046409babe5945d025513cf834b793062a951",
+      "observation_root": "sha256:428e75aa6fe7bea6f31e37d9fca63e72bed471aa8187c76bc64a87f443a9d2e7",
+      "role": "sender",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-01--task-02--fixture-02.observation.json",
+      "size": 3213,
+      "raw_sha256": "sha256:9ef6a80b79da427e5240542701b31aa5cbc0ce7d6d442a2598370c91015593bd",
+      "observation_root": "sha256:71b77838601bb3e020b6798a5cba7e5842b5c8c84adc3c3a14842cc44f7f627f",
+      "role": "sender",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-01--task-03--fixture-03.observation.json",
+      "size": 3221,
+      "raw_sha256": "sha256:0b4d4ccdf138cd2978d367c76d898f4df1c9c2c4f224901f6cced2db68de7a99",
+      "observation_root": "sha256:cd63187fd1caf778400a61e01b73123984285e3de66608e79b78ec5e1f6e9cc5",
+      "role": "sender",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-01--task-04--fixture-04.observation.json",
+      "size": 3197,
+      "raw_sha256": "sha256:82ce7e168d52d378678245f6d0fbefbe864ac6b0ab04302ab69f72685478691f",
+      "observation_root": "sha256:f8995e7fd9217570e9596c5f62cfd809329ea6bb6944e85d027d067762ffdba1",
+      "role": "sender",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-01--task-05--fixture-05.observation.json",
+      "size": 3221,
+      "raw_sha256": "sha256:fb4ee19f4dbb3959fcebab4f8ced7cfc6e661dac2bb68bbc885bbd94f87dd83c",
+      "observation_root": "sha256:0cf9a8f2d216126ebab3c0bc92a78447a224260430db44f9449d762f1d33ba6e",
+      "role": "sender",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-02--task-01--fixture-02.observation.json",
+      "size": 3230,
+      "raw_sha256": "sha256:ba6888b25cc68502f1b7dc45fd0389c59c6b0540645ad040fca07b2a6437bf71",
+      "observation_root": "sha256:571d36416150bd769a6cd1291400c2ee65e256092cc58527927aaeb41ee0cda6",
+      "role": "sender",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-02--task-02--fixture-03.observation.json",
+      "size": 3200,
+      "raw_sha256": "sha256:c0d0f769864d3065396d0bdc38ae3b5eb1b69a2d10600e87940791e38cdd6218",
+      "observation_root": "sha256:07ba3aae430734e0ebfd382a736330f91db590f1c139e301da62858a1cea7dfe",
+      "role": "sender",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-02--task-03--fixture-04.observation.json",
+      "size": 3216,
+      "raw_sha256": "sha256:9d1cb44a77ec0f952df63f9840e7385ef96f779726d5aa67253da6ef431823f5",
+      "observation_root": "sha256:be500c70b65d85626faf848d8fb5a20308790ee1d4ed8a03de8fc2eda57c60ab",
+      "role": "sender",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-02--task-04--fixture-05.observation.json",
+      "size": 3201,
+      "raw_sha256": "sha256:27a33fcc4a046ae0eef956e7276f7b7d1922d72fc2f75f9bbe6fedad62821bcb",
+      "observation_root": "sha256:6009b824e0efc4dc211594cab33ac474ca53217476ff1c6b7e9db17483145dc0",
+      "role": "sender",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-02--task-05--fixture-01.observation.json",
+      "size": 3246,
+      "raw_sha256": "sha256:1e5b4176456b02713829154bc4e1dc72ab7edbb7ea4eee9535f331bde2df66a1",
+      "observation_root": "sha256:9d3d75e9cc83147e37729872044a271c6afe301a3c0b887ff567db145eab6ca8",
+      "role": "sender",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-03--task-01--fixture-03.observation.json",
+      "size": 3200,
+      "raw_sha256": "sha256:2e9de8da8e4b4e23e58a9c4377bf4aaeab623ac5dd6a516145af381797bf89a1",
+      "observation_root": "sha256:a4f1b9dcfd043079245a66b5411339d59ed0416d5c0e85b61dc77e2bf1d7870e",
+      "role": "sender",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-03--task-02--fixture-04.observation.json",
+      "size": 3196,
+      "raw_sha256": "sha256:d95e6e54c06b582a9ca3523e9e8ae1e303afa998bf13994429f6e0563123fe19",
+      "observation_root": "sha256:42b161440a0a529c65d65133eacafa6d04a08bb42fc3d82d854067b19379c6c8",
+      "role": "sender",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-03--task-03--fixture-05.observation.json",
+      "size": 3220,
+      "raw_sha256": "sha256:b937c7353e8ed2fe6851cbbd94174377eb2159e6ce80376761d060df13efc93b",
+      "observation_root": "sha256:043a4a12f87a8cdf8c03f6f42115fb77a15003607dd38f419f41d34aebce252f",
+      "role": "sender",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-03--task-04--fixture-01.observation.json",
+      "size": 3269,
+      "raw_sha256": "sha256:ff02e746a472e2f862480882bd95119edf1ec966814c14b1b17b1d0e987643bc",
+      "observation_root": "sha256:c3a3f0f4b7c862789c6e682064ed340aa430d275d04079ac0739163c780aa09e",
+      "role": "sender",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-03--task-05--fixture-02.observation.json",
+      "size": 3231,
+      "raw_sha256": "sha256:88520866821d9ee551e11574a1b5e8db00567c65a0f2bd8065720b46590748ef",
+      "observation_root": "sha256:b6fb9f0b4b7f5d5f43c8db15091519f1db8efba4000f5429740517801f6baf3d",
+      "role": "sender",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-04--task-01--fixture-04.observation.json",
+      "size": 3220,
+      "raw_sha256": "sha256:9a4533343856836cc5ea12a374da23dee4632fe312e2bfcfa8c4ca89939ecbcf",
+      "observation_root": "sha256:ddaae81d3d916f37b8b1bd20e781fc639254d2dc5554b60d9271706ac2aba837",
+      "role": "sender",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-04--task-02--fixture-05.observation.json",
+      "size": 3205,
+      "raw_sha256": "sha256:81cb62801c2d7490a15ded462b1a6c5cd098b0365321ff14c5e3f102011cac88",
+      "observation_root": "sha256:9a554342bf41f3e2ba2e567c8a219291d250a1958255399a44fbdff4fd9555f5",
+      "role": "sender",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-04--task-03--fixture-01.observation.json",
+      "size": 3246,
+      "raw_sha256": "sha256:789f55a614fb0b364ae328a16e88a6cea03c9694bfbcb6c336670647c05a1885",
+      "observation_root": "sha256:1632a99e4bb0f854f96730830dd7a9f28f70100a3dd60ca86205b84d60441388",
+      "role": "sender",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-04--task-04--fixture-02.observation.json",
+      "size": 3211,
+      "raw_sha256": "sha256:795d15dd6a4758a8e59feed5b30c529655bb93500b2d16b6cadb02864753e7ce",
+      "observation_root": "sha256:9936f763e0347dbf7bb2a106e9c9d3f3007271775a8c06573982d25a9f87447b",
+      "role": "sender",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-04--task-05--fixture-03.observation.json",
+      "size": 3222,
+      "raw_sha256": "sha256:9a34135a602897561968cf537c99d2dda5ded5ced0198c5652336d40f2d93087",
+      "observation_root": "sha256:45cd82f895a01f0ef7b3d8208131dd0eb0003ae86df1b4388ca74478b2e4c38f",
+      "role": "sender",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-05--task-01--fixture-05.observation.json",
+      "size": 3220,
+      "raw_sha256": "sha256:044ed9eae9fefb4b063a495a70f6f583d22c19f57611f2decdb7f4208026f97c",
+      "observation_root": "sha256:f9d675827e2daa8ae549dcd84e462de03d4b328502fd762918f494828cb76b37",
+      "role": "sender",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-05--task-02--fixture-01.observation.json",
+      "size": 3266,
+      "raw_sha256": "sha256:b97689458e725f5ec1d46ccbafeb1fabf37f6e42f8fffff8af7e636656958de4",
+      "observation_root": "sha256:58f804fea50261277dfd383a6811a1b0eb4acf83324d675444243f0cc0134ca0",
+      "role": "sender",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-05--task-03--fixture-02.observation.json",
+      "size": 3211,
+      "raw_sha256": "sha256:16f9f5d010f4ec7df352a7001eec43ecd7f953d3937d6006eb5498f5bee6f5c1",
+      "observation_root": "sha256:65bcb574cebbffe4e71b863c85204aab0723e7f8846d41348207c18adce1070e",
+      "role": "sender",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-05--task-04--fixture-03.observation.json",
+      "size": 3202,
+      "raw_sha256": "sha256:c4815793b52178eb83afa3dc77f45baa4dbee51285f9dc3e446a3b782a9efc6e",
+      "observation_root": "sha256:fb8c1347c1d53aff4e5c37a17a9354f6e286dd71d19f77290b87722a09783080",
+      "role": "sender",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-05--task-05--fixture-04.observation.json",
+      "size": 3220,
+      "raw_sha256": "sha256:b5e0f398d505ac7f1bd4704bce3746af82f36b44a6e1fbcb316f843365837ef7",
+      "observation_root": "sha256:142af5dbbf85431bee8dfb137563e2f46e66f6e55749819b4afcfcfca1c21ba0",
+      "role": "sender",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-06--task-01--fixture-05.observation.json",
+      "size": 3205,
+      "raw_sha256": "sha256:815ba6ad3e3ec585e1bfce8322def4e2bb065a5328e499bfa47e3317ba10d2d0",
+      "observation_root": "sha256:287bd6bc53d736c1ce07ed998adbe81658a9597862851eb3136cc8fb48ef4767",
+      "role": "sender",
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-06--task-02--fixture-04.observation.json",
+      "size": 3199,
+      "raw_sha256": "sha256:a05ffd2ed95d1c926be121668c4647838ee10aa2f5086145dba2e2f80766cc04",
+      "observation_root": "sha256:f0419ba090818cf294efaf0935b85825dd17703fc2561fe29e4d44fc9aa3a5b3",
+      "role": "sender",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-06--task-03--fixture-03.observation.json",
+      "size": 3222,
+      "raw_sha256": "sha256:2bad6127a0ef8d450e5c41516c80aae0be5e7a9475efeb39e7787c77faa3f803",
+      "observation_root": "sha256:2271af62bbad8d8848cbe3eb9abe04f9103ee2efa179bf57f63b159690b41fb2",
+      "role": "sender",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-06--task-04--fixture-02.observation.json",
+      "size": 3231,
+      "raw_sha256": "sha256:0ee2171b5d4402b3c9aa25951397ad6d5b4292428a67bc3878edeed35e49172b",
+      "observation_root": "sha256:bd1d25adbfef477f25b8bd683063fd6f74bb5668c0e75a6f6d56324d03f1c888",
+      "role": "sender",
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "plain-git-and-current-review-artifacts"
+    },
+    {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-06--task-05--fixture-01.observation.json",
+      "size": 3246,
+      "raw_sha256": "sha256:06acdb301a725ce8c1ac61d68b1b0692cff3496ad91477ce9eacfbefdb6bcce5",
+      "observation_root": "sha256:c2ca75c324bad04ea47eb2aa3a62a47f551ad14e38ec84c947e8b3a3632e2084",
+      "role": "sender",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "same-inputs-plus-fc-pr-audit"
+    }
+  ],
+  "rows": [
+    {
+      "observation_id": "agent-eval-handoff-s01-01::sender",
+      "observation_root": "sha256:428e75aa6fe7bea6f31e37d9fca63e72bed471aa8187c76bc64a87f443a9d2e7",
+      "role": "sender",
+      "slot": 1,
+      "task_order": 1,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:34f9ce1e77b28e8ebcd9a49f57f4e976a890eabda546594d24ae588b465554fc",
+      "terminal_state": "success",
+      "elapsed_seconds": 32.694648,
+      "usage": {
+        "input_tokens": 18342,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1612,
+        "reasoning_output_tokens": 849
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-01--task-01--fixture-01.output.json",
+        "size": 2542,
+        "raw_sha256": "sha256:21446c063af3f8d7f2f402a414fc916c10371899217484fb87d2ae8b22a0f469"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s01-02::sender",
+      "observation_root": "sha256:71b77838601bb3e020b6798a5cba7e5842b5c8c84adc3c3a14842cc44f7f627f",
+      "role": "sender",
+      "slot": 1,
+      "task_order": 2,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+      "terminal_state": "success",
+      "elapsed_seconds": 40.8584,
+      "usage": {
+        "input_tokens": 32528,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1927,
+        "reasoning_output_tokens": 1288
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-01--task-02--fixture-02.output.json",
+        "size": 2497,
+        "raw_sha256": "sha256:9fd8c8c26bd04fb7b00b42db25774905f8603e37cfdb68cf9ce4b54449a2ea34"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 2,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s01-03::sender",
+      "observation_root": "sha256:cd63187fd1caf778400a61e01b73123984285e3de66608e79b78ec5e1f6e9cc5",
+      "role": "sender",
+      "slot": 1,
+      "task_order": 3,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:702406f0ae0aaa12a8c31f64aecd19809253af52dc1ac615ec5fca723242dc88",
+      "terminal_state": "success",
+      "elapsed_seconds": 31.223542,
+      "usage": {
+        "input_tokens": 17852,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1515,
+        "reasoning_output_tokens": 918
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-01--task-03--fixture-03.output.json",
+        "size": 2207,
+        "raw_sha256": "sha256:4be5b455e31fc0d8538a351f814be74f869525049fcbfc08fb36d3f6c118474c"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s01-04::sender",
+      "observation_root": "sha256:f8995e7fd9217570e9596c5f62cfd809329ea6bb6944e85d027d067762ffdba1",
+      "role": "sender",
+      "slot": 1,
+      "task_order": 4,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+      "terminal_state": "success",
+      "elapsed_seconds": 18.637095,
+      "usage": {
+        "input_tokens": 40438,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 848,
+        "reasoning_output_tokens": 284
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-01--task-04--fixture-04.output.json",
+        "size": 2024,
+        "raw_sha256": "sha256:50b4460136438e90df6b80460344589a3c29539e9db6fd729df8864e7eee98a5"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s01-05::sender",
+      "observation_root": "sha256:0cf9a8f2d216126ebab3c0bc92a78447a224260430db44f9449d762f1d33ba6e",
+      "role": "sender",
+      "slot": 1,
+      "task_order": 5,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a",
+      "terminal_state": "success",
+      "elapsed_seconds": 22.324404,
+      "usage": {
+        "input_tokens": 18618,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1060,
+        "reasoning_output_tokens": 516
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-01--task-05--fixture-05.output.json",
+        "size": 2237,
+        "raw_sha256": "sha256:e67f9c1d55ec61816592391ab018276406715393358286a93d331b390cf7aa2a"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 1,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s02-02::sender",
+      "observation_root": "sha256:571d36416150bd769a6cd1291400c2ee65e256092cc58527927aaeb41ee0cda6",
+      "role": "sender",
+      "slot": 2,
+      "task_order": 1,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:0e0824641f75166903af3a4642d89f01ecdd0ae0b0a46a9512136e0d2bcf5191",
+      "terminal_state": "success",
+      "elapsed_seconds": 29.371654,
+      "usage": {
+        "input_tokens": 26473,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1318,
+        "reasoning_output_tokens": 516
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-02--task-01--fixture-02.output.json",
+        "size": 3113,
+        "raw_sha256": "sha256:1d07ec3f796f975e0241063353842d8a1376370529a85ae8a219a12bb14df1dd"
+      },
+      "score": {
+        "verdict_correct": false,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 2,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s02-03::sender",
+      "observation_root": "sha256:07ba3aae430734e0ebfd382a736330f91db590f1c139e301da62858a1cea7dfe",
+      "role": "sender",
+      "slot": 2,
+      "task_order": 2,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+      "terminal_state": "success",
+      "elapsed_seconds": 18.005384,
+      "usage": {
+        "input_tokens": 25961,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 842,
+        "reasoning_output_tokens": 358
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-02--task-02--fixture-03.output.json",
+        "size": 1961,
+        "raw_sha256": "sha256:73c0cef9643b0693d4b8c39145934e0326282db9876ff7c128968aa610914291"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s02-04::sender",
+      "observation_root": "sha256:be500c70b65d85626faf848d8fb5a20308790ee1d4ed8a03de8fc2eda57c60ab",
+      "role": "sender",
+      "slot": 2,
+      "task_order": 3,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0",
+      "terminal_state": "success",
+      "elapsed_seconds": 38.958618,
+      "usage": {
+        "input_tokens": 34589,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1782,
+        "reasoning_output_tokens": 1034
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-02--task-03--fixture-04.output.json",
+        "size": 2705,
+        "raw_sha256": "sha256:2c0c7c3c9cedbea07f44c4ba448ebffe15d36f78fc85f7f457825c2fbe50e6bb"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 1,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s02-05::sender",
+      "observation_root": "sha256:6009b824e0efc4dc211594cab33ac474ca53217476ff1c6b7e9db17483145dc0",
+      "role": "sender",
+      "slot": 2,
+      "task_order": 4,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+      "terminal_state": "success",
+      "elapsed_seconds": 22.288111,
+      "usage": {
+        "input_tokens": 28951,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1048,
+        "reasoning_output_tokens": 474
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-02--task-04--fixture-05.output.json",
+        "size": 2382,
+        "raw_sha256": "sha256:71564fd79da36176e84ea392c26c258113a1d2529037a474a7bc3980bffa88b7"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 4,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s02-01::sender",
+      "observation_root": "sha256:9d3d75e9cc83147e37729872044a271c6afe301a3c0b887ff567db145eab6ca8",
+      "role": "sender",
+      "slot": 2,
+      "task_order": 5,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa",
+      "terminal_state": "success",
+      "elapsed_seconds": 22.971061,
+      "usage": {
+        "input_tokens": 25796,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1055,
+        "reasoning_output_tokens": 370
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-02--task-05--fixture-01.output.json",
+        "size": 2312,
+        "raw_sha256": "sha256:f353244b765264e6fb6f9017449e439b5937d7ce56c74cf957ae3a493ee6dd4e"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s03-03::sender",
+      "observation_root": "sha256:a4f1b9dcfd043079245a66b5411339d59ed0416d5c0e85b61dc77e2bf1d7870e",
+      "role": "sender",
+      "slot": 3,
+      "task_order": 1,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+      "terminal_state": "success",
+      "elapsed_seconds": 16.737237,
+      "usage": {
+        "input_tokens": 25963,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 750,
+        "reasoning_output_tokens": 274
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-03--task-01--fixture-03.output.json",
+        "size": 1851,
+        "raw_sha256": "sha256:53d53270c9ad95a82e2729b719fa10361077c5ed49a8522ebf3a50c947f8312b"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s03-04::sender",
+      "observation_root": "sha256:42b161440a0a529c65d65133eacafa6d04a08bb42fc3d82d854067b19379c6c8",
+      "role": "sender",
+      "slot": 3,
+      "task_order": 2,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+      "terminal_state": "success",
+      "elapsed_seconds": 23.002033,
+      "usage": {
+        "input_tokens": 40442,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1108,
+        "reasoning_output_tokens": 405
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-03--task-02--fixture-04.output.json",
+        "size": 2475,
+        "raw_sha256": "sha256:5e63d10b5b3dc8f186df6ac9e97e926ba764e8b4aacdf5eb91272342a714ab65"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s03-05::sender",
+      "observation_root": "sha256:043a4a12f87a8cdf8c03f6f42115fb77a15003607dd38f419f41d34aebce252f",
+      "role": "sender",
+      "slot": 3,
+      "task_order": 3,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a",
+      "terminal_state": "success",
+      "elapsed_seconds": 18.748238,
+      "usage": {
+        "input_tokens": 18618,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 872,
+        "reasoning_output_tokens": 315
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-03--task-03--fixture-05.output.json",
+        "size": 2324,
+        "raw_sha256": "sha256:279bb86a8a93a8648af66ed4e85b3df2f080fb4d4b7ec1eb501007c35f2c5b88"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 1,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s03-01::sender",
+      "observation_root": "sha256:c3a3f0f4b7c862789c6e682064ed340aa430d275d04079ac0739163c780aa09e",
+      "role": "sender",
+      "slot": 3,
+      "task_order": 4,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:34f9ce1e77b28e8ebcd9a49f57f4e976a890eabda546594d24ae588b465554fc",
+      "terminal_state": "success",
+      "elapsed_seconds": 26.35339,
+      "usage": {
+        "input_tokens": 18340,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1311,
+        "reasoning_output_tokens": 516
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-03--task-04--fixture-01.output.json",
+        "size": 2636,
+        "raw_sha256": "sha256:4a0993eb0c1bbb16fbc47e6d56e0b8b99707cc30eec4dbc8208f0eff87b4f3d8"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s03-02::sender",
+      "observation_root": "sha256:b6fb9f0b4b7f5d5f43c8db15091519f1db8efba4000f5429740517801f6baf3d",
+      "role": "sender",
+      "slot": 3,
+      "task_order": 5,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:0e0824641f75166903af3a4642d89f01ecdd0ae0b0a46a9512136e0d2bcf5191",
+      "terminal_state": "success",
+      "elapsed_seconds": 51.601209,
+      "usage": {
+        "input_tokens": 26475,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2266,
+        "reasoning_output_tokens": 1552
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-03--task-05--fixture-02.output.json",
+        "size": 2910,
+        "raw_sha256": "sha256:ea60dd1af63b4faa12cec93ad44c260633b466bf9992ae7fd1b9d805d638b023"
+      },
+      "score": {
+        "verdict_correct": false,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 2,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s04-04::sender",
+      "observation_root": "sha256:ddaae81d3d916f37b8b1bd20e781fc639254d2dc5554b60d9271706ac2aba837",
+      "role": "sender",
+      "slot": 4,
+      "task_order": 1,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0",
+      "terminal_state": "success",
+      "elapsed_seconds": 35.741628,
+      "usage": {
+        "input_tokens": 34589,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1775,
+        "reasoning_output_tokens": 1022
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-04--task-01--fixture-04.output.json",
+        "size": 2707,
+        "raw_sha256": "sha256:0a9f019600fea04d5935e67b39c46442ac442dec43d010cc123fb662101a9224"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 2,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s04-05::sender",
+      "observation_root": "sha256:9a554342bf41f3e2ba2e567c8a219291d250a1958255399a44fbdff4fd9555f5",
+      "role": "sender",
+      "slot": 4,
+      "task_order": 2,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+      "terminal_state": "success",
+      "elapsed_seconds": 25.156845,
+      "usage": {
+        "input_tokens": 28949,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1229,
+        "reasoning_output_tokens": 657
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-04--task-02--fixture-05.output.json",
+        "size": 2497,
+        "raw_sha256": "sha256:25ae62598332a3dcf165eafb088e806e8716a00da29bb44123e5ed566c0da2c7"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 4,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s04-01::sender",
+      "observation_root": "sha256:1632a99e4bb0f854f96730830dd7a9f28f70100a3dd60ca86205b84d60441388",
+      "role": "sender",
+      "slot": 4,
+      "task_order": 3,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa",
+      "terminal_state": "success",
+      "elapsed_seconds": 27.611761,
+      "usage": {
+        "input_tokens": 25800,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1193,
+        "reasoning_output_tokens": 489
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-04--task-03--fixture-01.output.json",
+        "size": 2478,
+        "raw_sha256": "sha256:6c5f38ce595593c3481d4487195b522f013323fbc6c1be2162ea9a1f3198e77e"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s04-02::sender",
+      "observation_root": "sha256:9936f763e0347dbf7bb2a106e9c9d3f3007271775a8c06573982d25a9f87447b",
+      "role": "sender",
+      "slot": 4,
+      "task_order": 4,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+      "terminal_state": "success",
+      "elapsed_seconds": 37.973403,
+      "usage": {
+        "input_tokens": 32530,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1818,
+        "reasoning_output_tokens": 1132
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-04--task-04--fixture-02.output.json",
+        "size": 2579,
+        "raw_sha256": "sha256:b7c421b0c58a006c49222d1aac47174a36a2786a125f52165f8dc2739bd26a41"
+      },
+      "score": {
+        "verdict_correct": false,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 1,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s04-03::sender",
+      "observation_root": "sha256:45cd82f895a01f0ef7b3d8208131dd0eb0003ae86df1b4388ca74478b2e4c38f",
+      "role": "sender",
+      "slot": 4,
+      "task_order": 5,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:702406f0ae0aaa12a8c31f64aecd19809253af52dc1ac615ec5fca723242dc88",
+      "terminal_state": "success",
+      "elapsed_seconds": 33.790668,
+      "usage": {
+        "input_tokens": 17852,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1633,
+        "reasoning_output_tokens": 1034
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-04--task-05--fixture-03.output.json",
+        "size": 2339,
+        "raw_sha256": "sha256:82a9fac217cbbbdf8a7dba0a832594496e04bf9c61a454c8a3ec715fd867f955"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 3,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s05-05::sender",
+      "observation_root": "sha256:f9d675827e2daa8ae549dcd84e462de03d4b328502fd762918f494828cb76b37",
+      "role": "sender",
+      "slot": 5,
+      "task_order": 1,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a",
+      "terminal_state": "success",
+      "elapsed_seconds": 21.131551,
+      "usage": {
+        "input_tokens": 18614,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 991,
+        "reasoning_output_tokens": 382
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-05--task-01--fixture-05.output.json",
+        "size": 2518,
+        "raw_sha256": "sha256:be4ecea146951dfae72fc636e627675e04c7f9e526741b862eab472632c8fa0c"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 3,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s05-01::sender",
+      "observation_root": "sha256:58f804fea50261277dfd383a6811a1b0eb4acf83324d675444243f0cc0134ca0",
+      "role": "sender",
+      "slot": 5,
+      "task_order": 2,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:34f9ce1e77b28e8ebcd9a49f57f4e976a890eabda546594d24ae588b465554fc",
+      "terminal_state": "success",
+      "elapsed_seconds": 23.607844,
+      "usage": {
+        "input_tokens": 18342,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1068,
+        "reasoning_output_tokens": 404
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-05--task-02--fixture-01.output.json",
+        "size": 2128,
+        "raw_sha256": "sha256:02169a2fd02002f2f31d11d8a965ce5bbe9a1f6468381b12e6f46187d86c9c04"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s05-02::sender",
+      "observation_root": "sha256:65bcb574cebbffe4e71b863c85204aab0723e7f8846d41348207c18adce1070e",
+      "role": "sender",
+      "slot": 5,
+      "task_order": 3,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+      "terminal_state": "success",
+      "elapsed_seconds": 37.636051,
+      "usage": {
+        "input_tokens": 32526,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1909,
+        "reasoning_output_tokens": 1280
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-05--task-03--fixture-02.output.json",
+        "size": 2497,
+        "raw_sha256": "sha256:eaea6e7c100d21fe272c070b31159a30f99d387f1690a3e014b6d20391575b72"
+      },
+      "score": {
+        "verdict_correct": false,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 2,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s05-03::sender",
+      "observation_root": "sha256:fb8c1347c1d53aff4e5c37a17a9354f6e286dd71d19f77290b87722a09783080",
+      "role": "sender",
+      "slot": 5,
+      "task_order": 4,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+      "terminal_state": "success",
+      "elapsed_seconds": 21.477488,
+      "usage": {
+        "input_tokens": 25961,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 832,
+        "reasoning_output_tokens": 363
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-05--task-04--fixture-03.output.json",
+        "size": 1925,
+        "raw_sha256": "sha256:999aec0510935e9da0eba39d7baafee0b68e8d538ed6721094611d6de32deb4b"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s05-04::sender",
+      "observation_root": "sha256:142af5dbbf85431bee8dfb137563e2f46e66f6e55749819b4afcfcfca1c21ba0",
+      "role": "sender",
+      "slot": 5,
+      "task_order": 5,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0",
+      "terminal_state": "success",
+      "elapsed_seconds": 36.187821,
+      "usage": {
+        "input_tokens": 34587,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1833,
+        "reasoning_output_tokens": 1034
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-05--task-05--fixture-04.output.json",
+        "size": 2748,
+        "raw_sha256": "sha256:30ab7617728685c35a28a6fec89693c975771b7a2916d8d55d86970b0b7b6f0f"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 1,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s06-05::sender",
+      "observation_root": "sha256:287bd6bc53d736c1ce07ed998adbe81658a9597862851eb3136cc8fb48ef4767",
+      "role": "sender",
+      "slot": 6,
+      "task_order": 1,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+      "terminal_state": "success",
+      "elapsed_seconds": 22.116069,
+      "usage": {
+        "input_tokens": 28949,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1032,
+        "reasoning_output_tokens": 516
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-06--task-01--fixture-05.output.json",
+        "size": 2158,
+        "raw_sha256": "sha256:7ead6c4b6c30d333461ef46554b48a1fdfb55c70eb4c1f7ffe2b733afba79a9e"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 3,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s06-04::sender",
+      "observation_root": "sha256:f0419ba090818cf294efaf0935b85825dd17703fc2561fe29e4d44fc9aa3a5b3",
+      "role": "sender",
+      "slot": 6,
+      "task_order": 2,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+      "terminal_state": "success",
+      "elapsed_seconds": 20.144693,
+      "usage": {
+        "input_tokens": 40438,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 944,
+        "reasoning_output_tokens": 374
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-06--task-02--fixture-04.output.json",
+        "size": 2092,
+        "raw_sha256": "sha256:03f1f2b6854a43b2430e76250f8d603161515061c18517747aa860d8c09be338"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s06-03::sender",
+      "observation_root": "sha256:2271af62bbad8d8848cbe3eb9abe04f9103ee2efa179bf57f63b159690b41fb2",
+      "role": "sender",
+      "slot": 6,
+      "task_order": 3,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:702406f0ae0aaa12a8c31f64aecd19809253af52dc1ac615ec5fca723242dc88",
+      "terminal_state": "success",
+      "elapsed_seconds": 62.934859,
+      "usage": {
+        "input_tokens": 17856,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2515,
+        "reasoning_output_tokens": 1785
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-06--task-03--fixture-03.output.json",
+        "size": 3064,
+        "raw_sha256": "sha256:56a29ff2c37062a2a355111c693bc2f07993779b1d16e100d0d108a0667003a0"
+      },
+      "score": {
+        "verdict_correct": false,
+        "expected_issue_detected": false,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 1,
+        "unsupported_claims_identified_count": 2,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s06-02::sender",
+      "observation_root": "sha256:bd1d25adbfef477f25b8bd683063fd6f74bb5668c0e75a6f6d56324d03f1c888",
+      "role": "sender",
+      "slot": 6,
+      "task_order": 4,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:0e0824641f75166903af3a4642d89f01ecdd0ae0b0a46a9512136e0d2bcf5191",
+      "terminal_state": "success",
+      "elapsed_seconds": 45.271981,
+      "usage": {
+        "input_tokens": 26473,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2240,
+        "reasoning_output_tokens": 1525
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-06--task-04--fixture-02.output.json",
+        "size": 2837,
+        "raw_sha256": "sha256:313dd5d48f6a465c766584ef7512f7c4ec362451e7c6d7977d2b3f4d83b97f6d"
+      },
+      "score": {
+        "verdict_correct": false,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 1,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s06-01::sender",
+      "observation_root": "sha256:c2ca75c324bad04ea47eb2aa3a62a47f551ad14e38ec84c947e8b3a3632e2084",
+      "role": "sender",
+      "slot": 6,
+      "task_order": 5,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa",
+      "terminal_state": "success",
+      "elapsed_seconds": 24.291475,
+      "usage": {
+        "input_tokens": 25798,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1068,
+        "reasoning_output_tokens": 516
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-06--task-05--fixture-01.output.json",
+        "size": 1950,
+        "raw_sha256": "sha256:a24fb1fa8a75de5e2002569b7bf21ec099c18e1859a9b756be3ffcc49a337c65"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 0
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s01-01::receiver",
+      "observation_root": "sha256:a3487b38aa7bfc7c7934d99ead4f9966dc44745511d77205c97805022950268f",
+      "role": "receiver",
+      "slot": 1,
+      "task_order": 1,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:34f9ce1e77b28e8ebcd9a49f57f4e976a890eabda546594d24ae588b465554fc",
+      "terminal_state": "success",
+      "elapsed_seconds": 44.20125,
+      "usage": {
+        "input_tokens": 19103,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1915,
+        "reasoning_output_tokens": 1196
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-01--task-01--fixture-01.output.json",
+        "size": 3348,
+        "raw_sha256": "sha256:f4af5d5a3309b5de514f00a1cc2fbc0b39d64179086d71637cbe60802ae163e8"
+      },
+      "score": {
+        "verdict_correct": false,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 2,
+        "unsupported_claims_identified_count": 3,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 4
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s01-02::receiver",
+      "observation_root": "sha256:3dc9a7e7e8d65f18300e2d88c6715c1fa5d5cd748fa9a1f7d8f7ed84ffd4a932",
+      "role": "receiver",
+      "slot": 1,
+      "task_order": 2,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+      "terminal_state": "success",
+      "elapsed_seconds": 21.990513,
+      "usage": {
+        "input_tokens": 33171,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1036,
+        "reasoning_output_tokens": 350
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-01--task-02--fixture-02.output.json",
+        "size": 3180,
+        "raw_sha256": "sha256:5dbe47a2ae260161e5232cfee220dd56941e917fa53e5b7d000a741eadae029a"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 4,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 4
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s01-03::receiver",
+      "observation_root": "sha256:e661b489ece84f5fd40492f10cbd993bf5bdc8e7d346627fb06b726d65beadd0",
+      "role": "receiver",
+      "slot": 1,
+      "task_order": 3,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:702406f0ae0aaa12a8c31f64aecd19809253af52dc1ac615ec5fca723242dc88",
+      "terminal_state": "success",
+      "elapsed_seconds": 41.984294,
+      "usage": {
+        "input_tokens": 18445,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1888,
+        "reasoning_output_tokens": 1294
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-01--task-03--fixture-03.output.json",
+        "size": 2625,
+        "raw_sha256": "sha256:5eafb413d9f8f2a29a2c72334bbca7c744ea71fc1a785a1f7ca077f8d6e7f1c3"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 5
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s01-04::receiver",
+      "observation_root": "sha256:f43fda8285571be1344e74656f3f5728a5c56d9d0430b960ccb3518f77897e5f",
+      "role": "receiver",
+      "slot": 1,
+      "task_order": 4,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+      "terminal_state": "success",
+      "elapsed_seconds": 37.046237,
+      "usage": {
+        "input_tokens": 41001,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1655,
+        "reasoning_output_tokens": 1034
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-01--task-04--fixture-04.output.json",
+        "size": 2652,
+        "raw_sha256": "sha256:bda85ac12affe795218ea0d74c7391d0359b0dda49a71d75ba2a3e78292f0ab9"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 1,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 2
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s01-05::receiver",
+      "observation_root": "sha256:ddb81b27406fb1d3551f67f0a657ab77e4d6e8d051f41d05222dac379cadd8f1",
+      "role": "receiver",
+      "slot": 1,
+      "task_order": 5,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a",
+      "terminal_state": "success",
+      "elapsed_seconds": 39.260801,
+      "usage": {
+        "input_tokens": 19154,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1623,
+        "reasoning_output_tokens": 1005
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-01--task-05--fixture-05.output.json",
+        "size": 2786,
+        "raw_sha256": "sha256:80352bd28f06b1073164b33f246e25e94032f686773dc6c3da7f08c015e95028"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 1,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 4
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s02-02::receiver",
+      "observation_root": "sha256:532fd9be6dd49d64804551a1bfbb9b865f9fab435222f31fd1485ca912185d15",
+      "role": "receiver",
+      "slot": 2,
+      "task_order": 1,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:0e0824641f75166903af3a4642d89f01ecdd0ae0b0a46a9512136e0d2bcf5191",
+      "terminal_state": "success",
+      "elapsed_seconds": 38.081649,
+      "usage": {
+        "input_tokens": 27273,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1789,
+        "reasoning_output_tokens": 1034
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-02--task-01--fixture-02.output.json",
+        "size": 3569,
+        "raw_sha256": "sha256:b66d7f3db2313c234081d7498a08d851c9b0d9bfc3d23aa9699d8a1e0c373f02"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 1,
+        "unsupported_claims_identified_count": 4,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 4
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s02-03::receiver",
+      "observation_root": "sha256:7c0f102c72435597c295ecd16e2c72c867af39bd530ebb7b5f76dfb17d86d9ad",
+      "role": "receiver",
+      "slot": 2,
+      "task_order": 2,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+      "terminal_state": "success",
+      "elapsed_seconds": 26.630933,
+      "usage": {
+        "input_tokens": 26441,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1192,
+        "reasoning_output_tokens": 745
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-02--task-02--fixture-03.output.json",
+        "size": 2007,
+        "raw_sha256": "sha256:d0b76c98abb00905b9791b5818a5bb92bc9121d9d7023039c8bdeba0d73f29e8"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 4
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s02-04::receiver",
+      "observation_root": "sha256:b4a63d0619fdfaebdc4a8e8b4859470814ac7a1ae6db3bb5598f8645849c0959",
+      "role": "receiver",
+      "slot": 2,
+      "task_order": 3,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0",
+      "terminal_state": "success",
+      "elapsed_seconds": 38.308799,
+      "usage": {
+        "input_tokens": 35342,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1219,
+        "reasoning_output_tokens": 516
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-02--task-03--fixture-04.output.json",
+        "size": 3117,
+        "raw_sha256": "sha256:faae13835fa0f8b171a180e2b6abf8ff9031a0105d83d0a8df3ea45bad5df0e0"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 2,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 5
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s02-05::receiver",
+      "observation_root": "sha256:e0306e4764768ebd53c558074497dbf38c9815c10e51e4b589359e3e0c129cd1",
+      "role": "receiver",
+      "slot": 2,
+      "task_order": 4,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+      "terminal_state": "success",
+      "elapsed_seconds": 37.758093,
+      "usage": {
+        "input_tokens": 29523,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1033,
+        "reasoning_output_tokens": 473
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-02--task-04--fixture-05.output.json",
+        "size": 2535,
+        "raw_sha256": "sha256:662701bf414619afaa91e3ce1f5900b99b232f55f32014cb3182d15ac484b387"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 4,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 6
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s02-01::receiver",
+      "observation_root": "sha256:6592c5687cdb89bd16860f991fd33c1428300cbd748e98f9fbe89addb5f078b3",
+      "role": "receiver",
+      "slot": 2,
+      "task_order": 5,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa",
+      "terminal_state": "success",
+      "elapsed_seconds": 72.952543,
+      "usage": {
+        "input_tokens": 26483,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3256,
+        "reasoning_output_tokens": 2736
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-02--task-05--fixture-01.output.json",
+        "size": 2428,
+        "raw_sha256": "sha256:f1f56b0772fd2fccf56e52856ec4ff517a876a9845c7f2e41440cf62954c2296"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 3
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s03-03::receiver",
+      "observation_root": "sha256:f02bd482bec6cf9168daf5092772bb2f8737d7b9833f2fa2bb902660d1a183df",
+      "role": "receiver",
+      "slot": 3,
+      "task_order": 1,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+      "terminal_state": "success",
+      "elapsed_seconds": 21.738408,
+      "usage": {
+        "input_tokens": 26440,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 989,
+        "reasoning_output_tokens": 486
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-03--task-01--fixture-03.output.json",
+        "size": 2182,
+        "raw_sha256": "sha256:7f5a553ca7737b071f75150c1a5ca460ce18cd5a6cf26d1322b97892833eb624"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 2
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s03-04::receiver",
+      "observation_root": "sha256:e4fe2334f68e9528d1d2ab4824668eeba0496d52d30a15e0db226472239fb255",
+      "role": "receiver",
+      "slot": 3,
+      "task_order": 2,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+      "terminal_state": "success",
+      "elapsed_seconds": 32.107988,
+      "usage": {
+        "input_tokens": 41142,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1563,
+        "reasoning_output_tokens": 839
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-03--task-02--fixture-04.output.json",
+        "size": 3239,
+        "raw_sha256": "sha256:7c7e84c6e66c492d9446b3cd0b4d4102ace0d22d5441db3b6df02f4c93f73111"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 4
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s03-05::receiver",
+      "observation_root": "sha256:c21c30c5ff75c3fc3883c59035c3a327aad071026ee6a4519feac2e04c5b326c",
+      "role": "receiver",
+      "slot": 3,
+      "task_order": 3,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a",
+      "terminal_state": "success",
+      "elapsed_seconds": 19.223883,
+      "usage": {
+        "input_tokens": 19178,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 747,
+        "reasoning_output_tokens": 206
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-03--task-03--fixture-05.output.json",
+        "size": 2480,
+        "raw_sha256": "sha256:a7f4752ac3ce8520c93f3adae4ea56c368d4fda4d34c50578fafd7a403a64efb"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 1,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 5
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s03-01::receiver",
+      "observation_root": "sha256:591c150420d75c29ab78157dd680419a059385994695e0de64e628bade6e20a5",
+      "role": "receiver",
+      "slot": 3,
+      "task_order": 4,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:34f9ce1e77b28e8ebcd9a49f57f4e976a890eabda546594d24ae588b465554fc",
+      "terminal_state": "success",
+      "elapsed_seconds": 48.029499,
+      "usage": {
+        "input_tokens": 19140,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2193,
+        "reasoning_output_tokens": 1552
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-03--task-04--fixture-01.output.json",
+        "size": 2938,
+        "raw_sha256": "sha256:b0a564666172779e07733bb5c5704645fa102cda661463c36fb7341c92f51d39"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 4
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s03-02::receiver",
+      "observation_root": "sha256:a74e75c6666226299003bf429d0ecf3852dfae5a028a22cb26167fe8cb5b0f08",
+      "role": "receiver",
+      "slot": 3,
+      "task_order": 5,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:0e0824641f75166903af3a4642d89f01ecdd0ae0b0a46a9512136e0d2bcf5191",
+      "terminal_state": "success",
+      "elapsed_seconds": 42.132758,
+      "usage": {
+        "input_tokens": 27185,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1845,
+        "reasoning_output_tokens": 1258
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-03--task-05--fixture-02.output.json",
+        "size": 2637,
+        "raw_sha256": "sha256:735aa952e6e7be167e86ac3bb0928cb39e36636b5aa058eea2d0a75cecd00613"
+      },
+      "score": {
+        "verdict_correct": false,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 2,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 4
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s04-04::receiver",
+      "observation_root": "sha256:495314186397033135393a0af359b556a1b0850e3e3e9f7e4426f471bd56463d",
+      "role": "receiver",
+      "slot": 4,
+      "task_order": 1,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0",
+      "terminal_state": "success",
+      "elapsed_seconds": 25.331176,
+      "usage": {
+        "input_tokens": 35336,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1077,
+        "reasoning_output_tokens": 397
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-04--task-01--fixture-04.output.json",
+        "size": 3035,
+        "raw_sha256": "sha256:4117bb20ccdbaaa4899a3f7f95a5a2da31d59c8c8951ed8722a10eec61346e58"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 2,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 3
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s04-05::receiver",
+      "observation_root": "sha256:9cf9e531cb7186315274a9c6da3725fe3a790fbf8e30cb0f65c027735177b053",
+      "role": "receiver",
+      "slot": 4,
+      "task_order": 2,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+      "terminal_state": "success",
+      "elapsed_seconds": 17.861554,
+      "usage": {
+        "input_tokens": 29526,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 772,
+        "reasoning_output_tokens": 245
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-04--task-02--fixture-05.output.json",
+        "size": 2420,
+        "raw_sha256": "sha256:e8cf4262a008ba819b397d1d6268d3da6072de8ade24a8d9bff261cddec83e37"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 4,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 6
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s04-01::receiver",
+      "observation_root": "sha256:6714e917907c3d6093ec4a5e41fad05dcf182c92fd22e2c56236f9191a555f9d",
+      "role": "receiver",
+      "slot": 4,
+      "task_order": 3,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa",
+      "terminal_state": "success",
+      "elapsed_seconds": 34.717288,
+      "usage": {
+        "input_tokens": 26502,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1613,
+        "reasoning_output_tokens": 952
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-04--task-03--fixture-01.output.json",
+        "size": 2989,
+        "raw_sha256": "sha256:c4274d367fa35bfbe93b35dda011c101a9c736ae360f1467952520796e2c1951"
+      },
+      "score": {
+        "verdict_correct": false,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 1,
+        "unsupported_claims_identified_count": 1,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 4
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s04-02::receiver",
+      "observation_root": "sha256:f15de1261ed63549a616ac430c8624707d4aa4c53fad01b65abcbca802c1c5b8",
+      "role": "receiver",
+      "slot": 4,
+      "task_order": 4,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+      "terminal_state": "success",
+      "elapsed_seconds": 37.546782,
+      "usage": {
+        "input_tokens": 33214,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1425,
+        "reasoning_output_tokens": 806
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-04--task-04--fixture-02.output.json",
+        "size": 2757,
+        "raw_sha256": "sha256:e2a1ce8897eac39617d82ab76b05f601ebd4328149957e914c58af9110c259af"
+      },
+      "score": {
+        "verdict_correct": false,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 2,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 3
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s04-03::receiver",
+      "observation_root": "sha256:5cc15a93b35d7e987e0b802b0fcba50693afef70b1968315e3bf24e81f323fee",
+      "role": "receiver",
+      "slot": 4,
+      "task_order": 5,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:702406f0ae0aaa12a8c31f64aecd19809253af52dc1ac615ec5fca723242dc88",
+      "terminal_state": "success",
+      "elapsed_seconds": 17.839203,
+      "usage": {
+        "input_tokens": 18454,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 826,
+        "reasoning_output_tokens": 254
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-04--task-05--fixture-03.output.json",
+        "size": 2482,
+        "raw_sha256": "sha256:58b62ba8fb878882e372b2e1943584418bf04829b5377505641a8eaf69c61b3a"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 3,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 4
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s05-05::receiver",
+      "observation_root": "sha256:92c0b339232b3739a44be69ebf5dd7681c3829bc2231d0c70918c975bf5b22ab",
+      "role": "receiver",
+      "slot": 5,
+      "task_order": 1,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a",
+      "terminal_state": "success",
+      "elapsed_seconds": 18.738156,
+      "usage": {
+        "input_tokens": 19226,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 892,
+        "reasoning_output_tokens": 276
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-05--task-01--fixture-05.output.json",
+        "size": 2810,
+        "raw_sha256": "sha256:1f88febc28a73a34ac2e7e335cc036737c5b5541908bd624da5c32ef2ece75fa"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 4,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 4
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s05-01::receiver",
+      "observation_root": "sha256:5ad67b7828c0c897d89de64f07aefc8aa531a6c773a9adb6fa9ab28460be57fb",
+      "role": "receiver",
+      "slot": 5,
+      "task_order": 2,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:34f9ce1e77b28e8ebcd9a49f57f4e976a890eabda546594d24ae588b465554fc",
+      "terminal_state": "success",
+      "elapsed_seconds": 87.124207,
+      "usage": {
+        "input_tokens": 19006,
+        "cached_input_tokens": 18176,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1178,
+        "reasoning_output_tokens": 640
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-05--task-02--fixture-01.output.json",
+        "size": 2444,
+        "raw_sha256": "sha256:e78f15ff3e473322236e1b971028513abc83eadf2fced80bd562bd10cb6feb3b"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 1,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 2
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s05-02::receiver",
+      "observation_root": "sha256:e4b78b5d5d44c900b3b522c1738f99293af6cb6cc475de7d0b6a6e0539d20b01",
+      "role": "receiver",
+      "slot": 5,
+      "task_order": 3,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+      "terminal_state": "success",
+      "elapsed_seconds": 49.779178,
+      "usage": {
+        "input_tokens": 33158,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2136,
+        "reasoning_output_tokens": 1552
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-05--task-03--fixture-02.output.json",
+        "size": 2583,
+        "raw_sha256": "sha256:625a556e48de8c78cc418face8d2eea2d893beb75cb790833b587d9f6fbd28a2"
+      },
+      "score": {
+        "verdict_correct": false,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 3,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 3
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s05-03::receiver",
+      "observation_root": "sha256:76a5838e15f01d81b9207222cff36fd7b1b5ef00f1b020f9b5952694c8dfc6d6",
+      "role": "receiver",
+      "slot": 5,
+      "task_order": 4,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+      "terminal_state": "success",
+      "elapsed_seconds": 28.505764,
+      "usage": {
+        "input_tokens": 26426,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1092,
+        "reasoning_output_tokens": 516
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-05--task-04--fixture-03.output.json",
+        "size": 2644,
+        "raw_sha256": "sha256:43ddcd6e759710567ea5e7668580b4448b91f9a4f8f1133229cc31093b3b1379"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 3
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s05-04::receiver",
+      "observation_root": "sha256:d965c8cd308ff43ecb45c205b619baaccd2a214cce1f3169b9e970adae154a4d",
+      "role": "receiver",
+      "slot": 5,
+      "task_order": 5,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0",
+      "terminal_state": "success",
+      "elapsed_seconds": 35.136822,
+      "usage": {
+        "input_tokens": 35391,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1790,
+        "reasoning_output_tokens": 1034
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-05--task-05--fixture-04.output.json",
+        "size": 3288,
+        "raw_sha256": "sha256:f9b7a47307128fb7694500cc962e0e89a75155074c88aac0bd782d4918404c18"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 3,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 4
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s06-05::receiver",
+      "observation_root": "sha256:2f47917b767c54f1419a2b6ca57c0dba1abaab19e5d7658bd737748d5c42a064",
+      "role": "receiver",
+      "slot": 6,
+      "task_order": 1,
+      "fixture_id": "unavailable-rupert-3959",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+      "terminal_state": "success",
+      "elapsed_seconds": 20.73849,
+      "usage": {
+        "input_tokens": 29474,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 920,
+        "reasoning_output_tokens": 384
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-06--task-01--fixture-05.output.json",
+        "size": 2318,
+        "raw_sha256": "sha256:f4df765450c3d6f777498e1968b930d444ff926055409d915b96babb259a14dd"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 3,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 6
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s06-04::receiver",
+      "observation_root": "sha256:ce3c32f9932b1b3153d48478ab36f56d6b170ba3df6445851c49284341205b9e",
+      "role": "receiver",
+      "slot": 6,
+      "task_order": 2,
+      "fixture_id": "vacuity-erdos-80-4830",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+      "terminal_state": "success",
+      "elapsed_seconds": 21.036642,
+      "usage": {
+        "input_tokens": 41006,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1026,
+        "reasoning_output_tokens": 389
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-06--task-02--fixture-04.output.json",
+        "size": 2704,
+        "raw_sha256": "sha256:81df145e32d834660c0a9dabb3c71426123fbaa8b9a0d835df46bcc93ce5af77"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": true,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 0,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 3
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s06-03::receiver",
+      "observation_root": "sha256:89e7a7f1e3dfe3eae680657dd1e304788c33b7ee46b6c580423d142b4ac5dbbc",
+      "role": "receiver",
+      "slot": 6,
+      "task_order": 3,
+      "fixture_id": "fidelity-erdos-887-1237",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:702406f0ae0aaa12a8c31f64aecd19809253af52dc1ac615ec5fca723242dc88",
+      "terminal_state": "success",
+      "elapsed_seconds": 22.960245,
+      "usage": {
+        "input_tokens": 18584,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1007,
+        "reasoning_output_tokens": 329
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-06--task-03--fixture-03.output.json",
+        "size": 3107,
+        "raw_sha256": "sha256:98201087a8444cebd39f542ca7f25bffc624745b3669efb92be3c9b3f3573711"
+      },
+      "score": {
+        "verdict_correct": false,
+        "expected_issue_detected": false,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 1,
+        "unsupported_claims_identified_count": 2,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 3
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s06-02::receiver",
+      "observation_root": "sha256:41c637273973179d5babe840b547a1d8cfc1701c90b7812ee82eecd9c43b3ca3",
+      "role": "receiver",
+      "slot": 6,
+      "task_order": 4,
+      "fixture_id": "conditional-erdos-427-4884",
+      "condition": "plain-git-and-current-review-artifacts",
+      "packet_root": "sha256:0e0824641f75166903af3a4642d89f01ecdd0ae0b0a46a9512136e0d2bcf5191",
+      "terminal_state": "success",
+      "elapsed_seconds": 25.844819,
+      "usage": {
+        "input_tokens": 27195,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1102,
+        "reasoning_output_tokens": 500
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-06--task-04--fixture-02.output.json",
+        "size": 2893,
+        "raw_sha256": "sha256:fd3ec3e3cd82174e30f84367fee4cb9f8b23c15b9fe89534a981caba7f089058"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 3,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 3
+      }
+    },
+    {
+      "observation_id": "agent-eval-handoff-s06-01::receiver",
+      "observation_root": "sha256:f5b33b30eda8cc923fbbab1e87ac3784118f58843fb57118683c895f9e555505",
+      "role": "receiver",
+      "slot": 6,
+      "task_order": 5,
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa",
+      "terminal_state": "success",
+      "elapsed_seconds": 32.368008,
+      "usage": {
+        "input_tokens": 26350,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1603,
+        "reasoning_output_tokens": 1034
+      },
+      "output": {
+        "path": "evidence/formal-conjectures/agent-evaluation/runs/receiver/slot-06--task-05--fixture-01.output.json",
+        "size": 2580,
+        "raw_sha256": "sha256:a31d462dfaff7a81c0adeb3aefddcaa18cd770234b12a5090c18824f6e885166"
+      },
+      "score": {
+        "verdict_correct": true,
+        "expected_issue_detected": true,
+        "consequential_issue_detected": false,
+        "unexpected_issue_count": 0,
+        "unsupported_claims_identified_count": 1,
+        "authority_boundary_violation": false,
+        "missing_provenance_count": 3
+      }
+    }
+  ],
+  "index_root": "sha256:4d452d8ccd59ec32e133cb4fe99749b578fcbeab3d6781463fc6b592a0502b24"
+}

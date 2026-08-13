@@ -1,0 +1,33 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "vacuity-erdos-80-4830",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0",
+  "sender_output_sha256": "sha256:30ab7617728685c35a28a6fec89693c975771b7a2916d8d55d86970b0b7b6f0f",
+  "retained_verdict": "needs_revision",
+  "retained_issue_codes": [
+    "vacuous_hypothesis"
+  ],
+  "layered_summary": "Mechanical: the retained GitHub observation records `Build project` run 93244178114 succeeding for exact head e2e2a6064b474781d3b5b4a32e3d77956d6968da; other runs include skipped jobs, and the empty legacy-status aggregate does not override the check run. Source fidelity: NEEDS REVISION. Both asymptotic statements quantify over every c > 0, although for c ≥ 1/2 (for example c = 2) admissibility is eventually empty, f c n is 0, and the asserted positive growth is impossible for a feasibility reason outside the intended question. Artifact availability: the PR 4830 source is exactly identified by commit, blob SHA-1, raw SHA-256, path, and retained bytes; the claimed build can only be scoped to its retained check attestation because logs and execution environment are absent. Community: PR 4830 was approved and merged, while the observed PR 4877 was open and proposed the c < 1/2 correction with a favorable review comment. Authority: none; none of these states confers acceptance or Standing.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [
+    "Immutable contents or snapshot of the cited erdosproblems.com/80 source used for direct source comparison",
+    "Build-project log bytes, workflow definition, toolchain identity, and environment needed to reproduce the exact mechanical run",
+    "Retained output and invocation details for the three claimed `#print axioms` checks",
+    "Exact corrected `FormalConjectures/ErdosProblems/80.lean` bytes/blob and mechanical check evidence for PR 4877"
+  ],
+  "next_obligation": "Produce and retain an exact corrected artifact restricting both asymptotic statements to 0 < c < 1/2, mechanically check that exact artifact, and reassess it against an immutable source snapshot.",
+  "unsupported_claims": [
+    "PR 4830's statement that the empty admissible case is not reached by the asymptotic questions is contradicted by the unrestricted quantification over every c > 0; c = 2 is a concrete witness.",
+    "The PR body's specific claim that `lake --wfail build` was clean is not independently reproducible from the retained check conclusion without its logs and execution provenance.",
+    "The claimed `#print axioms` results are not backed by retained command output or toolchain provenance."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The successful exact-head build establishes compilation, not semantic fidelity.",
+    "The approval and merge of PR 4830 do not establish acceptance, Standing, or correctness of the formalization.",
+    "The open status and favorable review comment for PR 4877 do not establish that its correction was merged, mechanically checked, or accepted.",
+    "This receiver verdict is not a Formal Conjectures maintainer action or Vela Decision."
+  ],
+  "confidence": "high"
+}

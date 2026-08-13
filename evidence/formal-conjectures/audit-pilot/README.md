@@ -102,12 +102,14 @@ and PR `#4877`'s exact correction of PR `#4830`. AI packet preparation is
 advisory transcription; it does not itself supply human ground truth, create a
 Math Repository Decision, or change Standing.
 
-An AI review is advisory observation by default. It can become a Vela
+A human or AI review is advisory evidence by default. Either can become a Vela
 Verification only through the local Repository's eligible-verifier policy,
-committed method, exact-input, signing, and submission boundary; this audit
-packet cannot mint one. Likewise, an FC review, merge, rejection, or correction
-is an external community observation for Math. Only an authorized human Math
-Repository Decision can change local Math Standing.
+committed method, exact-input, signing, and submission boundary; reviewer class
+is retained provenance, not a quality rank, and this audit packet cannot mint a
+Verification. Likewise, an FC review, merge, rejection, or correction is an
+external community observation for Math. Only an authorized, attributed Math
+Repository Decision changes local Standing; its performer may be human or
+agent and must remain distinct from the Repository authority principal.
 
 ## Authority and limits
 

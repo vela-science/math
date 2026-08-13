@@ -1,0 +1,84 @@
+{
+  "schema": "vela.math.fc-audit.agent-task-observation.v0.1",
+  "observation_id": "agent-eval-handoff-s05-05::sender",
+  "role": "sender",
+  "authority_effect": "none",
+  "task_context_id": "agent:codex-eval-sender-s05-unavailable-rupert-3959",
+  "slot": 5,
+  "task_order": 1,
+  "fixture_id": "unavailable-rupert-3959",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a",
+  "handoff_id": "agent-eval-handoff-s05-05",
+  "runner": {
+    "model": "gpt-5.6-sol",
+    "provider": "openai",
+    "runtime": "codex-cli 0.145.0",
+    "reasoning_effort": "high",
+    "session_policy": "fresh_ephemeral_task_context",
+    "disabled_features": [
+      "plugins",
+      "apps",
+      "memories",
+      "browser_use",
+      "in_app_browser",
+      "computer_use",
+      "image_generation",
+      "goals",
+      "workspace_dependencies",
+      "multi_agent",
+      "shell_tool",
+      "unified_exec"
+    ],
+    "sandbox": "read-only",
+    "working_directory": "empty_temporary_directory_not_retained"
+  },
+  "independence_classification": "separate_task_context_same_model_provider_runtime_operator",
+  "bundle": {
+    "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/unavailable-rupert-3959--plain-git-and-current-review-artifacts.json",
+    "raw_sha256": "sha256:c59fb49559a469400b9f9408a22456ac78b45f3a6c1cf9e42496ceb7d3326e50",
+    "size": 20400,
+    "bundle_root": "sha256:88cef0e88392c8ce945d8cb6d56920ba8cb8e24d7eeab21ffd184eaa6a8afd06"
+  },
+  "started_at": "2026-08-13T21:05:14.314Z",
+  "completed_at": "2026-08-13T21:05:35.446Z",
+  "elapsed_seconds": 21.131551,
+  "terminal_state": "success",
+  "return_code": 0,
+  "usage": {
+    "input_tokens": 18614,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 991,
+    "reasoning_output_tokens": 382
+  },
+  "output": {
+    "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-05--task-01--fixture-05.output.json",
+    "size": 2518,
+    "raw_sha256": "sha256:be4ecea146951dfae72fc636e627675e04c7f9e526741b862eab472632c8fa0c"
+  },
+  "event_log": {
+    "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-05--task-01--fixture-05.events.jsonl",
+    "size": 2800,
+    "raw_sha256": "sha256:102b85ea5a058f2275cd8143cbac2703849fe76e8a26ea258e363f327a101ca9",
+    "normalization": [
+      "home path replaced with $USER_HOME",
+      "temporary task path replaced with $TASK_DIR"
+    ]
+  },
+  "stderr_log": {
+    "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-05--task-01--fixture-05.stderr.txt",
+    "size": 0,
+    "raw_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "normalization": [
+      "home path replaced with $USER_HOME",
+      "temporary task path replaced with $TASK_DIR"
+    ]
+  },
+  "parse_error": null,
+  "does_not_establish": [
+    "This attributed agent task output is advisory evidence, not acceptance or Standing.",
+    "Separate task contexts sharing a model and provider are not institutionally independent."
+  ],
+  "observation_root": "sha256:f9d675827e2daa8ae549dcd84e462de03d4b328502fd762918f494828cb76b37"
+}

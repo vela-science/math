@@ -1,0 +1,36 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "conditional-erdos-427-4884",
+  "condition": "same-inputs-plus-fc-pr-audit",
+  "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+  "sender_output_sha256": "sha256:9fd8c8c26bd04fb7b00b42db25774905f8603e37cfdb68cf9ce4b54449a2ea34",
+  "retained_verdict": "inconclusive",
+  "retained_issue_codes": [
+    "conditional_proof_dependency"
+  ],
+  "layered_summary": "Mechanical: retained GitHub check run 93932003906 reports Build project success for exact head 601aff40d6fa6c3150242144fadba5dbcc24c89c, while other runs include both successes and skips. Source fidelity: inconclusive because no independent source comparison establishes the exact Lean statement, and the retained metadata review does not execute or compare the linked proof. Artifact availability: exact identities and hashes are retained for the head source, linked proof, and audit artifacts, but the linked-proof bytes and an executable reproduction environment are not supplied in this JSON context, so the mechanical and proof claims can only be scoped. Community: PR 4884 was OPEN, REVIEW_REQUIRED, BLOCKED, unmerged, and had no reviews at the retained observation time. Authority: none; no check, review, audit disposition, PR state, or commit establishes acceptance or Standing.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [
+    "Independent source content and locator sufficient to compare the exact Erdos 427 statement",
+    "Linked-proof bytes within the supplied receiver material",
+    "Independent execution transcript and environment identity for the linked proof against the exact head",
+    "Independent witness-backed comparison showing that the linked proof derives Erdos427.erdos_427 from the stated ShiuTheorem"
+  ],
+  "next_obligation": "Obtain the retained linked-proof bytes and a reproducible Lean environment, execute and compare that proof against Erdos427.erdos_427 and Erdos427.erdos_427.variants.shiu at head 601aff40d6fa6c3150242144fadba5dbcc24c89c, then compare the exact formal statement with an independent source.",
+  "unsupported_claims": [
+    "The sender's artifact_availability value \"exact\" is supported for artifact identity and hashes but overstates receiver-accessible availability because the linked-proof bytes are not included in the supplied JSON material.",
+    "The retained metadata-review pass does not establish that the linked proof correctly derives the exact Lean statement from ShiuTheorem.",
+    "The Build project check success is a retained external attestation, not an independently reproduced result in this task context.",
+    "Full semantic fidelity to Erdős Problem 427 is not established by an independent source comparison."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "Mathematical truth or proof correctness",
+    "An unconditional or complete formal proof of Erdos427.erdos_427",
+    "Full source fidelity",
+    "Independent reproduction of the build or linked proof",
+    "Acceptance, merge, or Standing",
+    "That every check ran or succeeded"
+  ],
+  "confidence": "high"
+}

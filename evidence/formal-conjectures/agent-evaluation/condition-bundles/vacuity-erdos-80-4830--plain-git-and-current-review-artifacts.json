@@ -1,0 +1,1379 @@
+{
+  "schema": "vela.math.fc-audit.agent-condition-bundle.v0.1",
+  "authority_effect": "none",
+  "fixture_id": "vacuity-erdos-80-4830",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0",
+  "condition_packet": {
+    "schema": "vela.math.fc-audit.condition-packet.v0.1",
+    "packet_id": "vacuity-erdos-80-4830::plain-git-and-current-review-artifacts",
+    "condition": "plain-git-and-current-review-artifacts",
+    "authority_effect": "none",
+    "fixture_id": "vacuity-erdos-80-4830",
+    "task_wording": [
+      {
+        "id": "locate-evidence",
+        "prompt": "Locate the exact changed statement, every declared proof artifact, each check result, and the base and head identities. Record missing or ambiguous fields.",
+        "stop_condition": "The participant either records all requested locators or states that a requested item is unavailable."
+      },
+      {
+        "id": "classify-checks",
+        "prompt": "Separate mechanical checks, semantic-fidelity findings, artifact availability, and external community status. Preserve conditions and does-not-establish limits.",
+        "stop_condition": "Every observed result is assigned to one layer without inferring acceptance from pass."
+      },
+      {
+        "id": "review-fidelity",
+        "prompt": "Compare the exact Lean statement with its source and report a witness-backed verdict or an explicit inconclusive result.",
+        "stop_condition": "The participant records CLEAN, ACCEPT WITH NITS, NEEDS REVISION, or an explicit unresolved question, with the source locator and witness rules from the review guide."
+      },
+      {
+        "id": "reproduce-artifact",
+        "prompt": "Follow the retained commands or artifact locator far enough to reproduce or scope the claimed mechanical result. Record unavailable tools or bytes separately from failures.",
+        "stop_condition": "The artifact is reproduced, a retained attestation is scoped, or the attempt ends with fail, error, inconclusive, or unavailable and an exact reason."
+      },
+      {
+        "id": "handoff-continuation",
+        "prompt": "A receiver distinct from the sender continues from the rooted retained condition packet and explains the result, limits, and next unresolved obligation without private operator context.",
+        "stop_condition": "The linked receiver continuation observation gives a correct layer-separated account or identifies the missing provenance that prevents continuation."
+      }
+    ],
+    "pull_request": {
+      "repository": "google-deepmind/formal-conjectures",
+      "number": 4830,
+      "url": "https://github.com/google-deepmind/formal-conjectures/pull/4830",
+      "base_commit": "5fe1f74ad497d950e4c2094879ab10708907f7c6",
+      "head_commit": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+      "changed_paths": [
+        "FormalConjectures/ErdosProblems/80.lean"
+      ],
+      "files_observation": {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-files-observation.json",
+        "sha256": "4ab3f09e0ee75a0640b896b55d21b3bbb760988c39a74bd5bdf0cb096bc767d4"
+      }
+    },
+    "source_repository_url": "https://github.com/google-deepmind/formal-conjectures.git",
+    "source_setup_commands": [
+      [
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/google-deepmind/formal-conjectures.git",
+        "$SOURCE_CHECKOUT"
+      ],
+      [
+        "git",
+        "-C",
+        "$SOURCE_CHECKOUT",
+        "checkout",
+        "--detach",
+        "e2e2a6064b474781d3b5b4a32e3d77956d6968da"
+      ]
+    ],
+    "public_source_command": [
+      "git",
+      "-C",
+      "$SOURCE_CHECKOUT",
+      "show",
+      "e2e2a6064b474781d3b5b4a32e3d77956d6968da:FormalConjectures/ErdosProblems/80.lean"
+    ],
+    "shared_evidence": [
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-check-observation.json",
+        "raw_sha256": "sha256:588efba02429ba63f3a05ceb39d50138168c1c469648d683c9e4ce362da091ff",
+        "size": 11186
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-files-observation.json",
+        "raw_sha256": "sha256:4ab3f09e0ee75a0640b896b55d21b3bbb760988c39a74bd5bdf0cb096bc767d4",
+        "size": 2066
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-reviews.json",
+        "raw_sha256": "sha256:9085fe9ef545c194c111dd0fd696cfc439c31d3959e1ef524d5df0a49e6c0e9b",
+        "size": 3946
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830.json",
+        "raw_sha256": "sha256:afff0df49c5e1a8e5344f362b187b4bee1bc5e42fa3233ced2d3368550811e27",
+        "size": 23226
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4877-reviews.json",
+        "raw_sha256": "sha256:681082770e00ff80ff7243e79144d0eade4d1a386e6a2c4e3502678f8f67a420",
+        "size": 1917
+      },
+      {
+        "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4877.json",
+        "raw_sha256": "sha256:2746db611a8a455dadbac8aaa4ed4d028b88204f4316002ef0038c100c24e6a8",
+        "size": 22221
+      }
+    ],
+    "access_limits": "Public source and the files named by this packet only. Do not use private operator context or outcome labels from another condition.",
+    "treatment_evidence": [],
+    "does_not_establish": [
+      "The packet label does not reveal the expected fixture outcome to the participant.",
+      "A review answer is not a Formal Conjectures maintainer action or Vela Decision."
+    ],
+    "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0"
+  },
+  "public_source": {
+    "fixture_id": "vacuity-erdos-80-4830",
+    "repository": "google-deepmind/formal-conjectures",
+    "commit": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+    "source_path": "FormalConjectures/ErdosProblems/80.lean",
+    "git_blob_sha1": "9dd6a9933931fcfbeea61eac777d4155dacb9eb1",
+    "source_url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/e2e2a6064b474781d3b5b4a32e3d77956d6968da/FormalConjectures/ErdosProblems/80.lean",
+    "local_path": "evidence/formal-conjectures/agent-evaluation/public-source/vacuity-erdos-80-4830/80.lean",
+    "size": 4176,
+    "raw_sha256": "sha256:519cc02b3389c89bc87c16d548c6b028e6bb2c1c3bad410a1758f470de18de4e",
+    "content_utf8": "/-\nCopyright 2026 The Formal Conjectures Authors.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n-/\n\nimport FormalConjecturesUtil\n\n/-!\n# Erdős Problem 80\n\n*References:*\n- [erdosproblems.com/80](https://www.erdosproblems.com/80)\n- [erdosproblems.com/600](https://www.erdosproblems.com/600), stated in\n  `FormalConjectures/ErdosProblems/600.lean`\n\n600 asks the same question from the other side. `Erdos600.eFunction n r` is the least edge\ncount forcing some edge into `r` triangles; `f c n` here is the largest book forced once the\nedge count is at least $cn^2$. So `r ≤ f c n` and `Erdos600.eFunction n r ≤ c * n^2` say the\nsame thing, and the two functions are inverse to each other in that sense. Both are built on\n`SimpleGraph.trianglesContaining`, which 600 introduced.\n-/\n\nopen Filter Finset SimpleGraph\n\nopen scoped Topology\n\nnamespace Erdos80\n\nvariable {α : Type*} [Fintype α] [DecidableEq α] (G : SimpleGraph α) [DecidableRel G.Adj]\n\n/-- The size of the largest *book* in `G`: the greatest number of triangles sharing a single\nedge. `Finset.sup` gives `0` on a graph with no edges, which is the right answer there. -/\nnoncomputable def bookNumber : ℕ :=\n  G.edgeFinset.sup fun e => #(G.trianglesContaining e)\n\n/-- Every edge of `G` lies in at least one triangle. -/\ndef EveryEdgeInTriangle : Prop :=\n  ∀ e ∈ G.edgeFinset, (G.trianglesContaining e).Nonempty\n\n/-- The graphs the problem quantifies over: `n` vertices, at least $cn^2$ edges, and every\nedge in a triangle. -/\ndef Admissible (c : ℝ) {n : ℕ} (G : SimpleGraph (Fin n)) [DecidableRel G.Adj] : Prop :=\n  c * (n : ℝ) ^ 2 ≤ #G.edgeFinset ∧ EveryEdgeInTriangle G\n\nopen Classical in\n/-- $f_c(n)$, the largest book size forced on every admissible graph, which is the least book\nnumber among them.\n\n`sInf` of the empty set is `0`, so `f c n = 0` also when no graph on `n` vertices has $cn^2$\nedges at all. That is the honest reading: nothing is forced when nothing qualifies. -/\nnoncomputable def f (c : ℝ) (n : ℕ) : ℕ :=\n  sInf {m | ∃ G : SimpleGraph (Fin n), Admissible c G ∧ bookNumber G = m}\n\n/--\nLet $c>0$ and let $f_c(n)$ be the maximal $m$ such that every graph $G$ with $n$ vertices and\nat least $cn^2$ edges, where each edge is contained in at least one triangle, must contain a\nbook of size $m$, that is, an edge shared by at least $m$ different triangles. Estimate\n$f_c(n)$. In particular, is it true that $f_c(n)>n^\\epsilon$ for some $\\epsilon>0$?\n-/\n@[category research open, AMS 5]\ntheorem erdos_80 :\n    answer(sorry) ↔ ∀ c : ℝ, 0 < c → ∃ ε > (0 : ℝ), ∀ᶠ n : ℕ in atTop,\n      (n : ℝ) ^ ε < f c n := by\n  sorry\n\n/--\nThe weaker question from the same problem: is $f_c(n) \\gg \\log n$?\n-/\n@[category research open, AMS 5]\ntheorem erdos_80.variants.log :\n    answer(sorry) ↔ ∀ c : ℝ, 0 < c →\n      (fun n : ℕ ↦ (f c n : ℝ)) ≫ (fun n : ℕ ↦ Real.log n) := by\n  sorry\n\nomit [DecidableEq α] in\n/-- A book is counted by triangles, so `bookNumber` is `0` exactly when no edge lies in one. -/\n@[category API, AMS 5]\ntheorem bookNumber_eq_zero_iff :\n    bookNumber G = 0 ↔ ∀ e ∈ G.edgeFinset, G.trianglesContaining e = ∅ := by\n  simp [bookNumber, Finset.card_eq_zero]\n\n/-- On a graph with no edges there is no book. -/\n@[category test, AMS 5]\ntheorem bookNumber_bot {n : ℕ} : bookNumber (⊥ : SimpleGraph (Fin n)) = 0 := by\n  simp [bookNumber]\n\n/-- `EveryEdgeInTriangle` holds vacuously on a graph with no edges, so the admissible set is\nnonempty only through the edge count. -/\n@[category API, AMS 5]\ntheorem everyEdgeInTriangle_bot {n : ℕ} :\n    EveryEdgeInTriangle (⊥ : SimpleGraph (Fin n)) := by\n  simp [EveryEdgeInTriangle]\n\nend Erdos80\n"
+  },
+  "shared_evidence": [
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-check-observation.json",
+      "raw_sha256": "sha256:588efba02429ba63f3a05ceb39d50138168c1c469648d683c9e4ce362da091ff",
+      "size": 11186,
+      "content": {
+        "schema": "vela.math.fc-audit.github-check-observation.v0.1",
+        "authority_effect": "none",
+        "repository": "google-deepmind/formal-conjectures",
+        "pull_request_number": 4830,
+        "head_commit": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+        "observed_at": "2026-08-12T19:37:09Z",
+        "normalization": {
+          "description": "Selected primary GitHub REST API fields retained as normalized evidence and sorted by numeric record id. These bytes are not a canonical GitHub response.",
+          "api_version": "2022-11-28",
+          "media_type": "application/vnd.github+json"
+        },
+        "sources": {
+          "check_runs": {
+            "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/e2e2a6064b474781d3b5b4a32e3d77956d6968da/check-runs?per_page=100",
+            "total_count": 12,
+            "records": [
+              {
+                "app": {
+                  "id": 42202,
+                  "name": "Google CLA",
+                  "owner_login": "google",
+                  "slug": "google-cla"
+                },
+                "completed_at": "2026-08-09T12:24:38Z",
+                "conclusion": "success",
+                "details_url": "https://cla.developers.google.com/about",
+                "external_id": "",
+                "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+                "html_url": "https://github.com/google-deepmind/formal-conjectures/runs/93244173945",
+                "id": 93244173945,
+                "name": "cla/google",
+                "started_at": "2026-08-09T12:24:31Z",
+                "status": "completed"
+              },
+              {
+                "app": {
+                  "id": 15368,
+                  "name": "GitHub Actions",
+                  "owner_login": "github",
+                  "slug": "github-actions"
+                },
+                "completed_at": "2026-08-09T12:24:38Z",
+                "conclusion": "success",
+                "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244175824",
+                "external_id": "dcbf80b4-53c7-5170-bdf1-340b5899f934",
+                "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+                "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244175824",
+                "id": 93244175824,
+                "name": "check-changes",
+                "started_at": "2026-08-09T12:24:33Z",
+                "status": "completed"
+              },
+              {
+                "app": {
+                  "id": 15368,
+                  "name": "GitHub Actions",
+                  "owner_login": "github",
+                  "slug": "github-actions"
+                },
+                "completed_at": "2026-08-09T12:24:38Z",
+                "conclusion": "success",
+                "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208245/job/93244175963",
+                "external_id": "a6e81242-ddd2-52d9-89a5-09c8679df590",
+                "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+                "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208245/job/93244175963",
+                "id": 93244175963,
+                "name": "labeler",
+                "started_at": "2026-08-09T12:24:34Z",
+                "status": "completed"
+              },
+              {
+                "app": {
+                  "id": 15368,
+                  "name": "GitHub Actions",
+                  "owner_login": "github",
+                  "slug": "github-actions"
+                },
+                "completed_at": "2026-08-09T13:00:59Z",
+                "conclusion": "success",
+                "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209312/job/93244178114",
+                "external_id": "4706cfe5-8db8-5195-9716-be9d13fd3b0b",
+                "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+                "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209312/job/93244178114",
+                "id": 93244178114,
+                "name": "Build project",
+                "started_at": "2026-08-09T12:24:36Z",
+                "status": "completed"
+              },
+              {
+                "app": {
+                  "id": 15368,
+                  "name": "GitHub Actions",
+                  "owner_login": "github",
+                  "slug": "github-actions"
+                },
+                "completed_at": "2026-08-09T12:24:40Z",
+                "conclusion": "success",
+                "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209341/job/93244178160",
+                "external_id": "5c5f5f5f-30b2-5f93-a73f-5b2f71a8dc3d",
+                "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+                "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209341/job/93244178160",
+                "id": 93244178160,
+                "name": "check-copyright",
+                "started_at": "2026-08-09T12:24:35Z",
+                "status": "completed"
+              },
+              {
+                "app": {
+                  "id": 15368,
+                  "name": "GitHub Actions",
+                  "owner_login": "github",
+                  "slug": "github-actions"
+                },
+                "completed_at": "2026-08-09T12:24:50Z",
+                "conclusion": "success",
+                "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209312/job/93244178161",
+                "external_id": "84fe85ae-2375-5e86-9c4a-6288b7cba166",
+                "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+                "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209312/job/93244178161",
+                "id": 93244178161,
+                "name": "Test scripts",
+                "started_at": "2026-08-09T12:24:35Z",
+                "status": "completed"
+              },
+              {
+                "app": {
+                  "id": 15368,
+                  "name": "GitHub Actions",
+                  "owner_login": "github",
+                  "slug": "github-actions"
+                },
+                "completed_at": "2026-08-09T12:25:16Z",
+                "conclusion": "success",
+                "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209317/job/93244178253",
+                "external_id": "2ad95d92-9808-5863-93b5-0330ca987360",
+                "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+                "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209317/job/93244178253",
+                "id": 93244178253,
+                "name": "scan-pr",
+                "started_at": "2026-08-09T12:24:35Z",
+                "status": "completed"
+              },
+              {
+                "app": {
+                  "id": 15368,
+                  "name": "GitHub Actions",
+                  "owner_login": "github",
+                  "slug": "github-actions"
+                },
+                "completed_at": "2026-08-09T12:24:39Z",
+                "conclusion": "skipped",
+                "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244188952",
+                "external_id": "fc809602-9104-5142-a474-5fd0e58998d7",
+                "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+                "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244188952",
+                "id": 93244188952,
+                "name": "zizmor-config",
+                "started_at": "2026-08-09T12:24:39Z",
+                "status": "completed"
+              },
+              {
+                "app": {
+                  "id": 15368,
+                  "name": "GitHub Actions",
+                  "owner_login": "github",
+                  "slug": "github-actions"
+                },
+                "completed_at": "2026-08-09T12:24:39Z",
+                "conclusion": "skipped",
+                "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244189159",
+                "external_id": "2b81b033-f805-5ac1-8c57-3b6a669c90ce",
+                "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+                "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244189159",
+                "id": 93244189159,
+                "name": "zizmor-upload",
+                "started_at": "2026-08-09T12:24:39Z",
+                "status": "completed"
+              },
+              {
+                "app": {
+                  "id": 15368,
+                  "name": "GitHub Actions",
+                  "owner_login": "github",
+                  "slug": "github-actions"
+                },
+                "completed_at": "2026-08-09T12:24:39Z",
+                "conclusion": "skipped",
+                "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244189228",
+                "external_id": "d4bb823c-3516-5071-85ed-b289d98beb4a",
+                "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+                "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244189228",
+                "id": 93244189228,
+                "name": "zizmor-scan",
+                "started_at": "2026-08-09T12:24:39Z",
+                "status": "completed"
+              },
+              {
+                "app": {
+                  "id": 15368,
+                  "name": "GitHub Actions",
+                  "owner_login": "github",
+                  "slug": "github-actions"
+                },
+                "completed_at": "2026-08-09T12:24:39Z",
+                "conclusion": "skipped",
+                "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244189344",
+                "external_id": "dbfe39c1-ef52-5878-8fb2-7dab3b1a9b44",
+                "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+                "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208214/job/93244189344",
+                "id": 93244189344,
+                "name": "zizmor-output",
+                "started_at": "2026-08-09T12:24:39Z",
+                "status": "completed"
+              },
+              {
+                "app": {
+                  "id": 15368,
+                  "name": "GitHub Actions",
+                  "owner_login": "github",
+                  "slug": "github-actions"
+                },
+                "completed_at": "2026-08-09T13:00:59Z",
+                "conclusion": "skipped",
+                "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209312/job/93248023193",
+                "external_id": "b3c95d7c-5dfb-591a-9ded-c82411f47cf9",
+                "head_sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+                "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313209312/job/93248023193",
+                "id": 93248023193,
+                "name": "deploy",
+                "started_at": "2026-08-09T13:00:59Z",
+                "status": "completed"
+              }
+            ]
+          },
+          "commit_status": {
+            "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/e2e2a6064b474781d3b5b4a32e3d77956d6968da/status?per_page=100",
+            "state": "pending",
+            "total_count": 0,
+            "records": [],
+            "interpretation": "This legacy combined-status endpoint has no status records for this commit. Its aggregate state is retained but does not override exact GitHub Check Run conclusions."
+          }
+        },
+        "mechanical_claim": {
+          "property": "The GitHub Check Run named `Build project` for this exact head completed with conclusion `success`.",
+          "result": "pass",
+          "evidence_check_run_ids": [
+            93244178114
+          ],
+          "scope": "exact_head_repository_build_check",
+          "does_not_establish": [
+            "That every check run succeeded; skipped and unrelated checks remain separately retained.",
+            "That the pull request is semantically faithful, accepted, merged, or current.",
+            "That any Vela Repository changed Standing."
+          ]
+        }
+      }
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-files-observation.json",
+      "raw_sha256": "sha256:4ab3f09e0ee75a0640b896b55d21b3bbb760988c39a74bd5bdf0cb096bc767d4",
+      "size": 2066,
+      "content": {
+        "schema": "vela.math.fc-audit.github-pr-files-observation.v0.1",
+        "authority_effect": "none",
+        "repository": "google-deepmind/formal-conjectures",
+        "pull_request_number": 4830,
+        "expected_head_commit": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+        "observed_at": "2026-08-12T19:43:55Z",
+        "acquisition_method": {
+          "api": "GitHub REST API",
+          "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4830/files?per_page=100",
+          "api_version": "2022-11-28",
+          "media_type": "application/vnd.github+json",
+          "command_shape": "gh api --paginate ... /repos/{owner}/{repo}/pulls/{number}/files?per_page=100"
+        },
+        "normalization": {
+          "description": "Selected primary GitHub REST API fields retained as normalized evidence and sorted by filename. These bytes are not a canonical GitHub response.",
+          "pagination": "all pages requested with per_page=100"
+        },
+        "files": [
+          {
+            "additions": 105,
+            "blob_url": "https://github.com/google-deepmind/formal-conjectures/blob/e2e2a6064b474781d3b5b4a32e3d77956d6968da/FormalConjectures%2FErdosProblems%2F80.lean",
+            "changes": 105,
+            "contents_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/contents/FormalConjectures%2FErdosProblems%2F80.lean?ref=e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+            "deletions": 0,
+            "filename": "FormalConjectures/ErdosProblems/80.lean",
+            "previous_filename": null,
+            "raw_url": "https://github.com/google-deepmind/formal-conjectures/raw/e2e2a6064b474781d3b5b4a32e3d77956d6968da/FormalConjectures%2FErdosProblems%2F80.lean",
+            "sha": "9dd6a9933931fcfbeea61eac777d4155dacb9eb1",
+            "status": "added"
+          }
+        ],
+        "limitations": [
+          "GitHub's pull-request files response is mutable community observation state and is not fixture identity by itself.",
+          "The separately retained pull-request snapshot binds the exact base and head commits.",
+          "Patch text is intentionally omitted; each file record retains its exact Git blob SHA and immutable commit-qualified contents URL."
+        ]
+      }
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-reviews.json",
+      "raw_sha256": "sha256:9085fe9ef545c194c111dd0fd696cfc439c31d3959e1ef524d5df0a49e6c0e9b",
+      "size": 3946,
+      "content": [
+        {
+          "_links": {
+            "html": {
+              "href": "https://github.com/google-deepmind/formal-conjectures/pull/4830#pullrequestreview-4888765813"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4830"
+            }
+          },
+          "author_association": "COLLABORATOR",
+          "body": "Thanks, looks good generally!\n\nCan you add problem 600 to the reference and have a look at the formalisation there (if they roughly agree and if they could use common concepts)",
+          "commit_id": "dea7123ec0e2bafd1c72ae6558a389d5083df76e",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/4830#pullrequestreview-4888765813",
+          "id": 4888765813,
+          "node_id": "PRR_kwDOOogmB88AAAABI2SldQ",
+          "pull_request_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4830",
+          "state": "COMMENTED",
+          "submitted_at": "2026-08-08T12:02:53Z",
+          "user": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/3491627?u=315f5464f4bc43fde3f4223201229650e9bd500b&v=4",
+            "events_url": "https://api.github.com/users/mo271/events{/privacy}",
+            "followers_url": "https://api.github.com/users/mo271/followers",
+            "following_url": "https://api.github.com/users/mo271/following{/other_user}",
+            "gists_url": "https://api.github.com/users/mo271/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/mo271",
+            "id": 3491627,
+            "login": "mo271",
+            "node_id": "MDQ6VXNlcjM0OTE2Mjc=",
+            "organizations_url": "https://api.github.com/users/mo271/orgs",
+            "received_events_url": "https://api.github.com/users/mo271/received_events",
+            "repos_url": "https://api.github.com/users/mo271/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/mo271/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/mo271/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/mo271",
+            "user_view_type": "public"
+          }
+        },
+        {
+          "_links": {
+            "html": {
+              "href": "https://github.com/google-deepmind/formal-conjectures/pull/4830#pullrequestreview-4896386490"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4830"
+            }
+          },
+          "author_association": "COLLABORATOR",
+          "body": "Thanks looks good to me!",
+          "commit_id": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/4830#pullrequestreview-4896386490",
+          "id": 4896386490,
+          "node_id": "PRR_kwDOOogmB88AAAABI9jtug",
+          "pull_request_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4830",
+          "state": "APPROVED",
+          "submitted_at": "2026-08-10T11:49:37Z",
+          "user": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/3491627?u=315f5464f4bc43fde3f4223201229650e9bd500b&v=4",
+            "events_url": "https://api.github.com/users/mo271/events{/privacy}",
+            "followers_url": "https://api.github.com/users/mo271/followers",
+            "following_url": "https://api.github.com/users/mo271/following{/other_user}",
+            "gists_url": "https://api.github.com/users/mo271/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/mo271",
+            "id": 3491627,
+            "login": "mo271",
+            "node_id": "MDQ6VXNlcjM0OTE2Mjc=",
+            "organizations_url": "https://api.github.com/users/mo271/orgs",
+            "received_events_url": "https://api.github.com/users/mo271/received_events",
+            "repos_url": "https://api.github.com/users/mo271/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/mo271/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/mo271/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/mo271",
+            "user_view_type": "public"
+          }
+        }
+      ]
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830.json",
+      "raw_sha256": "sha256:afff0df49c5e1a8e5344f362b187b4bee1bc5e42fa3233ced2d3368550811e27",
+      "size": 23226,
+      "content": {
+        "_links": {
+          "comments": {
+            "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/4830/comments"
+          },
+          "commits": {
+            "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4830/commits"
+          },
+          "html": {
+            "href": "https://github.com/google-deepmind/formal-conjectures/pull/4830"
+          },
+          "issue": {
+            "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/4830"
+          },
+          "review_comment": {
+            "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/comments{/number}"
+          },
+          "review_comments": {
+            "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4830/comments"
+          },
+          "self": {
+            "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4830"
+          },
+          "statuses": {
+            "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/statuses/e2e2a6064b474781d3b5b4a32e3d77956d6968da"
+          }
+        },
+        "active_lock_reason": null,
+        "additions": 105,
+        "assignee": null,
+        "assignees": [],
+        "author_association": "COLLABORATOR",
+        "auto_merge": null,
+        "base": {
+          "label": "google-deepmind:main",
+          "ref": "main",
+          "repo": {
+            "allow_forking": true,
+            "archive_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/{archive_format}{/ref}",
+            "archived": false,
+            "assignees_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/assignees{/user}",
+            "blobs_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/git/blobs{/sha}",
+            "branches_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/branches{/branch}",
+            "clone_url": "https://github.com/google-deepmind/formal-conjectures.git",
+            "collaborators_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/collaborators{/collaborator}",
+            "comments_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/comments{/number}",
+            "commits_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits{/sha}",
+            "compare_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/compare/{base}...{head}",
+            "contents_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/contents/{+path}",
+            "contributors_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/contributors",
+            "created_at": "2025-05-12T08:22:05Z",
+            "default_branch": "main",
+            "deployments_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/deployments",
+            "description": "A collection of formalized statements of conjectures in Lean.",
+            "disabled": false,
+            "downloads_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/downloads",
+            "events_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/events",
+            "fork": false,
+            "forks": 409,
+            "forks_count": 409,
+            "forks_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/forks",
+            "full_name": "google-deepmind/formal-conjectures",
+            "git_commits_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/git/commits{/sha}",
+            "git_refs_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/git/refs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/git/tags{/sha}",
+            "git_url": "git://github.com/google-deepmind/formal-conjectures.git",
+            "has_discussions": true,
+            "has_downloads": false,
+            "has_issues": true,
+            "has_pages": true,
+            "has_projects": true,
+            "has_pull_requests": true,
+            "has_wiki": false,
+            "homepage": "https://google-deepmind.github.io/formal-conjectures/",
+            "hooks_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/hooks",
+            "html_url": "https://github.com/google-deepmind/formal-conjectures",
+            "id": 982001159,
+            "is_template": false,
+            "issue_comment_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/comments{/number}",
+            "issue_events_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/events{/number}",
+            "issues_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues{/number}",
+            "keys_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/keys{/key_id}",
+            "labels_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/labels{/name}",
+            "language": "Lean",
+            "languages_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/languages",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "node_id": "MDc6TGljZW5zZTI=",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0"
+            },
+            "merges_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/merges",
+            "milestones_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/milestones{/number}",
+            "mirror_url": null,
+            "name": "formal-conjectures",
+            "node_id": "R_kgDOOogmBw",
+            "notifications_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/notifications{?since,all,participating}",
+            "open_issues": 1003,
+            "open_issues_count": 1003,
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/8596759?v=4",
+              "events_url": "https://api.github.com/users/google-deepmind/events{/privacy}",
+              "followers_url": "https://api.github.com/users/google-deepmind/followers",
+              "following_url": "https://api.github.com/users/google-deepmind/following{/other_user}",
+              "gists_url": "https://api.github.com/users/google-deepmind/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/google-deepmind",
+              "id": 8596759,
+              "login": "google-deepmind",
+              "node_id": "MDEyOk9yZ2FuaXphdGlvbjg1OTY3NTk=",
+              "organizations_url": "https://api.github.com/users/google-deepmind/orgs",
+              "received_events_url": "https://api.github.com/users/google-deepmind/received_events",
+              "repos_url": "https://api.github.com/users/google-deepmind/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/google-deepmind/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/google-deepmind/subscriptions",
+              "type": "Organization",
+              "url": "https://api.github.com/users/google-deepmind",
+              "user_view_type": "public"
+            },
+            "private": false,
+            "pull_request_creation_policy": "all",
+            "pulls_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls{/number}",
+            "pushed_at": "2026-08-12T19:14:54Z",
+            "releases_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/releases{/id}",
+            "size": 7145,
+            "ssh_url": "git@github.com:google-deepmind/formal-conjectures.git",
+            "stargazers_count": 1177,
+            "stargazers_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/stargazers",
+            "statuses_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/statuses/{sha}",
+            "subscribers_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/subscribers",
+            "subscription_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/subscription",
+            "svn_url": "https://github.com/google-deepmind/formal-conjectures",
+            "tags_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/tags",
+            "teams_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/teams",
+            "topics": [
+              "formal-mathematics",
+              "lean4"
+            ],
+            "trees_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/git/trees{/sha}",
+            "updated_at": "2026-08-12T17:11:01Z",
+            "url": "https://api.github.com/repos/google-deepmind/formal-conjectures",
+            "visibility": "public",
+            "watchers": 1177,
+            "watchers_count": 1177,
+            "web_commit_signoff_required": false
+          },
+          "sha": "5fe1f74ad497d950e4c2094879ab10708907f7c6",
+          "user": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/8596759?v=4",
+            "events_url": "https://api.github.com/users/google-deepmind/events{/privacy}",
+            "followers_url": "https://api.github.com/users/google-deepmind/followers",
+            "following_url": "https://api.github.com/users/google-deepmind/following{/other_user}",
+            "gists_url": "https://api.github.com/users/google-deepmind/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/google-deepmind",
+            "id": 8596759,
+            "login": "google-deepmind",
+            "node_id": "MDEyOk9yZ2FuaXphdGlvbjg1OTY3NTk=",
+            "organizations_url": "https://api.github.com/users/google-deepmind/orgs",
+            "received_events_url": "https://api.github.com/users/google-deepmind/received_events",
+            "repos_url": "https://api.github.com/users/google-deepmind/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/google-deepmind/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/google-deepmind/subscriptions",
+            "type": "Organization",
+            "url": "https://api.github.com/users/google-deepmind",
+            "user_view_type": "public"
+          }
+        },
+        "body": "Closes #309.\n\nErdős 80: with $f_c(n)$ the largest book forced on every $n$-vertex graph with at least $cn^2$ edges whose every edge lies in a triangle, estimate $f_c(n)$; in particular is $f_c(n) > n^\\epsilon$, or $f_c(n) \\gg \\log n$?\n\nA book is `#(G.trianglesContaining e)`, using the `trianglesContaining` already in `ForMathlib/Combinatorics/SimpleGraph/Clique.lean`, so nothing new was needed for it:\n\n```lean\nnoncomputable def bookNumber : ℕ :=\n  G.edgeFinset.sup fun e => #(G.trianglesContaining e)\n```\n\n`f c n` is `sInf` of the book numbers over admissible graphs, which is what \"the maximal `m` that every such graph must contain\" comes to. Both questions in the problem are stated, the $n^\\epsilon$ one as the headline and $\\gg \\log n$ as a variant, since the source asks both.\n\n`sInf ∅ = 0`, so `f c n = 0` both when some admissible graph has no book and when no graph on `n` vertices has $cn^2$ edges at all. The second is the honest reading, nothing is forced when nothing qualifies, and it only bites for `c` large enough that the class is empty, which the asymptotic questions do not reach.\n\nThree statements are proved rather than `sorry`: that `bookNumber` vanishes exactly when no edge lies in a triangle, and the two `⊥` cases. `#print axioms` on each gives only `propext, Classical.choice, Quot.sound`.\n\n`lake --wfail build` is clean.\n\n",
+        "changed_files": 1,
+        "closed_at": "2026-08-10T13:31:34Z",
+        "comments": 2,
+        "comments_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/4830/comments",
+        "commits": 4,
+        "commits_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4830/commits",
+        "created_at": "2026-08-07T18:55:21Z",
+        "deletions": 0,
+        "diff_url": "https://github.com/google-deepmind/formal-conjectures/pull/4830.diff",
+        "draft": false,
+        "head": {
+          "label": "williamjblair:erdos-80",
+          "ref": "erdos-80",
+          "repo": {
+            "allow_forking": true,
+            "archive_url": "https://api.github.com/repos/williamjblair/formal-conjectures/{archive_format}{/ref}",
+            "archived": false,
+            "assignees_url": "https://api.github.com/repos/williamjblair/formal-conjectures/assignees{/user}",
+            "blobs_url": "https://api.github.com/repos/williamjblair/formal-conjectures/git/blobs{/sha}",
+            "branches_url": "https://api.github.com/repos/williamjblair/formal-conjectures/branches{/branch}",
+            "clone_url": "https://github.com/williamjblair/formal-conjectures.git",
+            "collaborators_url": "https://api.github.com/repos/williamjblair/formal-conjectures/collaborators{/collaborator}",
+            "comments_url": "https://api.github.com/repos/williamjblair/formal-conjectures/comments{/number}",
+            "commits_url": "https://api.github.com/repos/williamjblair/formal-conjectures/commits{/sha}",
+            "compare_url": "https://api.github.com/repos/williamjblair/formal-conjectures/compare/{base}...{head}",
+            "contents_url": "https://api.github.com/repos/williamjblair/formal-conjectures/contents/{+path}",
+            "contributors_url": "https://api.github.com/repos/williamjblair/formal-conjectures/contributors",
+            "created_at": "2026-06-14T22:30:00Z",
+            "default_branch": "main",
+            "deployments_url": "https://api.github.com/repos/williamjblair/formal-conjectures/deployments",
+            "description": "A collection of formalized statements of conjectures in Lean.",
+            "disabled": false,
+            "downloads_url": "https://api.github.com/repos/williamjblair/formal-conjectures/downloads",
+            "events_url": "https://api.github.com/repos/williamjblair/formal-conjectures/events",
+            "fork": true,
+            "forks": 0,
+            "forks_count": 0,
+            "forks_url": "https://api.github.com/repos/williamjblair/formal-conjectures/forks",
+            "full_name": "williamjblair/formal-conjectures",
+            "git_commits_url": "https://api.github.com/repos/williamjblair/formal-conjectures/git/commits{/sha}",
+            "git_refs_url": "https://api.github.com/repos/williamjblair/formal-conjectures/git/refs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/williamjblair/formal-conjectures/git/tags{/sha}",
+            "git_url": "git://github.com/williamjblair/formal-conjectures.git",
+            "has_discussions": false,
+            "has_downloads": false,
+            "has_issues": false,
+            "has_pages": false,
+            "has_projects": true,
+            "has_pull_requests": true,
+            "has_wiki": false,
+            "homepage": "https://google-deepmind.github.io/formal-conjectures/",
+            "hooks_url": "https://api.github.com/repos/williamjblair/formal-conjectures/hooks",
+            "html_url": "https://github.com/williamjblair/formal-conjectures",
+            "id": 1269585603,
+            "is_template": false,
+            "issue_comment_url": "https://api.github.com/repos/williamjblair/formal-conjectures/issues/comments{/number}",
+            "issue_events_url": "https://api.github.com/repos/williamjblair/formal-conjectures/issues/events{/number}",
+            "issues_url": "https://api.github.com/repos/williamjblair/formal-conjectures/issues{/number}",
+            "keys_url": "https://api.github.com/repos/williamjblair/formal-conjectures/keys{/key_id}",
+            "labels_url": "https://api.github.com/repos/williamjblair/formal-conjectures/labels{/name}",
+            "language": "Lean",
+            "languages_url": "https://api.github.com/repos/williamjblair/formal-conjectures/languages",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "node_id": "MDc6TGljZW5zZTI=",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0"
+            },
+            "merges_url": "https://api.github.com/repos/williamjblair/formal-conjectures/merges",
+            "milestones_url": "https://api.github.com/repos/williamjblair/formal-conjectures/milestones{/number}",
+            "mirror_url": null,
+            "name": "formal-conjectures",
+            "node_id": "R_kgDOS6xWww",
+            "notifications_url": "https://api.github.com/repos/williamjblair/formal-conjectures/notifications{?since,all,participating}",
+            "open_issues": 1,
+            "open_issues_count": 1,
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/85643015?v=4",
+              "events_url": "https://api.github.com/users/williamjblair/events{/privacy}",
+              "followers_url": "https://api.github.com/users/williamjblair/followers",
+              "following_url": "https://api.github.com/users/williamjblair/following{/other_user}",
+              "gists_url": "https://api.github.com/users/williamjblair/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/williamjblair",
+              "id": 85643015,
+              "login": "williamjblair",
+              "node_id": "MDQ6VXNlcjg1NjQzMDE1",
+              "organizations_url": "https://api.github.com/users/williamjblair/orgs",
+              "received_events_url": "https://api.github.com/users/williamjblair/received_events",
+              "repos_url": "https://api.github.com/users/williamjblair/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/williamjblair/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/williamjblair/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/williamjblair",
+              "user_view_type": "public"
+            },
+            "private": false,
+            "pull_request_creation_policy": "all",
+            "pulls_url": "https://api.github.com/repos/williamjblair/formal-conjectures/pulls{/number}",
+            "pushed_at": "2026-08-12T17:01:13Z",
+            "releases_url": "https://api.github.com/repos/williamjblair/formal-conjectures/releases{/id}",
+            "size": 7633,
+            "ssh_url": "git@github.com:williamjblair/formal-conjectures.git",
+            "stargazers_count": 0,
+            "stargazers_url": "https://api.github.com/repos/williamjblair/formal-conjectures/stargazers",
+            "statuses_url": "https://api.github.com/repos/williamjblair/formal-conjectures/statuses/{sha}",
+            "subscribers_url": "https://api.github.com/repos/williamjblair/formal-conjectures/subscribers",
+            "subscription_url": "https://api.github.com/repos/williamjblair/formal-conjectures/subscription",
+            "svn_url": "https://github.com/williamjblair/formal-conjectures",
+            "tags_url": "https://api.github.com/repos/williamjblair/formal-conjectures/tags",
+            "teams_url": "https://api.github.com/repos/williamjblair/formal-conjectures/teams",
+            "topics": [],
+            "trees_url": "https://api.github.com/repos/williamjblair/formal-conjectures/git/trees{/sha}",
+            "updated_at": "2026-08-04T17:26:32Z",
+            "url": "https://api.github.com/repos/williamjblair/formal-conjectures",
+            "visibility": "public",
+            "watchers": 0,
+            "watchers_count": 0,
+            "web_commit_signoff_required": false
+          },
+          "sha": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+          "user": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/85643015?v=4",
+            "events_url": "https://api.github.com/users/williamjblair/events{/privacy}",
+            "followers_url": "https://api.github.com/users/williamjblair/followers",
+            "following_url": "https://api.github.com/users/williamjblair/following{/other_user}",
+            "gists_url": "https://api.github.com/users/williamjblair/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/williamjblair",
+            "id": 85643015,
+            "login": "williamjblair",
+            "node_id": "MDQ6VXNlcjg1NjQzMDE1",
+            "organizations_url": "https://api.github.com/users/williamjblair/orgs",
+            "received_events_url": "https://api.github.com/users/williamjblair/received_events",
+            "repos_url": "https://api.github.com/users/williamjblair/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/williamjblair/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/williamjblair/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/williamjblair",
+            "user_view_type": "public"
+          }
+        },
+        "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/4830",
+        "id": 4230919889,
+        "issue_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/4830",
+        "labels": [
+          {
+            "color": "d0e517",
+            "default": false,
+            "description": "Erdős Problems",
+            "id": 8683921618,
+            "name": "erdos-problems",
+            "node_id": "LA_kwDOOogmB88AAAACBZog0g",
+            "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/labels/erdos-problems"
+          }
+        ],
+        "locked": false,
+        "maintainer_can_modify": false,
+        "merge_commit_sha": "9af1d7101d82b0c6ff5e6aab4151ca3786de15b1",
+        "mergeable": null,
+        "mergeable_state": "unknown",
+        "merged": true,
+        "merged_at": "2026-08-10T13:31:34Z",
+        "merged_by": {
+          "avatar_url": "https://avatars.githubusercontent.com/u/3491627?v=4",
+          "events_url": "https://api.github.com/users/mo271/events{/privacy}",
+          "followers_url": "https://api.github.com/users/mo271/followers",
+          "following_url": "https://api.github.com/users/mo271/following{/other_user}",
+          "gists_url": "https://api.github.com/users/mo271/gists{/gist_id}",
+          "gravatar_id": "",
+          "html_url": "https://github.com/mo271",
+          "id": 3491627,
+          "login": "mo271",
+          "node_id": "MDQ6VXNlcjM0OTE2Mjc=",
+          "organizations_url": "https://api.github.com/users/mo271/orgs",
+          "received_events_url": "https://api.github.com/users/mo271/received_events",
+          "repos_url": "https://api.github.com/users/mo271/repos",
+          "site_admin": false,
+          "starred_url": "https://api.github.com/users/mo271/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/mo271/subscriptions",
+          "type": "User",
+          "url": "https://api.github.com/users/mo271",
+          "user_view_type": "public"
+        },
+        "milestone": null,
+        "node_id": "PR_kwDOOogmB878LrbR",
+        "number": 4830,
+        "patch_url": "https://github.com/google-deepmind/formal-conjectures/pull/4830.patch",
+        "rebaseable": null,
+        "requested_reviewers": [],
+        "requested_teams": [],
+        "review_comment_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/comments{/number}",
+        "review_comments": 1,
+        "review_comments_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4830/comments",
+        "state": "closed",
+        "statuses_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/statuses/e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+        "title": "ErdosProblems/80: books in dense graphs where every edge is in a triangle",
+        "updated_at": "2026-08-10T13:31:34Z",
+        "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4830",
+        "user": {
+          "avatar_url": "https://avatars.githubusercontent.com/u/85643015?v=4",
+          "events_url": "https://api.github.com/users/williamjblair/events{/privacy}",
+          "followers_url": "https://api.github.com/users/williamjblair/followers",
+          "following_url": "https://api.github.com/users/williamjblair/following{/other_user}",
+          "gists_url": "https://api.github.com/users/williamjblair/gists{/gist_id}",
+          "gravatar_id": "",
+          "html_url": "https://github.com/williamjblair",
+          "id": 85643015,
+          "login": "williamjblair",
+          "node_id": "MDQ6VXNlcjg1NjQzMDE1",
+          "organizations_url": "https://api.github.com/users/williamjblair/orgs",
+          "received_events_url": "https://api.github.com/users/williamjblair/received_events",
+          "repos_url": "https://api.github.com/users/williamjblair/repos",
+          "site_admin": false,
+          "starred_url": "https://api.github.com/users/williamjblair/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/williamjblair/subscriptions",
+          "type": "User",
+          "url": "https://api.github.com/users/williamjblair",
+          "user_view_type": "public"
+        }
+      }
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4877-reviews.json",
+      "raw_sha256": "sha256:681082770e00ff80ff7243e79144d0eade4d1a386e6a2c4e3502678f8f67a420",
+      "size": 1917,
+      "content": [
+        {
+          "_links": {
+            "html": {
+              "href": "https://github.com/google-deepmind/formal-conjectures/pull/4877#pullrequestreview-4910337056"
+            },
+            "pull_request": {
+              "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4877"
+            }
+          },
+          "author_association": "COLLABORATOR",
+          "body": "Thanks, LGTM for change to ErdosProblems/80",
+          "commit_id": "4f7a1158da406e086606c1ae0d5fcbd353e3ed87",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/4877#pullrequestreview-4910337056",
+          "id": 4910337056,
+          "node_id": "PRR_kwDOOogmB88AAAABJK3MIA",
+          "pull_request_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4877",
+          "state": "COMMENTED",
+          "submitted_at": "2026-08-11T20:14:09Z",
+          "user": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/3491627?u=315f5464f4bc43fde3f4223201229650e9bd500b&v=4",
+            "events_url": "https://api.github.com/users/mo271/events{/privacy}",
+            "followers_url": "https://api.github.com/users/mo271/followers",
+            "following_url": "https://api.github.com/users/mo271/following{/other_user}",
+            "gists_url": "https://api.github.com/users/mo271/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/mo271",
+            "id": 3491627,
+            "login": "mo271",
+            "node_id": "MDQ6VXNlcjM0OTE2Mjc=",
+            "organizations_url": "https://api.github.com/users/mo271/orgs",
+            "received_events_url": "https://api.github.com/users/mo271/received_events",
+            "repos_url": "https://api.github.com/users/mo271/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/mo271/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/mo271/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/mo271",
+            "user_view_type": "public"
+          }
+        }
+      ]
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4877.json",
+      "raw_sha256": "sha256:2746db611a8a455dadbac8aaa4ed4d028b88204f4316002ef0038c100c24e6a8",
+      "size": 22221,
+      "content": {
+        "_links": {
+          "comments": {
+            "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/4877/comments"
+          },
+          "commits": {
+            "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4877/commits"
+          },
+          "html": {
+            "href": "https://github.com/google-deepmind/formal-conjectures/pull/4877"
+          },
+          "issue": {
+            "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/4877"
+          },
+          "review_comment": {
+            "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/comments{/number}"
+          },
+          "review_comments": {
+            "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4877/comments"
+          },
+          "self": {
+            "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4877"
+          },
+          "statuses": {
+            "href": "https://api.github.com/repos/google-deepmind/formal-conjectures/statuses/2249b2b6e85bafaa276ed8307bef77cbdb467dce"
+          }
+        },
+        "active_lock_reason": null,
+        "additions": 12,
+        "assignee": null,
+        "assignees": [],
+        "author_association": "COLLABORATOR",
+        "auto_merge": null,
+        "base": {
+          "label": "google-deepmind:main",
+          "ref": "main",
+          "repo": {
+            "allow_forking": true,
+            "archive_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/{archive_format}{/ref}",
+            "archived": false,
+            "assignees_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/assignees{/user}",
+            "blobs_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/git/blobs{/sha}",
+            "branches_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/branches{/branch}",
+            "clone_url": "https://github.com/google-deepmind/formal-conjectures.git",
+            "collaborators_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/collaborators{/collaborator}",
+            "comments_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/comments{/number}",
+            "commits_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits{/sha}",
+            "compare_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/compare/{base}...{head}",
+            "contents_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/contents/{+path}",
+            "contributors_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/contributors",
+            "created_at": "2025-05-12T08:22:05Z",
+            "default_branch": "main",
+            "deployments_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/deployments",
+            "description": "A collection of formalized statements of conjectures in Lean.",
+            "disabled": false,
+            "downloads_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/downloads",
+            "events_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/events",
+            "fork": false,
+            "forks": 409,
+            "forks_count": 409,
+            "forks_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/forks",
+            "full_name": "google-deepmind/formal-conjectures",
+            "git_commits_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/git/commits{/sha}",
+            "git_refs_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/git/refs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/git/tags{/sha}",
+            "git_url": "git://github.com/google-deepmind/formal-conjectures.git",
+            "has_discussions": true,
+            "has_downloads": false,
+            "has_issues": true,
+            "has_pages": true,
+            "has_projects": true,
+            "has_pull_requests": true,
+            "has_wiki": false,
+            "homepage": "https://google-deepmind.github.io/formal-conjectures/",
+            "hooks_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/hooks",
+            "html_url": "https://github.com/google-deepmind/formal-conjectures",
+            "id": 982001159,
+            "is_template": false,
+            "issue_comment_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/comments{/number}",
+            "issue_events_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/events{/number}",
+            "issues_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues{/number}",
+            "keys_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/keys{/key_id}",
+            "labels_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/labels{/name}",
+            "language": "Lean",
+            "languages_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/languages",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "node_id": "MDc6TGljZW5zZTI=",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0"
+            },
+            "merges_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/merges",
+            "milestones_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/milestones{/number}",
+            "mirror_url": null,
+            "name": "formal-conjectures",
+            "node_id": "R_kgDOOogmBw",
+            "notifications_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/notifications{?since,all,participating}",
+            "open_issues": 1003,
+            "open_issues_count": 1003,
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/8596759?v=4",
+              "events_url": "https://api.github.com/users/google-deepmind/events{/privacy}",
+              "followers_url": "https://api.github.com/users/google-deepmind/followers",
+              "following_url": "https://api.github.com/users/google-deepmind/following{/other_user}",
+              "gists_url": "https://api.github.com/users/google-deepmind/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/google-deepmind",
+              "id": 8596759,
+              "login": "google-deepmind",
+              "node_id": "MDEyOk9yZ2FuaXphdGlvbjg1OTY3NTk=",
+              "organizations_url": "https://api.github.com/users/google-deepmind/orgs",
+              "received_events_url": "https://api.github.com/users/google-deepmind/received_events",
+              "repos_url": "https://api.github.com/users/google-deepmind/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/google-deepmind/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/google-deepmind/subscriptions",
+              "type": "Organization",
+              "url": "https://api.github.com/users/google-deepmind",
+              "user_view_type": "public"
+            },
+            "private": false,
+            "pull_request_creation_policy": "all",
+            "pulls_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls{/number}",
+            "pushed_at": "2026-08-12T19:14:54Z",
+            "releases_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/releases{/id}",
+            "size": 7145,
+            "ssh_url": "git@github.com:google-deepmind/formal-conjectures.git",
+            "stargazers_count": 1177,
+            "stargazers_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/stargazers",
+            "statuses_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/statuses/{sha}",
+            "subscribers_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/subscribers",
+            "subscription_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/subscription",
+            "svn_url": "https://github.com/google-deepmind/formal-conjectures",
+            "tags_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/tags",
+            "teams_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/teams",
+            "topics": [
+              "formal-mathematics",
+              "lean4"
+            ],
+            "trees_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/git/trees{/sha}",
+            "updated_at": "2026-08-12T17:11:01Z",
+            "url": "https://api.github.com/repos/google-deepmind/formal-conjectures",
+            "visibility": "public",
+            "watchers": 1177,
+            "watchers_count": 1177,
+            "web_commit_signoff_required": false
+          },
+          "sha": "9118d083ffca1536f521f9a7d103201f537ea670",
+          "user": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/8596759?v=4",
+            "events_url": "https://api.github.com/users/google-deepmind/events{/privacy}",
+            "followers_url": "https://api.github.com/users/google-deepmind/followers",
+            "following_url": "https://api.github.com/users/google-deepmind/following{/other_user}",
+            "gists_url": "https://api.github.com/users/google-deepmind/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/google-deepmind",
+            "id": 8596759,
+            "login": "google-deepmind",
+            "node_id": "MDEyOk9yZ2FuaXphdGlvbjg1OTY3NTk=",
+            "organizations_url": "https://api.github.com/users/google-deepmind/orgs",
+            "received_events_url": "https://api.github.com/users/google-deepmind/received_events",
+            "repos_url": "https://api.github.com/users/google-deepmind/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/google-deepmind/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/google-deepmind/subscriptions",
+            "type": "Organization",
+            "url": "https://api.github.com/users/google-deepmind",
+            "user_view_type": "public"
+          }
+        },
+        "body": "Closes #4867.\n\nBoth statements quantified over every `c > 0`. `Admissible c G` needs `c * n^2 ≤ #G.edgeFinset`, but a simple graph on `n` vertices has at most `n(n-1)/2` edges, so nothing qualifies once `c ≥ 1/2`. At `c = 2` the set inside `sInf` is empty for every `n`, `f 2 n = 0`, and both answers are `False` for reasons unrelated to the question. Adding `c < 1/2` is @KitaKen1's suggestion and it is the right bound: at `c` just under `1/2` the complete graph qualifies from about `n = 100` on.\n\nAlso corrects the `f` docstring. It said the empty case was \"the honest reading: nothing is forced when nothing qualifies\", which is true as far as it goes but was exactly what hid the problem. It now says when the empty case occurs and why the statements exclude it.\n\nMy error, from #4830. Statements only, no proofs affected.",
+        "changed_files": 1,
+        "closed_at": null,
+        "comments": 1,
+        "comments_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/4877/comments",
+        "commits": 2,
+        "commits_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4877/commits",
+        "created_at": "2026-08-11T16:38:51Z",
+        "deletions": 5,
+        "diff_url": "https://github.com/google-deepmind/formal-conjectures/pull/4877.diff",
+        "draft": false,
+        "head": {
+          "label": "williamjblair:erdos-80-feasible-c",
+          "ref": "erdos-80-feasible-c",
+          "repo": {
+            "allow_forking": true,
+            "archive_url": "https://api.github.com/repos/williamjblair/formal-conjectures/{archive_format}{/ref}",
+            "archived": false,
+            "assignees_url": "https://api.github.com/repos/williamjblair/formal-conjectures/assignees{/user}",
+            "blobs_url": "https://api.github.com/repos/williamjblair/formal-conjectures/git/blobs{/sha}",
+            "branches_url": "https://api.github.com/repos/williamjblair/formal-conjectures/branches{/branch}",
+            "clone_url": "https://github.com/williamjblair/formal-conjectures.git",
+            "collaborators_url": "https://api.github.com/repos/williamjblair/formal-conjectures/collaborators{/collaborator}",
+            "comments_url": "https://api.github.com/repos/williamjblair/formal-conjectures/comments{/number}",
+            "commits_url": "https://api.github.com/repos/williamjblair/formal-conjectures/commits{/sha}",
+            "compare_url": "https://api.github.com/repos/williamjblair/formal-conjectures/compare/{base}...{head}",
+            "contents_url": "https://api.github.com/repos/williamjblair/formal-conjectures/contents/{+path}",
+            "contributors_url": "https://api.github.com/repos/williamjblair/formal-conjectures/contributors",
+            "created_at": "2026-06-14T22:30:00Z",
+            "default_branch": "main",
+            "deployments_url": "https://api.github.com/repos/williamjblair/formal-conjectures/deployments",
+            "description": "A collection of formalized statements of conjectures in Lean.",
+            "disabled": false,
+            "downloads_url": "https://api.github.com/repos/williamjblair/formal-conjectures/downloads",
+            "events_url": "https://api.github.com/repos/williamjblair/formal-conjectures/events",
+            "fork": true,
+            "forks": 0,
+            "forks_count": 0,
+            "forks_url": "https://api.github.com/repos/williamjblair/formal-conjectures/forks",
+            "full_name": "williamjblair/formal-conjectures",
+            "git_commits_url": "https://api.github.com/repos/williamjblair/formal-conjectures/git/commits{/sha}",
+            "git_refs_url": "https://api.github.com/repos/williamjblair/formal-conjectures/git/refs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/williamjblair/formal-conjectures/git/tags{/sha}",
+            "git_url": "git://github.com/williamjblair/formal-conjectures.git",
+            "has_discussions": false,
+            "has_downloads": false,
+            "has_issues": false,
+            "has_pages": false,
+            "has_projects": true,
+            "has_pull_requests": true,
+            "has_wiki": false,
+            "homepage": "https://google-deepmind.github.io/formal-conjectures/",
+            "hooks_url": "https://api.github.com/repos/williamjblair/formal-conjectures/hooks",
+            "html_url": "https://github.com/williamjblair/formal-conjectures",
+            "id": 1269585603,
+            "is_template": false,
+            "issue_comment_url": "https://api.github.com/repos/williamjblair/formal-conjectures/issues/comments{/number}",
+            "issue_events_url": "https://api.github.com/repos/williamjblair/formal-conjectures/issues/events{/number}",
+            "issues_url": "https://api.github.com/repos/williamjblair/formal-conjectures/issues{/number}",
+            "keys_url": "https://api.github.com/repos/williamjblair/formal-conjectures/keys{/key_id}",
+            "labels_url": "https://api.github.com/repos/williamjblair/formal-conjectures/labels{/name}",
+            "language": "Lean",
+            "languages_url": "https://api.github.com/repos/williamjblair/formal-conjectures/languages",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "node_id": "MDc6TGljZW5zZTI=",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0"
+            },
+            "merges_url": "https://api.github.com/repos/williamjblair/formal-conjectures/merges",
+            "milestones_url": "https://api.github.com/repos/williamjblair/formal-conjectures/milestones{/number}",
+            "mirror_url": null,
+            "name": "formal-conjectures",
+            "node_id": "R_kgDOS6xWww",
+            "notifications_url": "https://api.github.com/repos/williamjblair/formal-conjectures/notifications{?since,all,participating}",
+            "open_issues": 1,
+            "open_issues_count": 1,
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/85643015?v=4",
+              "events_url": "https://api.github.com/users/williamjblair/events{/privacy}",
+              "followers_url": "https://api.github.com/users/williamjblair/followers",
+              "following_url": "https://api.github.com/users/williamjblair/following{/other_user}",
+              "gists_url": "https://api.github.com/users/williamjblair/gists{/gist_id}",
+              "gravatar_id": "",
+              "html_url": "https://github.com/williamjblair",
+              "id": 85643015,
+              "login": "williamjblair",
+              "node_id": "MDQ6VXNlcjg1NjQzMDE1",
+              "organizations_url": "https://api.github.com/users/williamjblair/orgs",
+              "received_events_url": "https://api.github.com/users/williamjblair/received_events",
+              "repos_url": "https://api.github.com/users/williamjblair/repos",
+              "site_admin": false,
+              "starred_url": "https://api.github.com/users/williamjblair/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/williamjblair/subscriptions",
+              "type": "User",
+              "url": "https://api.github.com/users/williamjblair",
+              "user_view_type": "public"
+            },
+            "private": false,
+            "pull_request_creation_policy": "all",
+            "pulls_url": "https://api.github.com/repos/williamjblair/formal-conjectures/pulls{/number}",
+            "pushed_at": "2026-08-12T17:01:13Z",
+            "releases_url": "https://api.github.com/repos/williamjblair/formal-conjectures/releases{/id}",
+            "size": 7633,
+            "ssh_url": "git@github.com:williamjblair/formal-conjectures.git",
+            "stargazers_count": 0,
+            "stargazers_url": "https://api.github.com/repos/williamjblair/formal-conjectures/stargazers",
+            "statuses_url": "https://api.github.com/repos/williamjblair/formal-conjectures/statuses/{sha}",
+            "subscribers_url": "https://api.github.com/repos/williamjblair/formal-conjectures/subscribers",
+            "subscription_url": "https://api.github.com/repos/williamjblair/formal-conjectures/subscription",
+            "svn_url": "https://github.com/williamjblair/formal-conjectures",
+            "tags_url": "https://api.github.com/repos/williamjblair/formal-conjectures/tags",
+            "teams_url": "https://api.github.com/repos/williamjblair/formal-conjectures/teams",
+            "topics": [],
+            "trees_url": "https://api.github.com/repos/williamjblair/formal-conjectures/git/trees{/sha}",
+            "updated_at": "2026-08-04T17:26:32Z",
+            "url": "https://api.github.com/repos/williamjblair/formal-conjectures",
+            "visibility": "public",
+            "watchers": 0,
+            "watchers_count": 0,
+            "web_commit_signoff_required": false
+          },
+          "sha": "2249b2b6e85bafaa276ed8307bef77cbdb467dce",
+          "user": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/85643015?v=4",
+            "events_url": "https://api.github.com/users/williamjblair/events{/privacy}",
+            "followers_url": "https://api.github.com/users/williamjblair/followers",
+            "following_url": "https://api.github.com/users/williamjblair/following{/other_user}",
+            "gists_url": "https://api.github.com/users/williamjblair/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/williamjblair",
+            "id": 85643015,
+            "login": "williamjblair",
+            "node_id": "MDQ6VXNlcjg1NjQzMDE1",
+            "organizations_url": "https://api.github.com/users/williamjblair/orgs",
+            "received_events_url": "https://api.github.com/users/williamjblair/received_events",
+            "repos_url": "https://api.github.com/users/williamjblair/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/williamjblair/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/williamjblair/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/williamjblair",
+            "user_view_type": "public"
+          }
+        },
+        "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/4877",
+        "id": 4255098343,
+        "issue_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/4877",
+        "labels": [
+          {
+            "color": "d0e517",
+            "default": false,
+            "description": "Erdős Problems",
+            "id": 8683921618,
+            "name": "erdos-problems",
+            "node_id": "LA_kwDOOogmB88AAAACBZog0g",
+            "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/labels/erdos-problems"
+          },
+          {
+            "color": "ffffff",
+            "default": false,
+            "description": "",
+            "id": 8685751703,
+            "name": "arxiv",
+            "node_id": "LA_kwDOOogmB88AAAACBbYNlw",
+            "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/labels/arxiv"
+          },
+          {
+            "color": "e99695",
+            "default": false,
+            "description": "",
+            "id": 8695917386,
+            "name": "misformalization",
+            "node_id": "LA_kwDOOogmB88AAAACBlErSg",
+            "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/labels/misformalization"
+          }
+        ],
+        "locked": false,
+        "maintainer_can_modify": true,
+        "merge_commit_sha": "e989da6d6cb3d39c34e5b955d0f248ff94887698",
+        "mergeable": true,
+        "mergeable_state": "clean",
+        "merged": false,
+        "merged_at": null,
+        "merged_by": null,
+        "milestone": null,
+        "node_id": "PR_kwDOOogmB879n6Xn",
+        "number": 4877,
+        "patch_url": "https://github.com/google-deepmind/formal-conjectures/pull/4877.patch",
+        "rebaseable": false,
+        "requested_reviewers": [],
+        "requested_teams": [],
+        "review_comment_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/comments{/number}",
+        "review_comments": 1,
+        "review_comments_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4877/comments",
+        "state": "open",
+        "statuses_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/statuses/2249b2b6e85bafaa276ed8307bef77cbdb467dce",
+        "title": "ErdosProblems/80: restrict c to the range where the hypothesis is satisfiable",
+        "updated_at": "2026-08-12T16:30:12Z",
+        "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4877",
+        "user": {
+          "avatar_url": "https://avatars.githubusercontent.com/u/85643015?v=4",
+          "events_url": "https://api.github.com/users/williamjblair/events{/privacy}",
+          "followers_url": "https://api.github.com/users/williamjblair/followers",
+          "following_url": "https://api.github.com/users/williamjblair/following{/other_user}",
+          "gists_url": "https://api.github.com/users/williamjblair/gists{/gist_id}",
+          "gravatar_id": "",
+          "html_url": "https://github.com/williamjblair",
+          "id": 85643015,
+          "login": "williamjblair",
+          "node_id": "MDQ6VXNlcjg1NjQzMDE1",
+          "organizations_url": "https://api.github.com/users/williamjblair/orgs",
+          "received_events_url": "https://api.github.com/users/williamjblair/received_events",
+          "repos_url": "https://api.github.com/users/williamjblair/repos",
+          "site_admin": false,
+          "starred_url": "https://api.github.com/users/williamjblair/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/williamjblair/subscriptions",
+          "type": "User",
+          "url": "https://api.github.com/users/williamjblair",
+          "user_view_type": "public"
+        }
+      }
+    }
+  ],
+  "treatment_evidence": [],
+  "access_limits": [
+    "Use only this bundle.",
+    "Do not use network, repository, browser, memory, or private operator context.",
+    "Do not infer acceptance or Standing from a review, check, merge, or audit disposition."
+  ],
+  "bundle_root": "sha256:f32573a749a1d4077f4206e72a5288aed0f46b155685262c3ea36b851cfd9425"
+}

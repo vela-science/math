@@ -1,0 +1,37 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "clean-source-faithful-min-modulus-4829",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:34f9ce1e77b28e8ebcd9a49f57f4e976a890eabda546594d24ae588b465554fc",
+  "sender_output_sha256": "sha256:21446c063af3f8d7f2f402a414fc916c10371899217484fb87d2ae8b22a0f469",
+  "retained_verdict": "inconclusive",
+  "retained_issue_codes": [
+    "exact_artifact_identity_unavailable",
+    "other"
+  ],
+  "layered_summary": "Mechanical status: a normalized observation records successful completion of Build project check run 93244176232 at exact head 0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c, but the build was not independently reproduced and its logs, commands, workflow identity, and toolchain are absent. Source fidelity: the exact changed Lean file is available at the head commit and blob 4c68a8c3788f805e29588bfefdac1fec079e9193; its answer slot scopes the whole stated conjecture, the hypotheses are non-vacuous, and no conditional proof dependency appears in min_modulus. However, the underlying paper statement is not included, so correspondence to Fonollosa's Conjecture 1 cannot be independently established from this bundle. Artifact availability: the changed source is exact, while the declared external proof is only a commit-pinned URL and line locator without retained bytes or a blob/content hash. Community status: normalized observations record one collaborator approval and a merged, closed pull request. Authority: all observations have authority effect none and establish neither acceptance nor Standing.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [
+    "Immutable bytes or a content hash and precise locator for the underlying paper statement used for the fidelity comparison",
+    "Retained bytes or Git blob/content hash for MinModulus/UniqueSums.lean at e7c78dd63955092b5f8d8a5fa826476337c0f4be",
+    "Build-check logs, executed commands, workflow revision, and toolchain/dependency identities",
+    "Merge commit identity"
+  ],
+  "next_obligation": "Obtain rooted immutable evidence for the cited paper statement and compare it directly with theorem min_modulus; if proof-artifact reproduction is claimed, also retain the pinned external proof bytes and the build recipe/logs.",
+  "unsupported_claims": [
+    "The sender's source_fidelity pass and clean verdict are unsupported because the bundle contains no immutable copy or precise excerpt of the cited paper's Conjecture 1.",
+    "The sender's artifact_availability exact classification is too broad because the external formal-proof bytes and content identity are not retained.",
+    "Independent mechanical reproduction is unsupported; only an exact-head check-run attestation can be scoped."
+  ],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "Mathematical truth of the open conjecture",
+    "Source fidelity to the cited paper without the paper statement",
+    "Independent reproduction of the repository build",
+    "Independent reproduction or verification of the external formal proof",
+    "Community acceptance beyond the observed approval and merge",
+    "Formal Conjectures maintainer acceptance as a separate authority determination",
+    "Vela Verification, Decision, or Standing"
+  ],
+  "confidence": "high"
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "vela.math.fc-audit.agent-task-observation.v0.1",
+  "observation_id": "agent-eval-handoff-s02-04::receiver",
+  "role": "receiver",
+  "authority_effect": "none",
+  "task_context_id": "agent:codex-eval-receiver-s02-vacuity-erdos-80-4830",
+  "slot": 2,
+  "task_order": 3,
+  "fixture_id": "vacuity-erdos-80-4830",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0",
+  "handoff_id": "agent-eval-handoff-s02-04",
+  "runner": null,
+  "independence_classification": "not_evaluated_sender_failed",
+  "bundle": {
+    "path": "evidence/formal-conjectures/agent-evaluation/condition-bundles/vacuity-erdos-80-4830--plain-git-and-current-review-artifacts.json",
+    "raw_sha256": "sha256:266e33518a06fcc6c32372ab50347794602cb4bc0814095e0eba4784fa34da54",
+    "size": 84498,
+    "bundle_root": "sha256:f32573a749a1d4077f4206e72a5288aed0f46b155685262c3ea36b851cfd9425"
+  },
+  "started_at": "2026-08-13T21:00:20.822Z",
+  "completed_at": "2026-08-13T21:00:20.822Z",
+  "elapsed_seconds": null,
+  "terminal_state": "blocked_sender_failure",
+  "return_code": null,
+  "usage": null,
+  "output": null,
+  "event_log": null,
+  "stderr_log": null,
+  "parse_error": "sender terminal state: error",
+  "does_not_establish": [
+    "No receiver task ran, so missing duration and outcome are not zero.",
+    "This record has no authority or Standing effect."
+  ],
+  "observation_root": "sha256:f41075f9f135de86f95ad86dcecff9afbea6563ae779a0d2f1142650b0767ebc"
+}

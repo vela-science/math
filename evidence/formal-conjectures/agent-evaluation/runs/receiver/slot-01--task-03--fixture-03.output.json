@@ -1,0 +1,30 @@
+{
+  "schema": "vela.math.fc-audit.agent-receiver-output.v0.1",
+  "fixture_id": "fidelity-erdos-887-1237",
+  "condition": "plain-git-and-current-review-artifacts",
+  "packet_root": "sha256:702406f0ae0aaa12a8c31f64aecd19809253af52dc1ac615ec5fca723242dc88",
+  "sender_output_sha256": "sha256:4be5b455e31fc0d8538a351f814be74f869525049fcbfc08fb36d3f6c118474c",
+  "retained_verdict": "needs_revision",
+  "retained_issue_codes": [
+    "answer_slot_scope"
+  ],
+  "layered_summary": "Mechanical status: the retained GitHub observation records Build project check run 60275340706 succeeding at exact head 288608562e684a2f3c97ba0ce960a2649a71370b; this is a scoped hosted attestation, not a local reproduction. Source fidelity: NEEDS REVISION is retained because the prose requires one absolute K outside ∀ C, while erdos_887 places answer(sorry) inside the C binders and therefore permits C-dependence; variant_i supplies the witness-backed faithful scope ∃ K, ∀ C > 0. Artifact availability: the exact changed source is identified by commit, path, blob 6feb58b9272ce638aba6da5ca7ee8ebf7785e0b8, and SHA-256, but all four declarations contain sorry placeholders and no completed proof artifact is supplied. Community status: exact-head review 3656943019 was APPROVED and PR 1237 was merged. Authority: none; neither status establishes acceptance or Standing.",
+  "reproduction_terminal_state": "scoped",
+  "missing_provenance_fields": [
+    "Local build reproduction transcript and result",
+    "Toolchain and dependency identities for hosted check run 60275340706",
+    "Hosted build logs or produced artifact bytes for check run 60275340706",
+    "Records and results for the five check runs excluded from the retained mechanical claim",
+    "Independent retained snapshot of the referenced erdosproblems.com/887 source text"
+  ],
+  "next_obligation": "Revise the primary declaration so that K is bound outside ∀ C, following the scope witnessed by variant_i, then retain and reproduce the repository build and repeat the fidelity review against the revised exact commit.",
+  "unsupported_claims": [],
+  "authority_effect": "none",
+  "does_not_establish": [
+    "The hosted successful build does not establish semantic fidelity, completed mathematical proofs, acceptance, or Standing.",
+    "The exact-head approval and merged status establish external community state only, not semantic fidelity, Vela acceptance, or Standing.",
+    "Exact source identity does not make the four sorry placeholders completed proof artifacts.",
+    "The scoped retained attestation is not a local reproduction."
+  ],
+  "confidence": "high"
+}
