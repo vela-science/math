@@ -20,15 +20,8 @@ CAPSULE_SPEC = importlib.util.spec_from_file_location("verify_current_binding", 
 assert CAPSULE_SPEC and CAPSULE_SPEC.loader
 CAPSULE = importlib.util.module_from_spec(CAPSULE_SPEC)
 CAPSULE_SPEC.loader.exec_module(CAPSULE)
-LIVE_CAPSULE_PATH = HERE.parents[1] / "execution/erdos-887-pr-1237-fidelity-repair/attributed-review/verify_binding.py"
-LIVE_CAPSULE_SPEC = importlib.util.spec_from_file_location(
-    "verify_live_attributed_binding",
-    LIVE_CAPSULE_PATH,
-)
-assert LIVE_CAPSULE_SPEC and LIVE_CAPSULE_SPEC.loader
-LIVE_CAPSULE = importlib.util.module_from_spec(LIVE_CAPSULE_SPEC)
-LIVE_CAPSULE_SPEC.loader.exec_module(LIVE_CAPSULE)
 HUMAN_METHOD = BUILD.REPO_ROOT / "methods/erdos-887/statement-fidelity-review.v1.json"
+WORK_OFFER_INDEX = HERE.parents[1] / "index.v1.json"
 
 
 class CurrentResultTest(unittest.TestCase):
@@ -127,16 +120,22 @@ class CurrentResultTest(unittest.TestCase):
         self.assertNotEqual(historical["packet_root"], current["packet_root"])
         self.assertNotEqual(historical["result_root"], current["result_root"])
 
-    def test_retained_result_is_valid_but_stale_against_live_offer(self) -> None:
+    def test_retained_result_is_valid_and_offer_is_closed_superseded(self) -> None:
         _, retained_binding = BUILD.retained_execution_binding()
-        live_binding = LIVE_CAPSULE.verify_binding()
-        self.assertNotEqual(retained_binding["packet_root"], live_binding["packet_root"])
         self.assertEqual(
             CAPSULE.verify_result(BUILD.RESULT, retained_binding),
             BUILD.load(BUILD.RESULT)["result_root"],
         )
-        with self.assertRaisesRegex(CAPSULE.BindingError, "execution binding drift"):
-            CAPSULE.verify_result(BUILD.RESULT, live_binding)
+        index = BUILD.load(WORK_OFFER_INDEX)
+        target = index["targets"][0]
+        self.assertEqual(target["execution_binding"], retained_binding)
+        self.assertEqual(target["presence"], "superseded")
+        self.assertIsNone(target["next_command"])
+        lifecycle = BUILD.load(BUILD.REPO_ROOT / target["lifecycle"]["path"])
+        self.assertEqual(lifecycle["presence"], "superseded")
+        self.assertEqual(lifecycle["completion"]["contract_status"], "not_satisfied")
+        self.assertEqual(lifecycle["completion"]["closure_status"], "closed_superseded")
+        self.assertEqual(lifecycle["decisions"]["scientific"]["status"], "accepted")
 
     def test_changed_stage_and_retained_manifest_refuse(self) -> None:
         transcript = BUILD.load(BUILD.TRANSCRIPT)

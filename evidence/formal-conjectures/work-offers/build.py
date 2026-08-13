@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build and inspect the current source-local Formal Conjectures work offer."""
+"""Build the immutable Erdős 887 Work Offer lifecycle projection."""
 
 from __future__ import annotations
 
@@ -17,43 +17,41 @@ REPO_ROOT = HERE.parents[2]
 PROJECTION_PATH = REPO_ROOT / "evidence/formal-conjectures/source-adapter/projection.v1.json"
 REPOSITORY_PATH = REPO_ROOT / ".vela/repository.json"
 PACKET_PATH = HERE / "packets/erdos-887-pr-1237-fidelity-repair.v1.json"
+ISSUED_PACKET_SOURCE_PATH = HERE / "results/erdos-887-pilot-02-current-binding/target-packet.v1.json"
+RESULT_PATH = HERE / "results/erdos-887-pilot-02-current-binding/result.v1.json"
+REVIEW_PATH = REPO_ROOT / "evidence/formal-conjectures/reviews/erdos-887-gpt-5.6-sol-peer-statement-fidelity.v1.json"
+PROPOSAL_PATH = REPO_ROOT / "records/proposals/sha256/44ff50ca8cf1bd6ebca04f05e631c4f75c2f8f1a6ba67c191d56375c29a8fc50.json"
+CLAIM_PATH = REPO_ROOT / "records/claims/sha256/c445d8df3e41982ccb1d0628fc89060097f5a2a10040d73a8eb78cde226beea1.json"
+DECISION_EVENT_PATH = REPO_ROOT / ".vela/authority/events/vev_272d414a6f4f6e20.json"
+APPLICATION_EVENT_PATH = REPO_ROOT / ".vela/authority/events/vev_65af894447e0f2c8.json"
+LIFECYCLE_PATH = HERE / "lifecycle/erdos-887-pr-1237-fidelity-repair.v1.json"
 INDEX_PATH = HERE / "index.v1.json"
-EXECUTION_DIR = HERE / "execution/erdos-887-pr-1237-fidelity-repair"
-ATTRIBUTED_EXECUTION_DIR = EXECUTION_DIR / "attributed-review"
-PRODUCER_PROFILE_PATH = ATTRIBUTED_EXECUTION_DIR / "producer-profile.v1.json"
-VERIFIER_CAPSULE_PATH = ATTRIBUTED_EXECUTION_DIR / "verifier-capsule.v1.json"
-RESULT_CONTRACT_PATH = ATTRIBUTED_EXECUTION_DIR / "result-contract.v1.json"
-VERIFY_BINDING_PATH = ATTRIBUTED_EXECUTION_DIR / "verify_binding.py"
 
 TARGET_ID = "erdos:887"
 FIXTURE_ID = "fidelity-erdos-887-1237"
+ISSUANCE_COMMIT = "7d5f9290018a03ce395092096db34b46fcffe1a1"
 PROJECTION_SCHEMA = "vela.math.fc-pr-audit-projection.v1"
 PACKET_SCHEMA = "vela.math.source-fidelity-target-packet.v1"
+LIFECYCLE_SCHEMA = "vela.math.source-work-offer-lifecycle.v1"
 INDEX_SCHEMA = "vela.math.source-work-offer-index.v1"
-PRODUCER_PROFILE_SCHEMA = "vela.math.source-work-producer-profile.v1"
-VERIFIER_CAPSULE_SCHEMA = "vela.math.source-fidelity-verifier-capsule.v1"
-RESULT_CONTRACT_SCHEMA = "vela.math.fidelity-repair-result-contract.v1"
 EXECUTION_BINDING_SCHEMA = "vela.execution-binding.v1"
-RESULT_REQUIRED_FIELDS = [
-    "schema",
-    "authority_effect",
-    "target_id",
-    "packet_root",
-    "execution_binding",
-    "producer",
-    "result_status",
-    "artifacts",
-    "source_patch_root",
-    "check_result_root",
-    "semantic_review",
-    "source_roots",
-    "nonclaims",
-    "result_root",
-]
+
+# These commits mechanically rebound the same semantic offer after the issued
+# packet had already produced the retained result. They remain in Git history,
+# but none is a fresh issuance and none may be projected as open work.
+RETIRED_REBINDINGS = (
+    ("e2d37f3add5da1118bad527570f737b92429bd2f", "sha256:f0ce498c42f9ce63868c14f2698541a423a8b7c23e449c263f7380f997edc5da"),
+    ("5df845d6be7b263b543430845280d597dbe34d57", "sha256:7956b85bd89185f8e1b6d4e5a827d2c8e37f86d466bf0f39ee9b6e24ac30c5b8"),
+    ("a89d535b6ab9eb77339c0794a96de23c34e2701f", "sha256:89833e84d73a0c60e5bbc1a164388b1c22f1dbf536393024edf3b0679b635076"),
+    ("d45fdf5be16ed11316bb91331e9a7b57aed928a8", "sha256:f50c6415da5a9a1bb6edcc8a17301432d3bfd59ab03ecc99c7e6735303ffdc2c"),
+    ("aef1b6b794b28debc0c62a270c48c891e5c0790f", "sha256:2e9ab3d4de6479e671c340abaeead9af6934e95a40dda3909102b12b98dd2afb"),
+    ("a8fb8d7f316ff22b96a64595fab9377e127c58f0", "sha256:549af622fa3dbbb2dd6a228f5a2cb8f60eed34a4626a39d14d751e4b0cf26d7a"),
+    ("1042185e4355044455e36831bdb61d821ed0a709", "sha256:bcbcc9d4f90603df5e83af462b02076d0c50d850b10b38297231aef4eab95429"),
+)
 
 
 class WorkOfferError(ValueError):
-    """Raised when the source projection cannot produce an exact work offer."""
+    """Raised when retained Work Offer or lifecycle evidence is inconsistent."""
 
 
 def _reject_duplicate_keys(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
@@ -75,6 +73,8 @@ def _load(path: Path, *, require_framed_lf: bool = True) -> dict[str, Any]:
         raise WorkOfferError(f"invalid JSON at {path.relative_to(REPO_ROOT)}: {error}") from error
     if not isinstance(value, dict):
         raise WorkOfferError(f"{path.relative_to(REPO_ROOT)} must contain an object")
+    if require_framed_lf and raw != _canonical_bytes(value) + b"\n":
+        raise WorkOfferError(f"{path.relative_to(REPO_ROOT)} must contain canonical JSON")
     return value
 
 
@@ -90,58 +90,37 @@ def _raw_root(raw: bytes) -> str:
     return "sha256:" + hashlib.sha256(raw).hexdigest()
 
 
-def _is_full_sha256_root(value: Any) -> bool:
-    return (
-        isinstance(value, str)
-        and value.startswith("sha256:")
-        and len(value) == 71
-        and all(character in "0123456789abcdef" for character in value[7:])
-    )
-
-
 def _root_without(value: dict[str, Any], field: str) -> str:
     preimage = copy.deepcopy(value)
     preimage.pop(field, None)
     return _root(preimage)
 
 
+def _is_full_sha256_root(value: Any) -> bool:
+    return isinstance(value, str) and len(value) == 71 and value.startswith("sha256:") and all(
+        character in "0123456789abcdef" for character in value[7:]
+    )
+
+
 def _git(*args: str) -> str:
     return subprocess.check_output(["git", *args], cwd=REPO_ROOT, text=True).strip()
 
 
-def _source_projection() -> tuple[dict[str, Any], dict[str, Any], str, str]:
-    projection = _load(PROJECTION_PATH)
-    if projection.get("schema") != PROJECTION_SCHEMA:
-        raise WorkOfferError("unsupported source projection schema")
-    if projection.get("authority_effect") != "none":
-        raise WorkOfferError("source projection cannot carry authority")
-    projection_root = projection.get("root")
-    if not isinstance(projection_root, dict) or projection_root.get("domain") != "projection":
-        raise WorkOfferError("source projection root domain drift")
-    if projection_root.get("value") != _root_without(projection, "root"):
-        raise WorkOfferError("source projection root drift")
-    records = projection.get("records")
-    if not isinstance(records, list):
-        raise WorkOfferError("source projection record inventory is missing")
-    matches = [record for record in records if isinstance(record, dict) and record.get("fixture_id") == FIXTURE_ID]
-    if len(matches) != 1:
-        raise WorkOfferError("clean-candidate source record must occur exactly once")
-    record = matches[0]
-    if record.get("authority_effect") != "none" or record.get("standing_effect") != "none":
-        raise WorkOfferError("source record cannot carry authority or Standing")
-    if record.get("automatic_verification") is not False:
-        raise WorkOfferError("source record cannot convert automatically to Verification")
-    if record.get("source_axis", {}).get("advisory_disposition") != "needs_revision":
-        raise WorkOfferError("repair work must remain grounded in the adverse source audit")
-    semantic_failures = [
-        check for check in record["source_axis"].get("checks", [])
-        if check.get("kind") == "semantic" and check.get("outcome") == "fail" and check.get("severity") == "meaning"
-    ]
-    if len(semantic_failures) != 1 or semantic_failures[0].get("property") != "answer-slot-scope-fidelity":
-        raise WorkOfferError("repair work requires the exact answer-slot scope fidelity failure")
-    source_commit = _git("log", "-1", "--format=%H", "--", str(PROJECTION_PATH.relative_to(REPO_ROOT)))
-    source_tree = _git("show", "-s", "--format=%T", source_commit)
-    return projection, record, source_commit, source_tree
+def _git_bytes(commit: str, path: Path) -> bytes:
+    return subprocess.check_output(
+        ["git", "show", f"{commit}:{path.relative_to(REPO_ROOT)}"],
+        cwd=REPO_ROOT,
+    )
+
+
+def _descriptor(path: Path, value: dict[str, Any], raw: bytes, root_field: str) -> dict[str, Any]:
+    return {
+        "schema": value["schema"],
+        "path": str(path.relative_to(REPO_ROOT)),
+        "size": len(raw),
+        "raw_sha256": _raw_root(raw),
+        root_field: value[root_field],
+    }
 
 
 def _repository_binding() -> dict[str, str]:
@@ -155,313 +134,232 @@ def _repository_binding() -> dict[str, str]:
     }
 
 
-def build_execution_components() -> list[tuple[str, Path, dict[str, Any], bytes]]:
-    producer_profile: dict[str, Any] = {
-        "schema": PRODUCER_PROFILE_SCHEMA,
-        "authority_effect": "none",
-        "target_id": TARGET_ID,
-        "eligible_producer_classes": ["agent", "ci"],
-        "input_contract": {
-            "packet_schema": PACKET_SCHEMA,
-            "exact_packet_root_required": True,
-            "source_access": "public_only",
-            "participant_private_data_allowed": False,
-        },
-        "execution_contract": {
-            "workspace": "disposable source checkout or equivalent isolated worktree",
-            "retained_check_network": "not_required",
-            "required_tools": ["git", "python3", "lake", "lean"],
-            "required_outputs": [
-                "rooted source patch",
-                "rooted Lean check result",
-                "rooted result manifest",
-                "witness-backed semantic rationale awaiting a named attributed reviewer",
-            ],
-        },
-        "permissions": {
-            "allowed": [
-                "Read the exact public packet and retained public source bytes.",
-                "Prepare a bounded source patch and public check evidence.",
-                "Export canonical unsigned Submission bytes for a separate local signer.",
-            ],
-            "forbidden": [
-                "Post, edit, review, or merge anything upstream without separate explicit authorization.",
-                "Access Repository authority credentials or sign for another actor.",
-                "Create a Vela Verification, Decision, Event, or Standing change.",
-                "Represent same-operator checking as independent review.",
-            ],
-        },
-        "required_provenance": [
-            "operator_id",
-            "provider",
-            "runtime",
-            "source_root",
-            "packet_root",
-            "output_roots",
-            "timestamps",
-            "access_limits",
-            "independence_disclosure",
-        ],
-        "custody": {
-            "access": "public",
-            "proof_artifacts_may_be_public": True,
-            "participant_private_data_allowed": False,
-        },
-        "nonclaims": [
-            "This profile describes eligible activity-plane production and grants no scientific or Repository authority.",
-            "Conformance to this profile is not a Vela Verification, Decision, or change to Standing.",
-        ],
-        "profile_root_definition": "sha256 of canonical JSON after removing only profile_root",
-    }
-    producer_profile["profile_root"] = _root(producer_profile)
-
-    verifier_capsule: dict[str, Any] = {
-        "schema": VERIFIER_CAPSULE_SCHEMA,
-        "authority_effect": "none",
-        "target_id": TARGET_ID,
-        "implementation": {
-            "path": str(VERIFY_BINDING_PATH.relative_to(REPO_ROOT)),
-            "raw_sha256": _raw_root(VERIFY_BINDING_PATH.read_bytes()),
-            "command": [
-                "python3",
-                "-B",
-                str(VERIFY_BINDING_PATH.relative_to(REPO_ROOT)),
-            ],
-            "result_argument": ["--result", "PATH"],
-            "dependencies": "python standard library only",
-            "network": "not_required",
-        },
-        "bounded_property": "Validate canonical framing, public custody, exact component descriptors, and the full vela.execution-binding.v1 for the Erdős 887 offer; when a result path is supplied, additionally validate its exact execution binding, rooted public source and selective cache custody, offline four-stage transcript, retained output descriptors, positive result state, pending semantic-review boundary, and result root.",
-        "checks": [
-            "Reject duplicate JSON keys and non-canonical JSON framing.",
-            "Reject a changed Target, packet root, source patch, Lean check result, or result root.",
-            "Reject any result or Lean-check execution_binding that differs from the exact index binding.",
-            "Reject package HEAD drift, hidden preexisting .lake/build directories or Lake registry build barrels, changed retained public cache snapshots, a replay stage without operating-system network denial, a prerequisite without global --no-cache, or changed stage evidence.",
-            "Reject any authority effect or fabricated completed source-fidelity review.",
-            "Require the candidate_ready_for_attributed_review result state and pending named-reviewer boundary.",
-        ],
-        "expected_exit_codes": {"pass": 0, "refusal": "nonzero"},
-        "custody": {
-            "access": "public",
-            "inputs_must_be_public": True,
-            "participant_private_data_allowed": False,
-        },
-        "does_not_establish": [
-            "The capsule does not prove Erdős problem 887 or establish informal statement fidelity.",
-            "The capsule does not establish reviewer independence, upstream acceptance, Vela Verification, Decision, or Math Standing.",
-        ],
-        "verifier_capsule_root_definition": "sha256 of canonical JSON after removing only verifier_capsule_root",
-    }
-    verifier_capsule["verifier_capsule_root"] = _root(verifier_capsule)
-
-    result_contract: dict[str, Any] = {
-        "schema": RESULT_CONTRACT_SCHEMA,
-        "authority_effect": "none",
-        "target_id": TARGET_ID,
-        "result": {
-            "schema": "vela.math.fidelity-repair-result.v1",
-            "media_type": "application/json",
-            "maximum_bytes": 65536,
-            "canonical_framing": "canonical JSON plus exactly one trailing LF",
-            "required_fields": RESULT_REQUIRED_FIELDS,
-        },
-        "positive_result": {
-            "result_status": "candidate_ready_for_attributed_review",
-            "semantic_review": {
-                "required": True,
-                "status": "pending",
-                "independent": False,
-                "reviewer": None,
-            },
-            "required_artifacts": [
-                "source_patch",
-                "lean_check",
-                "dependency_inventory",
-                "execution_transcript",
-                "lean_stdout",
-                "lean_stderr",
-                "lake_manifest",
-                "prerequisite_build_stdout",
-                "prerequisite_build_stderr",
-                "public_cache_snapshot",
-                "leansearchclient_cache_barrel",
-                "proofwidgets_release_archive",
-                "leansearch_unpack_stdout",
-                "leansearch_unpack_stderr",
-                "proofwidgets_unpack_stdout",
-                "proofwidgets_unpack_stderr",
-            ],
-        },
-        "root_requirements": [
-            "The packet, patch, Lean check, result, source base, and source result use full lowercase sha256 roots.",
-            "The result packet_root must equal the packet executed by the producer.",
-            "The result root omits only result_root from its canonical preimage.",
-            "The result and Lean check must each carry the exact full vela.execution-binding.v1 from the index.",
-            "The rooted public dependency inventory must establish exact package HEADs and no source or package .lake/build directory or registry build barrel before locally materializing the exact retained public cache snapshots.",
-            "The materialization, prerequisite, and target stages must run with operating-system network denial; the prerequisite must also use Lake's global --no-cache option.",
-        ],
-        "custody": {
-            "access": "public",
-            "proof_artifacts_may_be_public": True,
-            "participant_private_data_allowed": False,
-        },
-        "nonclaims": [
-            "A contract-conforming result is only a candidate for named, attributed source-fidelity review.",
-            "A positive result is not upstream acceptance, Vela Verification, Decision, Event, or Math Standing.",
-        ],
-        "result_contract_root_definition": "sha256 of canonical JSON after removing only result_contract_root",
-    }
-    result_contract["result_contract_root"] = _root(result_contract)
-
-    values = [
-        ("producer_profile", PRODUCER_PROFILE_PATH, producer_profile, _canonical_bytes(producer_profile) + b"\n"),
-        ("verifier_capsule", VERIFIER_CAPSULE_PATH, verifier_capsule, _canonical_bytes(verifier_capsule) + b"\n"),
-        ("result_contract", RESULT_CONTRACT_PATH, result_contract, _canonical_bytes(result_contract) + b"\n"),
-    ]
-    return values
+def _source_projection() -> tuple[dict[str, Any], dict[str, Any], str, str]:
+    projection = _load(PROJECTION_PATH)
+    if projection.get("schema") != PROJECTION_SCHEMA or projection.get("authority_effect") != "none":
+        raise WorkOfferError("source projection schema or authority drift")
+    if projection.get("root", {}).get("domain") != "projection" or projection["root"].get("value") != _root_without(projection, "root"):
+        raise WorkOfferError("source projection root drift")
+    matches = [record for record in projection.get("records", []) if record.get("fixture_id") == FIXTURE_ID]
+    if len(matches) != 1:
+        raise WorkOfferError("source record must occur exactly once")
+    record = matches[0]
+    if record.get("authority_effect") != "none" or record.get("standing_effect") != "none":
+        raise WorkOfferError("source record cannot carry authority or Standing")
+    source_commit = _git("log", "-1", "--format=%H", "--", str(PROJECTION_PATH.relative_to(REPO_ROOT)))
+    return projection, record, source_commit, _git("show", "-s", "--format=%T", source_commit)
 
 
-def _component_descriptors(
-    components: list[tuple[str, Path, dict[str, Any], bytes]],
-) -> dict[str, dict[str, Any]]:
+def _validate_component(name: str, descriptor: dict[str, Any]) -> None:
     root_fields = {
         "producer_profile": "profile_root",
         "verifier_capsule": "verifier_capsule_root",
         "result_contract": "result_contract_root",
     }
-    return {
-        name: {
-            "schema": value["schema"],
-            "path": str(path.relative_to(REPO_ROOT)),
-            "root": value[root_fields[name]],
-            "raw_sha256": _raw_root(raw),
-            "size": len(raw),
-        }
-        for name, path, value, raw in components
-    }
+    root_field = root_fields[name]
+    path = REPO_ROOT / descriptor["path"]
+    value = _load(path)
+    raw = path.read_bytes()
+    if value.get("authority_effect") != "none" or value.get(root_field) != _root_without(value, root_field):
+        raise WorkOfferError(f"issued {name} authority or root drift")
+    expected = _descriptor(path, value, raw, root_field)
+    if descriptor != {
+        "schema": expected["schema"],
+        "path": expected["path"],
+        "size": expected["size"],
+        "raw_sha256": expected["raw_sha256"],
+        "root": expected[root_field],
+    }:
+        raise WorkOfferError(f"issued {name} descriptor drift")
 
 
-def _validate_execution_components(
-    components: list[tuple[str, Path, dict[str, Any], bytes]],
-) -> None:
-    expected = {
-        "producer_profile": (PRODUCER_PROFILE_PATH, PRODUCER_PROFILE_SCHEMA, "profile_root"),
-        "verifier_capsule": (VERIFIER_CAPSULE_PATH, VERIFIER_CAPSULE_SCHEMA, "verifier_capsule_root"),
-        "result_contract": (RESULT_CONTRACT_PATH, RESULT_CONTRACT_SCHEMA, "result_contract_root"),
-    }
-    if [name for name, _, _, _ in components] != list(expected):
-        raise WorkOfferError("execution component inventory drift")
-    for name, path, value, raw in components:
-        expected_path, schema, root_field = expected[name]
-        if path != expected_path or value.get("schema") != schema:
-            raise WorkOfferError(f"{name} identity drift")
-        if value.get("authority_effect") != "none":
-            raise WorkOfferError(f"{name} cannot carry authority")
-        custody = value.get("custody")
-        if not isinstance(custody, dict) or custody.get("access") != "public":
-            raise WorkOfferError(f"{name} must remain public")
-        if custody.get("participant_private_data_allowed") is not False:
-            raise WorkOfferError(f"{name} cannot admit participant private data")
-        if raw != _canonical_bytes(value) + b"\n":
-            raise WorkOfferError(f"{name} canonical framing drift")
-        root = value.get(root_field)
-        if not _is_full_sha256_root(root) or root != _root_without(value, root_field):
-            raise WorkOfferError(f"{name} root drift")
-
-
-def build_packet(components: list[tuple[str, Path, dict[str, Any], bytes]]) -> dict[str, Any]:
-    _validate_execution_components(components)
-    projection, record, source_commit, source_tree = _source_projection()
-    repository = _repository_binding()
-    native = record["native_identity"]
-    source_records = record["source_records"]
-    packet: dict[str, Any] = {
-        "schema": PACKET_SCHEMA,
-        "authority_effect": "none",
-        "target": {
-            "id": TARGET_ID,
-            "title": "Repair the answer-slot scope defect in the Erdős 887 formalization",
-            "source_fixture_id": FIXTURE_ID,
-        },
-        "repository": {
-            **repository,
-            "source_commit": source_commit,
-            "source_tree": source_tree,
-        },
-        "source": {
-            "projection_path": str(PROJECTION_PATH.relative_to(REPO_ROOT)),
-            "projection_root": projection["root"]["value"],
-            "record_root": record["root"]["value"],
-            "audit_core_root": source_records["core"]["record_root"]["value"],
-            "audit_observation_root": source_records["observation"]["record_root"]["value"],
-            "repository": native["repository"]["url"],
-            "pull_request": native["pull_request"]["number"],
-            "pull_request_url": native["pull_request"]["url"],
-            "head_commit": native["head"]["commit_oid"],
-            "head_tree": native["head"]["tree_oid"],
-            "changed_paths": [change["path"] for change in native["changes"]],
-            "observed_disposition": record["source_axis"]["advisory_disposition"],
-            "basis_check_id": "answer-slot-scope",
-        },
-        "objective": "Produce an exact, reviewable correction for the answer slot occurring under the C and n binders in FormalConjectures/ErdosProblems/887.lean, preserve the intended absolute-K statement, and return rooted source and check evidence for independent attributed review.",
-        "completion_contract": {
-            "required": [
-                "Review only the exact retained PR head, tree, changed path, and roots named by this packet.",
-                "Retain the proposed source patch, exact base and result roots, and a network-independent Lean check command.",
-                "Demonstrate that the answer slot selects one absolute K rather than a value under the C and n binders.",
-                "Return witness-backed semantic review with exact locators, naming the reviewer kind, identity, method, and whether that review is independent of the producer.",
-                "Keep upstream PR state, source-audit disposition, Vela Verification, Decision performer, Repository authority, and Math Standing separate.",
-            ],
-            "forbidden": [
-                "Posting or editing any upstream comment, review, or issue without separate explicit authorization.",
-                "Treating CI success, compilation, a source-audit pass, or the activity result as scientific acceptance.",
-                "Creating a Vela Verification, Decision, Event, or Standing change from this activity packet.",
-                "Accessing undelegated Repository authority credentials or signing on behalf of another performer.",
-            ],
-        },
-        "expected_return": {
-            "schema": "vela.math.fidelity-repair-result.v1",
-            "media_type": "application/json",
-            "maximum_bytes": 65536,
-            "required_fields": RESULT_REQUIRED_FIELDS,
-        },
-        "custody": {
-            "access": "public",
-            "proof_artifacts_may_be_public": True,
-            "participant_private_data_allowed": False,
-        },
-        "execution_components": {
-            "authority_effect": "none",
-            **_component_descriptors(components),
-        },
-        "nonclaims": [
-            "This source-local Target packet is not a Vela protocol object.",
-            "The retained source audit reports needs_revision despite a successful exact-head build.",
-            "Completing or reviewing the repair does not itself create a Vela Verification or Decision.",
-            "No Workspace action or source review changes Math Standing.",
-        ],
-        "packet_root_definition": "sha256 of canonical JSON after removing only packet_root",
-    }
-    packet["packet_root"] = _root(packet)
-    return packet
-
-
-def build_index(packet: dict[str, Any], packet_raw: bytes) -> dict[str, Any]:
+def load_issued_packet() -> tuple[dict[str, Any], bytes]:
+    packet = _load(ISSUED_PACKET_SOURCE_PATH)
+    raw = ISSUED_PACKET_SOURCE_PATH.read_bytes()
+    if packet.get("schema") != PACKET_SCHEMA or packet.get("authority_effect") != "none":
+        raise WorkOfferError("issued packet schema or authority drift")
     if packet.get("packet_root") != _root_without(packet, "packet_root"):
-        raise WorkOfferError("packet root drift before index construction")
-    component_set = packet.get("execution_components")
-    if not isinstance(component_set, dict) or component_set.get("authority_effect") != "none":
-        raise WorkOfferError("packet execution component boundary drift")
+        raise WorkOfferError("issued packet root drift")
+    if packet.get("target", {}).get("id") != TARGET_ID:
+        raise WorkOfferError("issued packet Target drift")
+    if _git_bytes(ISSUANCE_COMMIT, PACKET_PATH) != raw:
+        raise WorkOfferError("issued packet differs from its exact issuance commit")
+    if _git("show", "-s", "--format=%T", packet["repository"]["source_commit"]) != packet["repository"]["source_tree"]:
+        raise WorkOfferError("issued packet source tree drift")
+    historical_projection = json.loads(
+        _git_bytes(packet["repository"]["source_commit"], REPO_ROOT / packet["source"]["projection_path"]),
+        object_pairs_hook=_reject_duplicate_keys,
+    )
+    if historical_projection.get("root", {}).get("value") != packet["source"]["projection_root"]:
+        raise WorkOfferError("issued packet historical projection drift")
+    matches = [record for record in historical_projection.get("records", []) if record.get("root", {}).get("value") == packet["source"]["record_root"]]
+    if len(matches) != 1:
+        raise WorkOfferError("issued packet historical source record drift")
+    components = packet.get("execution_components")
+    if not isinstance(components, dict) or components.get("authority_effect") != "none":
+        raise WorkOfferError("issued packet execution component boundary drift")
     for name in ("producer_profile", "verifier_capsule", "result_contract"):
-        descriptor = component_set.get(name)
-        if not isinstance(descriptor, dict) or not _is_full_sha256_root(descriptor.get("root")):
-            raise WorkOfferError(f"packet {name} descriptor drift")
+        _validate_component(name, components[name])
+    return packet, raw
+
+
+def _validate_rebinding_history() -> list[dict[str, str]]:
+    recovered: list[dict[str, str]] = []
+    for commit, packet_root in RETIRED_REBINDINGS:
+        packet = json.loads(_git_bytes(commit, PACKET_PATH), object_pairs_hook=_reject_duplicate_keys)
+        if packet.get("packet_root") != packet_root or packet_root != _root_without(packet, "packet_root"):
+            raise WorkOfferError(f"retired rebind root drift at {commit}")
+        recovered.append({
+            "commit": commit,
+            "packet_root": packet_root,
+            "disposition": "retired_administrative_rebinding",
+        })
+    return recovered
+
+
+def build_lifecycle(packet: dict[str, Any], packet_raw: bytes) -> dict[str, Any]:
+    result = _load(RESULT_PATH)
+    review = _load(REVIEW_PATH)
+    proposal = _load(PROPOSAL_PATH, require_framed_lf=False)
+    claim = _load(CLAIM_PATH, require_framed_lf=False)
+    decision = _load(DECISION_EVENT_PATH, require_framed_lf=False)
+    application = _load(APPLICATION_EVENT_PATH, require_framed_lf=False)
+    result_raw = RESULT_PATH.read_bytes()
+    review_raw = REVIEW_PATH.read_bytes()
+    proposal_raw = PROPOSAL_PATH.read_bytes()
+    claim_raw = CLAIM_PATH.read_bytes()
+    decision_raw = DECISION_EVENT_PATH.read_bytes()
+    application_raw = APPLICATION_EVENT_PATH.read_bytes()
+
+    if result.get("packet_root") != packet["packet_root"] or result.get("result_root") != _root_without(result, "result_root"):
+        raise WorkOfferError("completion result does not bind the issued packet")
+    if review.get("outcome") != "pass" or review.get("subject", {}).get("target_id") != TARGET_ID:
+        raise WorkOfferError("completion review is not a passing review of the Target")
+    if review.get("inputs", {}).get("execution_result", {}).get("root") != result["result_root"]:
+        raise WorkOfferError("completion review result binding drift")
+    if review.get("subject", {}).get("proposal_root") != _raw_root(proposal_raw):
+        raise WorkOfferError("completion review Proposal binding drift")
+    event = decision.get("content", {})
+    payload = event.get("payload", {})
+    if event.get("kind") != "review.accepted" or payload.get("proposal_id") != review["subject"]["proposal_id"]:
+        raise WorkOfferError("scientific Decision does not accept the reviewed Proposal")
+    applied_event = application.get("content", {})
+    applied_payload = applied_event.get("payload", {})
+    if (
+        applied_event.get("kind") != "claim.asserted"
+        or applied_payload.get("proposal_id") != payload.get("proposal_id")
+        or applied_event.get("transaction_id") != event.get("transaction_id")
+        or applied_payload.get("repository_before") != payload.get("repository_before")
+        or applied_payload.get("repository_after") != payload.get("repository_after")
+    ):
+        raise WorkOfferError("scientific Decision applied Event binding drift")
+    if proposal.get("subject", {}).get("root") != _raw_root(claim_raw) or applied_payload.get("claim_root") != proposal["subject"]["root"]:
+        raise WorkOfferError("scientific Decision Claim binding drift")
+    lifecycle: dict[str, Any] = {
+        "schema": LIFECYCLE_SCHEMA,
+        "authority_effect": "none",
+        "target_id": TARGET_ID,
+        "presence": "superseded",
+        "issued_offer": {
+            "issuance_commit": ISSUANCE_COMMIT,
+            "repository_root": packet["repository"]["repository_root"],
+            "packet": _descriptor(PACKET_PATH, packet, packet_raw, "packet_root"),
+        },
+        "completion": {
+            "contract_status": "not_satisfied",
+            "closure_status": "closed_superseded",
+            "closed_at": event["timestamp"],
+            "contract_gap": "The issued packet required an independent human review. The retained qualifying review was performed by an independent AI-model reviewer, and later performer-neutral packet rebindings were not fresh executed issuances.",
+            "result": {
+                "path": str(RESULT_PATH.relative_to(REPO_ROOT)),
+                "raw_sha256": _raw_root(result_raw),
+                "result_root": result["result_root"],
+                "check_result_root": result["check_result_root"],
+            },
+            "review": {
+                "path": str(REVIEW_PATH.relative_to(REPO_ROOT)),
+                "raw_sha256": _raw_root(review_raw),
+                "outcome": review["outcome"],
+                "reviewer": review["reviewer"],
+                "independence": review["independence"],
+                "method": review["method"],
+            },
+        },
+        "decisions": {
+            "scientific": {
+                "domain": "scientific",
+                "status": "accepted",
+                "proposal_id": payload["proposal_id"],
+                "proposal_root": _raw_root(proposal_raw),
+                "claim_id": applied_payload["claim_id"],
+                "claim_root": applied_payload["claim_root"],
+                "event_id": decision["id"],
+                "protocol_event_id": payload["applied_event_id"],
+                "event_path": str(DECISION_EVENT_PATH.relative_to(REPO_ROOT)),
+                "event_raw_sha256": _raw_root(decision_raw),
+                "applied_event_id": application["id"],
+                "applied_event_path": str(APPLICATION_EVENT_PATH.relative_to(REPO_ROOT)),
+                "applied_event_raw_sha256": _raw_root(application_raw),
+                "decided_at": event["timestamp"],
+                "performer": {
+                    "class": event["actor"]["type"],
+                    "id": event["actor"]["id"],
+                },
+                "authority_principal": event["principal_id"],
+                "reason": event["reason"],
+            },
+            "program": {
+                "domain": "program",
+                "status": "not_applicable",
+                "authority_effect": "none",
+                "reason": "The issued Work Offer carried no reward, payment, or resource-release commitment, so no program Decision exists.",
+            },
+            "deployment": {
+                "domain": "deployment",
+                "status": "not_applicable",
+                "authority_effect": "none",
+                "reason": "No upstream merge, procurement, or deployment Decision was part of this Work Offer.",
+            },
+        },
+        "remap": {
+            "state": "identified_not_offered",
+            "next_obligation": {
+                "id": "erdos:887:proof-discharge",
+                "title": "Discharge the remaining proof placeholder for the corrected Erdős 887 declaration",
+                "basis_claim_id": applied_payload["claim_id"],
+                "basis_claim_root": applied_payload["claim_root"],
+                "authority_effect": "none",
+            },
+            "reason": "The correction is retained in Math Standing, while the mathematical proposition remains unproved and no successor Work Offer has been issued.",
+        },
+        "retired_rebindings": _validate_rebinding_history(),
+        "nonclaims": [
+            "Closing this superseded Work Offer does not claim that its exact Completion Contract was satisfied.",
+            "The scientific Decision remains valid and separate from the source-owned Work Offer contract gap.",
+            "Neither the retained result nor its attributed agent review proves Erdős problem 887.",
+            "The program and deployment domains have no Decision because neither domain was part of the issued contract.",
+            "The identified next Obligation is not an open Work Offer and authorizes no upstream action.",
+            "This lifecycle projection references the scientific Decision but carries no authority of its own.",
+        ],
+        "lifecycle_root_definition": "sha256 of canonical JSON after removing only lifecycle_root",
+    }
+    lifecycle["lifecycle_root"] = _root(lifecycle)
+    return lifecycle
+
+
+def build_index(packet: dict[str, Any], packet_raw: bytes, lifecycle: dict[str, Any], lifecycle_raw: bytes) -> dict[str, Any]:
     projection, record, source_commit, source_tree = _source_projection()
-    repository = _repository_binding()
+    binding = {
+        "schema": EXECUTION_BINDING_SCHEMA,
+        "packet_root": packet["packet_root"],
+        "profile_root": packet["execution_components"]["producer_profile"]["root"],
+        "verifier_capsule_root": packet["execution_components"]["verifier_capsule"]["root"],
+        "result_contract_root": packet["execution_components"]["result_contract"]["root"],
+    }
     index: dict[str, Any] = {
         "schema": INDEX_SCHEMA,
         "authority_effect": "none",
-        "repository": repository,
+        "repository": _repository_binding(),
         "source": {
             "commit": source_commit,
             "tree": source_tree,
@@ -469,41 +367,24 @@ def build_index(packet: dict[str, Any], packet_raw: bytes) -> dict[str, Any]:
             "projection_root": projection["root"]["value"],
             "record_root": record["root"]["value"],
         },
-        "claim_boundary": {
-            "derived": True,
-            "authoritative": False,
-            "deletable": True,
-        },
-        "targets": [
-            {
-                "id": TARGET_ID,
-                "title": packet["target"]["title"],
-                "presence": "open",
-                "rank": 1,
-                "lane": "source-fidelity-repair",
-                "objective": packet["objective"],
-                "verifier_profile": "lean-build-plus-attributed-source-fidelity-review.v1",
-                "execution_binding": {
-                    "schema": EXECUTION_BINDING_SCHEMA,
-                    "packet_root": packet["packet_root"],
-                    "profile_root": packet["execution_components"]["producer_profile"]["root"],
-                    "verifier_capsule_root": packet["execution_components"]["verifier_capsule"]["root"],
-                    "result_contract_root": packet["execution_components"]["result_contract"]["root"],
-                },
-                "next_command": f"python3 -B {HERE.relative_to(REPO_ROOT)}/build.py --check --print-target {TARGET_ID}",
-                "packet": {
-                    "schema": packet["schema"],
-                    "path": str(PACKET_PATH.relative_to(REPO_ROOT)),
-                    "size": len(packet_raw),
-                    "raw_sha256": _raw_root(packet_raw),
-                    "packet_root": packet["packet_root"],
-                },
-            }
-        ],
+        "claim_boundary": {"derived": True, "authoritative": False, "deletable": True},
+        "targets": [{
+            "id": TARGET_ID,
+            "title": packet["target"]["title"],
+            "presence": "superseded",
+            "rank": 1,
+            "lane": "source-fidelity-repair",
+            "objective": packet["objective"],
+            "verifier_profile": "lean-build-plus-attributed-source-fidelity-review.v1",
+            "next_command": None,
+            "execution_binding": binding,
+            "packet": _descriptor(PACKET_PATH, packet, packet_raw, "packet_root"),
+            "lifecycle": _descriptor(LIFECYCLE_PATH, lifecycle, lifecycle_raw, "lifecycle_root"),
+        }],
         "nonclaims": [
             "This index is a disposable source-local work projection and carries no scientific authority.",
-            "An open offer is not a Vela Proposal, Verification, Decision, or change to Standing.",
-            "The Web activity plane may retain this exact Target and packet root but cannot decide it.",
+            "A superseded offer is not open work and may not be rebound to a later Repository root as a fresh issuance.",
+            "Scientific, program, and deployment Decisions remain independent domains.",
         ],
         "index_root_definition": "sha256 of canonical JSON after removing only index_root",
     }
@@ -511,13 +392,13 @@ def build_index(packet: dict[str, Any], packet_raw: bytes) -> dict[str, Any]:
     return index
 
 
-def build() -> tuple[list[tuple[str, Path, dict[str, Any], bytes]], dict[str, Any], bytes, dict[str, Any], bytes]:
-    components = build_execution_components()
-    packet = build_packet(components)
-    packet_raw = _canonical_bytes(packet) + b"\n"
-    index = build_index(packet, packet_raw)
+def build() -> tuple[dict[str, Any], bytes, dict[str, Any], bytes, dict[str, Any], bytes]:
+    packet, packet_raw = load_issued_packet()
+    lifecycle = build_lifecycle(packet, packet_raw)
+    lifecycle_raw = _canonical_bytes(lifecycle) + b"\n"
+    index = build_index(packet, packet_raw, lifecycle, lifecycle_raw)
     index_raw = _canonical_bytes(index) + b"\n"
-    return components, packet, packet_raw, index, index_raw
+    return packet, packet_raw, lifecycle, lifecycle_raw, index, index_raw
 
 
 def main() -> int:
@@ -526,29 +407,24 @@ def main() -> int:
     parser.add_argument("--print-target")
     parser.add_argument("--print-roots", action="store_true")
     args = parser.parse_args()
-    components, packet, packet_raw, index, index_raw = build()
+    packet, packet_raw, lifecycle, lifecycle_raw, index, index_raw = build()
+    expected = ((PACKET_PATH, packet_raw), (LIFECYCLE_PATH, lifecycle_raw), (INDEX_PATH, index_raw))
     if args.check:
-        for _, path, _, raw in components:
-            if path.read_bytes() != raw:
-                raise SystemExit(f"{path.relative_to(REPO_ROOT)} does not match the deterministic execution component")
-        if PACKET_PATH.read_bytes() != packet_raw:
-            raise SystemExit("target packet does not match exact source inputs")
-        if INDEX_PATH.read_bytes() != index_raw:
-            raise SystemExit("work-offer index does not match exact source inputs")
+        for path, raw in expected:
+            if not path.exists() or path.read_bytes() != raw:
+                raise SystemExit(f"{path.relative_to(REPO_ROOT)} does not match the immutable lifecycle projection")
     else:
-        EXECUTION_DIR.mkdir(parents=True, exist_ok=True)
-        for _, path, _, raw in components:
+        for path, raw in expected:
+            path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(raw)
-        PACKET_PATH.parent.mkdir(parents=True, exist_ok=True)
-        PACKET_PATH.write_bytes(packet_raw)
-        INDEX_PATH.write_bytes(index_raw)
     if args.print_target is not None:
         if args.print_target != TARGET_ID:
             raise SystemExit(f"unknown Target: {args.print_target}")
-        print(packet_raw.decode("utf-8"), end="")
+        print(_canonical_bytes(index["targets"][0]).decode("utf-8"))
     if args.print_roots:
         print(json.dumps({
             "index_root": index["index_root"],
+            "lifecycle_root": lifecycle["lifecycle_root"],
             **index["targets"][0]["execution_binding"],
         }, sort_keys=True))
     return 0

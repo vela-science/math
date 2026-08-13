@@ -12,7 +12,7 @@ from unittest.mock import patch
 HERE = Path(__file__).resolve().parent
 SPEC = importlib.util.spec_from_file_location(
     "verify_execution_binding",
-    HERE / "attributed-review/verify_binding.py",
+    HERE / "verify_binding.py",
 )
 assert SPEC and SPEC.loader
 MODULE = importlib.util.module_from_spec(SPEC)
@@ -51,7 +51,7 @@ class BindingTest(unittest.TestCase):
         result, _ = MODULE.load(result_path)
         result["packet_root"] = binding["packet_root"]
         result["execution_binding"] = binding
-        result["result_status"] = "candidate_ready_for_attributed_review"
+        result["result_status"] = "candidate_ready_for_human_review"
         result["artifacts"]["execution_transcript"]["root"] = transcript["transcript_root"]
         result["artifacts"]["lean_check"]["root"] = check["check_result_root"]
         result["check_result_root"] = check["check_result_root"]
