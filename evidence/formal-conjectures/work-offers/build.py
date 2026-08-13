@@ -19,10 +19,11 @@ REPOSITORY_PATH = REPO_ROOT / ".vela/repository.json"
 PACKET_PATH = HERE / "packets/erdos-887-pr-1237-fidelity-repair.v1.json"
 INDEX_PATH = HERE / "index.v1.json"
 EXECUTION_DIR = HERE / "execution/erdos-887-pr-1237-fidelity-repair"
-PRODUCER_PROFILE_PATH = EXECUTION_DIR / "producer-profile.v1.json"
-VERIFIER_CAPSULE_PATH = EXECUTION_DIR / "verifier-capsule.v1.json"
-RESULT_CONTRACT_PATH = EXECUTION_DIR / "result-contract.v1.json"
-VERIFY_BINDING_PATH = EXECUTION_DIR / "verify_binding.py"
+ATTRIBUTED_EXECUTION_DIR = EXECUTION_DIR / "attributed-review"
+PRODUCER_PROFILE_PATH = ATTRIBUTED_EXECUTION_DIR / "producer-profile.v1.json"
+VERIFIER_CAPSULE_PATH = ATTRIBUTED_EXECUTION_DIR / "verifier-capsule.v1.json"
+RESULT_CONTRACT_PATH = ATTRIBUTED_EXECUTION_DIR / "result-contract.v1.json"
+VERIFY_BINDING_PATH = ATTRIBUTED_EXECUTION_DIR / "verify_binding.py"
 
 TARGET_ID = "erdos:887"
 FIXTURE_ID = "fidelity-erdos-887-1237"
@@ -174,7 +175,7 @@ def build_execution_components() -> list[tuple[str, Path, dict[str, Any], bytes]
                 "rooted source patch",
                 "rooted Lean check result",
                 "rooted result manifest",
-                "witness-backed semantic rationale awaiting a named human reviewer",
+                "witness-backed semantic rationale awaiting a named attributed reviewer",
             ],
         },
         "permissions": {
@@ -208,7 +209,7 @@ def build_execution_components() -> list[tuple[str, Path, dict[str, Any], bytes]
         },
         "nonclaims": [
             "This profile describes eligible activity-plane production and grants no scientific or Repository authority.",
-            "Conformance to this profile is not a Vela Verification, human Decision, or change to Standing.",
+            "Conformance to this profile is not a Vela Verification, Decision, or change to Standing.",
         ],
         "profile_root_definition": "sha256 of canonical JSON after removing only profile_root",
     }
@@ -236,8 +237,8 @@ def build_execution_components() -> list[tuple[str, Path, dict[str, Any], bytes]
             "Reject a changed Target, packet root, source patch, Lean check result, or result root.",
             "Reject any result or Lean-check execution_binding that differs from the exact index binding.",
             "Reject package HEAD drift, hidden preexisting .lake/build directories or Lake registry build barrels, changed retained public cache snapshots, a replay stage without operating-system network denial, a prerequisite without global --no-cache, or changed stage evidence.",
-            "Reject any authority effect or fabricated completed human source-fidelity review.",
-            "Require the candidate_ready_for_human_review result state and pending named-human review boundary.",
+            "Reject any authority effect or fabricated completed source-fidelity review.",
+            "Require the candidate_ready_for_attributed_review result state and pending named-reviewer boundary.",
         ],
         "expected_exit_codes": {"pass": 0, "refusal": "nonzero"},
         "custody": {
@@ -247,7 +248,7 @@ def build_execution_components() -> list[tuple[str, Path, dict[str, Any], bytes]
         },
         "does_not_establish": [
             "The capsule does not prove Erdős problem 887 or establish informal statement fidelity.",
-            "The capsule does not establish reviewer independence, upstream acceptance, Vela Verification, human Decision, or Math Standing.",
+            "The capsule does not establish reviewer independence, upstream acceptance, Vela Verification, Decision, or Math Standing.",
         ],
         "verifier_capsule_root_definition": "sha256 of canonical JSON after removing only verifier_capsule_root",
     }
@@ -265,7 +266,7 @@ def build_execution_components() -> list[tuple[str, Path, dict[str, Any], bytes]
             "required_fields": RESULT_REQUIRED_FIELDS,
         },
         "positive_result": {
-            "result_status": "candidate_ready_for_human_review",
+            "result_status": "candidate_ready_for_attributed_review",
             "semantic_review": {
                 "required": True,
                 "status": "pending",
@@ -305,8 +306,8 @@ def build_execution_components() -> list[tuple[str, Path, dict[str, Any], bytes]
             "participant_private_data_allowed": False,
         },
         "nonclaims": [
-            "A contract-conforming result is only a candidate for named human source-fidelity review.",
-            "A positive result is not upstream acceptance, Vela Verification, human Decision, Event, or Math Standing.",
+            "A contract-conforming result is only a candidate for named, attributed source-fidelity review.",
+            "A positive result is not upstream acceptance, Vela Verification, Decision, Event, or Math Standing.",
         ],
         "result_contract_root_definition": "sha256 of canonical JSON after removing only result_contract_root",
     }
@@ -402,20 +403,20 @@ def build_packet(components: list[tuple[str, Path, dict[str, Any], bytes]]) -> d
             "observed_disposition": record["source_axis"]["advisory_disposition"],
             "basis_check_id": "answer-slot-scope",
         },
-        "objective": "Produce an exact, reviewable correction for the answer slot occurring under the C and n binders in FormalConjectures/ErdosProblems/887.lean, preserve the intended absolute-K statement, and return rooted source and check evidence for independent human review.",
+        "objective": "Produce an exact, reviewable correction for the answer slot occurring under the C and n binders in FormalConjectures/ErdosProblems/887.lean, preserve the intended absolute-K statement, and return rooted source and check evidence for independent attributed review.",
         "completion_contract": {
             "required": [
                 "Review only the exact retained PR head, tree, changed path, and roots named by this packet.",
                 "Retain the proposed source patch, exact base and result roots, and a network-independent Lean check command.",
                 "Demonstrate that the answer slot selects one absolute K rather than a value under the C and n binders.",
-                "Return witness-backed semantic review with exact locators, naming the human reviewer and whether that review is independent of the producer.",
-                "Keep upstream PR state, source-audit disposition, Vela Verification, human Decision, and Math Standing separate.",
+                "Return witness-backed semantic review with exact locators, naming the reviewer kind, identity, method, and whether that review is independent of the producer.",
+                "Keep upstream PR state, source-audit disposition, Vela Verification, Decision performer, Repository authority, and Math Standing separate.",
             ],
             "forbidden": [
                 "Posting or editing any upstream comment, review, or issue without separate explicit authorization.",
                 "Treating CI success, compilation, a source-audit pass, or the activity result as scientific acceptance.",
                 "Creating a Vela Verification, Decision, Event, or Standing change from this activity packet.",
-                "Accessing Repository authority credentials or signing on behalf of an authorized human.",
+                "Accessing undelegated Repository authority credentials or signing on behalf of another performer.",
             ],
         },
         "expected_return": {
@@ -436,7 +437,7 @@ def build_packet(components: list[tuple[str, Path, dict[str, Any], bytes]]) -> d
         "nonclaims": [
             "This source-local Target packet is not a Vela protocol object.",
             "The retained source audit reports needs_revision despite a successful exact-head build.",
-            "Completing or reviewing the repair does not itself create a Vela Verification or human Decision.",
+            "Completing or reviewing the repair does not itself create a Vela Verification or Decision.",
             "No Workspace action or source review changes Math Standing.",
         ],
         "packet_root_definition": "sha256 of canonical JSON after removing only packet_root",
@@ -481,7 +482,7 @@ def build_index(packet: dict[str, Any], packet_raw: bytes) -> dict[str, Any]:
                 "rank": 1,
                 "lane": "source-fidelity-repair",
                 "objective": packet["objective"],
-                "verifier_profile": "lean-build-plus-human-source-fidelity-review.v1",
+                "verifier_profile": "lean-build-plus-attributed-source-fidelity-review.v1",
                 "execution_binding": {
                     "schema": EXECUTION_BINDING_SCHEMA,
                     "packet_root": packet["packet_root"],

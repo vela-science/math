@@ -1,8 +1,8 @@
 # Vela Mathematics — agent charter
 
-Canonical state is Git history plus the current `.vela/repository.json` manifest. Producers may inspect exact Target briefings, submit signed evidence directly, and record scoped Verification. Only an authorized human Decision changes scientific standing.
+Canonical state is Git history plus the current `.vela/repository.json` manifest. Producers may inspect exact Target briefings, submit signed evidence directly, and record scoped Verification. Only an authorized, attributed Decision changes scientific Standing. The performer may be human or agent; actor class, identity, session provenance, and the distinct Repository authority principal must remain explicit.
 
-Agents must not invoke `vela review accept` or `vela review reject`, access repository-authority credentials, hand-edit canonical records, or describe Verification as acceptance. A Verification method manifest must be tracked, clean, and retained in the current Git commit before `vela verification record`.
+An agent may invoke `vela review accept` or `vela review reject` only when the Repository has explicitly authorized the exact authority principal and the invocation records the agent's own `agent:` identity plus its source-owned session or checkpoint. Producer or verifier status never grants that capability. Agents must not impersonate a human, reuse another performer's identity, access undelegated credentials, hand-edit canonical records, or describe Verification as acceptance. A Verification method manifest must be tracked, clean, and retained in the current Git commit before `vela verification record`.
 
 ```bash
 vela status . --json
@@ -13,4 +13,4 @@ vela review inbox . --json
 vela replay . --json
 ```
 
-Hand the rooted Decision Inbox entry to the authorized operator; do not decide it yourself.
+Hand the rooted Decision Inbox entry to an authorized operator. If you are that explicitly authorized operator, decide the exact entry under your own attributed identity and session; otherwise do not decide it yourself.

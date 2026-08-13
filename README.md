@@ -17,10 +17,21 @@ git commit -m "Retain verification method"
 vela verification record . <vpr_id> --profile <profile> --method verification/method.json --outcome pass --does-not-establish "Scientific acceptance." --as verifier:<name> --json
 
 vela review inbox . --json
-# Only an authorized operator may make the exact accept or reject Decision.
-vela review accept . <vpr_id> --reason "<reason>" --if-entry-root sha256:... --json
+# A human or agent performer may decide only through an authorized Repository principal.
+vela review accept . <vpr_id> \
+  --reason "<reason>" \
+  --if-entry-root sha256:... \
+  --as agent:<name> \
+  --session-ref entire:checkpoint:<id> \
+  --json
 vela replay . --json
 ```
+
+`--as` and `--session-ref` record who performed the Decision and the
+source-owned session that produced it. They do not replace or imply the
+separate Repository authority principal and signature. Human and agent
+performers use the same exact Proposal, evidence, policy, stale-root, signing,
+and replay checks; actor class is provenance, not a quality rank.
 
 ## Source-local experiments
 
