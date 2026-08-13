@@ -54,6 +54,7 @@ vela replay . --json
   Both identities were operated by the same experimenter, so this is execution
   compatibility evidence, not independent adoption or scientific authority.
 - [External-workbench return boundary](evidence/erdos-321/external-workbench-return/README.md)
+- [Formal Conjectures current work offer](evidence/formal-conjectures/work-offers/README.md)
   strictly retains a future separately operated result as an unverified,
   non-authoritative receipt. Schema conformance does not establish operator
   independence, scientific correctness, adoption, or human acceptance.
