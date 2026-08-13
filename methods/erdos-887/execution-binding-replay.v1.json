@@ -1,0 +1,19 @@
+{
+  "schema": "vela.verification-method.v1",
+  "profile": "erdos-887-execution-binding-replay-v1",
+  "property": "execution_binding_replay",
+  "question": "Does the retained Erdős 887 result satisfy the exact four-root execution binding and frozen verifier capsule published by the current work offer?",
+  "procedure": [
+    "Read evidence/formal-conjectures/work-offers/index.v1.json and resolve erdos:887 to the exact packet, producer profile, verifier capsule, and result contract roots.",
+    "Read evidence/formal-conjectures/work-offers/results/erdos-887-pilot-02-current-binding/result.v1.json and require the same complete vela.execution-binding.v1.",
+    "Run the retained verifier capsule against result.v1.json and require successful validation of the result, dependency inventory, execution transcript, Lean check, cache snapshot, implementation roots, and repository-relative custody paths.",
+    "Require the referenced result artifact bytes to hash to sha256:d08e8bd070cd0df59f07eef83159373d13e6f6d623036eef0211a65452a97c3a."
+  ],
+  "what_this_verifier_did": "Re-ran the retained frozen capsule over the exact current-binding result and checked the public artifact byte root used by the Submission.",
+  "what_this_verifier_did_not_do": "Did not perform an attributed human statement-fidelity review, a fresh independent reproduction, or a from-source dependency build, and did not exercise Repository authority.",
+  "environment": {
+    "inputs_are_exact_bytes": true,
+    "network_required": false,
+    "independence": "The verifier is a separate Vela actor but the same experiment operator and shares the retained result, public compiled caches, source snapshots, and verifier implementation with the producer. This is a complementary execution-binding check, not independent human source-fidelity evidence."
+  }
+}
