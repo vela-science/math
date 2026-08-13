@@ -1,0 +1,1 @@
+materialized LeanSearchClient-build.barrel into $PACKAGE/.lake/build with validated tarfile extraction
