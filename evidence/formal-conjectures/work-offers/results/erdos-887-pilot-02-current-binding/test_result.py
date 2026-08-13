@@ -20,6 +20,7 @@ CAPSULE_SPEC = importlib.util.spec_from_file_location("verify_current_binding", 
 assert CAPSULE_SPEC and CAPSULE_SPEC.loader
 CAPSULE = importlib.util.module_from_spec(CAPSULE_SPEC)
 CAPSULE_SPEC.loader.exec_module(CAPSULE)
+HUMAN_METHOD = BUILD.REPO_ROOT / "methods/erdos-887/statement-fidelity-review.v1.json"
 
 
 class CurrentResultTest(unittest.TestCase):
@@ -46,6 +47,24 @@ class CurrentResultTest(unittest.TestCase):
         self.assertEqual(CAPSULE.verify_result(BUILD.RESULT, binding), result["result_root"])
         self.assertEqual(check["execution_binding"], binding)
         self.assertEqual(check["exit_code"], 0)
+
+    def test_human_review_method_binds_the_exact_candidate(self) -> None:
+        method = json.loads(HUMAN_METHOD.read_text(), object_pairs_hook=BUILD.unique_object)
+        _, _, result, _ = BUILD.build()
+        self.assertEqual(method["schema"], "vela.verification-method.v1")
+        self.assertEqual(
+            method["property"],
+            "Attributed human statement-fidelity review of the absolute-K answer-slot repair.",
+        )
+        self.assertEqual(method["inputs"]["base_commit"], result["source_roots"]["base_commit"])
+        self.assertEqual(
+            method["inputs"]["repaired_content_root"],
+            result["source_roots"]["result_content_root"],
+        )
+        self.assertEqual(method["inputs"]["repair_raw_sha256"], result["source_patch_root"])
+        self.assertEqual(method["inputs"]["execution_result_root"], result["result_root"])
+        self.assertIn("human", method["environment"]["independence"])
+        self.assertIn("Decision", " ".join(method["does_not_establish"]))
 
     def test_dependency_inventory_and_public_non_authority_recompute(self) -> None:
         check, _, result, _ = BUILD.build()

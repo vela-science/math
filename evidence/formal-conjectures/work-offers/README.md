@@ -36,6 +36,12 @@ python3 -B \
   evidence/formal-conjectures/work-offers/execution/erdos-887-pr-1237-fidelity-repair/verify_binding.py
 ```
 
+The current result is ready for the bounded human review described in
+[`results/erdos-887-pilot-02-current-binding/HUMAN_REVIEW.md`](results/erdos-887-pilot-02-current-binding/HUMAN_REVIEW.md).
+The committed method keeps the semantic question and the execution-binding
+check separate. A reviewer still chooses and signs the outcome; this repository
+does not infer it from Lean success.
+
 `index.v1.json` and the packet use canonical JSON plus one trailing LF. The
 index binds the exact Math repository manifest root, the source-adapter commit
 and tree, the source projection and record roots, and the packet's canonical

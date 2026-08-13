@@ -1,0 +1,35 @@
+{
+  "schema": "vela.verification-method.v1",
+  "profile": "erdos-887-statement-fidelity-review-v1",
+  "property": "Attributed human statement-fidelity review of the absolute-K answer-slot repair.",
+  "question": "Does the repaired Erdős 887 declaration express the source question using one absolute constant K outside the C and n binders?",
+  "inputs": {
+    "formal_conjectures_repository": "https://github.com/google-deepmind/formal-conjectures",
+    "base_commit": "288608562e684a2f3c97ba0ce960a2649a71370b",
+    "source_path": "FormalConjectures/ErdosProblems/887.lean",
+    "base_content_root": "sha256:3e4c9376ebfa464985a2da4ac3b8401b1b54d64be1075368032eced0700706c5",
+    "repair_path": "evidence/formal-conjectures/work-offers/results/erdos-887-pilot-02-current-binding/repair.patch",
+    "repair_raw_sha256": "sha256:0fee5a4d7d93fcab7296be1ea3aa44b86c3fdb6278450989dd1814112348fa24",
+    "repaired_content_root": "sha256:249ba4bcc206477d2695e154acda204bed356b99d4f670730ca9adeed08f8f01",
+    "execution_result_path": "evidence/formal-conjectures/work-offers/results/erdos-887-pilot-02-current-binding/result.v1.json",
+    "execution_result_root": "sha256:9902098245a52f67dedeefe06b4353a530ef251b93bb80465c6aafa6fca1865c"
+  },
+  "procedure": [
+    "Read the English source question in the exact base file and identify the quantifier order: one absolute K, then every C greater than zero, then all sufficiently large n.",
+    "Apply or inspect the exact retained repair and check that the existential K sits outside the C and n binders.",
+    "Check that the interval, divisor predicate, number types, and eventual quantifier still match the source question within the declaration's stated scope.",
+    "Check whether the answer(sorry) equivalence is the intended Formal Conjectures encoding of this open yes-or-no question rather than a proof of the question itself.",
+    "Record pass only if the repaired declaration is source-faithful within this scope. Record fail for a concrete mismatch, inconclusive when the available source or encoding convention cannot settle the comparison, and error when the review could not run."
+  ],
+  "required_witness": "Name the exact clause that places K outside C and n. For fail or inconclusive, name the first disputed source or declaration clause.",
+  "environment": {
+    "inputs_are_exact_bytes": true,
+    "network_required": false,
+    "independence": "The reviewer must be a human who did not prepare the repair, execution result, or source-audit finding. Shared use of the public source, retained repair, and this method must be disclosed on the Verification Record."
+  },
+  "does_not_establish": [
+    "A passing review does not prove Erdős problem 887 or discharge any sorry.",
+    "A passing review does not establish a from-source dependency build or an independent mechanical reproduction.",
+    "Verification does not accept the Proposal or change Math Standing; an authorized human Decision remains separate."
+  ]
+}
