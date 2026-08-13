@@ -1,0 +1,118 @@
+{
+  "schema": "vela.math.fc-audit.compact-handoff-set.v0.2",
+  "authority_effect": "none",
+  "design": {
+    "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/handoff-revision-design.v0.2.json",
+    "size": 2976,
+    "raw_sha256": "sha256:840bd48d6137fd7d9cb9dc1641adab1904736069a3dc99d2688d250e1757b1f9"
+  },
+  "handoff_count": 15,
+  "handoffs": [
+    {
+      "source_handoff_id": "agent-eval-handoff-s01-02",
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/compact-handoffs/slot-01--task-02--fixture-02.json",
+      "size": 4468,
+      "raw_sha256": "sha256:2f934e1035c5163755d6847066f1c471258bd9ea4baf4a6329c73568d88466cf",
+      "handoff_root": "sha256:2989ecea9585cf17c1ae488160c9b6f6881a41c3190b13766acb280af2e45d28"
+    },
+    {
+      "source_handoff_id": "agent-eval-handoff-s01-04",
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/compact-handoffs/slot-01--task-04--fixture-04.json",
+      "size": 3973,
+      "raw_sha256": "sha256:519cb5262b92b4e2e0d0c484fa21393c683ae7700452d270f2125371ff047422",
+      "handoff_root": "sha256:f0f3523c4bc83f0bce50fff532e05bd29eec8364ec69736b0c723cfb1e39bd2d"
+    },
+    {
+      "source_handoff_id": "agent-eval-handoff-s02-01",
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/compact-handoffs/slot-02--task-05--fixture-01.json",
+      "size": 4326,
+      "raw_sha256": "sha256:6bb0660c3fa2781d5d8921942ba328e6153f2c8abfc9b69de6f8bf47c0c7232f",
+      "handoff_root": "sha256:71efccb5796f16c70d7a4fd11b8b05dff83780c796da4869b4b448fcdb1f96a4"
+    },
+    {
+      "source_handoff_id": "agent-eval-handoff-s02-03",
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/compact-handoffs/slot-02--task-02--fixture-03.json",
+      "size": 3912,
+      "raw_sha256": "sha256:6e4fadd8a6967e459f9edb746680e89ec8fad3ae2022aa2c488aa0cef6b19060",
+      "handoff_root": "sha256:6fc55489db19c7aabd095c66d2e9ed06773b0ce1b695ec489dbfff13b25df993"
+    },
+    {
+      "source_handoff_id": "agent-eval-handoff-s02-05",
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/compact-handoffs/slot-02--task-04--fixture-05.json",
+      "size": 4350,
+      "raw_sha256": "sha256:3179ba96617397e893693de34e29663c2738208fec3fe2b40f5344dbaebc5930",
+      "handoff_root": "sha256:3d11057934070dcb9e85e4f86f7e25fe357127281fde6cd40ba26d7abbb4d2d9"
+    },
+    {
+      "source_handoff_id": "agent-eval-handoff-s03-03",
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/compact-handoffs/slot-03--task-01--fixture-03.json",
+      "size": 3800,
+      "raw_sha256": "sha256:6eb14c2d08f38f1f3797bd1773429c31ce08c531f0647ecbdafc37cf08c18eb5",
+      "handoff_root": "sha256:0bd67b029fdb6754aac565bb560d941e60ae0847775c832e0a3c245172755262"
+    },
+    {
+      "source_handoff_id": "agent-eval-handoff-s03-04",
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/compact-handoffs/slot-03--task-02--fixture-04.json",
+      "size": 4422,
+      "raw_sha256": "sha256:4c3aaeb1522fa6f3452ce3733afb2ff63e0dbd6fc692ddbb2f9f6add056dd857",
+      "handoff_root": "sha256:ffb94f7b7adf3c48edfb65b9df804cb0a68cd1b29a70dcec9f2f6f4e74653e2c"
+    },
+    {
+      "source_handoff_id": "agent-eval-handoff-s04-01",
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/compact-handoffs/slot-04--task-03--fixture-01.json",
+      "size": 4488,
+      "raw_sha256": "sha256:278c3ccb4e800e5b7758483c8bf677dc98ac2db96ab037ff45c2da70f65fa5bb",
+      "handoff_root": "sha256:f9d659878100509c3c161797810131c0818a794b1fa696d70ddb2ec1d090ed0f"
+    },
+    {
+      "source_handoff_id": "agent-eval-handoff-s04-02",
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/compact-handoffs/slot-04--task-04--fixture-02.json",
+      "size": 4548,
+      "raw_sha256": "sha256:ff40fdd27723f38d46b7a74dd10d07e60cf29d1133d1f525b65b8259966ad98d",
+      "handoff_root": "sha256:323d8b3c2b9a68dbba76491b9872a99fe7a4fcfaeef13680b8383000bbce9869"
+    },
+    {
+      "source_handoff_id": "agent-eval-handoff-s04-05",
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/compact-handoffs/slot-04--task-02--fixture-05.json",
+      "size": 4461,
+      "raw_sha256": "sha256:6db2a7d79eced911372151eda3fafdf0558e4dae8e781a94cd8d304d3780c092",
+      "handoff_root": "sha256:ee53f162273cd19936449777cfa3997546a0680594a76528bed9ed212ae3a1f1"
+    },
+    {
+      "source_handoff_id": "agent-eval-handoff-s05-02",
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/compact-handoffs/slot-05--task-03--fixture-02.json",
+      "size": 4466,
+      "raw_sha256": "sha256:dc500f8e7bd574ef5d7b3b5ec4ff6cb9544006c8772a0eea23f23b54eb7b96a0",
+      "handoff_root": "sha256:52d5eac3ca4f9768915f925909d63e81b98c23678f8049a16329c6b48b01a80f"
+    },
+    {
+      "source_handoff_id": "agent-eval-handoff-s05-03",
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/compact-handoffs/slot-05--task-04--fixture-03.json",
+      "size": 3876,
+      "raw_sha256": "sha256:fd860d68d5a9849a9501ce7c54e284b782273bf5fbd4e40a3e14e101408f274d",
+      "handoff_root": "sha256:e3ce52c3ccfe514642110e01f30079ae74eab1d2e1602fd207b475786f043304"
+    },
+    {
+      "source_handoff_id": "agent-eval-handoff-s06-01",
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/compact-handoffs/slot-06--task-05--fixture-01.json",
+      "size": 3960,
+      "raw_sha256": "sha256:85b6cf8b380ef37304684b04b7bfd2cb1d694a6d33562041e32006ab74b6bda9",
+      "handoff_root": "sha256:4be04e1bf360f18a35f2a85d187b34c483bb3c693db43918a5b2e35578c969ef"
+    },
+    {
+      "source_handoff_id": "agent-eval-handoff-s06-04",
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/compact-handoffs/slot-06--task-02--fixture-04.json",
+      "size": 4037,
+      "raw_sha256": "sha256:379626d1c9fe449ea89c32976c2de925e8b32e0c3f417e7ac15cbdb91ec64e82",
+      "handoff_root": "sha256:1fe451d09e211325bfa40b270244a9ef0a8aaab1fbd3b1444596b2e30b069db7"
+    },
+    {
+      "source_handoff_id": "agent-eval-handoff-s06-05",
+      "path": "evidence/formal-conjectures/agent-evaluation/handoff-revision/compact-handoffs/slot-06--task-01--fixture-05.json",
+      "size": 4122,
+      "raw_sha256": "sha256:9e1da9d8ddd48c9ad71f196c69016bc4f1d63cfafc2fa1a69b21006063d46a3c",
+      "handoff_root": "sha256:02385af486d80f050813c5215198422c85261b6ac9591e50adfd0f8069dbf98c"
+    }
+  ],
+  "handoff_set_root": "sha256:2a2185ff2732160f4471e96a7c8275b52838abac6b61a7f6ea2ca782bf730032"
+}

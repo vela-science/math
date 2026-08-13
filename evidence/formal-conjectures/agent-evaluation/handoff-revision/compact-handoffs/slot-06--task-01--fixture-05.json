@@ -1,0 +1,79 @@
+{
+  "schema": "vela.math.fc-audit.compact-attributed-handoff.v0.2",
+  "authority_effect": "none",
+  "handoff_id": "agent-eval-handoff-s06-05::compact-v0.2",
+  "fixture_id": "unavailable-rupert-3959",
+  "original_packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6",
+  "source": {
+    "repository": "google-deepmind/formal-conjectures",
+    "commit": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+    "path": "FormalConjectures/Paper/Rupert.lean",
+    "git_blob_sha1": "48c343f0d12c1dffb7953a5d2426e0d13a914bad",
+    "raw_sha256": "sha256:49bec542e7c93319ca4a1c4a2b0b3a18bf72baaf7621416a30685e311a6ef7cf",
+    "size": 4750
+  },
+  "sender": {
+    "actor_class": "agent",
+    "task_context_id": "agent:codex-eval-sender-s06-unavailable-rupert-3959",
+    "output": {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-06--task-01--fixture-05.output.json",
+      "size": 2158,
+      "raw_sha256": "sha256:7ead6c4b6c30d333461ef46554b48a1fdfb55c70eb4c1f7ffe2b733afba79a9e"
+    },
+    "verdict": "unavailable",
+    "issue_codes": [
+      "exact_artifact_identity_unavailable"
+    ],
+    "mechanical_status": "pass",
+    "source_fidelity": "inconclusive",
+    "artifact_availability": "unavailable",
+    "community_status": "merged",
+    "evidence_locators": [
+      "FormalConjectures/Paper/Rupert.lean@868cc092aeb713dbf8027883c5fa575e550cfae9",
+      "Rupert.is_every_convex_polyhedron_rupert",
+      "https://github.com/jcreedcmu/Noperthedron",
+      "https://github.com/google-deepmind/formal-conjectures/actions/runs/25608941188/job/75175625578",
+      "https://github.com/google-deepmind/formal-conjectures/pull/3959",
+      "comparator-missing-tool-invocation.json",
+      "comparator-packet-observation.json"
+    ],
+    "witness": "At head 868cc092aeb713dbf8027883c5fa575e550cfae9, Rupert.is_every_convex_polyhedron_rupert declares formal_proof using lean4 only at the mutable repository root https://github.com/jcreedcmu/Noperthedron, without an exact revision or proof file. The exact-head repository Build project passed, but no Comparator executable or reproducible comparison result was available, so fidelity to external proof bytes cannot be determined.",
+    "unsupported_claims": [
+      "The linked external formalization proves the exact Lean statement at the PR head.",
+      "The repository build establishes proof correctness or source fidelity.",
+      "The merged and approved PR establishes acceptance, Vela Decision, or Standing."
+    ],
+    "next_action": "Pin the external formalization to an immutable commit and exact proof file, then run a retained statement/proof comparison against Rupert.is_every_convex_polyhedron_rupert at head 868cc092aeb713dbf8027883c5fa575e550cfae9.",
+    "confidence": "high"
+  },
+  "audit_records": [
+    {
+      "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/unavailable-rupert-3959/expected-core.json",
+      "raw_sha256": "sha256:73c2b98ae0def8759b2948eb928d4c8412e67ab5541085149568c6b56c7c4f73",
+      "size": 19168
+    },
+    {
+      "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/unavailable-rupert-3959/expected-observation.json",
+      "raw_sha256": "sha256:aecc170adba2ff0dc964ee4d0e165b91a5d36f2048290666f720b6c3054c44c8",
+      "size": 6921
+    }
+  ],
+  "authority": {
+    "effect": "none",
+    "does_not_establish": [
+      "mathematical truth",
+      "external proof-artifact identity",
+      "proof correctness",
+      "source fidelity",
+      "acceptance",
+      "Standing"
+    ]
+  },
+  "receiver_instruction": "Confirm or correct the retained verdict and issue codes, bind the exact provenance fields, state what remains unsupported, and give the next action. Request raw source or audit bytes by locator only if the compact packet cannot support that continuation.",
+  "omitted_payloads": [
+    "embedded source bytes",
+    "embedded audit core and observation bytes",
+    "GitHub API response bodies"
+  ],
+  "handoff_root": "sha256:02385af486d80f050813c5215198422c85261b6ac9591e50adfd0f8069dbf98c"
+}

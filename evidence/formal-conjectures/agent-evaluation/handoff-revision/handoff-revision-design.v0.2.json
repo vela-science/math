@@ -1,0 +1,66 @@
+{
+  "schema": "vela.math.fc-audit.handoff-revision-design.v0.2",
+  "design_id": "fc-audit-attributed-agent-handoff-revision-v0.2",
+  "status": "design_frozen_before_receiver_outcomes",
+  "recorded_at": "2026-08-13T22:45:00Z",
+  "authority_effect": "none",
+  "parent_results": {
+    "path": "evidence/formal-conjectures/agent-evaluation/agent-evaluation-results.v0.1.json",
+    "results_root": "sha256:7c2a05601a19a3bcdb9ae646262077787c75ead9557cee44246d6e2308354ab0",
+    "disposition": "revise",
+    "reason": "H5 receiver continuation was not supported"
+  },
+  "question": "Does a compact rooted handoff improve receiver continuation relative to the full audit bundle for the same exact attributed sender output?",
+  "reviewer_policy": {
+    "actor_class": "agent",
+    "model": "gpt-5.6-sol",
+    "provider": "openai",
+    "runtime": "codex-cli 0.145.0",
+    "reasoning_effort": "high",
+    "session_policy": "one fresh ephemeral task context per sender-condition receiver observation",
+    "quality_rule": "actor class is provenance, not a quality rank"
+  },
+  "sample": {
+    "source_senders": 15,
+    "receiver_observations": 30,
+    "paired_observations_per_sender": 2,
+    "conditions": [
+      "legacy_full_audit_handoff",
+      "compact_attributed_handoff"
+    ],
+    "stopping_rule": "run all 30 predeclared contexts once; retain failures and do not replace, retry, add, remove, or stop based on outcomes"
+  },
+  "matched_input_rule": {
+    "shared": "same exact original treatment sender output, fixture identity, packet root, and ground truth",
+    "legacy_full_audit_handoff": "original full treatment bundle plus exact sender output",
+    "compact_attributed_handoff": "deterministically derived rooted handoff containing the exact continuation fields and locators but not embedded raw audit/source payloads"
+  },
+  "primary_measures": [
+    "paired active receiver elapsed seconds",
+    "exact fixture verdict preservation",
+    "expected and unexpected issue codes",
+    "provenance binding retention",
+    "authority-boundary violations",
+    "input, output, and reasoning token use"
+  ],
+  "analysis": {
+    "raw_first": true,
+    "time_estimator": "geometric mean of within-sender compact-to-legacy elapsed ratios",
+    "uncertainty": "descriptive sender-pair bootstrap with 10000 deterministic resamples; no population claim",
+    "support_threshold": "compact point ratio <= 0.80; 90% upper interval < 1.0; no lower verdict or expected-issue accuracy; no added unexpected issue, provenance failure, or authority violation",
+    "disposition_values": [
+      "continue",
+      "revise",
+      "retain_source_locally",
+      "retire"
+    ]
+  },
+  "nonclaims": [
+    "not a human-versus-agent comparison",
+    "not institutional, provider, or model-family independence",
+    "not a general model benchmark",
+    "not Formal Conjectures acceptance or maintainer review",
+    "not a Vela Verification or Decision",
+    "no authority or Standing effect"
+  ]
+}

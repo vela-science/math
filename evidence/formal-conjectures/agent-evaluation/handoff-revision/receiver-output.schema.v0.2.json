@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vela.science/schemas/fc-audit-agent-handoff-receiver-output-v0.2.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "fixture_id", "condition", "packet_root", "sender_output_sha256", "retained_verdict", "retained_issue_codes", "provenance_bindings", "continuation_summary", "reproduction_terminal_state", "missing_provenance_fields", "next_action", "unsupported_claims", "authority_effect", "does_not_establish", "confidence"],
+  "properties": {
+    "schema": {"type": "string", "const": "vela.math.fc-audit.agent-handoff-receiver-output.v0.2"},
+    "fixture_id": {"type": "string"},
+    "condition": {"enum": ["legacy_full_audit_handoff", "compact_attributed_handoff"]},
+    "packet_root": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "sender_output_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "retained_verdict": {"enum": ["clean", "minor_issues", "needs_revision", "inconclusive", "unavailable", "error"]},
+    "retained_issue_codes": {"type": "array", "uniqueItems": true, "items": {"enum": ["conditional_proof_dependency", "answer_slot_scope", "vacuous_hypothesis", "exact_artifact_identity_unavailable", "other"]}},
+    "provenance_bindings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_commit", "source_path", "source_raw_sha256", "sender_output_sha256", "original_packet_root", "evidence_locators_retained", "authority_effect"],
+      "properties": {
+        "source_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "source_path": {"type": "string", "minLength": 1},
+        "source_raw_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "sender_output_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "original_packet_root": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "evidence_locators_retained": {"type": "boolean"},
+        "authority_effect": {"type": "string", "const": "none"}
+      }
+    },
+    "continuation_summary": {"type": "string", "minLength": 1},
+    "reproduction_terminal_state": {"enum": ["completed", "scoped", "unavailable", "fail", "error", "inconclusive"]},
+    "missing_provenance_fields": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "next_action": {"type": ["string", "null"]},
+    "unsupported_claims": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "authority_effect": {"type": "string", "const": "none"},
+    "does_not_establish": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}},
+    "confidence": {"enum": ["low", "medium", "high"]}
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "vela.math.fc-audit.compact-attributed-handoff.v0.2",
+  "authority_effect": "none",
+  "handoff_id": "agent-eval-handoff-s03-04::compact-v0.2",
+  "fixture_id": "vacuity-erdos-80-4830",
+  "original_packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+  "source": {
+    "repository": "google-deepmind/formal-conjectures",
+    "commit": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+    "path": "FormalConjectures/ErdosProblems/80.lean",
+    "git_blob_sha1": "9dd6a9933931fcfbeea61eac777d4155dacb9eb1",
+    "raw_sha256": "sha256:519cc02b3389c89bc87c16d548c6b028e6bb2c1c3bad410a1758f470de18de4e",
+    "size": 4176
+  },
+  "sender": {
+    "actor_class": "agent",
+    "task_context_id": "agent:codex-eval-sender-s03-vacuity-erdos-80-4830",
+    "output": {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-03--task-02--fixture-04.output.json",
+      "size": 2475,
+      "raw_sha256": "sha256:5e63d10b5b3dc8f186df6ac9e97e926ba764e8b4aacdf5eb91272342a714ab65"
+    },
+    "verdict": "needs_revision",
+    "issue_codes": [
+      "vacuous_hypothesis"
+    ],
+    "mechanical_status": "pass",
+    "source_fidelity": "fail",
+    "artifact_availability": "exact",
+    "community_status": "merged",
+    "evidence_locators": [
+      "FormalConjectures/ErdosProblems/80.lean@e2e2a6064b474781d3b5b4a32e3d77956d6968da (blob 9dd6a9933931fcfbeea61eac777d4155dacb9eb1; sha256:519cc02b3389c89bc87c16d548c6b028e6bb2c1c3bad410a1758f470de18de4e)",
+      "Erdos80.Admissible and Erdos80.erdos_80 in FormalConjectures/ErdosProblems/80.lean",
+      "GitHub Check Run 93244178114, `Build project`, exact head e2e2a6064b474781d3b5b4a32e3d77956d6968da, conclusion success",
+      "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/vacuity-erdos-80-4830/expected-core.json#checks[vacuous-hypothesis]",
+      "https://github.com/google-deepmind/formal-conjectures/pull/4830",
+      "https://github.com/google-deepmind/formal-conjectures/pull/4877"
+    ],
+    "witness": "The theorem quantifies over every real c>0. Take c=2. For every n>=1, Admissible requires at least 2*n^2 edges, while a simple n-vertex graph has at most n(n-1)/2, so no graph is admissible. Hence the defining set for f 2 n is empty and f 2 n=0. For every epsilon>0 and n>=1, n^epsilon>0, so the required eventual inequality n^epsilon < f 2 n is false. The retained finite instance n=100 requires 20000 edges although at most 4950 exist.",
+    "unsupported_claims": [],
+    "next_action": "Revise both asymptotic statements to restrict c to a satisfiable density range, such as 0<c<1/2, then mechanically check and semantically review the exact revised artifact; PR 4877 is only an open community observation here.",
+    "confidence": "high"
+  },
+  "audit_records": [
+    {
+      "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/vacuity-erdos-80-4830/expected-core.json",
+      "raw_sha256": "sha256:da600a4bfb45749018a04d99592bc0a678da0f73dcdacd5705e5407d4998f233",
+      "size": 7663
+    },
+    {
+      "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/vacuity-erdos-80-4830/expected-observation.json",
+      "raw_sha256": "sha256:8588ef0cd07a45e5b96723f932cab77104276c648323f5f25636875f4dce17c4",
+      "size": 5916
+    }
+  ],
+  "authority": {
+    "effect": "none",
+    "does_not_establish": [
+      "The successful exact-head build establishes compilation only, not semantic fidelity, mathematical truth, acceptance, or Standing.",
+      "The approval and merge of PR 4830 do not establish acceptance or Standing for this evaluation.",
+      "The retained advisory audit establishes the exhibited vacuity defect, not a replacement theorem or the truth of a corrected conjecture.",
+      "Skipped and unrelated checks are not established as successful."
+    ]
+  },
+  "receiver_instruction": "Confirm or correct the retained verdict and issue codes, bind the exact provenance fields, state what remains unsupported, and give the next action. Request raw source or audit bytes by locator only if the compact packet cannot support that continuation.",
+  "omitted_payloads": [
+    "embedded source bytes",
+    "embedded audit core and observation bytes",
+    "GitHub API response bodies"
+  ],
+  "handoff_root": "sha256:ffb94f7b7adf3c48edfb65b9df804cb0a68cd1b29a70dcec9f2f6f4e74653e2c"
+}

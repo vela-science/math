@@ -1,0 +1,75 @@
+{
+  "schema": "vela.math.fc-audit.compact-attributed-handoff.v0.2",
+  "authority_effect": "none",
+  "handoff_id": "agent-eval-handoff-s04-02::compact-v0.2",
+  "fixture_id": "conditional-erdos-427-4884",
+  "original_packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c",
+  "source": {
+    "repository": "google-deepmind/formal-conjectures",
+    "commit": "601aff40d6fa6c3150242144fadba5dbcc24c89c",
+    "path": "FormalConjectures/ErdosProblems/427.lean",
+    "git_blob_sha1": "99d781c323fc09d49f688a5bd23722ea2011fd24",
+    "raw_sha256": "sha256:be54dc1ed87c382e3ec3895f2568278e5c4fec186671b363ec8edd917ac60d71",
+    "size": 3144
+  },
+  "sender": {
+    "actor_class": "agent",
+    "task_context_id": "agent:codex-eval-sender-s04-conditional-erdos-427-4884",
+    "output": {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-04--task-04--fixture-02.output.json",
+      "size": 2579,
+      "raw_sha256": "sha256:b7c421b0c58a006c49222d1aac47174a36a2786a125f52165f8dc2739bd26a41"
+    },
+    "verdict": "minor_issues",
+    "issue_codes": [
+      "conditional_proof_dependency"
+    ],
+    "mechanical_status": "pass",
+    "source_fidelity": "pass",
+    "artifact_availability": "exact",
+    "community_status": "open",
+    "evidence_locators": [
+      "FormalConjectures/ErdosProblems/427.lean@601aff40d6fa6c3150242144fadba5dbcc24c89c",
+      "FormalConjectures/ErdosProblems/427.lean#Erdos427.erdos_427",
+      "FormalConjectures/ErdosProblems/427.lean#Erdos427.erdos_427.variants.shiu",
+      "https://gist.githubusercontent.com/JohnEdwardJennings/e2c6ef0daab55857b7cc9d340de7af84/raw/8ff97800e38582c71246a238e7541a9d69488cbd/Erdos427.lean",
+      "github-check-run:93932003906",
+      "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/conditional-erdos-427-4884/expected-core.json",
+      "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/conditional-erdos-427-4884/expected-observation.json"
+    ],
+    "witness": "At head 601aff40d6fa6c3150242144fadba5dbcc24c89c, Erdos427.erdos_427 is explicitly annotated `conditional formal_proof ... assuming erdos_427.variants.shiu`; the retained metadata review confirms that the linked proof derives the result assuming Shiu's theorem. The exact linked-proof locator is retained with SHA-256 sha256:792a4b5fab29e5855fbcb1115d54e28a054d8fcf7ee2bd5589834a73b387c052. The Lean statement matches the documented divisibility claim using zero-based prime indexing, a nonzero modulus, and a nonempty sum. Exact-head Build project check run 93932003906 succeeded.",
+    "unsupported_claims": [
+      "The retained metadata review did not execute or semantically compare the linked proof, so linked-proof correctness and full correspondence to the declared ShiuTheorem assumption are not established."
+    ],
+    "next_action": "Execute and semantically compare the exact retained linked proof against Erdos427.erdos_427 and its declared ShiuTheorem dependency, or discharge that dependency with an independently verified proof.",
+    "confidence": "high"
+  },
+  "audit_records": [
+    {
+      "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/conditional-erdos-427-4884/expected-core.json",
+      "raw_sha256": "sha256:036d381ec4ede898da1d5b4b5ccb3b44e493809dfd971a0f78864db63219dbd5",
+      "size": 8951
+    },
+    {
+      "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/conditional-erdos-427-4884/expected-observation.json",
+      "raw_sha256": "sha256:0ec64c275820e858f917c34ddf2980bceb33c5a6b5252ddc9775a428e89136cb",
+      "size": 5596
+    }
+  ],
+  "authority": {
+    "effect": "none",
+    "does_not_establish": [
+      "An unconditional proof of Erdos427.erdos_427",
+      "Correctness of the linked proof or mathematical truth of ShiuTheorem",
+      "Success of every check run",
+      "Acceptance, merge, maintainer approval, Vela Decision, or Standing"
+    ]
+  },
+  "receiver_instruction": "Confirm or correct the retained verdict and issue codes, bind the exact provenance fields, state what remains unsupported, and give the next action. Request raw source or audit bytes by locator only if the compact packet cannot support that continuation.",
+  "omitted_payloads": [
+    "embedded source bytes",
+    "embedded audit core and observation bytes",
+    "GitHub API response bodies"
+  ],
+  "handoff_root": "sha256:323d8b3c2b9a68dbba76491b9872a99fe7a4fcfaeef13680b8383000bbce9869"
+}

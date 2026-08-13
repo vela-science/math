@@ -1,0 +1,72 @@
+{
+  "schema": "vela.math.fc-audit.compact-attributed-handoff.v0.2",
+  "authority_effect": "none",
+  "handoff_id": "agent-eval-handoff-s04-01::compact-v0.2",
+  "fixture_id": "clean-source-faithful-min-modulus-4829",
+  "original_packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa",
+  "source": {
+    "repository": "google-deepmind/formal-conjectures",
+    "commit": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+    "path": "FormalConjectures/Arxiv/2607.08366/MinModulus.lean",
+    "git_blob_sha1": "4c68a8c3788f805e29588bfefdac1fec079e9193",
+    "raw_sha256": "sha256:abb822a6dd603f95a9c9d773c199399222539c9cd91c8a124a3cc5429d9da416",
+    "size": 3982
+  },
+  "sender": {
+    "actor_class": "agent",
+    "task_context_id": "agent:codex-eval-sender-s04-clean-source-faithful-min-modulus-4829",
+    "output": {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-04--task-03--fixture-01.output.json",
+      "size": 2478,
+      "raw_sha256": "sha256:6c5f38ce595593c3481d4487195b522f013323fbc6c1be2162ea9a1f3198e77e"
+    },
+    "verdict": "clean",
+    "issue_codes": [],
+    "mechanical_status": "pass",
+    "source_fidelity": "pass",
+    "artifact_availability": "exact",
+    "community_status": "merged",
+    "evidence_locators": [
+      "FormalConjectures/Arxiv/2607.08366/MinModulus.lean@0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c (blob 4c68a8c3788f805e29588bfefdac1fec079e9193; sha256:abb822a6dd603f95a9c9d773c199399222539c9cd91c8a124a3cc5429d9da416)",
+      "MinModulus.min_modulus: answer(sorry) ↔ ∀ n N : ℕ, 2 ≤ n → 0 < N → N < minModulus n → ∀ A : Finset (ZMod N), #A = n → ¬ IsValidMod A",
+      "https://github.com/jarfo/min-modulus/blob/e7c78dd63955092b5f8d8a5fa826476337c0f4be/MinModulus/UniqueSums.lean#L837-L838",
+      "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208430/job/93244176232",
+      "https://github.com/google-deepmind/formal-conjectures/pull/4829#issuecomment-5227429390",
+      "https://github.com/google-deepmind/formal-conjectures/pull/4829#pullrequestreview-4910223499",
+      "https://github.com/google-deepmind/formal-conjectures/pull/4829"
+    ],
+    "witness": "The exact-head theorem quantifies every n and positive modulus N below 2^n − 2^(Nat.log 2 n), then every n-element residue set A, and asserts that A is not valid. This matches the stated Conjecture 1. The 0 < N guard is substantive: it excludes ZMod 0 = ℤ, where the supplied {1, 2} counterexample would otherwise falsify the boundary case. The retained source-author review explicitly judged the statement faithful, and the reviewed theorem block has the same SHA-256 bytes at the final head. No proof dependency is retained for the open min_modulus declaration, and answer scopes the complete conjecture rather than changing a binder.",
+    "unsupported_claims": [],
+    "next_action": null,
+    "confidence": "high"
+  },
+  "audit_records": [
+    {
+      "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/clean-source-faithful-min-modulus-4829/expected-core.json",
+      "raw_sha256": "sha256:feaf8dd36c7bc4361c67af09bea9af7f20051ee2f933d4234ffda5715be91f52",
+      "size": 13206
+    },
+    {
+      "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/clean-source-faithful-min-modulus-4829/expected-observation.json",
+      "raw_sha256": "sha256:51e8597d930a90ae23f4379dd7ca67d23b173fe36f8b7874b2eb436aeb968c28",
+      "size": 5153
+    }
+  ],
+  "authority": {
+    "effect": "none",
+    "does_not_establish": [
+      "mathematical truth of Conjecture 1",
+      "correctness or reproduction of the separately declared external formal proof for exists_isValidMod_minModulus",
+      "source fidelity beyond MinModulus.min_modulus",
+      "community or maintainer acceptance inferred from the build pass alone",
+      "Vela Verification, Decision, acceptance, or Standing"
+    ]
+  },
+  "receiver_instruction": "Confirm or correct the retained verdict and issue codes, bind the exact provenance fields, state what remains unsupported, and give the next action. Request raw source or audit bytes by locator only if the compact packet cannot support that continuation.",
+  "omitted_payloads": [
+    "embedded source bytes",
+    "embedded audit core and observation bytes",
+    "GitHub API response bodies"
+  ],
+  "handoff_root": "sha256:f9d659878100509c3c161797810131c0818a794b1fa696d70ddb2ec1d090ed0f"
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "vela.math.fc-audit.compact-attributed-handoff.v0.2",
+  "authority_effect": "none",
+  "handoff_id": "agent-eval-handoff-s05-03::compact-v0.2",
+  "fixture_id": "fidelity-erdos-887-1237",
+  "original_packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc",
+  "source": {
+    "repository": "google-deepmind/formal-conjectures",
+    "commit": "288608562e684a2f3c97ba0ce960a2649a71370b",
+    "path": "FormalConjectures/ErdosProblems/887.lean",
+    "git_blob_sha1": "6feb58b9272ce638aba6da5ca7ee8ebf7785e0b8",
+    "raw_sha256": "sha256:3e4c9376ebfa464985a2da4ac3b8401b1b54d64be1075368032eced0700706c5",
+    "size": 2307
+  },
+  "sender": {
+    "actor_class": "agent",
+    "task_context_id": "agent:codex-eval-sender-s05-fidelity-erdos-887-1237",
+    "output": {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-05--task-04--fixture-03.output.json",
+      "size": 1925,
+      "raw_sha256": "sha256:999aec0510935e9da0eba39d7baafee0b68e8d538ed6721094611d6de32deb4b"
+    },
+    "verdict": "needs_revision",
+    "issue_codes": [
+      "answer_slot_scope"
+    ],
+    "mechanical_status": "pass",
+    "source_fidelity": "fail",
+    "artifact_availability": "exact",
+    "community_status": "merged",
+    "evidence_locators": [
+      "FormalConjectures/ErdosProblems/887.lean@288608562e684a2f3c97ba0ce960a2649a71370b",
+      "git-blob:6feb58b9272ce638aba6da5ca7ee8ebf7785e0b8",
+      "github-check-run:60275340706",
+      "https://github.com/google-deepmind/formal-conjectures/pull/1237",
+      "expected-core.json#checks/answer-slot-scope"
+    ],
+    "witness": "The docstring asks for one absolute constant K valid for every C>0 and all sufficiently large n, but Erdos887.erdos_887 places answer(sorry) after the C and eventual-n binders. The answer slot can therefore vary with each bound instance; choosing the left-hand divisor count makes each instance close by reflexivity, so the statement does not express one absolute K. The exact-head Build project check passed, while Erdos887.erdos_887.variant_i demonstrates the intended outer existential form.",
+    "unsupported_claims": [],
+    "next_action": "Revise Erdos887.erdos_887 so the answer constant is selected outside the C and n binders, then rerun the exact-head build and obtain an independent semantic-fidelity review.",
+    "confidence": "high"
+  },
+  "audit_records": [
+    {
+      "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/fidelity-erdos-887-1237/expected-core.json",
+      "raw_sha256": "sha256:f5ab5dc0d3721b067fcdf46ea3664b12101b7999a484a09dc0ecd8accf4b34ae",
+      "size": 11548
+    },
+    {
+      "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/fidelity-erdos-887-1237/expected-observation.json",
+      "raw_sha256": "sha256:2e380f07fddeb54c64bf33120930cdcfdddf8dbdd54e243258a6d25e90e2dc63",
+      "size": 7898
+    }
+  ],
+  "authority": {
+    "effect": "none",
+    "does_not_establish": [
+      "The passing exact-head build does not establish semantic fidelity or mathematical truth.",
+      "The GitHub approval and merge do not establish acceptance, Vela Standing, or maintainer endorsement of this advisory verdict.",
+      "The retained audit disposition is advisory and does not establish a merge decision."
+    ]
+  },
+  "receiver_instruction": "Confirm or correct the retained verdict and issue codes, bind the exact provenance fields, state what remains unsupported, and give the next action. Request raw source or audit bytes by locator only if the compact packet cannot support that continuation.",
+  "omitted_payloads": [
+    "embedded source bytes",
+    "embedded audit core and observation bytes",
+    "GitHub API response bodies"
+  ],
+  "handoff_root": "sha256:e3ce52c3ccfe514642110e01f30079ae74eab1d2e1602fd207b475786f043304"
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "vela.math.fc-audit.compact-attributed-handoff.v0.2",
+  "authority_effect": "none",
+  "handoff_id": "agent-eval-handoff-s06-04::compact-v0.2",
+  "fixture_id": "vacuity-erdos-80-4830",
+  "original_packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd",
+  "source": {
+    "repository": "google-deepmind/formal-conjectures",
+    "commit": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+    "path": "FormalConjectures/ErdosProblems/80.lean",
+    "git_blob_sha1": "9dd6a9933931fcfbeea61eac777d4155dacb9eb1",
+    "raw_sha256": "sha256:519cc02b3389c89bc87c16d548c6b028e6bb2c1c3bad410a1758f470de18de4e",
+    "size": 4176
+  },
+  "sender": {
+    "actor_class": "agent",
+    "task_context_id": "agent:codex-eval-sender-s06-vacuity-erdos-80-4830",
+    "output": {
+      "path": "evidence/formal-conjectures/agent-evaluation/runs/sender/slot-06--task-02--fixture-04.output.json",
+      "size": 2092,
+      "raw_sha256": "sha256:03f1f2b6854a43b2430e76250f8d603161515061c18517747aa860d8c09be338"
+    },
+    "verdict": "needs_revision",
+    "issue_codes": [
+      "vacuous_hypothesis"
+    ],
+    "mechanical_status": "pass",
+    "source_fidelity": "fail",
+    "artifact_availability": "exact",
+    "community_status": "merged",
+    "evidence_locators": [
+      "FormalConjectures/ErdosProblems/80.lean@e2e2a6064b474781d3b5b4a32e3d77956d6968da (blob 9dd6a9933931fcfbeea61eac777d4155dacb9eb1)",
+      "github-pr-4830-check-observation.json#check-run-93244178114",
+      "github-pr-4830.json#base-5fe1f74ad497d950e4c2094879ab10708907f7c6/head-e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+      "expected-core.json#checks/vacuous-hypothesis",
+      "github-pr-4877.json"
+    ],
+    "witness": "The exact head defines Admissible c G by c·n² ≤ |E(G)| but erdos_80 quantifies over every c > 0. Taking c = 2 and n = 100 requires at least 20000 edges, while a simple graph on 100 vertices has at most 4950. Thus the admissible set is empty, f 2 100 = sInf ∅ = 0; indeed this persists for positive n, making the eventual-growth conclusion false for a boundary unrelated to the intended problem. The retained audit independently records this witness, and PR 4877 proposes restricting c to the satisfiable range.",
+    "unsupported_claims": [],
+    "next_action": "Restrict c to a satisfiable density range, such as 0 < c < 1/2, for both growth statements and mechanically and semantically review the revised exact artifact.",
+    "confidence": "high"
+  },
+  "audit_records": [
+    {
+      "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/vacuity-erdos-80-4830/expected-core.json",
+      "raw_sha256": "sha256:da600a4bfb45749018a04d99592bc0a678da0f73dcdacd5705e5407d4998f233",
+      "size": 7663
+    },
+    {
+      "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/vacuity-erdos-80-4830/expected-observation.json",
+      "raw_sha256": "sha256:8588ef0cd07a45e5b96723f932cab77104276c648323f5f25636875f4dce17c4",
+      "size": 5916
+    }
+  ],
+  "authority": {
+    "effect": "none",
+    "does_not_establish": [
+      "The successful exact-head build check does not establish semantic fidelity or mathematical truth.",
+      "The skipped and unrelated checks are not established as successful.",
+      "PR approval and merge do not establish acceptance, Standing, or any Vela Decision.",
+      "The retained witness identifies the vacuity defect but does not establish a complete replacement theorem."
+    ]
+  },
+  "receiver_instruction": "Confirm or correct the retained verdict and issue codes, bind the exact provenance fields, state what remains unsupported, and give the next action. Request raw source or audit bytes by locator only if the compact packet cannot support that continuation.",
+  "omitted_payloads": [
+    "embedded source bytes",
+    "embedded audit core and observation bytes",
+    "GitHub API response bodies"
+  ],
+  "handoff_root": "sha256:1fe451d09e211325bfa40b270244a9ef0a8aaab1fbd3b1444596b2e30b069db7"
+}
