@@ -12,6 +12,7 @@ import unittest
 
 
 HERE = Path(__file__).resolve().parent
+REPO = HERE.parents[3]
 SPEC = importlib.util.spec_from_file_location("bridge_disposition", HERE / "build.py")
 assert SPEC and SPEC.loader
 BUILD = importlib.util.module_from_spec(SPEC)
@@ -21,6 +22,13 @@ FORMAL = Path(os.environ.get("VELA_FORMAL_CONJECTURES_REPO", HERE.parents[4] / "
 
 
 class RepairDispositionTest(unittest.TestCase):
+    def test_review_method_is_canonical(self):
+        path = REPO / "methods/erdos-321/terminal-bridge-scope-review-gpt-5.6-sol.v1.json"
+        raw = path.read_bytes()
+        value = json.loads(raw)
+        canonical = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
+        self.assertEqual(raw, canonical + b"\n")
+
     def test_exact_sources_produce_retained_record(self):
         observed = BUILD.build(LEAN_PROOFS.resolve(), FORMAL.resolve())
         retained = json.loads((HERE / "repair-disposition.v1.json").read_text())
