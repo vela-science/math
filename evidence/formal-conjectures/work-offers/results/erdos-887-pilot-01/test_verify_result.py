@@ -19,9 +19,12 @@ SPEC.loader.exec_module(MODULE)
 class ResultTest(unittest.TestCase):
     def test_frozen_result_verifies(self) -> None:
         result = MODULE.verify()
+        packet = MODULE.load(MODULE.PACKET)
         self.assertEqual(result["target_id"], "erdos:887")
         self.assertEqual(result["authority_effect"], "none")
         self.assertEqual(result["semantic_review"]["status"], "pending")
+        self.assertEqual(result["packet_root"], MODULE.historical_packet_root(packet))
+        self.assertNotEqual(result["packet_root"], packet["packet_root"])
 
     def test_target_or_authority_drift_refuses(self) -> None:
         original = MODULE.load(MODULE.RESULT)

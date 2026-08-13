@@ -14,6 +14,15 @@ The packet explicitly forbids upstream comments or reviews without separate
 authorization. Its proof and source artifacts may be public, while participant
 private data is forbidden from the public packet.
 
+The live offer also publishes three independently rooted public execution
+components under `execution/erdos-887-pr-1237-fidelity-repair/`: an eligible
+producer profile, a network-independent verifier capsule, and a positive result
+contract. The packet binds their schemas, paths, canonical roots, raw-file
+digests, and sizes. The index combines those roots with the completed packet
+root as the closed `vela.execution-binding.v1` object a producer may copy into
+an unsigned Submission. These activity-plane records all carry
+`authority_effect: none`.
+
 Build, verify, and inspect the exact offer:
 
 ```bash
@@ -23,9 +32,17 @@ python3 -B evidence/formal-conjectures/work-offers/build.py \
   --check \
   --print-target erdos:887
 python3 -B evidence/formal-conjectures/work-offers/test_build.py
+python3 -B \
+  evidence/formal-conjectures/work-offers/execution/erdos-887-pr-1237-fidelity-repair/verify_binding.py
 ```
 
 `index.v1.json` and the packet use canonical JSON plus one trailing LF. The
 index binds the exact Math repository manifest root, the source-adapter commit
 and tree, the source projection and record roots, and the packet's canonical
-root, raw-file SHA-256, and byte length.
+root, raw-file SHA-256, and byte length. `--print-roots` prints the complete
+execution binding and index root.
+
+The retained `erdos-887-pilot-01` result predates the execution-component
+extension. Its verifier reconstructs and checks the former packet preimage; it
+is intentionally not rebound to the new live packet root. A new Submission or
+result must use the full binding now published by the index.
