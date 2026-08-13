@@ -1,0 +1,30 @@
+{
+  "schema": "vela.math.fc-audit.github-files-observation.v0.1",
+  "authority_effect": "none",
+  "repository": "google-deepmind/formal-conjectures",
+  "pull_request_number": 4829,
+  "expected_head_commit": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+  "observed_at": "2026-08-13T12:05:03Z",
+  "normalization": {
+    "description": "Selected primary GitHub REST API fields retained in response order. These bytes are not a canonical GitHub response.",
+    "api_version": "2022-11-28",
+    "media_type": "application/vnd.github+json"
+  },
+  "source": {
+    "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/4829/files?per_page=100",
+    "complete": true,
+    "page_count": 1
+  },
+  "files": [
+    {
+      "filename": "FormalConjectures/Arxiv/2607.08366/MinModulus.lean",
+      "status": "added",
+      "sha": "4c68a8c3788f805e29588bfefdac1fec079e9193",
+      "contents_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/contents/FormalConjectures%2FArxiv%2F2607.08366%2FMinModulus.lean?ref=0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c"
+    }
+  ],
+  "limitations": [
+    "GitHub pull-request file state is mutable community observation state and is not fixture identity by itself.",
+    "Patch text is omitted; the record retains the exact Git blob SHA and commit-qualified contents URL."
+  ]
+}

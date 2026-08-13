@@ -11,21 +11,21 @@
   },
   "fixture_selection": {
     "path": "evidence/formal-conjectures/audit-pilot/phase-0-fixture-selection.v0.1.json",
-    "sha256": "0043cf876cb2c645565aad620c404f58e03665e9f4afb66ab5bfdae0a724f3c8",
+    "sha256": "cdfeb8a6d60dcddb933e6b66c32f29f3eee79aa138f671d8cd73484bdbb635d3",
     "required_fixture_count": 5,
     "required_roles": [
-      "clean_control_candidate_pending_review",
+      "clean_source_faithful",
       "conditional_proof",
       "mechanical_pass_semantic_fail",
       "vacuous_or_boundary_defect",
       "unavailable_tool_or_missing_artifact"
     ],
-    "unfulfilled_target_role": "clean_source_faithful",
-    "ground_truth_completion_rule": "The selected control candidate does not fulfill clean_source_faithful until a witness-backed exact-head human review is retained. Five selected cases are not five completed ground-truth fixtures."
+    "unfulfilled_target_role": null,
+    "ground_truth_completion_rule": "All five fixture roles have witness-backed exact-head retained evidence. This completes fixture selection only; it does not authorize participant contact or establish evaluation results."
   },
   "precollection_design": {
     "path": "evidence/formal-conjectures/audit-pilot/precollection-design.v0.1.json",
-    "sha256": "c6a64c39c660046507a5befbf74fbd737ad29755b6f4d16a93e8b56d903bac1d",
+    "sha256": "ecd56585a9f16d0ac9e129433f5c9935b1a37be5ecf6efb2a01e7896b4b4ce21",
     "schema": "vela.math.fc-audit.precollection-design.v0.1",
     "design_id": "fc-audit-human-pilot-v0.1"
   },
@@ -114,7 +114,7 @@
     "status": "complete_collection_blocked_on_human_prerequisites",
     "supplement": {
       "path": "evidence/formal-conjectures/audit-pilot/precollection-design.v0.1.json",
-      "sha256": "c6a64c39c660046507a5befbf74fbd737ad29755b6f4d16a93e8b56d903bac1d"
+      "sha256": "ecd56585a9f16d0ac9e129433f5c9935b1a37be5ecf6efb2a01e7896b4b4ce21"
     },
     "required_rooted_supplement_fields": [
       "target_sample_and_recruitment_frame",
@@ -129,7 +129,6 @@
       "deviation_and_amendment_policy"
     ],
     "current_external_prerequisites": [
-      "The clean-control candidate still lacks witness-backed exact-head independent human ground truth.",
       "No participant has been recruited or consented.",
       "No collection-readiness record has frozen the participant condition packets, allocation receipt, or private-custody plan."
     ],
@@ -411,13 +410,13 @@
       "id": "baseline",
       "condition": "plain-git-and-current-review-artifacts",
       "required_before": "The participant sees any generated FC audit artifact for that fixture.",
-      "status": "ready_after_ground_truth_consent_and_collection_readiness"
+      "status": "ready_after_consent_and_collection_readiness"
     },
     {
       "id": "final",
       "condition": "same-inputs-plus-fc-pr-audit",
       "required_before": "The exact treatment packet root and allocation slot are frozen, and every ground-truth, consent, recruitment, and collection-readiness opening condition is met.",
-      "status": "ready_after_ground_truth_consent_and_collection_readiness"
+      "status": "ready_after_consent_and_collection_readiness"
     }
   ],
   "handoff_collection_rule": "After the precollection design gate is satisfied, each H5 comparison requires a rooted sender review observation plus a distinct linked receiver continuation observation and handoff-pair record in each matched condition. A missing or disagreeing record is an incomplete handoff, never zero continuation time.",
@@ -483,7 +482,7 @@
     "That the FC audit improves review before paired results are collected.",
     "That a faster review is a more accurate review.",
     "That a receiver is independent merely because a separate pseudonym or handoff record is present.",
-    "That the clean_source_faithful target role or FC-03 exit is met before exact-head human ground truth is retained.",
-    "That any check outcome is a community or Vela Decision."
+    "That any check outcome is a community or Vela Decision.",
+    "That completing the FC-03 fixture distinction supplies EVAL-01 measurements, scientific acceptance, adoption, or Vela Standing."
   ]
 }

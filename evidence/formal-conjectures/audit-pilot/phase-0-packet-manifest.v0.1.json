@@ -10,22 +10,22 @@
     {
       "role": "fixture_selection",
       "path": "evidence/formal-conjectures/audit-pilot/phase-0-fixture-selection.v0.1.json",
-      "sha256": "0043cf876cb2c645565aad620c404f58e03665e9f4afb66ab5bfdae0a724f3c8"
+      "sha256": "cdfeb8a6d60dcddb933e6b66c32f29f3eee79aa138f671d8cd73484bdbb635d3"
     },
     {
       "role": "evaluation_method",
       "path": "methods/formal-conjectures/audit-baseline.v0.1.json",
-      "sha256": "1183b202af320ed9a1cbae018e2b36174f7c5cbe78b840bb89e9faea199c88ae"
+      "sha256": "a52c440d2e462a1cacefb32f001c2f1995fbcf121bb6b1d87153a06438ec3281"
     },
     {
       "role": "precollection_design",
       "path": "evidence/formal-conjectures/audit-pilot/precollection-design.v0.1.json",
-      "sha256": "c6a64c39c660046507a5befbf74fbd737ad29755b6f4d16a93e8b56d903bac1d"
+      "sha256": "ecd56585a9f16d0ac9e129433f5c9935b1a37be5ecf6efb2a01e7896b4b4ce21"
     },
     {
       "role": "observation_scaffold",
       "path": "evidence/formal-conjectures/audit-pilot/phase-0-baseline-observations.v0.1.json",
-      "sha256": "9f1585a643c1964b1ac0f0cc0bc5f24250b5aaa8aad2e2c8231b8ca5b187f724"
+      "sha256": "55a209f4cfd55e0aad57e32133fcae033e0e1e9820928bdef7f2476d2b4f0b61"
     }
   ],
   "relationships": [
@@ -107,6 +107,26 @@
       "sha256": "93ca95fbe74b4a30294c8687b00b15791f1de0e2ce622a680c7436bbf238b5da"
     },
     {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-check-observation.json",
+      "sha256": "aa0a67a3a5a342586efdda4b1215eeefabc782d4eee1da5b8d8e3bad9f85d5dd"
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-files-observation.json",
+      "sha256": "3ffa087bdf5891eb77ce9ce48fc1ee48ec2d6d33de9645640f5c32d0471b0488"
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-reviews.json",
+      "sha256": "c7e5b6bef186f4a635b63f3425a52da219354fe9aa54632748c9399599251600"
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-source-fidelity-witness.json",
+      "sha256": "c17f1400c4dca0be51be03d768a774b2c8bd5f8e935c801423197193f20951d8"
+    },
+    {
+      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829.json",
+      "sha256": "7a6ab239791ac3c2b65be27666858feaa88bd31918d65417a1c05dca628caba2"
+    },
+    {
       "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-check-observation.json",
       "sha256": "588efba02429ba63f3a05ceb39d50138168c1c469648d683c9e4ce362da091ff"
     },
@@ -133,22 +153,6 @@
     {
       "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4877.json",
       "sha256": "2746db611a8a455dadbac8aaa4ed4d028b88204f4316002ef0038c100c24e6a8"
-    },
-    {
-      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4878-check-observation.json",
-      "sha256": "bd9945138c331e5c967adbbb19574c21b1e7d3af953c3419656f2b552aa0ff39"
-    },
-    {
-      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4878-files-observation.json",
-      "sha256": "b38eb5b4127fcd7f6de7077be5df00dd7178d71a82d0e79848593f4a1411b9df"
-    },
-    {
-      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4878-reviews.json",
-      "sha256": "40201d223782597fd5efff1a943cb49b0951666fe7dfae6cbf9b678c682e0939"
-    },
-    {
-      "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4878.json",
-      "sha256": "749b79fd982001aa41efd2064a1455e05aa4d2044387cd1a3177b34598cdd31e"
     },
     {
       "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884-check-observation.json",

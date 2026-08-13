@@ -35,7 +35,7 @@ class SourceAdapterTest(unittest.TestCase):
         self.assertEqual(ADAPTER.validate_projection(retained), retained)
         self.assertEqual(
             retained["root"]["value"],
-            "sha256:1f71dfdb2354796b053ebe56745939872bc09f22b2a98c3041ebf656cb69fd3f",
+            "sha256:1a90cbe1732e21e730753a12e6b3b1ecbd3e0019a287a5ba001c9a9fdccf881b",
         )
 
     def test_source_inventory_is_complete_and_byte_exact(self) -> None:
@@ -274,7 +274,10 @@ class SourceAdapterTest(unittest.TestCase):
         self.assertEqual(missing_tool["outcome"], "unavailable")
         self.assertIs(missing_tool["protocol_conversion"]["automatic"], False)
         self.assertIsNone(missing_tool["protocol_conversion"]["outcome"])
-        self.assertIn("clean or source-faithful ground truth", " ".join(self.projection["does_not_establish"]))
+        self.assertIn(
+            "a source-level clean disposition is a Vela Verification or Standing",
+            self.projection["does_not_establish"],
+        )
 
     def test_all_five_source_outcomes_are_lossless_and_nonconverting(self) -> None:
         template = copy.deepcopy(self.projection["records"][0]["source_axis"]["checks"][0])

@@ -1,0 +1,56 @@
+{
+  "schema": "vela.math.fc-audit.github-check-observation.v0.1",
+  "authority_effect": "none",
+  "repository": "google-deepmind/formal-conjectures",
+  "pull_request_number": 4829,
+  "head_commit": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+  "observed_at": "2026-08-13T12:05:03Z",
+  "normalization": {
+    "description": "Selected primary GitHub REST API fields retained as normalized evidence and sorted by numeric record id. These bytes are not a canonical GitHub response.",
+    "api_version": "2022-11-28",
+    "media_type": "application/vnd.github+json"
+  },
+  "sources": {
+    "check_runs": {
+      "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c/check-runs?per_page=100",
+      "total_count": 12,
+      "records": [
+        {
+          "app": {
+            "id": 15368,
+            "name": "GitHub Actions",
+            "owner_login": "github",
+            "slug": "github-actions"
+          },
+          "completed_at": "2026-08-09T13:01:41Z",
+          "conclusion": "success",
+          "details_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208430/job/93244176232",
+          "external_id": "4950a055-0c3d-595a-868b-22e3b0403861",
+          "head_sha": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+          "html_url": "https://github.com/google-deepmind/formal-conjectures/actions/runs/31313208430/job/93244176232",
+          "id": 93244176232,
+          "name": "Build project",
+          "started_at": "2026-08-09T12:24:34Z",
+          "status": "completed"
+        }
+      ]
+    },
+    "commit_statuses": {
+      "endpoint": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c/status",
+      "combined_state": "pending",
+      "total_count": 0,
+      "records": []
+    }
+  },
+  "mechanical_claim": {
+    "scope": "exact_head_repository_build_check",
+    "result": "pass",
+    "evidence_check_run_ids": [93244176232],
+    "does_not_establish": [
+      "source-statement fidelity",
+      "mathematical truth",
+      "community acceptance",
+      "Vela Verification, Decision, or Standing"
+    ]
+  }
+}

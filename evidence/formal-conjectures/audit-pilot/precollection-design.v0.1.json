@@ -14,9 +14,9 @@
   },
   "fixture_selection": {
     "path": "evidence/formal-conjectures/audit-pilot/phase-0-fixture-selection.v0.1.json",
-    "sha256": "0043cf876cb2c645565aad620c404f58e03665e9f4afb66ab5bfdae0a724f3c8",
+    "sha256": "cdfeb8a6d60dcddb933e6b66c32f29f3eee79aa138f671d8cd73484bdbb635d3",
     "required_fixture_count": 5,
-    "collection_prerequisite": "Every fixture, including the clean-control candidate, must have witness-backed exact-head human ground truth frozen before any participant sees a condition packet."
+    "collection_prerequisite": "Every fixture has witness-backed exact-head human ground truth frozen; participant use still requires a separate rooted collection-readiness record."
   },
   "target_sample_and_recruitment_frame": {
     "target_participants": 12,
@@ -70,7 +70,7 @@
     "control_id": "plain-git-and-current-review-artifacts",
     "treatment_id": "same-inputs-plus-fc-pr-audit",
     "fixture_ids": [
-      "clean-candidate-dean-4878",
+      "clean-source-faithful-min-modulus-4829",
       "conditional-erdos-427-4884",
       "fidelity-erdos-887-1237",
       "vacuity-erdos-80-4830",
@@ -85,19 +85,115 @@
       "T": "same-inputs-plus-fc-pr-audit"
     },
     "fixture_order": [
-      "clean-candidate-dean-4878",
+      "clean-source-faithful-min-modulus-4829",
       "conditional-erdos-427-4884",
       "fidelity-erdos-887-1237",
       "vacuity-erdos-80-4830",
       "unavailable-rupert-3959"
     ],
     "slots": [
-      {"slot": 1, "conditions": ["C", "T", "C", "T", "C"], "task_order": [1, 2, 3, 4, 5]},
-      {"slot": 2, "conditions": ["T", "C", "T", "C", "T"], "task_order": [2, 3, 4, 5, 1]},
-      {"slot": 3, "conditions": ["C", "C", "T", "T", "C"], "task_order": [3, 4, 5, 1, 2]},
-      {"slot": 4, "conditions": ["T", "T", "C", "C", "T"], "task_order": [4, 5, 1, 2, 3]},
-      {"slot": 5, "conditions": ["C", "T", "T", "C", "C"], "task_order": [5, 1, 2, 3, 4]},
-      {"slot": 6, "conditions": ["T", "C", "C", "T", "T"], "task_order": [5, 4, 3, 2, 1]}
+      {
+        "slot": 1,
+        "conditions": [
+          "C",
+          "T",
+          "C",
+          "T",
+          "C"
+        ],
+        "task_order": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "slot": 2,
+        "conditions": [
+          "T",
+          "C",
+          "T",
+          "C",
+          "T"
+        ],
+        "task_order": [
+          2,
+          3,
+          4,
+          5,
+          1
+        ]
+      },
+      {
+        "slot": 3,
+        "conditions": [
+          "C",
+          "C",
+          "T",
+          "T",
+          "C"
+        ],
+        "task_order": [
+          3,
+          4,
+          5,
+          1,
+          2
+        ]
+      },
+      {
+        "slot": 4,
+        "conditions": [
+          "T",
+          "T",
+          "C",
+          "C",
+          "T"
+        ],
+        "task_order": [
+          4,
+          5,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "slot": 5,
+        "conditions": [
+          "C",
+          "T",
+          "T",
+          "C",
+          "C"
+        ],
+        "task_order": [
+          5,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "slot": 6,
+        "conditions": [
+          "T",
+          "C",
+          "C",
+          "T",
+          "T"
+        ],
+        "task_order": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      }
     ],
     "carryover_rule": "Record prior task count and condition order. Never compare a participant with themself on the same fixture. Report the fixed task order and any carryover concern with the raw observations."
   },
@@ -175,7 +271,6 @@
   "collection_gate": {
     "design_complete": true,
     "currently_blocked_by": [
-      "clean-candidate-dean-4878 lacks witness-backed exact-head independent human ground truth",
       "participants are not recruited or consented",
       "condition packets, allocation receipt, and private-custody plan are not yet frozen for participant use"
     ],
@@ -183,7 +278,6 @@
   },
   "does_not_establish": [
     "that a participant has consented or been recruited",
-    "that the clean-control candidate is source-faithful",
     "that any H2 or H5 observation has been collected",
     "that the FC audit improves review or handoff",
     "any Vela Verification, Decision, Event, or Standing",

@@ -127,6 +127,42 @@ def validate_semantic_witness(
         raise ValueError("semantic witness result drift")
 
 
+def validate_source_fidelity_witness(
+    fixture: dict[str, object],
+    observation: dict[str, object],
+    witness: dict[str, object],
+    files_observation: dict[str, object],
+    actual_sha256: str,
+) -> None:
+    pull_request = fixture["pull_request"]
+    if observation["sha256"] != actual_sha256:
+        raise ValueError("source-fidelity witness root drift")
+    if witness["pull_request_number"] != pull_request["number"]:
+        raise ValueError("source-fidelity pull-request drift")
+    if witness["base_commit"] != pull_request["base_commit"]:
+        raise ValueError("source-fidelity base drift")
+    if witness["head_commit"] != pull_request["head_commit"]:
+        raise ValueError("source-fidelity head drift")
+    source_file = witness["source_file"]
+    file_by_path = {item["filename"]: item for item in files_observation["files"]}
+    file_record = file_by_path.get(source_file["path"])
+    if file_record is None:
+        raise ValueError("source-fidelity path drift")
+    if source_file["git_blob_sha"] != file_record["sha"]:
+        raise ValueError("source-fidelity source blob drift")
+    if observation["source_git_blob_sha"] != file_record["sha"]:
+        raise ValueError("fixture source-fidelity blob drift")
+    if witness["semantic_fidelity_result"] != "pass":
+        raise ValueError("source-fidelity result drift")
+    if witness["human_source_local_basis"]["reviewer_relationship"] != "author_of_the_cited_paper":
+        raise ValueError("source-fidelity reviewer basis drift")
+    chain = witness["application_chain"]
+    if not chain["reviewed_theorem_unchanged_through_applied_correction_and_final_head"]:
+        raise ValueError("source-fidelity application chain drift")
+    if chain["exact_head_maintainer_approval_review_id"] != 4910223499:
+        raise ValueError("source-fidelity exact-head approval drift")
+
+
 def validate_packet_relationships(
     selection: dict[str, object],
     method: dict[str, object],
@@ -295,16 +331,16 @@ class PhaseZeroPacketTest(unittest.TestCase):
             with self.subTest(path=path):
                 load_json(path)
 
-    def test_five_selected_roles_include_explicit_unfulfilled_clean_target(self) -> None:
+    def test_five_selected_roles_include_frozen_clean_source_fidelity(self) -> None:
         required_ids = {
-            "clean-candidate-dean-4878",
+            "clean-source-faithful-min-modulus-4829",
             "conditional-erdos-427-4884",
             "fidelity-erdos-887-1237",
             "vacuity-erdos-80-4830",
             "unavailable-rupert-3959",
         }
         selected_roles = {
-            "clean_control_candidate_pending_review",
+            "clean_source_faithful",
             "conditional_proof",
             "mechanical_pass_semantic_fail",
             "vacuous_or_boundary_defect",
@@ -314,9 +350,9 @@ class PhaseZeroPacketTest(unittest.TestCase):
         self.assertEqual(required_ids, {fixture["id"] for fixture in fixtures})
         self.assertEqual(selected_roles, {fixture["required_role"] for fixture in fixtures})
         self.assertEqual(5, self.selection["completion_state"]["selected_case_count"])
-        self.assertEqual(4, self.selection["completion_state"]["frozen_source_grounded_fixture_count"])
-        self.assertEqual("clean_source_faithful", self.selection["completion_state"]["unfulfilled_target_role"])
-        self.assertFalse(self.selection["completion_state"]["fc_03_exit_met"])
+        self.assertEqual(5, self.selection["completion_state"]["frozen_source_grounded_fixture_count"])
+        self.assertIsNone(self.selection["completion_state"]["unfulfilled_target_role"])
+        self.assertTrue(self.selection["completion_state"]["fc_03_exit_met"])
 
     def test_snapshots_match_frozen_pull_request_identities(self) -> None:
         for fixture in self.selection["fixtures"]:
@@ -418,6 +454,40 @@ class PhaseZeroPacketTest(unittest.TestCase):
         self.assertNotIn("5cbe3d57171b0a9f733e5052e041ee40c1e98fac", packet_text)
         self.assertNotIn("59f30aa314ba225fcd9268723ce8291616df1ab0", packet_text)
 
+    def test_clean_source_fidelity_binds_source_author_and_exact_head_chain(self) -> None:
+        fixture = next(
+            item for item in self.selection["fixtures"]
+            if item["id"] == "clean-source-faithful-min-modulus-4829"
+        )
+        observations = [
+            item for item in fixture["source_observations"]
+            if item["kind"] == "exact_head_source_fidelity_witness"
+        ]
+        self.assertEqual(1, len(observations))
+        observation = observations[0]
+        witness_path = REPO / observation["path"]
+        witness = load_json(witness_path)
+        files_document = load_json(REPO / fixture["pull_request"]["files_observation"]["path"])
+        validate_source_fidelity_witness(
+            fixture, observation, witness, files_document, sha256_file(witness_path)
+        )
+
+        wrong_head = copy.deepcopy(witness)
+        wrong_head["head_commit"] = "0" * 40
+        with self.assertRaisesRegex(ValueError, "source-fidelity head drift"):
+            validate_source_fidelity_witness(
+                fixture, observation, wrong_head, files_document, sha256_file(witness_path)
+            )
+
+        wrong_chain = copy.deepcopy(witness)
+        wrong_chain["application_chain"][
+            "reviewed_theorem_unchanged_through_applied_correction_and_final_head"
+        ] = False
+        with self.assertRaisesRegex(ValueError, "application chain drift"):
+            validate_source_fidelity_witness(
+                fixture, observation, wrong_chain, files_document, sha256_file(witness_path)
+            )
+
     def test_unavailable_fixture_is_narrow_exact_artifact_identity_claim(self) -> None:
         fixture = next(item for item in self.selection["fixtures"] if item["id"] == "unavailable-rupert-3959")
         expected = fixture["expected_checks"]
@@ -479,9 +549,9 @@ class PhaseZeroPacketTest(unittest.TestCase):
 
     def test_authority_and_failure_axes_remain_separate(self) -> None:
         fixtures = {fixture["id"]: fixture for fixture in self.selection["fixtures"]}
-        clean = fixtures["clean-candidate-dean-4878"]
-        self.assertEqual("clean_control_candidate_pending_review", clean["required_role"])
-        self.assertEqual("pending_human_ground_truth", clean["expected_checks"]["semantic_fidelity"])
+        clean = fixtures["clean-source-faithful-min-modulus-4829"]
+        self.assertEqual("clean_source_faithful", clean["required_role"])
+        self.assertEqual("pass", clean["expected_checks"]["semantic_fidelity"])
         conditional = fixtures["conditional-erdos-427-4884"]["expected_checks"]
         self.assertEqual("conditional_pass", conditional["proof_artifact"])
         self.assertEqual("erdos_427.variants.shiu", conditional["required_condition"])
@@ -541,7 +611,10 @@ class PhaseZeroPacketTest(unittest.TestCase):
             gate["supplement"],
         )
         self.assertIn("does not permit H2 or H5 support", gate["claim_rule"])
-        self.assertEqual("blocked_ground_truth_consent_and_recruitment", self.observations["collection_status"])
+        self.assertEqual(
+            "blocked_consent_recruitment_and_collection_readiness",
+            self.observations["collection_status"],
+        )
         self.assertIn("No H2 or H5 support", " ".join(self.observations["limits"]))
 
     def test_precollection_schedule_sample_stopping_and_claim_gates_are_frozen(self) -> None:
@@ -749,12 +822,15 @@ class PhaseZeroPacketTest(unittest.TestCase):
         }, {item["id"] for item in self.method["kill_criteria"]})
 
     def test_results_are_not_fabricated(self) -> None:
-        self.assertEqual("blocked_ground_truth_consent_and_recruitment", self.observations["collection_status"])
+        self.assertEqual(
+            "blocked_consent_recruitment_and_collection_readiness",
+            self.observations["collection_status"],
+        )
         self.assertEqual([], self.observations["review_observations"])
         self.assertEqual([], self.observations["receiver_continuation_observations"])
         self.assertEqual([], self.observations["handoff_pairs"])
         self.assertEqual(
-            {"ready_after_ground_truth_consent_and_collection_readiness"},
+            {"ready_after_consent_and_collection_readiness"},
             {stage["status"] for stage in self.method["collection_stages"]},
         )
 

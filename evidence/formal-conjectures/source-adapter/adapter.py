@@ -18,7 +18,7 @@ CONFORMANCE_CONTRACT_PATH = REPO_ROOT / "methods/source-adapters/conformance.py"
 CONFORMANCE_PROFILE_PATH = HERE / "conformance-profile.v1.json"
 PROJECTION_PATH = HERE / "projection.v1.json"
 SOURCE_VALIDATOR_PATH = RETAINED_ROOT / "scripts/pr_audit.py"
-SOURCE_VALIDATOR_SHA256 = "sha256:f18be0d9db226e2a5545309287212d49a652d111d032483886f98d4c9f897a66"
+SOURCE_VALIDATOR_SHA256 = "sha256:2c41ae2bd4fed8f9748ebf8c57630673ca2eb7ea3c690525ea292641590c3098"
 METHOD_SCHEMA = "vela.math.fc-pr-audit-source-adapter-method.v0.1"
 PROJECTION_SCHEMA = "vela.math.fc-pr-audit-projection.v1"
 SOURCE_CORE_SCHEMA = "formal-conjectures.pr-audit.v1"
@@ -435,7 +435,7 @@ def build_projection() -> dict[str, Any]:
             "a Formal Conjectures audit is a Vela Verification",
             "a source review, approval, merge, or publication is a Vela Decision",
             "any local Math Standing",
-            "clean or source-faithful ground truth for the candidate fixture",
+            "a source-level clean disposition is a Vela Verification or Standing",
             "external adoption or independent validation",
         ],
     }

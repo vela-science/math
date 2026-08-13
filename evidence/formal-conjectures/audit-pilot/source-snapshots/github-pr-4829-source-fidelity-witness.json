@@ -1,0 +1,46 @@
+{
+  "schema": "vela.math.fc-audit.source-fidelity-witness.v0.1",
+  "authority_effect": "none",
+  "repository": "google-deepmind/formal-conjectures",
+  "pull_request_number": 4829,
+  "base_commit": "5fe1f74ad497d950e4c2094879ab10708907f7c6",
+  "head_commit": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+  "source_file": {
+    "path": "FormalConjectures/Arxiv/2607.08366/MinModulus.lean",
+    "git_blob_sha": "4c68a8c3788f805e29588bfefdac1fec079e9193",
+    "content_sha256": "abb822a6dd603f95a9c9d773c199399222539c9cd91c8a124a3cc5429d9da416"
+  },
+  "scope": {
+    "declaration": "MinModulus.min_modulus",
+    "review_context_commit": "61fd97db4c6533c007d6e7857b2eb94fcdf90463",
+    "applied_correction_commit": "225c54f1deb0a9e6043465a5c768295740895ccf",
+    "final_head_commit": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c"
+  },
+  "human_source_local_basis": {
+    "reviewer": "jarfo",
+    "reviewer_relationship": "author_of_the_cited_paper",
+    "comment_id": 5227429390,
+    "comment_url": "https://github.com/google-deepmind/formal-conjectures/pull/4829#issuecomment-5227429390",
+    "comment_observed_at": "2026-08-08T18:08:22Z",
+    "statement": "The paper author explicitly reported that the open theorem statement reads faithfully to Conjecture 1 and supplied the ZMod 0 counterexample establishing the need for the positive-modulus guard.",
+    "retained_review_record_root": "sha256:8e9107794109066b556f6d40bcd706a4c84d45cab7e6c3baa83e18b90364dffd"
+  },
+  "application_chain": {
+    "reviewed_theorem_unchanged_through_applied_correction_and_final_head": true,
+    "applied_and_final_source_content_sha256": "abb822a6dd603f95a9c9d773c199399222539c9cd91c8a124a3cc5429d9da416",
+    "exact_head_maintainer_approval_review_id": 4910223499
+  },
+  "semantic_fidelity_result": "pass",
+  "coverage": "The open MinModulus.min_modulus declaration only.",
+  "does_not_establish": [
+    "Mathematical truth or proof correctness.",
+    "Fidelity of every declaration in the source file.",
+    "A Vela Verification, Decision, or change to Standing."
+  ],
+  "source_packet": {
+    "repository": "williamjblair/formal-conjectures",
+    "commit": "50fb575fadfc710f2da66cba1d3909429f9ba25e",
+    "fixture": "clean-source-faithful-min-modulus-4829",
+    "core_file_sha256": "feaf8dd36c7bc4361c67af09bea9af7f20051ee2f933d4234ffda5715be91f52"
+  }
+}

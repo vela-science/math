@@ -7,10 +7,9 @@ Formal Conjectures audit generator and does not create Vela scientific state.
 ## Records
 
 - `phase-0-fixture-selection.v0.1.json` selects five exact base/head pairs and
-  states the expected distinctions the audit must preserve. Four have frozen,
-  source-grounded classifications; the clean control remains a candidate
-  pending exact-head human review, so the five-fixture ground-truth exit is not
-  met.
+  states the expected distinctions the audit must preserve. All five now have
+  frozen, source-grounded classifications, including a bounded source-fidelity
+  pass tied to the exact #4829 head.
 - `precollection-design.v0.1.json` freezes the bounded human pilot before any
   outcome collection: twelve participants in six independent handoff dyads,
   all five fixtures, the balanced condition schedule, eligibility and missing-
@@ -34,25 +33,32 @@ Formal Conjectures audit generator and does not create Vela scientific state.
   matched control/treatment tasks, planned hypotheses, clocks, ground truth,
   interface kill criteria, and analysis rules. `H2` and `H5` are the Phase 0
   primary hypotheses. Their precollection design is now frozen and rooted;
-  collection is still blocked by its human ground-truth, consent, recruitment,
-  packet, allocation, and private-custody opening conditions. `H1`, `H3`, and
+  collection is still blocked by consent, recruitment, packet, allocation, and
+  private-custody opening conditions. `H1`, `H3`, and
   `H6` remain explicitly untested until later pilots.
 
 ## Five selected cases
 
 | Fixture | Exact pull request | Required distinction |
 | --- | --- | --- |
-| `clean-candidate-dean-4878` | `#4878` | Clean control candidate only; a human review of the exact head is still required |
+| `clean-source-faithful-min-modulus-4829` | `#4829` | The paper author found the open declaration faithful to Conjecture 1; the declaration is unchanged through the applied correction and exact final head |
 | `conditional-erdos-427-4884` | `#4884` | A proof pass retains its Shiu-theorem condition |
 | `fidelity-erdos-887-1237` | `#1237` | The exact head builds, but its answer slot sits inside the `C` and `n` binders instead of expressing one absolute `K` |
 | `vacuity-erdos-80-4830` | `#4830` | A merged, mechanically clean statement can have an unsatisfiable boundary case |
 | `unavailable-rupert-3959` | `#3959` | The exact head names a mutable external repository root but no exact proof file or revision |
 
-The first case is deliberately called a candidate, not clean. Approval and
-successful native checks are useful observations, not a witness-backed
-statement-fidelity verdict. It fulfills the `clean_source_faithful` target role
-only after a domain reviewer checks commit
-`521f6a64402d238f1d040edfeda42c3d8eeb0b98` against the cited sources.
+The first case is clean only in a bounded source-fidelity sense. The paper
+author explicitly reviewed `MinModulus.min_modulus` as faithful to Conjecture 1
+and supplied the zero-modulus witness for its guard. The reviewed theorem is
+unchanged through correction commit `225c54f1...` and exact final head
+`0f8d60f1...`, which also has an exact-head maintainer approval and passing
+build. This does not establish mathematical truth, proof correctness, or
+fidelity of the file's other declarations.
+
+The retired PR `#4878` candidate is not clean. Primary-source checking found
+incorrect author and page-range citations despite approval and a passing
+build. That failure is retained as a regression rule: community and mechanical
+signals cannot substitute for source fidelity.
 
 The availability case is equally narrow. At PR `#3959` head
 `868cc092aeb713dbf8027883c5fa575e550cfae9`, the metadata does not identify
