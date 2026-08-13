@@ -1,0 +1,418 @@
+{
+  "authority_effect": "none",
+  "case": "erdos:321",
+  "content_root": "sha256:e43ca42426ca54c55703baaee351657015019fae36e7e627f6cda0d44b22d513",
+  "content_root_definition": "sha256 of RFC-8785 JSON after removing only content_root",
+  "nonclaims": [
+    "This source-local package is not a Vela Claim, Verification, Decision, Event, or Standing transition.",
+    "The historical human Decisions are reported, not recreated.",
+    "The corrected Claim does not resolve Erdős 321 or establish optimality.",
+    "An unresolved or incomplete-basis relation is not an unaffected relation.",
+    "The open repair obligation has not been verified or decided."
+  ],
+  "relation_slice": [
+    {
+      "after": "Admissible is the conjunction of subset and Valid conditions.",
+      "basis": [
+        "evidence/erdos-321/definition-correspondence.v2.json",
+        "evidence/erdos-321/translation/semantic-diff.v1.json"
+      ],
+      "before": "Admissible was paired with the subset condition alone.",
+      "category": "affected",
+      "id": "admissible_relation"
+    },
+    {
+      "after": "Three distinct correspondences plus a conjunction that reuses one.",
+      "basis": [
+        "evidence/erdos-321/definition-correspondence.v1.json",
+        "evidence/erdos-321/definition-correspondence.v2.json",
+        "evidence/erdos-321/translation/semantic-diff.v1.json"
+      ],
+      "before": "Four independent pairwise identities.",
+      "category": "affected",
+      "id": "correspondence_structure"
+    },
+    {
+      "after": "The open declarations remain placeholders, while fixed solved lower and upper variants are present.",
+      "basis": [
+        "evidence/erdos-321/definition-correspondence.v2.json",
+        "evidence/erdos-321/translation/semantic-diff.v1.json"
+      ],
+      "before": "No fixed formal statement was reported in the file.",
+      "category": "affected",
+      "id": "fixed_statement_availability"
+    },
+    {
+      "after": "extremalSize N = R N",
+      "basis": [
+        "evidence/erdos-321/definition-correspondence.v2.json",
+        "evidence/erdos-321/translation/semantic-diff.v1.json"
+      ],
+      "before": "extremalSize N = R N",
+      "category": "unaffected",
+      "id": "denotational_conclusion"
+    },
+    {
+      "after": "The same pinned commits and retained source snapshots.",
+      "basis": [
+        "evidence/erdos-321/translation/semantic-loss.v1.json",
+        "evidence/erdos-321/translation/reference-annotations.v1.json"
+      ],
+      "before": "Pinned Formal Conjectures and Star Fleet source commits.",
+      "category": "unaffected",
+      "id": "pinned_source_identity"
+    },
+    {
+      "after": "Still not established; Erdős 321 remains open.",
+      "basis": [
+        "evidence/erdos-321/definition-correspondence.v2.json",
+        "evidence/erdos-321/terminal-variants/comparison.v0.1.json"
+      ],
+      "before": "Not established.",
+      "category": "unresolved",
+      "id": "optimality_and_open_problem"
+    },
+    {
+      "after": "Identified and compared structurally; implication remains unproved.",
+      "basis": [
+        "evidence/erdos-321/translation/semantic-diff.v1.json",
+        "evidence/erdos-321/terminal-variants/comparison.v0.1.json"
+      ],
+      "before": "Not identified.",
+      "category": "unresolved",
+      "id": "terminal_to_fixed_lower"
+    },
+    {
+      "after": "Identified and compared structurally; implication remains unproved.",
+      "basis": [
+        "evidence/erdos-321/translation/semantic-diff.v1.json",
+        "evidence/erdos-321/terminal-variants/comparison.v0.1.json"
+      ],
+      "before": "Not identified.",
+      "category": "unresolved",
+      "id": "terminal_to_fixed_upper"
+    },
+    {
+      "after": "The source comparison still does not establish a complete transitive dependency cone.",
+      "basis": [
+        "evidence/erdos-321/translation/semantic-loss.v1.json",
+        "evidence/erdos-321/terminal-variants/comparison.v0.1.json"
+      ],
+      "before": "No rooted transitive proof-dependency slice.",
+      "category": "incomplete_basis",
+      "id": "dependency_cone"
+    },
+    {
+      "after": "No fresh rebuild was part of the historical correction Decision.",
+      "basis": [
+        "evidence/erdos-321/definition-correspondence.v2.json"
+      ],
+      "before": "Recorded CI attestation only.",
+      "category": "incomplete_basis",
+      "id": "fresh_kernel_rebuild"
+    },
+    {
+      "after": "A later unrelated pending proposal; it does not alter this slice.",
+      "basis": [],
+      "before": "Absent from the historical correction.",
+      "category": "out_of_scope",
+      "id": "erdos_887_pending_proposal"
+    },
+    {
+      "after": "Not inspected.",
+      "basis": [],
+      "before": "Not inspected.",
+      "category": "out_of_scope",
+      "id": "other_repository_claims"
+    }
+  ],
+  "repair_obligation": {
+    "basis": "evidence/erdos-321/terminal-variants/comparison.v0.1.json",
+    "standing_effect": "none",
+    "statement": "Construct and kernel-check explicit bridges between the real-log terminal coordinates and each Nat.log fixed-variant hypothesis before asserting either implication.",
+    "status": "open"
+  },
+  "replay": {
+    "normalization": "The replay command's absolute worktree path is replaced by repository; all other reported fields are retained.",
+    "reader": {
+      "core_commit": "f61abcee4edd2d8a33fa181f4aac6eade82c6edf",
+      "version": "0.973.0"
+    },
+    "stages": [
+      {
+        "command": "vela replay repository --json",
+        "commit": "c49081f9fec5e7054623343691f90f6a4e985056",
+        "counts": {
+          "accepted_claims": 0,
+          "artifacts": 3,
+          "pending_claims": 3,
+          "proposal_withdrawals": 0,
+          "proposals": 3,
+          "submissions": 3,
+          "verifications": 7
+        },
+        "label": "before_predecessor_rejection",
+        "ok": true,
+        "repository_id": "8115c538-7688-40b7-ab75-3c4765bf3c19",
+        "repository_path_normalization": "absolute detached-worktree path replaced with repository",
+        "repository_root": "sha256:f89e9b08554d59a7fdaf553104aec1d5d176eb2ccd2f222d56b9fdb0a880d591",
+        "schema": "vela.repository-verification.v3",
+        "tree": "de7c5d1a488cd64fb06bda94bb8877bd33ae78ec"
+      },
+      {
+        "command": "vela replay repository --json",
+        "commit": "52ddf457ae4c8241a8a6145df70f23fabe2f2435",
+        "counts": {
+          "accepted_claims": 0,
+          "artifacts": 3,
+          "pending_claims": 2,
+          "proposal_withdrawals": 0,
+          "proposals": 3,
+          "submissions": 3,
+          "verifications": 7
+        },
+        "label": "after_predecessor_rejection",
+        "ok": true,
+        "repository_id": "8115c538-7688-40b7-ab75-3c4765bf3c19",
+        "repository_path_normalization": "absolute detached-worktree path replaced with repository",
+        "repository_root": "sha256:4aed9ba56f5608ee782970dbdb96682da03902a96b97dfc69dc9b297bd6d514c",
+        "schema": "vela.repository-verification.v3",
+        "tree": "9b72a7964c248277baa15db7549a5df11c166997"
+      },
+      {
+        "command": "vela replay repository --json",
+        "commit": "7e9a18e4d437ad8a24e788305b2e03ffe3813878",
+        "counts": {
+          "accepted_claims": 0,
+          "artifacts": 3,
+          "pending_claims": 1,
+          "proposal_withdrawals": 0,
+          "proposals": 3,
+          "submissions": 3,
+          "verifications": 7
+        },
+        "label": "before_corrected_successor_acceptance",
+        "ok": true,
+        "repository_id": "8115c538-7688-40b7-ab75-3c4765bf3c19",
+        "repository_path_normalization": "absolute detached-worktree path replaced with repository",
+        "repository_root": "sha256:bc36be46a09ca4aafd99b20c384bcf6a807e0094e6e7a55879d943cefbf041d5",
+        "schema": "vela.repository-verification.v3",
+        "tree": "18675b8794536093066ec453fb9594a0b8e93341"
+      },
+      {
+        "command": "vela replay repository --json",
+        "commit": "9bdabbcc1f77d0dd60458e3e9d91d2ffa01fd476",
+        "counts": {
+          "accepted_claims": 1,
+          "artifacts": 3,
+          "pending_claims": 0,
+          "proposal_withdrawals": 0,
+          "proposals": 3,
+          "submissions": 3,
+          "verifications": 7
+        },
+        "label": "after_corrected_successor_acceptance",
+        "ok": true,
+        "repository_id": "8115c538-7688-40b7-ab75-3c4765bf3c19",
+        "repository_path_normalization": "absolute detached-worktree path replaced with repository",
+        "repository_root": "sha256:db4d435c2989d43c7ab88fe135865e89a6ba095429315baedb78bcbd9e90ebdc",
+        "schema": "vela.repository-verification.v3",
+        "tree": "3c99d1b9c969a8559605a664bdd7280e9729169f"
+      }
+    ]
+  },
+  "schema": "vela.math.correction-impact.v1",
+  "scope": {
+    "coverage": "Every relation named in relation_slice is classified exactly once. No transitive Repository dependency graph is claimed.",
+    "definition": "The two Erdős 321 correspondence records, their exact retained sources, the current-authority-generation rejection and acceptance transitions, and the terminal-to-fixed-variant comparison.",
+    "losses": [
+      "The pre-0.972 Claim IDs in semantic-diff.v1 remain source-history identifiers and are not treated as current Standing.",
+      "No fresh Lean rebuild or complete dependency cone was part of the historical correction Decision."
+    ]
+  },
+  "source_lineage": {
+    "archived_predecessor_claim_id": "vcl_7dcd3ce703085fd34b2710229e0e68c1b661688050b352261821ef9bb376524a",
+    "archived_successor_claim_id": "vcl_8ea6c5aa6c39f13cd1e1209b8723957f16d291f7365ed7fb4e15b56ec7c48aed",
+    "current_authority_generation": {
+      "accepted_successor": {
+        "applied_event": {
+          "event_id": "vev_fa0607b365786fe7",
+          "path": ".vela/authority/events/vev_fa0607b365786fe7.json",
+          "raw_sha256": "sha256:00e4e67f40debc116816d05d6de29062a7ffd9726e42c02607e0d6e33e7f398e",
+          "size": 2188
+        },
+        "claim": {
+          "id": "vcl_3d4fd59554ccaa2b792b08abae16a8d0fe329d4901ad798fe05c6c7769c9966b",
+          "path": "records/claims/sha256/d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776.json",
+          "raw_sha256": "sha256:d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776",
+          "size": 1753
+        },
+        "decision": {
+          "actor_type": "human",
+          "event_id": "vev_fb652e14f2a9323f",
+          "path": ".vela/authority/events/vev_fb652e14f2a9323f.json",
+          "raw_sha256": "sha256:84d37efa52864f879f2b135147486dde60388b7c2544234e5cd8bdb02d8612d1",
+          "reason": "Independent passing Verifications establish recorded kernel acceptance and exact denotational correspondence. Standing remains limited by the disclosed caveats and does not claim resolution, optimality, or comparison with the fixed solved variants.",
+          "repository_after": "sha256:db4d435c2989d43c7ab88fe135865e89a6ba095429315baedb78bcbd9e90ebdc",
+          "repository_before": "sha256:bc36be46a09ca4aafd99b20c384bcf6a807e0094e6e7a55879d943cefbf041d5",
+          "size": 1201,
+          "verdict": "accepted"
+        },
+        "proposal": {
+          "id": "vpr_9fa23f806717cd53",
+          "path": "records/proposals/sha256/9fa23f806717cd537fa5e6ca811d1f0e951067cc1b42700c143dc45d5bf71e6d.json",
+          "raw_sha256": "sha256:9fa23f806717cd537fa5e6ca811d1f0e951067cc1b42700c143dc45d5bf71e6d",
+          "size": 1496
+        },
+        "submission": {
+          "id": "vsb_8280451ba4f13d4e",
+          "path": "records/submissions/sha256/8280451ba4f13d4ed06807e9613c3a370fba833209f07eda1c87074bcbfc2d60.json",
+          "raw_sha256": "sha256:8280451ba4f13d4ed06807e9613c3a370fba833209f07eda1c87074bcbfc2d60",
+          "size": 2803
+        },
+        "verifications": [
+          {
+            "actor_id": "verifier:denotational-correspondence-reviewer",
+            "claim_id": "vcl_3d4fd59554ccaa2b792b08abae16a8d0fe329d4901ad798fe05c6c7769c9966b",
+            "does_not_establish": [
+              "That the terminal theorem matches the lower or upper solved variant; that comparison was not performed.",
+              "That the bound is optimal or resolves Erdos problem 321.",
+              "That the old four-independent-pairs account was correct; this method replaces that account with three correspondences plus their conjunction."
+            ],
+            "outcome": "pass",
+            "path": "records/verifications/sha256/12d540b4879ed8afd6c16f41abb8c591b8be736f8a9aa73650f3ab09d1313da2.json",
+            "property": "definition_correspondence",
+            "proposal_id": "vpr_9fa23f806717cd53",
+            "raw_sha256": "sha256:12d540b4879ed8afd6c16f41abb8c591b8be736f8a9aa73650f3ab09d1313da2",
+            "size": 2436
+          },
+          {
+            "actor_id": "verifier:lean-kernel-attestation-reader",
+            "claim_id": "vcl_3d4fd59554ccaa2b792b08abae16a8d0fe329d4901ad798fe05c6c7769c9966b",
+            "does_not_establish": [
+              "That this verifier re-ran Lean; it read the CI attestation recorded at commit a8c2872a.",
+              "That Erdos problem 321 is resolved or that the proved bound is optimal.",
+              "That the terminal theorem matches either fixed solved variant in Formal Conjectures."
+            ],
+            "outcome": "pass",
+            "path": "records/verifications/sha256/1cad2a3d5590bbc24fbdaa6b5d36259a2e52302866a3ccecaace7dd764a7f1d0.json",
+            "property": "lean_kernel_acceptance",
+            "proposal_id": "vpr_9fa23f806717cd53",
+            "raw_sha256": "sha256:1cad2a3d5590bbc24fbdaa6b5d36259a2e52302866a3ccecaace7dd764a7f1d0",
+            "size": 2332
+          }
+        ]
+      },
+      "rejected_predecessor": {
+        "claim": {
+          "id": "vcl_24878e1c6851b4e5bf7162efb5dff159ae5eff6174d2c521a0c009799d11c247",
+          "path": "records/claims/sha256/40dec807844df7badd60cab570b811a1c6137bd0d0a9b6d1408f3b2da33d1f67.json",
+          "raw_sha256": "sha256:40dec807844df7badd60cab570b811a1c6137bd0d0a9b6d1408f3b2da33d1f67",
+          "size": 1414
+        },
+        "decision": {
+          "actor_type": "human",
+          "event_id": "vev_e045ff0592e193fa",
+          "path": ".vela/authority/events/vev_e045ff0592e193fa.json",
+          "raw_sha256": "sha256:91279c57c97a22db478c2835db591d2915ae800cab43a999376870c2c86a1325",
+          "reason": "The definition-correspondence Verification fails: Admissible is a conjunction, not a fourth pairwise-identical notion. The corrected proposal preserves the supported denotational conclusion.",
+          "repository_after": "sha256:4aed9ba56f5608ee782970dbdb96682da03902a96b97dfc69dc9b297bd6d514c",
+          "repository_before": "sha256:f89e9b08554d59a7fdaf553104aec1d5d176eb2ccd2f222d56b9fdb0a880d591",
+          "size": 1101,
+          "verdict": "rejected"
+        },
+        "proposal": {
+          "id": "vpr_da51a4120b1f1090",
+          "path": "records/proposals/sha256/da51a4120b1f109076490202914ef8aa0c2fb6127b4bc381fd556c0429bb41c5.json",
+          "raw_sha256": "sha256:da51a4120b1f109076490202914ef8aa0c2fb6127b4bc381fd556c0429bb41c5",
+          "size": 1150
+        },
+        "submission": {
+          "id": "vsb_eb2bca0dbefa9ede",
+          "path": "records/submissions/sha256/eb2bca0dbefa9ede12f40c12a30fee8a3b285ff9e2bd756c6a641e7e1b4e7710.json",
+          "raw_sha256": "sha256:eb2bca0dbefa9ede12f40c12a30fee8a3b285ff9e2bd756c6a641e7e1b4e7710",
+          "size": 2363
+        },
+        "verifications": [
+          {
+            "actor_id": "verifier:definition-correspondence-reviewer",
+            "claim_id": "vcl_24878e1c6851b4e5bf7162efb5dff159ae5eff6174d2c521a0c009799d11c247",
+            "does_not_establish": [
+              "That extremalSize and Erdos321.R denote different quantities; the corrected evidence supports their equality.",
+              "That the Lean development is unsound or that Erdos problem 321 is resolved.",
+              "That the terminal theorem matches either fixed solved variant; that comparison was not performed."
+            ],
+            "outcome": "fail",
+            "path": "records/verifications/sha256/4a3e2c9da58ddb4f3f62ee3720e911dde670f56282f7a2e96586a0b9f56b537f.json",
+            "property": "definition_correspondence",
+            "proposal_id": "vpr_da51a4120b1f1090",
+            "raw_sha256": "sha256:4a3e2c9da58ddb4f3f62ee3720e911dde670f56282f7a2e96586a0b9f56b537f",
+            "size": 2376
+          },
+          {
+            "actor_id": "verifier:lean-kernel-attestation-reader",
+            "claim_id": "vcl_24878e1c6851b4e5bf7162efb5dff159ae5eff6174d2c521a0c009799d11c247",
+            "does_not_establish": [
+              "That this verifier re-ran Lean; it read the CI attestation recorded at commit a8c2872a.",
+              "That Erdos problem 321 is resolved or that the proved bound is optimal.",
+              "That dependencies outside the audited axiom footprint contain no admitted declarations."
+            ],
+            "outcome": "pass",
+            "path": "records/verifications/sha256/6e48991ad43b6b58f04545ca8bbad845c6672c99cda422be862d021f98405891.json",
+            "property": "lean_kernel_acceptance",
+            "proposal_id": "vpr_da51a4120b1f1090",
+            "raw_sha256": "sha256:6e48991ad43b6b58f04545ca8bbad845c6672c99cda422be862d021f98405891",
+            "size": 2336
+          },
+          {
+            "actor_id": "verifier:formal-statement-fidelity-review",
+            "claim_id": "vcl_24878e1c6851b4e5bf7162efb5dff159ae5eff6174d2c521a0c009799d11c247",
+            "does_not_establish": [
+              "That the development fails to represent Erdos 321; no fixed open statement exists to fail against.",
+              "That the development faithfully represents Erdos 321; the same absence prevents that conclusion.",
+              "That the terminal theorem matches the fixed lower or upper solved variants."
+            ],
+            "outcome": "inconclusive",
+            "path": "records/verifications/sha256/ad088977f327c166da5131b5e67a0dc629c73ced74340333e7b7a8128022ff28.json",
+            "property": "statement_fidelity",
+            "proposal_id": "vpr_da51a4120b1f1090",
+            "raw_sha256": "sha256:ad088977f327c166da5131b5e67a0dc629c73ced74340333e7b7a8128022ff28",
+            "size": 2364
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "path": "evidence/erdos-321/definition-correspondence.v1.json",
+        "raw_sha256": "sha256:fcae425fe42d4eb03dc6f8da248dec09701fdba8639f57aae5d79b4a2a65fc4f",
+        "size": 4626
+      },
+      {
+        "path": "evidence/erdos-321/definition-correspondence.v2.json",
+        "raw_sha256": "sha256:e7c303b037c3ad9491bec761cf7e48b6833b2fe54dbe71f603da1a24123322c2",
+        "size": 6189
+      },
+      {
+        "path": "evidence/erdos-321/translation/semantic-diff.v1.json",
+        "raw_sha256": "sha256:0bd0b53b69934d391a9482452c38c8adaf7833ca7f2870c2ce03fc873caf13c5",
+        "size": 2429
+      },
+      {
+        "path": "evidence/erdos-321/translation/semantic-loss.v1.json",
+        "raw_sha256": "sha256:c76294a540fe1d0a04573603d40524f6094dbf5eaea0536752085bcc6a699fd6",
+        "size": 2086
+      },
+      {
+        "path": "evidence/erdos-321/translation/reference-annotations.v1.json",
+        "raw_sha256": "sha256:287ae43d322c014b16138fd618a7ed850a51c9ad01cbbf9cdb8f7a690f9caf94",
+        "size": 8976
+      },
+      {
+        "path": "evidence/erdos-321/terminal-variants/comparison.v0.1.json",
+        "raw_sha256": "sha256:0f26a4586bbeac08d07f4d0f8b5d1507751830913d41747a64f2c8203c08af58",
+        "size": 6881
+      }
+    ]
+  }
+}

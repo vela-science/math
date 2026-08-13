@@ -37,6 +37,11 @@ vela replay . --json
   Lean source snapshots and derives W3C Web Annotations, a rooted semantic fact
   diff, an explicit loss report, and a Workflow Run RO-Crate. It is
   non-canonical evidence and has no authority effect.
+- [Erdős 321 correction impact](evidence/erdos-321/correction-impact/README.md)
+  binds the rejected predecessor, accepted corrected successor, four replayed
+  states, and a closed relation slice. Its source-local root is
+  `sha256:e43ca42426ca54c55703baaee351657015019fae36e7e627f6cda0d44b22d513`;
+  the open repair obligation remains undecided and has no authority effect.
 - [Erdős 321 terminal-variant comparison](evidence/erdos-321/terminal-variants/README.md)
   roots the pinned terminal theorem, proof environment, rights boundary, and a
   bounded comparison with the retained fixed variants. It is non-canonical

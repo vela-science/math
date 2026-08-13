@@ -1,0 +1,36 @@
+{
+  "authority_effect": "none",
+  "content_root": "sha256:d6c37a4a1c49ae07c3ec3fe99b273298441542ed6f66da2ab476c8d0a74459a6",
+  "content_root_definition": "sha256 of RFC-8785 JSON after removing only content_root",
+  "disposition": {
+    "interface": "correction-impact-v1",
+    "reason": "This single agent-only rehearsal showed no correctness lift and increased elapsed latency and input-token burden. Keep the exact source-local view for traceability; do not promote it as a proven comprehension or efficiency improvement.",
+    "status": "retain_source_locally"
+  },
+  "hypothesis_status": {
+    "agent_context_free_reconstruction": "both_arms_complete_with_no_observed_accuracy_lift",
+    "human_comprehension": "not_tested",
+    "human_reviewer_minutes": "not_tested",
+    "independent_reader_portability": "not_tested"
+  },
+  "input_result_root": "sha256:a5b6d6eebf67619ce220895e5a490b1c44c805f1a77f611cc0db21a136e7d0c0",
+  "measures": {
+    "baseline_correct": 8,
+    "baseline_duration_ms": 27642,
+    "baseline_input_tokens": 49162,
+    "baseline_possible": 8,
+    "correctness_lift": 0,
+    "duration_delta_ms": 7293,
+    "input_token_delta": 4730,
+    "treatment_correct": 8,
+    "treatment_duration_ms": 34935,
+    "treatment_input_tokens": 53892,
+    "treatment_possible": 8
+  },
+  "nonclaims": [
+    "One paired agent rehearsal is not a sample, an estimator of human effect, or independent validation.",
+    "Elapsed model latency is not reviewer minutes.",
+    "The disposition has no effect on Repository Standing or the historical human Decisions."
+  ],
+  "schema": "vela.math.correction-cold-reader-evaluation.v1"
+}

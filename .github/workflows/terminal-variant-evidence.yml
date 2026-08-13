@@ -5,6 +5,7 @@ on:
     paths:
       - "AGENTS.md"
       - "README.md"
+      - "evidence/erdos-321/correction-impact/**"
       - "evidence/erdos-321/external-workbench-return/**"
       - "evidence/erdos-321/terminal-variants/**"
       - "evidence/erdos-321/workbench-compatibility/**"
@@ -14,6 +15,7 @@ on:
     paths:
       - "AGENTS.md"
       - "README.md"
+      - "evidence/erdos-321/correction-impact/**"
       - "evidence/erdos-321/external-workbench-return/**"
       - "evidence/erdos-321/terminal-variants/**"
       - "evidence/erdos-321/workbench-compatibility/**"
@@ -81,6 +83,14 @@ jobs:
           .github/workflows/terminal-variant-evidence.yml
           AGENTS.md
           README.md
+          evidence/erdos-321/correction-impact/README.md
+          evidence/erdos-321/correction-impact/build.py
+          evidence/erdos-321/correction-impact/cold-reader-evaluation.v1.json
+          evidence/erdos-321/correction-impact/cold-reader-response.schema.json
+          evidence/erdos-321/correction-impact/cold-reader-result.v1.json
+          evidence/erdos-321/correction-impact/cold_reader.py
+          evidence/erdos-321/correction-impact/correction-impact.v1.json
+          evidence/erdos-321/correction-impact/test_build.py
           evidence/erdos-321/external-workbench-return/README.md
           evidence/erdos-321/external-workbench-return/return-contract.v0.1.json
           evidence/erdos-321/external-workbench-return/test_verify_return.py
@@ -123,6 +133,7 @@ jobs:
             .github/workflows/terminal-variant-evidence.yml \
             AGENTS.md \
             README.md \
+            evidence/erdos-321/correction-impact \
             evidence/erdos-321/external-workbench-return \
             evidence/erdos-321/terminal-variants \
             evidence/erdos-321/workbench-compatibility \
@@ -131,6 +142,9 @@ jobs:
           test -z "$(git diff --name-only "$base"...HEAD -- .vela records continuity)"
           test -z "$(git diff --name-only "$base"...HEAD -- \
             methods ':(exclude,glob)methods/formal-conjectures/**')"
+          python3 -B evidence/erdos-321/correction-impact/build.py --check
+          python3 -B evidence/erdos-321/correction-impact/test_build.py
+          python3 -B evidence/erdos-321/correction-impact/cold_reader.py --verify
           python3 -B evidence/erdos-321/terminal-variants/build.py \
             --lean-proofs-repo "$VELA_LEAN_PROOFS_REPO" \
             --mathlib-repo "$VELA_MATHLIB_REPO" \
@@ -162,6 +176,7 @@ jobs:
           assert actual == expected
           PY
           test -z "$(find evidence/erdos-321/terminal-variants -type d -name __pycache__ -print -quit)"
+          test -z "$(find evidence/erdos-321/correction-impact -type d -name __pycache__ -print -quit)"
           test -z "$(find evidence/erdos-321/external-workbench-return -type d -name __pycache__ -print -quit)"
           test -z "$(find evidence/erdos-321/workbench-compatibility -type d -name __pycache__ -print -quit)"
           test -z "$(git status --porcelain=v1 --untracked-files=all)"

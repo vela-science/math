@@ -1,0 +1,230 @@
+{
+  "arms": [
+    {
+      "arm": "baseline",
+      "duration_ms": 27642,
+      "input_descriptors": [
+        {
+          "path": "evidence/erdos-321/definition-correspondence.v1.json",
+          "raw_sha256": "sha256:fcae425fe42d4eb03dc6f8da248dec09701fdba8639f57aae5d79b4a2a65fc4f",
+          "size": 4626
+        },
+        {
+          "path": "evidence/erdos-321/definition-correspondence.v2.json",
+          "raw_sha256": "sha256:e7c303b037c3ad9491bec761cf7e48b6833b2fe54dbe71f603da1a24123322c2",
+          "size": 6189
+        },
+        {
+          "path": "evidence/erdos-321/translation/semantic-diff.v1.json",
+          "raw_sha256": "sha256:0bd0b53b69934d391a9482452c38c8adaf7833ca7f2870c2ce03fc873caf13c5",
+          "size": 2429
+        },
+        {
+          "path": "evidence/erdos-321/translation/semantic-loss.v1.json",
+          "raw_sha256": "sha256:c76294a540fe1d0a04573603d40524f6094dbf5eaea0536752085bcc6a699fd6",
+          "size": 2086
+        },
+        {
+          "path": "evidence/erdos-321/terminal-variants/comparison.v0.1.json",
+          "raw_sha256": "sha256:0f26a4586bbeac08d07f4d0f8b5d1507751830913d41747a64f2c8203c08af58",
+          "size": 6881
+        },
+        {
+          "path": "records/claims/sha256/40dec807844df7badd60cab570b811a1c6137bd0d0a9b6d1408f3b2da33d1f67.json",
+          "raw_sha256": "sha256:40dec807844df7badd60cab570b811a1c6137bd0d0a9b6d1408f3b2da33d1f67",
+          "size": 1414
+        },
+        {
+          "path": "records/claims/sha256/d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776.json",
+          "raw_sha256": "sha256:d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776",
+          "size": 1753
+        },
+        {
+          "path": ".vela/authority/events/vev_e045ff0592e193fa.json",
+          "raw_sha256": "sha256:91279c57c97a22db478c2835db591d2915ae800cab43a999376870c2c86a1325",
+          "size": 1101
+        },
+        {
+          "path": ".vela/authority/events/vev_fb652e14f2a9323f.json",
+          "raw_sha256": "sha256:84d37efa52864f879f2b135147486dde60388b7c2544234e5cd8bdb02d8612d1",
+          "size": 1201
+        }
+      ],
+      "response": {
+        "affected_relation_ids": [
+          "admissible_relation",
+          "correspondence_structure",
+          "fixed_statement_availability"
+        ],
+        "conclusion_changed": false,
+        "confidence_percent": 99,
+        "evidence_files": [
+          "evidence/erdos-321/definition-correspondence.v1.json",
+          "evidence/erdos-321/definition-correspondence.v2.json",
+          "evidence/erdos-321/translation/semantic-diff.v1.json",
+          "evidence/erdos-321/translation/semantic-loss.v1.json",
+          "evidence/erdos-321/terminal-variants/comparison.v0.1.json",
+          "records/claims/sha256/40dec807844df7badd60cab570b811a1c6137bd0d0a9b6d1408f3b2da33d1f67.json",
+          "records/claims/sha256/d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776.json",
+          ".vela/authority/events/vev_e045ff0592e193fa.json",
+          ".vela/authority/events/vev_fb652e14f2a9323f.json"
+        ],
+        "incomplete_basis_relation_ids": [
+          "dependency_cone",
+          "fresh_kernel_rebuild"
+        ],
+        "next_repair_obligation": "Construct and kernel-check explicit bridges between the real-log terminal coordinates and each Nat.log fixed-variant hypothesis before asserting implication in either direction.",
+        "predecessor_verdict": "rejected",
+        "report_authority_effect": "none",
+        "successor_verdict": "accepted",
+        "unresolved_relation_ids": [
+          "optimality_and_open_problem",
+          "terminal_to_fixed_lower",
+          "terminal_to_fixed_upper"
+        ]
+      },
+      "score": {
+        "components": {
+          "affected_relation_ids": true,
+          "conclusion_changed": true,
+          "incomplete_basis_relation_ids": true,
+          "next_repair_obligation": true,
+          "predecessor_verdict": true,
+          "report_authority_effect": true,
+          "successor_verdict": true,
+          "unresolved_relation_ids": true
+        },
+        "correct": 8,
+        "possible": 8
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 20224,
+        "input_tokens": 49162,
+        "output_tokens": 1130,
+        "reasoning_output_tokens": 340
+      }
+    },
+    {
+      "arm": "treatment",
+      "duration_ms": 34935,
+      "input_descriptors": [
+        {
+          "path": "evidence/erdos-321/definition-correspondence.v1.json",
+          "raw_sha256": "sha256:fcae425fe42d4eb03dc6f8da248dec09701fdba8639f57aae5d79b4a2a65fc4f",
+          "size": 4626
+        },
+        {
+          "path": "evidence/erdos-321/definition-correspondence.v2.json",
+          "raw_sha256": "sha256:e7c303b037c3ad9491bec761cf7e48b6833b2fe54dbe71f603da1a24123322c2",
+          "size": 6189
+        },
+        {
+          "path": "evidence/erdos-321/translation/semantic-diff.v1.json",
+          "raw_sha256": "sha256:0bd0b53b69934d391a9482452c38c8adaf7833ca7f2870c2ce03fc873caf13c5",
+          "size": 2429
+        },
+        {
+          "path": "evidence/erdos-321/translation/semantic-loss.v1.json",
+          "raw_sha256": "sha256:c76294a540fe1d0a04573603d40524f6094dbf5eaea0536752085bcc6a699fd6",
+          "size": 2086
+        },
+        {
+          "path": "evidence/erdos-321/terminal-variants/comparison.v0.1.json",
+          "raw_sha256": "sha256:0f26a4586bbeac08d07f4d0f8b5d1507751830913d41747a64f2c8203c08af58",
+          "size": 6881
+        },
+        {
+          "path": "records/claims/sha256/40dec807844df7badd60cab570b811a1c6137bd0d0a9b6d1408f3b2da33d1f67.json",
+          "raw_sha256": "sha256:40dec807844df7badd60cab570b811a1c6137bd0d0a9b6d1408f3b2da33d1f67",
+          "size": 1414
+        },
+        {
+          "path": "records/claims/sha256/d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776.json",
+          "raw_sha256": "sha256:d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776",
+          "size": 1753
+        },
+        {
+          "path": ".vela/authority/events/vev_e045ff0592e193fa.json",
+          "raw_sha256": "sha256:91279c57c97a22db478c2835db591d2915ae800cab43a999376870c2c86a1325",
+          "size": 1101
+        },
+        {
+          "path": ".vela/authority/events/vev_fb652e14f2a9323f.json",
+          "raw_sha256": "sha256:84d37efa52864f879f2b135147486dde60388b7c2544234e5cd8bdb02d8612d1",
+          "size": 1201
+        },
+        {
+          "path": "evidence/erdos-321/correction-impact/correction-impact.v1.json",
+          "raw_sha256": "sha256:44228f0ecf806f5f9c6a19237b0259cd6a26c4dc923e38a10b943db390512bb0",
+          "size": 19704
+        }
+      ],
+      "response": {
+        "affected_relation_ids": [
+          "admissible_relation",
+          "correspondence_structure",
+          "fixed_statement_availability"
+        ],
+        "conclusion_changed": false,
+        "confidence_percent": 100,
+        "evidence_files": [
+          "evidence/erdos-321/definition-correspondence.v1.json",
+          "evidence/erdos-321/definition-correspondence.v2.json",
+          "evidence/erdos-321/translation/semantic-diff.v1.json",
+          "evidence/erdos-321/translation/semantic-loss.v1.json",
+          "evidence/erdos-321/terminal-variants/comparison.v0.1.json",
+          "records/claims/sha256/40dec807844df7badd60cab570b811a1c6137bd0d0a9b6d1408f3b2da33d1f67.json",
+          "records/claims/sha256/d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776.json",
+          ".vela/authority/events/vev_e045ff0592e193fa.json",
+          ".vela/authority/events/vev_fb652e14f2a9323f.json",
+          "evidence/erdos-321/correction-impact/correction-impact.v1.json"
+        ],
+        "incomplete_basis_relation_ids": [
+          "dependency_cone",
+          "fresh_kernel_rebuild"
+        ],
+        "next_repair_obligation": "Construct and kernel-check explicit bridges between the real-log terminal coordinates and each Nat.log fixed-variant hypothesis before asserting either implication.",
+        "predecessor_verdict": "rejected",
+        "report_authority_effect": "none",
+        "successor_verdict": "accepted",
+        "unresolved_relation_ids": [
+          "optimality_and_open_problem",
+          "terminal_to_fixed_lower",
+          "terminal_to_fixed_upper"
+        ]
+      },
+      "score": {
+        "components": {
+          "affected_relation_ids": true,
+          "conclusion_changed": true,
+          "incomplete_basis_relation_ids": true,
+          "next_repair_obligation": true,
+          "predecessor_verdict": true,
+          "report_authority_effect": true,
+          "successor_verdict": true,
+          "unresolved_relation_ids": true
+        },
+        "correct": 8,
+        "possible": 8
+      },
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 20224,
+        "input_tokens": 53892,
+        "output_tokens": 1373,
+        "reasoning_output_tokens": 339
+      }
+    }
+  ],
+  "authority_effect": "none",
+  "content_root": "sha256:a5b6d6eebf67619ce220895e5a490b1c44c805f1a77f611cc0db21a136e7d0c0",
+  "content_root_definition": "sha256 of RFC-8785 JSON after removing only content_root",
+  "nonclaims": [
+    "The context-free readers were Codex CLI sessions operated by one experimenter, not independent human participants.",
+    "A correct response does not establish scientific correctness, adoption, Verification, Decision, or Standing.",
+    "The elapsed durations include model and tool latency and are not human reviewer minutes."
+  ],
+  "reader_class": "agent_context_free_cli",
+  "schema": "vela.math.correction-cold-reader.v1"
+}

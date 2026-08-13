@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "affected_relation_ids": {
+      "items": {
+        "enum": [
+          "admissible_relation",
+          "correspondence_structure",
+          "fixed_statement_availability"
+        ]
+      },
+      "type": "array"
+    },
+    "conclusion_changed": {
+      "type": "boolean"
+    },
+    "confidence_percent": {
+      "maximum": 100,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "evidence_files": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "incomplete_basis_relation_ids": {
+      "items": {
+        "enum": [
+          "dependency_cone",
+          "fresh_kernel_rebuild"
+        ]
+      },
+      "type": "array"
+    },
+    "next_repair_obligation": {
+      "type": "string"
+    },
+    "predecessor_verdict": {
+      "enum": [
+        "accepted",
+        "rejected",
+        "undecided"
+      ]
+    },
+    "report_authority_effect": {
+      "enum": [
+        "none",
+        "standing"
+      ]
+    },
+    "successor_verdict": {
+      "enum": [
+        "accepted",
+        "rejected",
+        "undecided"
+      ]
+    },
+    "unresolved_relation_ids": {
+      "items": {
+        "enum": [
+          "optimality_and_open_problem",
+          "terminal_to_fixed_lower",
+          "terminal_to_fixed_upper"
+        ]
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "conclusion_changed",
+    "affected_relation_ids",
+    "unresolved_relation_ids",
+    "incomplete_basis_relation_ids",
+    "predecessor_verdict",
+    "successor_verdict",
+    "report_authority_effect",
+    "next_repair_obligation",
+    "confidence_percent",
+    "evidence_files"
+  ],
+  "title": "Erdős 321 correction cold-reader response",
+  "type": "object"
+}
