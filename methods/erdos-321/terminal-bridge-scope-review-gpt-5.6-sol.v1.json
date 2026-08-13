@@ -1,0 +1,31 @@
+{
+  "schema": "vela.review-method.v1",
+  "profile": "erdos-321-terminal-bridge-scope-gpt-5.6-sol-v1",
+  "property": "terminal_bridge_scope",
+  "question": "Does the exact retained evidence support the negative scope claim that neither terminal-to-fixed implication is established?",
+  "procedure": [
+    "Verify the exact terminal and fixed source commit, path, blob, raw SHA-256, and toolchain identities in repair-disposition.v1.json.",
+    "Read the terminal theorem premises and both fixed variant hypotheses at those exact source revisions.",
+    "Check that each missing bridge names a premise or coordinate relation required for the proposed index alignment and that no retained theorem is claimed where none is supplied.",
+    "Require the disposition to preserve both relations as unresolved and to avoid claiming mathematical impossibility, theorem falsehood, Verification, Decision, or Standing."
+  ],
+  "required_output": [
+    "Exact source and disposition roots.",
+    "A pass, fail, inconclusive, or error outcome.",
+    "Every unsupported or out-of-scope clause.",
+    "Reviewer identity, actor class, model, provider, method, scope, limitations, and shared dependencies."
+  ],
+  "reviewer": {
+    "kind": "ai_model",
+    "identifier": "gpt-5.6-sol",
+    "display_name": "GPT-5.6 Sol",
+    "provider": "OpenAI",
+    "version": null
+  },
+  "attested_by_actor_id": "agent:codex-terminal-bridge-review",
+  "does_not_establish": [
+    "A passing scope review does not prove either scientific statement.",
+    "It does not establish that a bridge is impossible.",
+    "It does not accept a Proposal or change Math Standing."
+  ]
+}
