@@ -1,0 +1,89 @@
+{
+  "schema": "vela.math.fc-audit.collection-materials.v0.1",
+  "status": "materials_frozen_no_participants_contacted",
+  "authority_effect": "none",
+  "design": {
+    "path": "evidence/formal-conjectures/audit-pilot/precollection-design.v0.1.json",
+    "raw_sha256": "sha256:ecd56585a9f16d0ac9e129433f5c9935b1a37be5ecf6efb2a01e7896b4b4ce21",
+    "size": 14047
+  },
+  "method": {
+    "path": "methods/formal-conjectures/audit-baseline.v0.1.json",
+    "raw_sha256": "sha256:a52c440d2e462a1cacefb32f001c2f1995fbcf121bb6b1d87153a06438ec3281",
+    "size": 28904
+  },
+  "consent": {
+    "title": "Formal Conjectures audit handoff study",
+    "purpose": "Measure whether one retained audit record changes the time and accuracy of reviewing the same five public Formal Conjectures pull requests.",
+    "participation": "Participation is voluntary. You may skip a task or stop without giving a reason. Stopping has no effect on repository access, contributor status, or scientific authority.",
+    "tasks": "You will inspect public Lean source, public review evidence, and one rooted condition packet. A paired receiver will continue from the packet without private sender context.",
+    "time_caps": {
+      "sender_review_seconds": 5400,
+      "receiver_continuation_and_reproduction_seconds": 3600
+    },
+    "data_collected": [
+      "a study-random pseudonym and declared Lean or Formal Conjectures experience",
+      "task timestamps, active and wait durations, terminal states, findings, commands, and public artifact roots",
+      "handoff linkage and whether the receiver used only the condition packet"
+    ],
+    "public_release": "The public dataset will contain redacted pseudonymous task fields and authorized evidence excerpts. It will exclude names, contact details, account identifiers, credentials, private messages, and the re-identification key.",
+    "private_custody": "The study custodian will keep consent receipts, contact details, and any re-identification key encrypted outside Git with access limited to the evaluation owner.",
+    "retention": "The custodian will delete private raw material and the re-identification key no later than 180 days after the last enrolled session. A participant may request earlier withdrawal before the redacted aggregate is frozen, where deletion remains feasible.",
+    "risks": "The tasks require time and may expose errors in public technical work. Do not provide secrets, private repository material, or unpublished correspondence.",
+    "benefits_and_compensation": "The study promises no scientific, contributor, or authority benefit. Any compensation must be stated and accepted before consent; none is assumed by this packet.",
+    "contact_and_incidents": "The invitation must name the study custodian and a private contact channel before consent. Stop the session and contact that custodian if a packet contains private data, a credential, or the wrong fixture.",
+    "affirmations": [
+      "I am an adult and meet the packet eligibility rules.",
+      "I understand what the public dataset may contain and how private data will be retained and deleted.",
+      "I consent to this session and know I may stop or withdraw under the stated rule."
+    ]
+  },
+  "private_custody_plan": {
+    "custodian_assignment": "The program owner must name one human custodian before recruitment.",
+    "storage": "Use an encrypted, access-controlled location outside every public or private Git worktree. Do not place the re-identification key beside pseudonymous observation exports.",
+    "minimum_access": [
+      "named study custodian",
+      "one named backup only when required"
+    ],
+    "public_repository_prohibitions": [
+      "participant names, email addresses, handles, account ids, or contact details",
+      "private pull-request comments, direct messages, unpublished review notes, or restricted artifact contents",
+      "credentials, tokens, cookies, private keys, session identifiers, or private locators",
+      "free text that is not reviewed for accidental identity or private-context disclosure"
+    ],
+    "incident_response": "Do not commit a suspected secret or private participant datum. Stop collection, quarantine the material outside Git, notify the study custodian, rotate any exposed credential, and record only a public-safe incident disposition.",
+    "deletion_proof": "Retain a public-safe deletion receipt with date, material classes removed, custodian id, and any lawful or consent-based exception. Do not retain participant identities in that receipt."
+  },
+  "allocation_receipt_format": {
+    "schema": "vela.math.fc-audit.allocation-receipt.v0.1",
+    "required_fields": [
+      "schema",
+      "design_raw_sha256",
+      "condition_packet_set_root",
+      "seed_commitment",
+      "revealed_seed",
+      "algorithm",
+      "eligible_dyad_pseudonyms",
+      "slot_assignments",
+      "created_at",
+      "receipt_root"
+    ],
+    "algorithm": "Before outcome collection, pair eligible participants into six dyads using declared experience only. After pairing is frozen, generate a 32-byte random seed, publish its SHA-256 commitment, use the revealed seed to Fisher-Yates shuffle dyads into slots 1-6, and retain the seed and algorithm receipt. Condition packets are disclosed one task at a time.",
+    "identity_rule": "Use study-random pseudonyms. Keep names, contact details, and the re-identification key outside this receipt and outside Git.",
+    "outcome_blind_rule": "Freeze and root the receipt before any condition outcome is inspected."
+  },
+  "session_opening_checklist": [
+    "Confirm the participant signed the exact consent text and still wishes to proceed.",
+    "Confirm eligibility and prior-exposure fields before revealing a packet.",
+    "Confirm the packet id, fixture, condition, root, and assigned slot against the frozen allocation receipt.",
+    "Deliver only the assigned packet object in an isolated file; do not expose this repository, the packet set, ground truth, or the other condition.",
+    "Start separate active-time and wait-time clocks; disclose one task packet at a time.",
+    "Stop on a consent, privacy, credential, wrong-packet, or authority-boundary incident."
+  ],
+  "does_not_establish": [
+    "That a participant has been recruited, contacted, consented, enrolled, or allocated.",
+    "That private custody has been activated or a human custodian has accepted the role.",
+    "Any H2 or H5 result, interface disposition, Vela Verification, Decision, Event, or Standing."
+  ],
+  "materials_root": "sha256:7687a7ee455883a812b1079ca6e2e0d1ffe7fb2f369095f80507eefc039287a1"
+}

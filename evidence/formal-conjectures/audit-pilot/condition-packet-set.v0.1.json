@@ -1,0 +1,1120 @@
+{
+  "schema": "vela.math.fc-audit.condition-packet-set.v0.1",
+  "status": "frozen_not_allocated",
+  "authority_effect": "none",
+  "design": {
+    "path": "evidence/formal-conjectures/audit-pilot/precollection-design.v0.1.json",
+    "raw_sha256": "sha256:ecd56585a9f16d0ac9e129433f5c9935b1a37be5ecf6efb2a01e7896b4b4ce21",
+    "size": 14047
+  },
+  "selection": {
+    "path": "evidence/formal-conjectures/audit-pilot/phase-0-fixture-selection.v0.1.json",
+    "raw_sha256": "sha256:cdfeb8a6d60dcddb933e6b66c32f29f3eee79aa138f671d8cd73484bdbb635d3",
+    "size": 25145
+  },
+  "packet_count": 10,
+  "packets": [
+    {
+      "schema": "vela.math.fc-audit.condition-packet.v0.1",
+      "packet_id": "clean-source-faithful-min-modulus-4829::plain-git-and-current-review-artifacts",
+      "condition": "plain-git-and-current-review-artifacts",
+      "authority_effect": "none",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "task_wording": [
+        {
+          "id": "locate-evidence",
+          "prompt": "Locate the exact changed statement, every declared proof artifact, each check result, and the base and head identities. Record missing or ambiguous fields.",
+          "stop_condition": "The participant either records all requested locators or states that a requested item is unavailable."
+        },
+        {
+          "id": "classify-checks",
+          "prompt": "Separate mechanical checks, semantic-fidelity findings, artifact availability, and external community status. Preserve conditions and does-not-establish limits.",
+          "stop_condition": "Every observed result is assigned to one layer without inferring acceptance from pass."
+        },
+        {
+          "id": "review-fidelity",
+          "prompt": "Compare the exact Lean statement with its source and report a witness-backed verdict or an explicit inconclusive result.",
+          "stop_condition": "The participant records CLEAN, ACCEPT WITH NITS, NEEDS REVISION, or an explicit unresolved question, with the source locator and witness rules from the review guide."
+        },
+        {
+          "id": "reproduce-artifact",
+          "prompt": "Follow the retained commands or artifact locator far enough to reproduce or scope the claimed mechanical result. Record unavailable tools or bytes separately from failures.",
+          "stop_condition": "The artifact is reproduced, a retained attestation is scoped, or the attempt ends with fail, error, inconclusive, or unavailable and an exact reason."
+        },
+        {
+          "id": "handoff-continuation",
+          "prompt": "A receiver distinct from the sender continues from the rooted retained condition packet and explains the result, limits, and next unresolved obligation without private operator context.",
+          "stop_condition": "The linked receiver continuation observation gives a correct layer-separated account or identifies the missing provenance that prevents continuation."
+        }
+      ],
+      "pull_request": {
+        "repository": "google-deepmind/formal-conjectures",
+        "number": 4829,
+        "url": "https://github.com/google-deepmind/formal-conjectures/pull/4829",
+        "base_commit": "5fe1f74ad497d950e4c2094879ab10708907f7c6",
+        "head_commit": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+        "changed_paths": [
+          "FormalConjectures/Arxiv/2607.08366/MinModulus.lean"
+        ],
+        "files_observation": {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-files-observation.json",
+          "sha256": "3ffa087bdf5891eb77ce9ce48fc1ee48ec2d6d33de9645640f5c32d0471b0488"
+        }
+      },
+      "source_repository_url": "https://github.com/google-deepmind/formal-conjectures.git",
+      "source_setup_commands": [
+        [
+          "git",
+          "clone",
+          "--filter=blob:none",
+          "https://github.com/google-deepmind/formal-conjectures.git",
+          "$SOURCE_CHECKOUT"
+        ],
+        [
+          "git",
+          "-C",
+          "$SOURCE_CHECKOUT",
+          "checkout",
+          "--detach",
+          "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c"
+        ]
+      ],
+      "public_source_command": [
+        "git",
+        "-C",
+        "$SOURCE_CHECKOUT",
+        "show",
+        "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c:FormalConjectures/Arxiv/2607.08366/MinModulus.lean"
+      ],
+      "shared_evidence": [
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-check-observation.json",
+          "raw_sha256": "sha256:aa0a67a3a5a342586efdda4b1215eeefabc782d4eee1da5b8d8e3bad9f85d5dd",
+          "size": 2189
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-files-observation.json",
+          "raw_sha256": "sha256:3ffa087bdf5891eb77ce9ce48fc1ee48ec2d6d33de9645640f5c32d0471b0488",
+          "size": 1342
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-reviews.json",
+          "raw_sha256": "sha256:c7e5b6bef186f4a635b63f3425a52da219354fe9aa54632748c9399599251600",
+          "size": 1027
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829.json",
+          "raw_sha256": "sha256:7a6ab239791ac3c2b65be27666858feaa88bd31918d65417a1c05dca628caba2",
+          "size": 1018
+        }
+      ],
+      "access_limits": "Public source and the files named by this packet only. Do not use private operator context or outcome labels from another condition.",
+      "treatment_evidence": [],
+      "does_not_establish": [
+        "The packet label does not reveal the expected fixture outcome to the participant.",
+        "A review answer is not a Formal Conjectures maintainer action or Vela Decision."
+      ],
+      "packet_root": "sha256:34f9ce1e77b28e8ebcd9a49f57f4e976a890eabda546594d24ae588b465554fc"
+    },
+    {
+      "schema": "vela.math.fc-audit.condition-packet.v0.1",
+      "packet_id": "clean-source-faithful-min-modulus-4829::same-inputs-plus-fc-pr-audit",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "authority_effect": "none",
+      "fixture_id": "clean-source-faithful-min-modulus-4829",
+      "task_wording": [
+        {
+          "id": "locate-evidence",
+          "prompt": "Locate the exact changed statement, every declared proof artifact, each check result, and the base and head identities. Record missing or ambiguous fields.",
+          "stop_condition": "The participant either records all requested locators or states that a requested item is unavailable."
+        },
+        {
+          "id": "classify-checks",
+          "prompt": "Separate mechanical checks, semantic-fidelity findings, artifact availability, and external community status. Preserve conditions and does-not-establish limits.",
+          "stop_condition": "Every observed result is assigned to one layer without inferring acceptance from pass."
+        },
+        {
+          "id": "review-fidelity",
+          "prompt": "Compare the exact Lean statement with its source and report a witness-backed verdict or an explicit inconclusive result.",
+          "stop_condition": "The participant records CLEAN, ACCEPT WITH NITS, NEEDS REVISION, or an explicit unresolved question, with the source locator and witness rules from the review guide."
+        },
+        {
+          "id": "reproduce-artifact",
+          "prompt": "Follow the retained commands or artifact locator far enough to reproduce or scope the claimed mechanical result. Record unavailable tools or bytes separately from failures.",
+          "stop_condition": "The artifact is reproduced, a retained attestation is scoped, or the attempt ends with fail, error, inconclusive, or unavailable and an exact reason."
+        },
+        {
+          "id": "handoff-continuation",
+          "prompt": "A receiver distinct from the sender continues from the rooted retained condition packet and explains the result, limits, and next unresolved obligation without private operator context.",
+          "stop_condition": "The linked receiver continuation observation gives a correct layer-separated account or identifies the missing provenance that prevents continuation."
+        }
+      ],
+      "pull_request": {
+        "repository": "google-deepmind/formal-conjectures",
+        "number": 4829,
+        "url": "https://github.com/google-deepmind/formal-conjectures/pull/4829",
+        "base_commit": "5fe1f74ad497d950e4c2094879ab10708907f7c6",
+        "head_commit": "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c",
+        "changed_paths": [
+          "FormalConjectures/Arxiv/2607.08366/MinModulus.lean"
+        ],
+        "files_observation": {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-files-observation.json",
+          "sha256": "3ffa087bdf5891eb77ce9ce48fc1ee48ec2d6d33de9645640f5c32d0471b0488"
+        }
+      },
+      "source_repository_url": "https://github.com/google-deepmind/formal-conjectures.git",
+      "source_setup_commands": [
+        [
+          "git",
+          "clone",
+          "--filter=blob:none",
+          "https://github.com/google-deepmind/formal-conjectures.git",
+          "$SOURCE_CHECKOUT"
+        ],
+        [
+          "git",
+          "-C",
+          "$SOURCE_CHECKOUT",
+          "checkout",
+          "--detach",
+          "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c"
+        ]
+      ],
+      "public_source_command": [
+        "git",
+        "-C",
+        "$SOURCE_CHECKOUT",
+        "show",
+        "0f8d60f1a5811eb00ad9f12cf8031ee5c1cc215c:FormalConjectures/Arxiv/2607.08366/MinModulus.lean"
+      ],
+      "shared_evidence": [
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-check-observation.json",
+          "raw_sha256": "sha256:aa0a67a3a5a342586efdda4b1215eeefabc782d4eee1da5b8d8e3bad9f85d5dd",
+          "size": 2189
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-files-observation.json",
+          "raw_sha256": "sha256:3ffa087bdf5891eb77ce9ce48fc1ee48ec2d6d33de9645640f5c32d0471b0488",
+          "size": 1342
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829-reviews.json",
+          "raw_sha256": "sha256:c7e5b6bef186f4a635b63f3425a52da219354fe9aa54632748c9399599251600",
+          "size": 1027
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4829.json",
+          "raw_sha256": "sha256:7a6ab239791ac3c2b65be27666858feaa88bd31918d65417a1c05dca628caba2",
+          "size": 1018
+        }
+      ],
+      "access_limits": "Public source and the files named by this packet only. Do not use private operator context or outcome labels from another condition.",
+      "treatment_evidence": [
+        {
+          "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/clean-source-faithful-min-modulus-4829/expected-core.json",
+          "raw_sha256": "sha256:feaf8dd36c7bc4361c67af09bea9af7f20051ee2f933d4234ffda5715be91f52",
+          "size": 13206
+        },
+        {
+          "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/clean-source-faithful-min-modulus-4829/expected-observation.json",
+          "raw_sha256": "sha256:51e8597d930a90ae23f4379dd7ca67d23b173fe36f8b7874b2eb436aeb968c28",
+          "size": 5153
+        }
+      ],
+      "does_not_establish": [
+        "The packet label does not reveal the expected fixture outcome to the participant.",
+        "A review answer is not a Formal Conjectures maintainer action or Vela Decision."
+      ],
+      "packet_root": "sha256:57d3fb334b9dc03a80b50f89fda9377aa7c2fa0c563573a532cc260a97317caa"
+    },
+    {
+      "schema": "vela.math.fc-audit.condition-packet.v0.1",
+      "packet_id": "conditional-erdos-427-4884::plain-git-and-current-review-artifacts",
+      "condition": "plain-git-and-current-review-artifacts",
+      "authority_effect": "none",
+      "fixture_id": "conditional-erdos-427-4884",
+      "task_wording": [
+        {
+          "id": "locate-evidence",
+          "prompt": "Locate the exact changed statement, every declared proof artifact, each check result, and the base and head identities. Record missing or ambiguous fields.",
+          "stop_condition": "The participant either records all requested locators or states that a requested item is unavailable."
+        },
+        {
+          "id": "classify-checks",
+          "prompt": "Separate mechanical checks, semantic-fidelity findings, artifact availability, and external community status. Preserve conditions and does-not-establish limits.",
+          "stop_condition": "Every observed result is assigned to one layer without inferring acceptance from pass."
+        },
+        {
+          "id": "review-fidelity",
+          "prompt": "Compare the exact Lean statement with its source and report a witness-backed verdict or an explicit inconclusive result.",
+          "stop_condition": "The participant records CLEAN, ACCEPT WITH NITS, NEEDS REVISION, or an explicit unresolved question, with the source locator and witness rules from the review guide."
+        },
+        {
+          "id": "reproduce-artifact",
+          "prompt": "Follow the retained commands or artifact locator far enough to reproduce or scope the claimed mechanical result. Record unavailable tools or bytes separately from failures.",
+          "stop_condition": "The artifact is reproduced, a retained attestation is scoped, or the attempt ends with fail, error, inconclusive, or unavailable and an exact reason."
+        },
+        {
+          "id": "handoff-continuation",
+          "prompt": "A receiver distinct from the sender continues from the rooted retained condition packet and explains the result, limits, and next unresolved obligation without private operator context.",
+          "stop_condition": "The linked receiver continuation observation gives a correct layer-separated account or identifies the missing provenance that prevents continuation."
+        }
+      ],
+      "pull_request": {
+        "repository": "google-deepmind/formal-conjectures",
+        "number": 4884,
+        "url": "https://github.com/google-deepmind/formal-conjectures/pull/4884",
+        "base_commit": "df1b7937d1d97e6acecb32dfa18b4381fc645c6a",
+        "head_commit": "601aff40d6fa6c3150242144fadba5dbcc24c89c",
+        "changed_paths": [
+          "FormalConjectures/ErdosProblems/427.lean"
+        ],
+        "files_observation": {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884-files-observation.json",
+          "sha256": "cb2a89fcdfe8526e9614ef758e3c11a35e66671cd154a1ab53fef2071f5e1d4c"
+        }
+      },
+      "source_repository_url": "https://github.com/google-deepmind/formal-conjectures.git",
+      "source_setup_commands": [
+        [
+          "git",
+          "clone",
+          "--filter=blob:none",
+          "https://github.com/google-deepmind/formal-conjectures.git",
+          "$SOURCE_CHECKOUT"
+        ],
+        [
+          "git",
+          "-C",
+          "$SOURCE_CHECKOUT",
+          "checkout",
+          "--detach",
+          "601aff40d6fa6c3150242144fadba5dbcc24c89c"
+        ]
+      ],
+      "public_source_command": [
+        "git",
+        "-C",
+        "$SOURCE_CHECKOUT",
+        "show",
+        "601aff40d6fa6c3150242144fadba5dbcc24c89c:FormalConjectures/ErdosProblems/427.lean"
+      ],
+      "shared_evidence": [
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884-check-observation.json",
+          "raw_sha256": "sha256:845c59342bad2a6460e4ed24fef9e311f1987445f7c0daf4b7dfa5779f29d6a7",
+          "size": 11986
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884-files-observation.json",
+          "raw_sha256": "sha256:cb2a89fcdfe8526e9614ef758e3c11a35e66671cd154a1ab53fef2071f5e1d4c",
+          "size": 2072
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884-reviews.json",
+          "raw_sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "size": 3
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884.json",
+          "raw_sha256": "sha256:81ea8e85a5708c1a63735b9935265a96838e003fec2b20eaa90ed5119e2a7d38",
+          "size": 23414
+        }
+      ],
+      "access_limits": "Public source and the files named by this packet only. Do not use private operator context or outcome labels from another condition.",
+      "treatment_evidence": [],
+      "does_not_establish": [
+        "The packet label does not reveal the expected fixture outcome to the participant.",
+        "A review answer is not a Formal Conjectures maintainer action or Vela Decision."
+      ],
+      "packet_root": "sha256:0e0824641f75166903af3a4642d89f01ecdd0ae0b0a46a9512136e0d2bcf5191"
+    },
+    {
+      "schema": "vela.math.fc-audit.condition-packet.v0.1",
+      "packet_id": "conditional-erdos-427-4884::same-inputs-plus-fc-pr-audit",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "authority_effect": "none",
+      "fixture_id": "conditional-erdos-427-4884",
+      "task_wording": [
+        {
+          "id": "locate-evidence",
+          "prompt": "Locate the exact changed statement, every declared proof artifact, each check result, and the base and head identities. Record missing or ambiguous fields.",
+          "stop_condition": "The participant either records all requested locators or states that a requested item is unavailable."
+        },
+        {
+          "id": "classify-checks",
+          "prompt": "Separate mechanical checks, semantic-fidelity findings, artifact availability, and external community status. Preserve conditions and does-not-establish limits.",
+          "stop_condition": "Every observed result is assigned to one layer without inferring acceptance from pass."
+        },
+        {
+          "id": "review-fidelity",
+          "prompt": "Compare the exact Lean statement with its source and report a witness-backed verdict or an explicit inconclusive result.",
+          "stop_condition": "The participant records CLEAN, ACCEPT WITH NITS, NEEDS REVISION, or an explicit unresolved question, with the source locator and witness rules from the review guide."
+        },
+        {
+          "id": "reproduce-artifact",
+          "prompt": "Follow the retained commands or artifact locator far enough to reproduce or scope the claimed mechanical result. Record unavailable tools or bytes separately from failures.",
+          "stop_condition": "The artifact is reproduced, a retained attestation is scoped, or the attempt ends with fail, error, inconclusive, or unavailable and an exact reason."
+        },
+        {
+          "id": "handoff-continuation",
+          "prompt": "A receiver distinct from the sender continues from the rooted retained condition packet and explains the result, limits, and next unresolved obligation without private operator context.",
+          "stop_condition": "The linked receiver continuation observation gives a correct layer-separated account or identifies the missing provenance that prevents continuation."
+        }
+      ],
+      "pull_request": {
+        "repository": "google-deepmind/formal-conjectures",
+        "number": 4884,
+        "url": "https://github.com/google-deepmind/formal-conjectures/pull/4884",
+        "base_commit": "df1b7937d1d97e6acecb32dfa18b4381fc645c6a",
+        "head_commit": "601aff40d6fa6c3150242144fadba5dbcc24c89c",
+        "changed_paths": [
+          "FormalConjectures/ErdosProblems/427.lean"
+        ],
+        "files_observation": {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884-files-observation.json",
+          "sha256": "cb2a89fcdfe8526e9614ef758e3c11a35e66671cd154a1ab53fef2071f5e1d4c"
+        }
+      },
+      "source_repository_url": "https://github.com/google-deepmind/formal-conjectures.git",
+      "source_setup_commands": [
+        [
+          "git",
+          "clone",
+          "--filter=blob:none",
+          "https://github.com/google-deepmind/formal-conjectures.git",
+          "$SOURCE_CHECKOUT"
+        ],
+        [
+          "git",
+          "-C",
+          "$SOURCE_CHECKOUT",
+          "checkout",
+          "--detach",
+          "601aff40d6fa6c3150242144fadba5dbcc24c89c"
+        ]
+      ],
+      "public_source_command": [
+        "git",
+        "-C",
+        "$SOURCE_CHECKOUT",
+        "show",
+        "601aff40d6fa6c3150242144fadba5dbcc24c89c:FormalConjectures/ErdosProblems/427.lean"
+      ],
+      "shared_evidence": [
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884-check-observation.json",
+          "raw_sha256": "sha256:845c59342bad2a6460e4ed24fef9e311f1987445f7c0daf4b7dfa5779f29d6a7",
+          "size": 11986
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884-files-observation.json",
+          "raw_sha256": "sha256:cb2a89fcdfe8526e9614ef758e3c11a35e66671cd154a1ab53fef2071f5e1d4c",
+          "size": 2072
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884-reviews.json",
+          "raw_sha256": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "size": 3
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4884.json",
+          "raw_sha256": "sha256:81ea8e85a5708c1a63735b9935265a96838e003fec2b20eaa90ed5119e2a7d38",
+          "size": 23414
+        }
+      ],
+      "access_limits": "Public source and the files named by this packet only. Do not use private operator context or outcome labels from another condition.",
+      "treatment_evidence": [
+        {
+          "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/conditional-erdos-427-4884/expected-core.json",
+          "raw_sha256": "sha256:036d381ec4ede898da1d5b4b5ccb3b44e493809dfd971a0f78864db63219dbd5",
+          "size": 8951
+        },
+        {
+          "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/conditional-erdos-427-4884/expected-observation.json",
+          "raw_sha256": "sha256:0ec64c275820e858f917c34ddf2980bceb33c5a6b5252ddc9775a428e89136cb",
+          "size": 5596
+        }
+      ],
+      "does_not_establish": [
+        "The packet label does not reveal the expected fixture outcome to the participant.",
+        "A review answer is not a Formal Conjectures maintainer action or Vela Decision."
+      ],
+      "packet_root": "sha256:511b0fe86e87d6e32f5836e120e29021623347fdbb2fa6ab5655e0595262e23c"
+    },
+    {
+      "schema": "vela.math.fc-audit.condition-packet.v0.1",
+      "packet_id": "fidelity-erdos-887-1237::plain-git-and-current-review-artifacts",
+      "condition": "plain-git-and-current-review-artifacts",
+      "authority_effect": "none",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "task_wording": [
+        {
+          "id": "locate-evidence",
+          "prompt": "Locate the exact changed statement, every declared proof artifact, each check result, and the base and head identities. Record missing or ambiguous fields.",
+          "stop_condition": "The participant either records all requested locators or states that a requested item is unavailable."
+        },
+        {
+          "id": "classify-checks",
+          "prompt": "Separate mechanical checks, semantic-fidelity findings, artifact availability, and external community status. Preserve conditions and does-not-establish limits.",
+          "stop_condition": "Every observed result is assigned to one layer without inferring acceptance from pass."
+        },
+        {
+          "id": "review-fidelity",
+          "prompt": "Compare the exact Lean statement with its source and report a witness-backed verdict or an explicit inconclusive result.",
+          "stop_condition": "The participant records CLEAN, ACCEPT WITH NITS, NEEDS REVISION, or an explicit unresolved question, with the source locator and witness rules from the review guide."
+        },
+        {
+          "id": "reproduce-artifact",
+          "prompt": "Follow the retained commands or artifact locator far enough to reproduce or scope the claimed mechanical result. Record unavailable tools or bytes separately from failures.",
+          "stop_condition": "The artifact is reproduced, a retained attestation is scoped, or the attempt ends with fail, error, inconclusive, or unavailable and an exact reason."
+        },
+        {
+          "id": "handoff-continuation",
+          "prompt": "A receiver distinct from the sender continues from the rooted retained condition packet and explains the result, limits, and next unresolved obligation without private operator context.",
+          "stop_condition": "The linked receiver continuation observation gives a correct layer-separated account or identifies the missing provenance that prevents continuation."
+        }
+      ],
+      "pull_request": {
+        "repository": "google-deepmind/formal-conjectures",
+        "number": 1237,
+        "url": "https://github.com/google-deepmind/formal-conjectures/pull/1237",
+        "base_commit": "a91ab6df34970fdd0fd8c919e693b2ba81fa4fbb",
+        "head_commit": "288608562e684a2f3c97ba0ce960a2649a71370b",
+        "changed_paths": [
+          "FormalConjectures/ErdosProblems/887.lean"
+        ],
+        "files_observation": {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-files-observation.json",
+          "sha256": "d02997a3d60b5020b8a1228bef9a25eb27cc2b44c8e6a436b5c108aceee8c3b1"
+        }
+      },
+      "source_repository_url": "https://github.com/google-deepmind/formal-conjectures.git",
+      "source_setup_commands": [
+        [
+          "git",
+          "clone",
+          "--filter=blob:none",
+          "https://github.com/google-deepmind/formal-conjectures.git",
+          "$SOURCE_CHECKOUT"
+        ],
+        [
+          "git",
+          "-C",
+          "$SOURCE_CHECKOUT",
+          "checkout",
+          "--detach",
+          "288608562e684a2f3c97ba0ce960a2649a71370b"
+        ]
+      ],
+      "public_source_command": [
+        "git",
+        "-C",
+        "$SOURCE_CHECKOUT",
+        "show",
+        "288608562e684a2f3c97ba0ce960a2649a71370b:FormalConjectures/ErdosProblems/887.lean"
+      ],
+      "shared_evidence": [
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-check-observation.json",
+          "raw_sha256": "sha256:10dd0c302437d5783ec93b83b5837e7a683260f5219c7e160ca71fdec38c0966",
+          "size": 2168
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-files-observation.json",
+          "raw_sha256": "sha256:d02997a3d60b5020b8a1228bef9a25eb27cc2b44c8e6a436b5c108aceee8c3b1",
+          "size": 2067
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-reviews.json",
+          "raw_sha256": "sha256:f2f999ea90ef76eb9609c0bb065994069d05c07308dfd331896b7a415fb40b35",
+          "size": 1072
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237.json",
+          "raw_sha256": "sha256:12c713796f946b383945890e613d3a4cf29d32fa1914260d3afaa26622d789a0",
+          "size": 1015
+        }
+      ],
+      "access_limits": "Public source and the files named by this packet only. Do not use private operator context or outcome labels from another condition.",
+      "treatment_evidence": [],
+      "does_not_establish": [
+        "The packet label does not reveal the expected fixture outcome to the participant.",
+        "A review answer is not a Formal Conjectures maintainer action or Vela Decision."
+      ],
+      "packet_root": "sha256:702406f0ae0aaa12a8c31f64aecd19809253af52dc1ac615ec5fca723242dc88"
+    },
+    {
+      "schema": "vela.math.fc-audit.condition-packet.v0.1",
+      "packet_id": "fidelity-erdos-887-1237::same-inputs-plus-fc-pr-audit",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "authority_effect": "none",
+      "fixture_id": "fidelity-erdos-887-1237",
+      "task_wording": [
+        {
+          "id": "locate-evidence",
+          "prompt": "Locate the exact changed statement, every declared proof artifact, each check result, and the base and head identities. Record missing or ambiguous fields.",
+          "stop_condition": "The participant either records all requested locators or states that a requested item is unavailable."
+        },
+        {
+          "id": "classify-checks",
+          "prompt": "Separate mechanical checks, semantic-fidelity findings, artifact availability, and external community status. Preserve conditions and does-not-establish limits.",
+          "stop_condition": "Every observed result is assigned to one layer without inferring acceptance from pass."
+        },
+        {
+          "id": "review-fidelity",
+          "prompt": "Compare the exact Lean statement with its source and report a witness-backed verdict or an explicit inconclusive result.",
+          "stop_condition": "The participant records CLEAN, ACCEPT WITH NITS, NEEDS REVISION, or an explicit unresolved question, with the source locator and witness rules from the review guide."
+        },
+        {
+          "id": "reproduce-artifact",
+          "prompt": "Follow the retained commands or artifact locator far enough to reproduce or scope the claimed mechanical result. Record unavailable tools or bytes separately from failures.",
+          "stop_condition": "The artifact is reproduced, a retained attestation is scoped, or the attempt ends with fail, error, inconclusive, or unavailable and an exact reason."
+        },
+        {
+          "id": "handoff-continuation",
+          "prompt": "A receiver distinct from the sender continues from the rooted retained condition packet and explains the result, limits, and next unresolved obligation without private operator context.",
+          "stop_condition": "The linked receiver continuation observation gives a correct layer-separated account or identifies the missing provenance that prevents continuation."
+        }
+      ],
+      "pull_request": {
+        "repository": "google-deepmind/formal-conjectures",
+        "number": 1237,
+        "url": "https://github.com/google-deepmind/formal-conjectures/pull/1237",
+        "base_commit": "a91ab6df34970fdd0fd8c919e693b2ba81fa4fbb",
+        "head_commit": "288608562e684a2f3c97ba0ce960a2649a71370b",
+        "changed_paths": [
+          "FormalConjectures/ErdosProblems/887.lean"
+        ],
+        "files_observation": {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-files-observation.json",
+          "sha256": "d02997a3d60b5020b8a1228bef9a25eb27cc2b44c8e6a436b5c108aceee8c3b1"
+        }
+      },
+      "source_repository_url": "https://github.com/google-deepmind/formal-conjectures.git",
+      "source_setup_commands": [
+        [
+          "git",
+          "clone",
+          "--filter=blob:none",
+          "https://github.com/google-deepmind/formal-conjectures.git",
+          "$SOURCE_CHECKOUT"
+        ],
+        [
+          "git",
+          "-C",
+          "$SOURCE_CHECKOUT",
+          "checkout",
+          "--detach",
+          "288608562e684a2f3c97ba0ce960a2649a71370b"
+        ]
+      ],
+      "public_source_command": [
+        "git",
+        "-C",
+        "$SOURCE_CHECKOUT",
+        "show",
+        "288608562e684a2f3c97ba0ce960a2649a71370b:FormalConjectures/ErdosProblems/887.lean"
+      ],
+      "shared_evidence": [
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-check-observation.json",
+          "raw_sha256": "sha256:10dd0c302437d5783ec93b83b5837e7a683260f5219c7e160ca71fdec38c0966",
+          "size": 2168
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-files-observation.json",
+          "raw_sha256": "sha256:d02997a3d60b5020b8a1228bef9a25eb27cc2b44c8e6a436b5c108aceee8c3b1",
+          "size": 2067
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237-reviews.json",
+          "raw_sha256": "sha256:f2f999ea90ef76eb9609c0bb065994069d05c07308dfd331896b7a415fb40b35",
+          "size": 1072
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-1237.json",
+          "raw_sha256": "sha256:12c713796f946b383945890e613d3a4cf29d32fa1914260d3afaa26622d789a0",
+          "size": 1015
+        }
+      ],
+      "access_limits": "Public source and the files named by this packet only. Do not use private operator context or outcome labels from another condition.",
+      "treatment_evidence": [
+        {
+          "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/fidelity-erdos-887-1237/expected-core.json",
+          "raw_sha256": "sha256:f5ab5dc0d3721b067fcdf46ea3664b12101b7999a484a09dc0ecd8accf4b34ae",
+          "size": 11548
+        },
+        {
+          "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/fidelity-erdos-887-1237/expected-observation.json",
+          "raw_sha256": "sha256:2e380f07fddeb54c64bf33120930cdcfdddf8dbdd54e243258a6d25e90e2dc63",
+          "size": 7898
+        }
+      ],
+      "does_not_establish": [
+        "The packet label does not reveal the expected fixture outcome to the participant.",
+        "A review answer is not a Formal Conjectures maintainer action or Vela Decision."
+      ],
+      "packet_root": "sha256:4eec2a078dd0056133412b561e3b7dfc3411fb8b8494615a42d67eee61748cfc"
+    },
+    {
+      "schema": "vela.math.fc-audit.condition-packet.v0.1",
+      "packet_id": "vacuity-erdos-80-4830::plain-git-and-current-review-artifacts",
+      "condition": "plain-git-and-current-review-artifacts",
+      "authority_effect": "none",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "task_wording": [
+        {
+          "id": "locate-evidence",
+          "prompt": "Locate the exact changed statement, every declared proof artifact, each check result, and the base and head identities. Record missing or ambiguous fields.",
+          "stop_condition": "The participant either records all requested locators or states that a requested item is unavailable."
+        },
+        {
+          "id": "classify-checks",
+          "prompt": "Separate mechanical checks, semantic-fidelity findings, artifact availability, and external community status. Preserve conditions and does-not-establish limits.",
+          "stop_condition": "Every observed result is assigned to one layer without inferring acceptance from pass."
+        },
+        {
+          "id": "review-fidelity",
+          "prompt": "Compare the exact Lean statement with its source and report a witness-backed verdict or an explicit inconclusive result.",
+          "stop_condition": "The participant records CLEAN, ACCEPT WITH NITS, NEEDS REVISION, or an explicit unresolved question, with the source locator and witness rules from the review guide."
+        },
+        {
+          "id": "reproduce-artifact",
+          "prompt": "Follow the retained commands or artifact locator far enough to reproduce or scope the claimed mechanical result. Record unavailable tools or bytes separately from failures.",
+          "stop_condition": "The artifact is reproduced, a retained attestation is scoped, or the attempt ends with fail, error, inconclusive, or unavailable and an exact reason."
+        },
+        {
+          "id": "handoff-continuation",
+          "prompt": "A receiver distinct from the sender continues from the rooted retained condition packet and explains the result, limits, and next unresolved obligation without private operator context.",
+          "stop_condition": "The linked receiver continuation observation gives a correct layer-separated account or identifies the missing provenance that prevents continuation."
+        }
+      ],
+      "pull_request": {
+        "repository": "google-deepmind/formal-conjectures",
+        "number": 4830,
+        "url": "https://github.com/google-deepmind/formal-conjectures/pull/4830",
+        "base_commit": "5fe1f74ad497d950e4c2094879ab10708907f7c6",
+        "head_commit": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+        "changed_paths": [
+          "FormalConjectures/ErdosProblems/80.lean"
+        ],
+        "files_observation": {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-files-observation.json",
+          "sha256": "4ab3f09e0ee75a0640b896b55d21b3bbb760988c39a74bd5bdf0cb096bc767d4"
+        }
+      },
+      "source_repository_url": "https://github.com/google-deepmind/formal-conjectures.git",
+      "source_setup_commands": [
+        [
+          "git",
+          "clone",
+          "--filter=blob:none",
+          "https://github.com/google-deepmind/formal-conjectures.git",
+          "$SOURCE_CHECKOUT"
+        ],
+        [
+          "git",
+          "-C",
+          "$SOURCE_CHECKOUT",
+          "checkout",
+          "--detach",
+          "e2e2a6064b474781d3b5b4a32e3d77956d6968da"
+        ]
+      ],
+      "public_source_command": [
+        "git",
+        "-C",
+        "$SOURCE_CHECKOUT",
+        "show",
+        "e2e2a6064b474781d3b5b4a32e3d77956d6968da:FormalConjectures/ErdosProblems/80.lean"
+      ],
+      "shared_evidence": [
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-check-observation.json",
+          "raw_sha256": "sha256:588efba02429ba63f3a05ceb39d50138168c1c469648d683c9e4ce362da091ff",
+          "size": 11186
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-files-observation.json",
+          "raw_sha256": "sha256:4ab3f09e0ee75a0640b896b55d21b3bbb760988c39a74bd5bdf0cb096bc767d4",
+          "size": 2066
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-reviews.json",
+          "raw_sha256": "sha256:9085fe9ef545c194c111dd0fd696cfc439c31d3959e1ef524d5df0a49e6c0e9b",
+          "size": 3946
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830.json",
+          "raw_sha256": "sha256:afff0df49c5e1a8e5344f362b187b4bee1bc5e42fa3233ced2d3368550811e27",
+          "size": 23226
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4877-reviews.json",
+          "raw_sha256": "sha256:681082770e00ff80ff7243e79144d0eade4d1a386e6a2c4e3502678f8f67a420",
+          "size": 1917
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4877.json",
+          "raw_sha256": "sha256:2746db611a8a455dadbac8aaa4ed4d028b88204f4316002ef0038c100c24e6a8",
+          "size": 22221
+        }
+      ],
+      "access_limits": "Public source and the files named by this packet only. Do not use private operator context or outcome labels from another condition.",
+      "treatment_evidence": [],
+      "does_not_establish": [
+        "The packet label does not reveal the expected fixture outcome to the participant.",
+        "A review answer is not a Formal Conjectures maintainer action or Vela Decision."
+      ],
+      "packet_root": "sha256:5f06c38559fcbf3378720de3b4fefc7795527e61066c31fae5147f4622b7dad0"
+    },
+    {
+      "schema": "vela.math.fc-audit.condition-packet.v0.1",
+      "packet_id": "vacuity-erdos-80-4830::same-inputs-plus-fc-pr-audit",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "authority_effect": "none",
+      "fixture_id": "vacuity-erdos-80-4830",
+      "task_wording": [
+        {
+          "id": "locate-evidence",
+          "prompt": "Locate the exact changed statement, every declared proof artifact, each check result, and the base and head identities. Record missing or ambiguous fields.",
+          "stop_condition": "The participant either records all requested locators or states that a requested item is unavailable."
+        },
+        {
+          "id": "classify-checks",
+          "prompt": "Separate mechanical checks, semantic-fidelity findings, artifact availability, and external community status. Preserve conditions and does-not-establish limits.",
+          "stop_condition": "Every observed result is assigned to one layer without inferring acceptance from pass."
+        },
+        {
+          "id": "review-fidelity",
+          "prompt": "Compare the exact Lean statement with its source and report a witness-backed verdict or an explicit inconclusive result.",
+          "stop_condition": "The participant records CLEAN, ACCEPT WITH NITS, NEEDS REVISION, or an explicit unresolved question, with the source locator and witness rules from the review guide."
+        },
+        {
+          "id": "reproduce-artifact",
+          "prompt": "Follow the retained commands or artifact locator far enough to reproduce or scope the claimed mechanical result. Record unavailable tools or bytes separately from failures.",
+          "stop_condition": "The artifact is reproduced, a retained attestation is scoped, or the attempt ends with fail, error, inconclusive, or unavailable and an exact reason."
+        },
+        {
+          "id": "handoff-continuation",
+          "prompt": "A receiver distinct from the sender continues from the rooted retained condition packet and explains the result, limits, and next unresolved obligation without private operator context.",
+          "stop_condition": "The linked receiver continuation observation gives a correct layer-separated account or identifies the missing provenance that prevents continuation."
+        }
+      ],
+      "pull_request": {
+        "repository": "google-deepmind/formal-conjectures",
+        "number": 4830,
+        "url": "https://github.com/google-deepmind/formal-conjectures/pull/4830",
+        "base_commit": "5fe1f74ad497d950e4c2094879ab10708907f7c6",
+        "head_commit": "e2e2a6064b474781d3b5b4a32e3d77956d6968da",
+        "changed_paths": [
+          "FormalConjectures/ErdosProblems/80.lean"
+        ],
+        "files_observation": {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-files-observation.json",
+          "sha256": "4ab3f09e0ee75a0640b896b55d21b3bbb760988c39a74bd5bdf0cb096bc767d4"
+        }
+      },
+      "source_repository_url": "https://github.com/google-deepmind/formal-conjectures.git",
+      "source_setup_commands": [
+        [
+          "git",
+          "clone",
+          "--filter=blob:none",
+          "https://github.com/google-deepmind/formal-conjectures.git",
+          "$SOURCE_CHECKOUT"
+        ],
+        [
+          "git",
+          "-C",
+          "$SOURCE_CHECKOUT",
+          "checkout",
+          "--detach",
+          "e2e2a6064b474781d3b5b4a32e3d77956d6968da"
+        ]
+      ],
+      "public_source_command": [
+        "git",
+        "-C",
+        "$SOURCE_CHECKOUT",
+        "show",
+        "e2e2a6064b474781d3b5b4a32e3d77956d6968da:FormalConjectures/ErdosProblems/80.lean"
+      ],
+      "shared_evidence": [
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-check-observation.json",
+          "raw_sha256": "sha256:588efba02429ba63f3a05ceb39d50138168c1c469648d683c9e4ce362da091ff",
+          "size": 11186
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-files-observation.json",
+          "raw_sha256": "sha256:4ab3f09e0ee75a0640b896b55d21b3bbb760988c39a74bd5bdf0cb096bc767d4",
+          "size": 2066
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830-reviews.json",
+          "raw_sha256": "sha256:9085fe9ef545c194c111dd0fd696cfc439c31d3959e1ef524d5df0a49e6c0e9b",
+          "size": 3946
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4830.json",
+          "raw_sha256": "sha256:afff0df49c5e1a8e5344f362b187b4bee1bc5e42fa3233ced2d3368550811e27",
+          "size": 23226
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4877-reviews.json",
+          "raw_sha256": "sha256:681082770e00ff80ff7243e79144d0eade4d1a386e6a2c4e3502678f8f67a420",
+          "size": 1917
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-4877.json",
+          "raw_sha256": "sha256:2746db611a8a455dadbac8aaa4ed4d028b88204f4316002ef0038c100c24e6a8",
+          "size": 22221
+        }
+      ],
+      "access_limits": "Public source and the files named by this packet only. Do not use private operator context or outcome labels from another condition.",
+      "treatment_evidence": [
+        {
+          "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/vacuity-erdos-80-4830/expected-core.json",
+          "raw_sha256": "sha256:da600a4bfb45749018a04d99592bc0a678da0f73dcdacd5705e5407d4998f233",
+          "size": 7663
+        },
+        {
+          "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/vacuity-erdos-80-4830/expected-observation.json",
+          "raw_sha256": "sha256:8588ef0cd07a45e5b96723f932cab77104276c648323f5f25636875f4dce17c4",
+          "size": 5916
+        }
+      ],
+      "does_not_establish": [
+        "The packet label does not reveal the expected fixture outcome to the participant.",
+        "A review answer is not a Formal Conjectures maintainer action or Vela Decision."
+      ],
+      "packet_root": "sha256:c6d59ef8a0d4bc7dfcca0315aeca0cc72eab03f2d82f796028e9bf2ba92c46cd"
+    },
+    {
+      "schema": "vela.math.fc-audit.condition-packet.v0.1",
+      "packet_id": "unavailable-rupert-3959::plain-git-and-current-review-artifacts",
+      "condition": "plain-git-and-current-review-artifacts",
+      "authority_effect": "none",
+      "fixture_id": "unavailable-rupert-3959",
+      "task_wording": [
+        {
+          "id": "locate-evidence",
+          "prompt": "Locate the exact changed statement, every declared proof artifact, each check result, and the base and head identities. Record missing or ambiguous fields.",
+          "stop_condition": "The participant either records all requested locators or states that a requested item is unavailable."
+        },
+        {
+          "id": "classify-checks",
+          "prompt": "Separate mechanical checks, semantic-fidelity findings, artifact availability, and external community status. Preserve conditions and does-not-establish limits.",
+          "stop_condition": "Every observed result is assigned to one layer without inferring acceptance from pass."
+        },
+        {
+          "id": "review-fidelity",
+          "prompt": "Compare the exact Lean statement with its source and report a witness-backed verdict or an explicit inconclusive result.",
+          "stop_condition": "The participant records CLEAN, ACCEPT WITH NITS, NEEDS REVISION, or an explicit unresolved question, with the source locator and witness rules from the review guide."
+        },
+        {
+          "id": "reproduce-artifact",
+          "prompt": "Follow the retained commands or artifact locator far enough to reproduce or scope the claimed mechanical result. Record unavailable tools or bytes separately from failures.",
+          "stop_condition": "The artifact is reproduced, a retained attestation is scoped, or the attempt ends with fail, error, inconclusive, or unavailable and an exact reason."
+        },
+        {
+          "id": "handoff-continuation",
+          "prompt": "A receiver distinct from the sender continues from the rooted retained condition packet and explains the result, limits, and next unresolved obligation without private operator context.",
+          "stop_condition": "The linked receiver continuation observation gives a correct layer-separated account or identifies the missing provenance that prevents continuation."
+        }
+      ],
+      "pull_request": {
+        "repository": "google-deepmind/formal-conjectures",
+        "number": 3959,
+        "url": "https://github.com/google-deepmind/formal-conjectures/pull/3959",
+        "base_commit": "99ae49df4b27d9d95877c562ab9e1fd9b7ff1dc7",
+        "head_commit": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+        "changed_paths": [
+          "FormalConjectures/Paper/Rupert.lean"
+        ],
+        "files_observation": {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-files-observation.json",
+          "sha256": "fea9a92118bae6a7771bf9786a28c47a7b66b12027d85f0f4e9e2ec8c1ad89ad"
+        }
+      },
+      "source_repository_url": "https://github.com/google-deepmind/formal-conjectures.git",
+      "source_setup_commands": [
+        [
+          "git",
+          "clone",
+          "--filter=blob:none",
+          "https://github.com/google-deepmind/formal-conjectures.git",
+          "$SOURCE_CHECKOUT"
+        ],
+        [
+          "git",
+          "-C",
+          "$SOURCE_CHECKOUT",
+          "checkout",
+          "--detach",
+          "868cc092aeb713dbf8027883c5fa575e550cfae9"
+        ]
+      ],
+      "public_source_command": [
+        "git",
+        "-C",
+        "$SOURCE_CHECKOUT",
+        "show",
+        "868cc092aeb713dbf8027883c5fa575e550cfae9:FormalConjectures/Paper/Rupert.lean"
+      ],
+      "shared_evidence": [
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-check-observation.json",
+          "raw_sha256": "sha256:0cfe2324cd131989b9ce7c6fbd4a1dc68665859419a99fd6ae2a5f64b0dd429a",
+          "size": 2194
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-files-observation.json",
+          "raw_sha256": "sha256:fea9a92118bae6a7771bf9786a28c47a7b66b12027d85f0f4e9e2ec8c1ad89ad",
+          "size": 2049
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-reviews.json",
+          "raw_sha256": "sha256:fb8340680f4d51347773f8ba8d0624697b39f9e9cd39730608e6074ff0cdc84d",
+          "size": 1520
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959.json",
+          "raw_sha256": "sha256:93ca95fbe74b4a30294c8687b00b15791f1de0e2ce622a680c7436bbf238b5da",
+          "size": 1304
+        }
+      ],
+      "access_limits": "Public source and the files named by this packet only. Do not use private operator context or outcome labels from another condition.",
+      "treatment_evidence": [],
+      "does_not_establish": [
+        "The packet label does not reveal the expected fixture outcome to the participant.",
+        "A review answer is not a Formal Conjectures maintainer action or Vela Decision."
+      ],
+      "packet_root": "sha256:d40a3055e847bdad2a040402ac042ce5b1a108bc5f2c5e1f17ec5633cb9d6b4a"
+    },
+    {
+      "schema": "vela.math.fc-audit.condition-packet.v0.1",
+      "packet_id": "unavailable-rupert-3959::same-inputs-plus-fc-pr-audit",
+      "condition": "same-inputs-plus-fc-pr-audit",
+      "authority_effect": "none",
+      "fixture_id": "unavailable-rupert-3959",
+      "task_wording": [
+        {
+          "id": "locate-evidence",
+          "prompt": "Locate the exact changed statement, every declared proof artifact, each check result, and the base and head identities. Record missing or ambiguous fields.",
+          "stop_condition": "The participant either records all requested locators or states that a requested item is unavailable."
+        },
+        {
+          "id": "classify-checks",
+          "prompt": "Separate mechanical checks, semantic-fidelity findings, artifact availability, and external community status. Preserve conditions and does-not-establish limits.",
+          "stop_condition": "Every observed result is assigned to one layer without inferring acceptance from pass."
+        },
+        {
+          "id": "review-fidelity",
+          "prompt": "Compare the exact Lean statement with its source and report a witness-backed verdict or an explicit inconclusive result.",
+          "stop_condition": "The participant records CLEAN, ACCEPT WITH NITS, NEEDS REVISION, or an explicit unresolved question, with the source locator and witness rules from the review guide."
+        },
+        {
+          "id": "reproduce-artifact",
+          "prompt": "Follow the retained commands or artifact locator far enough to reproduce or scope the claimed mechanical result. Record unavailable tools or bytes separately from failures.",
+          "stop_condition": "The artifact is reproduced, a retained attestation is scoped, or the attempt ends with fail, error, inconclusive, or unavailable and an exact reason."
+        },
+        {
+          "id": "handoff-continuation",
+          "prompt": "A receiver distinct from the sender continues from the rooted retained condition packet and explains the result, limits, and next unresolved obligation without private operator context.",
+          "stop_condition": "The linked receiver continuation observation gives a correct layer-separated account or identifies the missing provenance that prevents continuation."
+        }
+      ],
+      "pull_request": {
+        "repository": "google-deepmind/formal-conjectures",
+        "number": 3959,
+        "url": "https://github.com/google-deepmind/formal-conjectures/pull/3959",
+        "base_commit": "99ae49df4b27d9d95877c562ab9e1fd9b7ff1dc7",
+        "head_commit": "868cc092aeb713dbf8027883c5fa575e550cfae9",
+        "changed_paths": [
+          "FormalConjectures/Paper/Rupert.lean"
+        ],
+        "files_observation": {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-files-observation.json",
+          "sha256": "fea9a92118bae6a7771bf9786a28c47a7b66b12027d85f0f4e9e2ec8c1ad89ad"
+        }
+      },
+      "source_repository_url": "https://github.com/google-deepmind/formal-conjectures.git",
+      "source_setup_commands": [
+        [
+          "git",
+          "clone",
+          "--filter=blob:none",
+          "https://github.com/google-deepmind/formal-conjectures.git",
+          "$SOURCE_CHECKOUT"
+        ],
+        [
+          "git",
+          "-C",
+          "$SOURCE_CHECKOUT",
+          "checkout",
+          "--detach",
+          "868cc092aeb713dbf8027883c5fa575e550cfae9"
+        ]
+      ],
+      "public_source_command": [
+        "git",
+        "-C",
+        "$SOURCE_CHECKOUT",
+        "show",
+        "868cc092aeb713dbf8027883c5fa575e550cfae9:FormalConjectures/Paper/Rupert.lean"
+      ],
+      "shared_evidence": [
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-check-observation.json",
+          "raw_sha256": "sha256:0cfe2324cd131989b9ce7c6fbd4a1dc68665859419a99fd6ae2a5f64b0dd429a",
+          "size": 2194
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-files-observation.json",
+          "raw_sha256": "sha256:fea9a92118bae6a7771bf9786a28c47a7b66b12027d85f0f4e9e2ec8c1ad89ad",
+          "size": 2049
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959-reviews.json",
+          "raw_sha256": "sha256:fb8340680f4d51347773f8ba8d0624697b39f9e9cd39730608e6074ff0cdc84d",
+          "size": 1520
+        },
+        {
+          "path": "evidence/formal-conjectures/audit-pilot/source-snapshots/github-pr-3959.json",
+          "raw_sha256": "sha256:93ca95fbe74b4a30294c8687b00b15791f1de0e2ce622a680c7436bbf238b5da",
+          "size": 1304
+        }
+      ],
+      "access_limits": "Public source and the files named by this packet only. Do not use private operator context or outcome labels from another condition.",
+      "treatment_evidence": [
+        {
+          "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/unavailable-rupert-3959/expected-core.json",
+          "raw_sha256": "sha256:73c2b98ae0def8759b2948eb928d4c8412e67ab5541085149568c6b56c7c4f73",
+          "size": 19168
+        },
+        {
+          "path": "evidence/formal-conjectures/source-adapter/retained-source/audit/pr-audit-v1/fixtures/unavailable-rupert-3959/expected-observation.json",
+          "raw_sha256": "sha256:aecc170adba2ff0dc964ee4d0e165b91a5d36f2048290666f720b6c3054c44c8",
+          "size": 6921
+        }
+      ],
+      "does_not_establish": [
+        "The packet label does not reveal the expected fixture outcome to the participant.",
+        "A review answer is not a Formal Conjectures maintainer action or Vela Decision."
+      ],
+      "packet_root": "sha256:7ccb511a6683d5aec9142eb5c7ccbdc02e8e5ba3ada26f50f330a81df7935bc6"
+    }
+  ],
+  "matching_rule": "Each control and treatment pair has the same source identity, shared evidence, task wording, and access limits. Treatment adds only the two retained audit records.",
+  "delivery_rule": "The operator copies one assigned packet object into an isolated participant file and verifies its packet_root before disclosure. Participants do not receive this set, fixture selection, ground truth, or the other condition.",
+  "does_not_establish": [
+    "That any packet has been disclosed or assigned to a participant.",
+    "That the audit improves review or handoff."
+  ],
+  "packet_set_root": "sha256:709da24b77e18da5d897da71a2b526414c629287fb90c33911d642500bb2b753"
+}

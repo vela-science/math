@@ -20,6 +20,22 @@ Formal Conjectures audit generator and does not create Vela scientific state.
 - `phase-0-baseline-observations.v0.1.json` is an intentionally empty result
   scaffold. Empty means measurements have not been collected; it does not mean
   zero time or zero defects.
+- `collection-materials.v0.1.json` freezes the consent text, custody plan,
+  allocation-receipt format, and session-opening checks without naming or
+  contacting a participant.
+- `condition-packet-set.v0.1.json` freezes five matched control/treatment pairs.
+  Each pair has the same source, task wording, public evidence, and access
+  limits; treatment adds only the retained core and observation audit records.
+- `collection-readiness.v0.1.json` records those materials as complete while
+  leaving collection closed. A human custodian, recruited and consented
+  participants, activated private custody, and an instantiated outcome-blind
+  allocation receipt remain required.
+
+Current roots:
+
+- collection materials: `sha256:7687a7ee455883a812b1079ca6e2e0d1ffe7fb2f369095f80507eefc039287a1`;
+- ten-packet matched set: `sha256:709da24b77e18da5d897da71a2b526414c629287fb90c33911d642500bb2b753`;
+- closed readiness record: `sha256:929274a55840910ad66a869e115dc6bd765a35205ae524fb71c6f3417f3b1cda`.
 - `source-snapshots/` retains normalized GitHub pull-request, review, Check
   Runs, and legacy commit-status API observations acquired on August 12, 2026.
   Normalized evidence is a selected, sorted representation of primary API

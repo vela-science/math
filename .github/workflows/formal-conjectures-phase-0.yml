@@ -39,6 +39,8 @@ jobs:
         run: |
           set -euo pipefail
           python3 -B evidence/formal-conjectures/audit-pilot/test_phase_0.py
+          python3 -B evidence/formal-conjectures/audit-pilot/build_collection_readiness.py --check
+          python3 -B evidence/formal-conjectures/audit-pilot/test_collection_readiness.py
           python3 -B evidence/formal-conjectures/conformance/test_do_not_collapse.py
           python3 -B methods/source-adapters/test_conformance.py
           python3 -B evidence/formal-conjectures/source-adapter/test_adapter.py

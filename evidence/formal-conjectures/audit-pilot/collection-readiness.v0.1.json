@@ -1,0 +1,53 @@
+{
+  "schema": "vela.math.fc-audit.collection-readiness.v0.1",
+  "status": "materials_frozen_collection_blocked_on_people_and_custody_activation",
+  "authority_effect": "none",
+  "design": {
+    "path": "evidence/formal-conjectures/audit-pilot/precollection-design.v0.1.json",
+    "raw_sha256": "sha256:ecd56585a9f16d0ac9e129433f5c9935b1a37be5ecf6efb2a01e7896b4b4ce21",
+    "size": 14047
+  },
+  "fixture_selection": {
+    "path": "evidence/formal-conjectures/audit-pilot/phase-0-fixture-selection.v0.1.json",
+    "raw_sha256": "sha256:cdfeb8a6d60dcddb933e6b66c32f29f3eee79aa138f671d8cd73484bdbb635d3",
+    "size": 25145
+  },
+  "materials": {
+    "path": "evidence/formal-conjectures/audit-pilot/collection-materials.v0.1.json",
+    "raw_sha256": "sha256:debd4bc50ddef870bd5d67da35739e6d19749783e4d45c7fb44b0af450b4dc43",
+    "root": "sha256:7687a7ee455883a812b1079ca6e2e0d1ffe7fb2f369095f80507eefc039287a1",
+    "schema": "vela.math.fc-audit.collection-materials.v0.1",
+    "size": 6613
+  },
+  "condition_packets": {
+    "path": "evidence/formal-conjectures/audit-pilot/condition-packet-set.v0.1.json",
+    "raw_sha256": "sha256:2da7d57fa59ef7099845b92151e30f6b7c2473ac1d0e06a9c7d6ecf3c49c9d49",
+    "root": "sha256:709da24b77e18da5d897da71a2b526414c629287fb90c33911d642500bb2b753",
+    "schema": "vela.math.fc-audit.condition-packet-set.v0.1",
+    "size": 57954
+  },
+  "gates": {
+    "ground_truth_complete": true,
+    "consent_materials_frozen": true,
+    "condition_packets_frozen": true,
+    "allocation_receipt_format_frozen": true,
+    "private_custody_plan_frozen": true,
+    "human_custodian_assigned": false,
+    "participants_recruited": false,
+    "participants_consented": false,
+    "allocation_receipt_instantiated": false,
+    "private_custody_activated": false,
+    "collection_open": false
+  },
+  "current_blockers": [
+    "The program owner has not named a human study custodian or activated encrypted private custody.",
+    "No participant has been recruited, contacted, consented, or enrolled.",
+    "No participant-specific pseudonyms or dyads exist, so the allocation receipt cannot be instantiated."
+  ],
+  "opening_rule": "A later rooted readiness record may open collection only after every false gate becomes true without changing the frozen design, materials, or packet-set roots.",
+  "does_not_establish": [
+    "Authorization to recruit, contact, enroll, or collect data from any person.",
+    "Any observation, result, effect estimate, interface disposition, or scientific authority action."
+  ],
+  "readiness_root": "sha256:929274a55840910ad66a869e115dc6bd765a35205ae524fb71c6f3417f3b1cda"
+}
