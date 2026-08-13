@@ -1,7 +1,7 @@
 {
   "schema": "vela.math.fc-audit.evaluation-method.v0.1",
   "method_id": "fc-audit-paired-review-baseline-v0.1",
-  "status": "protocol_design_incomplete_results_not_collected",
+  "status": "protocol_design_complete_collection_blocked_on_human_prerequisites",
   "authority_effect": "none",
   "question": "For the same frozen Formal Conjectures pull-request bytes, does the per-PR audit record reduce evidence-location, review, continuation, and reproduction effort without hiding semantic defects or crossing an authority boundary?",
   "evaluation_units": {
@@ -23,9 +23,15 @@
     "unfulfilled_target_role": "clean_source_faithful",
     "ground_truth_completion_rule": "The selected control candidate does not fulfill clean_source_faithful until a witness-backed exact-head human review is retained. Five selected cases are not five completed ground-truth fixtures."
   },
+  "precollection_design": {
+    "path": "evidence/formal-conjectures/audit-pilot/precollection-design.v0.1.json",
+    "sha256": "c6a64c39c660046507a5befbf74fbd737ad29755b6f4d16a93e8b56d903bac1d",
+    "schema": "vela.math.fc-audit.precollection-design.v0.1",
+    "design_id": "fc-audit-human-pilot-v0.1"
+  },
   "hypothesis_plan": {
-    "registration_status": "planned_not_fully_preregistered",
-    "claim_gate": "H2 and H5 are the planned Phase 0 primary hypotheses, but no support, rejection, effect, or uncertainty claim is permitted until the precollection design supplement is frozen and root-bound to this method.",
+    "registration_status": "precollection_design_frozen_results_not_collected",
+    "claim_gate": "H2 and H5 are the Phase 0 primary hypotheses under the exact rooted precollection design. No support, rejection, effect, or uncertainty claim is permitted until the ground-truth, consent, recruitment, allocation, collection, and analysis gates in that design are satisfied.",
     "primary_phase_0": [
       {
         "id": "H2_verification_efficiency",
@@ -105,7 +111,11 @@
     "order_rule": "Counterbalance condition order across participants or cases. Record order and prior exposure; do not compare a naive first attempt with a fully familiar second attempt without labeling the carryover limit."
   },
   "precollection_design_gate": {
-    "status": "incomplete_blocking_inference",
+    "status": "complete_collection_blocked_on_human_prerequisites",
+    "supplement": {
+      "path": "evidence/formal-conjectures/audit-pilot/precollection-design.v0.1.json",
+      "sha256": "c6a64c39c660046507a5befbf74fbd737ad29755b6f4d16a93e8b56d903bac1d"
+    },
     "required_rooted_supplement_fields": [
       "target_sample_and_recruitment_frame",
       "participant_and_session_eligibility",
@@ -118,13 +128,13 @@
       "claim_thresholds_and_multiplicity_rule",
       "deviation_and_amendment_policy"
     ],
-    "current_gaps": [
-      "No target participant or handoff-pair sample is selected.",
-      "No eligibility, allocation, or concrete counterbalance schedule is frozen.",
-      "No stopping rule, estimator, uncertainty method, or claim threshold is frozen."
+    "current_external_prerequisites": [
+      "The clean-control candidate still lacks witness-backed exact-head independent human ground truth.",
+      "No participant has been recruited or consented.",
+      "No collection-readiness record has frozen the participant condition packets, allocation receipt, or private-custody plan."
     ],
-    "collection_rule": "Do not collect inferential H2 or H5 observations until the supplement is frozen before exposure to outcome data. A same-operator rehearsal may test instrumentation only and must remain descriptively labeled.",
-    "claim_rule": "Until the supplement is frozen and bound by exact SHA-256, report only design status and instrumentation results; do not claim H2 or H5 support, rejection, effect size, uncertainty, evaluation success, or interface disposition from outcomes."
+    "collection_rule": "Do not collect inferential H2 or H5 observations until a new rooted collection-readiness record proves every supplement opening condition. A same-operator rehearsal may test instrumentation only and must remain descriptively labeled.",
+    "claim_rule": "The frozen design removes the internal protocol-design blocker. It does not permit H2 or H5 support, rejection, effect-size, uncertainty, evaluation-success, or interface-disposition claims before eligible human observations and the declared analysis are complete."
   },
   "participant_declaration": {
     "review_observation_required_fields": [
@@ -401,13 +411,13 @@
       "id": "baseline",
       "condition": "plain-git-and-current-review-artifacts",
       "required_before": "The participant sees any generated FC audit artifact for that fixture.",
-      "status": "blocked_pending_rooted_precollection_design_supplement"
+      "status": "ready_after_ground_truth_consent_and_collection_readiness"
     },
     {
       "id": "final",
       "condition": "same-inputs-plus-fc-pr-audit",
-      "required_before": "EVAL-01 completion",
-      "status": "blocked_pending_rooted_precollection_design_supplement"
+      "required_before": "The exact treatment packet root and allocation slot are frozen, and every ground-truth, consent, recruitment, and collection-readiness opening condition is met.",
+      "status": "ready_after_ground_truth_consent_and_collection_readiness"
     }
   ],
   "handoff_collection_rule": "After the precollection design gate is satisfied, each H5 comparison requires a rooted sender review observation plus a distinct linked receiver continuation observation and handoff-pair record in each matched condition. A missing or disagreeing record is an incomplete handoff, never zero continuation time.",

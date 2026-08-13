@@ -15,12 +15,17 @@
     {
       "role": "evaluation_method",
       "path": "methods/formal-conjectures/audit-baseline.v0.1.json",
-      "sha256": "2b61c4a4eeba9d34de467ad212aa14b6e9f7a8f29416b91eb69a80806c620bdf"
+      "sha256": "1183b202af320ed9a1cbae018e2b36174f7c5cbe78b840bb89e9faea199c88ae"
+    },
+    {
+      "role": "precollection_design",
+      "path": "evidence/formal-conjectures/audit-pilot/precollection-design.v0.1.json",
+      "sha256": "c6a64c39c660046507a5befbf74fbd737ad29755b6f4d16a93e8b56d903bac1d"
     },
     {
       "role": "observation_scaffold",
       "path": "evidence/formal-conjectures/audit-pilot/phase-0-baseline-observations.v0.1.json",
-      "sha256": "b1c49a08cabb1394651c7b3f43a78bf5f64ef388a849202ebd329ab42634fd22"
+      "sha256": "9f1585a643c1964b1ac0f0cc0bc5f24250b5aaa8aad2e2c8231b8ca5b187f724"
     }
   ],
   "relationships": [
@@ -30,9 +35,24 @@
       "to": "fixture_selection"
     },
     {
+      "from": "evaluation_method",
+      "field": "precollection_design.{path,sha256}",
+      "to": "precollection_design"
+    },
+    {
+      "from": "precollection_design",
+      "field": "fixture_selection.{path,sha256}",
+      "to": "fixture_selection"
+    },
+    {
       "from": "observation_scaffold",
       "field": "method.{path,sha256}",
       "to": "evaluation_method"
+    },
+    {
+      "from": "observation_scaffold",
+      "field": "precollection_design.{path,sha256}",
+      "to": "precollection_design"
     },
     {
       "from": "observation_scaffold",
@@ -157,7 +177,7 @@
   ],
   "invariants": [
     "Every listed SHA-256 is computed over the exact retained file bytes.",
-    "The fixture-selection, evaluation-method, and observation-scaffold path relationships match this manifest exactly.",
+    "The fixture-selection, evaluation-method, precollection-design, and observation-scaffold path relationships match this manifest exactly.",
     "The declared source-snapshot inventory equals the actual source-snapshots JSON inventory exactly; unrooted stale evidence is forbidden.",
     "Every mechanical pass assertion resolves to one retained exact-head GitHub Build project Check Run whose status is completed and conclusion is success.",
     "Semantic witnesses bind exact fixture-head source blobs; evidence from a different source revision cannot satisfy the fixture.",
@@ -165,6 +185,7 @@
   ],
   "does_not_establish": [
     "That measurements have been collected.",
+    "That participants have been recruited, consented, allocated, or contacted.",
     "That the clean_source_faithful target role or FC-03 exit is complete.",
     "Any Vela Verification, Decision, Event, or Standing."
   ]

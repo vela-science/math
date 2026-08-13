@@ -11,6 +11,13 @@ Formal Conjectures audit generator and does not create Vela scientific state.
   source-grounded classifications; the clean control remains a candidate
   pending exact-head human review, so the five-fixture ground-truth exit is not
   met.
+- `precollection-design.v0.1.json` freezes the bounded human pilot before any
+  outcome collection: twelve participants in six independent handoff dyads,
+  all five fixtures, the balanced condition schedule, eligibility and missing-
+  session rules, fixed stopping, primary estimands, cluster-level uncertainty,
+  support thresholds, and amendment policy. It authorizes no recruitment or
+  contact. Collection remains blocked on complete human ground truth, consent,
+  recruitment, participant packets, allocation receipt, and private custody.
 - `phase-0-baseline-observations.v0.1.json` is an intentionally empty result
   scaffold. Empty means measurements have not been collected; it does not mean
   zero time or zero defects.
@@ -20,18 +27,16 @@ Formal Conjectures audit generator and does not create Vela scientific state.
   fields; it is not described as canonical GitHub response bytes. Its SHA-256
   roots are in the selection record so a later reader does not depend on
   mutable API state or a historical pull-request ref remaining fetchable.
-- `phase-0-packet-manifest.v0.1.json` binds the selection, method, empty
-  observation scaffold, and every retained source observation by exact
-  SHA-256.
+- `phase-0-packet-manifest.v0.1.json` binds the selection, method,
+  precollection design, empty observation scaffold, and every retained source
+  observation by exact SHA-256.
 - `../../../methods/formal-conjectures/audit-baseline.v0.1.json` defines the
   matched control/treatment tasks, planned hypotheses, clocks, ground truth,
-  interface kill criteria, and analysis rules. `H2` and `H5` are the planned
-  Phase 0 primary hypotheses. This is not yet a complete preregistration: the
-  sample, eligibility, allocation, counterbalance schedule, stopping rule,
-  estimator, uncertainty method, and claim thresholds require a rooted
-  precollection supplement. Collection and all H2/H5 support claims are
-  blocked until that supplement is frozen. `H1`, `H3`, and `H6` remain
-  explicitly untested until later pilots.
+  interface kill criteria, and analysis rules. `H2` and `H5` are the Phase 0
+  primary hypotheses. Their precollection design is now frozen and rooted;
+  collection is still blocked by its human ground-truth, consent, recruitment,
+  packet, allocation, and private-custody opening conditions. `H1`, `H3`, and
+  `H6` remain explicitly untested until later pilots.
 
 ## Five selected cases
 

@@ -18,6 +18,7 @@ SOURCE_DIR = HERE / "source-snapshots"
 SELECTION_PATH = HERE / "phase-0-fixture-selection.v0.1.json"
 OBSERVATIONS_PATH = HERE / "phase-0-baseline-observations.v0.1.json"
 MANIFEST_PATH = HERE / "phase-0-packet-manifest.v0.1.json"
+DESIGN_PATH = HERE / "precollection-design.v0.1.json"
 METHOD_PATH = REPO / "methods/formal-conjectures/audit-baseline.v0.1.json"
 EXECUTION_MEMO_SHA256 = (
     "4dfef11f56497fe029204919e810dcfb9d8a9597a767681bd17155c57f1f6fda"
@@ -129,11 +130,17 @@ def validate_semantic_witness(
 def validate_packet_relationships(
     selection: dict[str, object],
     method: dict[str, object],
+    design: dict[str, object],
     observations: dict[str, object],
     manifest: dict[str, object],
 ) -> None:
     components = {item["role"]: item for item in manifest["components"]}
-    expected_roles = {"fixture_selection", "evaluation_method", "observation_scaffold"}
+    expected_roles = {
+        "fixture_selection",
+        "evaluation_method",
+        "precollection_design",
+        "observation_scaffold",
+    }
     if set(components) != expected_roles:
         raise ValueError("packet component role drift")
     method_selection = method["fixture_selection"]
@@ -147,6 +154,22 @@ def validate_packet_relationships(
         fixture["required_role"] for fixture in selection["fixtures"]
     }:
         raise ValueError("method-to-selection role drift")
+    if method["precollection_design"] != {
+        "path": components["precollection_design"]["path"],
+        "sha256": components["precollection_design"]["sha256"],
+        "schema": design["schema"],
+        "design_id": design["design_id"],
+    }:
+        raise ValueError("method-to-precollection-design relationship drift")
+    if design["fixture_selection"]["path"] != components["fixture_selection"]["path"]:
+        raise ValueError("design-to-selection path drift")
+    if design["fixture_selection"]["sha256"] != components["fixture_selection"]["sha256"]:
+        raise ValueError("design-to-selection root drift")
+    if design["method_contract"] != {
+        "schema": method["schema"],
+        "method_id": method["method_id"],
+    }:
+        raise ValueError("design-to-method contract drift")
     if observations["method"] != {
         "path": components["evaluation_method"]["path"],
         "sha256": components["evaluation_method"]["sha256"],
@@ -157,8 +180,15 @@ def validate_packet_relationships(
         "sha256": components["fixture_selection"]["sha256"],
     }:
         raise ValueError("observation-to-selection relationship drift")
+    if observations["precollection_design"] != {
+        "path": components["precollection_design"]["path"],
+        "sha256": components["precollection_design"]["sha256"],
+    }:
+        raise ValueError("observation-to-precollection-design relationship drift")
     if selection["program_contract"]["sha256"] != manifest["program_contract"]["sha256"]:
         raise ValueError("selection-to-program relationship drift")
+    if design["program_contract"] != manifest["program_contract"]:
+        raise ValueError("design-to-program relationship drift")
     if manifest["retained_source_artifacts"] != selection["retained_source_snapshots"]["artifacts"]:
         raise ValueError("manifest-to-source-artifact relationship drift")
 
@@ -256,11 +286,12 @@ class PhaseZeroPacketTest(unittest.TestCase):
         cls.observations = load_json(OBSERVATIONS_PATH)
         cls.manifest = load_json(MANIFEST_PATH)
         cls.method = load_json(METHOD_PATH)
+        cls.design = load_json(DESIGN_PATH)
 
     def test_json_parser_rejects_duplicate_keys(self) -> None:
         with self.assertRaisesRegex(ValueError, "duplicate JSON key"):
             parse_json('{"result": "pass", "result": "fail"}')
-        for path in [SELECTION_PATH, OBSERVATIONS_PATH, MANIFEST_PATH, METHOD_PATH, *SOURCE_DIR.glob("*.json")]:
+        for path in [SELECTION_PATH, OBSERVATIONS_PATH, MANIFEST_PATH, DESIGN_PATH, METHOD_PATH, *SOURCE_DIR.glob("*.json")]:
             with self.subTest(path=path):
                 load_json(path)
 
@@ -416,7 +447,7 @@ class PhaseZeroPacketTest(unittest.TestCase):
         self.assertNotIn("unavailable-erdos-38-3941", selection_text)
 
     def test_packet_manifest_binds_components_and_relationships(self) -> None:
-        validate_packet_relationships(self.selection, self.method, self.observations, self.manifest)
+        validate_packet_relationships(self.selection, self.method, self.design, self.observations, self.manifest)
         for component in self.manifest["components"]:
             self.assertEqual(component["sha256"], sha256_file(REPO / component["path"]))
 
@@ -424,17 +455,22 @@ class PhaseZeroPacketTest(unittest.TestCase):
         wrong_method = copy.deepcopy(self.method)
         wrong_method["fixture_selection"]["sha256"] = "0" * 64
         with self.assertRaisesRegex(ValueError, "method-to-selection root drift"):
-            validate_packet_relationships(self.selection, wrong_method, self.observations, self.manifest)
+            validate_packet_relationships(self.selection, wrong_method, self.design, self.observations, self.manifest)
+
+        wrong_design = copy.deepcopy(self.design)
+        wrong_design["fixture_selection"]["sha256"] = "0" * 64
+        with self.assertRaisesRegex(ValueError, "design-to-selection root drift"):
+            validate_packet_relationships(self.selection, self.method, wrong_design, self.observations, self.manifest)
 
         wrong_observations = copy.deepcopy(self.observations)
         wrong_observations["method"]["sha256"] = "0" * 64
         with self.assertRaisesRegex(ValueError, "observation-to-method relationship drift"):
-            validate_packet_relationships(self.selection, self.method, wrong_observations, self.manifest)
+            validate_packet_relationships(self.selection, self.method, self.design, wrong_observations, self.manifest)
 
         wrong_selection = copy.deepcopy(self.selection)
         wrong_selection["program_contract"]["sha256"] = "0" * 64
         with self.assertRaisesRegex(ValueError, "selection-to-program relationship drift"):
-            validate_packet_relationships(wrong_selection, self.method, self.observations, self.manifest)
+            validate_packet_relationships(wrong_selection, self.method, self.design, self.observations, self.manifest)
 
     def test_program_contract_binds_final_reviewed_memo_root(self) -> None:
         self.assertEqual(EXECUTION_MEMO_SHA256, self.selection["program_contract"]["sha256"])
@@ -475,16 +511,16 @@ class PhaseZeroPacketTest(unittest.TestCase):
                 self.assertIn("AI packet preparation does not itself supply human ground truth", limits)
                 self.assertIn("Math Repository Decision", limits)
 
-    def test_hypothesis_plan_and_phase_scope_are_explicitly_incomplete(self) -> None:
+    def test_hypothesis_plan_is_frozen_without_inventing_results(self) -> None:
         hypotheses = self.method["hypothesis_plan"]
-        self.assertEqual("planned_not_fully_preregistered", hypotheses["registration_status"])
+        self.assertEqual("precollection_design_frozen_results_not_collected", hypotheses["registration_status"])
         self.assertEqual({"H2_verification_efficiency", "H5_retained_packet_handoff"}, {item["id"] for item in hypotheses["primary_phase_0"]})
         self.assertEqual({"H1_promotion", "H3_correction_propagation", "H6_portability"}, {item["id"] for item in hypotheses["later_integrated_pilot"]})
         self.assertEqual({"not_tested"}, {item["phase_0_status"] for item in hypotheses["later_integrated_pilot"]})
 
-    def test_precollection_design_gate_blocks_inference(self) -> None:
+    def test_precollection_design_is_complete_but_human_gates_still_block_collection(self) -> None:
         gate = self.method["precollection_design_gate"]
-        self.assertEqual("incomplete_blocking_inference", gate["status"])
+        self.assertEqual("complete_collection_blocked_on_human_prerequisites", gate["status"])
         self.assertEqual(
             {
                 "target_sample_and_recruitment_frame",
@@ -500,9 +536,36 @@ class PhaseZeroPacketTest(unittest.TestCase):
             },
             set(gate["required_rooted_supplement_fields"]),
         )
-        self.assertIn("do not claim H2 or H5 support", gate["claim_rule"])
-        self.assertEqual("blocked_protocol_design_incomplete", self.observations["collection_status"])
+        self.assertEqual(
+            {"path": str(DESIGN_PATH.relative_to(REPO)), "sha256": sha256_file(DESIGN_PATH)},
+            gate["supplement"],
+        )
+        self.assertIn("does not permit H2 or H5 support", gate["claim_rule"])
+        self.assertEqual("blocked_ground_truth_consent_and_recruitment", self.observations["collection_status"])
         self.assertIn("No H2 or H5 support", " ".join(self.observations["limits"]))
+
+    def test_precollection_schedule_sample_stopping_and_claim_gates_are_frozen(self) -> None:
+        self.assertEqual("design_frozen_results_not_collected", self.design["status"])
+        sample = self.design["target_sample_and_recruitment_frame"]
+        self.assertEqual(12, sample["target_participants"])
+        self.assertEqual(6, sample["target_handoff_dyads"])
+        self.assertEqual(30, sample["target_handoff_pairs"])
+        slots = self.design["counterbalance_schedule"]["slots"]
+        self.assertEqual(6, len(slots))
+        for fixture_index in range(5):
+            self.assertEqual(3, sum(slot["conditions"][fixture_index] == "C" for slot in slots))
+            self.assertEqual(3, sum(slot["conditions"][fixture_index] == "T" for slot in slots))
+        for slot in slots:
+            self.assertEqual({1, 2, 3, 4, 5}, set(slot["task_order"]))
+            self.assertIn(sum(condition == "C" for condition in slot["conditions"]), {2, 3})
+        self.assertIn("90 calendar days", self.design["stopping_rule"]["complete"])
+        self.assertIn("Do not add participants", self.design["stopping_rule"]["no_outcome_adaptation"])
+        thresholds = self.design["claim_thresholds_and_multiplicity_rule"]
+        self.assertEqual(5, len(thresholds["H2_pilot_support_requires_all"]))
+        self.assertEqual(5, len(thresholds["H5_pilot_support_requires_all"]))
+        self.assertIn("requires both H2 and H5", thresholds["overall_interface_rule"])
+        self.assertTrue(self.design["collection_gate"]["design_complete"])
+        self.assertIn("does not authorize outreach", self.design["collection_gate"]["opening_rule"])
 
     def test_h5_requires_linked_distinct_receiver_and_explicit_independence(self) -> None:
         required_shape = self.observations["required_result_shape"]
@@ -686,11 +749,14 @@ class PhaseZeroPacketTest(unittest.TestCase):
         }, {item["id"] for item in self.method["kill_criteria"]})
 
     def test_results_are_not_fabricated(self) -> None:
-        self.assertEqual("blocked_protocol_design_incomplete", self.observations["collection_status"])
+        self.assertEqual("blocked_ground_truth_consent_and_recruitment", self.observations["collection_status"])
         self.assertEqual([], self.observations["review_observations"])
         self.assertEqual([], self.observations["receiver_continuation_observations"])
         self.assertEqual([], self.observations["handoff_pairs"])
-        self.assertEqual({"blocked_pending_rooted_precollection_design_supplement"}, {stage["status"] for stage in self.method["collection_stages"]})
+        self.assertEqual(
+            {"ready_after_ground_truth_consent_and_collection_readiness"},
+            {stage["status"] for stage in self.method["collection_stages"]},
+        )
 
 
 if __name__ == "__main__":

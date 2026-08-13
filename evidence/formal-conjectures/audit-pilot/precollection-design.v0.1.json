@@ -1,0 +1,192 @@
+{
+  "schema": "vela.math.fc-audit.precollection-design.v0.1",
+  "design_id": "fc-audit-human-pilot-v0.1",
+  "status": "design_frozen_results_not_collected",
+  "recorded_at": "2026-08-13T11:13:57Z",
+  "authority_effect": "none",
+  "program_contract": {
+    "document": "VELA_ECOSYSTEM_CONVERGENCE_EXECUTION_MEMO_2026-08-12.md",
+    "sha256": "4dfef11f56497fe029204919e810dcfb9d8a9597a767681bd17155c57f1f6fda"
+  },
+  "method_contract": {
+    "schema": "vela.math.fc-audit.evaluation-method.v0.1",
+    "method_id": "fc-audit-paired-review-baseline-v0.1"
+  },
+  "fixture_selection": {
+    "path": "evidence/formal-conjectures/audit-pilot/phase-0-fixture-selection.v0.1.json",
+    "sha256": "0043cf876cb2c645565aad620c404f58e03665e9f4afb66ab5bfdae0a724f3c8",
+    "required_fixture_count": 5,
+    "collection_prerequisite": "Every fixture, including the clean-control candidate, must have witness-backed exact-head human ground truth frozen before any participant sees a condition packet."
+  },
+  "target_sample_and_recruitment_frame": {
+    "target_participants": 12,
+    "target_handoff_dyads": 6,
+    "target_review_observations": 30,
+    "target_receiver_continuations": 30,
+    "target_handoff_pairs": 30,
+    "frame": "Consent-capable adults who can read Lean theorem statements and compare them with mathematical source prose. Recruit across Formal Conjectures contributors, Lean-capable mathematicians, and formal-methods reviewers without using authority status as an eligibility shortcut.",
+    "sampling_limit": "This is a bounded feasibility and interface pilot, not a probability sample of mathematicians or proof engineers. Results describe the retained participants and fixtures; no population prevalence or adoption claim is permitted."
+  },
+  "participant_and_session_eligibility": {
+    "participant_required": [
+      "consent to the retained pseudonymous task fields and declared retention policy",
+      "ability to read the relevant Lean statement and cited mathematical source in English",
+      "no authorship of, or substantive review contribution to, the exact fixture pull request",
+      "no preparation of the FC audit generator, selected fixture packet, or frozen semantic ground truth",
+      "no prior exposure to the exact fixture head or generated audit record"
+    ],
+    "receiver_required": [
+      "different human participant from the sender",
+      "no access to private sender or operator context",
+      "use only the rooted condition packet",
+      "no preparation of the fixture, audit record, or ground-truth record"
+    ],
+    "experience_recording": "Record declared Lean and Formal Conjectures experience before allocation. Experience is a descriptive covariate and matching aid, never authority or independence evidence.",
+    "session_required": "The exact packet root, condition, task wording, active-time clock, wait-time clock, terminal state, and access limits must be retained before a session is eligible for primary analysis."
+  },
+  "exclusion_and_missing_session_rules": {
+    "exclude_before_outcome_review": [
+      "consent absent or withdrawn before aggregate freeze",
+      "participant or receiver fails an eligibility rule",
+      "wrong fixture, condition, packet root, or task wording delivered",
+      "treatment-only information appears in a control packet",
+      "sender and receiver are the same person or receiver independence fields are missing"
+    ],
+    "retain_not_exclude": [
+      "incorrect answer",
+      "slow completion",
+      "tooling or access failure",
+      "participant abandonment",
+      "audit slower than control",
+      "finding disagreement"
+    ],
+    "missing_rule": "Missing duration or outcome values remain missing and are never zero. Preserve the terminal state, elapsed time, last completed task, and reason.",
+    "abandonment_sensitivity": "Primary time estimates use completed eligible sessions. A mandatory sensitivity analysis assigns the task cap to eligible abandoned sessions: 5,400 seconds for sender review and 3,600 seconds for receiver continuation plus reproduction. Report both analyses and abandonment counts by condition.",
+    "replacement_rule": "A participant excluded before seeing any condition packet may be replaced into the same blinded dyad slot. After exposure, do not replace based on outcome; retain the incomplete slot and report the deviation."
+  },
+  "fixture_by_condition_allocation": {
+    "unit": "handoff_dyad_by_fixture",
+    "rule": "Each dyad completes every fixture exactly once. For a fixture, both sender and receiver receive the same condition. No participant sees the same fixture under both conditions.",
+    "control_id": "plain-git-and-current-review-artifacts",
+    "treatment_id": "same-inputs-plus-fc-pr-audit",
+    "fixture_ids": [
+      "clean-candidate-dean-4878",
+      "conditional-erdos-427-4884",
+      "fidelity-erdos-887-1237",
+      "vacuity-erdos-80-4830",
+      "unavailable-rupert-3959"
+    ],
+    "balance": "For every fixture, three dyad slots receive control and three receive treatment. Across five fixtures, every dyad receives two or three fixtures in each condition."
+  },
+  "counterbalance_schedule": {
+    "assignment": "Before outcome collection, pair eligible participants into six dyads using declared experience only. After pairing is frozen, generate a 32-byte random seed, publish its SHA-256 commitment, use the revealed seed to Fisher-Yates shuffle dyads into slots 1-6, and retain the seed and algorithm receipt. Condition packets are disclosed one task at a time.",
+    "condition_key": {
+      "C": "plain-git-and-current-review-artifacts",
+      "T": "same-inputs-plus-fc-pr-audit"
+    },
+    "fixture_order": [
+      "clean-candidate-dean-4878",
+      "conditional-erdos-427-4884",
+      "fidelity-erdos-887-1237",
+      "vacuity-erdos-80-4830",
+      "unavailable-rupert-3959"
+    ],
+    "slots": [
+      {"slot": 1, "conditions": ["C", "T", "C", "T", "C"], "task_order": [1, 2, 3, 4, 5]},
+      {"slot": 2, "conditions": ["T", "C", "T", "C", "T"], "task_order": [2, 3, 4, 5, 1]},
+      {"slot": 3, "conditions": ["C", "C", "T", "T", "C"], "task_order": [3, 4, 5, 1, 2]},
+      {"slot": 4, "conditions": ["T", "T", "C", "C", "T"], "task_order": [4, 5, 1, 2, 3]},
+      {"slot": 5, "conditions": ["C", "T", "T", "C", "C"], "task_order": [5, 1, 2, 3, 4]},
+      {"slot": 6, "conditions": ["T", "C", "C", "T", "T"], "task_order": [5, 4, 3, 2, 1]}
+    ],
+    "carryover_rule": "Record prior task count and condition order. Never compare a participant with themself on the same fixture. Report the fixed task order and any carryover concern with the raw observations."
+  },
+  "stopping_rule": {
+    "start": "Collection may start only after all five ground-truth records, consent materials, condition packets, allocation receipt format, and private-custody plan are frozen and root-bound.",
+    "complete": "Stop at six eligible dyads with 30 assigned fixture handoffs or 90 calendar days after the first enrolled dyad, whichever occurs first.",
+    "no_outcome_adaptation": "Do not add participants, remove fixtures, change caps, or stop early because an effect looks favorable, unfavorable, or uncertain.",
+    "safety_stop": "Pause immediately for a consent, privacy, credential, authority-boundary, or materially wrong-packet incident. Resume only after a retained amendment and, where required, renewed consent; never discard pre-amendment outcomes silently."
+  },
+  "primary_estimands": {
+    "H2_verification_efficiency": {
+      "time_estimand": "Fixture-stratified treatment-to-control ratio of geometric mean active review_effort_seconds, with durations floored at one second only for the logarithm.",
+      "quality_estimands": [
+        "difference in consequential-issue detection sensitivity against frozen human ground truth",
+        "difference in advisory false-positive count per eligible review",
+        "difference in unsupported claims reaching expert review per eligible review"
+      ],
+      "guardrails": [
+        "authority_boundary_violations",
+        "participant_abandonment",
+        "metadata_burden_seconds"
+      ]
+    },
+    "H5_retained_packet_handoff": {
+      "time_estimand": "Fixture-stratified treatment-to-control ratio of geometric mean active continuation_seconds for eligible independent handoff pairs.",
+      "quality_estimands": [
+        "difference in missing_or_ambiguous_provenance_fields per eligible handoff",
+        "difference in reproduction terminal-state completion without private context",
+        "difference in reproduction_latency_seconds among completed reproduction tasks"
+      ],
+      "guardrails": [
+        "receiver independence and packet-only access",
+        "authority_boundary_violations",
+        "participant_abandonment",
+        "metadata_burden_seconds"
+      ]
+    }
+  },
+  "estimator_and_uncertainty_method": {
+    "raw_first": "Publish every redacted eligible observation and fixture-condition cell before aggregate estimates.",
+    "time_estimator": "Fit fixture fixed effects to log duration and report the exponentiated treatment coefficient. Cluster resampling and sensitivity operate at the dyad level so sender and receiver outcomes are never treated as independent people.",
+    "uncertainty": "Report a two-sided 90 percent percentile cluster-bootstrap interval from 10,000 deterministic resamples using the revealed allocation seed plus the literal suffix ':analysis-v0.1'. With fewer than four eligible dyads or a non-computable interval, report the estimate as descriptive and make no support claim.",
+    "quality_estimator": "Report condition denominators and absolute differences for sensitivity, false positives, unsupported claims, missing provenance, abandonment, and authority violations. Do not hide sparse cells behind percentages.",
+    "sensitivity": [
+      "task-cap imputation for eligible abandoned sessions",
+      "complete-case estimates",
+      "leave-one-dyad-out estimates",
+      "results stratified by fixture and declared experience"
+    ]
+  },
+  "claim_thresholds_and_multiplicity_rule": {
+    "H2_pilot_support_requires_all": [
+      "treatment-to-control review-effort point ratio is at most 0.80",
+      "upper bound of the 90 percent cluster-bootstrap interval is below 1.00",
+      "treatment consequential-issue sensitivity is not lower than control",
+      "treatment adds no advisory false positive against frozen ground truth",
+      "zero authority-boundary violations"
+    ],
+    "H5_pilot_support_requires_all": [
+      "treatment-to-control continuation-time point ratio is at most 0.80",
+      "upper bound of the 90 percent cluster-bootstrap interval is below 1.00",
+      "treatment does not increase missing or ambiguous provenance fields",
+      "every analyzed receiver satisfies the explicit independence and packet-only rules",
+      "zero authority-boundary violations"
+    ],
+    "overall_interface_rule": "A `continue` disposition requires both H2 and H5 to satisfy every listed threshold and no kill criterion to trigger. One hypothesis cannot compensate for failure of the other; therefore no union-of-tests success claim or multiplicity discount is allowed.",
+    "claim_scope": "The phrase `pilot support` applies only to these participants, fixtures, packets, and tasks. It is not proof of scientific lift, external adoption, general reviewer efficiency, or source-community acceptance."
+  },
+  "deviation_and_amendment_policy": {
+    "before_collection": "Any change requires a new version, exact root, rationale, and packet-manifest update before participant exposure.",
+    "after_collection_starts": "Retain the original design and all observations. Record the amendment time, affected fields, reason, sessions collected before and after, consent impact, and whether confirmatory claims are withdrawn.",
+    "outcome_blind_rule": "Do not amend allocation, stopping, estimands, uncertainty, or thresholds after inspecting condition outcomes. If a safety correction makes an outcome-relevant change unavoidable, label all analysis exploratory and make no preregistered support claim.",
+    "deviation_log": "Publish a redacted deviation inventory even when empty; private participant or incident material remains outside Git under the declared custody policy."
+  },
+  "collection_gate": {
+    "design_complete": true,
+    "currently_blocked_by": [
+      "clean-candidate-dean-4878 lacks witness-backed exact-head independent human ground truth",
+      "participants are not recruited or consented",
+      "condition packets, allocation receipt, and private-custody plan are not yet frozen for participant use"
+    ],
+    "opening_rule": "Collection opens only when every blocker is resolved in a new rooted collection-readiness record. Resolving this design gate alone does not authorize outreach, recruitment, participant contact, or collection."
+  },
+  "does_not_establish": [
+    "that a participant has consented or been recruited",
+    "that the clean-control candidate is source-faithful",
+    "that any H2 or H5 observation has been collected",
+    "that the FC audit improves review or handoff",
+    "any Vela Verification, Decision, Event, or Standing",
+    "external adoption, maintainer acceptance, or source-community authority"
+  ]
+}

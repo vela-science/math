@@ -2,13 +2,17 @@
   "schema": "vela.math.fc-audit.evaluation-observations.v0.1",
   "method": {
     "path": "methods/formal-conjectures/audit-baseline.v0.1.json",
-    "sha256": "2b61c4a4eeba9d34de467ad212aa14b6e9f7a8f29416b91eb69a80806c620bdf"
+    "sha256": "1183b202af320ed9a1cbae018e2b36174f7c5cbe78b840bb89e9faea199c88ae"
+  },
+  "precollection_design": {
+    "path": "evidence/formal-conjectures/audit-pilot/precollection-design.v0.1.json",
+    "sha256": "c6a64c39c660046507a5befbf74fbd737ad29755b6f4d16a93e8b56d903bac1d"
   },
   "fixture_selection": {
     "path": "evidence/formal-conjectures/audit-pilot/phase-0-fixture-selection.v0.1.json",
     "sha256": "0043cf876cb2c645565aad620c404f58e03665e9f4afb66ab5bfdae0a724f3c8"
   },
-  "collection_status": "blocked_protocol_design_incomplete",
+  "collection_status": "blocked_ground_truth_consent_and_recruitment",
   "authority_effect": "none",
   "review_observations": [],
   "receiver_continuation_observations": [],
@@ -127,8 +131,8 @@
   ],
   "limits": [
     "No baseline values have been measured yet; empty observations are not zero results.",
-    "Collection is blocked until a rooted precollection design supplement freezes the sample, eligibility, allocation, counterbalance schedule, stopping rule, estimator, uncertainty method, and claim thresholds.",
-    "No H2 or H5 support, rejection, effect, uncertainty, or interface-disposition claim may be made from this empty or design-incomplete scaffold.",
+    "The rooted precollection design is frozen, but collection remains blocked until exact-head ground truth is complete and a collection-readiness record proves consent, recruitment, packets, allocation, and private custody are ready.",
+    "No H2 or H5 support, rejection, effect, uncertainty, or interface-disposition claim may be made from this empty scaffold.",
     "The clean control candidate does not fulfill clean_source_faithful until its exact head receives a witness-backed human semantic review.",
     "A review observation alone cannot produce H5 continuation outcomes; each H5 value requires matching sender review, receiver continuation, and handoff-pair records with explicit receiver context.",
     "Different sender and receiver pseudonyms do not establish independence; independence_basis and overlap fields must remain explicit.",
