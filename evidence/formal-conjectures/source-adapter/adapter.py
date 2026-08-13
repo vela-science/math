@@ -14,9 +14,11 @@ HERE = Path(__file__).resolve().parent
 REPO_ROOT = HERE.parents[2]
 RETAINED_ROOT = HERE / "retained-source"
 METHOD_PATH = REPO_ROOT / "methods/formal-conjectures/pr-audit-source-adapter.v0.1.json"
+CONFORMANCE_CONTRACT_PATH = REPO_ROOT / "methods/source-adapters/conformance.py"
+CONFORMANCE_PROFILE_PATH = HERE / "conformance-profile.v1.json"
 PROJECTION_PATH = HERE / "projection.v1.json"
 SOURCE_VALIDATOR_PATH = RETAINED_ROOT / "scripts/pr_audit.py"
-SOURCE_VALIDATOR_SHA256 = "sha256:b3ec05cda3d1b45ee4c56bf47c8c9005531938feb43df373b6882d28c6a97d60"
+SOURCE_VALIDATOR_SHA256 = "sha256:f18be0d9db226e2a5545309287212d49a652d111d032483886f98d4c9f897a66"
 METHOD_SCHEMA = "vela.math.fc-pr-audit-source-adapter-method.v0.1"
 PROJECTION_SCHEMA = "vela.math.fc-pr-audit-projection.v1"
 SOURCE_CORE_SCHEMA = "formal-conjectures.pr-audit.v1"
@@ -46,6 +48,21 @@ def _load_source_validator() -> Any:
 
 
 SOURCE = _load_source_validator()
+
+
+def _load_conformance_contract() -> Any:
+    spec = importlib.util.spec_from_file_location(
+        "vela_source_adapter_conformance",
+        CONFORMANCE_CONTRACT_PATH,
+    )
+    if spec is None or spec.loader is None:
+        raise AdapterError("cannot load source-adapter conformance contract")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+CONFORMANCE = _load_conformance_contract()
 
 
 def _strict_file(path: Path, label: str) -> tuple[bytes, Any]:
@@ -82,6 +99,13 @@ def _method_root(method: dict[str, Any]) -> str:
     return SOURCE.content_root(payload)
 
 
+def load_conformance_profile() -> dict[str, Any]:
+    try:
+        return CONFORMANCE.load_profile(CONFORMANCE_PROFILE_PATH)
+    except CONFORMANCE.ConformanceError as error:
+        raise AdapterError(str(error)) from error
+
+
 def load_method() -> dict[str, Any]:
     _, value = _strict_file(METHOD_PATH, "adapter method")
     if not isinstance(value, dict):
@@ -107,6 +131,53 @@ def load_method() -> dict[str, Any]:
         "pagination": "none_complete_closed_inventory",
     }:
         raise AdapterError("adapter limit contract drift")
+    profile = load_conformance_profile()
+    expected_adapter = {
+        "adapter_id": value["adapter"]["name"],
+        "version": value["adapter"]["version"],
+        "implementation_path": value["adapter"]["implementation_path"],
+        "implementation_root": _sha256(HERE.joinpath("adapter.py").read_bytes()),
+        "output_schema": value["adapter"]["output_schema"],
+    }
+    if profile["adapter"] != expected_adapter:
+        raise AdapterError("adapter conformance implementation identity drift")
+    if profile["native_identity"]["source_id"] != value["source"]["source_id"]:
+        raise AdapterError("adapter conformance source identity drift")
+    if profile["custody"]["source_locator"] != (
+        value["source"]["repository"] + "/tree/" + value["source"]["commit"]
+    ):
+        raise AdapterError("adapter conformance source revision locator drift")
+    if profile["custody"]["mode"] != "copied" or profile["custody"]["retained_bytes"] is not True:
+        raise AdapterError("adapter conformance custody drift")
+    if profile["read_contract"] != {
+        "completeness": "complete",
+        "scope": "The five frozen Formal Conjectures PR-audit fixtures and their exact core and observation records.",
+        "pagination": value["limits"]["pagination"],
+        "max_records": value["limits"]["max_fixture_count"],
+        "max_bytes_per_record": value["limits"]["max_record_bytes"],
+        "bounded_read_behavior": "refuse",
+    }:
+        raise AdapterError("adapter conformance read contract drift")
+    if profile["rights"] != {
+        "license": value["source"]["license"],
+        "access": value["source"]["access"],
+        "redistribution": "full_under_license",
+        "public_redaction": "Only public source records are retained; GitHub request IDs, transport receipts, and reviewer identities are omitted from the Math projection.",
+    }:
+        raise AdapterError("adapter conformance rights drift")
+    if profile["semantics"]["preserves"] != value["preserves"]:
+        raise AdapterError("adapter conformance preserved semantics drift")
+    if profile["semantics"]["omits"] != value["omits"]:
+        raise AdapterError("adapter conformance omitted semantics drift")
+    if profile["reconstructibility"]["unavailable"] != value["unreconstructible_from_projection"]:
+        raise AdapterError("adapter conformance reconstruction-loss drift")
+    if profile["lifecycle"] != {
+        "deletion": value["mutation_policy"]["disappearance"],
+        "tombstone": "A later source observation may report absence, but this immutable projection is never rewritten as a tombstone.",
+        "update_detection": "A new exact source commit, tree, or retained file root requires a new projection.",
+        "drift_response": value["mutation_policy"]["replacement"],
+    }:
+        raise AdapterError("adapter conformance lifecycle drift")
     return value
 
 
@@ -301,6 +372,7 @@ def _build_record(
 
 def build_projection() -> dict[str, Any]:
     method = load_method()
+    conformance_profile = load_conformance_profile()
     retained_roots = _verify_retained_inventory(method)
     fixtures = method["fixtures"]
     if len(fixtures) != MAX_FIXTURES or len(fixtures) > method["limits"]["max_fixture_count"]:
@@ -338,6 +410,17 @@ def build_projection() -> dict[str, Any]:
                 "root": _typed_root("artifact", SOURCE_VALIDATOR_SHA256),
             },
         },
+        "conformance": {
+            "schema": conformance_profile["schema"],
+            "profile_path": CONFORMANCE_PROFILE_PATH.relative_to(REPO_ROOT).as_posix(),
+            "profile_root": _typed_root("artifact", conformance_profile["profile_root"]),
+            "contract_path": CONFORMANCE_CONTRACT_PATH.relative_to(REPO_ROOT).as_posix(),
+            "contract_root": _typed_root(
+                "artifact",
+                _sha256(CONFORMANCE_CONTRACT_PATH.read_bytes()),
+            ),
+            "authority_effect": "none",
+        },
         "read_contract": {
             "complete": True,
             "fixture_count": len(records),
@@ -364,7 +447,7 @@ def validate_projection(value: Any) -> dict[str, Any]:
     if not isinstance(value, dict):
         raise AdapterError("projection must be one object")
     expected = {
-        "schema", "source", "interpreter", "read_contract", "records",
+        "schema", "source", "interpreter", "conformance", "read_contract", "records",
         "authority_effect", "does_not_establish", "root",
     }
     _expect_exact_keys(value, expected, "projection")
@@ -393,6 +476,7 @@ def write_projection(path: Path = PROJECTION_PATH) -> dict[str, Any]:
 
 
 __all__ = [
-    "AdapterError", "METHOD_PATH", "PROJECTION_PATH", "build_projection",
-    "load_method", "validate_projection", "write_projection",
+    "AdapterError", "CONFORMANCE_PROFILE_PATH", "METHOD_PATH", "PROJECTION_PATH",
+    "build_projection", "load_conformance_profile", "load_method",
+    "validate_projection", "write_projection",
 ]

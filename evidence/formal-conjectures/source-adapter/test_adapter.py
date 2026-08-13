@@ -19,17 +19,7 @@ if SPEC is None or SPEC.loader is None:
 ADAPTER = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(ADAPTER)
 
-REQUIRED_ADAPTER_REQUIREMENTS = {
-    "unsupported_schema_and_version_refusal",
-    "field_and_schema_typed_roots",
-    "exact_source_revision_and_drift",
-    "complete_bounded_reads",
-    "copied_or_referenced_custody",
-    "interpreting_implementation_identity",
-    "license_access_and_public_redaction",
-    "reconstructibility_and_loss",
-    "deletion_tombstone_and_mutability",
-}
+REQUIRED_ADAPTER_REQUIREMENTS = set(ADAPTER.CONFORMANCE.REQUIRED_REQUIREMENT_IDS)
 
 
 class SourceAdapterTest(unittest.TestCase):
@@ -45,7 +35,7 @@ class SourceAdapterTest(unittest.TestCase):
         self.assertEqual(ADAPTER.validate_projection(retained), retained)
         self.assertEqual(
             retained["root"]["value"],
-            "sha256:64a02400645095956feb3f63eb87eab3e26254e98d61d3c8f9791d12f17a419b",
+            "sha256:1f71dfdb2354796b053ebe56745939872bc09f22b2a98c3041ebf656cb69fd3f",
         )
 
     def test_source_inventory_is_complete_and_byte_exact(self) -> None:
@@ -222,6 +212,25 @@ class SourceAdapterTest(unittest.TestCase):
         with self.assertRaisesRegex(ADAPTER.AdapterError, "does not match exact retained source"):
             ADAPTER.validate_projection(changed)
 
+    def test_conformance_profile_binds_the_real_adapter_and_projection(self) -> None:
+        profile = ADAPTER.load_conformance_profile()
+        self.assertEqual(
+            profile["adapter"]["implementation_root"],
+            ADAPTER._sha256(Path(ADAPTER.__file__).read_bytes()),
+        )
+        self.assertEqual(profile["authority_effect"], "none")
+        self.assertEqual(
+            self.projection["conformance"]["profile_root"]["value"],
+            profile["profile_root"],
+        )
+        self.assertEqual(self.projection["conformance"]["authority_effect"], "none")
+        drifted = copy.deepcopy(profile)
+        drifted["adapter"]["implementation_root"] = "sha256:" + "0" * 64
+        drifted["profile_root"] = ADAPTER.CONFORMANCE.profile_root(drifted)
+        with mock.patch.object(ADAPTER, "load_conformance_profile", return_value=drifted):
+            with self.assertRaisesRegex(ADAPTER.AdapterError, "implementation identity drift"):
+                ADAPTER.load_method()
+
     def test_generated_source_lock_matches_retained_custody(self) -> None:
         _, lock = ADAPTER._strict_file(ADAPTER.REPO_ROOT / "sources.lock.json", "source lock")
         entry = lock["sources"]["formal_conjectures_pr_audit"]
@@ -258,6 +267,13 @@ class SourceAdapterTest(unittest.TestCase):
             if record["fixture_id"] == "unavailable-rupert-3959"
         )
         self.assertIn("unavailable", [check["outcome"] for check in unavailable["source_axis"]["checks"]])
+        missing_tool = next(
+            check for check in unavailable["source_axis"]["checks"]
+            if check["property"] == "comparator-tool-availability"
+        )
+        self.assertEqual(missing_tool["outcome"], "unavailable")
+        self.assertIs(missing_tool["protocol_conversion"]["automatic"], False)
+        self.assertIsNone(missing_tool["protocol_conversion"]["outcome"])
         self.assertIn("clean or source-faithful ground truth", " ".join(self.projection["does_not_establish"]))
 
     def test_all_five_source_outcomes_are_lossless_and_nonconverting(self) -> None:
@@ -282,17 +298,40 @@ class SourceAdapterTest(unittest.TestCase):
 
     def test_real_adapter_covers_every_conformance_requirement(self) -> None:
         coverage = {
-            "unsupported_schema_and_version_refusal": self.test_schema_version_refusal_uses_real_source_validators,
-            "field_and_schema_typed_roots": self.test_root_domains_are_explicit_and_cross_domain_substitution_refuses,
-            "exact_source_revision_and_drift": self.test_source_root_and_core_observation_binding_refuse_drift,
-            "complete_bounded_reads": self.test_closed_read_refuses_missing_extra_duplicate_and_over_limit,
-            "copied_or_referenced_custody": self.test_source_revision_custody_interpreter_and_loss_are_explicit,
-            "interpreting_implementation_identity": self.test_source_revision_custody_interpreter_and_loss_are_explicit,
-            "license_access_and_public_redaction": self.test_source_revision_custody_interpreter_and_loss_are_explicit,
-            "reconstructibility_and_loss": self.test_source_revision_custody_interpreter_and_loss_are_explicit,
-            "deletion_tombstone_and_mutability": self.test_source_revision_custody_interpreter_and_loss_are_explicit,
+            "unsupported_schema_and_version_refusal": {
+                "test_schema_version_refusal_uses_real_source_validators",
+            },
+            "field_and_schema_typed_roots": {
+                "test_root_domains_are_explicit_and_cross_domain_substitution_refuses",
+            },
+            "exact_source_revision_and_drift": {
+                "test_mutable_locator_substitution_is_refused",
+                "test_source_root_and_core_observation_binding_refuse_drift",
+            },
+            "complete_bounded_reads": {
+                "test_closed_read_refuses_missing_extra_duplicate_and_over_limit",
+            },
+            "copied_or_referenced_custody": {
+                "test_source_revision_custody_interpreter_and_loss_are_explicit",
+            },
+            "interpreting_implementation_identity": {
+                "test_source_revision_custody_interpreter_and_loss_are_explicit",
+            },
+            "license_access_and_public_redaction": {
+                "test_source_revision_custody_interpreter_and_loss_are_explicit",
+            },
+            "reconstructibility_and_loss": {
+                "test_source_revision_custody_interpreter_and_loss_are_explicit",
+            },
+            "deletion_tombstone_and_mutability": {
+                "test_source_revision_custody_interpreter_and_loss_are_explicit",
+            },
         }
         self.assertEqual(set(coverage), REQUIRED_ADAPTER_REQUIREMENTS)
+        ADAPTER.CONFORMANCE.assert_requirement_coverage(
+            ADAPTER.load_conformance_profile(),
+            coverage,
+        )
         matrix_path = HERE.parent / "conformance/do-not-collapse.v0.1.json"
         _, matrix = ADAPTER._strict_file(matrix_path, "do-not-collapse matrix")
         self.assertEqual(

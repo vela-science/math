@@ -32,87 +32,87 @@
       "url": "https://google-deepmind.github.io/formal-conjectures/data/conjectures.json"
     },
     "formal_conjectures_pr_audit": {
-      "commit": "4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5",
+      "commit": "7ef98fa9394b78cda403a40b994b34bb77dd523a",
       "exact_roots": {
         "clean_candidate_core": {
           "path": "audit/pr-audit-v1/fixtures/clean-candidate-dean-4878/expected-core.json",
-          "sha256": "sha256:4847737b7ab384c5b35be195b89de28e3aeb11615194c39e30d9264dfcdf9728",
-          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5/audit/pr-audit-v1/fixtures/clean-candidate-dean-4878/expected-core.json"
+          "sha256": "sha256:7a9b16a8b78829d7eda0b61d0d6a1233c4d45808f9d6f9030f1f0108b003cb23",
+          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/7ef98fa9394b78cda403a40b994b34bb77dd523a/audit/pr-audit-v1/fixtures/clean-candidate-dean-4878/expected-core.json"
         },
         "clean_candidate_observation": {
           "path": "audit/pr-audit-v1/fixtures/clean-candidate-dean-4878/expected-observation.json",
-          "sha256": "sha256:81e76e839a7e59d6ad8361043611d06214b561d4bee14d37fbdb8f0601c9564a",
-          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5/audit/pr-audit-v1/fixtures/clean-candidate-dean-4878/expected-observation.json"
+          "sha256": "sha256:5f88700f4156f8abd9b732e4e3e5502dc14d0bf56514abebf7f52f4ed7ec1ee3",
+          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/7ef98fa9394b78cda403a40b994b34bb77dd523a/audit/pr-audit-v1/fixtures/clean-candidate-dean-4878/expected-observation.json"
         },
         "conditional_core": {
           "path": "audit/pr-audit-v1/fixtures/conditional-erdos-427-4884/expected-core.json",
-          "sha256": "sha256:6d0a0e04f13779755b363f62f4574bfb541f3b666b41f4dca7d86484d92ef764",
-          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5/audit/pr-audit-v1/fixtures/conditional-erdos-427-4884/expected-core.json"
+          "sha256": "sha256:ddc92a9b88d87201d3a7314c301e06b870d0866da9b23ddc272e3ce97ce107cd",
+          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/7ef98fa9394b78cda403a40b994b34bb77dd523a/audit/pr-audit-v1/fixtures/conditional-erdos-427-4884/expected-core.json"
         },
         "conditional_observation": {
           "path": "audit/pr-audit-v1/fixtures/conditional-erdos-427-4884/expected-observation.json",
-          "sha256": "sha256:5d4baf2f6a4430951283cc0eb389c458c7084af4fa75e0db46888f9a1b3fda9c",
-          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5/audit/pr-audit-v1/fixtures/conditional-erdos-427-4884/expected-observation.json"
+          "sha256": "sha256:0db5936eb77a71708cffc0cd9a1a1145f73bf2eb1ff00a709721afdacf5291af",
+          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/7ef98fa9394b78cda403a40b994b34bb77dd523a/audit/pr-audit-v1/fixtures/conditional-erdos-427-4884/expected-observation.json"
         },
         "core_schema": {
           "path": "audit/pr-audit-v1/schemas/formal-conjectures.pr-audit.v1.schema.json",
-          "sha256": "sha256:9a9ae9692d05dac276d3dc04c0eff367b8e02bd41fe78033ff4c244167abd95d",
-          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5/audit/pr-audit-v1/schemas/formal-conjectures.pr-audit.v1.schema.json"
+          "sha256": "sha256:b5a1b21bbddb3faa8bc81f07f328ff9c523d0744b41a61492441fffe281722bf",
+          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/7ef98fa9394b78cda403a40b994b34bb77dd523a/audit/pr-audit-v1/schemas/formal-conjectures.pr-audit.v1.schema.json"
         },
         "fidelity_core": {
           "path": "audit/pr-audit-v1/fixtures/fidelity-erdos-887-1237/expected-core.json",
-          "sha256": "sha256:fa099da4957d14c4741b1cc49073b28743ddba6f581f3c516bccbc13a28185a2",
-          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5/audit/pr-audit-v1/fixtures/fidelity-erdos-887-1237/expected-core.json"
+          "sha256": "sha256:31cb417a28a2b03760b96c2a4a6ea4ae4654b2dae9b1a018b68a47b4b277bb34",
+          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/7ef98fa9394b78cda403a40b994b34bb77dd523a/audit/pr-audit-v1/fixtures/fidelity-erdos-887-1237/expected-core.json"
         },
         "fidelity_observation": {
           "path": "audit/pr-audit-v1/fixtures/fidelity-erdos-887-1237/expected-observation.json",
-          "sha256": "sha256:f69ca868835ea6b8ea399e155f70eae5b431d015bcdca3f824a0148f108d83fa",
-          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5/audit/pr-audit-v1/fixtures/fidelity-erdos-887-1237/expected-observation.json"
+          "sha256": "sha256:b340ac212b699d6cc350225fc76f8b636f8dc2ebbb4ef307301be2be9bbf80d7",
+          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/7ef98fa9394b78cda403a40b994b34bb77dd523a/audit/pr-audit-v1/fixtures/fidelity-erdos-887-1237/expected-observation.json"
         },
         "license": {
           "path": "LICENSE",
           "sha256": "sha256:cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5/LICENSE"
+          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/7ef98fa9394b78cda403a40b994b34bb77dd523a/LICENSE"
         },
         "observation_schema": {
           "path": "audit/pr-audit-v1/schemas/formal-conjectures.pr-audit-observation.v1.schema.json",
           "sha256": "sha256:5e7ae0ea2d00c5e224a38865b3866b11357a071e71bdc58cfb0d16d6a2a74e7d",
-          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5/audit/pr-audit-v1/schemas/formal-conjectures.pr-audit-observation.v1.schema.json"
+          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/7ef98fa9394b78cda403a40b994b34bb77dd523a/audit/pr-audit-v1/schemas/formal-conjectures.pr-audit-observation.v1.schema.json"
         },
         "packet_readme": {
           "path": "audit/pr-audit-v1/README.md",
-          "sha256": "sha256:c35be208a453c5e0a74615baa9612338e099dc13202bfa7d2360dfe9653b6a65",
-          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5/audit/pr-audit-v1/README.md"
+          "sha256": "sha256:e80f208c15caff6c8c2e571b331cae6d9910f762ab962d4769b510c77304763e",
+          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/7ef98fa9394b78cda403a40b994b34bb77dd523a/audit/pr-audit-v1/README.md"
         },
         "unavailable_core": {
           "path": "audit/pr-audit-v1/fixtures/unavailable-rupert-3959/expected-core.json",
-          "sha256": "sha256:25db11dd10366895078ae515b6050e5480744ac2be19bfd42eb39ebb5e1e4a46",
-          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5/audit/pr-audit-v1/fixtures/unavailable-rupert-3959/expected-core.json"
+          "sha256": "sha256:e037df28dfc7a61d5928ba7f79d185397c01d45f2cc94b05a77c325871571a50",
+          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/7ef98fa9394b78cda403a40b994b34bb77dd523a/audit/pr-audit-v1/fixtures/unavailable-rupert-3959/expected-core.json"
         },
         "unavailable_observation": {
           "path": "audit/pr-audit-v1/fixtures/unavailable-rupert-3959/expected-observation.json",
-          "sha256": "sha256:5fa29ef0d2a9d408a9ccba91059140ef9ef93954b147f3fd97c79f69e21a6ebe",
-          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5/audit/pr-audit-v1/fixtures/unavailable-rupert-3959/expected-observation.json"
+          "sha256": "sha256:f16d91e9993598fc9fabf2264f0a0527f9fd0df94bcb7203233883f950fef8a8",
+          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/7ef98fa9394b78cda403a40b994b34bb77dd523a/audit/pr-audit-v1/fixtures/unavailable-rupert-3959/expected-observation.json"
         },
         "vacuity_core": {
           "path": "audit/pr-audit-v1/fixtures/vacuity-erdos-80-4830/expected-core.json",
-          "sha256": "sha256:0b87f34de077b63e389cb1e968b3726f124b176dd698b37330f31be9bd6c525c",
-          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5/audit/pr-audit-v1/fixtures/vacuity-erdos-80-4830/expected-core.json"
+          "sha256": "sha256:82a15f505aac7b189b8dc8959beda3a89ca41cc4ccdde10a1eff67202d4734cd",
+          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/7ef98fa9394b78cda403a40b994b34bb77dd523a/audit/pr-audit-v1/fixtures/vacuity-erdos-80-4830/expected-core.json"
         },
         "vacuity_observation": {
           "path": "audit/pr-audit-v1/fixtures/vacuity-erdos-80-4830/expected-observation.json",
-          "sha256": "sha256:d65a6643c6b151581007cf528b6ab51d9cfa8b42642e9972e34053e5a12e9e58",
-          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5/audit/pr-audit-v1/fixtures/vacuity-erdos-80-4830/expected-observation.json"
+          "sha256": "sha256:f031d928b573f87d23acb69be62275d574ebedb30be8b7eaa75bd3a5ee76a9e8",
+          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/7ef98fa9394b78cda403a40b994b34bb77dd523a/audit/pr-audit-v1/fixtures/vacuity-erdos-80-4830/expected-observation.json"
         },
         "validator": {
           "path": "scripts/pr_audit.py",
-          "sha256": "sha256:b3ec05cda3d1b45ee4c56bf47c8c9005531938feb43df373b6882d28c6a97d60",
-          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5/scripts/pr_audit.py"
+          "sha256": "sha256:f18be0d9db226e2a5545309287212d49a652d111d032483886f98d4c9f897a66",
+          "url": "https://raw.githubusercontent.com/williamjblair/formal-conjectures/7ef98fa9394b78cda403a40b994b34bb77dd523a/scripts/pr_audit.py"
         }
       },
       "kind": "pull_request_audit_package",
       "repo": "williamjblair/formal-conjectures",
-      "tree": "43a629d29b38811bb5dba76c409215ef980ea761",
+      "tree": "bf7b593931d9924e25d5c6ff6da5d504c5dcf953",
       "url": "https://github.com/williamjblair/formal-conjectures"
     },
     "gpt_erdos": {
@@ -244,7 +244,7 @@
       "kind": "frozen_snapshot",
       "path": "sources/wiki/registry.json",
       "paths": [
-        "AI-contributions-to-Erd\u0151s-problems.md"
+        "AI-contributions-to-Erdős-problems.md"
       ],
       "repo": "teorth/erdosproblems.wiki",
       "sha256": "sha256:65f7f510a2f2edaafbb73b6a26e365394228bc48b18d3c54e2dee5c01b7bb092"

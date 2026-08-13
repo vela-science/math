@@ -2,7 +2,7 @@
 
 This directory is Math's bounded, read-only adapter for the public Formal
 Conjectures PR audit package at commit
-`4b5df9dcc7f7f3458b593aa816b7a2476d71f8e5`. It copies the five exact core and
+`7ef98fa9394b78cda403a40b994b34bb77dd523a`. It copies the five exact core and
 five exact observation records, the two source schemas, the source validator,
 the packet README, and the Apache-2.0 license. No network access is needed to
 validate or rebuild the Math projection.

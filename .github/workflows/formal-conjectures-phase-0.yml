@@ -6,6 +6,7 @@ on:
       - ".github/workflows/formal-conjectures-phase-0.yml"
       - "evidence/formal-conjectures/**"
       - "methods/formal-conjectures/**"
+      - "methods/source-adapters/**"
       - "sources.yaml"
       - "sources.lock.json"
   push:
@@ -14,6 +15,7 @@ on:
       - ".github/workflows/formal-conjectures-phase-0.yml"
       - "evidence/formal-conjectures/**"
       - "methods/formal-conjectures/**"
+      - "methods/source-adapters/**"
       - "sources.yaml"
       - "sources.lock.json"
   workflow_dispatch:
@@ -38,12 +40,13 @@ jobs:
           set -euo pipefail
           python3 -B evidence/formal-conjectures/audit-pilot/test_phase_0.py
           python3 -B evidence/formal-conjectures/conformance/test_do_not_collapse.py
+          python3 -B methods/source-adapters/test_conformance.py
           python3 -B evidence/formal-conjectures/source-adapter/test_adapter.py
           python3 -B evidence/formal-conjectures/source-adapter/build.py --check
           while IFS= read -r -d '' document; do
             python3 -B -m json.tool "$document" >/dev/null
-          done < <(find evidence/formal-conjectures methods/formal-conjectures -type f -name '*.json' -print0)
-          test -z "$(find evidence/formal-conjectures methods/formal-conjectures -type d -name __pycache__ -print -quit)"
+          done < <(find evidence/formal-conjectures methods/formal-conjectures methods/source-adapters -type f -name '*.json' -print0)
+          test -z "$(find evidence/formal-conjectures methods/formal-conjectures methods/source-adapters -type d -name __pycache__ -print -quit)"
           test -z "$(git status --porcelain=v1 --untracked-files=all)"
 
       - name: Check committed patch whitespace

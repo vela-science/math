@@ -32,7 +32,11 @@ vela replay . --json
   concepts from collapsing. The
   [strict source adapter](evidence/formal-conjectures/source-adapter/README.md)
   retains and validates the public audit records, then emits a rooted bounded
-  read projection. All three are source-local evidence with no authority effect.
+  read projection. Its reusable
+  [source-adapter conformance contract](methods/source-adapters/README.md)
+  turns the proven identity, custody, rights, bounded-read, loss, drift, and
+  lifecycle checks into a fail-closed profile for later adapters. All four are
+  source-local evidence with no authority effect.
 - [Erdős 321 translation](evidence/erdos-321/translation/README.md) retains exact
   Lean source snapshots and derives W3C Web Annotations, a rooted semantic fact
   diff, an explicit loss report, and a Workflow Run RO-Crate. It is
