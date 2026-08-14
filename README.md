@@ -1,8 +1,12 @@
-# Vela Mathematics
+# Vela Mathematics Program
 
 Which mathematical assertions has this authority admitted on exact, reproducible evidence, and what remains unresolved?
 
-This is a Vela repository. Git stores exact Claims, Submissions, Verification Records, Decisions, and authority history. Derived views are rebuildable.
+This is the Vela Mathematics Program's local Vela Repository. Git stores exact
+Claims, Submissions, Verification Records, Decisions, and authority history.
+Derived views are rebuildable. It is not Vela's general mathematics
+integration hub; [`OWNERSHIP.md`](OWNERSHIP.md) freezes future placement while
+preserving every retained authority and evidence byte.
 
 ## Operator loop
 

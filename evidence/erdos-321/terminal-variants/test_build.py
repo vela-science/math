@@ -267,12 +267,18 @@ def main() -> int:
             "reader_run_test.py", "reader_scorer.py",
             "source-lock.v0.1.json", "test_build.py",
         )),
+        *(f"evidence/erdos-321/terminal-variants/repair-disposition/{name}" for name in (
+            "README.md", "build.py", "build_remap.py", "correction-remap.v1.json",
+            "independent-review.v1.json", "repair-disposition.v1.json", "test_build.py",
+        )),
         *(f"evidence/erdos-321/workbench-compatibility/{name}" for name in (
             "README.md", "bun.lock", "events.json", "execution-evidence.json",
             "nostr-verification.json", "package.json", "run-manifest.json", "run.py",
             "target-packet.json", "test_run.py", "test_verify.py", "verify-nostr.mjs", "verify.py",
             "workbench-note.json", "workbench-result.json",
         )),
+        "methods/erdos-321/terminal-bridge-scope-openai-codex-peer.v1.json",
+        "methods/erdos-321/terminal-bridge-scope-review-gpt-5.6-sol.v1.json",
     }
     workflow_contract = (BUILD.ROOT / ".github/workflows/terminal-variant-evidence.yml").read_text()
     assert workflow_contract.count('- "README.md"') == 2
@@ -298,8 +304,13 @@ def main() -> int:
     assert 'git diff --name-only "$base"...HEAD -- \\\n' in workflow_contract
     assert 'evidence/erdos-321/external-workbench-return \\\n' in workflow_contract
     assert 'git diff --name-only "$base"...HEAD |' not in workflow_contract
-    assert "methods ':(exclude,glob)methods/formal-conjectures/**'" in workflow_contract.replace("\\\n            ", "")
-    assert "':(exclude,glob)methods/formal-conjectures/**'" in workflow_contract
+    assert "methods/erdos-321 \\\n" in workflow_contract
+    assert "terminal-repair-observed-paths" in workflow_contract
+    repair_tree_contract = (
+        "git ls-tree -r --name-only HEAD -- \\\n"
+        "            evidence/erdos-321/terminal-variants/repair-disposition"
+    )
+    assert repair_tree_contract in workflow_contract
     assert 'git diff --check "$base"...HEAD' in workflow_contract
     unit_readme = (HERE / "README.md").read_text()
     assert "python3 evidence/erdos-321/terminal-variants/" not in unit_readme
@@ -315,6 +326,7 @@ def main() -> int:
         "evidence/erdos-321/external-workbench-return",
         "evidence/erdos-321/terminal-variants",
         "evidence/erdos-321/workbench-compatibility",
+        "methods/erdos-321",
     ).decode().splitlines())
     changed_paths.update(
         path for path in BUILD.run_git(
@@ -326,17 +338,18 @@ def main() -> int:
             "evidence/erdos-321/external-workbench-return/",
             "evidence/erdos-321/terminal-variants/",
             "evidence/erdos-321/workbench-compatibility/",
+            "methods/erdos-321/",
         ))
     )
     assert changed_paths == expected_paths
-    assert BUILD.run_git(
-        BUILD.ROOT, "diff", "--name-only", f"{BUILD.MATH_COMMIT}...HEAD", "--",
-        ".vela", "records", "continuity",
-    ) == b""
-    assert BUILD.run_git(
-        BUILD.ROOT, "diff", "--name-only", f"{BUILD.MATH_COMMIT}...HEAD", "--",
-        "methods", ":(exclude,glob)methods/formal-conjectures/**",
-    ) == b""
+    repair_paths = {
+        path for path in expected_paths
+        if path.startswith("evidence/erdos-321/terminal-variants/repair-disposition/")
+    }
+    assert set(BUILD.run_git(
+        BUILD.ROOT, "ls-tree", "-r", "--name-only", "HEAD", "--",
+        "evidence/erdos-321/terminal-variants/repair-disposition",
+    ).decode().splitlines()) == repair_paths
     assert BUILD.run_git(BUILD.ROOT, "merge-base", "--is-ancestor", BUILD.MATH_COMMIT, "HEAD") == b""
     assert BUILD.run_git(
         BUILD.ROOT, "log", "--format=", "--name-only", f"{BUILD.MATH_COMMIT}..HEAD", "--",

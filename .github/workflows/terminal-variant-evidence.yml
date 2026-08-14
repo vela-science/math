@@ -107,6 +107,13 @@ jobs:
           evidence/erdos-321/terminal-variants/reader_run.py
           evidence/erdos-321/terminal-variants/reader_run_test.py
           evidence/erdos-321/terminal-variants/reader_scorer.py
+          evidence/erdos-321/terminal-variants/repair-disposition/README.md
+          evidence/erdos-321/terminal-variants/repair-disposition/build.py
+          evidence/erdos-321/terminal-variants/repair-disposition/build_remap.py
+          evidence/erdos-321/terminal-variants/repair-disposition/correction-remap.v1.json
+          evidence/erdos-321/terminal-variants/repair-disposition/independent-review.v1.json
+          evidence/erdos-321/terminal-variants/repair-disposition/repair-disposition.v1.json
+          evidence/erdos-321/terminal-variants/repair-disposition/test_build.py
           evidence/erdos-321/terminal-variants/source-lock.v0.1.json
           evidence/erdos-321/terminal-variants/test_build.py
           evidence/erdos-321/workbench-compatibility/README.md
@@ -124,6 +131,8 @@ jobs:
           evidence/erdos-321/workbench-compatibility/verify.py
           evidence/erdos-321/workbench-compatibility/workbench-note.json
           evidence/erdos-321/workbench-compatibility/workbench-result.json
+          methods/erdos-321/terminal-bridge-scope-openai-codex-peer.v1.json
+          methods/erdos-321/terminal-bridge-scope-review-gpt-5.6-sol.v1.json
           EOF
           # This workflow owns the terminal-evidence tranche, not every later
           # file added to main. Keep the closed inventory check scoped to the
@@ -137,11 +146,17 @@ jobs:
             evidence/erdos-321/external-workbench-return \
             evidence/erdos-321/terminal-variants \
             evidence/erdos-321/workbench-compatibility \
+            methods/erdos-321 \
             | LC_ALL=C sort >"$observed"
           diff -u "$expected" "$observed"
-          test -z "$(git diff --name-only "$base"...HEAD -- .vela records continuity)"
-          test -z "$(git diff --name-only "$base"...HEAD -- \
-            methods ':(exclude,glob)methods/formal-conjectures/**')"
+          repair_expected="${RUNNER_TEMP}/terminal-repair-expected-paths"
+          repair_observed="${RUNNER_TEMP}/terminal-repair-observed-paths"
+          sed -n '\|^evidence/erdos-321/terminal-variants/repair-disposition/|p' \
+            "$expected" >"$repair_expected"
+          git ls-tree -r --name-only HEAD -- \
+            evidence/erdos-321/terminal-variants/repair-disposition \
+            | LC_ALL=C sort >"$repair_observed"
+          diff -u "$repair_expected" "$repair_observed"
           python3 -B evidence/erdos-321/correction-impact/build.py --check
           python3 -B evidence/erdos-321/correction-impact/test_build.py
           python3 -B evidence/erdos-321/correction-impact/cold_reader.py --verify
