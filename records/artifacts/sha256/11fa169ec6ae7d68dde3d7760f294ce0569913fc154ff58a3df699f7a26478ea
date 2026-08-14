@@ -1,0 +1,127 @@
+{
+  "schema": "vela.math.attributed-review-report.v1",
+  "recorded_at": "2026-08-14T10:08:46Z",
+  "authority_effect": "none",
+  "subject": {
+    "proposal_id": "vpr_58c2f9ae80498879",
+    "proposal_root": "sha256:58c2f9ae804988795c587e3b788382f49c2c6a2f01ed8cf35242a7dec57b6172",
+    "claim_id": "vcl_a618b77ab0f6a4b5b186133e37af555a22c6acb71a4746bab0b144b8973668a6",
+    "claim_root": "sha256:8ea9f7150743ba0919a9d40aa0e632e1171b0a2ecdce20e76d6068e1427a647e",
+    "property": "claim_revision_fidelity"
+  },
+  "outcome": "pass",
+  "method": {
+    "path": "methods/erdos-321/claim-revision-fidelity.v1.json",
+    "raw_sha256": "sha256:60aac74164bec680a94e2903c4823bc00a3a23f03d2178f815d86a67560f7d4d"
+  },
+  "reviewer": {
+    "attested_by_actor_id": "verifier:codex-lean-audit",
+    "activity_id": "codex-task:/root/lean_audit",
+    "actor_class": "agent",
+    "display_name": "GPT-5.6 Sol review agent",
+    "model_entity": {
+      "kind": "ai_model",
+      "provider": "OpenAI",
+      "identifier": "gpt-5.6-sol",
+      "version": null
+    },
+    "tool_entities": [
+      {
+        "kind": "command_line_tool",
+        "identifier": "vela",
+        "version": "0.974.2"
+      },
+      {
+        "kind": "runtime",
+        "identifier": "python3",
+        "version": "system"
+      },
+      {
+        "kind": "version_control",
+        "identifier": "git",
+        "version": "system"
+      }
+    ],
+    "recorded_by": "agent:codex-math-321-launch-supervisor"
+  },
+  "inputs": {
+    "packet_base_commit": "e68ee391b54fc86b4bd5abf65215cdd4de8fafdc",
+    "packet_base_tree": "be3d0dfb9450490a1baffb4bae988252f60b0cd5",
+    "transaction_commit": "7f022e999f1007620c4b9d258cd7c14512e5930f",
+    "transaction_tree": "f0c14fe17fcbc92f83db4df5855bc8041a2837d7",
+    "predecessor_claim": {
+      "id": "vcl_3d4fd59554ccaa2b792b08abae16a8d0fe329d4901ad798fe05c6c7769c9966b",
+      "root": "sha256:d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776"
+    },
+    "submission": {
+      "id": "vsb_e1025b3c5f4b2375",
+      "root": "sha256:e1025b3c5f4b2375fe1e3c0d6497bd7a53d24f64b94988a6ad2e9abd55e1597f"
+    },
+    "correction_plan": {
+      "path": "evidence/erdos-321/claim-occurrence-correction/correction-plan.v1.json",
+      "content_root": "sha256:f2d8bd26ee37a0fb10679d215586f2cd5eb1abd0d3de7a1fa665315e907e30ca",
+      "raw_sha256": "sha256:7ff1594c8052795a81102c08e9c8092c21e0ef777a16df6b8f513b2f3fb3a022"
+    },
+    "occurrence_packet": {
+      "path": "evidence/erdos-321/claim-occurrence-correction/occurrence-resolution.v1.json",
+      "content_root": "sha256:e1bd42900378d2cfff08be12b40e79ee005c8211477f8ce91a652ad06a65c80d",
+      "raw_sha256": "sha256:7b0da0354c5fb7993b586d0f5f4eeae22bc890e3ceb77017cb0dc6f4f4aadf83"
+    }
+  },
+  "findings": [
+    {
+      "claim": "The successor is exactly revision 2 and has one corrects relation to the accepted predecessor.",
+      "result": "supported",
+      "witness": "The authenticated Submission requests correct_claim against the exact predecessor id and root; the resulting Claim carries only that corrects relation."
+    },
+    {
+      "claim": "The bounded scientific scope is preserved.",
+      "result": "supported",
+      "witness": "The successor preserves the two-sided bound, denotational-sameness, candidate-answer, non-proof, open-problem, unavailable-answer, and recorded-CI limitations."
+    },
+    {
+      "claim": "The correction replaces shortened and unrooted source identity with exact source and occurrence identity.",
+      "result": "supported",
+      "witness": "The successor names the full Formal Conjectures commit, exact declarations, and exact reviewed resolver root without asserting statement equivalence."
+    },
+    {
+      "claim": "Future protocol identities were not fabricated by the preparation packet.",
+      "result": "supported",
+      "witness": "Four coherently rerooted attacks fabricating future Claim and Proposal identifiers were refused by the deterministic preparation checker."
+    }
+  ],
+  "independence": {
+    "declared_independent_of": [
+      "agent:codex-math-321-correction"
+    ],
+    "independent": true,
+    "independent_dimensions": [
+      "agent context",
+      "task context",
+      "analysis"
+    ],
+    "not_independent_dimensions": [
+      "supervising session",
+      "provider",
+      "local host and filesystem",
+      "retained evidence"
+    ],
+    "shared_dependencies": [
+      "The committed correction-plan generator and checker.",
+      "The exact retained Math repository bytes and Vela 0.974.2 readers.",
+      "The same OpenAI Codex supervisor and local macOS operator infrastructure."
+    ],
+    "was_blind": false,
+    "external_independence_claimed": false
+  },
+  "limitations": [
+    "The reviewer did not rerun external Web or source resolution; that is the separate subject_occurrence_mapping property.",
+    "This is same-supervisor attributed peer review, not external adoption or independent governance.",
+    "A passing revision-fidelity review does not prove the mathematical assertion, accept the Proposal, or change Standing."
+  ],
+  "does_not_establish": [
+    "Scientific truth or resolution of Erdős problem 321.",
+    "Statement equivalence across source occurrences.",
+    "Acceptance, adoption, or Standing."
+  ]
+}
