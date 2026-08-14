@@ -1,0 +1,6 @@
+Erdos887.erdos_887.parts.ii :
+  ∃ K, ∀ C > 0, ∀ᶠ (n : ℕ) in Filter.atTop, {d ∈ Finset.Ioo ⌊√↑n⌋₊ ⌈√↑n + C * ↑n ^ (1 / 4)⌉₊ | d ∣ n}.card ≤ K
+ProofAttempt.lean:3:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+'Erdos887.erdos_887.parts.ii' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

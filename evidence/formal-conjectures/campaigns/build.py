@@ -97,7 +97,7 @@ def build():
             "AI and human performer classes are provenance, not an evidentiary ranking.",
             "The accepted scientific Decision does not establish program completion, reward eligibility, deployment, or Erdős problem 887.",
             "This single case does not establish that staged open work is effective or generalizable.",
-            "No payment, allocation, credential, or successor Work Offer is created here.",
+            "This closed Campaign creates no payment, allocation, credential, or authority for the separately issued successor Work Offer.",
         ],
         "outcomes": {
             "downstream": {"status": "not_measured"},

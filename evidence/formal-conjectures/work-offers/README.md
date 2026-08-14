@@ -1,18 +1,21 @@
-# Formal Conjectures source-local work offer
+# Formal Conjectures source-local Work Offers
 
-This directory retains one closed Math Work Offer: repair the answer-slot scope
-defect in the exact retained head of Formal Conjectures PR 1237 for Erdős 887.
-The source audit reported `needs_revision` even though the exact head built
-successfully. That separation remains the point of the exercise.
+Math owns two related records for Erdős 887:
+
+- `erdos:887` is the closed source-fidelity repair. It corrected the answer-slot
+  scope defect found in Formal Conjectures PR 1237.
+- `erdos:887:proof-discharge` is the open mathematical obligation for the
+  corrected `Erdos887.erdos_887.parts.ii` declaration at upstream commit
+  `158727e...`.
 
 The offer is a source-local activity packet, not a Vela protocol object. It
 cannot create a Verification, Decision, Event, or change to Math Standing.
 The Web activity plane may retain the exact Target identifier and packet root,
 but it cannot sign or decide scientific state.
 
-The packet explicitly forbids upstream comments or reviews without separate
-authorization. Its proof and source artifacts may be public, while participant
-private data is forbidden from the public packet.
+Both packets forbid upstream writes without separate authorization. Proof and
+source artifacts may be public. Participant private data may not enter these
+records.
 
 The immutable issued packet is restored at its exact executed root
 `sha256:a2cfe3df...bfd057`. Its producer profile, verifier capsule, result
@@ -34,28 +37,58 @@ python3 -B evidence/formal-conjectures/work-offers/build.py \
   --print-target erdos:887
 python3 -B evidence/formal-conjectures/work-offers/test_build.py
 python3 -B \
-  evidence/formal-conjectures/work-offers/execution/erdos-887-pr-1237-fidelity-repair/verify_binding.py
+  evidence/formal-conjectures/work-offers/results/erdos-887-pilot-02-current-binding/test_result.py
 ```
 
-The retained result has bounded attributed source-fidelity reviews. Human and
-AI-model method examples are retained under
+The retained repair result has attributed source-fidelity review. Human and
+AI-model method examples live under
 [`methods/review-provenance/`](../../../methods/review-provenance/README.md);
 the historical human-specific guide remains at
 [`results/erdos-887-pilot-02-current-binding/HUMAN_REVIEW.md`](results/erdos-887-pilot-02-current-binding/HUMAN_REVIEW.md).
-The committed method keeps the semantic question and the execution-binding
-check separate. A named reviewer chooses and signs the outcome; this repository
-does not infer it from Lean success or rank reviewer kinds by type.
+Current policy treats agent, human, organization, and deterministic-tool performers as
+peer provenance classes. Each result records the performer, method, inputs,
+dependencies, independence, output, and limits. Performer class does not rank
+the evidence.
 
-`index.v1.json`, the packet, and the lifecycle record use canonical JSON plus
-one trailing LF. The index binds the current Math projection, the immutable
-issued packet, its complete execution binding, and the lifecycle root. The
-lifecycle binds the exact result, independent attributed review, scientific
-Decision and applied Event, explicit absence of program/deployment Decisions,
-retired administrative rebindings, and the next identified but unoffered
-Obligation. `--print-roots` prints the complete execution binding, lifecycle
-root, and index root.
+## Proof-discharge offer
+
+Build and inspect the open packet:
+
+```bash
+python3 -B evidence/formal-conjectures/work-offers/proof-discharge/build.py
+python3 -B evidence/formal-conjectures/work-offers/proof-discharge/build.py \
+  --check \
+  --print-roots
+python3 -B evidence/formal-conjectures/work-offers/proof-discharge/test_build.py
+```
+
+Prepare a clean public checkout at the packet's exact upstream commit:
+
+```bash
+python3 -B evidence/formal-conjectures/work-offers/proof-discharge/run_attempt.py
+```
+
+The first bounded attempt is retained under
+`results/erdos-887-proof-discharge-attempt-01/`. It records an agent performer,
+the exact 4.27 toolchain and source, a same-machine compatible cache disclosure,
+the current `sorryAx` dependency, and the terminal goal left by exhaustive
+`aesop`. Its terminal state is `not_proved_within_declared_bounds`. The offer
+stays open because one bounded attempt neither proves the theorem nor exhausts
+other methods.
+
+Verify that result with:
+
+```bash
+python3 -B evidence/formal-conjectures/work-offers/proof-discharge/capture_result.py \
+  --check \
+  --output evidence/formal-conjectures/work-offers/results/erdos-887-proof-discharge-attempt-01
+```
+
+`index.v1.json`, packets, results, and the closed lifecycle use canonical JSON
+plus one trailing LF. The index binds the closed repair and the open proof
+offer, including all four execution roots and the first attempt root.
 
 The retained `erdos-887-pilot-01` result predates the execution-component
 extension. Its verifier reconstructs and checks the former packet preimage. No
-historical result is rebound to a later packet, and the closed index publishes
-no next command or open Work Offer.
+historical result is rebound to a later packet. Only the proof-discharge offer
+publishes a next command.

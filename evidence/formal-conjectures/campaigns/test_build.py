@@ -33,8 +33,10 @@ class CampaignTests(TestCase):
         campaign, _ = BUILD.build()
         self.assertEqual(campaign["resources"]["reward_commitment"], "none")
         self.assertEqual(campaign["resources"]["allocations"], [])
-        self.assertEqual(campaign["remap"]["state"], "identified_not_offered")
-        self.assertIn("No payment", " ".join(campaign["nonclaims"]))
+        self.assertEqual(campaign["remap"]["state"], "offered")
+        self.assertEqual(campaign["remap"]["work_offer"]["presence"], "open")
+        self.assertEqual(campaign["remap"]["next_obligation"]["authority_effect"], "none")
+        self.assertIn("no payment", " ".join(campaign["nonclaims"]))
 
     def test_open_reissue_and_contract_rewrite_are_refused(self):
         original = BUILD._load

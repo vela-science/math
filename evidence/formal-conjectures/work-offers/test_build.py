@@ -30,6 +30,13 @@ class WorkOfferLifecycleTests(TestCase):
         self.assertEqual(index["authority_effect"], "none")
         self.assertEqual(index["targets"][0]["presence"], "superseded")
         self.assertIsNone(index["targets"][0]["next_command"])
+        self.assertEqual(index["targets"][1]["id"], BUILD.PROOF_TARGET_ID)
+        self.assertEqual(index["targets"][1]["presence"], "open")
+        self.assertIsInstance(index["targets"][1]["next_command"], str)
+        self.assertNotIn("lifecycle", index["targets"][1])
+        self.assertEqual(len(index["targets"][1]["attempts"]), 1)
+        self.assertEqual(index["targets"][1]["attempts"][0]["terminal_state"], "not_proved_within_declared_bounds")
+        self.assertEqual(index["targets"][1]["attempts"][0]["performer"]["actor_class"], "agent")
 
     def test_exact_issued_packet_is_restored_instead_of_rebound(self) -> None:
         packet, packet_raw, lifecycle, _, index, _ = BUILD.build()
@@ -65,19 +72,23 @@ class WorkOfferLifecycleTests(TestCase):
         self.assertEqual(decisions["program"]["status"], "not_applicable")
         self.assertEqual(decisions["deployment"]["status"], "not_applicable")
         self.assertEqual(decisions["program"]["authority_effect"], "none")
-        self.assertEqual(lifecycle["remap"]["state"], "identified_not_offered")
-        self.assertIn("not an open Work Offer", " ".join(lifecycle["nonclaims"]))
+        self.assertEqual(lifecycle["remap"]["state"], "offered")
+        self.assertEqual(lifecycle["remap"]["work_offer"]["presence"], "open")
+        self.assertEqual(lifecycle["remap"]["work_offer"]["execution_binding"]["schema"], "vela.execution-binding.v1")
+        self.assertIn("carries no scientific authority", " ".join(lifecycle["nonclaims"]))
 
     def test_repository_root_advancement_cannot_reissue_packet(self) -> None:
-        packet, _, lifecycle, _, index, _ = BUILD.build()
+        packet, packet_raw, lifecycle, _, index, _ = BUILD.build()
+        proof_packet, proof_packet_raw = BUILD.load_proof_packet()
         advanced = copy.deepcopy(index["repository"])
         advanced["repository_root"] = "sha256:" + "9" * 64
         with mock.patch.object(BUILD, "_repository_binding", return_value=advanced):
-            _, _, rebuilt_lifecycle, _, rebuilt_index, _ = BUILD.build()
+            with self.assertRaisesRegex(BUILD.WorkOfferError, "proof-discharge packet Repository root drift"):
+                BUILD.build()
+        rebuilt_lifecycle = BUILD.build_lifecycle(packet, packet_raw, proof_packet, proof_packet_raw)
         self.assertEqual(rebuilt_lifecycle["lifecycle_root"], lifecycle["lifecycle_root"])
-        self.assertEqual(rebuilt_index["targets"][0]["packet"]["packet_root"], packet["packet_root"])
-        self.assertEqual(rebuilt_index["targets"][0]["presence"], "superseded")
-        self.assertEqual(rebuilt_index["repository"]["repository_root"], advanced["repository_root"])
+        self.assertEqual(index["targets"][0]["packet"]["packet_root"], packet["packet_root"])
+        self.assertEqual(index["targets"][0]["presence"], "superseded")
 
     def test_review_or_decision_binding_drift_is_refused(self) -> None:
         original_load = BUILD._load
@@ -106,6 +117,21 @@ class WorkOfferLifecycleTests(TestCase):
     def test_duplicate_json_keys_are_refused(self) -> None:
         with self.assertRaisesRegex(BUILD.WorkOfferError, "duplicate JSON key"):
             json.loads('{"a":1,"a":2}', object_pairs_hook=BUILD._reject_duplicate_keys)
+
+    def test_proof_attempt_binding_drift_is_refused(self) -> None:
+        packet, _ = BUILD.load_proof_packet()
+        original_load = BUILD._load
+        result = original_load(BUILD.PROOF_RESULT_PATH)
+        changed = copy.deepcopy(result)
+        changed["execution_binding"]["profile_root"] = "sha256:" + "0" * 64
+        changed["result_root"] = BUILD._root_without(changed, "result_root")
+        with mock.patch.object(
+            BUILD,
+            "_load",
+            side_effect=lambda path, **kwargs: changed if path == BUILD.PROOF_RESULT_PATH else original_load(path, **kwargs),
+        ):
+            with self.assertRaisesRegex(BUILD.WorkOfferError, "attempt binding or root drift"):
+                BUILD.load_proof_attempt(packet)
 
 
 if __name__ == "__main__":

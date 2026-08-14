@@ -1,0 +1,1 @@
+HEAD:FormalConjectures/ErdosProblems/887.lean:43:theorem erdos_887.parts.ii : ∃ K, ∀ C > (0 : ℝ), ∀ᶠ n in atTop,

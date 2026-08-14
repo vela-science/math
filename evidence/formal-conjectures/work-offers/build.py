@@ -17,6 +17,10 @@ REPO_ROOT = HERE.parents[2]
 PROJECTION_PATH = REPO_ROOT / "evidence/formal-conjectures/source-adapter/projection.v1.json"
 REPOSITORY_PATH = REPO_ROOT / ".vela/repository.json"
 PACKET_PATH = HERE / "packets/erdos-887-pr-1237-fidelity-repair.v1.json"
+PROOF_PACKET_PATH = HERE / "packets/erdos-887-proof-discharge.v1.json"
+PROOF_BUILDER_PATH = HERE / "proof-discharge/build.py"
+PROOF_RESULT_BUILDER_PATH = HERE / "proof-discharge/capture_result.py"
+PROOF_RESULT_PATH = HERE / "results/erdos-887-proof-discharge-attempt-01/result.v1.json"
 ISSUED_PACKET_SOURCE_PATH = HERE / "results/erdos-887-pilot-02-current-binding/target-packet.v1.json"
 RESULT_PATH = HERE / "results/erdos-887-pilot-02-current-binding/result.v1.json"
 REVIEW_PATH = REPO_ROOT / "evidence/formal-conjectures/reviews/erdos-887-gpt-5.6-sol-peer-statement-fidelity.v1.json"
@@ -28,6 +32,7 @@ LIFECYCLE_PATH = HERE / "lifecycle/erdos-887-pr-1237-fidelity-repair.v1.json"
 INDEX_PATH = HERE / "index.v1.json"
 
 TARGET_ID = "erdos:887"
+PROOF_TARGET_ID = "erdos:887:proof-discharge"
 FIXTURE_ID = "fidelity-erdos-887-1237"
 ISSUANCE_COMMIT = "7d5f9290018a03ce395092096db34b46fcffe1a1"
 PROJECTION_SCHEMA = "vela.math.fc-pr-audit-projection.v1"
@@ -203,6 +208,75 @@ def load_issued_packet() -> tuple[dict[str, Any], bytes]:
     return packet, raw
 
 
+def load_proof_packet() -> tuple[dict[str, Any], bytes]:
+    subprocess.run(
+        ["python3", "-B", str(PROOF_BUILDER_PATH.relative_to(REPO_ROOT)), "--check"],
+        cwd=REPO_ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    packet = _load(PROOF_PACKET_PATH)
+    raw = PROOF_PACKET_PATH.read_bytes()
+    if packet.get("schema") != "vela.math.proof-discharge-target-packet.v1" or packet.get("authority_effect") != "none":
+        raise WorkOfferError("proof-discharge packet schema or authority drift")
+    if packet.get("packet_root") != _root_without(packet, "packet_root"):
+        raise WorkOfferError("proof-discharge packet root drift")
+    if packet.get("target", {}).get("id") != PROOF_TARGET_ID:
+        raise WorkOfferError("proof-discharge packet Target drift")
+    repository = packet.get("repository", {})
+    if repository.get("repository_id") != _repository_binding()["repository_id"]:
+        raise WorkOfferError("proof-discharge packet Repository identity drift")
+    if repository.get("repository_root") != _repository_binding()["repository_root"]:
+        raise WorkOfferError("proof-discharge packet Repository root drift")
+    projection, record, _, _ = _source_projection()
+    source = packet.get("source", {})
+    if source.get("projection_root") != projection["root"]["value"] or source.get("record_root") != record["root"]["value"]:
+        raise WorkOfferError("proof-discharge packet source projection drift")
+    components = packet.get("execution_components")
+    if not isinstance(components, dict) or components.get("authority_effect") != "none":
+        raise WorkOfferError("proof-discharge execution component boundary drift")
+    for name in ("producer_profile", "verifier_capsule", "result_contract"):
+        _validate_component(name, components[name])
+    return packet, raw
+
+
+def load_proof_attempt(packet: dict[str, Any]) -> tuple[dict[str, Any], bytes]:
+    output = PROOF_RESULT_PATH.parent
+    subprocess.run(
+        [
+            "python3",
+            "-B",
+            str(PROOF_RESULT_BUILDER_PATH.relative_to(REPO_ROOT)),
+            "--check",
+            "--output",
+            str(output.relative_to(REPO_ROOT)),
+        ],
+        cwd=REPO_ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    result = _load(PROOF_RESULT_PATH)
+    raw = PROOF_RESULT_PATH.read_bytes()
+    binding = {
+        "schema": EXECUTION_BINDING_SCHEMA,
+        "packet_root": packet["packet_root"],
+        "profile_root": packet["execution_components"]["producer_profile"]["root"],
+        "verifier_capsule_root": packet["execution_components"]["verifier_capsule"]["root"],
+        "result_contract_root": packet["execution_components"]["result_contract"]["root"],
+    }
+    if (
+        result.get("schema") != "vela.math.proof-attempt-result.v1"
+        or result.get("authority_effect") != "none"
+        or result.get("target_id") != PROOF_TARGET_ID
+        or result.get("execution_binding") != binding
+        or result.get("result_root") != _root_without(result, "result_root")
+    ):
+        raise WorkOfferError("proof-discharge attempt binding or root drift")
+    return result, raw
+
+
 def _validate_rebinding_history() -> list[dict[str, str]]:
     recovered: list[dict[str, str]] = []
     for commit, packet_root in RETIRED_REBINDINGS:
@@ -217,11 +291,16 @@ def _validate_rebinding_history() -> list[dict[str, str]]:
     return recovered
 
 
-def build_lifecycle(packet: dict[str, Any], packet_raw: bytes) -> dict[str, Any]:
+def build_lifecycle(
+    packet: dict[str, Any],
+    packet_raw: bytes,
+    proof_packet: dict[str, Any],
+    proof_packet_raw: bytes,
+) -> dict[str, Any]:
     result = _load(RESULT_PATH)
     review = _load(REVIEW_PATH)
     proposal = _load(PROPOSAL_PATH, require_framed_lf=False)
-    claim = _load(CLAIM_PATH, require_framed_lf=False)
+    _load(CLAIM_PATH, require_framed_lf=False)
     decision = _load(DECISION_EVENT_PATH, require_framed_lf=False)
     application = _load(APPLICATION_EVENT_PATH, require_framed_lf=False)
     result_raw = RESULT_PATH.read_bytes()
@@ -322,7 +401,7 @@ def build_lifecycle(packet: dict[str, Any], packet_raw: bytes) -> dict[str, Any]
             },
         },
         "remap": {
-            "state": "identified_not_offered",
+            "state": "offered",
             "next_obligation": {
                 "id": "erdos:887:proof-discharge",
                 "title": "Discharge the remaining proof placeholder for the corrected Erdős 887 declaration",
@@ -330,7 +409,18 @@ def build_lifecycle(packet: dict[str, Any], packet_raw: bytes) -> dict[str, Any]
                 "basis_claim_root": applied_payload["claim_root"],
                 "authority_effect": "none",
             },
-            "reason": "The correction is retained in Math Standing, while the mathematical proposition remains unproved and no successor Work Offer has been issued.",
+            "work_offer": {
+                "presence": "open",
+                "packet": _descriptor(PROOF_PACKET_PATH, proof_packet, proof_packet_raw, "packet_root"),
+                "execution_binding": {
+                    "schema": EXECUTION_BINDING_SCHEMA,
+                    "packet_root": proof_packet["packet_root"],
+                    "profile_root": proof_packet["execution_components"]["producer_profile"]["root"],
+                    "verifier_capsule_root": proof_packet["execution_components"]["verifier_capsule"]["root"],
+                    "result_contract_root": proof_packet["execution_components"]["result_contract"]["root"],
+                },
+            },
+            "reason": "Math retained the correction in Standing and issued a separate source-owned offer for the still-open mathematical proof obligation.",
         },
         "retired_rebindings": _validate_rebinding_history(),
         "nonclaims": [
@@ -338,7 +428,7 @@ def build_lifecycle(packet: dict[str, Any], packet_raw: bytes) -> dict[str, Any]
             "The scientific Decision remains valid and separate from the source-owned Work Offer contract gap.",
             "Neither the retained result nor its attributed agent review proves Erdős problem 887.",
             "The program and deployment domains have no Decision because neither domain was part of the issued contract.",
-            "The identified next Obligation is not an open Work Offer and authorizes no upstream action.",
+            "The open successor Work Offer carries no scientific authority and authorizes no upstream action.",
             "This lifecycle projection references the scientific Decision but carries no authority of its own.",
         ],
         "lifecycle_root_definition": "sha256 of canonical JSON after removing only lifecycle_root",
@@ -347,7 +437,16 @@ def build_lifecycle(packet: dict[str, Any], packet_raw: bytes) -> dict[str, Any]
     return lifecycle
 
 
-def build_index(packet: dict[str, Any], packet_raw: bytes, lifecycle: dict[str, Any], lifecycle_raw: bytes) -> dict[str, Any]:
+def build_index(
+    packet: dict[str, Any],
+    packet_raw: bytes,
+    lifecycle: dict[str, Any],
+    lifecycle_raw: bytes,
+    proof_packet: dict[str, Any],
+    proof_packet_raw: bytes,
+    proof_result: dict[str, Any],
+    proof_result_raw: bytes,
+) -> dict[str, Any]:
     projection, record, source_commit, source_tree = _source_projection()
     binding = {
         "schema": EXECUTION_BINDING_SCHEMA,
@@ -355,6 +454,13 @@ def build_index(packet: dict[str, Any], packet_raw: bytes, lifecycle: dict[str, 
         "profile_root": packet["execution_components"]["producer_profile"]["root"],
         "verifier_capsule_root": packet["execution_components"]["verifier_capsule"]["root"],
         "result_contract_root": packet["execution_components"]["result_contract"]["root"],
+    }
+    proof_binding = {
+        "schema": EXECUTION_BINDING_SCHEMA,
+        "packet_root": proof_packet["packet_root"],
+        "profile_root": proof_packet["execution_components"]["producer_profile"]["root"],
+        "verifier_capsule_root": proof_packet["execution_components"]["verifier_capsule"]["root"],
+        "result_contract_root": proof_packet["execution_components"]["result_contract"]["root"],
     }
     index: dict[str, Any] = {
         "schema": INDEX_SCHEMA,
@@ -368,22 +474,44 @@ def build_index(packet: dict[str, Any], packet_raw: bytes, lifecycle: dict[str, 
             "record_root": record["root"]["value"],
         },
         "claim_boundary": {"derived": True, "authoritative": False, "deletable": True},
-        "targets": [{
-            "id": TARGET_ID,
-            "title": packet["target"]["title"],
-            "presence": "superseded",
-            "rank": 1,
-            "lane": "source-fidelity-repair",
-            "objective": packet["objective"],
-            "verifier_profile": "lean-build-plus-attributed-source-fidelity-review.v1",
-            "next_command": None,
-            "execution_binding": binding,
-            "packet": _descriptor(PACKET_PATH, packet, packet_raw, "packet_root"),
-            "lifecycle": _descriptor(LIFECYCLE_PATH, lifecycle, lifecycle_raw, "lifecycle_root"),
-        }],
+        "targets": [
+            {
+                "id": TARGET_ID,
+                "title": packet["target"]["title"],
+                "presence": "superseded",
+                "rank": 1,
+                "lane": "source-fidelity-repair",
+                "objective": packet["objective"],
+                "verifier_profile": "lean-build-plus-attributed-source-fidelity-review.v1",
+                "next_command": None,
+                "execution_binding": binding,
+                "packet": _descriptor(PACKET_PATH, packet, packet_raw, "packet_root"),
+                "lifecycle": _descriptor(LIFECYCLE_PATH, lifecycle, lifecycle_raw, "lifecycle_root"),
+            },
+            {
+                "id": PROOF_TARGET_ID,
+                "title": proof_packet["target"]["title"],
+                "presence": "open",
+                "rank": 2,
+                "lane": "proof-discharge",
+                "objective": proof_packet["objective"],
+                "verifier_profile": "lean-kernel-no-sorry-plus-attributed-proof-review.v1",
+                "next_command": "python3 -B evidence/formal-conjectures/work-offers/proof-discharge/run_attempt.py",
+                "execution_binding": proof_binding,
+                "packet": _descriptor(PROOF_PACKET_PATH, proof_packet, proof_packet_raw, "packet_root"),
+                "attempts": [
+                    {
+                        "terminal_state": proof_result["terminal_state"],
+                        "performer": proof_result["producer"],
+                        "result": _descriptor(PROOF_RESULT_PATH, proof_result, proof_result_raw, "result_root"),
+                    },
+                ],
+            },
+        ],
         "nonclaims": [
             "This index is a disposable source-local work projection and carries no scientific authority.",
             "A superseded offer is not open work and may not be rebound to a later Repository root as a fresh issuance.",
+            "The open proof-discharge offer permits an honest bounded non-success result; issuance does not predict a proof.",
             "Scientific, program, and deployment Decisions remain independent domains.",
         ],
         "index_root_definition": "sha256 of canonical JSON after removing only index_root",
@@ -394,9 +522,20 @@ def build_index(packet: dict[str, Any], packet_raw: bytes, lifecycle: dict[str, 
 
 def build() -> tuple[dict[str, Any], bytes, dict[str, Any], bytes, dict[str, Any], bytes]:
     packet, packet_raw = load_issued_packet()
-    lifecycle = build_lifecycle(packet, packet_raw)
+    proof_packet, proof_packet_raw = load_proof_packet()
+    proof_result, proof_result_raw = load_proof_attempt(proof_packet)
+    lifecycle = build_lifecycle(packet, packet_raw, proof_packet, proof_packet_raw)
     lifecycle_raw = _canonical_bytes(lifecycle) + b"\n"
-    index = build_index(packet, packet_raw, lifecycle, lifecycle_raw)
+    index = build_index(
+        packet,
+        packet_raw,
+        lifecycle,
+        lifecycle_raw,
+        proof_packet,
+        proof_packet_raw,
+        proof_result,
+        proof_result_raw,
+    )
     index_raw = _canonical_bytes(index) + b"\n"
     return packet, packet_raw, lifecycle, lifecycle_raw, index, index_raw
 
@@ -418,14 +557,16 @@ def main() -> int:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(raw)
     if args.print_target is not None:
-        if args.print_target != TARGET_ID:
+        matches = [target for target in index["targets"] if target["id"] == args.print_target]
+        if len(matches) != 1:
             raise SystemExit(f"unknown Target: {args.print_target}")
-        print(_canonical_bytes(index["targets"][0]).decode("utf-8"))
+        print(_canonical_bytes(matches[0]).decode("utf-8"))
     if args.print_roots:
         print(json.dumps({
             "index_root": index["index_root"],
             "lifecycle_root": lifecycle["lifecycle_root"],
             **index["targets"][0]["execution_binding"],
+            "proof_execution_binding": index["targets"][1]["execution_binding"],
         }, sort_keys=True))
     return 0
 

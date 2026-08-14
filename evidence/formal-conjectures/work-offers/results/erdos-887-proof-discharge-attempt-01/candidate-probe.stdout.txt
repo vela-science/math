@@ -1,0 +1,6 @@
+ProofCandidate.lean:4:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+ProofCandidate.lean:8:2: warning: aesop: failed to prove the goal after exhaustive search.
+ProofCandidate.lean:7:66: error: unsolved goals
+⊢ ∃ K, ∀ (C : ℝ), 0 < C → ∃ a, ∀ (b : ℕ), a ≤ b → #({d ∈ Ioo b.sqrt ⌈√↑b + C * ↑b ^ 4⁻¹⌉₊ | d ∣ b}) ≤ K

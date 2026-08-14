@@ -75,9 +75,10 @@ and replay checks; actor class is provenance, not a quality rank.
   compatibility evidence, not independent adoption or scientific authority.
 - [External-workbench return boundary](evidence/erdos-321/external-workbench-return/README.md)
 - [Formal Conjectures current work offer](evidence/formal-conjectures/work-offers/README.md)
-  strictly retains a future separately operated result as an unverified,
-  non-authoritative receipt. Schema conformance does not establish operator
-  independence, scientific correctness, adoption, or human acceptance.
+  binds the closed source-fidelity repair and the open Erdős 887 proof-discharge
+  obligation. Its first attributed agent attempt retains the exact source,
+  toolchain, `sorryAx` audit, failed tactic goal, and bounded non-success result.
+  It changes no scientific Standing and authorizes no upstream action.
 
 ## Protocol continuity
 

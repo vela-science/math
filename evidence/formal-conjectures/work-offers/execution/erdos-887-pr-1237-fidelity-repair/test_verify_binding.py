@@ -17,6 +17,9 @@ SPEC = importlib.util.spec_from_file_location(
 assert SPEC and SPEC.loader
 MODULE = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(MODULE)
+# The verifier implementation is part of the immutable historical packet. Test
+# it against the retained issued index, not the evolving current offer index.
+MODULE.INDEX = MODULE.WORK_OFFERS / "results/erdos-887-pilot-02-current-binding/work-offer-index.v1.json"
 
 
 class BindingTest(unittest.TestCase):

@@ -48,6 +48,17 @@ jobs:
           python3 -B methods/review-provenance/test_review_methods.py
           python3 -B evidence/formal-conjectures/source-adapter/test_adapter.py
           python3 -B evidence/formal-conjectures/source-adapter/build.py --check
+          python3 -B evidence/formal-conjectures/work-offers/proof-discharge/build.py --check
+          python3 -B evidence/formal-conjectures/work-offers/proof-discharge/capture_result.py \
+            --check \
+            --output evidence/formal-conjectures/work-offers/results/erdos-887-proof-discharge-attempt-01
+          python3 -B evidence/formal-conjectures/work-offers/proof-discharge/test_build.py
+          python3 -B evidence/formal-conjectures/work-offers/build.py --check
+          python3 -B evidence/formal-conjectures/work-offers/test_build.py
+          python3 -B evidence/formal-conjectures/campaigns/build.py --check
+          python3 -B evidence/formal-conjectures/campaigns/test_build.py
+          python3 -B evidence/formal-conjectures/work-offers/execution/erdos-887-pr-1237-fidelity-repair/test_verify_binding.py
+          python3 -B evidence/formal-conjectures/work-offers/results/erdos-887-pilot-02-current-binding/test_result.py
           while IFS= read -r -d '' document; do
             python3 -B -m json.tool "$document" >/dev/null
           done < <(find evidence/formal-conjectures methods/formal-conjectures methods/review-provenance methods/source-adapters -type f -name '*.json' -print0)
