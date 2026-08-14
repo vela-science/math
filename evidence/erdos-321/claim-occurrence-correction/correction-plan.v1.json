@@ -1,0 +1,255 @@
+{
+  "packet_format": "vela.math.claim-correction-preparation.v1",
+  "authority_effect": "none",
+  "repository": {
+    "id": "8115c538-7688-40b7-ab75-3c4765bf3c19",
+    "repository_root": "sha256:ae41be4a91265d91967344459fa12583314ec05c5a0ebc74d8b0136195879511",
+    "authority_policy_root": "sha256:b9cdcd8061ea0693769b20288590dbb672984f5ff81ea7a7631a4d20eafe3cfe",
+    "authority_keyset_root": "sha256:cb06d8d9c2bcb88e0bcdfa908659f06cd6419d07f335ff1c956c1da64942f111",
+    "threshold": 1
+  },
+  "target": {
+    "claim_id": "vcl_3d4fd59554ccaa2b792b08abae16a8d0fe329d4901ad798fe05c6c7769c9966b",
+    "claim_root": "sha256:d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776",
+    "claim_path": "records/claims/sha256/d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776.json",
+    "revision": 1,
+    "standing": "accepted",
+    "raw_sha256": "sha256:d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776"
+  },
+  "requested_change": {
+    "action": "claim.revise",
+    "relation": "corrects",
+    "expected_revision": 2,
+    "target_claim_id": "vcl_3d4fd59554ccaa2b792b08abae16a8d0fe329d4901ad798fe05c6c7769c9966b",
+    "target_claim_root": "sha256:d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776",
+    "rationale": "Preserve the scientific scope while replacing a shortened source revision and unrooted subject references with full source and occurrence identities."
+  },
+  "successor_draft": {
+    "claim_id": null,
+    "claim_root": null,
+    "proposal_id": null,
+    "proposal_root": null,
+    "availability": "unavailable_until_authenticated_submission",
+    "assertion": "At Formal Conjectures commit 59f30aa314ba225fcd9268723ce8291616df1ab0, the Lean development starfleet/erdos-321 establishes a two-sided asymptotic bound on extremalSize, which denotes the same quantity as Formal Conjectures' Erdos321.R and therefore supplies a candidate answer for the exact occurrence Erdos321.erdos_321.variants.isTheta, not a proof of it. For occurrence resolution only, the exact occurrences Erdos321.erdos_321 and Erdos321.erdos_321.variants.isTheta are associated with problem:erdos:321 under resolver root sha256:a9d6787719c5c8069a9e14ade0f5a62975410272e6cd1583865b282d1d8669dd.",
+    "claim_type": "theoretical",
+    "replayability": "exact",
+    "conditions": [
+      "The scientific statement is scoped to Formal Conjectures commit 59f30aa314ba225fcd9268723ce8291616df1ab0 and lean-proofs commit a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0.",
+      "The resolver relation is navigation grouping only; it does not establish statement identity, semantic equivalence, proof, truth, acceptance, or Standing.",
+      "Erdős problem 321 remains open; this Claim does not assert resolution or optimality.",
+      "The kernel evidence remains a recorded CI attestation at an exact commit, not a fresh rebuild in this correction packet."
+    ],
+    "caveats": [
+      "The Formal Conjectures answer-slot values are unavailable and remain so; they are not converted to pass, fail, or zero.",
+      "The occurrence packet selectively retains three identities and omits other reviewed occurrences without denying their existence.",
+      "A successful occurrence or revision check does not accept this correction or change Standing."
+    ],
+    "verification_requirements": [
+      "subject_occurrence_mapping",
+      "claim_revision_fidelity"
+    ]
+  },
+  "artifacts": [
+    {
+      "kind": "subject-occurrence-mapping",
+      "path": "evidence/erdos-321/claim-occurrence-correction/occurrence-resolution.v1.json",
+      "digest": "sha256:37ec7e7a1c57e592509ef4fbbba30a6c1a00aee2084cf125c8349cdaf8dc9a8e",
+      "content_root": "sha256:a8f95b472b4e45c5d3f50a0e56fcbfc1773e97e7951c89e4001721804ed5a1b5",
+      "size": 6858
+    }
+  ],
+  "methods": [
+    {
+      "path": "methods/erdos-321/claim-revision-fidelity.v1.json",
+      "raw_sha256": "sha256:60aac74164bec680a94e2903c4823bc00a3a23f03d2178f815d86a67560f7d4d",
+      "size": 1478
+    },
+    {
+      "path": "methods/erdos-321/subject-occurrence-mapping.v1.json",
+      "raw_sha256": "sha256:a859e58d5e047eae0287aab30dfac591f406af19c09f334cf12ff70c27e6223b",
+      "size": 1411
+    }
+  ],
+  "command_sequence": [
+    {
+      "step": "submit",
+      "write_class": "producer_non_authority",
+      "requires": [
+        "explicit producer actor",
+        "producer signing identity",
+        "clean committed packet"
+      ],
+      "argv_template": [
+        "vela",
+        "submit",
+        "--repo",
+        ".",
+        "--claim",
+        "<successor_draft.assertion>",
+        "--type",
+        "theoretical",
+        "--replayability",
+        "exact",
+        "--artifact",
+        "evidence/erdos-321/claim-occurrence-correction/occurrence-resolution.v1.json:subject-occurrence-mapping",
+        "--condition",
+        "The scientific statement is scoped to Formal Conjectures commit 59f30aa314ba225fcd9268723ce8291616df1ab0 and lean-proofs commit a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0.",
+        "--condition",
+        "The resolver relation is navigation grouping only; it does not establish statement identity, semantic equivalence, proof, truth, acceptance, or Standing.",
+        "--condition",
+        "Erdős problem 321 remains open; this Claim does not assert resolution or optimality.",
+        "--condition",
+        "The kernel evidence remains a recorded CI attestation at an exact commit, not a fresh rebuild in this correction packet.",
+        "--caveat",
+        "The Formal Conjectures answer-slot values are unavailable and remain so; they are not converted to pass, fail, or zero.",
+        "--caveat",
+        "The occurrence packet selectively retains three identities and omits other reviewed occurrences without denying their existence.",
+        "--caveat",
+        "A successful occurrence or revision check does not accept this correction or change Standing.",
+        "--corrects",
+        "vcl_3d4fd59554ccaa2b792b08abae16a8d0fe329d4901ad798fe05c6c7769c9966b",
+        "--target-root",
+        "sha256:d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776",
+        "--requires-verification",
+        "subject_occurrence_mapping",
+        "--requires-verification",
+        "claim_revision_fidelity",
+        "--as",
+        "agent:<producer>",
+        "--json"
+      ],
+      "runtime_outputs": [
+        "submission_id",
+        "submission_root",
+        "claim_id",
+        "claim_root",
+        "proposal_id",
+        "proposal_root"
+      ]
+    },
+    {
+      "step": "verify_subject_occurrence",
+      "write_class": "verifier_non_authority",
+      "argv_template": [
+        "vela",
+        "verification",
+        "record",
+        ".",
+        "<proposal_id>",
+        "--profile",
+        "math-claim-occurrence-correction-v1",
+        "--method",
+        "methods/erdos-321/subject-occurrence-mapping.v1.json",
+        "--property",
+        "subject_occurrence_mapping",
+        "--outcome",
+        "<pass|fail|error|inconclusive>",
+        "--does-not-establish",
+        "Scientific acceptance, statement equivalence, truth, or Standing.",
+        "--as",
+        "verifier:<performer>",
+        "--json"
+      ]
+    },
+    {
+      "step": "verify_claim_revision",
+      "write_class": "verifier_non_authority",
+      "argv_template": [
+        "vela",
+        "verification",
+        "record",
+        ".",
+        "<proposal_id>",
+        "--profile",
+        "math-claim-occurrence-correction-v1",
+        "--method",
+        "methods/erdos-321/claim-revision-fidelity.v1.json",
+        "--property",
+        "claim_revision_fidelity",
+        "--outcome",
+        "<pass|fail|error|inconclusive>",
+        "--does-not-establish",
+        "Scientific acceptance, truth, or Standing.",
+        "--as",
+        "verifier:<performer>",
+        "--json"
+      ]
+    },
+    {
+      "step": "inspect_decision_inbox",
+      "write_class": "read_only",
+      "argv_template": [
+        "vela",
+        "review",
+        "inbox",
+        ".",
+        "--json"
+      ],
+      "runtime_outputs": [
+        "proposal_id",
+        "entry_root",
+        "protocol_readiness"
+      ]
+    },
+    {
+      "step": "decide",
+      "write_class": "authority",
+      "status": "blocked_until_exact_authorized_signer_and_entry_root_are_available",
+      "argv_template": [
+        "vela",
+        "review",
+        "accept",
+        ".",
+        "<proposal_id>",
+        "--if-entry-root",
+        "<entry_root>",
+        "--reason",
+        "<authorized reason>",
+        "--as",
+        "<attributed performer>",
+        "--session-ref",
+        "<source-owned session or checkpoint>",
+        "--json"
+      ],
+      "runtime_outputs": [
+        "decision",
+        "event",
+        "repository_root_before",
+        "repository_root_after"
+      ]
+    },
+    {
+      "step": "replay",
+      "write_class": "read_only",
+      "argv_template": [
+        "vela",
+        "replay",
+        ".",
+        "--json"
+      ]
+    }
+  ],
+  "authority_residual": {
+    "decision_required": true,
+    "signer_availability": "not_asserted",
+    "ssh_agent_probe": "not part of this generated packet",
+    "required_fingerprint": "ssh-ed25519:SHA256:QD4RXcjvjm+ImqEJjOPgr5boQO4b5ESjpt3yKQ6lUXM",
+    "authorized_principal": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+    "expected_transition_if_authorized": {
+      "predecessor_standing": "superseded",
+      "successor_standing": "accepted",
+      "event_kinds": [
+        "claim.superseded",
+        "review.accepted"
+      ]
+    }
+  },
+  "nonclaims": [
+    "This preparation packet performs no Vela write and creates no protocol object.",
+    "Null future identities are unavailable, not zero, failure, or synthetic identifiers.",
+    "A Verification pass would not imply acceptance; only an authorized Decision and replayed Event can change Standing.",
+    "The packet changes neither Protocol 1 nor the Repository authority policy or keyset."
+  ],
+  "content_root_definition": "sha256 of RFC-8785 JSON after removing only content_root",
+  "content_root": "sha256:17d3581635137021508c06fe2f6fdb9a4e98e72e4975717e0da5b83a0dea6aa0"
+}

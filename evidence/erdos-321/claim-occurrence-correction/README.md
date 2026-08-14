@@ -1,0 +1,47 @@
+# Erdős 321 occurrence correction preparation
+
+This non-authoritative packet prepares MATH-CLAIM-01 without performing a Vela
+write. It binds the accepted predecessor, the exact Web resolver bytes, the
+canonical problem occurrence, two exact Formal Conjectures occurrences, the
+full source commits, the `corrects` relation, and two scoped Verification
+Methods.
+
+The two JSON documents are bounded local evidence formats, not new source
+schemas, shared Profiles, integration contracts, or Protocol 1 objects. Their
+nested Exact References reuse the accepted Core value shape.
+
+The predecessor remains accepted at repository root
+`sha256:ae41be4a91265d91967344459fa12583314ec05c5a0ebc74d8b0136195879511`.
+No successor Claim, Proposal, Verification Record, Decision, Event, or Standing
+exists merely because this directory is committed.
+
+## Check
+
+```bash
+python3 -B evidence/erdos-321/claim-occurrence-correction/build.py --check
+python3 -B evidence/erdos-321/claim-occurrence-correction/build.py \
+  --check --vela-web-repo ../vela-web
+python3 -B evidence/erdos-321/claim-occurrence-correction/test_build.py
+```
+
+`occurrence-resolution.v1.json` is the selectively retained subject map.
+`correction-plan.v1.json` binds the exact static command arguments and leaves
+all signature- or transaction-derived identifiers explicitly unavailable.
+The deterministic checker refuses rerooted drift, not only stale root strings.
+Their content roots are respectively
+`sha256:a8f95b472b4e45c5d3f50a0e56fcbfc1773e97e7951c89e4001721804ed5a1b5`
+and
+`sha256:17d3581635137021508c06fe2f6fdb9a4e98e72e4975717e0da5b83a0dea6aa0`.
+
+## Authority boundary
+
+The producer and verifier steps are non-authoritative but still write protocol
+records, so they are intentionally not executed in this preparation tranche.
+The final acceptance step additionally requires the exact live Decision Inbox
+entry and the authorized Repository signer. Signer availability is not asserted
+or inferred by this packet.
+
+If the authority later accepts the exact correction, replay is expected to
+derive the predecessor as `superseded` and the successor as `accepted`. The
+Claim relation remains `corrects`; Protocol 1 does not derive a separate
+`corrected` Standing.

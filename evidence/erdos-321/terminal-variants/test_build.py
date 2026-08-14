@@ -305,7 +305,9 @@ def main() -> int:
     assert 'git diff --name-only "$base"...HEAD -- \\\n' in workflow_contract
     assert 'evidence/erdos-321/external-workbench-return \\\n' in workflow_contract
     assert 'git diff --name-only "$base"...HEAD |' not in workflow_contract
-    assert "methods/erdos-321 \\\n" in workflow_contract
+    assert "methods/erdos-321 \\\n" not in workflow_contract
+    assert "methods/erdos-321/terminal-bridge-scope-openai-codex-peer.v1.json \\\n" in workflow_contract
+    assert "methods/erdos-321/terminal-bridge-scope-review-gpt-5.6-sol.v1.json \\\n" in workflow_contract
     assert "terminal-repair-observed-paths" in workflow_contract
     repair_tree_contract = (
         "git ls-tree -r --name-only HEAD -- \\\n"
@@ -327,7 +329,8 @@ def main() -> int:
         "evidence/erdos-321/external-workbench-return",
         "evidence/erdos-321/terminal-variants",
         "evidence/erdos-321/workbench-compatibility",
-        "methods/erdos-321",
+        "methods/erdos-321/terminal-bridge-scope-openai-codex-peer.v1.json",
+        "methods/erdos-321/terminal-bridge-scope-review-gpt-5.6-sol.v1.json",
     ).decode().splitlines())
     changed_paths.update(
         path for path in BUILD.run_git(
@@ -339,8 +342,11 @@ def main() -> int:
             "evidence/erdos-321/external-workbench-return/",
             "evidence/erdos-321/terminal-variants/",
             "evidence/erdos-321/workbench-compatibility/",
-            "methods/erdos-321/",
         ))
+        or path in {
+            "methods/erdos-321/terminal-bridge-scope-openai-codex-peer.v1.json",
+            "methods/erdos-321/terminal-bridge-scope-review-gpt-5.6-sol.v1.json",
+        }
     )
     assert changed_paths == expected_paths
     repair_paths = {

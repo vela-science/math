@@ -51,6 +51,13 @@ The first six classifications are retention or future-placement decisions.
 None authorizes deletion. No path is classified `obsolete_unbound`; therefore
 this inventory authorizes no deletion at all.
 
+The evidence-based repository disposition is recorded in
+[`MATH_CHARTER.md`](MATH_CHARTER.md): **KEEP** the bounded authority and
+**REDUCE** future scope. The 827 `authority_required` and
+`historical_evidence` paths preserve live replay, correction, custody, and
+explanation duties. The other 100 paths remain retained while future revisions
+move to their classified owners.
+
 ## Complete path rules
 
 These closed rules partition every path in the frozen tree. A trailing `/**`
@@ -152,3 +159,20 @@ rewritten to point elsewhere, no historical root may be regenerated, and no
 source-owned integration may claim to be the historical origin of bytes first
 retained here. Only an exact authorized Decision can change this Repository's
 Standing.
+
+## Post-baseline authority additions
+
+The following paths were added after the frozen 927-path baseline and are
+`authority_required`; they do not change the baseline count:
+
+- `MATH_CHARTER.md`;
+- `.github/workflows/math-authority-maintenance.yml`;
+- `evidence/erdos-321/claim-occurrence-correction/**`; and
+- `methods/erdos-321/claim-revision-fidelity.v1.json` and
+  `methods/erdos-321/subject-occurrence-mapping.v1.json`.
+
+They implement future-write placement, the KEEP/REDUCE disposition, and one
+bounded correction-preparation duty. The generated packet has authority effect
+none and performs no Vela write. Its future Claim, Proposal, Verification,
+Decision, Event, and Standing identities remain unavailable until their exact
+authenticated operations occur.

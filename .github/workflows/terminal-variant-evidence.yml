@@ -148,7 +148,8 @@ jobs:
             evidence/erdos-321/external-workbench-return \
             evidence/erdos-321/terminal-variants \
             evidence/erdos-321/workbench-compatibility \
-            methods/erdos-321 \
+            methods/erdos-321/terminal-bridge-scope-openai-codex-peer.v1.json \
+            methods/erdos-321/terminal-bridge-scope-review-gpt-5.6-sol.v1.json \
             | LC_ALL=C sort >"$observed"
           diff -u "$expected" "$observed"
           repair_expected="${RUNNER_TEMP}/terminal-repair-expected-paths"

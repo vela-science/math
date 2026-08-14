@@ -1,0 +1,50 @@
+name: math-authority-maintenance
+
+on:
+  pull_request:
+    paths:
+      - "MATH_CHARTER.md"
+      - "OWNERSHIP.md"
+      - "README.md"
+      - "evidence/erdos-321/claim-occurrence-correction/**"
+      - "methods/erdos-321/claim-revision-fidelity.v1.json"
+      - "methods/erdos-321/subject-occurrence-mapping.v1.json"
+      - "scripts/validate_ownership_inventory.py"
+      - ".github/workflows/math-authority-maintenance.yml"
+  push:
+    branches: [main]
+    paths:
+      - "MATH_CHARTER.md"
+      - "OWNERSHIP.md"
+      - "README.md"
+      - "evidence/erdos-321/claim-occurrence-correction/**"
+      - "methods/erdos-321/claim-revision-fidelity.v1.json"
+      - "methods/erdos-321/subject-occurrence-mapping.v1.json"
+      - "scripts/validate_ownership_inventory.py"
+      - ".github/workflows/math-authority-maintenance.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify frozen ownership and correction preparation
+        run: |
+          set -euo pipefail
+          python3 -B scripts/validate_ownership_inventory.py
+          python3 -B evidence/erdos-321/claim-occurrence-correction/build.py --check
+          python3 -B evidence/erdos-321/claim-occurrence-correction/test_build.py
+          test "$(sha256sum .vela/repository.json | cut -d' ' -f1)" = "ae41be4a91265d91967344459fa12583314ec05c5a0ebc74d8b0136195879511"
+          test -z "$(find evidence/erdos-321/claim-occurrence-correction -type d -name __pycache__ -print -quit)"
+          test -z "$(git status --porcelain=v1 --untracked-files=all)"
+          git diff --check HEAD^

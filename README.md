@@ -6,7 +6,10 @@ This is the Vela Mathematics Program's local Vela Repository. Git stores exact
 Claims, Submissions, Verification Records, Decisions, and authority history.
 Derived views are rebuildable. It is not Vela's general mathematics
 integration hub; [`OWNERSHIP.md`](OWNERSHIP.md) freezes future placement while
-preserving every retained authority and evidence byte.
+preserving every retained authority and evidence byte. The resulting
+[`MATH_CHARTER.md`](MATH_CHARTER.md) keeps this Repository as a bounded local
+authority while reducing new work to replay, correction, custody, and other
+program-specific authority duties.
 
 ## Operator loop
 
@@ -61,6 +64,11 @@ and replay checks; actor class is provenance, not a quality rank.
   states, and a closed relation slice. Its source-local root is
   `sha256:e43ca42426ca54c55703baaee351657015019fae36e7e627f6cda0d44b22d513`;
   the open repair obligation remains undecided and has no authority effect.
+- [Erdős 321 occurrence correction preparation](evidence/erdos-321/claim-occurrence-correction/README.md)
+  binds the current accepted Claim, full source revisions, exact reviewed
+  occurrences, `corrects` relation, Methods, and future command sequence. It
+  performs no Vela write; successor and Decision identities remain unavailable
+  until the corresponding authenticated operations occur.
 - [Erdős 321 terminal-variant comparison](evidence/erdos-321/terminal-variants/README.md)
   roots the pinned terminal theorem, proof environment, rights boundary, and a
   bounded comparison with the retained fixed variants. It is non-canonical
