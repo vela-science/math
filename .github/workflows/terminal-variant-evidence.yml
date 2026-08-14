@@ -9,6 +9,7 @@ on:
       - "evidence/erdos-321/external-workbench-return/**"
       - "evidence/erdos-321/terminal-variants/**"
       - "evidence/erdos-321/workbench-compatibility/**"
+      - "methods/erdos-321/**"
       - ".github/workflows/terminal-variant-evidence.yml"
   push:
     branches: [main]
@@ -19,6 +20,7 @@ on:
       - "evidence/erdos-321/external-workbench-return/**"
       - "evidence/erdos-321/terminal-variants/**"
       - "evidence/erdos-321/workbench-compatibility/**"
+      - "methods/erdos-321/**"
       - ".github/workflows/terminal-variant-evidence.yml"
   workflow_dispatch:
 

@@ -282,6 +282,7 @@ def main() -> int:
     }
     workflow_contract = (BUILD.ROOT / ".github/workflows/terminal-variant-evidence.yml").read_text()
     assert workflow_contract.count('- "README.md"') == 2
+    assert workflow_contract.count('- "methods/erdos-321/**"') == 2
     assert "python3 -B evidence/erdos-321/workbench-compatibility/verify.py" in workflow_contract
     workbench_root = "sha256:0271f0d9d385b2c834ccf461a8e004165ad579e6b12f2ab2f2f44e824e68f625"
     assert (BUILD.ROOT / "README.md").read_text().count(workbench_root) == 1
