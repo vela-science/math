@@ -29,9 +29,18 @@ WEB_CONFIG_ROOT = (
 REPOSITORY_ROOT = (
     "sha256:ae41be4a91265d91967344459fa12583314ec05c5a0ebc74d8b0136195879511"
 )
+ACCEPTED_REPOSITORY_ROOT = (
+    "sha256:0e24fa1b13d7eda7b4e809564ec414eb1fda09f5dcf9aa8a6bcd6ae69ac96197"
+)
 TARGET_ID = "vcl_3d4fd59554ccaa2b792b08abae16a8d0fe329d4901ad798fe05c6c7769c9966b"
 TARGET_ROOT = "sha256:d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776"
 TARGET_PATH = "records/claims/sha256/d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776.json"
+SUCCESSOR_ID = "vcl_a618b77ab0f6a4b5b186133e37af555a22c6acb71a4746bab0b144b8973668a6"
+SUCCESSOR_ROOT = (
+    "sha256:8ea9f7150743ba0919a9d40aa0e632e1171b0a2ecdce20e76d6068e1427a647e"
+)
+PROPOSAL_ID = "vpr_58c2f9ae80498879"
+SUBMISSION_ID = "vsb_e1025b3c5f4b2375"
 FC_COMMIT = "59f30aa314ba225fcd9268723ce8291616df1ab0"
 LEAN_COMMIT = "a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0"
 CONTENT_ROOT_DEFINITION = "sha256 of RFC-8785 JSON after removing only content_root"
@@ -604,9 +613,74 @@ def git(repo: Path, *arguments: str) -> bytes:
     return completed.stdout
 
 
-def validate_local_custody() -> None:
+def validate_completed_transition(repository: dict[str, Any]) -> None:
+    accepted = {
+        item["claim_id"]: item["claim_root"] for item in repository["accepted_claims"]
+    }
+    if accepted.get(SUCCESSOR_ID) != SUCCESSOR_ROOT or TARGET_ID in accepted:
+        raise PacketError("accepted correction state drift")
+    if repository["pending_claims"]:
+        raise PacketError("completed correction unexpectedly pending")
+
+    exact_files = {
+        f"records/claims/sha256/{SUCCESSOR_ROOT.removeprefix('sha256:')}.json": SUCCESSOR_ROOT.removeprefix(
+            "sha256:"
+        ),
+        "records/proposals/sha256/58c2f9ae804988795c587e3b788382f49c2c6a2f01ed8cf35242a7dec57b6172.json": "58c2f9ae804988795c587e3b788382f49c2c6a2f01ed8cf35242a7dec57b6172",
+        "records/submissions/sha256/e1025b3c5f4b2375fe1e3c0d6497bd7a53d24f64b94988a6ad2e9abd55e1597f.json": "e1025b3c5f4b2375fe1e3c0d6497bd7a53d24f64b94988a6ad2e9abd55e1597f",
+        "records/verifications/sha256/255c0d4aee18bf826163ed007367d466f778e41cde90952be07c81231f09644e.json": "255c0d4aee18bf826163ed007367d466f778e41cde90952be07c81231f09644e",
+        "records/verifications/sha256/89d5b6aca9bf745cdd5e4b52811ca388438f72cd68cb54bd4312f4b47aec1dcc.json": "89d5b6aca9bf745cdd5e4b52811ca388438f72cd68cb54bd4312f4b47aec1dcc",
+        "evidence/erdos-321/claim-occurrence-correction/independent-occurrence-review.v1.json": "fe510a6a6d9585d94980738a430e4a0482d089030f0b925082d277ebd6d83e06",
+        "evidence/erdos-321/claim-occurrence-correction/independent-revision-review.v1.json": "11fa169ec6ae7d68dde3d7760f294ce0569913fc154ff58a3df699f7a26478ea",
+        ".vela/authority/events/vev_35ebae95822f777b.json": "9463f292a5e22a9817b9c264c3db8d07801b3c657d912e74d1e766e637efbc70",
+        ".vela/authority/events/vev_75b5ce899f9123da.json": "92e16e76ef1b67d1526e591c9c62086886e7b890e49d44a39532e519f3becc29",
+        ".vela/authority/records/var_d307d651b41d5a6f.dsse.json": "468393795e85d2d9485c7e2a34b05e912468d1ca14d52a2a1ace5a81e1fe41b5",
+    }
+    for path, digest in exact_files.items():
+        if sha256((REPO / path).read_bytes()) != digest:
+            raise PacketError(f"completed transition byte drift: {path}")
+
+    successor = load_json(
+        REPO / f"records/claims/sha256/{SUCCESSOR_ROOT.removeprefix('sha256:')}.json"
+    )
+    if successor["claim_id"] != SUCCESSOR_ID or successor["revision"] != 2:
+        raise PacketError("successor Claim identity drift")
+    if successor["relations"] != [{"kind": "corrects", "target_claim_id": TARGET_ID}]:
+        raise PacketError("successor correction relation drift")
+
+    supersession = load_json(REPO / ".vela/authority/events/vev_35ebae95822f777b.json")
+    accepted = load_json(REPO / ".vela/authority/events/vev_75b5ce899f9123da.json")
+    if supersession["content"]["kind"] != "claim.superseded":
+        raise PacketError("supersession Event kind drift")
+    if supersession["content"]["before_hash"] != TARGET_ROOT:
+        raise PacketError("supersession predecessor root drift")
+    if supersession["content"]["after_hash"] != SUCCESSOR_ROOT:
+        raise PacketError("supersession successor root drift")
+    if accepted["content"]["kind"] != "review.accepted":
+        raise PacketError("acceptance Event kind drift")
+    for event in (supersession, accepted):
+        payload = event["content"]["payload"]
+        if payload["proposal_id"] != PROPOSAL_ID:
+            raise PacketError("Decision Proposal drift")
+        if payload["repository_after"] != ACCEPTED_REPOSITORY_ROOT:
+            raise PacketError("Decision repository-after drift")
+
+    authority_record = load_json(
+        REPO / ".vela/authority/records/var_d307d651b41d5a6f.dsse.json"
+    )
+    if authority_record["signatures"] != [
+        {
+            "keyid": "ssh-ed25519:SHA256:QD4RXcjvjm+ImqEJjOPgr5boQO4b5ESjpt3yKQ6lUXM",
+            "sig": authority_record["signatures"][0]["sig"],
+        }
+    ]:
+        raise PacketError("authority signature key drift")
+
+
+def validate_local_custody() -> tuple[str, str]:
     repository_raw = (REPO / ".vela/repository.json").read_bytes()
-    if "sha256:" + sha256(repository_raw) != REPOSITORY_ROOT:
+    observed_repository_root = "sha256:" + sha256(repository_raw)
+    if observed_repository_root not in {REPOSITORY_ROOT, ACCEPTED_REPOSITORY_ROOT}:
         raise PacketError("Repository authority root changed")
     repository = load_json_bytes(repository_raw)
     if (
@@ -632,6 +706,10 @@ def validate_local_custody() -> None:
     for path, digest in retained.items():
         if sha256((REPO / path).read_bytes()) != digest:
             raise PacketError(f"retained source drift: {path}")
+    if observed_repository_root == ACCEPTED_REPOSITORY_ROOT:
+        validate_completed_transition(repository)
+        return observed_repository_root, "accepted"
+    return observed_repository_root, "prepared"
 
 
 def validate_web_source(web_repo: Path) -> None:
@@ -685,7 +763,7 @@ def main(argv: list[str] | None = None) -> int:
     for path in (OCCURRENCE, PLAN):
         if path.read_bytes() != rendered(expected[path.name]):
             raise PacketError(f"{path.name}: deterministic bytes drift")
-    validate_local_custody()
+    current_repository_root, transition_status = validate_local_custody()
     if args.vela_web_repo is not None:
         validate_web_source(args.vela_web_repo.resolve())
     print(
@@ -693,7 +771,9 @@ def main(argv: list[str] | None = None) -> int:
             {
                 "ok": True,
                 "authority_effect": "none",
-                "repository_root": REPOSITORY_ROOT,
+                "preparation_repository_root": REPOSITORY_ROOT,
+                "current_repository_root": current_repository_root,
+                "transition_status": transition_status,
                 "occurrence_root": documents[OCCURRENCE.name]["content_root"],
                 "plan_root": documents[PLAN.name]["content_root"],
                 "web_source_checked": args.vela_web_repo is not None,

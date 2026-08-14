@@ -3,6 +3,8 @@ name: math-authority-maintenance
 on:
   pull_request:
     paths:
+      - ".vela/**"
+      - "records/**"
       - "MATH_CHARTER.md"
       - "OWNERSHIP.md"
       - "README.md"
@@ -14,6 +16,8 @@ on:
   push:
     branches: [main]
     paths:
+      - ".vela/**"
+      - "records/**"
       - "MATH_CHARTER.md"
       - "OWNERSHIP.md"
       - "README.md"
@@ -44,7 +48,7 @@ jobs:
           python3 -B scripts/validate_ownership_inventory.py
           python3 -B evidence/erdos-321/claim-occurrence-correction/build.py --check
           python3 -B evidence/erdos-321/claim-occurrence-correction/test_build.py
-          test "$(sha256sum .vela/repository.json | cut -d' ' -f1)" = "ae41be4a91265d91967344459fa12583314ec05c5a0ebc74d8b0136195879511"
+          test "$(sha256sum .vela/repository.json | cut -d' ' -f1)" = "0e24fa1b13d7eda7b4e809564ec414eb1fda09f5dcf9aa8a6bcd6ae69ac96197"
           test -z "$(find evidence/erdos-321/claim-occurrence-correction -type d -name __pycache__ -print -quit)"
           test -z "$(git status --porcelain=v1 --untracked-files=all)"
           git diff --check HEAD^

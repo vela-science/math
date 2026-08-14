@@ -45,3 +45,18 @@ If the authority later accepts the exact correction, replay is expected to
 derive the predecessor as `superseded` and the successor as `accepted`. The
 Claim relation remains `corrects`; Protocol 1 does not derive a separate
 `corrected` Standing.
+
+## Accepted transition
+
+The separately authorized transition was accepted on 2026-08-14 after two
+attributed, scoped passing Verifications. The accepted successor is
+`vcl_a618b77ab0f6a4b5b186133e37af555a22c6acb71a4746bab0b144b8973668a6`
+at root
+`sha256:8ea9f7150743ba0919a9d40aa0e632e1171b0a2ecdce20e76d6068e1427a647e`.
+Strict replay derives repository root
+`sha256:0e24fa1b13d7eda7b4e809564ec414eb1fda09f5dcf9aa8a6bcd6ae69ac96197`.
+The predecessor remains retained with its original bytes and accepted-decision
+history; the applied `claim.superseded` event retires it from the current
+accepted Claim set. The source mapping still has authority effect none, and
+the Decision does not establish proof, resolution, equivalence, adoption, or
+Standing in any other Repository.

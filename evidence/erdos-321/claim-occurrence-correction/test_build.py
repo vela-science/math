@@ -54,7 +54,12 @@ class PacketTest(unittest.TestCase):
             "python3 -B evidence/erdos-321/claim-occurrence-correction/test_build.py",
             workflow,
         )
-        self.assertIn(BUILD.REPOSITORY_ROOT.removeprefix("sha256:"), workflow)
+        self.assertIn(
+            "0e24fa1b13d7eda7b4e809564ec414eb1fda09f5dcf9aa8a6bcd6ae69ac96197",
+            workflow,
+        )
+        for authority_path in (".vela/**", "records/**"):
+            self.assertEqual(workflow.count(f'- "{authority_path}"'), 2)
         self.assertIn(
             "actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803", workflow
         )
