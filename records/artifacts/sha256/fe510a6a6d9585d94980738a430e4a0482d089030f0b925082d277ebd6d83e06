@@ -1,0 +1,140 @@
+{
+  "schema": "vela.math.attributed-review-report.v1",
+  "recorded_at": "2026-08-14T10:08:38Z",
+  "authority_effect": "none",
+  "subject": {
+    "proposal_id": "vpr_58c2f9ae80498879",
+    "proposal_root": "sha256:58c2f9ae804988795c587e3b788382f49c2c6a2f01ed8cf35242a7dec57b6172",
+    "claim_id": "vcl_a618b77ab0f6a4b5b186133e37af555a22c6acb71a4746bab0b144b8973668a6",
+    "claim_root": "sha256:8ea9f7150743ba0919a9d40aa0e632e1171b0a2ecdce20e76d6068e1427a647e",
+    "property": "subject_occurrence_mapping"
+  },
+  "outcome": "pass",
+  "method": {
+    "path": "methods/erdos-321/subject-occurrence-mapping.v1.json",
+    "raw_sha256": "sha256:a859e58d5e047eae0287aab30dfac591f406af19c09f334cf12ff70c27e6223b",
+    "size": 1411
+  },
+  "reviewer": {
+    "attested_by_actor_id": "verifier:codex-formal-audit",
+    "activity_id": "codex-task:/root/formal_audit",
+    "actor_class": "agent",
+    "display_name": "GPT-5.6 Sol review agent",
+    "model_entity": {
+      "kind": "ai_model",
+      "provider": "OpenAI",
+      "identifier": "gpt-5.6-sol",
+      "version": null
+    },
+    "tool_entities": [
+      {
+        "kind": "command_line_tool",
+        "identifier": "git",
+        "version": "2.53.0"
+      },
+      {
+        "kind": "runtime",
+        "identifier": "python3",
+        "version": "3.11.2"
+      }
+    ],
+    "recorded_by": "agent:codex-math-321-launch-supervisor"
+  },
+  "inputs": {
+    "packet_base_commit": "e68ee391b54fc86b4bd5abf65215cdd4de8fafdc",
+    "packet_base_tree": "be3d0dfb9450490a1baffb4bae988252f60b0cd5",
+    "transaction_commit": "7f022e999f1007620c4b9d258cd7c14512e5930f",
+    "transaction_tree": "f0c14fe17fcbc92f83db4df5855bc8041a2837d7",
+    "validator": {
+      "path": "evidence/erdos-321/claim-occurrence-correction/build.py",
+      "raw_sha256": "sha256:856063eca95e94a0d1e0944490f6f6bb4f219cdf3f151e91de6ac3522ed0cf70"
+    },
+    "occurrence_packet": {
+      "path": "evidence/erdos-321/claim-occurrence-correction/occurrence-resolution.v1.json",
+      "content_root": "sha256:e1bd42900378d2cfff08be12b40e79ee005c8211477f8ce91a652ad06a65c80d",
+      "raw_sha256": "sha256:7b0da0354c5fb7993b586d0f5f4eeae22bc890e3ceb77017cb0dc6f4f4aadf83",
+      "size": 6934
+    },
+    "resolver": {
+      "repository": "https://github.com/vela-science/vela-web.git",
+      "commit": "1559f26fae98d5a0bfbfd905d33b0771c73c4333",
+      "tree": "0495f8945903380e53891d14268c8d07fd24d697",
+      "blob": "9d5162f1b77e83cb22c2aaf1256ef8734bb47750",
+      "path": "packages/observatory-data/config/problem-resolution.v1.json",
+      "raw_sha256": "sha256:7b349ae3dbca4a33efa7e9810c6f0e454589b6239f83ad16a22eabfd449a80c7",
+      "content_root": "sha256:a9d6787719c5c8069a9e14ade0f5a62975410272e6cd1583865b282d1d8669dd",
+      "size": 14843,
+      "selector": "problem:erdos:321"
+    },
+    "execution": {
+      "network_used": false,
+      "web_source_checked": true,
+      "output_sha256": "sha256:d072bb0b015dfdd8712eb863def2eb5b339e806d046b963697fdd9bf1fce6718"
+    }
+  },
+  "findings": [
+    {
+      "claim": "The exact resolver selector resolves once to the canonical Erdős 321 occurrence.",
+      "result": "supported",
+      "witness": "The pinned resolver commit, tree, blob, raw bytes, canonical root, and problem:erdos:321 selector all match the retained packet."
+    },
+    {
+      "claim": "The two Formal Conjectures occurrences are exactly associated with the canonical problem occurrence.",
+      "result": "supported",
+      "witness": "Erdos321.erdos_321 and Erdos321.erdos_321.variants.isTheta resolve with their retained occurrence roots; the mappings remain relation related."
+    },
+    {
+      "claim": "Mapping relation and translation disposition remain distinct.",
+      "result": "supported",
+      "witness": "The two mappings remain related while the three translations remain preserved, omitted, and unresolved. Navigation grouping never becomes statement identity or equivalence."
+    },
+    {
+      "claim": "Unavailable source content is not converted into a check outcome.",
+      "result": "supported",
+      "witness": "The occurrence packet has no outcome field or pass, fail, or numeric-zero scalar; answer(sorry) remains explicitly unavailable."
+    }
+  ],
+  "rights_and_availability": {
+    "resolver_configuration": "Apache-2.0 OR MIT",
+    "formal_conjectures_source": "Apache-2.0",
+    "lean_proofs_source": "MIT",
+    "aggregate_packet": "NOASSERTION",
+    "access": "public anonymous Git and retained local snapshots",
+    "perpetual_hosting_claimed": false
+  },
+  "independence": {
+    "declared_independent_of": [
+      "agent:codex-math-321-correction"
+    ],
+    "independent": true,
+    "independent_dimensions": [
+      "agent context",
+      "task context",
+      "analysis"
+    ],
+    "not_independent_dimensions": [
+      "supervising session",
+      "provider",
+      "local host and filesystem",
+      "local Web Git object store",
+      "retained evidence"
+    ],
+    "shared_dependencies": [
+      "The committed Math validator and retained source snapshots.",
+      "The same local Web Git object store, Python runtime, and Git implementation.",
+      "The same OpenAI Codex supervisor and local macOS operator infrastructure."
+    ],
+    "was_blind": false,
+    "external_independence_claimed": false
+  },
+  "limitations": [
+    "The review does not freshly build Lean or prove extremalSize equals Erdos321.R.",
+    "The review does not resolve the unavailable answer slot or re-audit producer signing cryptography.",
+    "This is same-supervisor attributed peer review, not external adoption or independent governance."
+  ],
+  "does_not_establish": [
+    "Scientific truth or resolution of Erdős problem 321.",
+    "Statement identity or semantic equivalence across source occurrences.",
+    "Acceptance, adoption, Decision, Event, or Standing."
+  ]
+}
