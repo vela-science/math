@@ -1,0 +1,179 @@
+{
+  "packet_format": "vela.math.claim-occurrence-resolution.v1",
+  "authority_effect": "none",
+  "subject": {
+    "entity_id": "problem:erdos:321",
+    "resolution_namespace": "erdos-problems",
+    "problem_number": 321
+  },
+  "resolver": {
+    "repository": "https://github.com/vela-science/vela-web.git",
+    "commit": "1559f26fae98d5a0bfbfd905d33b0771c73c4333",
+    "tree": "0495f8945903380e53891d14268c8d07fd24d697",
+    "blob": "9d5162f1b77e83cb22c2aaf1256ef8734bb47750",
+    "path": "packages/observatory-data/config/problem-resolution.v1.json",
+    "raw_sha256": "sha256:7b349ae3dbca4a33efa7e9810c6f0e454589b6239f83ad16a22eabfd449a80c7",
+    "canonical_json_root": "sha256:a9d6787719c5c8069a9e14ade0f5a62975410272e6cd1583865b282d1d8669dd",
+    "reference": {
+      "schema": "vela.exact-reference.v0.1",
+      "native_identity": {
+        "system": "git",
+        "object_kind": "problem_resolution_configuration",
+        "identifier": "vela-web:packages/observatory-data/config/problem-resolution.v1.json#problem:erdos:321"
+      },
+      "revision": {
+        "kind": "git_commit",
+        "value": "1559f26fae98d5a0bfbfd905d33b0771c73c4333"
+      },
+      "content_fixity": {
+        "media_type": "application/json",
+        "digest": "sha256:7b349ae3dbca4a33efa7e9810c6f0e454589b6239f83ad16a22eabfd449a80c7",
+        "size": 14843
+      },
+      "selector": {
+        "kind": "entity_id",
+        "value": "problem:erdos:321"
+      },
+      "locator": {
+        "uri": "https://github.com/vela-science/vela-web/blob/1559f26fae98d5a0bfbfd905d33b0771c73c4333/packages/observatory-data/config/problem-resolution.v1.json",
+        "mutable": false,
+        "authentication": "public"
+      }
+    }
+  },
+  "occurrences": {
+    "canonical": {
+      "source_id": "source:erdos-problems",
+      "native_id": "erdos:321",
+      "native_kind": "problem",
+      "content_root": "sha256:0be01696ca905c6e48036b6cc3f152ccb500ae8b7f32299ada4a58900234eb91"
+    },
+    "formal_statement": {
+      "source_id": "source:formal-conjectures",
+      "native_id": "Erdos321.erdos_321",
+      "native_kind": "formal_conjecture",
+      "relation_kind": "formal_statement_reference",
+      "content_root": "sha256:1e284abe734d064e27cc0c68fac2cc656ba259aab340521ebf29438006326939"
+    },
+    "is_theta": {
+      "source_id": "source:formal-conjectures",
+      "native_id": "Erdos321.erdos_321.variants.isTheta",
+      "native_kind": "formal_conjecture",
+      "relation_kind": "formal_statement_reference",
+      "content_root": "sha256:5226f4a3b8646b6f528961676a4eae8f317edb0d85715a570066960fa27d5a49"
+    }
+  },
+  "retained_sources": [
+    {
+      "reference": {
+        "schema": "vela.exact-reference.v0.1",
+        "native_identity": {
+          "system": "git",
+          "object_kind": "lean_source_file",
+          "identifier": "formal-conjectures:FormalConjectures/ErdosProblems/321.lean#Erdos321.erdos_321.variants.isTheta"
+        },
+        "revision": {
+          "kind": "git_commit",
+          "value": "59f30aa314ba225fcd9268723ce8291616df1ab0"
+        },
+        "content_fixity": {
+          "media_type": "text/plain",
+          "digest": "sha256:601d8486743aede6803feaaefc7bbb73f0aa8873d0296a6a1c5400fd86c32357",
+          "size": 4534
+        },
+        "selector": {
+          "kind": "declaration",
+          "value": "Erdos321.erdos_321.variants.isTheta"
+        },
+        "locator": {
+          "uri": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/59f30aa314ba225fcd9268723ce8291616df1ab0/FormalConjectures/ErdosProblems/321.lean",
+          "mutable": false,
+          "authentication": "public"
+        }
+      },
+      "retained_path": "evidence/erdos-321/translation/sources/formal-conjectures-321.lean"
+    },
+    {
+      "reference": {
+        "schema": "vela.exact-reference.v0.1",
+        "native_identity": {
+          "system": "git",
+          "object_kind": "lean_source_file",
+          "identifier": "lean-proofs:starfleet/erdos-321/Research/Basic.lean#Erdos321.extremalSize"
+        },
+        "revision": {
+          "kind": "git_commit",
+          "value": "a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0"
+        },
+        "content_fixity": {
+          "media_type": "text/plain",
+          "digest": "sha256:6f8edd294e9a5dfb2475468c23518722a736798ea3e6e51822f826c1e4672a74",
+          "size": 2192
+        },
+        "selector": {
+          "kind": "declaration",
+          "value": "Erdos321.extremalSize"
+        },
+        "locator": {
+          "uri": "https://raw.githubusercontent.com/williamjblair/lean-proofs/a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0/starfleet/erdos-321/Research/Basic.lean",
+          "mutable": false,
+          "authentication": "public"
+        }
+      },
+      "retained_path": "evidence/erdos-321/translation/sources/starfleet-basic.lean"
+    }
+  ],
+  "mappings": [
+    {
+      "source": "source:formal-conjectures#Erdos321.erdos_321",
+      "target": "problem:erdos:321",
+      "relation": "related"
+    },
+    {
+      "source": "source:formal-conjectures#Erdos321.erdos_321.variants.isTheta",
+      "target": "problem:erdos:321",
+      "relation": "related"
+    }
+  ],
+  "translations": [
+    {
+      "source": "resolver entity and reviewed occurrence fields",
+      "target": "this selectively retained occurrence packet",
+      "disposition": "preserved"
+    },
+    {
+      "source": "all other reviewed occurrences and candidate Sources",
+      "target": "this bounded correction packet",
+      "disposition": "omitted"
+    },
+    {
+      "source": "statement identity and semantic equivalence",
+      "target": "problem navigation grouping",
+      "disposition": "unresolved"
+    }
+  ],
+  "rights": {
+    "resolver_configuration": "Apache-2.0 OR MIT",
+    "formal_conjectures_source": "Apache-2.0",
+    "lean_proofs_source": "MIT",
+    "aggregate_packet": "NOASSERTION"
+  },
+  "availability": {
+    "status": "available",
+    "access": "public anonymous Git and retained local source snapshots",
+    "observed_at": "2026-08-14",
+    "retention": "Git history and retained snapshots; no perpetual-hosting claim"
+  },
+  "limitations": [
+    "The resolver establishes navigation grouping only, not statement identity or equivalence.",
+    "Only the canonical problem, main Formal Conjectures declaration, and isTheta occurrence are selected here.",
+    "The source statements contain answer(sorry); this packet does not turn the unavailable answer value into an outcome."
+  ],
+  "nonclaims": [
+    "This packet is not a Claim, Submission, Proposal, Verification Record, Decision, Event, or Standing.",
+    "A source mapping, build, review, commit, or publication is not scientific acceptance.",
+    "The Web resolver and this packet have authority effect none."
+  ],
+  "content_root_definition": "sha256 of RFC-8785 JSON after removing only content_root",
+  "content_root": "sha256:e1bd42900378d2cfff08be12b40e79ee005c8211477f8ce91a652ad06a65c80d"
+}
