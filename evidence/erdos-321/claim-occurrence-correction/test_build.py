@@ -92,6 +92,32 @@ class PacketTest(unittest.TestCase):
             ].__setitem__("value", "problem:erdos:322")
         )
 
+    def test_native_identifier_selector_relation_refuses(self) -> None:
+        documents = copy.deepcopy(self.documents)
+        reference = self.occurrence(documents)["resolver"]["reference"]
+        reference["native_identity"]["identifier"] = (
+            "vela-web:packages/observatory-data/config/problem-resolution.v1.json"
+        )
+        documents[BUILD.OCCURRENCE.name] = BUILD.reroot(
+            documents[BUILD.OCCURRENCE.name]
+        )
+        documents[BUILD.PLAN.name] = BUILD.reroot(documents[BUILD.PLAN.name])
+        with self.assertRaisesRegex(
+            BUILD.PacketError, "native identifier and selector drift"
+        ):
+            BUILD.validate_documents(documents)
+
+    def test_coherently_rerooted_selector_identity_drift_refuses(self) -> None:
+        def mutate(documents):
+            reference = self.occurrence(documents)["resolver"]["reference"]
+            reference["selector"]["value"] = "problem:erdos:322"
+            reference["native_identity"]["identifier"] = (
+                "vela-web:packages/observatory-data/config/"
+                "problem-resolution.v1.json#problem:erdos:322"
+            )
+
+        self.assert_refused(mutate)
+
     def test_path_escape_refuses(self) -> None:
         self.assert_refused(
             lambda docs: self.occurrence(docs)["retained_sources"][0].__setitem__(

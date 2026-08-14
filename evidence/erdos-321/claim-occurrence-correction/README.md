@@ -29,9 +29,9 @@ python3 -B evidence/erdos-321/claim-occurrence-correction/test_build.py
 all signature- or transaction-derived identifiers explicitly unavailable.
 The deterministic checker refuses rerooted drift, not only stale root strings.
 Their content roots are respectively
-`sha256:a8f95b472b4e45c5d3f50a0e56fcbfc1773e97e7951c89e4001721804ed5a1b5`
+`sha256:e1bd42900378d2cfff08be12b40e79ee005c8211477f8ce91a652ad06a65c80d`
 and
-`sha256:17d3581635137021508c06fe2f6fdb9a4e98e72e4975717e0da5b83a0dea6aa0`.
+`sha256:f2d8bd26ee37a0fb10679d215586f2cd5eb1abd0d3de7a1fa665315e907e30ca`.
 
 ## Authority boundary
 

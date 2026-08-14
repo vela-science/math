@@ -53,9 +53,9 @@
     {
       "kind": "subject-occurrence-mapping",
       "path": "evidence/erdos-321/claim-occurrence-correction/occurrence-resolution.v1.json",
-      "digest": "sha256:37ec7e7a1c57e592509ef4fbbba30a6c1a00aee2084cf125c8349cdaf8dc9a8e",
-      "content_root": "sha256:a8f95b472b4e45c5d3f50a0e56fcbfc1773e97e7951c89e4001721804ed5a1b5",
-      "size": 6858
+      "digest": "sha256:7b0da0354c5fb7993b586d0f5f4eeae22bc890e3ceb77017cb0dc6f4f4aadf83",
+      "content_root": "sha256:e1bd42900378d2cfff08be12b40e79ee005c8211477f8ce91a652ad06a65c80d",
+      "size": 6934
     }
   ],
   "methods": [
@@ -251,5 +251,5 @@
     "The packet changes neither Protocol 1 nor the Repository authority policy or keyset."
   ],
   "content_root_definition": "sha256 of RFC-8785 JSON after removing only content_root",
-  "content_root": "sha256:17d3581635137021508c06fe2f6fdb9a4e98e72e4975717e0da5b83a0dea6aa0"
+  "content_root": "sha256:f2d8bd26ee37a0fb10679d215586f2cd5eb1abd0d3de7a1fa665315e907e30ca"
 }

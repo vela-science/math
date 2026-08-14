@@ -179,7 +179,7 @@ def expected_occurrence() -> dict[str, Any]:
                 "reference": exact_reference(
                     system="git",
                     object_kind="problem_resolution_configuration",
-                    identifier=f"vela-web:{WEB_PATH}",
+                    identifier=f"vela-web:{WEB_PATH}#problem:erdos:321",
                     revision=WEB_COMMIT,
                     digest=WEB_RAW_SHA256,
                     size=14843,
@@ -217,7 +217,7 @@ def expected_occurrence() -> dict[str, Any]:
                     "reference": exact_reference(
                         system="git",
                         object_kind="lean_source_file",
-                        identifier="formal-conjectures:FormalConjectures/ErdosProblems/321.lean",
+                        identifier="formal-conjectures:FormalConjectures/ErdosProblems/321.lean#Erdos321.erdos_321.variants.isTheta",
                         revision=FC_COMMIT,
                         digest="601d8486743aede6803feaaefc7bbb73f0aa8873d0296a6a1c5400fd86c32357",
                         size=4534,
@@ -233,7 +233,7 @@ def expected_occurrence() -> dict[str, Any]:
                     "reference": exact_reference(
                         system="git",
                         object_kind="lean_source_file",
-                        identifier="lean-proofs:starfleet/erdos-321/Research/Basic.lean",
+                        identifier="lean-proofs:starfleet/erdos-321/Research/Basic.lean#Erdos321.extremalSize",
                         revision=LEAN_COMMIT,
                         digest="6f8edd294e9a5dfb2475468c23518722a736798ea3e6e51822f826c1e4672a74",
                         size=2192,
@@ -576,6 +576,18 @@ def validate_documents(documents: dict[str, dict[str, Any]]) -> None:
         raise PacketError("packet inventory drift")
     for name, value in documents.items():
         validate_root(value, name)
+    occurrence = documents[OCCURRENCE.name]
+    references = [occurrence["resolver"]["reference"]] + [
+        item["reference"] for item in occurrence["retained_sources"]
+    ]
+    for index, reference in enumerate(references):
+        identifier = reference["native_identity"]["identifier"]
+        selector = reference["selector"]["value"]
+        if identifier != selector and not identifier.endswith(f"#{selector}"):
+            raise PacketError(
+                f"Exact Reference {index} native identifier and selector drift"
+            )
+    for name, value in documents.items():
         if value != expected[name]:
             raise PacketError(f"{name}: closed packet content drift")
 

@@ -19,7 +19,7 @@
       "native_identity": {
         "system": "git",
         "object_kind": "problem_resolution_configuration",
-        "identifier": "vela-web:packages/observatory-data/config/problem-resolution.v1.json"
+        "identifier": "vela-web:packages/observatory-data/config/problem-resolution.v1.json#problem:erdos:321"
       },
       "revision": {
         "kind": "git_commit",
@@ -70,7 +70,7 @@
         "native_identity": {
           "system": "git",
           "object_kind": "lean_source_file",
-          "identifier": "formal-conjectures:FormalConjectures/ErdosProblems/321.lean"
+          "identifier": "formal-conjectures:FormalConjectures/ErdosProblems/321.lean#Erdos321.erdos_321.variants.isTheta"
         },
         "revision": {
           "kind": "git_commit",
@@ -99,7 +99,7 @@
         "native_identity": {
           "system": "git",
           "object_kind": "lean_source_file",
-          "identifier": "lean-proofs:starfleet/erdos-321/Research/Basic.lean"
+          "identifier": "lean-proofs:starfleet/erdos-321/Research/Basic.lean#Erdos321.extremalSize"
         },
         "revision": {
           "kind": "git_commit",
@@ -175,5 +175,5 @@
     "The Web resolver and this packet have authority effect none."
   ],
   "content_root_definition": "sha256 of RFC-8785 JSON after removing only content_root",
-  "content_root": "sha256:a8f95b472b4e45c5d3f50a0e56fcbfc1773e97e7951c89e4001721804ed5a1b5"
+  "content_root": "sha256:e1bd42900378d2cfff08be12b40e79ee005c8211477f8ce91a652ad06a65c80d"
 }
