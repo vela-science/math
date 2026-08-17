@@ -1,0 +1,40 @@
+{
+  "schema": "vela.math.claim-occurrence-binding.v1",
+  "authority_effect": "none",
+  "problem": "erdos:94",
+  "occurrence_resolution": {
+    "entity_id": "problem:erdos:94",
+    "resolver_root": "sha256:32f6e98a826da23c12c7cfcb8853e4712de130136c59f0454bd115c3fdb1e6b1",
+    "canonical": {
+      "source_id": "source:erdos-problems",
+      "native_id": "erdos:94",
+      "content_root": "sha256:246d166026de8d99931c44824f9b0a242ae32beea27c43b1e6d0157a4a6fb2c8"
+    },
+    "related_occurrences": [
+      {
+        "source_id": "source:formal-conjectures",
+        "native_id": "Erdos94.erdos_94.variants.sum_multiplicity",
+        "content_root": "sha256:b49ada921a91b89436f112da4a07a75e438640a075a7c390aca8162d3584c842",
+        "relation": "related"
+      }
+    ],
+    "semantic_equivalence": "unresolved",
+    "scope": "navigation grouping only"
+  },
+  "predecessor": {
+    "claim_id": "vcl_28704f08364e7377bd15026bd4e8847fc9c97d095238bbe472bbe5cb1bfabdf6",
+    "claim_root": "sha256:623b5cee58e6140883bb81336857e49c85ad8e22fc4db3c21c331660905d5483",
+    "assertion": "At lean-proofs commit 423344341fbfdf4f8f684a302c5d05379125e7dc, Erdos94.variants.sum_multiplicity proves that for every finite planar point set P, the sum over its distinct determined distances of the unordered-pair distance multiplicities equals P.card.choose 2, matching Formal Conjectures commit 94a278e06a8bcbc2e4f2935e491c0c115ec832e0."
+  },
+  "successor": {
+    "assertion": "At lean-proofs commit 423344341fbfdf4f8f684a302c5d05379125e7dc, Erdos94.variants.sum_multiplicity proves that for every finite planar point set P, the sum over its distinct determined distances of the unordered-pair distance multiplicities equals P.card.choose 2, matching Formal Conjectures commit 94a278e06a8bcbc2e4f2935e491c0c115ec832e0. For occurrence resolution only, the exact occurrence Erdos94.erdos_94.variants.sum_multiplicity is associated with problem:erdos:94 under resolver entity root sha256:32f6e98a826da23c12c7cfcb8853e4712de130136c59f0454bd115c3fdb1e6b1. That occurrence is one of four Erdős 94 declarations Formal Conjectures publishes, and this identity does not establish the cubic distance-multiplicity conjecture.",
+    "relation": "corrects",
+    "replayability": "exact"
+  },
+  "limitations": [
+    "Occurrence association is navigation-only and does not establish statement identity or semantic equivalence.",
+    "The bound occurrence is the sum_multiplicity identity alone; the three other retained Erdős 94 declarations are not bound by this Claim.",
+    "This does not establish the cubic Erdős 94 distance-multiplicity conjecture.",
+    "No external source-owner review, human review, or upstream acceptance is asserted."
+  ]
+}

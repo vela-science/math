@@ -1,0 +1,78 @@
+{
+  "schema": "vela.pilot-ext-01.verifier-report.v1",
+  "authority_effect": "none",
+  "outcome": "pass",
+  "actor": "verifier:anthropic-claude-pilot-ext-01",
+  "performer_kind": "agent",
+  "provider": "Anthropic",
+  "model": "claude-opus-5",
+  "harness": "Claude Code 2.1.228 print-mode isolated session",
+  "session_id": "a149ca73-c594-4da7-94a5-ec7d99a8f201",
+  "started_at": "2026-08-15T13:40:16Z",
+  "ended_at": "2026-08-15T13:49:12Z",
+  "elapsed_seconds": 536,
+  "subject": {
+    "commit": "c23bda1584fa496363f93b4ee783f3e0d1ee116e",
+    "tree": "3aa1260e605403701789ca3673cde84999ddb594",
+    "producer_commit": "423344341fbfdf4f8f684a302c5d05379125e7dc",
+    "proof_sha256": "sha256:412975add8b6963bb44378f5d8ef41fd1f860b9ec06495432ab97e8ca60ffbe0",
+    "manifest_root": "sha256:3079661cc5761e79235f85afa20b9a4e4cd2c963fb3e0f4c3eb1e116743a510b"
+  },
+  "checks": [
+    {
+      "property": "frozen_identity_resolution",
+      "outcome": "pass",
+      "witness": "All source, tree, blob, raw SHA-256, target, Manifest, Binding, Profile, and Method roots matched."
+    },
+    {
+      "property": "lean_build",
+      "outcome": "pass",
+      "witness": "Fresh Lean 4.29.1 focused and full builds completed without errors."
+    },
+    {
+      "property": "axiom_scope",
+      "outcome": "pass",
+      "witness": "The declaration depends exactly on propext, Classical.choice, and Quot.sound; no sorry, admit, unsafe, or native_decide was found."
+    },
+    {
+      "property": "distance_multiplicity_double_counting",
+      "outcome": "pass",
+      "witness": "The verifier independently checked the exact two-swap ordered fiber, proved parity before division, exact fiberwise coverage, and the final Sym2 choose-two cardinality."
+    },
+    {
+      "property": "formal_conjectures_statement_fidelity",
+      "outcome": "pass",
+      "witness": "A disposable exact Formal Conjectures checkout built the target module after inserting the proof; only the mechanical Sym2.mk.uncurry to Sym2.mk API spelling changed under Lean 4.27.0."
+    },
+    {
+      "property": "counterexample_search",
+      "outcome": "pass",
+      "witness": "Empty, singleton, two-point, equilateral, square, collinear, regular-hexagon, and 300 randomized collision-heavy lattice cases produced zero mismatches."
+    },
+    {
+      "property": "root_tamper_refusal",
+      "outcome": "pass",
+      "witness": "A one-token Method mutation was refused by Core with a method_root/domain mismatch."
+    }
+  ],
+  "independence": {
+    "classification": "provider_diverse_analysis_separated_not_operationally_independent",
+    "different_provider": true,
+    "separate_context": true,
+    "clean_checkout": true,
+    "shared_host": true,
+    "shared_git_remotes": true,
+    "shared_source_bytes": true,
+    "shared_lean_mathlib_dependencies": true,
+    "external_party": false
+  },
+  "limitations": [
+    "The target needed a mechanical Sym2 API spelling change between the pinned Mathlib versions; mathematical content did not change.",
+    "The verifier trusted the Lean kernel, Mathlib, and pinned dependencies.",
+    "No human mathematician or external source owner reviewed or accepted the result.",
+    "This is provider-diverse and analysis-separated, not independent infrastructure or external adoption."
+  ],
+  "does_not_establish": [
+    "The main cubic Erdős 94 theorem, external review, human review, a Vela Decision, or Standing."
+  ]
+}

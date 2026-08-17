@@ -1,0 +1,22 @@
+{
+  "schema": "vela.verification-method.v1",
+  "profile": "coh-00-erdos-321-correction-chain-v1",
+  "property": "claim_chain_fidelity",
+  "question": "Does the submitted Claim preserve the bounded Erdős 321 assertion and, for the successor, bind the exact corrects relation, occurrence identities, and unresolved terminal-variant obligations?",
+  "procedure": [
+    "Hash every source input named by evidence/current/erdos-321/correction-chain.v1.json and require the recorded raw SHA-256 values.",
+    "For the predecessor, require the submitted assertion and limitations to equal the packet's predecessor fields.",
+    "For the successor, require the submitted assertion and limitations to equal the packet's successor fields and require the exact corrects relation to the accepted predecessor Claim ID and root.",
+    "Require occurrence grouping to remain relation related with semantic_equivalence unresolved.",
+    "Require the terminal lower and upper relations to remain unresolved and retain every named next obligation.",
+    "Refuse any claim that this method proves Erdős 321, establishes statement equivalence, performs a fresh kernel build, or changes Standing."
+  ],
+  "environment": {
+    "inputs_are_exact_bytes": true,
+    "network_required": false,
+    "shared_dependencies": "The producer and verifier share the same current packet and exact source snapshots; this is an attributed complementary review, not external independence."
+  },
+  "does_not_establish": [
+    "A proof, resolution, statement equivalence, fresh kernel execution, independent reproduction, acceptance, or Standing."
+  ]
+}

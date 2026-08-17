@@ -1,0 +1,25 @@
+{
+  "schema": "vela.math.corrected-record-scope-observation.v1",
+  "authority_effect": "none",
+  "property": "corrected_record_scope_fidelity",
+  "outcome": "pass",
+  "predecessor_assertion": "At lean-proofs commit 423344341fbfdf4f8f684a302c5d05379125e7dc, Erdos94.variants.sum_multiplicity proves that for every finite planar point set P, the sum over its distinct determined distances of the unordered-pair distance multiplicities equals P.card.choose 2, matching Formal Conjectures commit 94a278e06a8bcbc2e4f2935e491c0c115ec832e0.",
+  "successor_assertion": "At lean-proofs commit 423344341fbfdf4f8f684a302c5d05379125e7dc, Erdos94.variants.sum_multiplicity proves that for every finite planar point set P, the sum over its distinct determined distances of the unordered-pair distance multiplicities equals P.card.choose 2, matching Formal Conjectures commit 94a278e06a8bcbc2e4f2935e491c0c115ec832e0. For occurrence resolution only, the exact occurrence Erdos94.erdos_94.variants.sum_multiplicity is associated with problem:erdos:94 under resolver entity root sha256:32f6e98a826da23c12c7cfcb8853e4712de130136c59f0454bd115c3fdb1e6b1. That occurrence is one of four Erdős 94 declarations Formal Conjectures publishes, and this identity does not establish the cubic distance-multiplicity conjecture.",
+  "predecessor_sentence_preserved_verbatim": true,
+  "added_sentences": [
+    {
+      "sentence": "For occurrence resolution only, the exact occurrence Erdos94.erdos_94.variants.sum_multiplicity is associated with problem:erdos:94 under resolver entity root sha256:32f6e98a826da23c12c7cfcb8853e4712de130136c59f0454bd115c3fdb1e6b1.",
+      "class": "association"
+    },
+    {
+      "sentence": "That occurrence is one of four Erdős 94 declarations Formal Conjectures publishes, and this identity does not establish the cubic distance-multiplicity conjecture.",
+      "class": "narrowing"
+    }
+  ],
+  "any_added_sentence_widens_the_result": false,
+  "states_cubic_conjecture_not_established": true,
+  "predecessor_bounded_scope_condition_retained": [
+    "Caveat: This proves only the elementary sum_multiplicity identity, not the cubic Erdős 94 theorem or either other variant."
+  ],
+  "pinned_commits_unchanged": true
+}

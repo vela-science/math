@@ -1,0 +1,93 @@
+{
+  "schema": "vela.math.current-erdos-321-correction-chain.v1",
+  "authority_effect": "none",
+  "problem": "erdos:321",
+  "source_inputs": {
+    "source_lock": {
+      "path": "evidence/current/erdos-321/source-lock.v1.json",
+      "raw_sha256": "sha256:031643181ab22e929aeb9e6e3aa0ffc3814a67f4b639824ad62ebf03d9fa1a75"
+    },
+    "source_snapshots": {
+      "path": "evidence/current/erdos-321/source-snapshots.v1.json",
+      "raw_sha256": "sha256:518b17d19fde6432daff41ff26ba9ef8eec8da60bd4e5333d79435e196bbe3a6"
+    },
+    "formal_conjectures": {
+      "repository": "https://github.com/google-deepmind/formal-conjectures.git",
+      "commit": "59f30aa314ba225fcd9268723ce8291616df1ab0",
+      "path": "FormalConjectures/ErdosProblems/321.lean",
+      "retained_path": "evidence/current/erdos-321/sources/formal-conjectures-321.lean",
+      "raw_sha256": "sha256:601d8486743aede6803feaaefc7bbb73f0aa8873d0296a6a1c5400fd86c32357"
+    },
+    "lean_proofs": {
+      "repository": "https://github.com/williamjblair/lean-proofs.git",
+      "commit": "a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0",
+      "path": "starfleet/erdos-321/Research/Basic.lean",
+      "retained_path": "evidence/current/erdos-321/sources/starfleet-basic.lean",
+      "raw_sha256": "sha256:6f8edd294e9a5dfb2475468c23518722a736798ea3e6e51822f826c1e4672a74"
+    }
+  },
+  "occurrence_resolution": {
+    "entity_id": "problem:erdos:321",
+    "resolver_commit": "1559f26fae98d5a0bfbfd905d33b0771c73c4333",
+    "resolver_root": "sha256:a9d6787719c5c8069a9e14ade0f5a62975410272e6cd1583865b282d1d8669dd",
+    "canonical": {
+      "source_id": "source:erdos-problems",
+      "native_id": "erdos:321",
+      "content_root": "sha256:0be01696ca905c6e48036b6cc3f152ccb500ae8b7f32299ada4a58900234eb91"
+    },
+    "related_occurrences": [
+      {
+        "source_id": "source:formal-conjectures",
+        "native_id": "Erdos321.erdos_321",
+        "content_root": "sha256:1e284abe734d064e27cc0c68fac2cc656ba259aab340521ebf29438006326939",
+        "relation": "related"
+      },
+      {
+        "source_id": "source:formal-conjectures",
+        "native_id": "Erdos321.erdos_321.variants.isTheta",
+        "content_root": "sha256:5226f4a3b8646b6f528961676a4eae8f317edb0d85715a570066960fa27d5a49",
+        "relation": "related"
+      }
+    ],
+    "semantic_equivalence": "unresolved",
+    "scope": "navigation grouping only"
+  },
+  "predecessor": {
+    "assertion": "The Lean development starfleet/erdos-321 establishes a two-sided asymptotic bound on extremalSize, which denotes the same quantity as Formal Conjectures' Erdos321.R at pages commit 59f30aa3, and which therefore supplies a candidate answer for erdos_321.variants.isTheta rather than a proof of it.",
+    "replayability": "unavailable",
+    "limits": [
+      "Erdos problem 321 remains open; this does not assert resolution or optimality.",
+      "The kernel gate is a recorded exact-commit CI attestation, not a fresh rebuild."
+    ]
+  },
+  "successor": {
+    "assertion": "At Formal Conjectures commit 59f30aa314ba225fcd9268723ce8291616df1ab0, the Lean development starfleet/erdos-321 establishes a two-sided asymptotic bound on extremalSize, which denotes the same quantity as Formal Conjectures' Erdos321.R and therefore supplies a candidate answer for the exact occurrence Erdos321.erdos_321.variants.isTheta, not a proof of it. For occurrence resolution only, the exact occurrences Erdos321.erdos_321 and Erdos321.erdos_321.variants.isTheta are associated with problem:erdos:321 under resolver root sha256:a9d6787719c5c8069a9e14ade0f5a62975410272e6cd1583865b282d1d8669dd. At the exact retained Erdős 321 source revisions, the terminal theorem and structural comparison do not establish implication to either fixed Nat.log variant.",
+    "relation": "corrects",
+    "replayability": "exact",
+    "limits": [
+      "Erdos problem 321 remains open; this does not assert resolution or optimality.",
+      "Occurrence association is navigation-only and establishes no statement equivalence.",
+      "The negative comparison does not show that a bridge is impossible or that either statement is false.",
+      "The retained terminal and fixed sources have no exact resolved joint Lean environment."
+    ],
+    "terminal_variant_disposition": {
+      "status": "unsupported_by_retained_basis",
+      "lower_relation": "unresolved",
+      "upper_relation": "unresolved",
+      "next_obligation": "Construct and kernel-check explicit bridges between the real-log terminal coordinates and each Nat.log fixed-variant hypothesis before asserting implication.",
+      "missing_bridges": [
+        "lower fixed-variant hypothesis",
+        "upper fixed-variant hypothesis",
+        "Real.log to Nat.log coordinate product",
+        "existential-to-explicit constant relation"
+      ]
+    }
+  },
+  "limitations": [
+    "Occurrence grouping does not establish statement identity or semantic equivalence.",
+    "The answer slots remain unavailable and are not converted into outcomes.",
+    "The comparison does not show that a bridge is impossible or that either statement is false.",
+    "The retained terminal and fixed sources have no exact resolved joint Lean environment.",
+    "A scoped Verification does not accept either Claim or change Standing."
+  ]
+}

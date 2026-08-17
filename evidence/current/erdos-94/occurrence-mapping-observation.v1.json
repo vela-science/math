@@ -1,0 +1,27 @@
+{
+  "schema": "vela.math.occurrence-mapping-observation.v1",
+  "authority_effect": "none",
+  "property": "occurrence_mapping_fidelity",
+  "outcome": "pass",
+  "packet_sha256": "sha256:3259a8c5f82b445c777a7dc72b32df1d108d7dbb6217c6acc6fa9774ac71a7a2",
+  "entity_id": "problem:erdos:94",
+  "entity_root_pinned_by_packet": "sha256:32f6e98a826da23c12c7cfcb8853e4712de130136c59f0454bd115c3fdb1e6b1",
+  "entity_root_recomputed": "sha256:32f6e98a826da23c12c7cfcb8853e4712de130136c59f0454bd115c3fdb1e6b1",
+  "entity_root_matches": true,
+  "canonical_matches": true,
+  "selected_occurrences": [
+    {
+      "source_id": "source:formal-conjectures",
+      "native_id": "Erdos94.erdos_94.variants.sum_multiplicity",
+      "content_root": "sha256:b49ada921a91b89436f112da4a07a75e438640a075a7c390aca8162d3584c842",
+      "relation_kind": "formal_statement_reference"
+    }
+  ],
+  "entity_reviewed_occurrence_count": 4,
+  "selects_sum_multiplicity_alone": true,
+  "semantic_equivalence": "unresolved",
+  "scope": "navigation grouping only",
+  "predecessor_claim_id": "vcl_28704f08364e7377bd15026bd4e8847fc9c97d095238bbe472bbe5cb1bfabdf6",
+  "predecessor_claim_root": "sha256:623b5cee58e6140883bb81336857e49c85ad8e22fc4db3c21c331660905d5483",
+  "packet_contains_successor_root": false
+}

@@ -1,0 +1,801 @@
+{
+  "authority_effect": "none",
+  "content_root": "sha256:128edd2b0b58597ca05c7c0049ab20c10c9e6ef4e06c2c3ff8371752123a103b",
+  "content_root_definition": "sha256 of RFC-8785 JSON after removing only content_root",
+  "format": "vela.math.erdos321-terminal-variant-source-lock.v0.1",
+  "math_base": {
+    "commit": "fdb23666e7b5385a62cc97c58086bc67bd4e7fa9",
+    "objects": [
+      {
+        "byte_length": 6189,
+        "git_blob_sha1": "5442d664adc23ee25c60039c44e2d4b6857e7dba",
+        "mode": "100644",
+        "path": "evidence/erdos-321/definition-correspondence.v2.json",
+        "raw_sha256": "sha256:e7c303b037c3ad9491bec761cf7e48b6833b2fe54dbe71f603da1a24123322c2"
+      },
+      {
+        "byte_length": 838,
+        "git_blob_sha1": "f1bb16f94ca9f39b6d0f0f0cb9113a6be7182957",
+        "mode": "100644",
+        "path": "evidence/erdos-321/translation/source-snapshots.v1.json",
+        "raw_sha256": "sha256:518b17d19fde6432daff41ff26ba9ef8eec8da60bd4e5333d79435e196bbe3a6"
+      },
+      {
+        "byte_length": 4534,
+        "git_blob_sha1": "e58fa81d7f81badaeca1e29dde1e1e1435d1d635",
+        "mode": "100644",
+        "path": "evidence/erdos-321/translation/sources/formal-conjectures-321.lean",
+        "raw_sha256": "sha256:601d8486743aede6803feaaefc7bbb73f0aa8873d0296a6a1c5400fd86c32357"
+      }
+    ],
+    "tree": "809551a3bbdc18479604a5b16d5979b17343c204"
+  },
+  "problem": "erdos:321",
+  "proof_environment": {
+    "axiom_audit": "starfleet/scripts/check_axioms.sh",
+    "build_target": "Research",
+    "ci_execution_result": "not asserted by this source-lock unit",
+    "ci_job": ".github/workflows/starfleet.yml#verify-321",
+    "dependency_resolution": {
+      "basis": "starfleet/erdos-321/lake-manifest.json is absent at the pinned project tree",
+      "conflict": "the project pins Mathlib fabf563a while the pinned PNT manifest records Mathlib db127794; no exact resolved joint environment is retained",
+      "prime_number_theorem_and_commit": "a7eb3a8ae4bde79292fb5f04c32cd5ab6d8f226c",
+      "prime_number_theorem_and_manifest_mathlib_commit": "db127794c79fdeb86f6b0cf6ff2c804026fbaff1",
+      "project_mathlib_commit": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+      "status": "basis_unavailable_in_pinned_tree"
+    },
+    "historical_reconstruction_status": "not exact",
+    "lean_toolchain": "leanprover/lean4:v4.31.0",
+    "mathlib": {
+      "commit": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+      "license_spdx": "Apache-2.0",
+      "objects": [
+        {
+          "byte_length": 11357,
+          "git_blob_sha1": "8dada3edaf50dbc082c9a125058f25def75e625a",
+          "mode": "100644",
+          "path": "LICENSE",
+          "raw_sha256": "sha256:b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+        },
+        {
+          "byte_length": 2812,
+          "git_blob_sha1": "1db86ab034fd853428d3b661d4a9ad98b3bd0d6b",
+          "mode": "100644",
+          "path": "lake-manifest.json",
+          "raw_sha256": "sha256:6f226b135055dccff3e733abfc465a026f8ded1e6e235408365b54193186665d"
+        },
+        {
+          "byte_length": 25,
+          "git_blob_sha1": "18640c8b066b182147f324d3aefd8ee48ee45238",
+          "mode": "100644",
+          "path": "lean-toolchain",
+          "raw_sha256": "sha256:efac0b94923b2d8b6840cd35be9177ad0fc5ab2332f4f4311c98712cee92fdee"
+        }
+      ],
+      "repository": "https://github.com/leanprover-community/mathlib4.git",
+      "tree": "1b8fcc589cb2eeb1258449f844eed7924edc9a04"
+    },
+    "mutable_historical_inputs": [
+      "ubuntu-latest runner image",
+      "actions/checkout@v4 floating major tag",
+      "elan installer fetched from the master branch",
+      "Mathlib cache service contents"
+    ],
+    "prime_number_theorem_and": {
+      "commit": "a7eb3a8ae4bde79292fb5f04c32cd5ab6d8f226c",
+      "license_spdx": "Apache-2.0",
+      "objects": [
+        {
+          "byte_length": 11357,
+          "git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "mode": "100644",
+          "path": "LICENSE",
+          "raw_sha256": "sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "byte_length": 4418,
+          "git_blob_sha1": "37f7cb604131acff147480a4f082e45f697fb518",
+          "mode": "100644",
+          "path": "lake-manifest.json",
+          "raw_sha256": "sha256:aed29135aa1334e41d82c631d8da0d04b5d0486c55bc784bbaa78fe5e9cda940"
+        },
+        {
+          "byte_length": 935,
+          "git_blob_sha1": "120437dde1daf1e050841416713f2714fcc18cb5",
+          "mode": "100644",
+          "path": "lakefile.toml",
+          "raw_sha256": "sha256:8e328d09973ab9be71556ad3e87248e7debbf431add15d7fc8cda98aa98dd8da"
+        },
+        {
+          "byte_length": 24,
+          "git_blob_sha1": "133a3f7d63769e53f3f4b43ee3eddcd6e2d3b238",
+          "mode": "100644",
+          "path": "lean-toolchain",
+          "raw_sha256": "sha256:e0a7032ab1976a37a3e1e823816b4f490d462c1e864b21e1999c33cdac76e263"
+        }
+      ],
+      "repository": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git",
+      "tree": "d98e2d87835961619623ce19ec96e827e6224d2f"
+    }
+  },
+  "rights": {
+    "detached_redistribution_license": "not established",
+    "downstream_redistribution_rights": "not_established",
+    "formal_conjectures_snapshot": "Apache-2.0 header retained in the pinned Math blob",
+    "handling": "reference_only",
+    "handling_detail": "reference pinned Git objects only; this unit copies no Star Fleet theorem source bytes",
+    "mathlib_license_root": "sha256:b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+    "permission_basis": "pinned NOTICE proves hosting permission only within williamjblair/lean-proofs and records intent to add a source license",
+    "prime_number_theorem_and_license_root": "sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "repository_authored_material": "MIT at the pinned LICENSE object",
+    "rights_class": "NOASSERTION",
+    "star_fleet_material": "copyright Colin Snyder; excluded from the repository MIT grant"
+  },
+  "terminal_source": {
+    "commit": "a8c2872a27cf8d11cf6744ca4a2c5b49ace5fea0",
+    "critical_objects": [
+      {
+        "byte_length": 4094,
+        "git_blob_sha1": "bba7eb64699b77d9f7aeecf47ab1615f0958f9e8",
+        "mode": "100644",
+        "path": ".github/workflows/starfleet.yml",
+        "raw_sha256": "sha256:b93704505a7915310e7e0342efd20b723044cbb0e2cb8c686772370341f62835"
+      },
+      {
+        "byte_length": 1493,
+        "git_blob_sha1": "38e9c1da6e57a68e7503fc9a527975bd52a778d9",
+        "mode": "100644",
+        "path": "LICENSE",
+        "raw_sha256": "sha256:0665bb5f63d444ca4dcc9ad89e274cf1d657928789bd1cae6ce2524423fe5902"
+      },
+      {
+        "byte_length": 1383,
+        "git_blob_sha1": "c07aa73be9afd5d11d2d27bad7254f8fb3182c28",
+        "mode": "100644",
+        "path": "NOTICE",
+        "raw_sha256": "sha256:0e2127467b2dc0fdebc6b4a774cb5baf03a13f0a585543f9775850368832f1aa"
+      },
+      {
+        "byte_length": 203,
+        "git_blob_sha1": "d5af77649ae1f2cf1e3df5f3e0428e3819ac07a3",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Audit.lean",
+        "raw_sha256": "sha256:d4924d44f44a9027cbcf49422258e417dd6ebd74e2e7c92deda6d7e1c06311c7"
+      },
+      {
+        "byte_length": 2194,
+        "git_blob_sha1": "a16028f8375fae5ce8be3440f8bee8b285222fe3",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research.lean",
+        "raw_sha256": "sha256:7ecefd35c1601be5df2e15d891edd80f233e064087aa841193593187719be21c"
+      },
+      {
+        "byte_length": 2192,
+        "git_blob_sha1": "996f891b0e1d2af6da47f2cc4c63b806498d2ca5",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/Basic.lean",
+        "raw_sha256": "sha256:6f8edd294e9a5dfb2475468c23518722a736798ea3e6e51822f826c1e4672a74"
+      },
+      {
+        "byte_length": 2316,
+        "git_blob_sha1": "414d30123ecb0224087ad0e8b4e573d259d65255",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/FinalAsymptotic.lean",
+        "raw_sha256": "sha256:63dd7ba024ec235a47c1b90c638acae758a50f2d0ee4267e0f69b22cd5d9c0b5"
+      },
+      {
+        "byte_length": 5773,
+        "git_blob_sha1": "b3f7cf291028afab6f5d143e901e84b481477883",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/IteratedLogProduct.lean",
+        "raw_sha256": "sha256:9d73660153f169ba622f2f23e0b36e41677558fc6349bd3ed725eaa61c100287"
+      },
+      {
+        "byte_length": 5865,
+        "git_blob_sha1": "2ad1281992256df6a18b0a0e42970eb7f02d8bea",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/TerminalAsymptotic.lean",
+        "raw_sha256": "sha256:e49ed1e2bb892af4a290f38d24c41154404d9f46fc77f94c567ab6e88c56edf6"
+      },
+      {
+        "byte_length": 5263,
+        "git_blob_sha1": "515d25a364ca225e1a56df9d4f692a2e0c5e9a57",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/TerminalDepth.lean",
+        "raw_sha256": "sha256:6ea9f825c2d96e2484b8b87892aa2418b201412f3bfa5a1219bca3cd00053196"
+      },
+      {
+        "byte_length": 1172,
+        "git_blob_sha1": "1bc9e3e8a6a49c626cc82284f79ac28f274afbee",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/lakefile.toml",
+        "raw_sha256": "sha256:e60ce2789c794bdaab5ae5581d990b345a67f4614390a6e142e4d1b7dc474f38"
+      },
+      {
+        "byte_length": 25,
+        "git_blob_sha1": "18640c8b066b182147f324d3aefd8ee48ee45238",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/lean-toolchain",
+        "raw_sha256": "sha256:efac0b94923b2d8b6840cd35be9177ad0fc5ab2332f4f4311c98712cee92fdee"
+      },
+      {
+        "byte_length": 1853,
+        "git_blob_sha1": "9bb83a2a47efd42015d940252a03b5fd7e33ce26",
+        "mode": "100644",
+        "path": "starfleet/scripts/check_axioms.sh",
+        "raw_sha256": "sha256:fe9188e16fbf0887d9cf80658dac0fcc55cf1bf8cca528a780c3a1e118af5b31"
+      }
+    ],
+    "inventory_bytes": 402898,
+    "inventory_count": 79,
+    "inventory_definition": "recursive local import closure of Research, Audit, and Erdos321Statement plus eight exact proof/CI/rights paths",
+    "inventory_root": "sha256:bb0e0753023cece0600fd1c8775e13b169459d16e730e6f4244ecd02f019f0a0",
+    "inventory_serialization": "mode NUL path NUL lowercase raw SHA-256 hex NUL decimal byte length LF, UTF-8 path sorted",
+    "project_lake_manifest": {
+      "byte_length": null,
+      "expected_entries": 0,
+      "git_blob_oid": null,
+      "path": "starfleet/erdos-321/lake-manifest.json",
+      "raw_sha256": null,
+      "status": "absent_at_pinned_tree"
+    },
+    "project_subtree": "c06136d9a9f7aacc83761c46b89108fe62f15902",
+    "proof_ci_rights_inventory": [
+      {
+        "byte_length": 4094,
+        "git_blob_sha1": "bba7eb64699b77d9f7aeecf47ab1615f0958f9e8",
+        "mode": "100644",
+        "path": ".github/workflows/starfleet.yml",
+        "raw_sha256": "sha256:b93704505a7915310e7e0342efd20b723044cbb0e2cb8c686772370341f62835"
+      },
+      {
+        "byte_length": 1493,
+        "git_blob_sha1": "38e9c1da6e57a68e7503fc9a527975bd52a778d9",
+        "mode": "100644",
+        "path": "LICENSE",
+        "raw_sha256": "sha256:0665bb5f63d444ca4dcc9ad89e274cf1d657928789bd1cae6ce2524423fe5902"
+      },
+      {
+        "byte_length": 1383,
+        "git_blob_sha1": "c07aa73be9afd5d11d2d27bad7254f8fb3182c28",
+        "mode": "100644",
+        "path": "NOTICE",
+        "raw_sha256": "sha256:0e2127467b2dc0fdebc6b4a774cb5baf03a13f0a585543f9775850368832f1aa"
+      },
+      {
+        "byte_length": 1885,
+        "git_blob_sha1": "7593884c5745843ff352a1ae87303a83682cf7fe",
+        "mode": "100644",
+        "path": "starfleet/README.md",
+        "raw_sha256": "sha256:b3de78ff9ad8da822a13220983ed6904178b75abb3bdc23932017bc1f0972211"
+      },
+      {
+        "byte_length": 203,
+        "git_blob_sha1": "d5af77649ae1f2cf1e3df5f3e0428e3819ac07a3",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Audit.lean",
+        "raw_sha256": "sha256:d4924d44f44a9027cbcf49422258e417dd6ebd74e2e7c92deda6d7e1c06311c7"
+      },
+      {
+        "byte_length": 559,
+        "git_blob_sha1": "2b7f485425087e7b1b894bad34309f5009515d38",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Erdos321Statement.lean",
+        "raw_sha256": "sha256:d20aecc21c7178ed2e67b74b402939c7a5049eabc3e957bb756a77f01fbf14e0"
+      },
+      {
+        "byte_length": 2194,
+        "git_blob_sha1": "a16028f8375fae5ce8be3440f8bee8b285222fe3",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research.lean",
+        "raw_sha256": "sha256:7ecefd35c1601be5df2e15d891edd80f233e064087aa841193593187719be21c"
+      },
+      {
+        "byte_length": 5655,
+        "git_blob_sha1": "2462749f98bc2908b41ae8d98b7786595c789155",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/AdaptiveCutoff.lean",
+        "raw_sha256": "sha256:bfc24b08fb9d860bf633c961ff1ea41ac2b957a55de235a1399a216b96ead68b"
+      },
+      {
+        "byte_length": 5290,
+        "git_blob_sha1": "b864f0b2a2f0beed864f7afeff7e979a8887e87e",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/AdaptiveRecurrence.lean",
+        "raw_sha256": "sha256:17d4bb2a73695393578a05ccdd95359aeee5bfe574394dec588c7c46b5ac9952"
+      },
+      {
+        "byte_length": 12066,
+        "git_blob_sha1": "4f112a8ce3efa197f409c2b191130b3d57f5b5fd",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/AdaptiveSources.lean",
+        "raw_sha256": "sha256:1d82a645beb7e2f4b8041ca36bef259fa1fca93b67d876dbbe03ee39b0628c08"
+      },
+      {
+        "byte_length": 2286,
+        "git_blob_sha1": "6110aec5c43d3c1a32641acb5f463775426a1cfa",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/AnalyticRecurrence.lean",
+        "raw_sha256": "sha256:e460a38f3bca6d5ad3f72ac5092f0a373c02736650c14143355c9bd0aaf6cc33"
+      },
+      {
+        "byte_length": 3452,
+        "git_blob_sha1": "6c42a98bf80bfdf6e8e692f0c2a2e8ee677899d7",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/BadPrimeAggregate.lean",
+        "raw_sha256": "sha256:cf17f3087cb3d325af459fe97b6d290d5d6d44a68be244a45c26b6f728df7ae5"
+      },
+      {
+        "byte_length": 2874,
+        "git_blob_sha1": "f59e77783431584e6575816593b21187ffc828cf",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/BadPrimeLogBound.lean",
+        "raw_sha256": "sha256:5b743c7fa73b5d8d05a2108656999b208f0c4a6ff860ccf9d31c2f04497297d5"
+      },
+      {
+        "byte_length": 5908,
+        "git_blob_sha1": "7afcc75d47546e8d606a93ffde2fa62790141169",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/BadPrimes.lean",
+        "raw_sha256": "sha256:a5b88e92909dd3b21759bff4181be395ee5f26b57bd09d823bc34dd8ce5a6428"
+      },
+      {
+        "byte_length": 412,
+        "git_blob_sha1": "5ab04bd51bc629286c17d2fc6d73a75a4486a417",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/BaselineLower.lean",
+        "raw_sha256": "sha256:cd164e2bbc52b3344d85defd0bcbbbda8cfe460065efece23dedfc12fd8b36b3"
+      },
+      {
+        "byte_length": 2192,
+        "git_blob_sha1": "996f891b0e1d2af6da47f2cc4c63b806498d2ca5",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/Basic.lean",
+        "raw_sha256": "sha256:6f8edd294e9a5dfb2475468c23518722a736798ea3e6e51822f826c1e4672a74"
+      },
+      {
+        "byte_length": 2600,
+        "git_blob_sha1": "4c1957a2a83df3843627921843b81f9e5ca401cb",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/DiscreteOperator.lean",
+        "raw_sha256": "sha256:3a5a455a89875b7662e4054e2e0d9c849a97665dd20ad2fcbe1226a64391dc5d"
+      },
+      {
+        "byte_length": 1219,
+        "git_blob_sha1": "73dd39aad9cf0fb79dbb08dadb0d4c735f55afda",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/ElementaryBounds.lean",
+        "raw_sha256": "sha256:bd832d42affdc664b18fd13e768882c75246fc8041973bade64e918979216e16"
+      },
+      {
+        "byte_length": 2464,
+        "git_blob_sha1": "248f7cef274ef15b6e8a86ab3be82026d01ed0f2",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/EndpointComparison.lean",
+        "raw_sha256": "sha256:be67088af16171081f211319e095e9d572278e038f15355e64a16de3fa67a4a3"
+      },
+      {
+        "byte_length": 6510,
+        "git_blob_sha1": "1d486714defb7b5d9772d04fc64ce913a32fda57",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/EndpointCoordinates.lean",
+        "raw_sha256": "sha256:0a67fbd4b6b8ff4a56b3e459c33e81c3b9e462a136a6b50773d772fc902ccaed"
+      },
+      {
+        "byte_length": 2183,
+        "git_blob_sha1": "ae5529a09b00a59365b007b3ad213342228a8144",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/EntropyBasics.lean",
+        "raw_sha256": "sha256:b68f5e4f6701edbf5b2314080ecd809205ae38b9219465deb14494369b97da83"
+      },
+      {
+        "byte_length": 6559,
+        "git_blob_sha1": "4b019633c9a2aa933337d59a321c1a3c2ab61dc8",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/EntropyRecurrence.lean",
+        "raw_sha256": "sha256:16f6de7e5a9e8d141c72c6e04ee406111dcbc8165299d6c93e053effe86a8aa2"
+      },
+      {
+        "byte_length": 5368,
+        "git_blob_sha1": "8b3f573c5ec63ab7c4bdaac2022ac82b76002305",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/ErrorProducts.lean",
+        "raw_sha256": "sha256:166311033c8483c373be5621fda925002194bb1caf541203bd42feba0c3d11f9"
+      },
+      {
+        "byte_length": 2316,
+        "git_blob_sha1": "414d30123ecb0224087ad0e8b4e573d259d65255",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/FinalAsymptotic.lean",
+        "raw_sha256": "sha256:63dd7ba024ec235a47c1b90c638acae758a50f2d0ee4267e0f69b22cd5d9c0b5"
+      },
+      {
+        "byte_length": 9903,
+        "git_blob_sha1": "c24eb31909d6b8cad78748657c2b8e67d3804264",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/FiniteRecurrence.lean",
+        "raw_sha256": "sha256:943a3316d5ef39e3138bd33e7d39a2057419594086a8e6ed5efd56594dbffd6a"
+      },
+      {
+        "byte_length": 838,
+        "git_blob_sha1": "2cde1ca6d8b7db2b7ab6f651ce5c5c247c0a43f7",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/FiniteValidity.lean",
+        "raw_sha256": "sha256:b4d2cdc641fe067504023ee3af7ad11cc13647aeb51f2ac0bc4bfd3896f94edb"
+      },
+      {
+        "byte_length": 4239,
+        "git_blob_sha1": "e74c8110bf66f045858afa03dd225778c3b8d5fb",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/FirstModelFactor.lean",
+        "raw_sha256": "sha256:a092963cb002a5cc27610fb837a3b4f8a2e59120d5b2dc628f16fbb5c61441d7"
+      },
+      {
+        "byte_length": 5893,
+        "git_blob_sha1": "9d0cb9c4c1a26b69a4fd01efdaf4569b69d862ad",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/FractionalLogBlock.lean",
+        "raw_sha256": "sha256:0ac465de187c7321d380f351b4b255d79a46e6b44ace2e1de17b51b3b15c491c"
+      },
+      {
+        "byte_length": 2620,
+        "git_blob_sha1": "a8d881af94d60cf5e87b4420d000f625b0ddfd6c",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/GeometricBudgets.lean",
+        "raw_sha256": "sha256:1d3e94ffbbb1c9714dcdd48914df3b1764bf98383818d2c5df4c20fbafddf213"
+      },
+      {
+        "byte_length": 4030,
+        "git_blob_sha1": "09d0c1f1c7099a7e41eb2ca7d6b02897404281f4",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/ImplicitAsymptotic.lean",
+        "raw_sha256": "sha256:8c1aad2282d1447c745b63564ba30e23c67d485814785aba75f6737b0e5b17ec"
+      },
+      {
+        "byte_length": 5773,
+        "git_blob_sha1": "b3f7cf291028afab6f5d143e901e84b481477883",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/IteratedLogProduct.lean",
+        "raw_sha256": "sha256:9d73660153f169ba622f2f23e0b36e41677558fc6349bd3ed725eaa61c100287"
+      },
+      {
+        "byte_length": 4095,
+        "git_blob_sha1": "fc658498c34db378a76680fa8df0bd5234be4792",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/IterationCoordinates.lean",
+        "raw_sha256": "sha256:95dacac938f922a851f91d85e0f8e2c3849e97dc1e5eef2e2527530c52bb798e"
+      },
+      {
+        "byte_length": 2141,
+        "git_blob_sha1": "128cc086584b3732b110233dc15ef4668d1a8d62",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/KernelAlgebra.lean",
+        "raw_sha256": "sha256:6260a78a1914581b035ed612d08fb160667f0a6dd09b89d1302e2a410492e60d"
+      },
+      {
+        "byte_length": 12188,
+        "git_blob_sha1": "f58e2eac964d8f51d262e34737ae721a1c42f9d7",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/KernelErrorOrbit.lean",
+        "raw_sha256": "sha256:8901bba4043a31719c9dfd89023dd2b03813950116a3a5097f677ff1a893e8fc"
+      },
+      {
+        "byte_length": 2962,
+        "git_blob_sha1": "f84023476623942d771774f9794b9127727687ea",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/KernelLimit.lean",
+        "raw_sha256": "sha256:413efb92ee4397ba5a7a430e78c15c0200dd794b90b77a0f3fce6f309bc56511"
+      },
+      {
+        "byte_length": 3268,
+        "git_blob_sha1": "46f787ad975ce7474098909f52702b4106ffe30e",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/LcmValueBound.lean",
+        "raw_sha256": "sha256:556fef62a137eb79e14e081ead17207230f94455ae0dabbe2e79bd9ea8914fd0"
+      },
+      {
+        "byte_length": 5555,
+        "git_blob_sha1": "30bf3e1525738f43b1e121bab4a207ab53a7fa21",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/LogMass.lean",
+        "raw_sha256": "sha256:33ebd11ef051079dbcb9b95b6ba6c643b022e2d78cc71b24e8742a1234ee4a29"
+      },
+      {
+        "byte_length": 1354,
+        "git_blob_sha1": "9322e02d9b4eff28da3b96683da5a77bd133c3cf",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/LowerMainRecurrence.lean",
+        "raw_sha256": "sha256:fb1fc0980068d5103d84c819eb2da8113efb733cf0cd1330dfd25744a7387a1a"
+      },
+      {
+        "byte_length": 14038,
+        "git_blob_sha1": "58cf53e1bef8aefdb9d8d0f79a5da84dee1671fc",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/ModelComparison.lean",
+        "raw_sha256": "sha256:af8e5e6fd3b39a8cb832a1c36c50523b51dbcc606d94648fd0070786ce46d99b"
+      },
+      {
+        "byte_length": 7877,
+        "git_blob_sha1": "8c17edbc70872c2834552fc70698a45cb3331064",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/ModelThreshold.lean",
+        "raw_sha256": "sha256:bf184f3e2bc04c76b2b34ccedecb8c7bb4ba5c4e29b2eb7c0dfe4989b84242b3"
+      },
+      {
+        "byte_length": 7417,
+        "git_blob_sha1": "d1451a5c511c4ed63484b631d5b2f8a9ea715b5e",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/ModularFiber.lean",
+        "raw_sha256": "sha256:eb3fc9c9cf48b9902e26a68ef03675f7a940e61e16c10ee1dc821007d550dfdc"
+      },
+      {
+        "byte_length": 5325,
+        "git_blob_sha1": "c3b2b932eaca819e0867c826588bdbd75f1726a8",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/MultiFiber.lean",
+        "raw_sha256": "sha256:66ed362b0d666945e6ceb2927d5caaac1d5c70ad9b6bbc56fdaac7a77252755d"
+      },
+      {
+        "byte_length": 3832,
+        "git_blob_sha1": "6305a2c34d2588797ed046f0403fa9a902898df6",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/NaturalMassBudget.lean",
+        "raw_sha256": "sha256:14ef6a77b648bf07c9caf624d8971b4436a3141c6a18be591ac29490d8d7a480"
+      },
+      {
+        "byte_length": 4569,
+        "git_blob_sha1": "9b7fafba23478a796ca5fbf91481ceb5011b66e6",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/NeumannModel.lean",
+        "raw_sha256": "sha256:2f4f2d7192e9b373751f0aa8548e0aca4bc09ddca8943d362c56c207b46ca12a"
+      },
+      {
+        "byte_length": 3954,
+        "git_blob_sha1": "85d910eefcc47cf3e313c071dddd0f529f9c742f",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/NeumannRemainder.lean",
+        "raw_sha256": "sha256:269582f8fe8f7e6f786597ca634e80af1408918c6f2b35e8b2659f61929e481a"
+      },
+      {
+        "byte_length": 4457,
+        "git_blob_sha1": "0fbc244456ff4073a333e02560297236ea6f6cec",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/NeumannRemainderBound.lean",
+        "raw_sha256": "sha256:f38c0795375dcdfa8480871a90e0208d5b6822c7f31bc587b20bac49ea5a4237"
+      },
+      {
+        "byte_length": 4454,
+        "git_blob_sha1": "68c9bdfd32de204fa36d2a4428b5ac977194c345",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/NeumannTerms.lean",
+        "raw_sha256": "sha256:7da65e02bc162413509433d49dc83ae0857e08c47e6694cea884e2b18b1f53cb"
+      },
+      {
+        "byte_length": 3310,
+        "git_blob_sha1": "2103064bf02e5fe0cd5d599d90be533b5fd3f906",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/NoPrivateLeader.lean",
+        "raw_sha256": "sha256:d1f02fd87bfcc97e6ae60cf325a5a39d7eb9a0669817f2b753f5f1fe313107c8"
+      },
+      {
+        "byte_length": 6846,
+        "git_blob_sha1": "2077b8283ff541667d729850188c04f246e10543",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/NormalizedRecurrence.lean",
+        "raw_sha256": "sha256:1968b865692448ecc2d1f3509c75a3f6525ef52d213615c6c392c54b7a82c3a2"
+      },
+      {
+        "byte_length": 5154,
+        "git_blob_sha1": "0cbfb62ca79022d6b38907fe607f48a0cde2e904",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/PNTError.lean",
+        "raw_sha256": "sha256:9f63b6ad59270b906ec4a959730bba631a8db6666ff7a7f3f887462da0b5d7f7"
+      },
+      {
+        "byte_length": 6487,
+        "git_blob_sha1": "f4433dcb43f86aff0e9f57767102b7a5486e9e12",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/PadicDominance.lean",
+        "raw_sha256": "sha256:f9d80c82e2ea50743e1f145649735dddffd6ebb7e2b472cf9423e9e0d2b0d60a"
+      },
+      {
+        "byte_length": 1616,
+        "git_blob_sha1": "91a76ec0b5dcd33cf34554b4f679db63c8957524",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/Pairwise.lean",
+        "raw_sha256": "sha256:1240a04031977db084e77cfee7b1e1499c77f8cdbfe28ded01b5036befd0cc8a"
+      },
+      {
+        "byte_length": 4616,
+        "git_blob_sha1": "6f22994c36e0d88666b98564ec412be5a82d9f31",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/PrimeConstruction.lean",
+        "raw_sha256": "sha256:5ca6954b076ce60f77a4b73a13c2c364d6418703bdd0aa6b6f029915e81c6e52"
+      },
+      {
+        "byte_length": 10003,
+        "git_blob_sha1": "c7978f3cfed682d3c9bdf696d0ed5f6c7c280bbb",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/PrimeFactorCount.lean",
+        "raw_sha256": "sha256:aa53ee7b88b66a3da3da4295c2e44291ae5849ddd5ee39c667094021b18993d9"
+      },
+      {
+        "byte_length": 4554,
+        "git_blob_sha1": "2335e6ec588362353083e2837b6c3dda9aa12da8",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/PrimeIntervalBounds.lean",
+        "raw_sha256": "sha256:cdaf6e0ff9a81cd2f6f0edfa8f7e18b232735e2548a0e9cea2384a51b3657467"
+      },
+      {
+        "byte_length": 6240,
+        "git_blob_sha1": "4809206449481bd3a9b8ca3b4901af0436fefbcb",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/PrivatePrime.lean",
+        "raw_sha256": "sha256:6f943722e187b72cf33a784c8791c25e9711244b667214481689fc14852b406b"
+      },
+      {
+        "byte_length": 9560,
+        "git_blob_sha1": "7f35c26c43977184e960ab8cc526521c95686b7a",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/QuotientKernel.lean",
+        "raw_sha256": "sha256:1bc2139e7b0e71c8b5de66f666c49b94318778f15a79f807dd8aa3c38afe41fa"
+      },
+      {
+        "byte_length": 4670,
+        "git_blob_sha1": "7f33c98a01d54d19b54e2a38b84134a7d9198ff8",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/QuotientPrimeBounds.lean",
+        "raw_sha256": "sha256:6d6821489c60ac06a38fc54d52c66a99b63f6add65fe1ead3b5866571053b576"
+      },
+      {
+        "byte_length": 6690,
+        "git_blob_sha1": "18630276d1165c845c725ca707213bfee2705b43",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/RoughPrimePartition.lean",
+        "raw_sha256": "sha256:64baf1f63be74563ca708cb321eefee3555122aae381efb63e349b3e7731c6cc"
+      },
+      {
+        "byte_length": 7586,
+        "git_blob_sha1": "75aa7ff2a5fb1c11f75795bbc7abac7cc0ed8766",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/SecondModelApplication.lean",
+        "raw_sha256": "sha256:ef0d8932be408d63c30ab9acbedbea22daa21b8aca42c6a4da9214e26e4ccf97"
+      },
+      {
+        "byte_length": 4865,
+        "git_blob_sha1": "727e4c04f0c5a3d5c63a35239acfdcb6a5b0d3eb",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/SecondModelFactor.lean",
+        "raw_sha256": "sha256:6571f90993b5f5f5262c745221d8cbbf3b872b60bbb55dad4f212390e35c5344"
+      },
+      {
+        "byte_length": 7113,
+        "git_blob_sha1": "083e3853381f66c236aaeaaa41458d760a4a7f81",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/SharpLogMass.lean",
+        "raw_sha256": "sha256:a9cea1dfe3c036cf876fa708dd4cd1d3198c34978e84e7ee496e49549878d6ab"
+      },
+      {
+        "byte_length": 11838,
+        "git_blob_sha1": "90731fee904918b8223beb71b62c70dbd1d4cfb7",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/ShiftedLogProduct.lean",
+        "raw_sha256": "sha256:b933e7cb7c7e3c3c3af93d66b72f3df6a42965e75cec29be5b56613424e9bf92"
+      },
+      {
+        "byte_length": 1595,
+        "git_blob_sha1": "a6f5e02f1d9b633361ef50d068b503af8cd10ecc",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/SignedPairs.lean",
+        "raw_sha256": "sha256:181f13a4bf8ec5263bacb92e386b63a58e1c6011cea61c26fd055b4f7df9c839"
+      },
+      {
+        "byte_length": 6993,
+        "git_blob_sha1": "8e666972e9443b09fd2bf641842e605ea6989a0a",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/SmoothLcm.lean",
+        "raw_sha256": "sha256:c63f9f36df1c36347b799bc642c74540de8e39ccd224ac2f99c1a9e5f3241a92"
+      },
+      {
+        "byte_length": 4140,
+        "git_blob_sha1": "12014de51b72383221806ef59c7b5eb0e342233c",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/Structural.lean",
+        "raw_sha256": "sha256:b9197d43942d3d9c6e71547fa2b787cb1011da01b7df2463de8865f05b7ff8e9"
+      },
+      {
+        "byte_length": 3911,
+        "git_blob_sha1": "220bd029829863757e69c38274b1bea5152925ab",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/SubsetSumCount.lean",
+        "raw_sha256": "sha256:4b8a69b34001d216474b55c3ac3b64da941fca656cf84e073e1d45335bdcebba"
+      },
+      {
+        "byte_length": 5865,
+        "git_blob_sha1": "2ad1281992256df6a18b0a0e42970eb7f02d8bea",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/TerminalAsymptotic.lean",
+        "raw_sha256": "sha256:e49ed1e2bb892af4a290f38d24c41154404d9f46fc77f94c567ab6e88c56edf6"
+      },
+      {
+        "byte_length": 5263,
+        "git_blob_sha1": "515d25a364ca225e1a56df9d4f692a2e0c5e9a57",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/TerminalDepth.lean",
+        "raw_sha256": "sha256:6ea9f825c2d96e2484b8b87892aa2418b201412f3bfa5a1219bca3cd00053196"
+      },
+      {
+        "byte_length": 12542,
+        "git_blob_sha1": "6300e939a1d527b4d4a67b9927a7ca71ca888d8d",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/TerminalModelUpper.lean",
+        "raw_sha256": "sha256:f031b1c813c0a795dee243601e6c2c9168e4c1244ed739fa62fdf0bcab12644e"
+      },
+      {
+        "byte_length": 17562,
+        "git_blob_sha1": "936328f49f661b821644bce87e5310adbda533c7",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/UniformDepthLower.lean",
+        "raw_sha256": "sha256:66304f98fe01b8186b9a09b1ae64fe1430125c3e5007a6be696e4358c8a4cf2d"
+      },
+      {
+        "byte_length": 9280,
+        "git_blob_sha1": "fa0ad950230635f0623c9125d9a617bdd720a17a",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/UniformDepthUpperTerms.lean",
+        "raw_sha256": "sha256:c3bdaa02ebb413a93f673b51e9b861300c6057c03d3f89a322a2e927e1587cfd"
+      },
+      {
+        "byte_length": 3228,
+        "git_blob_sha1": "b782e75ec61d2bb2b48db8cb8db0d478221cf605",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/UniformKernel.lean",
+        "raw_sha256": "sha256:154c48337b31d2398b51f174370927a6bb069af57d24d90688cc6f5eeaa24486"
+      },
+      {
+        "byte_length": 7792,
+        "git_blob_sha1": "e661e78b95c50d726f0c4844b538bd706f99f10b",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/UpperAnalyticRecurrence.lean",
+        "raw_sha256": "sha256:68b4bf523a0516bb922b1004f49b16fe92bb01ac053d784d8b78d17be16823bc"
+      },
+      {
+        "byte_length": 4010,
+        "git_blob_sha1": "132a88ba7f31d7b7b8821d2c7e50ca2d939a551a",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/Research/UpperIterationCoordinates.lean",
+        "raw_sha256": "sha256:649b2c6d91b4e14729c5accae5df0aa514f642ceef14a946cff8285079587971"
+      },
+      {
+        "byte_length": 1172,
+        "git_blob_sha1": "1bc9e3e8a6a49c626cc82284f79ac28f274afbee",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/lakefile.toml",
+        "raw_sha256": "sha256:e60ce2789c794bdaab5ae5581d990b345a67f4614390a6e142e4d1b7dc474f38"
+      },
+      {
+        "byte_length": 25,
+        "git_blob_sha1": "18640c8b066b182147f324d3aefd8ee48ee45238",
+        "mode": "100644",
+        "path": "starfleet/erdos-321/lean-toolchain",
+        "raw_sha256": "sha256:efac0b94923b2d8b6840cd35be9177ad0fc5ab2332f4f4311c98712cee92fdee"
+      },
+      {
+        "byte_length": 14572,
+        "git_blob_sha1": "71cf2edb0e8628dc1c3a15e3a65787afe2ecd046",
+        "mode": "100644",
+        "path": "starfleet/faithfulness.json",
+        "raw_sha256": "sha256:e21b6f0e5e742d08baf6048cc8b2d8ecb6c6f24a4534758485b1072a3e2281b2"
+      },
+      {
+        "byte_length": 1853,
+        "git_blob_sha1": "9bb83a2a47efd42015d940252a03b5fd7e33ce26",
+        "mode": "100644",
+        "path": "starfleet/scripts/check_axioms.sh",
+        "raw_sha256": "sha256:fe9188e16fbf0887d9cf80658dac0fcc55cf1bf8cca528a780c3a1e118af5b31"
+      }
+    ],
+    "repository": "https://github.com/williamjblair/lean-proofs.git",
+    "tree": "dbbe69fa2dbdd73f5e398bbd799115dbbdc9cc27"
+  }
+}

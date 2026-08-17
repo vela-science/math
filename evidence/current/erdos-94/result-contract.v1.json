@@ -1,0 +1,24 @@
+{
+  "schema": "vela.pilot-ext-01.result-contract.v1",
+  "authority_effect": "none",
+  "property": "distance_multiplicity_double_counting",
+  "positive_outcome": {
+    "outcome": "pass",
+    "required": [
+      "Every frozen source, target, proof, integration, and Method identity resolves exactly.",
+      "The exact lean-proofs declaration builds under the pinned Lean and Mathlib dependency graph.",
+      "Its axiom dependency cone is exactly within propext, Classical.choice, and Quot.sound.",
+      "The ordered distance fiber is proved to be exactly the two swaps before division by two.",
+      "The distance fibers partition every non-diagonal unordered pair exactly once.",
+      "The proof closes the exact Formal Conjectures target under its pinned toolchain with only a mechanical API spelling adaptation."
+    ]
+  },
+  "refuse": [
+    "Any source, target, proof, selector, integration, Method, toolchain, dependency, or root drift.",
+    "Any sorry, admit, unsafe, native_decide, unexpected axiom, assumed parity, missing swap representative, or truncating-division gap.",
+    "Any statement broader than the bounded sum_multiplicity identity."
+  ],
+  "does_not_establish": [
+    "The main cubic Erdős 94 theorem, external or human review, source-owner acceptance, a Vela Decision, or Standing."
+  ]
+}

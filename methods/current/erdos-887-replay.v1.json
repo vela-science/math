@@ -1,0 +1,20 @@
+{
+  "schema": "vela.verification-method.v1",
+  "profile": "coh-00-erdos-887-replay-v1",
+  "property": "compiled_cache_replay",
+  "question": "Does the current Erdős 887 packet preserve the exact source, repair, manifest, compiled-cache inputs, and bounded Lean 4.22 elaboration result?",
+  "procedure": [
+    "Hash every input named by evidence/current/erdos-887/replay.v1.json and require the recorded raw SHA-256 values and sizes.",
+    "Require the result to report exit code 0, Lean 4.22.0, exactly four named sorry warnings, network denial, and exact public compiled-cache replay.",
+    "Require every limitation to remain present.",
+    "Refuse any claim of a proof, from-source dependency build, independent reproduction, source-owner acceptance, or Standing."
+  ],
+  "environment": {
+    "inputs_are_exact_bytes": true,
+    "network_required": false,
+    "shared_dependencies": "The producer and verifier share the same retained source, patch, manifest, compiled caches, and migrated result. This is a complementary fidelity review, not independent reproduction."
+  },
+  "does_not_establish": [
+    "A proof of Erdős problem 887, a from-source dependency build, independent reproduction, source-owner acceptance, a Decision, or Standing."
+  ]
+}

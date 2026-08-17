@@ -1,0 +1,24 @@
+{
+  "schema": "vela.verification-method.v1",
+  "profile": "pilot-ext-01-erdos-94-double-counting-v1",
+  "property": "distance_multiplicity_double_counting",
+  "question": "Does the exact connected lean-proofs revision prove the bounded Formal Conjectures Erdős 94 sum_multiplicity statement, including the ordered-to-unordered parity step, without broadening the claim?",
+  "procedure": [
+    "Resolve every source, commit, tree, blob, raw SHA-256, integration Manifest, Binding, Profile, and Method root named by evidence/current/erdos-94/pilot-input.v1.json.",
+    "From a clean checkout materialize the pinned Lean 4.29.1 dependency graph and build ErdosProblems.Erdos94SumMultiplicity plus the root library.",
+    "Require the target declaration to have no sorry, admit, unsafe, native_decide, or axioms outside propext, Classical.choice, and Quot.sound.",
+    "Independently inspect that every ordered distance fiber consists of exactly the two swaps, that parity is proved before natural-number division, and that the distance fibers partition every non-diagonal unordered pair exactly once.",
+    "In a disposable exact checkout of williamjblair/formal-conjectures at 94a278e06a8bcbc2e4f2935e491c0c115ec832e0, insert the candidate proof into Erdos94.erdos_94.variants.sum_multiplicity and build the exact module under its pinned toolchain.",
+    "Refuse any source, target, selector, root, dependency, statement, parity, or axiom drift and retain all limitations and nonclaims."
+  ],
+  "environment": {
+    "inputs_are_exact_bytes": true,
+    "network_required": true,
+    "producer": "agent:openai-codex-producer-pilot-ext-01",
+    "verifier": "verifier:anthropic-claude-pilot-ext-01",
+    "shared_dependencies": "Producer and verifier use the same operator-owned host, Git remotes, exact source bytes, Lean toolchains, Mathlib revisions, and pilot supervision. Their providers and analysis contexts differ, but this is not operationally independent or external reproduction."
+  },
+  "does_not_establish": [
+    "The main cubic Erdős 94 theorem, correctness of the Lean kernel or Mathlib, human or external review, source-owner acceptance, a Vela Decision, or Standing."
+  ]
+}
