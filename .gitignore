@@ -1,0 +1,12 @@
+/.vela/operation-journals/
+/.vela/tmp/
+/.vela/work/
+/.vela/tasks/
+/.vela/workspaces/
+/.vela/source-inbox/
+/.vela/agents/
+/.vela/keys/
+/.vela/artifact-blobs/
+/target/
+node_modules/
+.DS_Store

@@ -1,0 +1,15 @@
+schema = "vela.repository-profile.v1"
+repository_id = "3d012325-3768-4b95-a385-c94e9f2a57a6"
+name = "Vela Mathematics Program"
+summary = "Which bounded assertions about Erdős 321, Erdős 94, and Erdős 887 are admitted on exact evidence?"
+maintainers = []
+
+[scope]
+question = "Which bounded assertions about Erdős 321, Erdős 94, and Erdős 887 are admitted on exact evidence?"
+includes = []
+excludes = []
+
+[license]
+content = "CC-BY-4.0"
+code = "Apache-2.0"
+data = "NOASSERTION"
