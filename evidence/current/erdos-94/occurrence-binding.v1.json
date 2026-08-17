@@ -22,8 +22,8 @@
     "scope": "navigation grouping only"
   },
   "predecessor": {
-    "claim_id": "vcl_28704f08364e7377bd15026bd4e8847fc9c97d095238bbe472bbe5cb1bfabdf6",
-    "claim_root": "sha256:623b5cee58e6140883bb81336857e49c85ad8e22fc4db3c21c331660905d5483",
+    "claim_id": "vcl_9ba852a45d8bc6f9dd024d85ff19e0b81317945f45e9eb073a89e44760a6b009",
+    "claim_root": "sha256:8e762a3a7dff021b90d15618d8197ed2454d457416a494ae57e90d2b00688fb4",
     "assertion": "At lean-proofs commit 423344341fbfdf4f8f684a302c5d05379125e7dc, Erdos94.variants.sum_multiplicity proves that for every finite planar point set P, the sum over its distinct determined distances of the unordered-pair distance multiplicities equals P.card.choose 2, matching Formal Conjectures commit 94a278e06a8bcbc2e4f2935e491c0c115ec832e0."
   },
   "successor": {
