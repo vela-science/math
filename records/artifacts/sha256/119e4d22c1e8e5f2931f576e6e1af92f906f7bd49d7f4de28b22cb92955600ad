@@ -1,0 +1,70 @@
+{
+  "schema": "vela.pilot-ext-01.producer-report.v1",
+  "authority_effect": "none",
+  "actor": "agent:openai-codex-producer-pilot-ext-01",
+  "performer_kind": "agent",
+  "provider": "OpenAI",
+  "model": "not_exposed",
+  "harness": "Codex bounded subagent",
+  "started_at": "2026-08-15T13:02:31Z",
+  "ended_at": "2026-08-15T13:26:35Z",
+  "elapsed_seconds": 1444,
+  "input": {
+    "lean_proofs_commit": "06d1322e62aa28b860da1ec66465d913c1902c78",
+    "lean_proofs_tree": "572395b76976c0b6940cbc58c15512adbc36a328",
+    "formal_conjectures_commit": "94a278e06a8bcbc2e4f2935e491c0c115ec832e0",
+    "formal_conjectures_file_sha256": "sha256:ba09a21af6257987afed3733e9edc737bfe4d1f132f1cb07ca6f5fe216337d3b"
+  },
+  "output": {
+    "commit": "423344341fbfdf4f8f684a302c5d05379125e7dc",
+    "tree": "eae3c8d1941c997f1055f5ea561cb719088b9202",
+    "file": "ErdosProblems/Erdos94SumMultiplicity.lean",
+    "file_sha256": "sha256:412975add8b6963bb44378f5d8ef41fd1f860b9ec06495432ab97e8ca60ffbe0"
+  },
+  "environment": {
+    "platform": "darwin-arm64",
+    "lean": "4.29.1",
+    "lake": "5.0.0",
+    "mathlib_commit": "5e932f97dd25535344f80f9dd8da3aab83df0fe6",
+    "network_used_for_dependency_materialization": true
+  },
+  "commands": [
+    {
+      "command": "lake build ErdosProblems.Erdos94SumMultiplicity",
+      "exit_code": 0,
+      "summary": "8248 jobs completed"
+    },
+    {
+      "command": "lake build ErdosProblems",
+      "exit_code": 0,
+      "summary": "8346 jobs completed"
+    },
+    {
+      "command": "bash scripts/check_manifest.sh",
+      "exit_code": 0,
+      "summary": "66 tracked theorem targets"
+    },
+    {
+      "command": "bash scripts/check_axioms.sh",
+      "exit_code": 0,
+      "summary": "target axioms exactly propext, Classical.choice, Quot.sound"
+    },
+    {
+      "command": "git diff --check HEAD^ HEAD",
+      "exit_code": 0,
+      "summary": "clean patch"
+    }
+  ],
+  "assistance": [
+    "The supervising agent identified the maintained Mathlib theorem Sym2.card_image_offDiag.",
+    "The producer consulted the public lean-proofs Erdős 94 ordered/unordered fiber argument."
+  ],
+  "limitations": [
+    "The exact model version was not exposed by the harness.",
+    "The producer and supervisor share provider, host, source bytes, and dependency caches.",
+    "Native build and axiom checks are producer-reported checks, not a Vela Verification."
+  ],
+  "does_not_establish": [
+    "The main cubic Erdős 94 theorem, external acceptance, a Decision, or Standing."
+  ]
+}

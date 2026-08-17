@@ -1,0 +1,67 @@
+{
+  "schema": "vela.pilot-ext-01.input.v1",
+  "authority_effect": "none",
+  "source": {
+    "provider": "github",
+    "repository": "williamjblair/lean-proofs",
+    "repository_locator": "https://github.com/williamjblair/lean-proofs.git",
+    "connected_codebase_id": "b5077183-2e96-49e0-ab21-1c8f668ab13d",
+    "acquisition": [
+      "github_app_selected_repository",
+      "anonymous_public_git"
+    ],
+    "commit": "c23bda1584fa496363f93b4ee783f3e0d1ee116e",
+    "tree": "3aa1260e605403701789ca3673cde84999ddb594",
+    "producer_commit": "423344341fbfdf4f8f684a302c5d05379125e7dc",
+    "producer_tree": "eae3c8d1941c997f1055f5ea561cb719088b9202",
+    "proof_path": "ErdosProblems/Erdos94SumMultiplicity.lean",
+    "proof_git_blob": "020a4d72cc7bb1706efac07fc1bcef70d3adf838",
+    "proof_sha256": "sha256:412975add8b6963bb44378f5d8ef41fd1f860b9ec06495432ab97e8ca60ffbe0",
+    "proof_size": 5527,
+    "inspection_root": "sha256:bbf77e7bf9674bdbffddaa39351e3ccf735da857e2bcfea5e559f28cdf3dd41c",
+    "receipt_root": "sha256:4a23d69daa101a0b844f44fd4aeffe41a91a88a0f6b65d19b3817df4e7cde08e",
+    "integration_manifest_root": "sha256:3079661cc5761e79235f85afa20b9a4e4cd2c963fb3e0f4c3eb1e116743a510b",
+    "github_permissions": [
+      "metadata:read",
+      "contents:read"
+    ]
+  },
+  "target": {
+    "repository": "williamjblair/formal-conjectures",
+    "commit": "94a278e06a8bcbc2e4f2935e491c0c115ec832e0",
+    "tree": "3caf62b9e8c71e670ca6de049bb715c1c1f1c278",
+    "path": "FormalConjectures/ErdosProblems/94.lean",
+    "git_blob": "f2a23edc5cb59af938c638e857a0422861445a62",
+    "sha256": "sha256:ba09a21af6257987afed3733e9edc737bfe4d1f132f1cb07ca6f5fe216337d3b",
+    "size": 3215,
+    "selector": "Erdos94.erdos_94.variants.sum_multiplicity"
+  },
+  "property": {
+    "selector": "Erdos94.variants.sum_multiplicity",
+    "claim": "For every finite planar point set P, the sum over its distinct determined distances of the unordered-pair distance multiplicities equals P.card.choose 2.",
+    "acceptance": [
+      "The exact lean-proofs declaration elaborates under Lean 4.29.1 and Mathlib 5e932f97dd25535344f80f9dd8da3aab83df0fe6.",
+      "The declaration has no sorry, admit, unsafe, native_decide, or axioms outside propext, Classical.choice, and Quot.sound.",
+      "A clean verifier applies the proof to the exact Formal Conjectures target and builds that module under its pinned toolchain.",
+      "The proof closes the ordered-versus-unordered parity step rather than assuming it."
+    ],
+    "refusal": [
+      "Any source, revision, selector, target, Manifest, Method, or proof-root drift.",
+      "Any assumed parity, missing swap representative, duplicate-distance double count, or truncating-division gap.",
+      "Any claim that this proves the cubic Erdős 94 theorem."
+    ]
+  },
+  "initial_math_state": {
+    "commit": "08a0e6d327e1ae9937ab2e0e5002192815eac69a",
+    "tree": "f58de302dcaf96e41e4836732dc5446f4eeb8c61",
+    "repository_root": "sha256:3e2236510923277c1e363d2d28c3d84d86a1d698bafd576b79308b18ae0cf0d2",
+    "authority_keyset_root": "sha256:43762983e444ec2a8b7fc906b05e45d66e9af469024db0691324707d5306deb1",
+    "authority_model_root": "sha256:4d6d5e283577dde287b743871a67cb84bf1346d61ad8786c320d70f1af7e8965",
+    "pending_claims": 0
+  },
+  "nonclaims": [
+    "The main cubic Erdős 94 theorem or either other variant.",
+    "External source-owner review, acceptance, adoption, or an upstream contribution.",
+    "Human review, provider-independent reproduction, a Vela Decision, or Standing."
+  ]
+}
