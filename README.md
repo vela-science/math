@@ -4,8 +4,9 @@ Which bounded assertions about Erdős 321, Erdős 94, and Erdős 887 are admitte
 
 This is a Vela repository. Git stores exact Claims, Submissions, Verification Records, Decisions, and authority history. Derived views are rebuildable.
 
-The current prelaunch state is a compact Submission v3 genesis. See
-[`MIGRATION.md`](MIGRATION.md) for the exact retained state and rollback ref.
+The current prelaunch state is a compact Submission v3 repository with three
+accepted Claims and no pending review. See [`MIGRATION.md`](MIGRATION.md) for
+the exact retained current-state inventory.
 
 ## Evaluation material
 

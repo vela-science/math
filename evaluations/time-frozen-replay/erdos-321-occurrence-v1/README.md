@@ -13,7 +13,7 @@ scientific acceptance, general capability, or external validation.
 
 ## Why this split
 
-The current compact Submission v3 genesis is the source-owned current state,
+The compact Submission v3 repository is the source-owned current state,
 but its migration retained the later correction evidence before replaying the
 predecessor. It is therefore unsuitable as a historical clock. This pilot uses
 the original chronological Git history instead:

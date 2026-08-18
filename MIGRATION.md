@@ -1,46 +1,42 @@
-# Submission v3 current-state migration
+# Submission v3 current state
 
-This current branch is a fresh compact prelaunch genesis made with the
-branch-built Vela 0.977.0 candidate. It preserves the three intended current
-assertions and the two accepted predecessor Claims needed to express the
-Erdős 321 and Erdős 94 corrections. It does not claim a scientific change.
+This repository contains only the compact prelaunch Submission v3 scientific
+lineage. It records three accepted current Claims, six authenticated
+Submissions and Proposals, six scoped Verification Records, ten
+content-addressed Artifacts, and no pending review.
 
-## Retain
+## Current accepted Claims
 
-- five v3 Submissions and Proposals: three current Claims and two exact
-  correction predecessors;
-- four scoped Verification Records: complementary migration-fidelity checks
-  for Erdős 321 and 887, plus independently attributed occurrence-mapping and
-  correction-scope checks for the current Erdős 94 successor;
-- the seven content-addressed Artifacts, sixteen source-evidence files, and
-  four Methods directly used by those records;
-- the repository authority key, policy, keyset, Decisions, Events, and exact
-  correction relations;
-- `refs/heads/rollback/submission-v2-coh-00` at
-  `508b39adac51e6823ea0d666e789a1e016b20227`, readable only with the signed
-  Vela 0.976.1 release.
+- Erdős 321: the bounded occurrence correction remains accepted with its exact
+  source locks and unresolved terminal-to-fixed obligations. It is not a proof
+  or resolution.
+- Erdős 94: revision 3 retains the exact elementary `sum_multiplicity`
+  assertion and one navigation-only occurrence mapping. The accepted revision
+  removes a transient recovery caveat without changing the assertion,
+  scientific limits, evidence rights, occurrence scope, or correction truth.
+- Erdős 887: the exact public compiled-cache replay remains accepted with four
+  expected `sorry` warnings. It is not a proof or a from-source build.
 
-## Delete from current state
+## Retained current lineage
 
-- every pre-genesis Submission, Verification, Proposal, Claim record,
-  Artifact record, Decision, Event, and authority record;
-- the old distance-multiplicity verification report and result contract,
-  whose exact predecessor record remains available at the rollback ref;
-- the three superseded Erdős 94 review Methods; the current v3 checks bind the
-  two exact migration-review Methods instead;
-- all Submission v2 envelopes and the retired execution-binding field.
+- six Submission v3 envelopes and their Proposals: the three current Claims
+  plus the exact predecessors needed to express the Erdős 321 and Erdős 94
+  correction chains;
+- six scoped Verifications: one Erdős 321 correction-chain check, one Erdős
+  887 replay check, two Erdős 94 occurrence-correction checks, and two
+  separately attributed Erdős 94 revision/state-fidelity checks;
+- ten content-addressed Artifacts, nineteen files under `evidence/current/`,
+  and six immutable Methods under `methods/current/`;
+- the repository authority keyset, policy, signed Decisions, Events, exact
+  performer provenance, and current correction relations.
 
-Compared with the rollback checkout, the compact state replaces all 29 old
-scientific record files with 26 current v3 record files, reduces Verification
-Records from six to four, Artifacts from eight to seven, retained evidence
-files from eighteen to sixteen, and Methods from five to four. Across those
-records, evidence, Methods, and authority files, the current checkout is
-16,641 bytes smaller. Git history and the rollback ref are the only legacy
-store.
+The current Erdős 94 revision was reviewed by two separately attributed AI
+verifiers. Their records declare actor separation from the producer while
+disclosing the shared OpenAI provider family, host, repository, source bytes,
+signed Vela binary, Git object database, and local tooling. Those
+Verifications establish only revision fidelity and unchanged scientific
+meaning/state. They do not establish a new proof, independent reproduction,
+external acceptance, a Decision, or Standing.
 
-The Erdős 94 predecessor's historical
-`distance_multiplicity_double_counting` Verification is not re-attested over
-new bytes. Its current successor binds new exact occurrence-mapping and
-correction-scope checks, with shared host, source bytes, tooling, and model
-provider disclosed; those checks do not establish the mathematics, semantic
-equivalence, acceptance, or Standing.
+The accepted inventory is derived by strict replay. Current state does not
+depend on an auxiliary recovery branch or a legacy Submission envelope.
