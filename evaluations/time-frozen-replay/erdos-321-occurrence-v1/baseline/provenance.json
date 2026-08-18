@@ -1,0 +1,44 @@
+{
+  "command": {
+    "argv": [
+      "python3",
+      "baseline.py",
+      "--bundle",
+      "<candidate-bundle>",
+      "--response",
+      "candidate-output.json",
+      "--provenance",
+      "provenance.json"
+    ],
+    "exit_code": 0,
+    "working_directory": "pilot-root"
+  },
+  "dependencies": [
+    "The exporter, baseline, and evaluator use the same Math Git object database and host.",
+    "The baseline sees only paths inside the exported candidate bundle by implementation, not by an operating-system sandbox.",
+    "No model provider, network source, Repository signer, or authority credential is used."
+  ],
+  "environment": {
+    "architecture": "arm64",
+    "os": "Darwin",
+    "runtime": "CPython 3.11.2"
+  },
+  "format": "math.time-frozen-replay-provenance.v1",
+  "input_bundle_root": "sha256:8f3dbeaae255d6fd0ec19012c63254720fa60217e1cb45ef7841a7b44c0220b5",
+  "limitations": [
+    "Internal deterministic baseline only; not external validation or evidence of model quality.",
+    "The rule detects a namespace/occurrence mismatch and does not judge mathematical truth or semantic equivalence."
+  ],
+  "model": null,
+  "output_sha256": "sha256:f91421189641dd3b658442ddd87c3c2108ff2be0599e15b0ffeaa503535fc30f",
+  "performer": {
+    "id": "deterministic-tool:source-occurrence-baseline-v1",
+    "kind": "deterministic_tool"
+  },
+  "tools": [
+    {
+      "name": "python",
+      "version": "3.11.2"
+    }
+  ]
+}

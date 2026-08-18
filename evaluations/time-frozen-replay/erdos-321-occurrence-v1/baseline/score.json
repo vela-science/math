@@ -1,0 +1,49 @@
+{
+  "authority_effect": "none",
+  "dimensions": {
+    "abstention_refusal": {
+      "detail": "Proposal must explicitly abstain from the larger protected nonclaims.",
+      "status": "pass"
+    },
+    "evaluator_self_reference": {
+      "detail": "No scorer-only path or implementation reference detected.",
+      "status": "pass"
+    },
+    "hindsight_leakage": {
+      "detail": "No protected t1 token detected.",
+      "status": "pass"
+    },
+    "proposed_relation": {
+      "detail": "Compared exact relation and t0 target identity.",
+      "status": "pass"
+    },
+    "required_evidence": {
+      "detail": "Compared the exact scoped checks later required before Decision.",
+      "status": "pass"
+    },
+    "scope": {
+      "detail": "Compared only the bounded correction scope, not mathematical truth.",
+      "status": "pass"
+    },
+    "subject_source_occurrence": {
+      "detail": "Compared the exact set of source-native occurrences retained at protected t1.",
+      "status": "pass"
+    }
+  },
+  "eligible": true,
+  "format": "math.time-frozen-replay-score.v1",
+  "input_bundle_root": "sha256:8f3dbeaae255d6fd0ec19012c63254720fa60217e1cb45ef7841a7b44c0220b5",
+  "limitations": [
+    "This is an exact fixture comparison, not a truth, acceptance, model-quality, or generalization score.",
+    "Identity kind has no weight; method, inputs, output, scope, and disclosed dependencies are the observable basis."
+  ],
+  "provenance_sha256": "sha256:ade7efe774afb7ee0029b3fb8c835b986b7f4e6489ed9a90fbd9ff3395e72479",
+  "response_sha256": "sha256:f91421189641dd3b658442ddd87c3c2108ff2be0599e15b0ffeaa503535fc30f",
+  "score_root": "sha256:867b9390c18af45e0cbb3052b1f06a8a2d5a123f5b6b83dc363257632c9f65d8",
+  "summary": {
+    "fail": 0,
+    "not_applicable": 0,
+    "pass": 7
+  },
+  "task_sha256": "sha256:83215483736da7dd7934c6469e7dfae95f786394be54ddcedfac726f3608d93a"
+}

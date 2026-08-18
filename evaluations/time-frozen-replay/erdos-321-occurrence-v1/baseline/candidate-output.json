@@ -1,0 +1,25 @@
+{
+  "action": "propose_transition",
+  "format": "math.time-frozen-replay-response.v1",
+  "nonclaims": [
+    "fixed_nat_log_implication",
+    "problem_resolution",
+    "scientific_acceptance",
+    "statement_equivalence"
+  ],
+  "rationale": "The retained Formal Conjectures source exposes namespace-qualified main and isTheta declarations while the accepted t0 assertion uses a shortened occurrence name. Propose an occurrence-only correction and require source-mapping plus revision-fidelity checks.",
+  "refusal_reason": null,
+  "relation": "corrects",
+  "required_evidence": [
+    "claim_revision_fidelity",
+    "subject_occurrence_mapping"
+  ],
+  "scope": "occurrence_resolution_only",
+  "subject_occurrences": [
+    "Erdos321.erdos_321",
+    "Erdos321.erdos_321.variants.isTheta"
+  ],
+  "target_claim_id": "vcl_3d4fd59554ccaa2b792b08abae16a8d0fe329d4901ad798fe05c6c7769c9966b",
+  "target_claim_root": "sha256:d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776",
+  "task_id": "erdos-321-next-transition-at-t0-v1"
+}

@@ -9,4 +9,5 @@
 /.vela/artifact-blobs/
 /target/
 node_modules/
+__pycache__/
 .DS_Store

@@ -1,0 +1,37 @@
+{
+  "authority_effect": "none",
+  "command": [
+    "vela",
+    "replay",
+    "<detached-t1-checkout>",
+    "--json"
+  ],
+  "format": "math.signed-replay-receipt.v1",
+  "output": {
+    "authority_keyset_root": "sha256:cb06d8d9c2bcb88e0bcdfa908659f06cd6419d07f335ff1c956c1da64942f111",
+    "authority_model_root": "sha256:b9cdcd8061ea0693769b20288590dbb672984f5ff81ea7a7631a4d20eafe3cfe",
+    "counts": {
+      "accepted_claims": 3,
+      "artifacts": 11,
+      "pending_claims": 0,
+      "proposal_withdrawals": 1,
+      "proposals": 7,
+      "submissions": 7,
+      "verifications": 14
+    },
+    "git_commit": "7efcbe8cf48544d393c3ca102fdf24e2051b8c73",
+    "git_tree": "bc7ef3b09352c33657b322570ca6fa97e803b0d1",
+    "ok": true,
+    "origin_id": "vro_229ce0a08217da5e",
+    "origin_root": "sha256:229ce0a08217da5e8bad2059c35070989652ca546ab45b8e699922ba182e8a69",
+    "repository_id": "8115c538-7688-40b7-ab75-3c4765bf3c19",
+    "repository_root": "sha256:0e24fa1b13d7eda7b4e809564ec414eb1fda09f5dcf9aa8a6bcd6ae69ac96197",
+    "schema": "vela.repository-verification.v3"
+  },
+  "reader": {
+    "binary_sha256": "sha256:669e76620b814b3a8a4acc5fb73e1cd775c979543043b7389bb454cad076960a",
+    "distribution_signer_fingerprint": "SHA256:MX3Eo1o9S5pLnx2kiNyAy2aME7PAWDtvqtUBljJst1M",
+    "manifest_signature_verified": true,
+    "release": "v0.976.1"
+  }
+}

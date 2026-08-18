@@ -1,0 +1,146 @@
+{
+  "authority_effect": "none",
+  "expected": {
+    "action": "propose_transition",
+    "minimum_nonclaims": [
+      "fixed_nat_log_implication",
+      "problem_resolution",
+      "scientific_acceptance",
+      "statement_equivalence"
+    ],
+    "relation": "corrects",
+    "required_evidence": [
+      "claim_revision_fidelity",
+      "subject_occurrence_mapping"
+    ],
+    "scope": "occurrence_resolution_only",
+    "subject_occurrences": [
+      "Erdos321.erdos_321",
+      "Erdos321.erdos_321.variants.isTheta"
+    ],
+    "target_claim_id": "vcl_3d4fd59554ccaa2b792b08abae16a8d0fe329d4901ad798fe05c6c7769c9966b",
+    "target_claim_root": "sha256:d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776"
+  },
+  "format": "math.time-frozen-replay-adjudication.v1",
+  "historical_reader": {
+    "binary_sha256": "sha256:669e76620b814b3a8a4acc5fb73e1cd775c979543043b7389bb454cad076960a",
+    "distribution_signer_fingerprint": "SHA256:MX3Eo1o9S5pLnx2kiNyAy2aME7PAWDtvqtUBljJst1M",
+    "manifest_signature_verified": true,
+    "release": "v0.976.1"
+  },
+  "replay_receipts": [
+    {
+      "bytes": 1353,
+      "path": "protected/replay/t0.json",
+      "period": "t0",
+      "sha256": "sha256:f01b69be77cf469f5250ba4cdc01f59df30558aa168427af4e39b05ab5b7920b"
+    },
+    {
+      "bytes": 1354,
+      "path": "protected/replay/t1.json",
+      "period": "t1",
+      "sha256": "sha256:cedca0be98b265e0ea5ad9d45e7061dfbe72780600bc889b593a8b61c81de94a"
+    }
+  ],
+  "current_source_anchor": {
+    "commit": "f9b28280881472ccb9c4b1b35d8e741745f0bd99",
+    "repository_root": "sha256:45640c5eea54693df444eada6dd1a7c1f5a4b4ef266fddf79cf51d083233ebba",
+    "tree": "875539d8790c0557ebee91ad2e40b22f5fa0c147"
+  },
+  "nonclaims": [
+    "The t1 Decision establishes Repository Standing only for its admitted bytes, not general scientific truth.",
+    "Exact agreement with t1 is not the truth criterion and does not make a different bounded t0 refusal irrational.",
+    "Human, agent, organization, and deterministic-tool identities carry no inherent evidentiary weight."
+  ],
+  "protected_entries": [
+    {
+      "bytes": 6934,
+      "git_blob": "02b028ba30aacc4108355cc493188b4f56d14aa2",
+      "path": "evidence/erdos-321/claim-occurrence-correction/occurrence-resolution.v1.json",
+      "sha256": "sha256:7b0da0354c5fb7993b586d0f5f4eeae22bc890e3ceb77017cb0dc6f4f4aadf83"
+    },
+    {
+      "bytes": 10172,
+      "git_blob": "c42df143598e8dced77f9761174dbd98dd50b6d2",
+      "path": "evidence/erdos-321/claim-occurrence-correction/correction-plan.v1.json",
+      "sha256": "sha256:7ff1594c8052795a81102c08e9c8092c21e0ef777a16df6b8f513b2f3fb3a022"
+    },
+    {
+      "bytes": 2247,
+      "git_blob": "9f5af5e36f13a637ee636d3149d2049b6cd08da7",
+      "path": "records/claims/sha256/8ea9f7150743ba0919a9d40aa0e632e1171b0a2ecdce20e76d6068e1427a647e.json",
+      "sha256": "sha256:8ea9f7150743ba0919a9d40aa0e632e1171b0a2ecdce20e76d6068e1427a647e"
+    },
+    {
+      "bytes": 1048,
+      "git_blob": "45458e6088ec2f76d7d53a3c0914f3ab0f0faedd",
+      "path": "records/proposals/sha256/58c2f9ae804988795c587e3b788382f49c2c6a2f01ed8cf35242a7dec57b6172.json",
+      "sha256": "sha256:58c2f9ae804988795c587e3b788382f49c2c6a2f01ed8cf35242a7dec57b6172"
+    },
+    {
+      "bytes": 3631,
+      "git_blob": "ea13f132c5398d24392e447c2457e9a6fdcf3361",
+      "path": "records/submissions/sha256/e1025b3c5f4b2375fe1e3c0d6497bd7a53d24f64b94988a6ad2e9abd55e1597f.json",
+      "sha256": "sha256:e1025b3c5f4b2375fe1e3c0d6497bd7a53d24f64b94988a6ad2e9abd55e1597f"
+    },
+    {
+      "bytes": 2380,
+      "git_blob": "e3bb1e3a8bbe3533fa5492b2eafdca647d0c37d6",
+      "path": "records/verifications/sha256/255c0d4aee18bf826163ed007367d466f778e41cde90952be07c81231f09644e.json",
+      "sha256": "sha256:255c0d4aee18bf826163ed007367d466f778e41cde90952be07c81231f09644e"
+    },
+    {
+      "bytes": 2352,
+      "git_blob": "497ac8c58904820208a56225ca049e47efef1144",
+      "path": "records/verifications/sha256/89d5b6aca9bf745cdd5e4b52811ca388438f72cd68cb54bd4312f4b47aec1dcc.json",
+      "sha256": "sha256:89d5b6aca9bf745cdd5e4b52811ca388438f72cd68cb54bd4312f4b47aec1dcc"
+    },
+    {
+      "bytes": 2060,
+      "git_blob": "716c634ad22993f52c23b45945b431c229c85442",
+      "path": ".vela/authority/events/vev_35ebae95822f777b.json",
+      "sha256": "sha256:9463f292a5e22a9817b9c264c3db8d07801b3c657d912e74d1e766e637efbc70"
+    },
+    {
+      "bytes": 1471,
+      "git_blob": "644467c21d2df99d6406541bf7a530019bc9e3b7",
+      "path": ".vela/authority/events/vev_75b5ce899f9123da.json",
+      "sha256": "sha256:92e16e76ef1b67d1526e591c9c62086886e7b890e49d44a39532e519f3becc29"
+    }
+  ],
+  "protected_tokens": [
+    "erdos-321-occurrence-correction-at-t0-v1",
+    "v0.976.1",
+    "sha256:669e76620b814b3a8a4acc5fb73e1cd775c979543043b7389bb454cad076960a",
+    "SHA256:MX3Eo1o9S5pLnx2kiNyAy2aME7PAWDtvqtUBljJst1M",
+    "sha256:f01b69be77cf469f5250ba4cdc01f59df30558aa168427af4e39b05ab5b7920b",
+    "sha256:cedca0be98b265e0ea5ad9d45e7061dfbe72780600bc889b593a8b61c81de94a",
+    "f9b28280881472ccb9c4b1b35d8e741745f0bd99",
+    "875539d8790c0557ebee91ad2e40b22f5fa0c147",
+    "sha256:45640c5eea54693df444eada6dd1a7c1f5a4b4ef266fddf79cf51d083233ebba",
+    "7efcbe8cf48544d393c3ca102fdf24e2051b8c73",
+    "bc7ef3b09352c33657b322570ca6fa97e803b0d1",
+    "sha256:0e24fa1b13d7eda7b4e809564ec414eb1fda09f5dcf9aa8a6bcd6ae69ac96197",
+    "vcl_a618b77ab0f6a4b5b186133e37af555a22c6acb71a4746bab0b144b8973668a6",
+    "sha256:8ea9f7150743ba0919a9d40aa0e632e1171b0a2ecdce20e76d6068e1427a647e",
+    "vpr_58c2f9ae80498879",
+    "sha256:58c2f9ae804988795c587e3b788382f49c2c6a2f01ed8cf35242a7dec57b6172",
+    "vsb_e1025b3c5f4b2375",
+    "sha256:e1025b3c5f4b2375fe1e3c0d6497bd7a53d24f64b94988a6ad2e9abd55e1597f",
+    "sha256:255c0d4aee18bf826163ed007367d466f778e41e9d4a28014556f5c7ce1e031d3",
+    "sha256:89d5b6aca9bf745cdd5e4b52811ca388438f72cd68cb54bd4312f4b47aec1dcc",
+    "vev_35ebae95822f777b",
+    "vev_75b5ce899f9123da",
+    "sha256:a9d6787719c5c8069a9e14ade0f5a62975410272e6cd1583865b282d1d8669dd"
+  ],
+  "scoring_limits": "Deterministic comparison is restricted to exact relation, target, source occurrence, scope, required checks, bounded abstention/refusal, and detectable protected-token leakage. No semantic or mathematical correctness score is inferred.",
+  "t1": {
+    "commit": "7efcbe8cf48544d393c3ca102fdf24e2051b8c73",
+    "repository_root": "sha256:0e24fa1b13d7eda7b4e809564ec414eb1fda09f5dcf9aa8a6bcd6ae69ac96197",
+    "standing": {
+      "predecessor": "superseded",
+      "successor": "accepted"
+    },
+    "tree": "bc7ef3b09352c33657b322570ca6fa97e803b0d1"
+  }
+}

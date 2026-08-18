@@ -1,0 +1,98 @@
+{
+  "authority_effect": "none",
+  "candidate_view": {
+    "inclusions": [
+      {
+        "bytes": 1753,
+        "git_blob": "0eea9bf6090401b85b5ccae18462fcf0607f817c",
+        "path": "records/claims/sha256/d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776.json",
+        "role": "accepted_predecessor_claim",
+        "sha256": "sha256:d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776"
+      },
+      {
+        "bytes": 6189,
+        "git_blob": "5442d664adc23ee25c60039c44e2d4b6857e7dba",
+        "path": "records/artifacts/sha256/e7c303b037c3ad9491bec761cf7e48b6833b2fe54dbe71f603da1a24123322c2",
+        "role": "claim_evidence",
+        "sha256": "sha256:e7c303b037c3ad9491bec761cf7e48b6833b2fe54dbe71f603da1a24123322c2"
+      },
+      {
+        "bytes": 838,
+        "git_blob": "f1bb16f94ca9f39b6d0f0f0cb9113a6be7182957",
+        "path": "evidence/erdos-321/translation/source-snapshots.v1.json",
+        "role": "source_fixity",
+        "sha256": "sha256:518b17d19fde6432daff41ff26ba9ef8eec8da60bd4e5333d79435e196bbe3a6"
+      },
+      {
+        "bytes": 4534,
+        "git_blob": "e58fa81d7f81badaeca1e29dde1e1e1435d1d635",
+        "path": "evidence/erdos-321/translation/sources/formal-conjectures-321.lean",
+        "role": "formal_source_snapshot",
+        "sha256": "sha256:601d8486743aede6803feaaefc7bbb73f0aa8873d0296a6a1c5400fd86c32357"
+      },
+      {
+        "bytes": 2192,
+        "git_blob": "996f891b0e1d2af6da47f2cc4c63b806498d2ca5",
+        "path": "evidence/erdos-321/translation/sources/starfleet-basic.lean",
+        "role": "candidate_answer_source_snapshot",
+        "sha256": "sha256:6f8edd294e9a5dfb2475468c23518722a736798ea3e6e51822f826c1e4672a74"
+      },
+      {
+        "bytes": 6881,
+        "git_blob": "40192c93513889202c8cac25f6942076566e2b53",
+        "path": "evidence/erdos-321/terminal-variants/comparison.v0.1.json",
+        "role": "scope_comparison",
+        "sha256": "sha256:0f26a4586bbeac08d07f4d0f8b5d1507751830913d41747a64f2c8203c08af58"
+      }
+    ],
+    "omissions": [
+      {
+        "class": "all_post_t0_bytes",
+        "reason": "They did not exist at the frozen time and are reserved for scorer-only comparison."
+      },
+      {
+        "class": "unrelated_t0_claims_and_evidence",
+        "reason": "The task concerns only the accepted Erdős 321 occurrence identity."
+      },
+      {
+        "class": "t0_authority_and_signing_material",
+        "reason": "The task asks for a proposed transition or refusal, never a Decision or authority operation."
+      },
+      {
+        "class": "mutable_network_sources",
+        "reason": "Only retained exact source snapshots are valid candidate inputs."
+      }
+    ],
+    "validity": "Invalid if any declared commit, tree, Repository root, Claim root, Git blob, byte count, or SHA-256 differs, or if any post-t0 byte enters the candidate bundle."
+  },
+  "format": "math.time-frozen-replay-task.v1",
+  "nonclaims": [
+    "This task is evaluation material, not scientific or repository authority.",
+    "A protected reference outcome does not make its response the only scientifically reasonable t0 response.",
+    "A score does not establish mathematics, semantic equivalence, model quality, acceptance, or Standing."
+  ],
+  "output_contract": {
+    "path": "response.schema.json",
+    "required_file": "candidate-output.json"
+  },
+  "protocol_status": "non_protocol_evaluation_material",
+  "t0": {
+    "claim": {
+      "claim_id": "vcl_3d4fd59554ccaa2b792b08abae16a8d0fe329d4901ad798fe05c6c7769c9966b",
+      "claim_root": "sha256:d5d77e7d96e390e0bf692d0abd44367eb06a0c6a61534e1c6654962d6c644776",
+      "revision": 1,
+      "standing": "accepted"
+    },
+    "commit": "dba7cc9a0532138109af87d01b3517f7b071c95a",
+    "repository_root": "sha256:ae41be4a91265d91967344459fa12583314ec05c5a0ebc74d8b0136195879511",
+    "tree": "54f29fda4efa86c836436de8df8279ba0cbc260f"
+  },
+  "task": {
+    "allowed_actions": [
+      "propose_transition",
+      "refuse"
+    ],
+    "instruction": "Using only the exported t0 bytes, identify the next bounded scientifically justified Claim relation and exact source scope, or refuse for an allowed exact reason. Name the checks that would still be required. Do not decide, accept, infer unavailable answer values, or claim the open problem is solved.",
+    "task_id": "erdos-321-next-transition-at-t0-v1"
+  }
+}

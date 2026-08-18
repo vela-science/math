@@ -7,6 +7,14 @@ This is a Vela repository. Git stores exact Claims, Submissions, Verification Re
 The current prelaunch state is a compact Submission v3 genesis. See
 [`MIGRATION.md`](MIGRATION.md) for the exact retained state and rollback ref.
 
+## Evaluation material
+
+[`evaluations/time-frozen-replay/erdos-321-occurrence-v1/`](evaluations/time-frozen-replay/erdos-321-occurrence-v1/)
+contains one non-Protocol epistemic replay pilot. It exports only exact bytes
+available before the historical Erdős 321 occurrence correction, keeps the
+later outcome scorer-only, and records an internal deterministic baseline. Its
+scores have no authority effect and make no general model-quality claim.
+
 ## Operator loop
 
 ```bash

@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "const": "propose_transition"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "refusal_reason": {
+            "type": "null"
+          },
+          "relation": {
+            "type": "string"
+          },
+          "scope": {
+            "not": {
+              "const": "no_transition"
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "const": "refuse"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "refusal_reason": {
+            "enum": [
+              "ambiguous_occurrence",
+              "insufficient_t0_evidence",
+              "missing_exact_root",
+              "source_unavailable"
+            ]
+          },
+          "relation": {
+            "type": "null"
+          },
+          "scope": {
+            "const": "no_transition"
+          },
+          "subject_occurrences": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ],
+  "description": "Non-Protocol response contract for one Math time-frozen evaluation task.",
+  "properties": {
+    "action": {
+      "enum": [
+        "propose_transition",
+        "refuse"
+      ]
+    },
+    "format": {
+      "const": "math.time-frozen-replay-response.v1"
+    },
+    "nonclaims": {
+      "items": {
+        "pattern": "^[a-z][a-z0-9_]{0,63}$",
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "rationale": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "type": "string"
+    },
+    "refusal_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "relation": {
+      "oneOf": [
+        {
+          "pattern": "^[a-z][a-z0-9_]{0,63}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "required_evidence": {
+      "items": {
+        "pattern": "^[a-z][a-z0-9_]{0,63}$",
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "scope": {
+      "pattern": "^[a-z][a-z0-9_]{0,63}$",
+      "type": "string"
+    },
+    "subject_occurrences": {
+      "items": {
+        "pattern": "^Erdos321\\.",
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "target_claim_id": {
+      "pattern": "^vcl_[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "target_claim_root": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "task_id": {
+      "const": "erdos-321-next-transition-at-t0-v1"
+    }
+  },
+  "required": [
+    "format",
+    "task_id",
+    "action",
+    "relation",
+    "target_claim_id",
+    "target_claim_root",
+    "subject_occurrences",
+    "scope",
+    "required_evidence",
+    "nonclaims",
+    "refusal_reason",
+    "rationale"
+  ],
+  "title": "Erdős 321 time-frozen replay response",
+  "type": "object"
+}
