@@ -1,0 +1,80 @@
+{
+  "schema": "vela.math.submission-v3-revision-fidelity-observation.v1",
+  "authority_effect": "none",
+  "property": "submission_v3_revision_fidelity",
+  "outcome": "pass",
+  "reviewer": {
+    "actor_id": "verifier:codex-v3-revision-fidelity",
+    "kind": "ai_model",
+    "provider": "OpenAI",
+    "version": "not_exposed"
+  },
+  "subject": {
+    "proposal_id": "vpr_b5ca521d2a892eee",
+    "proposal_root": "sha256:b5ca521d2a892eee2c156f25f6ef4849edab5b436e6855fd924a25d7427ac882",
+    "submission_id": "vsb_2d10ba2ff1aff901",
+    "submission_root": "sha256:2d10ba2ff1aff901aeb8d16993fee8933938345ae32fe3e458ad2a4a60ff1adf",
+    "submission_schema": "vela.submission.v3",
+    "submission_media_type": "application/vnd.vela.submission.v3+json"
+  },
+  "predecessor": {
+    "claim_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+    "claim_root": "sha256:aedff5078a30bea1f8a51c1188f2f0aa9bc43da06c894706297d8bd7a4830767",
+    "revision": 2,
+    "conditions_exact_json_sha256": "sha256:52af22fff57ef0904f3a13a5e38ff3a20abdbd972bf2050bfdff53d511599c6d",
+    "evidence_exact_json_sha256": "sha256:61d145bcdddc44b6fae9c54ebd57542ae891821500c41563a5015c8e29e6a8ed",
+    "relations_exact_json_sha256": "sha256:46ae78e942250e3c79d76ecfba87cd66936459686cab2a268e4ff3b21ab4d222"
+  },
+  "successor": {
+    "claim_id": "vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+    "claim_root": "sha256:aaaf6ebbf510ad08e6376c5958d23f4eb7704944f7d37916eee4ae253e809b3b",
+    "revision": 3,
+    "conditions_exact_json_sha256": "sha256:6d7d8b0cbdbbc167a4af77b4cc856a97afb85e00bdc301845dcdc0d622f5cfd3",
+    "evidence_exact_json_sha256": "sha256:4a60b9603f9ea834732e4f311554c3cc0c33e53bd785bf0e6f76e15889564b96",
+    "relations_exact_json_sha256": "sha256:12f74b5282f722a40085fda6ac51689a21b493cdafc03395b5b0fd6b3f16a1a0"
+  },
+  "assertion": {
+    "text": "At lean-proofs commit 423344341fbfdf4f8f684a302c5d05379125e7dc, Erdos94.variants.sum_multiplicity proves that for every finite planar point set P, the sum over its distinct determined distances of the unordered-pair distance multiplicities equals P.card.choose 2, matching Formal Conjectures commit 94a278e06a8bcbc2e4f2935e491c0c115ec832e0. For occurrence resolution only, the exact occurrence Erdos94.erdos_94.variants.sum_multiplicity is associated with problem:erdos:94 under resolver entity root sha256:32f6e98a826da23c12c7cfcb8853e4712de130136c59f0454bd115c3fdb1e6b1. That occurrence is one of four Erdős 94 declarations Formal Conjectures publishes, and this identity does not establish the cubic distance-multiplicity conjecture.",
+    "predecessor_successor_equal": true,
+    "text_sha256_without_trailing_lf": "sha256:926f132e16c403acfb4568786c20e116a9d851c2248ee0977bc54d61950583db"
+  },
+  "field_delta": {
+    "conditions_removed_count": 1,
+    "removed_condition_sha256": "sha256:c8d02f971da4683a7d65ef211fa4599d4f5b5178426e8c90d99a6b8e2c66bdef",
+    "removed_condition_class": "transient_legacy_recovery_pointer",
+    "conditions_added_count": 0,
+    "retained_condition_count": 6,
+    "retained_artifact_roots": [
+      "sha256:e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+      "sha256:119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad"
+    ],
+    "replaced_occurrence_binding_root": "sha256:2db17099b421eff43d4892ddedcdd7b1bfecfbc6cca013447b3b94a81c3cd0f8",
+    "successor_occurrence_binding_root": "sha256:06498cbc38514b7995a07e8c3a95901a8fb19763e44c6b9c97f28973104dfca1",
+    "successor_packet_binds_immediate_predecessor": true,
+    "successor_packet_contains_successor_id_or_root": false,
+    "producer_checks_equal": true,
+    "replayability_equal": true,
+    "claim_type_equal": true,
+    "scientific_caveats_equal": true
+  },
+  "pending_package_legacy_scan": {
+    "exact_obsolete_branch_name_matches": 0,
+    "obsolete_commit_full_or_short_matches": 0,
+    "legacy_submission_schema_matches": 0,
+    "retired_envelope_field_matches": 0
+  },
+  "independence": {
+    "actor_separate_from_producer": true,
+    "provider_independent": false,
+    "host_independent": false,
+    "source_byte_independent": false,
+    "repository_independent": false,
+    "tool_independent": false,
+    "shared_dependencies": [
+      "OpenAI Codex provider and model family",
+      "Same local macOS host and Math repository bytes",
+      "Same content-addressed source and evidence bytes",
+      "Same signed Vela binary, Git object database, shell, jq, and hash tooling"
+    ]
+  }
+}
