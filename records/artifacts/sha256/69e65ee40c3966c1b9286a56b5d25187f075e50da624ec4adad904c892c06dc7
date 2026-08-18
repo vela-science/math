@@ -1,0 +1,81 @@
+{
+  "schema": "vela.math.scientific-state-fidelity-observation.v1",
+  "authority_effect": "none",
+  "property": "scientific_meaning_and_state_fidelity",
+  "outcome": "pass",
+  "reviewer": {
+    "actor_id": "verifier:codex-v3-scientific-state-fidelity",
+    "kind": "ai_model",
+    "provider": "OpenAI",
+    "version": "not_exposed"
+  },
+  "subject": {
+    "proposal_id": "vpr_b5ca521d2a892eee",
+    "predecessor_claim_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+    "predecessor_claim_root": "sha256:aedff5078a30bea1f8a51c1188f2f0aa9bc43da06c894706297d8bd7a4830767",
+    "successor_claim_id": "vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+    "successor_claim_root": "sha256:aaaf6ebbf510ad08e6376c5958d23f4eb7704944f7d37916eee4ae253e809b3b"
+  },
+  "scientific_meaning": {
+    "assertion_object_equal": true,
+    "assertion_text_sha256_with_trailing_lf": "sha256:25b0a26828679696360dde429d7f6917a2a83979045c16f4c4262434815d92e3",
+    "pinned_source_commits_equal": true,
+    "claim_type_equal": true,
+    "replayability_equal": true,
+    "producer_checks_equal": true
+  },
+  "occurrence_scope": {
+    "selected_native_id": "Erdos94.erdos_94.variants.sum_multiplicity",
+    "selected_occurrence_count": 1,
+    "resolver_root": "sha256:32f6e98a826da23c12c7cfcb8853e4712de130136c59f0454bd115c3fdb1e6b1",
+    "semantic_equivalence": "unresolved",
+    "scope": "navigation grouping only",
+    "cubic_conjecture_not_established": true
+  },
+  "limitations_and_rights": {
+    "elementary_identity_only": true,
+    "mechanical_api_spelling_limit_retained": true,
+    "external_source_owner_review_not_claimed": true,
+    "upstream_acceptance_or_adoption_not_claimed": true,
+    "producer_checks_not_verification_decision_or_standing": true,
+    "repository_data_license": "NOASSERTION",
+    "source_and_producer_artifact_roots_retained": [
+      "sha256:e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+      "sha256:119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad"
+    ],
+    "preserved": true
+  },
+  "pre_decision_state": {
+    "repository_root": "sha256:bf0aac4eae6dd90217dd53b92b7d5adc105b6d2e0728ae9b68c7b208eb6b8962",
+    "accepted_claims": 3,
+    "pending_claims": 1,
+    "accepted_standing_changed_by_submission": false
+  },
+  "expected_authorized_delta": {
+    "supersede_claim_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+    "accept_claim_id": "vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+    "accepted_claims_after": 3,
+    "other_accepted_claims_unchanged": true,
+    "scientific_assertion_changed": false
+  },
+  "independence": {
+    "actor_separate_from_producer": true,
+    "provider_independent": false,
+    "host_independent": false,
+    "source_byte_independent": false,
+    "repository_independent": false,
+    "tool_independent": false,
+    "shared_dependencies": [
+      "OpenAI Codex provider and model family",
+      "Same local macOS host and Math repository bytes",
+      "Same content-addressed source and evidence bytes",
+      "Same signed Vela binary, Git object database, shell, jq, and hash tooling"
+    ]
+  },
+  "does_not_establish": [
+    "A new proof, fresh kernel execution, semantic equivalence, or resolution of the cubic Erdős 94 conjecture.",
+    "External source-owner review, upstream acceptance, or adoption.",
+    "Scientific acceptance, a Decision, or Standing.",
+    "Provider-, host-, source-byte-, repository-, or tool-independent reproduction."
+  ]
+}
