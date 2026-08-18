@@ -8,6 +8,9 @@ The current prelaunch state is a compact Submission v3 repository with three
 accepted Claims and no pending review. See [`MIGRATION.md`](MIGRATION.md) for
 the exact retained current-state inventory.
 
+Current strict replay and deterministic projection use signed Vela 0.977.2
+(`sha256:286ed839ea81b7ed283e04ea1823c1515ad242dcee02b424787b8daa667625e2`).
+
 ## Evaluation material
 
 [`evaluations/time-frozen-replay/erdos-321-occurrence-v1/`](evaluations/time-frozen-replay/erdos-321-occurrence-v1/)

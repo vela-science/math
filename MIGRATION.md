@@ -40,3 +40,7 @@ external acceptance, a Decision, or Standing.
 
 The accepted inventory is derived by strict replay. Current state does not
 depend on an auxiliary recovery branch or a legacy Submission envelope.
+Signed Vela 0.977.2
+(`sha256:286ed839ea81b7ed283e04ea1823c1515ad242dcee02b424787b8daa667625e2`)
+replays and projects the complete two-generation Erdős 94 correction chain by
+the exact Claim roots bound in its authority Events.
