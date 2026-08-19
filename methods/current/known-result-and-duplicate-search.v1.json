@@ -1,0 +1,101 @@
+{
+  "schema": "vela.verification-method.v1",
+  "profile": "coh-00-known-result-and-duplicate-search-v1",
+  "property": "known_result_and_duplicate_search",
+  "question": "Was the declared source scope searched for a prior result covering this Claim, and did that search find one?",
+  "sources": [
+    {
+      "name": "erdosproblems.com",
+      "scope": "Erdős problem statements and their recorded status. Search whenever the Claim concerns an Erdős problem or a quantity one of them names.",
+      "query": "https://www.erdosproblems.com/search/<percent-encoded term>",
+      "locator": "https://www.erdosproblems.com/<problem number>",
+      "rights": "Public page. Retain the locator, the observed-at time, and a short factual label only."
+    },
+    {
+      "name": "Formal Conjectures",
+      "scope": "Existing formal statements and closed proofs in google-deepmind/formal-conjectures. Search whenever the Claim asserts a formal or machine-checked result.",
+      "query": "gh search code --repo google-deepmind/formal-conjectures \"<term>\"",
+      "locator": "https://github.com/google-deepmind/formal-conjectures/blob/<commit>/<path>#L<line>",
+      "rights": "Apache-2.0 source. Retain the locator, commit, and declaration name; do not copy proof bodies."
+    },
+    {
+      "name": "Palomar public feed",
+      "scope": "Recently registered formalization entries. Search whenever the Claim asserts a formalized result; the feed is a recency window, not the full registry.",
+      "query": "curl -sS https://data.palomar-registry.org/recent.json",
+      "locator": "Palomar entry id plus its entries/<id>-v<version>.json path, source repository, and commit.",
+      "rights": "Public JSON feed. Retain the entry id, path, status, theorem names, source repository, and commit."
+    },
+    {
+      "name": "ProbXiv",
+      "scope": "Problem pages, attempts, and current editorial status. Search whenever the Claim resolves or bounds a stated open problem.",
+      "query": "https://probxiv.com/?q=<percent-encoded term>",
+      "locator": "https://probxiv.com/problems/<slug>",
+      "rights": "No public content license, API, or export was observed. Retain the locator, the observed-at time, the reported result count, and the visible status token only; do not retain page body copy."
+    },
+    {
+      "name": "FAR pipeline outputs",
+      "scope": "Published FAR find/attempt/recommend material. Search whenever the Claim came from, or overlaps, a FAR-selected candidate.",
+      "query": "gh search code --repo zeyu-zheng/FAR \"<term>\" and https://arxiv.org/abs/2608.16977",
+      "rights": "Apache-2.0 code and CC BY-NC-SA 4.0 paper. The pilot corpus and outputs are not published, so a null result here is weak evidence. Retain locators and section anchors only.",
+      "locator": "https://github.com/zeyu-zheng/FAR/blob/<commit>/<path> or https://arxiv.org/html/2608.16977v1#<anchor>"
+    },
+    {
+      "name": "OEIS",
+      "scope": "Prior bounds, terms, and cross-references for an integer sequence. Search only when the Claim has an integer-sequence form; record it as not applicable otherwise.",
+      "query": "https://oeis.org/search?q=<comma-separated terms or search phrase>&fmt=json",
+      "locator": "https://oeis.org/A<number>",
+      "rights": "Public. Retain the A-number, the matched terms, and the b-file or comment line cited."
+    },
+    {
+      "name": "arXiv",
+      "scope": "Prior preprints stating or proving the result. Search for every Claim.",
+      "query": "https://export.arxiv.org/api/query?search_query=<encoded query>&max_results=<n>, and https://export.arxiv.org/api/query?id_list=<id> to confirm a candidate",
+      "locator": "https://arxiv.org/abs/<identifier>v<version>",
+      "rights": "Metadata is queryable. Retain the versioned identifier, submission date, title, and at most a short factual coverage note; do not copy the abstract."
+    },
+    {
+      "name": "MathSciNet",
+      "scope": "Reviewed prior literature. Search only when the performer has licensed access; record it as not searched, with the reason, otherwise.",
+      "query": "https://mathscinet.ams.org/mathscinet/search/publications.html?pg4=AUCN&s4=<terms>",
+      "locator": "MR<number>",
+      "rights": "Licensed database. Retain the MR number and the searched terms only; never retain review text."
+    }
+  ],
+  "procedure": [
+    "Declare the search scope before searching: the exact search terms, the source list from this manifest, the date bound, and the venues and languages deliberately not searched. A scope declared after the results is not a scope.",
+    "Run the exact query recorded for each applicable source and record the query string or command verbatim, the UTC observation time, and the transport status. Record a source that was not searched as not_searched with its reason, and a source that failed as unavailable with its status; neither may be silently omitted.",
+    "For every candidate the search returns, retain the exact locator, the source's own date, the source's own status token, and the evidence modality — informal statement, preprint, peer-reviewed publication, formal statement, or machine-checked proof.",
+    "Classify each candidate as covers, related, or unrelated against the Claim as submitted, with one sentence of reason. Classify against the exact assertion and its conditions, not against its topic.",
+    "Record outcome pass only when every applicable source was searched to the declared scope and no candidate was classified covers. Pass means the declared search found nothing, and nothing more.",
+    "Record outcome fail when any candidate is classified covers. Retain that candidate's locator and observation time in the search log so a correction can name it.",
+    "Record outcome inconclusive when an applicable source was unavailable, rights-restricted, or rate-limited such that the declared scope was not reached, and record outcome error when the search could not be run as declared.",
+    "Retain the search log as a tracked repository file and bind it with --output so the Verification Record carries its content root.",
+    "Refuse to report this Check as a novelty certificate, a resolution of priority, an acceptance, or a Decision. Finding a duplicate motivates a corrected Submission; it never performs one."
+  ],
+  "required_output": [
+    "A tracked JSON search log with the declared scope: the exact search terms, the date bound, and the venues, languages, and sources deliberately excluded.",
+    "One record per source in this manifest, carrying the source name, the verbatim query string or command, the UTC observed-at time, the status (ok, unavailable, not_applicable, or not_searched) with a reason for anything other than ok, and the reported result count.",
+    "One record per candidate returned, carrying the exact locator, the source's own date, the source's own status token, the evidence modality, the coverage classification (covers, related, or unrelated), and one sentence of reason.",
+    "The outcome and, when the outcome is fail, the exact locator of every candidate classified covers."
+  ],
+  "outcomes": {
+    "pass": "Every applicable source was searched to the declared scope and no candidate covers the Claim. This is bounded by the scope, the source list, and the observation time; it is not novelty.",
+    "fail": "At least one prior result covers the Claim. This is evidence that motivates a corrected or superseding Submission naming the prior result; it is not itself a rejection, a Decision, or a change of Standing.",
+    "inconclusive": "The declared scope was not reached because an applicable source was unavailable, rights-restricted, or rate-limited.",
+    "error": "The search could not be run as declared."
+  },
+  "environment": {
+    "inputs_are_exact_bytes": false,
+    "network_required": true,
+    "shared_dependencies": "Every source is a live third-party service outside Repository custody. Results depend on each provider's index, availability, and access rights at the recorded observation time, and are not reproducible from retained bytes; a later rerun may legitimately differ. Only the search log's own bytes are exact."
+  },
+  "does_not_establish": [
+    "Novelty. A search that finds no covering prior result is bounded by its declared terms, sources, and observation time, and does not establish that the Claim is new.",
+    "Authority. A found prior result is evidence; only an authorized, attributed Repository Decision changes Standing.",
+    "Standing. A source's own status token — registered, solved, open, retracted, accepted, or withdrawn — is never Vela Standing.",
+    "Mathematical equivalence or priority between the Claim and any locator recorded. Coverage here is the searcher's bounded judgement, not a proof of statement identity.",
+    "Correctness of the Claim, or of any prior result found.",
+    "Provider-independent, durable, or reproducible results. Every source may change, restrict access, or disappear after the recorded observation time.",
+    "Scientific acceptance, a Decision, or Standing."
+  ]
+}

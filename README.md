@@ -41,3 +41,7 @@ vela review inbox . --json
 vela review accept . <vpr_id> --reason "<reason>" --if-entry-root sha256:... --json
 vela replay . --json
 ```
+
+[`KNOWN_RESULT_SEARCH.md`](KNOWN_RESULT_SEARCH.md) records how to perform the
+known-result and duplicate search as a scoped Check, and what a found duplicate
+does and does not do.
