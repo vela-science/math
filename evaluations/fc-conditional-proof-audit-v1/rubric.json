@@ -1,0 +1,85 @@
+{
+ "schema": "vela-math.fc-conditional-proof-rubric.v1",
+ "authority_effect": "none",
+ "question": "How many of the external proofs Formal Conjectures links from a `formal_proof` attribute are conditional on hypotheses that are never inhabited by a closed term?",
+ "not_an_accusation": "A flag records a structural property of a signature, not misconduct. Stating an assumption as a structure binder is a recognised formalisation methodology, and the artifact that motivated this audit documented its own assumption layer in its own audit file. What the flags measure is whether the ordinary community gate is sufficient to distinguish a closed proof from a conditional one.",
+ "ordinary_gate": [
+  "the project builds against its pinned toolchain",
+  "the project contains no `sorry`",
+  "`#print axioms` on the target returns only `propext`, `Classical.choice`, `Quot.sound`"
+ ],
+ "ordinary_gate_insufficiency": "All three can hold of an artifact whose top-level theorem takes an assumption package as an argument. A binder is not an axiom, so an axiom audit cannot see it, and a structure that is never constructed produces no `sorry`.",
+ "discriminators": [
+  {
+   "id": "d1_conditional_on_uninhabited",
+   "question": "Does the target declaration take a binder that does not occur in its own conclusion, whose type is declared in the linked repository itself, and which nothing closed-constructs?",
+   "method": "Three conditions, all required. (1) LOCAL: the binder's type resolves to a `structure`, `class` or `inductive` declared in the checkout, not in Mathlib or core. (2) UNUSED: none of the variables that binder binds occur in the declaration's result type. (3) UNCLOSED: the type has no closed construction. A construction site for a local type T is a declaration whose result-type head resolves to T; the site is CLOSED when none of its own binders mention a local type that is not itself closed-inhabited, and closure is a least fixpoint over that relation. A flagged type with zero sites is `flagged_uninhabited`; one with sites but no closed site is `flagged_conditional_construction`.",
+   "why_the_occurs_check": "Conditions (1) and (3) alone do not discriminate. `theorem t (circles : Fin n \\u2192 Circle2D) : \\u2026 circles \\u2026` quantifies over a datatype that is never explicitly constructed in its own file, and that is completely ordinary: the binder occurs in the conclusion, so the statement is stronger for having it. `theorem t (X : ReconstructionSource) : <conclusion with no X>` is the opposite: the binder occurs nowhere in what is being asserted, so it cannot be doing anything but supplying the proof, and the statement is an implication whose antecedent is `Nonempty ReconstructionSource`. Without the occurs-check the first shape produces false flags at a rate that swamps the second.",
+   "why_the_closure_rule": "A naive `is this type ever constructed` test passes the calibration artifact, which does contain a declaration returning the assumption package \\u2014 one that takes the two component assumption packages as arguments. Only closure separates a construction from a restatement of the assumption.",
+   "outcomes": ["clear", "flagged_conditional_construction", "flagged_uninhabited", "undetermined"],
+   "false_positives": [
+    "A type may be inhabited by a term this parser cannot see: an anonymous constructor under a type ascription, a `deriving Inhabited`, a `Nonempty` instance proved by `exact \\u27e8..\\u27e9`, a structure with all fields defaulted, or a construction that lives in an imported dependency rather than in the checkout.",
+    "A binder may be a genuine mathematical hypothesis of a genuinely conditional statement that Formal Conjectures deliberately asked for, in which case the statement is faithful and the flag is not a defect.",
+    "The occurs-check is textual. A binder used only through a definition that unfolds to mention it, or shadowed by a same-named variable, is misread.",
+    "Namespace resolution is textual. Two distinct types with the same final component are conflated, and a type declared in a `section variable` is not tracked.",
+    "The result-type head is recovered by stripping top-level arrows textually, so a construction whose result type is behind a type synonym or an abbreviation is missed and its type looks unconstructed.",
+    "If the target declaration is located on a low-confidence basis, the flagged declaration may be an auxiliary lemma legitimately parameterised over a development structure rather than the theorem the link is about. Locator confidence is recorded per link and the headline rate is computed over high-confidence targets only."
+   ],
+   "false_negatives": [
+    "An assumption smuggled through a `variable` line, a section binder, an autobound implicit, or a typeclass instance argument whose class is declared in an imported dependency is not seen.",
+    "An assumption expressed as a `Prop`-valued hypothesis over Mathlib types only (`(h : \\u2200 n, P n)`) is not local and is not flagged, even though it may be exactly as unproved. This is the single largest blind spot.",
+    "An assumption package that the target does mention in its conclusion, for instance through a projection, passes the occurs-check even though it is still assumed.",
+    "A type may have a closed construction that is itself vacuous or wrong; closure of construction is not correctness.",
+    "If the target declaration cannot be located, the link is `undetermined` and contributes to no flag count."
+   ]
+  },
+  {
+   "id": "d2_sealed_core",
+   "question": "Does the repository declare `opaque`, and does the target reach one?",
+   "method": "Collect every `opaque` declaration in the checkout. From the target, walk identifiers mentioned in declaration bodies, resolving each to same-named local declarations, to a bounded depth of four.",
+   "outcomes": ["no_opaque", "opaque_present_not_reached", "reaches_opaque", "undetermined"],
+   "false_positives": [
+    "Reachability is by identifier mention in text, so a name appearing in a comment-stripped body but not in the elaborated term still counts.",
+    "Same-named declarations in different namespaces are followed together."
+   ],
+   "false_negatives": [
+    "The walk stops at depth four; a deeper dependency path to an `opaque` is missed.",
+    "`opaque` reached through an imported dependency rather than the checkout is invisible.",
+    "An `opaque` is only one way to seal a core; an unproved `axiom`, a `partial def`, or an unverified `native_decide` kernel bypass seal it differently."
+   ]
+  },
+  {
+   "id": "d3_ordinary_gate",
+   "question": "Does the ordinary gate fire at all: `sorry`, `sorryAx`, `axiom`, `native_decide`, or `Lean.ofReduceBool`?",
+   "method": "Comment- and string-stripped textual scan, reported at two scopes: the target declaration, and the whole checkout. Scope matters because a fork of Formal Conjectures legitimately contains thousands of `sorry` in files unrelated to the linked target.",
+   "outcomes": ["counts_by_token_and_scope"],
+   "false_positives": [
+    "An identifier containing the token as a substring is excluded by word boundaries, but a `sorry` inside a `macro`/`syntax` definition or a doc example that survived comment stripping still counts.",
+    "`axiom` counts include a repository's own deliberate axiomatic base, which is a design choice rather than a defect."
+   ],
+   "false_negatives": [
+    "A `sorry` in an imported dependency, or one introduced by a tactic that elaborates to `sorryAx` without the token appearing, is not seen.",
+    "This scan is a substitute for `#print axioms`, not an equal of it. It cannot see what the kernel actually used."
+   ]
+  },
+  {
+   "id": "d4_assumed_false_fields",
+   "question": "Does a structure or class in the checkout carry a field whose type is `False` or ends in `\\u2192 False`?",
+   "method": "Field lines of every `structure`/`class` are matched against a type ending in `False`.",
+   "outcomes": ["types_with_false_fields"],
+   "false_positives": [
+    "A `\\u2192 False` field is the ordinary Lean spelling of a negation and is entirely legitimate; it is only interesting when the structure carrying it is never constructed, which is why D4 is reported against the D1 result rather than on its own.",
+    "Field parsing is line-based and misses a multi-line field type."
+   ],
+   "false_negatives": [
+    "A hypothesis spelled `\\u00ac P` rather than `P \\u2192 False` is not matched.",
+    "A field asserting the mathematics positively (`\\u2200 n, P n`) is not matched at all, and is the more common shape."
+   ]
+  }
+ ],
+ "population_definition": {
+  "included": "Every `formal_proof` attribute occurrence in `FormalConjectures/**/*.lean` at the pinned commit, including the `conditional ... assuming` form.",
+  "excluded": "`FormalConjecturesTest/`, `FormalConjecturesUtil/` and `docbuild/`, whose occurrences are the attribute's own definition and unit tests rather than claims about mathematics."
+ },
+ "tier2_protocol": "For the highest-signal Tier-1 flags only, attempt a real build and, if it builds, write the Formal Conjectures statement verbatim in the linked project and check whether the target declaration discharges it with no remaining binder. Where a build is infeasible within budget, the outcome is `build_not_attempted` or `build_infeasible` with the exact reason, never a guess."
+}

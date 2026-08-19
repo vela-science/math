@@ -1,0 +1,78 @@
+{
+ "schema": "vela-math.fc-conditional-proof-tier2.v1",
+ "authority_effect": "none",
+ "protocol": "For the highest-signal Tier-1 results only: attempt a real build of the linked project at the resolved commit and, where it builds, read the target's axiom set. Where a build is infeasible inside the budget, say so exactly rather than guessing.",
+ "budget": "One Mathlib-dependent build. Building all 143 checkouts is hours and many gigabytes and was never attempted; plby/lean-proofs states in its own README that a whole-project build may take many hours.",
+ "tier1_left_nothing_to_confirm_for_d1": "Tier 1 produced no D1 flag at any confidence. There was therefore no conditional-on-uninhabited case in this population to confirm by build. The build budget went to the one ordinary-gate finding instead, and the rest of this file records the hand-checks that retired the candidate flags earlier versions of the detector produced.",
+ "cases": [
+  {
+   "id": "erdos-418-native-decide",
+   "link": "FormalConjectures/ErdosProblems/418.lean:53",
+   "target_repository": "plby/lean-proofs",
+   "target_declaration": "Erdos418.erdos_418",
+   "tier1_signal": "D3: `native_decide` inside the target declaration, located at high confidence by exact name match",
+   "why_it_matters": "`native_decide` discharges a goal by compiling and running it, which the kernel does not re-check. It adds `Lean.ofReduceBool` to the declaration's axiom set, so `#print axioms` on this target does not return only the three standard axioms.",
+   "method": "Copied `src/v4.24.0` to a scratch directory, ran `lake exe cache get`, built `ErdosProblems.Erdos418`, and elaborated a one-line `#print axioms Erdos418.erdos_418`. Lean 4.24.0 arm64-apple-darwin, Mathlib rev f897ebcf72cd16f89ab4577d0c826cd14afaafc7 as pinned by the project's own lakefile.",
+   "outcome": "confirmed_nonstandard_axioms",
+   "build": "succeeded",
+   "printed_axioms": ["propext", "Classical.choice", "Lean.ofReduceBool", "Lean.trustCompiler", "Quot.sound"],
+   "finding": "The build succeeds and the target elaborates. Its axiom set is NOT the three standard axioms: it additionally carries `Lean.ofReduceBool` and `Lean.trustCompiler`, which is exactly what `native_decide` introduces. The Tier-1 textual signal is confirmed by the kernel.",
+   "not_an_accusation": "Discharging a concrete numeric non-zero check by compiled evaluation is a reasonable engineering choice and the repository does not hide it. What the case shows is that the ordinary gate's third clause — `#print axioms` returns only the three standard axioms — is a real check that a link in this corpus can fail, and that nothing in Formal Conjectures runs it."
+  },
+  {
+   "id": "legendre-bounded-gap-anchor",
+   "link": "FormalConjectures/Wikipedia/LegendreConjecture.lean:45",
+   "target_repository": "mzhorvath1/formal-conjectures",
+   "target_declaration": "LegendreConjecture.bounded_gap_legendre",
+   "tier1_signal": "An earlier locator reported D3 `sorry` on this link.",
+   "method": "Read the linked file at the resolved commit by hand.",
+   "outcome": "confirmed_unconditional",
+   "finding": "The reported `sorry` was a locator artifact, not a property of the link. The URL anchor `#L48` points INSIDE `bounded_gap_legendre`, whose proof in the fork is complete. The earlier rule took the first declaration at or after the anchor, which walked past it to `legendre_conjecture.ferreira_large_n`, an unrelated declaration in the same file that is `sorry`. The locator now takes the declaration containing the anchor, and this link reports clear.",
+   "lesson": "A line anchor that lands inside a proof is the normal case, not the exception. Reading forward from an anchor rather than around it produces findings about whatever happens to come next in the file."
+  },
+  {
+   "id": "erdos-639-aframe",
+   "link": "FormalConjectures/ErdosProblems/639.lean:58",
+   "target_repository": "plby/lean-proofs",
+   "target_declaration": "Erdos639.SimpleGraph.erdos639",
+   "tier1_signal": "An earlier locator reported D1 `flagged_uninhabited` on `Erdos639.AFrame`.",
+   "method": "Read the linked file at the resolved commit by hand.",
+   "outcome": "confirmed_unconditional",
+   "finding": "The flag was on `erdos639_pre`, an auxiliary lemma taking `(A : AFrame C)`. The final theorem `erdos639` takes only `(hn : 10 <= n V)` and discharges the AFrame internally through `nonempty_aframe_of_card_edgeFinset_gt`. The linked proof is not conditional.",
+   "lesson": "A proof file names its auxiliary steps after the problem too. Matching on the problem number without preferring the final `theorem` reports the development's internal structure as if it were the claim."
+  },
+  {
+   "id": "erdos-775-kuniformhypergraph",
+   "link": "FormalConjectures/ErdosProblems/775.lean:41",
+   "target_repository": "plby/lean-proofs",
+   "target_declaration": "Erdos775.erdos_problem_775",
+   "tier1_signal": "An earlier locator reported D1 `flagged_uninhabited` on `Erdos775.KUniformHypergraph`.",
+   "method": "Read the linked file at the resolved commit by hand.",
+   "outcome": "confirmed_unconditional",
+   "finding": "The flag was on `tree_from_many_clique_sizes`, an intermediate lemma. The final theorem `erdos_problem_775 (C : Nat)` carries no local structure binder.",
+   "lesson": "Same as erdos-639."
+  },
+  {
+   "id": "erdos-1121-circle2d",
+   "link": "FormalConjectures/ErdosProblems/1121.lean:45",
+   "target_repository": "plby/lean-proofs",
+   "target_declaration": "Erdos1121.erdos_1121",
+   "tier1_signal": "An earlier version of D1, without the occurs-check, reported `flagged_uninhabited` on `Erdos1121.Circle2D`.",
+   "method": "Read the linked file at the resolved commit by hand.",
+   "outcome": "confirmed_unconditional",
+   "finding": "`Circle2D` is a datatype: a centre, a radius, and a positivity proof. The theorem reads `(circles : Fin n -> Circle2D)` and `circles` occurs throughout the conclusion, so the binder makes the statement stronger, not weaker. Nothing in the file explicitly constructs a `Circle2D`, and that is entirely ordinary for a universally quantified datatype.",
+   "lesson": "This case is why D1 requires the occurs-check. Without it, every theorem quantifying over a locally declared datatype flags, and the signal is destroyed."
+  },
+  {
+   "id": "openai-ten-proofs-locator-miss",
+   "link": "FormalConjectures/ErdosProblems/180.lean:81",
+   "target_repository": "openai/ten-proofs",
+   "target_declaration": "twoDegenerateExtremalCounterexample",
+   "tier1_signal": "Reported clear at LOW locator confidence.",
+   "method": "Read the linked file at the resolved commit by hand.",
+   "outcome": "confirmed_unconditional",
+   "finding": "The link has no line anchor and points at an 18,500-line file, so the locator fell back to the file's last theorem and picked `not_erdos_146` rather than the intended `twoDegenerateExtremalCounterexample`. Both are unconditional. Of the 656 theorems in that file, exactly one carries an unused unclosed local binder, so the file-scope signal is clean as well.",
+   "lesson": "A link with no anchor into a very large file is the weakest identification in this corpus and is the main reason `low` confidence exists as a separate tier."
+  }
+ ]
+}

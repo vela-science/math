@@ -1,0 +1,91 @@
+{
+ "schema": "vela-math.fc-conditional-proof-audit.v1",
+ "authority_effect": "none",
+ "observed_at": "2026-08-19",
+ "source": {
+  "repository": "google-deepmind/formal-conjectures",
+  "commit": "9f5ee773841921f460b4a26a3552f5eca4accaa0",
+  "license": "Apache-2.0",
+  "role": "population under audit; referenced by URL and commit, not vendored"
+ },
+ "tooling": {
+  "python": "3.13.9",
+  "git": "2.53.0",
+  "lean_built": false,
+  "network_used_by": ["fetch.py"],
+  "network_used_by_evaluate": false
+ },
+ "population": {
+  "definition": "every `formal_proof` attribute occurrence under FormalConjectures/ at the pinned commit",
+  "excluded_paths": ["FormalConjecturesTest/", "FormalConjecturesUtil/", "docbuild/"],
+  "excluded_because": "those occurrences are the attribute's own syntax definition and its unit tests, not claims about mathematics",
+  "formal_proof_attributes": 415,
+  "distinct_github_repositories": 81,
+  "distinct_repository_revision_pairs": 143,
+  "revision_pinning": {
+   "pinned_commit": 257,
+   "branch_or_tag": 139,
+   "repository_root": 3,
+   "not_github": 16
+  },
+  "proof_kind": {
+   "lean4": 288,
+   "formal_conjectures": 125,
+   "other_system": 2
+  },
+  "fc_declared_conditional": 3
+ },
+ "population_note": "This audit began from a working estimate of 500 attributes over 48 repositories. Those numbers are not what the pinned tree contains. 502 occurrences of the string `formal_proof` exist across the whole checkout, but 87 of them are in the attribute's own definition and test files. The counts above are what `analyze.py parse_fc` actually extracts and are the ones every other file here is checked against.",
+ "structural_facts": [
+  {
+   "id": "attribute_names_no_target_declaration",
+   "fact": "The attribute grammar is `formal_proof using <kind> at \"<url>\"`, where `<kind>` is the proof system: `formal_conjectures`, `lean4`, or `other_system`. It never records which declaration in the linked repository discharges the Formal Conjectures statement.",
+   "consequence": "There is no mechanical binding from a Formal Conjectures theorem to the term that proves it. The target has to be recovered from the URL path and line anchor, or by name matching, and any audit of this corpus inherits that ambiguity.",
+   "locator": "FormalConjecturesUtil/Attributes/Basic.lean"
+  },
+  {
+   "id": "fc_ci_does_not_build_linked_repositories",
+   "fact": "`.github/workflows/build-and-docs.yml` installs elan, restores the Mathlib cache, and builds the Formal Conjectures tree. No workflow step clones or builds any linked repository.",
+   "consequence": "The external-proof surface is entirely unchecked by Formal Conjectures CI. Nothing between `category research solved` and the mathematics is machine-verified on the Formal Conjectures side.",
+   "locator": ".github/workflows/"
+  },
+  {
+   "id": "every_linked_statement_is_sorry_in_fc",
+   "fact": "All 415 Formal Conjectures declarations carrying a `formal_proof` attribute still have `sorry` in their own proof body at the pinned commit.",
+   "consequence": "This is the design: Formal Conjectures is a statement corpus and `formal_proof` points outward. It is recorded because it is the exact reason the link is load-bearing. The entire weight of a solved status rests on an unbuilt URL.",
+   "not_a_defect": true
+  },
+  {
+   "id": "reproducibility_of_the_linked_builds",
+   "fact": "Of the 81 linked GitHub repositories, 76 carry a Lake or leanpkg manifest somewhere in the checkout and 75 carry a `lean-toolchain`. Five carry neither: KitaKen1/wowii-graph-conjecture-316-lean, Woett/Lean-files, chelokot/wowii-109-counterexample, ebarschkis/ErdosProblem, yuta0x89/ErdosProblems. One, b-mehta/unit-fractions, is a Lean 3 project.",
+   "consequence": "The corpus is mostly reproducible in principle. For the five without a manifest there is no declared toolchain or Mathlib revision, so no third party can rebuild the proof as the author had it. The Lean 3 project cannot be assessed by a Lean 4 parser and its row should be read as approximate.",
+   "method": "presence of a file named lakefile.toml, lakefile.lean, leanpkg.toml or lean-toolchain anywhere in the fetched checkout"
+  },
+  {
+   "id": "conditional_vocabulary_exists_and_is_barely_used",
+   "fact": "Formal Conjectures already has `conditional formal_proof using <kind> at \"<url>\" assuming <decl>`, and the attribute refuses an `assuming` clause without the `conditional` modifier and refuses `conditional` without an `assuming` clause. It is used on 3 of 415 links.",
+   "consequence": "The vocabulary covers a hypothesis stated as a Formal Conjectures declaration. It does not reach a hypothesis stated as a structure binder inside the linked repository, which is the shape D1 looks for.",
+   "locator": "FormalConjecturesUtil/Attributes/Basic.lean"
+  }
+ ],
+ "rights": {
+  "vendored_third_party_source": false,
+  "retained_from_linked_repositories": [
+   "declaration names",
+   "type names",
+   "file paths and line numbers",
+   "counts",
+   "resolved commit SHAs"
+  ],
+  "linked_repositories_with_a_license_file": 66,
+  "linked_repositories_without_a_license_file": 15,
+  "license_detection_method": "presence of a top-level file whose name begins LICENSE or COPYING in the fetched checkout; not a license classifier",
+  "note": "plby/lean-proofs is the single largest source of links in this population and has no LICENSE file. It is referenced by URL and commit only. No Lean source from any linked repository is reproduced in this directory."
+ },
+ "calibration_artifact": {
+  "repository": "jarekkoch-hub/erdos887-lean",
+  "commit": "230bf2cd0bc15f971ad9d0e36f36f2056dd9d8b7",
+  "in_population": false,
+  "why": "Formal Conjectures does not link it from any `formal_proof` attribute at the pinned commit. It is used only to check that D1 separates a known-conditional theorem from an unconditional one; see CALIBRATION.md."
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "artifact": {
+  "commit": "230bf2cd0bc15f971ad9d0e36f36f2056dd9d8b7",
+  "repository": "jarekkoch-hub/erdos887-lean"
+ },
+ "authority_effect": "none",
+ "calibration_root": "sha256:998ec20e7cfd78fbcae4b6932a335d0dc95000eef342f44e871bccc7fc842688",
+ "declaration_prefix": "erdos_887",
+ "declarations": [
+  {
+   "d1": "flagged_conditional_construction",
+   "declaration": "Erdos887Formal.FormalConjecturesMirror.erdos_887_parts_i_answer_four",
+   "unused_local_binder_types": {
+    "Erdos887Formal.ExternalCanonicalExtraction.ExternalReconstructionSource": "conditional_construction_only"
+   }
+  },
+  {
+   "d1": "flagged_conditional_construction",
+   "declaration": "Erdos887Formal.FormalConjecturesMirror.erdos_887_parts_ii",
+   "unused_local_binder_types": {
+    "Erdos887Formal.ExternalCanonicalExtraction.ExternalReconstructionSource": "conditional_construction_only"
+   }
+  },
+  {
+   "d1": "flagged_conditional_construction",
+   "declaration": "Erdos887Formal.FormalConjecturesMirror.erdos_887_variants_rosenfeld_4_paper_recurring_form",
+   "unused_local_binder_types": {
+    "Erdos887Formal.ExternalCanonicalExtraction.ExternalReconstructionSource": "conditional_construction_only"
+   }
+  },
+  {
+   "d1": "clear",
+   "declaration": "Erdos887Formal.FormalConjecturesMirror.erdos_887_variants_rosenfeld_infinite",
+   "unused_local_binder_types": {}
+  }
+ ],
+ "note": "Not part of the Formal Conjectures population. Used only to check that D1 separates a conditional top-level theorem from an unconditional one. The artifact disclosed its own assumption layer; this is not an accusation.",
+ "ordinary_gate_on_artifact": {
+  "axiom": 0,
+  "opaque_declarations": 9,
+  "sorry": 0
+ },
+ "schema": "vela-math.fc-conditional-proof-calibration.v1"
+}

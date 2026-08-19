@@ -1,0 +1,105 @@
+{
+  "assessability": {
+    "assessed": 399,
+    "target_located": 396,
+    "target_locator_basis": {
+      "file_and_name_match": 114,
+      "file_and_problem_number_match": 71,
+      "file_last_theorem": 51,
+      "line_anchor": 153,
+      "line_anchor_before_first_declaration": 1,
+      "path_not_found_in_checkout": 1,
+      "repo_wide_name_match": 6,
+      "unresolved": 2
+    },
+    "undetermined": 16,
+    "undetermined_reasons": {
+      "link is not a GitHub repository URL": 16
+    }
+  },
+  "authority_effect": "none",
+  "calibration": {
+    "artifact": {
+      "commit": "230bf2cd0bc15f971ad9d0e36f36f2056dd9d8b7",
+      "repository": "jarekkoch-hub/erdos887-lean"
+    },
+    "in_population": false,
+    "outcomes": {
+      "clear": 1,
+      "flagged_conditional_construction": 3
+    }
+  },
+  "d1_conditional_on_uninhabited": {
+    "denominator_links_with_located_target": 396,
+    "flagged_links": 0,
+    "flagged_repositories": {},
+    "outcomes": {
+      "clear": 396,
+      "undetermined": 3
+    }
+  },
+  "d2_sealed_core": {
+    "checkouts_declaring_opaque": 0,
+    "outcomes": {
+      "no_opaque": 396,
+      "undetermined": 3
+    }
+  },
+  "d3_ordinary_gate": {
+    "links_whose_target_declaration_trips_a_token": 1,
+    "links_whose_target_file_trips_a_token": 83,
+    "token_counts_over_target_declarations": {
+      "native_decide": 1
+    }
+  },
+  "d4_assumed_False_fields": {
+    "checkouts_with_a_False_field_type": 8,
+    "links_whose_flagged_binder_type_has_a_False_field": 0
+  },
+  "input_roots": {
+    "audit.json": "sha256:76931d4093bdb297ce1403146cd0e9526f73453d9d72d92953555235d754779c",
+    "calibration.json": "sha256:8399c99b2ff8ac381ab91163ff403ef78ed3106fc64c89df3551fc7831c497d1",
+    "collector": "sha256:b1ecd3bdaecfeb5040765b92b82176225a6226f1fa4eaa7dc247542ddc2cdcf8",
+    "evaluation_root": "sha256:e054646bec7497912351ba71e696923c64543d7ef0b91eb5f88d585b9c879f65",
+    "implementation": "sha256:5b656b4344b62a61192faad215f16b92cf09165ec27ee35c03d31120fbf074c4",
+    "results.json": "sha256:7448527870f6275ff6ee64695ed833934ef580e2a83e5a935948ddbb643d7722",
+    "rubric.json": "sha256:172fc74b4057f5422cad8af6e52abcf1d1fa6ff2d62e2b876f9ac50feee476e9",
+    "tier2.json": "sha256:0d316b437d2ce432b682f89c680abfe5c3258b29ae6506346509dfcc4d5e1b5d"
+  },
+  "limitations": [
+    "D1 and D2 are text-level heuristics with false positives and false negatives; rubric.json enumerates both.",
+    "A D1 flag records the shape of a signature. It is not a finding of error, unsoundness, or bad faith against any repository or author.",
+    "Undetermined links are excluded from every rate rather than counted as clear.",
+    "D3 is a textual substitute for `#print axioms` and cannot see what the kernel actually used.",
+    "No linked repository is admitted here. Nothing in this directory is a Submission, Verification, Decision, Event, or Standing."
+  ],
+  "population": {
+    "distinct_github_repositories": 81,
+    "distinct_repository_revision_pairs": 143,
+    "fc_declared_conditional": 3,
+    "formal_proof_attributes": 415,
+    "proof_kind": {
+      "formal_conjectures": 125,
+      "lean4": 288,
+      "other_system": 2
+    },
+    "revision_pinning": {
+      "branch_or_tag": 139,
+      "not_github": 16,
+      "pinned_commit": 257,
+      "repository_root": 3
+    }
+  },
+  "schema": "vela-math.fc-conditional-proof-report.v1",
+  "source": {
+    "commit": "9f5ee773841921f460b4a26a3552f5eca4accaa0",
+    "repository": "google-deepmind/formal-conjectures"
+  },
+  "tier2": {
+    "cases": 6,
+    "outcomes": {
+      "confirmed_nonstandard_axioms": 1,
+      "confirmed_unconditional": 5
+    }
+  }
+}
