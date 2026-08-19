@@ -19,6 +19,12 @@ available before the historical Erdős 321 occurrence correction, keeps the
 later outcome scorer-only, and records an internal deterministic baseline. Its
 scores have no authority effect and make no general model-quality claim.
 
+[`evaluations/far-probxiv-result-boundary-v1/`](evaluations/far-probxiv-result-boundary-v1/)
+is a rights-safe, non-Protocol comparison of FAR, ProbXiv, and this
+Repository's current Result evaluation and correction boundary. It retains
+only primary-source locators, small factual labels, and digests; it creates no
+scientific record or Standing.
+
 ## Operator loop
 
 ```bash

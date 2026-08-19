@@ -1,0 +1,144 @@
+{
+  "schema": "vela-math.far-probxiv-candidate-set.v1",
+  "authority_effect": "none",
+  "observed_at": "2026-08-19T18:05:00Z",
+  "rights_policy": "locators_labels_and_digests_only",
+  "candidates": [
+    {
+      "id": "far-erdos-635-known",
+      "provider": "far-paper",
+      "occurrence": "https://arxiv.org/html/2608.16977v1#S5.SS1",
+      "durable_source": "https://www.erdosproblems.com/635",
+      "observed": {
+        "result_scope": "asymptotic divisor-difference bound",
+        "pipeline_result": "automated correct and publishable",
+        "later_review": "mathematically correct but already recorded before the run",
+        "status_caveat": "the automated search cascade missed the prior record"
+      },
+      "retained": {
+        "kind": "source_fragment_digest",
+        "sha256": "e6e71cd5b9675073ee7d6dca996b67e557c3f24ae5945f7154dc7c991ed15cf0"
+      },
+      "rights": "CC-BY-NC-SA-4.0 paper; no appendix bytes copied",
+      "vela_mapping": {
+        "problem_source_occurrence": "exact external locator",
+        "result_submission": "candidate only; not created",
+        "check_verification": "FAR automated and author-review prose are external evidence only",
+        "decision_event_standing": "absent",
+        "correction": "external status correction only",
+        "authority_effect": "none"
+      },
+      "nonclaims": ["FAR publishes no stable pipeline row identity for this artifact."]
+    },
+    {
+      "id": "far-gap-p-many-one-reviewed",
+      "provider": "far-paper",
+      "occurrence": "https://arxiv.org/html/2608.16977v1#S5.SS3.SSS0.Px1",
+      "durable_source": "https://arxiv.org/abs/2207.05423",
+      "observed": {
+        "result_scope": "many-one GapP-completeness for binary symmetric-group character values",
+        "pipeline_result": "proof reported",
+        "later_review": "checked by an author or domain expert; no precedent found by the FAR authors",
+        "status_caveat": "main text names Conjecture 5.3.2 while appendix prose says Conjecture 5.2"
+      },
+      "retained": {
+        "kind": "source_fragment_digest",
+        "sha256": "55153ebac5da213a6eda11e5d0301e8e1bf55fd3fdd5d279f5ee8ee313e62461"
+      },
+      "rights": "CC-BY-NC-SA-4.0 paper; no appendix bytes copied",
+      "vela_mapping": {
+        "problem_source_occurrence": "exact external locator with label discrepancy",
+        "result_submission": "candidate only; not created",
+        "check_verification": "human-review prose is external evidence without a Vela verifier record",
+        "decision_event_standing": "absent",
+        "correction": "none observed",
+        "authority_effect": "none"
+      },
+      "nonclaims": ["No independent peer review, publication, or correctness certification was performed here."]
+    },
+    {
+      "id": "probxiv-ramsey-machine-reviewed",
+      "provider": "probxiv",
+      "occurrence": "https://probxiv.com/problems/on-multicolor-ramsey-number-of-paths-versus-cycles-2",
+      "durable_source": "not_observed",
+      "observed": {
+        "result_scope": "counterexample attempt",
+        "problem_status": "open",
+        "attempt": "model-discovered",
+        "check": "second-model judgement correct; TYPE1",
+        "human_review": "explicitly none"
+      },
+      "retained": {
+        "kind": "normalized_rendered_main_digest",
+        "characters": 5791,
+        "sha256": "bbd518be2d036670ca8322738cca5b966e607bf67d002042e611c8ecfd752069"
+      },
+      "rights": "no public content license observed; page body not copied",
+      "vela_mapping": {
+        "problem_source_occurrence": "public registry locator",
+        "result_submission": "attempt could become a Result candidate; not created",
+        "check_verification": "machine judgement is scoped external evidence only",
+        "decision_event_standing": "absent",
+        "correction": "none observed",
+        "authority_effect": "none"
+      },
+      "nonclaims": ["The machine judgement is not mathematical correctness or Repository acceptance."]
+    },
+    {
+      "id": "probxiv-erdos-7-retracted",
+      "provider": "probxiv",
+      "occurrence": "https://probxiv.com/problems/erdos-7",
+      "durable_source": "https://www.erdosproblems.com/7",
+      "observed": {
+        "result_scope": "disputed external attempt",
+        "problem_status": "retracted",
+        "attempt": "preserved on the same URL",
+        "check": "nothing checked by ProbXiv",
+        "status_caveat": "upstream false-axiom or formalization dispute is reported, not adjudicated here"
+      },
+      "retained": {
+        "kind": "normalized_rendered_main_digest",
+        "characters": 1701,
+        "sha256": "16a7772c0175f22494f6d6d93204d2d421434ff0821e3f4f39b0195eb52cb130"
+      },
+      "rights": "no public content license observed; page body not copied",
+      "vela_mapping": {
+        "problem_source_occurrence": "public registry locator",
+        "result_submission": "external attempt only; not created",
+        "check_verification": "none",
+        "decision_event_standing": "ProbXiv retracted status is not a Vela Decision or Standing",
+        "correction": "preserved current retraction without an exposed status-event chain",
+        "authority_effect": "none"
+      },
+      "nonclaims": ["The retraction does not establish the mathematical merits of the dispute."]
+    },
+    {
+      "id": "probxiv-directed-3-torus-formal-check",
+      "provider": "probxiv",
+      "occurrence": "https://probxiv.com/problems/directed-3-torus-hamilton",
+      "durable_source": "not_observed",
+      "observed": {
+        "result_scope": "formalized candidate",
+        "problem_status": "solved",
+        "attempt": "retained",
+        "check": "Lean compilation scoped to the formalization",
+        "status_caveat": "the page explicitly says compilation does not establish statement fidelity"
+      },
+      "retained": {
+        "kind": "normalized_rendered_main_digest",
+        "characters": 1728,
+        "sha256": "a226350fa504acce4faf0c706b91b9eb3169e1f24811555333b17d44914440b4"
+      },
+      "rights": "no public content license observed; page body not copied",
+      "vela_mapping": {
+        "problem_source_occurrence": "public registry locator",
+        "result_submission": "candidate only; not created",
+        "check_verification": "formal compilation is a scoped external check with an explicit fidelity limit",
+        "decision_event_standing": "absent",
+        "correction": "none observed",
+        "authority_effect": "none"
+      },
+      "nonclaims": ["Formal compilation is not source-statement fidelity or Repository acceptance."]
+    }
+  ]
+}

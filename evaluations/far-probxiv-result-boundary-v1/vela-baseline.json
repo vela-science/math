@@ -1,0 +1,52 @@
+{
+  "schema": "vela-math.result-boundary-baseline.v1",
+  "authority_effect": "none",
+  "observed_at": "2026-08-19T18:20:00Z",
+  "reader": {
+    "path": "/Users/williamblair/.local/bin/vela",
+    "version": "0.977.3",
+    "sha256": "3a1173918bdcb887155bab681411bf5e9ff64d925fe1b50369ac37ab020b94ad"
+  },
+  "replay": {
+    "schema": "vela.repository-verification.v3",
+    "ok": true,
+    "repository_id": "3d012325-3768-4b95-a385-c94e9f2a57a6",
+    "repository_root": "sha256:a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4",
+    "git_commit": "cf46d6f98b053714d16f113587c23a39d3e8bc8b",
+    "git_tree": "2df02914b460564b43f4df2fbe29a12b604e1133",
+    "counts": {
+      "accepted_claims": 3,
+      "artifacts": 10,
+      "pending_claims": 0,
+      "proposal_withdrawals": 0,
+      "proposals": 6,
+      "submissions": 6,
+      "verifications": 6
+    }
+  },
+  "correction_transition": {
+    "review_event": {
+      "path": "../../.vela/authority/events/vev_5d0ab1bf4dc7df99.json",
+      "id": "vev_5d0ab1bf4dc7df99",
+      "kind": "review.accepted",
+      "proposal_kind": "claim.revise",
+      "proposal_id": "vpr_b5ca521d2a892eee",
+      "timestamp": "2026-08-18T18:46:11Z"
+    },
+    "standing_event": {
+      "path": "../../.vela/authority/events/vev_4de946c32ad32331.json",
+      "id": "vev_4de946c32ad32331",
+      "kind": "claim.superseded",
+      "predecessor_claim_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+      "successor_claim_id": "vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+      "repository_before": "sha256:c465145c974a09e8b535efc7e3b6e7755e8b73916d4bad3403c2a41c12841875",
+      "repository_after": "sha256:a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4",
+      "timestamp": "2026-08-18T18:46:11Z"
+    }
+  },
+  "limitations": [
+    "This baseline records signed-reader output and exact existing event bytes; it does not create authority.",
+    "The correction concerns the bounded Erdős 94 sum_multiplicity Result and proves no broader theorem.",
+    "No FAR or ProbXiv candidate is represented in this Repository replay."
+  ]
+}

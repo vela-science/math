@@ -1,0 +1,83 @@
+{
+  "schema": "vela-math.far-probxiv-audit.v1",
+  "authority_effect": "none",
+  "frozen_on": "2026-08-19",
+  "sources": [
+    {
+      "id": "far-paper-v1",
+      "kind": "paper",
+      "url": "https://arxiv.org/abs/2608.16977v1",
+      "version": "2608.16977v1",
+      "published_at": "2026-08-17T17:19:59Z",
+      "license": "CC-BY-NC-SA-4.0",
+      "source_sha256": "83b99a405235bab410f4a2f7bf338935210238ad4e39e0ef52b84b976ad4ae01",
+      "pdf_sha256": "a45c7f7a7c4884bf56b4708010c99972da903c031e9dc61f9d9279c2c0dd08f4"
+    },
+    {
+      "id": "far-code",
+      "kind": "git_repository",
+      "url": "https://github.com/zeyu-zheng/FAR",
+      "version": "0f498a7e9252affd478cbfe324f51ea6d0119331",
+      "tree": "e5c8a6e2e6f043f1dcaa53905147e4bcad53b345",
+      "license": "Apache-2.0",
+      "archive_sha256": "4180a89b83d218fdd2cbdf8e419adb8e6514167fb9511847e74d168b069f3d6c",
+      "release_state": "one unsigned commit; no tag or GitHub release observed"
+    },
+    {
+      "id": "probxiv-live",
+      "kind": "hosted_product",
+      "url": "https://probxiv.com/",
+      "version": "opaque-build:pFL34NvMDdnDPDQcowdr6",
+      "observed_at": "2026-08-19T18:05:00Z",
+      "license": "not_observed",
+      "public_api": "not_observed",
+      "public_export": "not_observed",
+      "source_repository": "not_observed",
+      "anonymous_problem_count": 1183,
+      "far_collection_count": 597,
+      "status_counts": {
+        "candidate": 53,
+        "disproved": 164,
+        "open": 597,
+        "partial": 91,
+        "retracted": 3,
+        "solved": 266,
+        "variant": 9
+      },
+      "judgement_counts": {
+        "formalized": 153,
+        "llm_verified": 595,
+        "unverified": 435
+      }
+    },
+    {
+      "id": "quipu-paper-v1",
+      "kind": "paper",
+      "url": "https://arxiv.org/abs/2608.16813v1",
+      "version": "2608.16813v1",
+      "published_at": "2026-08-17T17:04:29Z",
+      "license": "CC-BY-4.0",
+      "source_sha256": "f13c3fcd2483f31963789ebb7170cf79f4824004df6e854c5169bd2a6d9b2ade",
+      "pdf_sha256": "3abaa504e5b6c4e6640d4ddee660d756963b5413e750fce98b65a70a35ae29d3",
+      "artifact": "https://zenodo.org/records/21910268",
+      "artifact_version": "0.3.23",
+      "artifact_commit": "c57ee527266a62ddce5d918560a56e752c8df399"
+    },
+    {
+      "id": "vela-math-baseline",
+      "kind": "git_repository",
+      "url": "https://github.com/vela-science/math",
+      "version": "cf46d6f98b053714d16f113587c23a39d3e8bc8b",
+      "tree": "2df02914b460564b43f4df2fbe29a12b604e1133",
+      "reader_version": "0.977.3",
+      "reader_sha256": "3a1173918bdcb887155bab681411bf5e9ff64d925fe1b50369ac37ab020b94ad"
+    }
+  ],
+  "nonclaims": [
+    "Author-reported FAR pilot counts were not independently reproduced.",
+    "The FAR paper reports 598 automated-judge acceptances while the live ProbXiv FAR collection exposes 597 entries; this audit does not infer which item or policy accounts for the difference.",
+    "ProbXiv private backups or APIs may exist; they were not part of the observed public contract.",
+    "Quipu demonstrates a general governed graph store, not a current Vela Result failure.",
+    "No external candidate was submitted to or admitted by Vela."
+  ]
+}

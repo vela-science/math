@@ -1,0 +1,229 @@
+{
+  "schema": "vela-math.far-probxiv-comparison.v1",
+  "authority_effect": "none",
+  "finding_scale": ["full", "partial", "absent", "not_evaluated"],
+  "dimensions": [
+    "discovery_and_allocation",
+    "source_statement_fidelity",
+    "problem_result_scope",
+    "open_status_and_observation_time",
+    "duplicate_or_known_result_detection",
+    "evidence_axes",
+    "performer_verifier_authority_separation",
+    "correction_and_replay",
+    "provider_loss_and_cold_successor"
+  ],
+  "systems": {
+    "far_git_pipeline": [
+      {
+        "dimension": "discovery_and_allocation",
+        "finding": "full",
+        "basis": "observed",
+        "evidence": ["https://arxiv.org/html/2608.16977v1#S4", "https://github.com/zeyu-zheng/FAR/tree/0f498a7e9252affd478cbfe324f51ea6d0119331"],
+        "caveat": "Pilot counts are author-reported and its corpus/output bytes are not published in the repository."
+      },
+      {
+        "dimension": "source_statement_fidelity",
+        "finding": "partial",
+        "basis": "observed",
+        "evidence": ["https://github.com/zeyu-zheng/FAR/blob/0f498a7e9252affd478cbfe324f51ea6d0119331/src/schemas.py"],
+        "caveat": "Source context is retained locally, but positional IDs, missing corpus digests, and the GapP label mismatch limit exact identity."
+      },
+      {
+        "dimension": "problem_result_scope",
+        "finding": "partial",
+        "basis": "observed",
+        "evidence": ["https://github.com/zeyu-zheng/FAR/blob/0f498a7e9252affd478cbfe324f51ea6d0119331/src/solve.py"],
+        "caveat": "Find/attempt/recommend stages are distinct, but later outcomes are prose tokens rather than content-addressed Result records."
+      },
+      {
+        "dimension": "open_status_and_observation_time",
+        "finding": "partial",
+        "basis": "observed",
+        "evidence": ["https://arxiv.org/html/2608.16977v1#S5.SS1"],
+        "caveat": "Status citations and later rechecks exist, but no public attributed status-transition history was observed."
+      },
+      {
+        "dimension": "duplicate_or_known_result_detection",
+        "finding": "partial",
+        "basis": "observed",
+        "evidence": ["https://arxiv.org/html/2608.16977v1#S5.SS1"],
+        "caveat": "KNOWN is a real pipeline outcome, but the Erdős 635 prior result escaped the cascade."
+      },
+      {
+        "dimension": "evidence_axes",
+        "finding": "partial",
+        "basis": "observed",
+        "evidence": ["https://github.com/zeyu-zheng/FAR/blob/0f498a7e9252affd478cbfe324f51ea6d0119331/README.md"],
+        "caveat": "Stage outputs and rationales are separate, but the public artifact does not bind exact executable, formal, human, and source evidence axes."
+      },
+      {
+        "dimension": "performer_verifier_authority_separation",
+        "finding": "partial",
+        "basis": "observed",
+        "evidence": ["https://arxiv.org/html/2608.16977v1#S4.SS1"],
+        "caveat": "Different model passes play roles; judge ordinals are not authenticated principals and there is no repository authority Decision."
+      },
+      {
+        "dimension": "correction_and_replay",
+        "finding": "absent",
+        "basis": "observed",
+        "evidence": ["https://github.com/zeyu-zheng/FAR/blob/0f498a7e9252affd478cbfe324f51ea6d0119331/src/agent.py"],
+        "caveat": "Append-only JSONL and prose updates do not expose an attributed correction relation or deterministic state replay."
+      },
+      {
+        "dimension": "provider_loss_and_cold_successor",
+        "finding": "partial",
+        "basis": "observed",
+        "evidence": ["https://github.com/zeyu-zheng/FAR/blob/0f498a7e9252affd478cbfe324f51ea6d0119331/.gitignore"],
+        "caveat": "Retained local JSONL is readable, but clean Git lacks the pilot corpus, outputs, locks, workspaces, and exact provider provenance."
+      }
+    ],
+    "probxiv_public_registry": [
+      {
+        "dimension": "discovery_and_allocation",
+        "finding": "partial",
+        "basis": "observed",
+        "evidence": ["https://probxiv.com/", "https://probxiv.com/collections/far"],
+        "caveat": "The public registry supports search and collections, not FAR's measured allocation pipeline."
+      },
+      {
+        "dimension": "source_statement_fidelity",
+        "finding": "partial",
+        "basis": "observed",
+        "evidence": ["https://probxiv.com/problems/directed-3-torus-hamilton"],
+        "caveat": "Source links and an explicit formalization-fidelity caveat are strong, but no exact page/source export contract was observed."
+      },
+      {
+        "dimension": "problem_result_scope",
+        "finding": "full",
+        "basis": "observed",
+        "evidence": ["https://probxiv.com/problems/on-multicolor-ramsey-number-of-paths-versus-cycles-2#attempt-1"],
+        "caveat": "Problem, attempt, machine judgement, formal check, and current status are visibly distinct editorial surfaces."
+      },
+      {
+        "dimension": "open_status_and_observation_time",
+        "finding": "partial",
+        "basis": "observed",
+        "evidence": ["https://probxiv.com/problems/erdos-7"],
+        "caveat": "Current status and dates are visible and retraction is preserved; no attributed status-event history is exposed."
+      },
+      {
+        "dimension": "duplicate_or_known_result_detection",
+        "finding": "absent",
+        "basis": "observed",
+        "evidence": ["https://probxiv.com/?q=duplicate"],
+        "caveat": "No duplicate state, filter, relation, or matching whole-word search result was observed."
+      },
+      {
+        "dimension": "evidence_axes",
+        "finding": "full",
+        "basis": "observed",
+        "evidence": ["https://probxiv.com/problems/directed-3-torus-hamilton", "https://probxiv.com/problems/on-multicolor-ramsey-number-of-paths-versus-cycles-2"],
+        "caveat": "Machine and formal checks are separately scoped and explicitly do not become proof or human review."
+      },
+      {
+        "dimension": "performer_verifier_authority_separation",
+        "finding": "partial",
+        "basis": "observed",
+        "evidence": ["https://probxiv.com/problems/on-multicolor-ramsey-number-of-paths-versus-cycles-2"],
+        "caveat": "Tool work and account credit are separated; no attributed authority principal or Decision is exposed."
+      },
+      {
+        "dimension": "correction_and_replay",
+        "finding": "partial",
+        "basis": "observed",
+        "evidence": ["https://probxiv.com/problems/erdos-7"],
+        "caveat": "The retracted URL and attempt remain readable, but no supersession edge, attributed correction Event, or replay is exposed."
+      },
+      {
+        "dimension": "provider_loss_and_cold_successor",
+        "finding": "absent",
+        "basis": "observed",
+        "evidence": ["https://probxiv.com/"],
+        "caveat": "No public API, export, source repository, version, license, or reconstruction contract was observed."
+      }
+    ],
+    "vela_math_repository": [
+      {
+        "dimension": "discovery_and_allocation",
+        "finding": "absent",
+        "basis": "observed",
+        "evidence": ["../../README.md"],
+        "caveat": "Vela intentionally does not search literature, rank Problems, or allocate compute."
+      },
+      {
+        "dimension": "source_statement_fidelity",
+        "finding": "full",
+        "basis": "observed",
+        "evidence": ["../../evidence/current/", "../../records/claims/"],
+        "caveat": "Exact roots and source occurrences bind scope; mathematical equivalence still requires source-owned review."
+      },
+      {
+        "dimension": "problem_result_scope",
+        "finding": "full",
+        "basis": "observed",
+        "evidence": ["../../records/submissions/", "../../records/claims/", "../../records/verifications/"],
+        "caveat": "Submission, Claim, scoped Verification, Decision, Event, and derived Standing remain distinct."
+      },
+      {
+        "dimension": "open_status_and_observation_time",
+        "finding": "partial",
+        "basis": "observed",
+        "evidence": ["candidates.json", "../../.vela/authority/events/"],
+        "caveat": "Source observation time is retained outside Core; Events answer Repository admission time, not arbitrary world-valid intervals."
+      },
+      {
+        "dimension": "duplicate_or_known_result_detection",
+        "finding": "partial",
+        "basis": "observed",
+        "evidence": ["../../records/claims/"],
+        "caveat": "Exact descriptive/correction relations can retain a known-result finding, but Vela performs no novelty search."
+      },
+      {
+        "dimension": "evidence_axes",
+        "finding": "full",
+        "basis": "observed",
+        "evidence": ["../../records/verifications/", "../../records/artifacts/"],
+        "caveat": "A scoped check constrains only its declared method and never becomes acceptance by itself."
+      },
+      {
+        "dimension": "performer_verifier_authority_separation",
+        "finding": "full",
+        "basis": "observed",
+        "evidence": ["../../.vela/authority/records/", "../../records/submissions/", "../../records/verifications/"],
+        "caveat": "Authentication, performer, verifier, principal, signer, and authority are retained separately."
+      },
+      {
+        "dimension": "correction_and_replay",
+        "finding": "full",
+        "basis": "observed",
+        "evidence": ["../../.vela/authority/events/vev_4de946c32ad32331.json", "../../.vela/authority/events/vev_5d0ab1bf4dc7df99.json"],
+        "caveat": "Current Math has real predecessor/successor correction Events; this does not establish the corrected science beyond its admitted scope."
+      },
+      {
+        "dimension": "provider_loss_and_cold_successor",
+        "finding": "full",
+        "basis": "observed",
+        "evidence": ["../../README.md", "../../MIGRATION.md", "../../.vela/repository.json"],
+        "caveat": "Git plus the pinned signed reader reconstructs admitted state; external source pages may still disappear."
+      }
+    ]
+  },
+  "thesis": {
+    "supported": [
+      "Vela demonstrates an attributable Decision/Event/Standing boundary absent from the observed FAR and ProbXiv public contracts.",
+      "Vela demonstrates exact correction replay and Git-only admitted-state reconstruction on current Math records."
+    ],
+    "falsified_or_narrowed": [
+      "Vela is not uniquely capable of separating attempt, machine review, formal check, and human-review limitations; ProbXiv already does this visibly.",
+      "Vela is not the better discovery or attention-allocation product; FAR is purpose-built and empirically evaluated for that job.",
+      "No evidence supports importing FAR ranking, ProbXiv editorial status, or Quipu bitemporality into Vela Core."
+    ],
+    "not_tested": [
+      "Independent scientific correctness of any external candidate.",
+      "External recurrence with an independent Vela Repository authority.",
+      "Comparative throughput, research productivity, adoption, or novelty certification."
+    ]
+  }
+}

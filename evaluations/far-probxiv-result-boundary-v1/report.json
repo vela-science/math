@@ -1,0 +1,128 @@
+{
+  "authority_effect": "none",
+  "candidate_count": 5,
+  "dimension_count": 9,
+  "finding_counts": {
+    "far_git_pipeline": {
+      "absent": 1,
+      "full": 1,
+      "partial": 7
+    },
+    "probxiv_public_registry": {
+      "absent": 2,
+      "full": 2,
+      "partial": 5
+    },
+    "vela_math_repository": {
+      "absent": 1,
+      "full": 6,
+      "partial": 2
+    }
+  },
+  "input_roots": {
+    "audit.json": "sha256:d1d7e965fc59d38f66c0f284bc86952ea5844ab0894a6061112c202a645ddf31",
+    "candidates.json": "sha256:373b3c656edf2b5857da342a46475959557662c9f328756f22f74aa62e156349",
+    "comparison.json": "sha256:6d9b2699505a1285ee6dc17b776d472ba1b2f3e6daa2af3bcee47a85f7e2a299",
+    "evaluation_root": "sha256:ff1d238351c27b6a2cc328ba34090813b51c7c4503f963a5496c4eb31af57c02",
+    "implementation": "sha256:7bf87380b515fed31c17cf03361b7acdc906104843b939f84c26e144631b5c15",
+    "rubric.json": "sha256:7981a6e06d4f36e009664cbf779916ffd489fde893c52a2556d90bc5b45f8c68",
+    "vela-baseline.json": "sha256:412a17b3718037fb920d20667dab032cbc091ff22da66f4a25516449ae2c3f15"
+  },
+  "limitations": [
+    "This is an internal primary-source audit and deterministic aggregation, not an independent evaluation.",
+    "Findings compare public contracts and current artifacts, not mathematical correctness or research productivity.",
+    "No aggregate score or winner is computed because the systems own different product boundaries.",
+    "No FAR or ProbXiv candidate has a Vela Submission, Verification, Decision, Event, or Standing here."
+  ],
+  "matrix": [
+    {
+      "dimension": "discovery_and_allocation",
+      "findings": {
+        "far_git_pipeline": "full",
+        "probxiv_public_registry": "partial",
+        "vela_math_repository": "absent"
+      }
+    },
+    {
+      "dimension": "source_statement_fidelity",
+      "findings": {
+        "far_git_pipeline": "partial",
+        "probxiv_public_registry": "partial",
+        "vela_math_repository": "full"
+      }
+    },
+    {
+      "dimension": "problem_result_scope",
+      "findings": {
+        "far_git_pipeline": "partial",
+        "probxiv_public_registry": "full",
+        "vela_math_repository": "full"
+      }
+    },
+    {
+      "dimension": "open_status_and_observation_time",
+      "findings": {
+        "far_git_pipeline": "partial",
+        "probxiv_public_registry": "partial",
+        "vela_math_repository": "partial"
+      }
+    },
+    {
+      "dimension": "duplicate_or_known_result_detection",
+      "findings": {
+        "far_git_pipeline": "partial",
+        "probxiv_public_registry": "absent",
+        "vela_math_repository": "partial"
+      }
+    },
+    {
+      "dimension": "evidence_axes",
+      "findings": {
+        "far_git_pipeline": "partial",
+        "probxiv_public_registry": "full",
+        "vela_math_repository": "full"
+      }
+    },
+    {
+      "dimension": "performer_verifier_authority_separation",
+      "findings": {
+        "far_git_pipeline": "partial",
+        "probxiv_public_registry": "partial",
+        "vela_math_repository": "full"
+      }
+    },
+    {
+      "dimension": "correction_and_replay",
+      "findings": {
+        "far_git_pipeline": "absent",
+        "probxiv_public_registry": "partial",
+        "vela_math_repository": "full"
+      }
+    },
+    {
+      "dimension": "provider_loss_and_cold_successor",
+      "findings": {
+        "far_git_pipeline": "partial",
+        "probxiv_public_registry": "absent",
+        "vela_math_repository": "full"
+      }
+    }
+  ],
+  "schema": "vela-math.far-probxiv-report.v1",
+  "thesis": {
+    "falsified_or_narrowed": [
+      "Vela is not uniquely capable of separating attempt, machine review, formal check, and human-review limitations; ProbXiv already does this visibly.",
+      "Vela is not the better discovery or attention-allocation product; FAR is purpose-built and empirically evaluated for that job.",
+      "No evidence supports importing FAR ranking, ProbXiv editorial status, or Quipu bitemporality into Vela Core."
+    ],
+    "not_tested": [
+      "Independent scientific correctness of any external candidate.",
+      "External recurrence with an independent Vela Repository authority.",
+      "Comparative throughput, research productivity, adoption, or novelty certification."
+    ],
+    "supported": [
+      "Vela demonstrates an attributable Decision/Event/Standing boundary absent from the observed FAR and ProbXiv public contracts.",
+      "Vela demonstrates exact correction replay and Git-only admitted-state reconstruction on current Math records."
+    ]
+  }
+}

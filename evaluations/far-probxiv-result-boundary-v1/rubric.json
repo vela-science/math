@@ -1,0 +1,115 @@
+{
+  "schema": "vela-math.far-probxiv-rubric.v1",
+  "authority_effect": "none",
+  "method": "Each dimension has exactly two public-contract criteria. Full means both observed, partial means one observed, and absent means neither observed. Assessments are internal primary-source audit judgements, not independent scores.",
+  "dimensions": [
+    {
+      "id": "discovery_and_allocation",
+      "criteria": [
+        {"id": "discovers_candidates", "description": "Finds or organizes candidate Problems from a larger source set."},
+        {"id": "evaluates_allocation", "description": "Measures or supports an evidence-backed strategy for allocating work."}
+      ],
+      "assessments": {
+        "far_git_pipeline": {"discovers_candidates": true, "evaluates_allocation": true},
+        "probxiv_public_registry": {"discovers_candidates": true, "evaluates_allocation": false},
+        "vela_math_repository": {"discovers_candidates": false, "evaluates_allocation": false}
+      }
+    },
+    {
+      "id": "source_statement_fidelity",
+      "criteria": [
+        {"id": "source_locator", "description": "Retains a specific source occurrence locator."},
+        {"id": "exact_source_binding", "description": "Binds exact source revision, bytes, and scoped identity or exposes an equivalent reconstruction contract."}
+      ],
+      "assessments": {
+        "far_git_pipeline": {"source_locator": true, "exact_source_binding": false},
+        "probxiv_public_registry": {"source_locator": true, "exact_source_binding": false},
+        "vela_math_repository": {"source_locator": true, "exact_source_binding": true}
+      }
+    },
+    {
+      "id": "problem_result_scope",
+      "criteria": [
+        {"id": "problem_result_separate", "description": "Keeps the source Problem separate from an attempted or claimed Result."},
+        {"id": "check_status_separate", "description": "Keeps scoped check evidence separate from editorial or authoritative status."}
+      ],
+      "assessments": {
+        "far_git_pipeline": {"problem_result_separate": true, "check_status_separate": false},
+        "probxiv_public_registry": {"problem_result_separate": true, "check_status_separate": true},
+        "vela_math_repository": {"problem_result_separate": true, "check_status_separate": true}
+      }
+    },
+    {
+      "id": "open_status_and_observation_time",
+      "criteria": [
+        {"id": "observed_status", "description": "Retains the source status with an observation date or equivalent temporal caveat."},
+        {"id": "attributed_status_history", "description": "Exposes an attributed, replayable history of status changes."}
+      ],
+      "assessments": {
+        "far_git_pipeline": {"observed_status": true, "attributed_status_history": false},
+        "probxiv_public_registry": {"observed_status": true, "attributed_status_history": false},
+        "vela_math_repository": {"observed_status": false, "attributed_status_history": true}
+      }
+    },
+    {
+      "id": "duplicate_or_known_result_detection",
+      "criteria": [
+        {"id": "duplicate_check", "description": "Provides an explicit known-result or duplicate detection check."},
+        {"id": "linked_repair", "description": "Can retain the prior observation and link a resulting repair to current state."}
+      ],
+      "assessments": {
+        "far_git_pipeline": {"duplicate_check": true, "linked_repair": false},
+        "probxiv_public_registry": {"duplicate_check": false, "linked_repair": false},
+        "vela_math_repository": {"duplicate_check": false, "linked_repair": true}
+      }
+    },
+    {
+      "id": "evidence_axes",
+      "criteria": [
+        {"id": "modalities_separate", "description": "Presents machine, formal, executable, or human evidence as separate modalities."},
+        {"id": "limitations_scoped", "description": "Retains what each modality does not establish."}
+      ],
+      "assessments": {
+        "far_git_pipeline": {"modalities_separate": true, "limitations_scoped": false},
+        "probxiv_public_registry": {"modalities_separate": true, "limitations_scoped": true},
+        "vela_math_repository": {"modalities_separate": true, "limitations_scoped": true}
+      }
+    },
+    {
+      "id": "performer_verifier_authority_separation",
+      "criteria": [
+        {"id": "roles_separate", "description": "Names performer and checker roles separately."},
+        {"id": "authority_separate", "description": "Keeps an authenticated authority Decision separate from both performer and checker."}
+      ],
+      "assessments": {
+        "far_git_pipeline": {"roles_separate": true, "authority_separate": false},
+        "probxiv_public_registry": {"roles_separate": true, "authority_separate": false},
+        "vela_math_repository": {"roles_separate": true, "authority_separate": true}
+      }
+    },
+    {
+      "id": "correction_and_replay",
+      "criteria": [
+        {"id": "prior_current_retained", "description": "Retains both the prior record and a linked current correction or retraction."},
+        {"id": "attributed_replay", "description": "Deterministically replays the attributed transition and its state consequence."}
+      ],
+      "assessments": {
+        "far_git_pipeline": {"prior_current_retained": false, "attributed_replay": false},
+        "probxiv_public_registry": {"prior_current_retained": true, "attributed_replay": false},
+        "vela_math_repository": {"prior_current_retained": true, "attributed_replay": true}
+      }
+    },
+    {
+      "id": "provider_loss_and_cold_successor",
+      "criteria": [
+        {"id": "retained_readability", "description": "Retained artifacts remain human-readable without the original model provider."},
+        {"id": "clean_reconstruction", "description": "A clean public checkout reconstructs exact evaluated or admitted state without the hosted product."}
+      ],
+      "assessments": {
+        "far_git_pipeline": {"retained_readability": true, "clean_reconstruction": false},
+        "probxiv_public_registry": {"retained_readability": false, "clean_reconstruction": false},
+        "vela_math_repository": {"retained_readability": true, "clean_reconstruction": true}
+      }
+    }
+  ]
+}
