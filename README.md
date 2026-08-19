@@ -8,8 +8,8 @@ The current prelaunch state is a compact Submission v3 repository with three
 accepted Claims and no pending review. See [`MIGRATION.md`](MIGRATION.md) for
 the exact retained current-state inventory.
 
-Current strict replay and deterministic projection use signed Vela 0.977.2
-(`sha256:286ed839ea81b7ed283e04ea1823c1515ad242dcee02b424787b8daa667625e2`).
+Current strict replay and deterministic projection use signed Vela 0.977.3
+(`sha256:3a1173918bdcb887155bab681411bf5e9ff64d925fe1b50369ac37ab020b94ad`).
 
 ## Evaluation material
 
