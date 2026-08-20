@@ -7,12 +7,15 @@ complete read-only source clones are inputs; the snippets below identify the
 question rather than replacing source context. Formal Conjectures is
 Apache-2.0.
 
-An exact-name/problem-number search found none of these ten targets in Math
-`origin/main@5de716c8` or lean-proofs `origin/main@accf62cb`. Their assigned FC
-declarations/definitions remain `sorry`, `stop`, or deliberately checked
-dependency bridges exactly as described. A source drift or duplicate found
-before launch invalidates the freeze and requires a reviewed new
-preregistration; it is not silently substituted.
+The regenerated frozen duplicate index is
+`duplicates/index.json`. Nine targets have no exact declaration occurrence in
+Math `5de716c8` or lean-proofs `accf62cb`; this is only a statement about that
+frozen universe. T02 is the deliberate exception: Math contains three exact
+occurrence/provenance metadata matches, described below. Across the assigned FC
+bytes, target declarations remain `sorry`, `stop`, definitions needing semantic
+comparison, or deliberately checked dependency bridges exactly as described.
+A source drift or newly reachable proof before launch invalidates the freeze;
+it is not silently ignored or substituted.
 
 ## Smoke targets
 
@@ -42,9 +45,15 @@ credential, lifecycle, and receipt gates pass.
 - Git blob: `061c7b62abe53b0db18a3d795b8e71ea4efc70c0`.
 - File SHA-256:
   `c65c7f26e09baefa0b0f640c3e37b6d173a05c4b173a3a5685c6bcb547037298`.
-- Exact objective: prove `W 2 = 3` from the current definitions, retaining the
-  lower and upper directions and the exact `sInf`/nonempty dependencies. The
-  `formal_proof` URL is provenance, not proof bytes in the assigned source.
+- Exact objective: independently realize a checked source-native proof of
+  `W 2 = 3` from the current definitions, retaining the lower and upper
+  directions and exact `sInf`/nonempty dependencies. Frozen Math already has
+  occurrence/provenance metadata pointing to
+  `XC0R/formal-conjectures@6c7a16e...`, but records build `not_attempted` and
+  axiom status `not_read`; those external proof bytes are not in the mounted
+  inputs. T02 may qualify only as explicitly allowed independent proof
+  production. It must not claim theorem novelty, treat the URL as proof bytes,
+  or infer that the linked proof builds.
 
 ### T03 — Erdős 359 finite prefix
 

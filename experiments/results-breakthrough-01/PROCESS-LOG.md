@@ -1,0 +1,341 @@
+# RESULTS-BREAKTHROUGH-01 process log
+
+Append-only observational evidence. Entries are not experiment gates, do not
+authorize retries or mutations, and do not require an extra review cycle.
+Judgments are confined to the `prevention/simplification` and `disposition`
+fields; the observation remains separate.
+
+## 2026-08-20 — predecessor lesson
+
+- **Stage/time and evidence:** predecessor OrbStack campaign, before this
+  Docker-only pilot; supervisor task `019fe903-28b7-73d1-bd26-bdd9a083c1a4`.
+- **Observation and impact:** campaign machinery expanded while scientific
+  attempts remained the scarce output. It was terminated and is not reused.
+- **Category:** experiment design.
+- **Root cause:** setup/reproducibility controls became the product rather than
+  a bounded support for Result production.
+- **Affected:** predecessor time and state; zero sessions or credits in this
+  pilot.
+- **Immediate correction:** use one Docker Desktop image, ordinary files/Git,
+  fixed denominators, and short stop rules.
+- **Prevention/simplification:** reject new infrastructure unless a frozen
+  scientific or evaluator requirement cannot be met by existing bytes.
+- **Disposition:** summarized once; delete predecessor machinery, do not port.
+
+## 2026-08-20T21:41:54Z — missing machine identity
+
+- **Stage/time and evidence:** producer preflight; evaluator report
+  `reviews/prereg-0bbf3b8/REPORT.md`, checks 4–6 and machine-ID finding;
+  reviewed producer `0bbf3b8578417c928fe2b62ee9912f2c7918e9d5`.
+- **Observation and impact:** the runtime contained neither
+  `/etc/machine-id` nor `/var/lib/dbus/machine-id`; Vela wrote its Profile then
+  exited before signed repository authority initialization.
+- **Category:** Docker/environment.
+- **Root cause:** the derived image omitted a Linux device-identity dependency
+  used by Vela `local_device_identifier()`.
+- **Affected:** two setup attempts, no model sessions/credits, no scientific or
+  canonical state.
+- **Immediate correction:** propose one deterministic experiment-only 32-hex
+  value plus newline; never mount the host value.
+- **Prevention/simplification:** Vela CLI/docs should name this Linux dependency
+  in container guidance or emit a direct actionable error.
+- **Disposition:** experiment-blocking; freeze the delta now, rebuild only
+  after independent approval.
+
+## 2026-08-20T21:41:54Z — swallowed Vela failure JSON
+
+- **Stage/time and evidence:** producer preflight; evaluator report failure-JSON
+  finding and `PREREGISTRATION.md` current blocker.
+- **Observation and impact:** command substitution captured `vela init --json`
+  stdout, while the failure branch printed only `INIT_FAILED rc=1`; the useful
+  structured diagnostic was not retained.
+- **Category:** harness/script.
+- **Root cause:** failure-path receipt handling discarded captured stdout.
+- **Affected:** diagnosis time; two setup attempts; no sessions/credits or
+  scientific state.
+- **Immediate correction:** retain separate stdout/stderr files, exit code,
+  elapsed time, and hashes on success and failure.
+- **Prevention/simplification:** one small command-receipt wrapper for all CLI
+  calls; never store failing JSON only in a shell variable.
+- **Disposition:** fix now because complete receipts are a launch requirement.
+
+## 2026-08-20T21:41:54Z — false T02 blanket novelty wording
+
+- **Stage/time and evidence:** independent preregistration review B6; frozen
+  Math paths `evaluations/fc-build-audit-v1/builds.json` and
+  `evaluations/fc-conditional-proof-audit-v1/results.json`.
+- **Observation and impact:** the producer said no exact target name occurred
+  in Math, but Math contains occurrence/provenance metadata for
+  `Erdos138.monoAPNumber_two_two` pointing at an external revision. Mounted
+  proof bytes are absent and the audit says build not attempted/status not
+  read.
+- **Category:** source data.
+- **Root cause:** exact declaration search results were summarized as proof
+  novelty instead of separating occurrence metadata from reachable proof
+  bytes.
+- **Affected:** T02 wording and duplicate control; no model sessions/credits.
+- **Immediate correction:** retain T02 only as an explicitly independent proof
+  realization objective; forbid theorem-novelty claims and index the metadata.
+- **Prevention/simplification:** duplicate records must distinguish metadata,
+  statement occurrence, proof bytes, checked proof, and accepted result.
+- **Disposition:** fix now before inference.
+
+## 2026-08-20T21:41:54Z — mutable image inputs
+
+- **Stage/time and evidence:** independent preregistration review B5;
+  predecessor Dockerfile SHA-256
+  `299151c8e683fb3b1a5eae0e384273c34fac2b12b659fc1cb7eba9bf9b478b67`.
+- **Observation and impact:** output image identity was pinned, but both `FROM`
+  references and the `COPY . .` build context were mutable for a rebuild.
+- **Category:** Docker/environment.
+- **Root cause:** reconstruction was specified by tags and an implicit working
+  tree rather than exact image and Git-tree inputs.
+- **Affected:** rebuild reproducibility only; no new image/session/credit.
+- **Immediate correction:** digest-pin both bases and freeze the exact Vela
+  commit/tree plus complete build-context manifest and command.
+- **Prevention/simplification:** build only from a verified Git archive and
+  fail closed on a context-manifest mismatch.
+- **Disposition:** fix now because the proposed rebuild is otherwise ambiguous.
+
+## 2026-08-20T21:41:54Z — evaluator-contract drift
+
+- **Stage/time and evidence:** independent preregistration review B1–B3;
+  evaluator freeze `cb10b9f81dfc967f68e3f7b37fec83ee753e541d`, rubric
+  SHA-256 `6e3c79c25f5e78cf3dbeca47fe157ac46da1f6f6431f0d9b72db55a8fdc878ca`.
+- **Observation and impact:** the producer introduced an informal qualified
+  outcome, receipt-reconstruction recovery, start-only denominator, and a
+  different standards/scale condition instead of binding the frozen five
+  verdicts, scientific recovery, 30-cell ITT, smoke, paired, NO-VALUE, and
+  40–60 gates.
+- **Category:** evaluator.
+- **Root cause:** the Stage 1 commitment was not read and bound before the
+  producer wrote its own measurement section.
+- **Affected:** entire analysis contract; no candidate sessions/credits.
+- **Immediate correction:** bind the frozen evaluator identities and treat its
+  rubric/analysis plan as normative without a competing definition.
+- **Prevention/simplification:** require the evaluator lock as the first small
+  preregistration input, then reference it rather than paraphrasing metrics.
+- **Disposition:** fix now because outcome interpretation would otherwise be
+  mutable.
+
+## 2026-08-20T21:41:54Z — asserted equivalence without executable evidence
+
+- **Stage/time and evidence:** independent preregistration review B4 and B7;
+  reviewed six-file packet/tree `5f71bffbfad364d628abf8ba70003e91a2dcd643`.
+- **Observation and impact:** the initial packet described equivalence and
+  asked reviewers to confirm fixtures that did not exist. It omitted fact
+  roots, exact wrappers, per-arm manifests, isolation/scan bytes, and
+  Native/Graph receipts, causing another review cycle without scientific work.
+- **Category:** experiment design.
+- **Root cause:** prose preregistration preceded the smallest runnable bytes.
+- **Affected:** one producer/reviewer cycle and operator time; no model
+  sessions/credits.
+- **Immediate correction:** freeze only the simple executable bytes and
+  deterministic evidence the Stage 1 contract actually requires.
+- **Prevention/simplification:** prefer a small runnable fixture plus hashes to
+  promises; delete any artifact not used by launch, adjudication, or replay.
+- **Disposition:** fix the blocking omissions now; defer all broader framework
+  ideas.
+
+## 2026-08-20T21:51:20Z — native-adapter patch typo near miss
+
+- **Stage/time and evidence:** corrected-preregistration authoring; pre-execution
+  inspection found line 10 as `test ...+mkdir` in `arms/N/record.sh`.
+- **Observation and impact:** a patch-line joining error would have made the
+  Native fixture fail before producing evidence. It was detected before any
+  fixture or session ran.
+- **Category:** operator error.
+- **Root cause:** malformed newline in a large multi-file patch.
+- **Affected:** minutes only; zero sessions/credits/state.
+- **Immediate correction:** split the test and directory creation into two
+  shell lines.
+- **Prevention/simplification:** run `bash -n` and the deterministic Native
+  fixture before committing; keep patches smaller where practical.
+- **Disposition:** fixed now; no additional review gate.
+
+## 2026-08-20T21:56:00Z — raw-commit bundle command rejected
+
+- **Stage/time and evidence:** corrected source-lock preparation; `git bundle
+  create ... e289a2b...` exited with `Refusing to create empty bundle`.
+- **Observation and impact:** Git bundle creation requires a ref/revision range
+  that contributes advertised history; the first raw-object invocation wrote
+  no usable evaluator bundle.
+- **Category:** operator error.
+- **Root cause:** the bundle command named an object ID without an advertised
+  ref/range.
+- **Affected:** under one minute; zero sessions/credits/state.
+- **Immediate correction:** bundle the exact local freeze branch that resolves
+  to `e289a2b...`, then verify its advertised commit and hash.
+- **Prevention/simplification:** resolve and print the ref tip before bundle
+  creation; retain only the successful bundle receipt.
+- **Disposition:** fix now as a small reconstruction receipt; no new gate.
+
+## 2026-08-20T21:57:21Z — duplicate-index parser rejected JSON match
+
+- **Stage/time and evidence:** deterministic Stage 2 generation; Python raised
+  `ValueError` while parsing a `git grep -n` match whose JSON payload itself
+  contained a colon.
+- **Observation and impact:** the first generation stopped after partial T01/T02
+  derived files; no committed or inference state used them.
+- **Category:** harness/script.
+- **Root cause:** parsing from the last colon confused source line numbers with
+  colons in matched JSON text.
+- **Affected:** under one minute; zero sessions/credits/canonical state.
+- **Immediate correction:** parse the fixed `commit:path:line:text` prefix with
+  an anchored expression and regenerate all derived files deterministically.
+- **Prevention/simplification:** test parsers against source, JSON, and text
+  matches containing delimiters before relying on their index output.
+- **Disposition:** fix now because the duplicate index is blocking; no retry of
+  model or scientific work occurred.
+
+## 2026-08-20T21:58:10Z — fixture launcher lacked executable mode
+
+- **Stage/time and evidence:** Native/Graph adapter-only fixture; shell exited
+  `permission denied` before entering Docker.
+- **Observation and impact:** newly added scripts had content but not executable
+  file modes, so the first fixture invocation performed no adapter work.
+- **Category:** operator error.
+- **Root cause:** executable modes were not set after creating scripts through
+  the patch tool.
+- **Affected:** seconds; zero containers, model sessions, credits, or state.
+- **Immediate correction:** mark only the declared scripts/adapters executable,
+  then rerun the same non-model fixture command.
+- **Prevention/simplification:** deterministic validation checks executable
+  modes and `bash -n`/Python compilation before fixtures.
+- **Disposition:** fix now; this is not a model retry or extra review gate.
+
+## 2026-08-20T22:03:33Z — semantic reader rejected first arm bytes
+
+- **Stage/time and evidence:** first independent semantic equivalence read;
+  reader `independent-semantic-reader`, verdict FAIL, four discrepancies.
+- **Observation and impact:** V retained only `result.json`, hard-coded every
+  Vela claim as computational, mixed post-verdict lifecycle records into one
+  adapter surface, and fact roots sorted by ID instead of binding supplied
+  order. The first reader also noted missing final per-arm manifests.
+- **Category:** experiment design.
+- **Root cause:** arm implementation was written around storage mechanics
+  before a semantic diff of the exact blinded common bundle.
+- **Affected:** one preregistration reader task and authoring time; zero
+  candidate/evaluator sessions, credits, image builds, or authority state.
+- **Immediate correction:** make `blind-bundle/` byte-identical across arms;
+  retain artifacts/commands in V; map exact result status to theoretical or
+  computational; split pre-verdict preparation from post-verdict lifecycle;
+  bind fact sequence order; regenerate and reread.
+- **Prevention/simplification:** define the blinded common bundle first and
+  keep every organization/protocol byte under `organization-only/`.
+- **Disposition:** fix now because information equivalence is launch-blocking;
+  retain the failed read as process evidence, not as a final report.
+
+## 2026-08-20T22:03:33Z — compiled caches appeared in experiment tree
+
+- **Stage/time and evidence:** pre-review status inspection found untracked
+  `scripts/__pycache__` and `arms/G/__pycache__` after Python compilation.
+- **Observation and impact:** generated interpreter caches were unnecessary
+  non-source artifacts and could have been accidentally staged.
+- **Category:** operator error.
+- **Root cause:** validation compiled in place without redirecting bytecode.
+- **Affected:** two untracked directories; zero sessions/credits/state.
+- **Immediate correction:** move them outside the worktree and run later Python
+  checks with `PYTHONDONTWRITEBYTECODE=1`.
+- **Prevention/simplification:** stage explicit paths only and fail validation
+  if any `__pycache__` or `.pyc` is under the campaign directory.
+- **Disposition:** clean now; do not add ignore rules or tooling for two caches.
+
+## 2026-08-20T22:18:00Z — semantic reread found three launch-equivalence gaps
+
+- **Stage/time and evidence:** corrected-preregistration independent semantic
+  reread; reader `independent-semantic-reader`, second FAIL report, three
+  discrepancies covering producer-local facts, wrapper/output parity, and
+  runtime source identity.
+- **Observation and impact:** the fact packs named producer-local payloads that
+  were not mounted; arm wrappers differed while no tokenizer count was
+  available and the declared output allowance was not enforced; and the cell
+  runner accepted source directories without checking their frozen identities.
+  These were shared implementation gaps, not arm-specific scientific facts.
+- **Category:** harness/script.
+- **Root cause:** the preregistration specified information equivalence at the
+  manifest level before the last-mile launch path enforced every listed byte
+  and identity.
+- **Affected:** one additional preregistration reader task and authoring time;
+  zero candidate/evaluator sessions, credits, image builds, Vela lifecycles, or
+  scientific/canonical state.
+- **Immediate correction:** materialize every producer-local fact into one
+  digest-checked read-only mount; make all arm wrappers byte-identical; enforce
+  the common 8,192-UTF-8-byte result allowance; and verify exact commit, tree,
+  non-shallow status, cleanliness, and the launch mount receipt before each
+  cell. Bind both external T02 commit-absence checks.
+- **Prevention/simplification:** validate equivalence from the candidate's
+  actual mount table and common runner, not only from source manifests; exact
+  byte identity is simpler and stronger than estimating wrapper token counts.
+- **Disposition:** fix now because launch equivalence is blocking; do not add a
+  tokenizer service, new schema, or new review framework.
+
+## 2026-08-20T22:24:00Z — bundle clone omitted remote-only advertised refs
+
+- **Stage/time and evidence:** exact source-mount fixture preparation; ordinary
+  `git clone <bundle>` warned that each destination appeared empty, then
+  checkout failed with `fatal: unable to read tree` for frozen Math commit
+  `5de716c896065c03c0a470d015ba2a328a527f73`.
+- **Observation and impact:** the complete bundles advertised only
+  `refs/remotes/origin/main`; this Git clone path did not import that remote-only
+  ref, so the first disposable checkouts contained no objects.
+- **Category:** harness/script.
+- **Root cause:** the reconstruction command assumed `git clone` would fetch a
+  bundle's remote-tracking ref like a branch head.
+- **Affected:** one no-model local reconstruction attempt and under one minute;
+  zero containers, sessions, credits, image builds, Vela calls, or authority
+  state.
+- **Immediate correction:** explicitly fetch the advertised remote ref from
+  each already-verified bundle into a disposable local `frozen` branch, detach
+  at the locked commit, and run the mount verifier.
+- **Prevention/simplification:** document the one-line explicit fetch form in
+  reconstruction receipts; do not repackage or add another archive layer.
+- **Disposition:** corrected now because it affected only fixture setup; no
+  scientific or model retry occurred.
+
+## 2026-08-20T22:31:00Z — validator matched its own sentinel
+
+- **Stage/time and evidence:** final deterministic local validation; first run
+  exited with `placeholder found`, while `rg` found the uppercase sentinel only
+  in the validator's own source line.
+- **Observation and impact:** a self-referential text scan produced a misleading
+  failure after the 30 equivalence manifests were generated.
+- **Category:** harness/script.
+- **Root cause:** the validator searched every file, including its own literal
+  diagnostic marker.
+- **Affected:** one local no-model validation invocation and seconds; zero
+  sessions, credits, image builds, Vela calls, or scientific/canonical state.
+- **Immediate correction:** construct the explicit absent marker from two
+  source fragments so the validator cannot match its own bytes, and retain all
+  substantive validation checks unchanged. The first literal replacement was
+  materially identical and self-matched once more before this correction;
+  a subsequent scan also attempted to UTF-8 decode the SQLite fixture, so the
+  final correction limits sentinel scanning to declared text formats. None of
+  these runs touched experimental state.
+- **Prevention/simplification:** sentinel checks should exclude or safely encode
+  their own pattern; keep the check local rather than adding a linter layer.
+- **Disposition:** fix now because deterministic validation is required; no
+  scientific or provider retry occurred.
+
+## 2026-08-20T22:36:00Z — zsh special variable corrupted first hash manifest
+
+- **Stage/time and evidence:** final review-hash generation; inspection found
+  `zsh:1: command not found` diagnostics embedded in `HASHES.tsv` and blank
+  digest fields.
+- **Observation and impact:** the loop assigned each filename to zsh's special
+  lowercase `path` array, overwriting the process command search path before
+  invoking `shasum`, `awk`, `wc`, and `tr`. The invalid manifest was detected
+  before staging and deleted.
+- **Category:** operator error.
+- **Root cause:** a shell variable name collided with zsh's PATH-tied special
+  parameter.
+- **Affected:** one local manifest-generation invocation and minutes; zero
+  sessions, credits, images, Vela calls, or scientific/canonical state.
+- **Immediate correction:** regenerate via the same bounded mechanical step
+  using non-special variable `file_path`, then independently recompute every
+  digest, byte count, and path set before staging.
+- **Prevention/simplification:** avoid common shell option/special parameter
+  names in scripts and receipts; inspect generated evidence semantically, not
+  merely for file existence.
+- **Disposition:** fix now because the review handoff hash manifest is
+  load-bearing; add no new manifest framework.

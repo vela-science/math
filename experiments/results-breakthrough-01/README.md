@@ -1,38 +1,38 @@
 # RESULTS-BREAKTHROUGH-01
 
-This directory freezes the pre-inference preregistration for a bounded,
-ten-target, three-arm Result experiment. It is not an experiment result, a
-Vela scientific record, or a change to Math Standing.
+Corrected immutable preregistration inputs for a ten-target, three-arm
+source-native Result experiment. Candidate inference has not started.
 
-The frozen arm set is:
+The only arms are:
 
-1. native repository workflow;
-2. conventional JSON/SQLite graph;
-3. current signed Vela lifecycle in campaign-local disposable state.
+1. N — ordinary source-native files and Git;
+2. G — the same bytes in a simplest-sufficient JSON/SQLite graph; and
+3. V — the same bytes through the signed current Vela lifecycle in disposable
+   campaign-local state.
 
-There is no fourth arm and no RO-Crate, Workflow Run RO-Crate, SWHID, or
-nanopublication adapter in this pilot. The conventional graph remains the
-simplest-sufficient falsifier.
+There is no standards adapter or fourth arm. The frozen evaluator contract,
+not product preference, determines all verdicts and gates. If G materially
+matches V under its exact NO-VALUE falsifier, the Vela and standards-integration
+program stops for this workload.
 
-Candidate inference has not started. Docker, source, model, session, target,
-metric, isolation, and stopping identities are in `PREREGISTRATION.md`,
-`TARGETS.md`, and `SOURCE-LOCK.json`.
+## Current state
 
-## Current execution gate
+- Source and evaluator inputs are exact and bundle-reconstructable.
+- Ten public producer cards, duplicate records, fact packs/roots, fixed
+  candidate order, arm wrappers/adapters, isolation/credential bytes, and the
+  complete Vela build-context manifest are frozen.
+- Native and Graph adapter-only fixtures pass network-disabled with zero model
+  sessions and retain identical common result bytes.
+- T02 is retained only for explicitly independent proof realization: frozen
+  Math has occurrence metadata, not mounted checked proof bytes. No theorem
+  novelty may be claimed.
+- The Dockerfile digest-pins every base and includes the independently diagnosed
+  deterministic experiment-only machine-ID correction, but it has not been
+  built.
+- The corrected Vela no-model lifecycle fixture and candidate inference remain
+  prohibited until commit-bound independent re-review passes.
 
-**Blocked before inference pending independent preregistration review.** The
-Docker image and OAuth path verify, but two materially identical disposable
-`vela init --json` attempts exited 1 after retaining the repository Profile
-and before creating `.vela` authority state. No Submission, Verification,
-Decision, model session, canonical write, or scoring denominator entry was
-created. The exact retained-state finding is in `PREREGISTRATION.md`.
-
-Independent review should either:
-
-- approve or reject the diagnosed smallest image/receipt correction recorded
-  in `PREREGISTRATION.md` and `REVIEW-HANDOFF.md`, then inspect its one allowed
-  corrected no-model lifecycle fixture; or
-- confirm the infrastructure blocker and keep execution stopped.
-
-It must not weaken the Vela arm to unsigned files or reuse Math's canonical
-authority.
+Read `PREREGISTRATION.md` for the normative implementation, `EVALUATOR-LOCK.json`
+for the frozen external contract, `TARGETS.md` and `cards/` for the target
+slate, `SOURCE-LOCK.json` for reconstructable identities, `PROCESS-LOG.md` for
+observations, and `REVIEW-HANDOFF.md` for the exact next gate.

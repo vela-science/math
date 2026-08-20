@@ -1,0 +1,47 @@
+{
+  "schema": "results-breakthrough-evaluator-lock.v1",
+  "pilot_id": "RESULTS-BREAKTHROUGH-01",
+  "stage1": {
+    "freeze_commit": "cb10b9f81dfc967f68e3f7b37fec83ee753e541d",
+    "freeze_tree": "22109e467df1cef696a5396de909f99fa65f0fd8",
+    "receipt_commit": "f6c44a8cbd6c96e45b3713b9432007e55651945d",
+    "receipt_tree": "df59cacc4b05b955ed399d416915be264dd46cab",
+    "final_review_commit": "e289a2b0993f066e7078c5db9b0985ae6fed4c27",
+    "rubric_sha256": "6e3c79c25f5e78cf3dbeca47fe157ac46da1f6f6431f0d9b72db55a8fdc878ca",
+    "analysis_plan_sha256": "2ab9826d92c58c6848debbfb13692d594f90ca96a08cdb565d8ff73f343d8a07",
+    "information_equivalence_sha256": "af1b79d706220c9ba64db77ac4a254b376a9510ddd18c1d4f6363309c1639445",
+    "held_out_procedure_sha256": "9ea37405a9e41bef1667d8999320c2003b89df2ae50926c3c1743af3846ded0f",
+    "producer_requirements_sha256": "737feea45f56be5f5c65f7cb0b471f6e745eab97a3d481b070fe926e3849e0a1",
+    "commitment_sha256": "253e25d9ebe28663e6c2f6bcaa3fc9982cbf971e77119dadee4b38a7fe9e4570",
+    "sha256sums_sha256": "368a041536c6a284528c84872bd7ab6bde3a85ebd1f8b1acd6b6fcdbc08b3a48"
+  },
+  "producer_review": {
+    "reviewed_commit": "0bbf3b8578417c928fe2b62ee9912f2c7918e9d5",
+    "reviewed_tree": "5f71bffbfad364d628abf8ba70003e91a2dcd643",
+    "evaluator_commit": "43c51f9f893a6919428a290421a8344a11c5f5f4",
+    "evaluator_tree": "4069ae9ed804fec3178c548ecc4475179f3568ba",
+    "report_sha256": "93765f10bc011971aac413ecb854b8e641f7630fc3e8a2ceb9f0e74e25de27a6",
+    "verdict_sha256": "16ecb8fe09d50693b67db1fbbdd892c30ff117397162b3aadcb873ffaac0da7a",
+    "verdict": "BLOCKED"
+  },
+  "normative_contract": {
+    "verdicts": [
+      "qualified_result",
+      "valid_non_result",
+      "needs_correction",
+      "duplicate",
+      "invalid"
+    ],
+    "usable_verdicts": ["qualified_result", "valid_non_result"],
+    "fixed_cell_denominator": 30,
+    "primary_policy": "intention_to_treat",
+    "infrastructure_failure_usable_value": 0,
+    "recovery": "A needs_correction cell becomes usable after exactly one symmetric bounded correction round using only the original fact pack and the locked minimal defect notice.",
+    "paired_comparisons": ["V-G", "V-N", "G-N"],
+    "no_value_falsifier": "Stage 1 RUBRIC.md section Ten-target workload verdict and scale gate",
+    "scale_gate": "Stage 1 RUBRIC.md section Ten-target workload verdict and scale gate",
+    "standards_gate": "Stage 1 RUBRIC.md section Post-pilot standards gate"
+  },
+  "authority_effect": "none",
+  "candidate_outputs_accessed": false
+}

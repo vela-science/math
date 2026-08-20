@@ -8,6 +8,7 @@
       "remote": "https://github.com/vela-science/math.git",
       "commit": "5de716c896065c03c0a470d015ba2a328a527f73",
       "tree": "56e37a5058c80e69f3c343b8ae624c08b5417229",
+      "git_archive_tar_sha256": "f3b983aba2ea5c8056b82e039204ec973246fe7f7c66a7b250b238a9fe4e6779",
       "complete_clone": true,
       "fsck_full": "pass",
       "repository_manifest_sha256": "a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4",
@@ -22,6 +23,7 @@
       "remote": "https://github.com/google-deepmind/formal-conjectures.git",
       "commit": "e13dd7284e72012a1616806d09cb6b8025e387af",
       "tree": "7d2b7c17ff144393c2b4a39973ed212387b3e783",
+      "git_archive_tar_sha256": "6a929b14796348e84badc6972524640688d98eac40fbbc91eadd0d744f39d647",
       "complete_clone": true,
       "fsck_full": "pass",
       "lean_toolchain_sha256": "e695e6e5d8e7a8be4d6cf159dfb995847993d26c6cc450353a86f387279025b9",
@@ -39,6 +41,7 @@
       "remote": "https://github.com/williamjblair/lean-proofs.git",
       "commit": "accf62cb636c8909dd7e098e3f82b2140d3a192e",
       "tree": "608ce332d1d5d8f14abc7d39349f4a29102f5aba",
+      "git_archive_tar_sha256": "b28285a85b08e472cc5183c4dfeebaea821127f0c65baa3a4eb865daf5ed6ee9",
       "complete_clone": true,
       "fsck_full": "pass",
       "lean_toolchain_sha256": "7dc000621e0046d1aada809e2b7177e64454645cf4c741e9daaf79c99ec2e7a2",
@@ -56,6 +59,7 @@
       "remote": "https://github.com/vela-science/vela.git",
       "commit": "88fcc0105eba35ee22ed1816d3aabba3322bebc1",
       "tree": "2cb85fe1e1c3525ba97ff2aec25945417ea7b372",
+      "git_archive_tar_sha256": "05a87f07789e0c8d77d85665c25504712cd70bea328b2c0f9e7ce57dc5b01c24",
       "complete_clone": true,
       "fsck_full": "pass",
       "version": "0.977.3",
@@ -68,6 +72,22 @@
         "bytes": 66096691,
         "sha256": "f69fd65aece50dd45f8ae597f3cc1648d39438044110641b952603b720562598",
         "verify": "pass"
+      }
+    },
+    "evaluator": {
+      "repository": "/Users/williamblair/Documents/Codex/2026-08-20/results-breakthrough-01",
+      "freeze_commit": "cb10b9f81dfc967f68e3f7b37fec83ee753e541d",
+      "freeze_tree": "22109e467df1cef696a5396de909f99fa65f0fd8",
+      "receipt_commit": "f6c44a8cbd6c96e45b3713b9432007e55651945d",
+      "final_review_commit": "e289a2b0993f066e7078c5db9b0985ae6fed4c27",
+      "producer_review_commit": "43c51f9f893a6919428a290421a8344a11c5f5f4",
+      "producer_review_tree": "4069ae9ed804fec3178c548ecc4475179f3568ba",
+      "bundle": {
+        "external_path": "/Users/williamblair/.codex/cache/results-breakthrough-01/source-bundles/evaluator-review-43c51f9.bundle",
+        "bytes": 30892,
+        "sha256": "70f6d3f07d9b72c610dc7efbab76eb54bd25613680182b2c6a7e039354757160",
+        "verify": "pass",
+        "complete_history": true
       }
     }
   },
@@ -86,7 +106,20 @@
     "vela_sha256": "59cc91e9d277d733a8f5b2892653cf5b540778ce26ac794521c63bba0036103b",
     "git_version": "2.39.5",
     "python_version": "3.11.2",
-    "python_sqlite_version": "3.40.1"
+    "python_sqlite_version": "3.40.1",
+    "proposed_rebuild": {
+      "authorized": false,
+      "built": false,
+      "digest_pinned_from": true,
+      "vela_context_commit": "88fcc0105eba35ee22ed1816d3aabba3322bebc1",
+      "vela_context_tree": "2cb85fe1e1c3525ba97ff2aec25945417ea7b372",
+      "vela_context_file_count": 412,
+      "vela_context_manifest_sha256": "6589e7d2b1000641207804a170a864c0dc1f8e10426cc69361da814d44afa627",
+      "dockerfile_sha256": "f3b995d61b35bffee3e12003ee00fd01e5ce0eb857460be69524aa98fe28d9dd",
+      "experiment_machine_id": "af94b40fa642620275e6d617be97a542",
+      "host_machine_id_mounted": false,
+      "new_image_digest": null
+    }
   },
   "model": {
     "provider_path": "ChatGPT OAuth",
@@ -99,7 +132,9 @@
     "candidate_sessions_max": 30,
     "evaluator_sessions_max": 10,
     "oauth_sessions_max": 40,
-    "retries": 0
+    "initial_generation_retries": 0,
+    "recovery_resume_max_per_needs_correction_cell": 1,
+    "recovery_resume_creates_new_unique_session": false
   },
   "answer_contract": {
     "source_commit": "082a118ea6ce7c9ca6a62f72aa425373228f7efe",

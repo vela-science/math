@@ -1,0 +1,81 @@
+{
+  "reader": "independent-byte-reader",
+  "verdict": "pass",
+  "discrepancies": [],
+  "candidate_output_accessed": false,
+  "mutations_performed": false,
+  "counts": {
+    "targets": 10,
+    "arms": 3,
+    "candidate_cells": 30,
+    "facts": 143,
+    "referenced_payloads_verified": 143,
+    "wrapper_unique_byte_sequences": 1,
+    "fixture_blind_files": 2,
+    "graph_objects": 2,
+    "graph_edges": 2,
+    "graph_events": 1
+  },
+  "scientific_fact_roots": {
+    "T01": "68eabffb46e1a853aa02ba4cc5c11c2556eda0f13e88ade2b7d81ae5eb1694e3",
+    "T02": "d670f118fea240bfc8c407ec6c3bb99224d4e760bbe32f2f73d5df9c7de8a188",
+    "T03": "1a602f658bd24966b1586c888fd72e591e5f03a1d1a94fac4555c67626cb29b8",
+    "T04": "fb1b98533dda86918ea6299b87a888f4be636e659d96df0c9645912dfdc92f11",
+    "T05": "8f3fa9b1e8cdd93628a0822c725d3c22c1543c7b6e2d1aa1dab28521c2b37b23",
+    "T06": "341e90c18e46e511715d5947604b2b1ed0518d804571d1858bad6f817b291561",
+    "T07": "92436b4dfc337db83006724a2d9c968c6face115191c75051fb609d63df7035b",
+    "T08": "27a5702bed0d031cd98f1040007e14b6d57b516ac93bdb7de92c1de4b165827b",
+    "T09": "5bb1210e3f8c6357ad03cdabb44dba83eb320cc09c516e114161e6fd0e5cffd8",
+    "T10": "940bdb44fbf70564751061b267a43a8340473140fee458567bce674488d1d87f"
+  },
+  "key_digests": {
+    "shared_arm_wrapper": "b02ad65351b17cae2cb37e1a6f5e6f97e27c3b59aa93401113ee441f247514c8",
+    "runtime_parameters": "56db8f6cee43cff17d8d8c0d5417462f08b0ff4a4da94287087136adef2a5cf3",
+    "source_bindings": "5007868919b815a84db07bbf97c0dce7cf54f59e91f40d18aaedc1a930d6987d",
+    "tool_allowlist": "4383b32b448d1269328082d47bc26772455cc62f8cf11739a7b7d883f7ca669d",
+    "wrapper_analysis": "9cf52d0a0b9d2d80273fc9644140e98b51d92423fa938e03217d6d6eb832f567",
+    "cell_runner": "4d7c5312d5002fa3c03f74e1c9337b02b4f49672c5308a8b04ba95e2beeeff9b",
+    "fact_materializer": "6ceb8eeb4aa51366ffa8136f91ca20daa60de3df0b45ddaa1eff870dfbb0f9b7",
+    "mount_verifier": "e78ccf96a2ce88f86ab032834988a835ff317b65307b54d4923efed38926721e",
+    "generate_stage2": "ede4dc9a0f285f25072defa88ed5b438044b24f5da28719ae43b1825323ab309",
+    "native_adapter": "30bb0dd075c909fdecf187ae7bcc7984377c1f1a2c951212cc79a0f58539891b",
+    "graph_adapter": "aa9105cff44cdfe7dcdb7accf2aafaa539f9d370515dee49b54749b4d73e948e",
+    "vela_adapter": "2972a0e3af3273b563a8326dad651a07c0002d2cc402a08fc25a0460b2ff1473"
+  },
+  "runtime_source_enforcement": {
+    "mount_declaration_matches_runner": true,
+    "all_four_source_checkouts_guarded_by_commit_tree_full_clone_and_clean_status": true,
+    "source_mount_receipt_bound_before_run": true,
+    "producer_facts_materialized_with_digest_checks": true,
+    "producer_facts_mounted_read_only": true,
+    "vela_source_mounted_read_only": true,
+    "docker_socket_mounted": false,
+    "scientific_output_budget": 8192,
+    "scientific_output_budget_unit": "utf8_bytes_in_result_json",
+    "budget_enforced_uniformly": true
+  },
+  "source_archive_sha256": {
+    "math": "f3b983aba2ea5c8056b82e039204ec973246fe7f7c66a7b250b238a9fe4e6779",
+    "formal_conjectures": "6a929b14796348e84badc6972524640688d98eac40fbbc91eadd0d744f39d647",
+    "lean_proofs": "b28285a85b08e472cc5183c4dfeebaea821127f0c65baa3a4eb865daf5ed6ee9",
+    "vela": "05a87f07789e0c8d77d85665c25504712cd70bea328b2c0f9e7ce57dc5b01c24"
+  },
+  "fixture_parity": {
+    "common_native_graph_blind_bundles_identical": true,
+    "result_sha256": "e25486c4ae458b3b79eb11aafcc4174572bf04ddd8aa88afa95d948216cace57",
+    "artifact_sha256": "b6c7085de10ab82fe4fc4193cbbc0e37269f499d621a9d86f1728eb3d472438a",
+    "graph_json_sha256": "0d456d0ecb66a079142f4331fe7b7a22d5e1e0dc3ec545589e5e5ffd29dbc751",
+    "graph_sqlite_sha256": "a7e61d2693c16ad2ed8f2336091672ac085da46f797f8e682394ab570ec39b19",
+    "sqlite_integrity": "ok"
+  },
+  "t02_external_commits_present": {
+    "6c7a16e8998d1c597fa2a5c6329bc9301fcc56e2": false,
+    "6ac8d0cbe1a85e71747c62c1391a84788015ebc1": false
+  },
+  "manifest_readiness": {
+    "expected": 30,
+    "present_now": 0,
+    "generator_ready_for_30": true,
+    "pending_gate": "Replacement reader-1 and independent reader-2 reports must both be present before generation."
+  }
+}
