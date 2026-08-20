@@ -1,0 +1,46 @@
+[
+  {
+    "command": "/bin/bash -lc \"rg --files -g '*selection*' -g '*check*' -g 'AGENTS.md' -g '1.lean' . | head -200\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc 'find . -maxdepth 3 -type f | sort | head -300 && git status --short && git rev-parse HEAD && git remote -v'",
+    "exit_code": 128
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,240p' results/2026-08-20-docker-batch-2/SELECTION.md; sed -n '1,240p' results/2026-08-20-docker-batch-2/result.schema.json; sed -n '1,240p' KNOWN_RESULT_SEARCH.md; find /work /tmp -path '*FormalConjectures*' -o -name '1.lean' 2>/dev/null | head -100\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"find /tmp -maxdepth 3 -type d -name fc -o -name lp | tail -10; find /tmp -path '*/FormalConjectures/ErdosProblems/1.lean' -print\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"sha256sum /tmp/erdos1.bPCBsy/fc/FormalConjectures/ErdosProblems/1.lean; sed -n '1,320p' /tmp/erdos1.bPCBsy/fc/FormalConjectures/ErdosProblems/1.lean; rg -n \\\"least_N_5|IsSumDistinctSet|erdos_1\\\" /tmp/erdos1.bPCBsy/fc\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"python3 - <<'PY'\nimport itertools\nfor N in range(1,14):\n out=[]\n for A in itertools.combinations(range(1,N+1),5):\n  ss=[sum(A[i] for i in range(5) if m>>i&1) for m in range(32)]\n  if len(set(ss))==32: out.append(A)\n print(N,len(out),out[:10])\nPY\nls -la /tmp/erdos1.bPCBsy/fc | head; command -v lake || true; command -v lean || true\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"docker --version 2>/dev/null || true; ls /tmp/erdos1.bPCBsy/fc/.lake 2>/dev/null || true; sed -n '1,160p' /tmp/erdos1.bPCBsy/fc/lakefile.toml; sed -n '1,120p' /tmp/erdos1.bPCBsy/fc/lean-toolchain; git ls-remote https://github.com/williamjblair/lean-proofs.git HEAD 2>&1 | head\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc 'tmpdir=$(mktemp -d /tmp/erdos1.XXXXXX); git clone -q https://github.com/google-deepmind/formal-conjectures.git \"$tmpdir/fc\"; git -C \"$tmpdir/fc\" checkout -q 9c4d5821819656af53c5473ded2116ea14a7ff1c; git clone -q https://github.com/williamjblair/lean-proofs.git \"$tmpdir/lp\"; git -C \"$tmpdir/lp\" checkout -q 852ffa6b50f3501a66d7ffbc116d8ae9b749c60c; printf '\"'%s\\\\n' \\\"\"'$tmpdir\"; sha256sum \"$tmpdir/fc/FormalConjectures/ErdosProblems/1.lean\"; sed -n '\"'1,260p' \\\"\"'$tmpdir/fc/FormalConjectures/ErdosProblems/1.lean\"; rg -n \"least_N_5|IsSumDistinctSet|erdos_1\" \"$tmpdir/fc\" \"$tmpdir/lp\"'",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"python3 - <<'PY'\nimport itertools\nfor A in [(3,6,11,12,13),(6,9,11,12,13)]:\n print(A, sorted(sum(x for i,x in enumerate(A) if m>>i&1) for m in range(32)))\n# count bad/good each N combos\nfor N in [12,13]:\n vals=[]\n for A in itertools.combinations(range(1,N+1),5):\n  sums=[sum(B) for r in range(6) for B in itertools.combinations(A,r)]\n  if len(set(sums))==32: vals.append(A)\n print(N, len(list(itertools.combinations(range(1,N+1),5))), vals)\nPY\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"git config --global --get-regexp 'url\\\\..*\\\\.insteadof' 2>/dev/null || true; ls -la /Users/williamblair/personal/math 2>/dev/null || true; find / -maxdepth 4 -type d -name lean-proofs 2>/dev/null | head -20\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"git -C /sources/lean-proofs rev-parse HEAD; git -C /sources/lean-proofs cat-file -t 852ffa6b50f3501a66d7ffbc116d8ae9b749c60c; rg -n \\\"least_N_5|IsSumDistinctSet|A276661|Erdos1\\\" /sources/lean-proofs --glob '*.lean' || true; git -C /sources/lean-proofs grep -n -E 'least_N_5|IsSumDistinctSet|A276661|Erdos1' 852ffa6b50f3501a66d7ffbc116d8ae9b749c60c -- '*.lean' || true\"",
+    "exit_code": 0
+  }
+]

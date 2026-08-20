@@ -1,0 +1,13 @@
+{
+  "attempt": 3,
+  "case_id": "erdos-1-least-N-5",
+  "exit_code": 0,
+  "elapsed_seconds": 171.62,
+  "retry_count": 0,
+  "completed_shell_calls": 11,
+  "input_sha256": "4bba13d7ccc20d56e9a46b3085a27b2741c68d9f9b56947cd9883983d33a09d4",
+  "candidate_sha256": "f76f4bc13339c0b6fa9c02f85a2b56d2d7585cf5434cf213b5ace7b443009c14",
+  "tool_calls_sha256": "0260630fdc70efe5a1e901b1d1e4e015513cc292a07debcd5617aecfe3bc37fd",
+  "raw_event_stream_sha256": "55f8a0b67bf6142db3086007513c223390b9d652b9eb7d3c755f9283bc5e980d",
+  "authority_effect": "none"
+}

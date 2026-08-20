@@ -1,0 +1,13 @@
+{
+  "attempt": 2,
+  "case_id": "erdos-822-positive-density-negative-control",
+  "exit_code": 0,
+  "elapsed_seconds": 86.75,
+  "retry_count": 0,
+  "completed_shell_calls": 9,
+  "input_sha256": "786f8fe095c9e483a226831b39b25ae9a2b462e5d0f0978ed25bcd63ae9608f3",
+  "candidate_sha256": "fd6f5fd5be59a880d31c4e9476ab5fc2e5eab7cd348a145ea3a113272fb14b6c",
+  "tool_calls_sha256": "f7895184b8f82826110b71ab764a75355d5a858a2202c51b4d26c50fadeaf5c1",
+  "raw_event_stream_sha256": "bc9e1422163d815d17426875102bab08332526892c5e0defed3f2f42b18b5e93",
+  "authority_effect": "none"
+}

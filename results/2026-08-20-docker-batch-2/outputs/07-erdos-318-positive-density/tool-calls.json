@@ -1,0 +1,22 @@
+[
+  {
+    "command": "/bin/bash -lc 'rg -n \"selection check|erdos-318-positive-density-dependency|contain_single_even\" -S . --hidden'",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"git -C /sources/formal-conjectures show 9c4d5821819656af53c5473ded2116ea14a7ff1c:FormalConjectures/ErdosProblems/318.lean && rg -n \\\"contain_single_even|HasPosDensity|Nat\\\\.Odd|Odd.*density|density.*Odd|multiples.*HasDensity|HasDensity.*[12]\\\" /sources/formal-conjectures /sources/lean-proofs /work/evaluations --hidden -g '*.lean' -g '*.json' -g '*.md' 2>/dev/null\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,230p' /sources/formal-conjectures/FormalConjecturesForMathlib/Data/Set/Density.lean; rg -n \\\"finite.*HasDensity|HasDensity.*finite|union.*HasDensity|hasDensity.*union|congr.*HasDensity|symmDiff|Odd\\\" /sources/formal-conjectures/.lake/packages/mathlib/Mathlib /sources/formal-conjectures/FormalConjecturesForMathlib -g '*.lean' | head -300\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"rg -n \\\"namespace HasDensity|theorem .*HasDensity|HasDensity.*compl|compl.*HasDensity|\\\\.compl|hasDensity_odd|Odd n.*HasDensity\\\" /sources/formal-conjectures/FormalConjecturesForMathlib/Data/Set/Density.lean /sources/formal-conjectures -g '*.lean' | head -250; git -C /sources/lean-proofs grep -n -i -e 'Erdos318' -e 'contain_single_even' -e 'odd numbers.*density' 852ffa6b50f3501a66d7ffbc116d8ae9b749c60c -- . || true\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc 'git -C /sources/formal-conjectures show 9c4d5821819656af53c5473ded2116ea14a7ff1c:FormalConjectures/ErdosProblems/318.lean | sha256sum; git -C /sources/formal-conjectures rev-parse 9c4d5821819656af53c5473ded2116ea14a7ff1c''^{tree}; git -C /sources/lean-proofs grep -n -i -e '\"'318' -e 'contain_single_even' 852ffa6b50f3501a66d7ffbc116d8ae9b749c60c -- '*.lean' | head -100\"",
+    "exit_code": 0
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "attempt": 9,
+  "case_id": "erdos-683-961-equivalence-identity",
+  "exit_code": 0,
+  "elapsed_seconds": 81.87,
+  "retry_count": 0,
+  "completed_shell_calls": 3,
+  "input_sha256": "94cc6bc4f8fb632ba7606a641f552ddba76f0e587c9fbf25dd3858d824e25d31",
+  "candidate_sha256": "6f743fe63d687298cee285e1e8aa6f7f2c7a49f08ccca7c64ae45d1fc2a29658",
+  "tool_calls_sha256": "9273ed9e1ea88ad2206f181f5eac64c87760621c59d26732124563cd9885c947",
+  "raw_event_stream_sha256": "cc67605c12a98773820f5c9cae2c958f5d5e84795d9b526733d06510a502ba2f",
+  "authority_effect": "none"
+}

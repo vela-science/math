@@ -1,0 +1,14 @@
+[
+  {
+    "command": "/bin/bash -lc \"pwd && rg -n \\\"selection check|Batch 2|candidate session|erdos-683-961|683|961\\\" -S . --glob '\"'!**/.git/**'\"'\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc 'git -C /sources/formal-conjectures show 9c4d5821819656af53c5473ded2116ea14a7ff1c:FormalConjectures/ErdosProblems/683.lean && git -C /sources/formal-conjectures show 9c4d5821819656af53c5473ded2116ea14a7ff1c:FormalConjectures/ErdosProblems/961.lean'",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"rg -n 'Erdos683|erdos_683|Erdos961|erdos_961|Problem 683|Problem 961|683 and 961|683.*961|961.*683' /sources /work/evaluations /work/results /work/evidence -S --glob '\"'!**/.git/**'\"'\"",
+    "exit_code": 0
+  }
+]

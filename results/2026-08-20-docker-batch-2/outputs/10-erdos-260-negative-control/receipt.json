@@ -1,0 +1,13 @@
+{
+  "attempt": 10,
+  "case_id": "erdos-260-irrational-sum-negative-control",
+  "exit_code": 0,
+  "elapsed_seconds": 94.58,
+  "retry_count": 0,
+  "completed_shell_calls": 8,
+  "input_sha256": "642e8edd78084515e4ef8024aca066903dbcb6160e908f42d7e76f3abaffe4c7",
+  "candidate_sha256": "7c2f3c6cbd5f52639289a73a73d4da2055b896a2eaf249fb39bfda57defdb384",
+  "tool_calls_sha256": "f274769edaf90f09a0e6d809a285c8a85322e42aa63b94a48664212d3b6c7777",
+  "raw_event_stream_sha256": "0f4a20b72676a74061ac4877278f01e6dd6f0ab3c498313e8b761f21851366db",
+  "authority_effect": "none"
+}

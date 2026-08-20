@@ -1,0 +1,13 @@
+{
+  "attempt": 4,
+  "case_id": "erdos-291-parts-ii-infinite-gcd",
+  "exit_code": 0,
+  "elapsed_seconds": 127.89,
+  "retry_count": 0,
+  "completed_shell_calls": 8,
+  "input_sha256": "3cce7d9b3fb5f4f6efbbc34e7fa1e2f5ea80fd1abdaf1f73dde1a070aa03abc8",
+  "candidate_sha256": "f432759f72dc63f251dc137c22671a6494e2368fbba09bb1328741ac09c8decd",
+  "tool_calls_sha256": "3294813d937d2c68acc86abcfc39b971172fbbab06596df5776de748654f5f51",
+  "raw_event_stream_sha256": "cdd6ff68e555289841ef73a676ee80248fb132377903ca1a6b4390ac95773f15",
+  "authority_effect": "none"
+}

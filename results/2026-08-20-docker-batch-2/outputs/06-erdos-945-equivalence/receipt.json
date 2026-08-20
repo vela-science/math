@@ -1,0 +1,13 @@
+{
+  "attempt": 6,
+  "case_id": "erdos-945-formulation-equivalence",
+  "exit_code": 0,
+  "elapsed_seconds": 80.09,
+  "retry_count": 0,
+  "completed_shell_calls": 2,
+  "input_sha256": "d6487f5deee0fa4a3c6b5ff10d40c191ce3e2e37f492e4bc91d576e96e3b8364",
+  "candidate_sha256": "465c11a816223c99b3fc31597de589a9720f27aa9e9c922586c81eaea747123e",
+  "tool_calls_sha256": "ba4a1450648bc949f2a54a75cbcffdee41bc291f02e8c6d40452d0907cac25be",
+  "raw_event_stream_sha256": "3917d7a9373fdb561ac5ab31638128144b8e78afc4a3d14f9f5c7a0c06db17c5",
+  "authority_effect": "none"
+}

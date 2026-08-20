@@ -1,0 +1,13 @@
+{
+  "attempt": 1,
+  "case_id": "erdos-697-delta-bound-domain",
+  "exit_code": 0,
+  "elapsed_seconds": 102.72,
+  "retry_count": 0,
+  "completed_shell_calls": 8,
+  "input_sha256": "e78e759683f3c4355df4d68deb03b533a0acf48a1dee8d6a5453131dfdc148f8",
+  "candidate_sha256": "14854abd756a721e9215cdd08b72e381336e5200815aa035a79e05841402de34",
+  "tool_calls_sha256": "6860ee37e9eae71ae9ed404b55efd7455f7fb09e9c655c6dcb5a06d79db9e247",
+  "raw_event_stream_sha256": "4a805dd83facc043c7a64c12860471d29e6d8633716b506380667aeca0953a40",
+  "authority_effect": "none"
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "command": "/bin/bash -lc 'pwd && rg -n \"selection check|erdos-399-cambie-mod-8|Batch 2\" -S . .vela 2>/dev/null | head -200 && git status --short && git rev-parse HEAD && git show --stat --oneline --no-renames 9c4d5821819656af53c5473ded2116ea14a7ff1c -- FormalConjectures/ErdosProblems/399.lean'",
+    "exit_code": 128
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,120p' results/2026-08-20-docker-batch-2/SELECTION.md\ngit -C /sources/formal-conjectures show 9c4d5821819656af53c5473ded2116ea14a7ff1c:FormalConjectures/ErdosProblems/399.lean\n\ngit -C /sources/formal-conjectures show 9c4d5821819656af53c5473ded2116ea14a7ff1c:FormalConjectures/ErdosProblems/399.lean | sha256sum\nrg -n \\\"erdos_399|cambie|x \\\\\"'^ 4 '\"\\\\+ y \\\\\"'^ 4|Coprime y.*factorial\" -S /sources/formal-conjectures /sources 2>/dev/null | head -300'",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"rg -n \\\"even_or_odd|pow_four.*% 8|\\\\\"'^ 4 % 8|mod 8.*'\"\\\\\"'^ 4|dvd_factorial.*8|factorial.*% 8\" -S Mathlib FormalConjectures 2>/dev/null | head -200\nrg -n \"theorem.*dvd_factorial|dvd_factorial\" -S /sources/formal-conjectures/.lake/packages/mathlib/Mathlib | head -80\nls -la /sources/formal-conjectures | head'",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc 'ls -l /tmp/Cambie.lean && lake env lean /tmp/Cambie.lean'",
+    "exit_code": 127
+  },
+  {
+    "command": "/bin/bash -lc 'command -v lean || true; command -v elan || true; find /root /usr/local -type f -name lake 2>/dev/null | head -20; ls .lake/build/bin | head'",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"find / -type f \\\\( -name lake -o -name lean \\\\) 2>/dev/null | head -50\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"find /sources -maxdepth 2 -type d -name '*lean-proofs*' -o -name '.git' | head -30\nfor d in /sources/*; do if [ -d \\\"\"'$d/.git\" ]; then printf '\"'%s ' \\\"\"'$d\"; git -C \"$d\" rev-parse HEAD 2>/dev/null; fi; done\nrg -n \"Erdos399|erdos_399|fourth_mod_eight|fourth.*mod.*eight\" -S /work/evaluations /work/results /sources 2>/dev/null | head -100'",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"git -C /sources/lean-proofs cat-file -t 852ffa6b50f3501a66d7ffbc116d8ae9b749c60c && git -C /sources/lean-proofs grep -n -E 'Erdos399|erdos_399|x \\\\\"'^ 4 '\"\\\\+ y \\\\\"'^ 4|fourth_mod'\"' 852ffa6b50f3501a66d7ffbc116d8ae9b749c60c -- '*.lean' || true\ngit -C /sources/formal-conjectures grep -n -E 'Erdos399|erdos_399|x \\\\\"'^ 4 '\"\\\\+ y \\\\\"'^ 4|fourth_mod'\"' 9c4d5821819656af53c5473ded2116ea14a7ff1c -- '*.lean'\"",
+    "exit_code": 0
+  }
+]

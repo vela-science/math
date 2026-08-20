@@ -1,0 +1,34 @@
+[
+  {
+    "command": "/bin/bash -lc \"pwd && rg --files -g 'AGENTS.md' -g '*selection*' -g '291.lean' -g '.vela/**' | sed -n '1,160p'\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"find /work -maxdepth 3 -type d -name .git -print; find /work -maxdepth 4 -type f | sed -n '1,200p'\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,240p' results/2026-08-20-docker-batch-2/SELECTION.md; sed -n '1,220p' results/2026-08-20-docker-batch-2/inputs/04-erdos-291-infinite-gcd.md; cat results/2026-08-20-docker-batch-2/result.schema.json; sed -n '1,260p' KNOWN_RESULT_SEARCH.md\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"git remote -v; find / -path '*/FormalConjectures/ErdosProblems/291.lean' -o -path '*/lean-proofs*' 2>/dev/null | sed -n '1,100p'; sed -n '1,240p' evaluations/fc-conditional-proof-audit-v1/fetch.py\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"git -C /sources/formal-conjectures rev-parse HEAD; git -C /sources/lean-proofs rev-parse HEAD; git -C /sources/formal-conjectures show 9c4d5821819656af53c5473ded2116ea14a7ff1c:FormalConjectures/ErdosProblems/291.lean; sha256sum /sources/formal-conjectures/FormalConjectures/ErdosProblems/291.lean; rg -n -i 'erdos.?291|steinerberger|gcd.*L|base.?3|a\\\\s*n.*L\\\\s*n' /sources/lean-proofs /sources/formal-conjectures --glob '*.lean' --glob '*.md' --glob '*.yaml'\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"git -C /sources/lean-proofs cat-file -t 852ffa6b50f3501a66d7ffbc116d8ae9b749c60c; git -C /sources/formal-conjectures cat-file -t 9c4d5821819656af53c5473ded2116ea14a7ff1c; git -C /sources/lean-proofs grep -n -i -E 'erdos.?291|steinerberger|denominators of harmonic|Nat\\\\.gcd \\\\(a n\\\\) \\\\(L n\\\\)' 852ffa6b50f3501a66d7ffbc116d8ae9b749c60c -- '*.lean' '*.md' '*.yaml' || true; git -C /sources/formal-conjectures grep -n -i -E 'erdos.?291|steinerberger|denominators of harmonic' 9c4d5821819656af53c5473ded2116ea14a7ff1c -- '*.lean' '*.md' '*.yaml'\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc 'ls -l /tmp/E291Route.lean && lake env lean /tmp/E291Route.lean'",
+    "exit_code": 127
+  },
+  {
+    "command": "/bin/bash -lc \"command -v lean || true; find / -type f -name lake -perm -111 2>/dev/null | sed -n '1,30p'; cat /sources/formal-conjectures/lean-toolchain; git -C /sources/lean-proofs status --short; git -C /sources/formal-conjectures status --short\"",
+    "exit_code": 0
+  }
+]

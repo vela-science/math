@@ -1,0 +1,14 @@
+[
+  {
+    "command": "/bin/bash -lc 'rg -n \"selection check|erdos-697-threshold-statement-identity|Batch 2|candidate session\" -S .'",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"git show 9c4d5821819656af53c5473ded2116ea14a7ff1c:FormalConjectures/ErdosProblems/697.lean && git grep -n -E \\\"erdos_697|Erdős Problem 697|1 / log \\\\(2|frac\\\\{1\\\\}\\\\{\\\\\\\\log 2\\\\}|delta \\\\(m,.*alpha\\\" 9c4d5821819656af53c5473ded2116ea14a7ff1c -- '*.lean' '*.md' '*.json'\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"git grep -n -i -E \\\"697|log 2|log \\\\(2 : ℝ\\\\)\\\" 9c4d5821819656af53c5473ded2116ea14a7ff1c -- . ':(exclude)lake-manifest.json'\"",
+    "exit_code": 0
+  }
+]
