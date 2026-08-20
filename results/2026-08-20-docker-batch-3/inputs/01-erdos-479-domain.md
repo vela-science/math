@@ -1,0 +1,3 @@
+You are Batch 3 candidate session 1 of exactly 10. Read `/work/results/2026-08-20-docker-batch-3/CONTRACT.md` and `SELECTION.md`. Inspect the entire exact FC file `FormalConjectures/ErdosProblems/479.lean` at commit `9c4d5821819656af53c5473ded2116ea14a7ff1c`. The target is `Erdos479.erdos_479`.
+
+Compare prose `k ≠ 1` with Lean `∀ᵉ (k > 1)`. Determine the exact omitted natural-number cases, prove or refute them when available bytes permit, and state the smallest source-native correction. Search `/work`, exact FC, and `/sources/lean-proofs` for duplicates first. Do not use network, modify sources, contact anyone, or mutate Vela. Return only schema-valid JSON; a non-result still needs a nonblank `proposed_result`.

@@ -1,0 +1,13 @@
+{
+  "attempt": 7,
+  "case_id": "batch3-session7-erdos120-finite-set",
+  "exit_code": 0,
+  "elapsed_seconds": 124.83,
+  "model_retry_count": 0,
+  "completed_shell_calls": 8,
+  "input_sha256": "5f71afb6f93452a58072faf59a5f833577192cdca46c289463834b2cc39837ed",
+  "candidate_sha256": "871e7ee6c51b1a945ad0645e634507d0f8fa108971bb76ad54bf7772362ae159",
+  "tool_calls_sha256": "8627e8900b124d834a516daf53e0459015c9e9444f37d21c2c4f93202615e753",
+  "raw_event_stream_sha256": "493ab7f487408f6cdc6f2a2482cc74235200ded8bfe9e5891c67cdbf5fb7543c",
+  "authority_effect": "none"
+}

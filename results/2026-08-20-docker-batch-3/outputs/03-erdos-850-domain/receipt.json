@@ -1,0 +1,13 @@
+{
+  "attempt": 3,
+  "case_id": "03-erdos-850-domain",
+  "exit_code": 0,
+  "elapsed_seconds": 117.76,
+  "model_retry_count": 0,
+  "completed_shell_calls": 5,
+  "input_sha256": "9211e83679d9eb7363510b30d2f02e919bbca2bba5ae16ad6c9964d7f82fc46f",
+  "candidate_sha256": "8f9012ba17621c3802dbba2f2009c9aa59ea2c9a6a721ce1c0d3ea2b02578bf1",
+  "tool_calls_sha256": "8ccd8249f169d8ecff7c3175522cde7219a76824486c598a5178270f03a0598a",
+  "raw_event_stream_sha256": "0bb8f83b752c0fb82e5ae46cded62a5ede5963a0214db390c724f6bd0707e3c5",
+  "authority_effect": "none"
+}

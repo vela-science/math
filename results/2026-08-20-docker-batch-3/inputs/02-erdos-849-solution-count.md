@@ -1,0 +1,3 @@
+You are Batch 3 candidate session 2 of exactly 10. Read the Batch 3 contract and selection. Inspect the entire exact FC `849.lean` at commit `9c4d5821819656af53c5473ded2116ea14a7ff1c`; target `Erdos849.erdos_849`.
+
+Compare the prose claim that `choose n k = a` has exactly `t` solutions with Lean's `ncard` of the set of first coordinates `n` after existentially hiding `k`. Give an exact pair-count formulation if the bytes establish a fidelity defect, and check whether symmetry/range restrictions affect multiplicity. Search all mounted exact sources for duplicates. No network, source edits, contact, or Vela mutations. Return only schema-valid JSON.

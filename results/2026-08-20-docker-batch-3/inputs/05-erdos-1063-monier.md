@@ -1,0 +1,3 @@
+You are Batch 3 candidate session 5 of exactly 10. Read the Batch 3 contract and selection. Inspect entire exact FC `1063.lean` at `9c4d5821819656af53c5473ded2116ea14a7ff1c`; target `Erdos1063.erdos_1063.variants.monier_upper_bound`.
+
+Attempt the exact theorem. Use the definition of `n`, but do not promote neighboring `small_values` or `exists_exception` into a proof of this target. Give a Lean term only if actually checked; otherwise label it proof sketch or dependency finding and name the missing lemmas. Search exact mounted sources for duplicates. No network, source edits, contact, or Vela mutations. Return only schema-valid JSON.

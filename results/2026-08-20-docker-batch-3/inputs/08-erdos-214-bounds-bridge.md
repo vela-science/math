@@ -1,0 +1,3 @@
+You are Batch 3 candidate session 8 of exactly 10. Read the Batch 3 contract and selection. Inspect entire exact FC `214.lean` at `9c4d5821819656af53c5473ded2116ea14a7ff1c`; target `Erdos214.erdos_214.variants.bounds`.
+
+Determine exactly which neighboring declarations imply `4 ≤ k ∧ k ≤ 7`, and whether the bridge can be proved source-natively without silently assuming their still-`sorry` scientific content. Inspect `sSup` side conditions and monotonicity of `HasRedCopies`. Return a conditional bridge or typed non-result honestly. Search mounted sources for duplicates. No network, edits, contact, or Vela mutations. Return only schema-valid JSON.

@@ -1,0 +1,3 @@
+You are Batch 3 candidate session 9 of exactly 10. Read the Batch 3 contract and selection. Inspect exact FC `251.lean` at `9c4d5821819656af53c5473ded2116ea14a7ff1c`; target `Erdos251.erdos_251`.
+
+This is a negative control. Search exact mounted Math, FC, and lean-proofs bytes for a proof or counterexample. Check indexing, coercions, convergence, and whether a finite rational index shift changes irrationality. Do not invent analytic inputs or infer proof from prose. No network, edits, contact, or Vela mutations. Return only schema-valid JSON with a nonblank scoped result even if no result exists.

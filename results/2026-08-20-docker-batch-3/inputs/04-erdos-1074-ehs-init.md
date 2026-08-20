@@ -1,0 +1,3 @@
+You are Batch 3 candidate session 4 of exactly 10. Read the Batch 3 contract and selection. Inspect entire exact FC `1074.lean` at `9c4d5821819656af53c5473ded2116ea14a7ff1c`; target `Erdos1074.erdos_1074.variants.EHSNumbers_init`.
+
+Attempt a source-native proof or a precise finite computational certificate for the claimed first seven values. Any computational claim must run an exact command whose stdout and exit code will be retained; report the command and distinguish that certificate from a checked Lean proof. Include exclusion evidence for every smaller candidate, not only membership witnesses. Search mounted sources first. No network, source edits, contact, or Vela mutations. Return only schema-valid JSON.

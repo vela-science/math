@@ -1,0 +1,3 @@
+You are Batch 3 candidate session 7 of exactly 10. Read the Batch 3 contract and selection. Inspect entire exact FC `120.lean` at `9c4d5821819656af53c5473ded2116ea14a7ff1c`; target `Erdos120.erdos_120.variants.finite_set`.
+
+Unfold the exact negation of `Erdos120For A` and attempt a proof using available measure-theory APIs. Check whether the cited Steinhaus result actually matches the formal quantifier order. Distinguish a mathematical route from a checked Lean proof and identify the smallest missing lemma. Search mounted sources for duplicates. No network, source edits, contact, or Vela mutations. Return only schema-valid JSON.

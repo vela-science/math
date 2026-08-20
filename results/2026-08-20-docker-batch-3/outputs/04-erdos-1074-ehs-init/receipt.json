@@ -1,0 +1,13 @@
+{
+  "attempt": 4,
+  "case_id": "batch3-session4-erdos-1074-ehs-init",
+  "exit_code": 0,
+  "elapsed_seconds": 112.54,
+  "model_retry_count": 0,
+  "completed_shell_calls": 9,
+  "input_sha256": "2302a54fcbc60e56f28bc4ef6ef6ae942854d946f19dfa2bfcc00b1223c64089",
+  "candidate_sha256": "b7af4927edc477ce0a90bdb1c005812a03345ca03f8900d1578d271679195b89",
+  "tool_calls_sha256": "03bae4dc933435dd689bb81c5d98e8de80d6519c99ca39659251b4699e57deac",
+  "raw_event_stream_sha256": "2bd4e7a6184f46918c1429ef92e47135b7226aa82572d8203893511b9888c35e",
+  "authority_effect": "none"
+}

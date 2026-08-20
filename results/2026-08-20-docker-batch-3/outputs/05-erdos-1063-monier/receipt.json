@@ -1,0 +1,13 @@
+{
+  "attempt": 5,
+  "case_id": "batch-3-candidate-05",
+  "exit_code": 0,
+  "elapsed_seconds": 151.95,
+  "model_retry_count": 0,
+  "completed_shell_calls": 8,
+  "input_sha256": "843cd92b9f17634e3dbff993252489e67ca6cb9896022c7e76bb3e382715f653",
+  "candidate_sha256": "d8ba88f685ec0e9e8aff9ebc3ced300b81faa9679939c82b95271df96f5d9e98",
+  "tool_calls_sha256": "c0353b6d80238fb63c64af0d13ba1ba52240e53eb419086f6c5dc2c5b8c5d13e",
+  "raw_event_stream_sha256": "ae9e8bda1beff3dd59fd89a34c575ba66b60e3f9faeeae0af7f2a2783352ae58",
+  "authority_effect": "none"
+}

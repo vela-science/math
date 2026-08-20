@@ -1,0 +1,13 @@
+{
+  "attempt": 10,
+  "case_id": "batch3-session10-erdos938",
+  "exit_code": 0,
+  "elapsed_seconds": 111.30,
+  "model_retry_count": 0,
+  "completed_shell_calls": 10,
+  "input_sha256": "ad5dacd638a05cbc8b7c462cc9fdbabed5a24d4e1702281d26a3b07e857f6ab8",
+  "candidate_sha256": "84880272edfe5cb1bf4204ee5236c0cb2a31d92a2aad18028402a80930517b7e",
+  "tool_calls_sha256": "f872eacd71453b5d80dc78071b901ef50f70d69782c814ab9b62125d991c113d",
+  "raw_event_stream_sha256": "c95afd574ed9dbf707a7b8faabc17322097fb142cb9f8e1fdc6877ce34f62201",
+  "authority_effect": "none"
+}

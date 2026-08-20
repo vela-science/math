@@ -1,0 +1,13 @@
+{
+  "attempt": 9,
+  "case_id": "batch3-session09-erdos251-negative",
+  "exit_code": 0,
+  "elapsed_seconds": 134.15,
+  "model_retry_count": 0,
+  "completed_shell_calls": 11,
+  "input_sha256": "6752683f266586bb7c1fb63d74f2f8c01993b83e6215e358d471ef32919c8568",
+  "candidate_sha256": "867523820b8cd6b6b8b903cde5ee94883160958e29a7b46b04f240115bc43f8b",
+  "tool_calls_sha256": "15189b2c8b06ec084a93fc540fceaee89163dcc5aea1a619d971f3aca5e5a308",
+  "raw_event_stream_sha256": "21afb243e568d16699b631dd62fd77f222a8d118a9e8816e051b9bd4bac90a85",
+  "authority_effect": "none"
+}

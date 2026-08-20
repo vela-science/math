@@ -1,0 +1,13 @@
+{
+  "attempt": 6,
+  "case_id": "batch3-session6-erdos1136-multiples-of-three",
+  "exit_code": 0,
+  "elapsed_seconds": 119.67,
+  "model_retry_count": 0,
+  "completed_shell_calls": 9,
+  "input_sha256": "d0d544f9f06c4d8a670470bfd89b84e830e07bcdadea9bf6ec1237034f91cd96",
+  "candidate_sha256": "fb0cc9f83c0897ceefcddba82a8fabed48be03bc2a7e50ec56780d3b45ca39e2",
+  "tool_calls_sha256": "51efb40e361c52b3df39eedba4afc12f0ae3e1b20278a64c2ebb6d99f5dfe021",
+  "raw_event_stream_sha256": "9292c8511f4692bed1f026b487a8f149ff8f1f0fdbf2d3f22e15eedc0c428c3c",
+  "authority_effect": "none"
+}

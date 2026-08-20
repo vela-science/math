@@ -1,0 +1,13 @@
+{
+  "attempt": 8,
+  "case_id": "batch3-session8-erdos214-bounds-bridge",
+  "exit_code": 0,
+  "elapsed_seconds": 125.91,
+  "model_retry_count": 0,
+  "completed_shell_calls": 7,
+  "input_sha256": "e25dcbbe7b334804d4be65dee0b0f1f9c3e8051c9939a8cb7b692042841e64a4",
+  "candidate_sha256": "49b0efcf146c23a9e7d86aeb424ca76fcae6cb49da56c598627565dbda796263",
+  "tool_calls_sha256": "f474bedbba96857f1ae5ec7fd6f262bb544f6faf8fa5bc9dd6650fae937d6002",
+  "raw_event_stream_sha256": "51c07da22c1ac26fce366f0efb1327eb496cce3d90a6cf10b9f1469cd4a30d3d",
+  "authority_effect": "none"
+}

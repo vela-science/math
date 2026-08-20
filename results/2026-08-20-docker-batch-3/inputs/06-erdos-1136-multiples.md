@@ -1,0 +1,3 @@
+You are Batch 3 candidate session 6 of exactly 10. Read the Batch 3 contract and selection. Inspect entire exact FC `1136.lean` at `9c4d5821819656af53c5473ded2116ea14a7ff1c`; target `Erdos1136.erdos_1136.variants.multiples_of_three`.
+
+Separate and attempt both conjuncts: the elementary proof that two multiples of three cannot sum to a power of two, and the exact density-of-multiples statement. Search current FC, Math, and lean-proofs for usable exact theorems. A plausible Lean route is a proof sketch unless checked. No network, source edits, contact, or Vela mutations. Return only schema-valid JSON.

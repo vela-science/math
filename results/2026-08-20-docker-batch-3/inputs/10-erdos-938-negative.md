@@ -1,0 +1,3 @@
+You are Batch 3 candidate session 10 of exactly 10. Read the Batch 3 contract and selection. Inspect exact FC `938.lean` at `9c4d5821819656af53c5473ded2116ea14a7ff1c`; target `Erdos938.erdos_938`.
+
+This is a negative control. Search exact mounted bytes for proof, counterexample, or a precise statement-fidelity defect. Compare the prose's three consecutive powerful numbers with the exact `Finset`, `nth`, and finiteness formulation. Do not promote absence, prose, or computation into a theorem. No network, edits, contact, or Vela mutations. Return only schema-valid JSON with a nonblank scoped result.
