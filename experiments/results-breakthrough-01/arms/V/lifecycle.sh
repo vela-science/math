@@ -9,6 +9,84 @@ phase=$1
 shift
 script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)
 runner="$script_dir/scripts/run-json-command.sh"
+review_method_source="$script_dir/arms/V/blinded-review-method.json"
+review_method_schema="$script_dir/arms/V/review-method.schema.json"
+review_method_validator="$script_dir/scripts/validate-review-method.py"
+review_method_schema_commit=88fcc0105eba35ee22ed1816d3aabba3322bebc1
+review_method_schema_git_blob=36a185fb5dc4b3dbcb5365825383dfe449dd3ad9
+review_method_schema_sha256=0b202272637dc5dc0219822116f87488f95c4993230654c5544d35c8a49bbe31
+verification_profile=blinded-source-native
+verification_property='Frozen blinded source-native adjudication'
+verification_actor=verifier:blinded-evaluator
+verification_nonclaims=(
+  'Canonical mathematical truth, scientific acceptance, source-owner approval, or Standing.'
+  'Organizational, provider, model, operator, host, or source independence.'
+)
+verification_independent_of=(agent:result-producer)
+verification_shared_dependencies=(
+  'Same OpenAI provider and GPT-5.6 Sol model family as candidate production.'
+  'Same experiment owner, Docker Desktop host, frozen source mounts, producer fact pack, answer schema, and campaign-local repository.'
+)
+
+case "$phase" in
+  prepare)
+    [[ $# -eq 3 ]] || exit 64
+    packet=$1 session=$2 vela_bin=$3
+    ;;
+  finalize)
+    [[ $# -eq 3 ]] || exit 64
+    verdict=$1 session=$2 vela_bin=$3
+    ;;
+  *)
+    echo "unknown phase: $phase" >&2
+    exit 64
+    ;;
+esac
+
+validate_review_method() {
+  local method=$1 receipt_prefix=$2 rc
+  local args=(
+    --schema "$review_method_schema"
+    --schema-source-commit "$review_method_schema_commit"
+    --schema-git-blob "$review_method_schema_git_blob"
+    --schema-sha256 "$review_method_schema_sha256"
+    --method "$method"
+    --expected-profile "$verification_profile"
+    --expected-property "$verification_property"
+    --expected-actor "$verification_actor"
+    --expected-reviewer-kind ai_model
+    --expected-reviewer-identifier gpt-5.6-sol
+    --expected-reviewer-provider OpenAI
+  )
+  local nonclaim
+  for nonclaim in "${verification_nonclaims[@]}"; do
+    args+=(--expected-nonclaim "$nonclaim")
+  done
+  local actor dependency
+  for actor in "${verification_independent_of[@]}"; do
+    args+=(--declared-independent-of "$actor")
+  done
+  for dependency in "${verification_shared_dependencies[@]}"; do
+    args+=(--shared-dependency "$dependency")
+  done
+  mkdir -p "$(dirname "$receipt_prefix")"
+  set +e
+  python3 "$review_method_validator" "${args[@]}" \
+    > "$receipt_prefix.stdout" 2> "$receipt_prefix.stderr"
+  rc=$?
+  set -e
+  printf '%s\n' "$rc" > "$receipt_prefix.exit-code.txt"
+  {
+    shasum -a 256 "$receipt_prefix.stdout"
+    shasum -a 256 "$receipt_prefix.stderr"
+  } > "$receipt_prefix.sha256"
+  [[ $rc -eq 0 ]] || return "$rc"
+}
+
+# The frozen schema, canonical bytes, and CLI cross-bindings fail closed before
+# either prepare or finalize can invoke Vela.
+validate_review_method "$review_method_source" \
+  "$session/organization-only/preflight/review-method-$phase"
 
 load_authority() {
   local key=$1
@@ -20,8 +98,6 @@ load_authority() {
 }
 
 if [[ "$phase" == prepare ]]; then
-  [[ $# -eq 3 ]] || exit 64
-  packet=$1 session=$2 vela_bin=$3
   repo="$session/repo"
   receipts="$session/organization-only/pre-verdict/receipts"
   blind="$session/blind-bundle"
@@ -75,8 +151,6 @@ PY
 fi
 
 if [[ "$phase" == finalize ]]; then
-  [[ $# -eq 3 ]] || exit 64
-  verdict=$1 session=$2 vela_bin=$3
   repo="$session/repo"
   receipts="$session/organization-only/post-verdict/receipts"
   key="$session/private/authority-key"
@@ -84,18 +158,35 @@ if [[ "$phase" == finalize ]]; then
   mkdir -p "$receipts" "$repo/methods" "$repo/evidence"
   load_authority "$key"
   cp "$verdict" "$repo/evidence/blinded-verdict.json"
-  python3 - "$repo/methods/blinded-review.json" <<'PY'
-import pathlib, sys
-pathlib.Path(sys.argv[1]).write_text('{"schema":"vela.review-method.v1","reviewer":{"kind":"agent","display_name":"RESULTS-BREAKTHROUGH-01 blinded adjudicator","provider":"OpenAI","version":"frozen-stage-1","attesting_actor":"verifier:blinded-evaluator"},"environment":{"inputs_are_exact_bytes":true,"network_required":false,"shared_dependencies":["frozen source and fact pack"]}}\n')
-PY
+  cp "$review_method_source" "$repo/methods/blinded-review.json"
+  validate_review_method "$repo/methods/blinded-review.json" \
+    "$session/organization-only/pre-verdict/retained-review-method"
   git -C "$repo" add -- methods/blinded-review.json evidence/blinded-verdict.json
   git -C "$repo" commit -q -m 'Retain locked blinded evaluation evidence and method'
   verdict_name=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["verdict"])' "$verdict")
   case "$verdict_name" in qualified_result|valid_non_result) outcome=pass ;; needs_correction) outcome=inconclusive ;; *) outcome=fail ;; esac
+  verification_args=(
+    --profile "$verification_profile"
+    --method methods/blinded-review.json
+    --property "$verification_property"
+    --outcome "$outcome"
+  )
+  for nonclaim in "${verification_nonclaims[@]}"; do
+    verification_args+=(--does-not-establish "$nonclaim")
+  done
+  for actor in "${verification_independent_of[@]}"; do
+    verification_args+=(--independent-of "$actor")
+  done
+  for dependency in "${verification_shared_dependencies[@]}"; do
+    verification_args+=(--shared-dependency "$dependency")
+  done
+  verification_args+=(
+    --output evidence/blinded-verdict.json
+    --as "$verification_actor"
+    --json
+  )
   "$runner" "$receipts/verification" "$repo" "$vela_bin" verification record . "$proposal" \
-    --profile blinded-source-native --method methods/blinded-review.json \
-    --outcome "$outcome" --does-not-establish "Canonical truth or source-owner acceptance" \
-    --output evidence/blinded-verdict.json --as verifier:blinded-evaluator --json
+    "${verification_args[@]}"
   "$runner" "$receipts/inbox" "$repo" "$vela_bin" review inbox . --json
   entry_root=$(python3 - "$receipts/inbox.stdout" "$proposal" <<'PY'
 import json, sys
@@ -122,6 +213,3 @@ PY
   rm -f "$key" "$key.pub"
   exit 0
 fi
-
-echo "unknown phase: $phase" >&2
-exit 64

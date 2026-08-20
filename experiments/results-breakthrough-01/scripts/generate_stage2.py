@@ -362,12 +362,21 @@ def main():
     reader_paths = [root / "readers/reader-1.json", root / "readers/reader-2.json"]
     if all(path.exists() for path in reader_paths):
         reader_reports = [json.loads(path.read_text()) for path in reader_paths]
+        review_method_report = json.loads((root / "readers/review-method-schema-validation.json").read_text())
         for target in TARGETS:
             fact_pack = json.loads((root / "fact-packs" / f"{target['id']}.json").read_text())
             normalized = common_prompt + b"\n" + (root / "cards" / f"{target['id']}.json").read_bytes()
             for arm in ("N", "G", "V"):
                 suffix = "record.sh" if arm == "N" else ("record.py" if arm == "G" else "lifecycle.sh")
                 organization = [root / "prompts" / f"arm-{arm}.txt", root / "arms" / arm / suffix]
+                reports = reader_reports
+                if arm == "V":
+                    organization.extend([
+                        root / "arms/V/blinded-review-method.json",
+                        root / "arms/V/review-method.schema.json",
+                        root / "scripts/validate-review-method.py",
+                    ])
+                    reports = reader_reports + [review_method_report]
                 manifest = {
                     "pilot_id": PILOT,
                     "target_id": target["id"],
@@ -384,7 +393,7 @@ def main():
                         "retry_limit": 0,
                         "scientific_output_budget": 8192,
                     },
-                    "reader_verdicts": [{"reader": r["reader"], "verdict": r["verdict"], "discrepancies": r["discrepancies"]} for r in reader_reports],
+                    "reader_verdicts": [{"reader": r["reader"], "verdict": r["verdict"], "discrepancies": r["discrepancies"]} for r in reports],
                 }
                 write_json(root / "equivalence" / f"{target['id']}-{arm}.json", manifest)
 

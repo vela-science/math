@@ -75,6 +75,18 @@ canonical state. Its Submission and Verification are not acceptance; its
 experiment-local Decision/readback is not mathematical truth, independence,
 source-owner approval, or canonical Standing.
 
+The V adapter retains one canonical `vela.review-method.v1` at
+`arms/V/blinded-review-method.json`, bound to profile
+`blinded-source-native`, the exact registered property, the AI-model reviewer,
+attesting actor, procedure, required output, and nonclaims. Before either V
+phase can call Vela, `scripts/validate-review-method.py` checks those exact
+bytes against the frozen Vela schema and CLI cross-bindings and retains
+stdout/stderr/exit/hash receipts. The Verification declares only that
+`verifier:blinded-evaluator` independently checked `agent:result-producer`'s
+work; it separately discloses the shared model/provider, experiment owner,
+host, source, fact-pack, schema, and repository dependencies and expressly
+does not claim organizational or provider independence.
+
 The fixed candidate execution order is `assignments.json`. It balances arm
 order without concealing treatment from the producer. The evaluator-owned
 X/Y/Z permutation, target-specific held-out check cards, duplicate-control

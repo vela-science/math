@@ -23,6 +23,9 @@ program stops for this workload.
   complete Vela build-context manifest are frozen.
 - Native and Graph adapter-only fixtures pass network-disabled with zero model
   sessions and retain identical common result bytes.
+- The V adapter's canonical Review Method passes the exact frozen Vela 0.977.3
+  schema and binding validator before any lifecycle command; its execution-
+  scoped check and all shared dependencies are disclosed separately.
 - T02 is retained only for explicitly independent proof realization: frozen
   Math has occurrence metadata, not mounted checked proof bytes. No theorem
   novelty may be claimed.

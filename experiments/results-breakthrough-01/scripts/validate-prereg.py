@@ -32,6 +32,10 @@ def main() -> int:
     assert git(args.evaluator,"rev-parse",review["evaluator_commit"]+"^{tree}").decode().strip()==review["evaluator_tree"]
     assert sha(git(args.evaluator,"show",review["evaluator_commit"]+":reviews/prereg-0bbf3b8/REPORT.md"))==review["report_sha256"]
     assert sha(git(args.evaluator,"show",review["evaluator_commit"]+":reviews/prereg-0bbf3b8/verdict.json"))==review["verdict_sha256"]
+    review2=evaluator["producer_review_2"]
+    assert git(args.evaluator,"rev-parse",review2["evaluator_commit"]+"^{tree}").decode().strip()==review2["evaluator_tree"]
+    assert sha(git(args.evaluator,"show",review2["evaluator_commit"]+":reviews/prereg-161a9af/REPORT.md"))==review2["report_sha256"]
+    assert sha(git(args.evaluator,"show",review2["evaluator_commit"]+":reviews/prereg-161a9af/verdict.json"))==review2["verdict_sha256"]
 
     assignments=values[root/"assignments.json"]
     cells=assignments["smoke_sequence"]+assignments["post_smoke_sequence"]
@@ -55,6 +59,9 @@ def main() -> int:
     readers=[values[root/"readers/reader-1.json"],values[root/"readers/reader-2.json"]]
     assert [r["reader"] for r in readers]==["independent-byte-reader","independent-semantic-reader"]
     assert all(r["verdict"]=="pass" and not r["discrepancies"] and r["candidate_output_accessed"] is False for r in readers)
+    method_reader=values[root/"readers/review-method-schema-validation.json"]
+    assert method_reader["reader"]=="frozen-vela-review-method-validator"
+    assert method_reader["verdict"]=="pass" and not method_reader["discrepancies"] and method_reader["candidate_output_accessed"] is False
     for target in [f"T{i:02d}" for i in range(1,11)]:
         pack=values[root/"fact-packs"/f"{target}.json"]
         lines=[]
@@ -73,7 +80,8 @@ def main() -> int:
         assert {m["normalized_prompt_sha256"] for m in manifests}=={normalized}
         assert len({canonical(m["runtime"]) for m in manifests})==1
         for manifest in manifests:
-            assert manifest["reader_verdicts"]==[{"reader":r["reader"],"verdict":r["verdict"],"discrepancies":r["discrepancies"]} for r in readers]
+            reports=readers+([method_reader] if manifest["arm"]=="V" else [])
+            assert manifest["reader_verdicts"]==[{"reader":r["reader"],"verdict":r["verdict"],"discrepancies":r["discrepancies"]} for r in reports]
             assert manifest["runtime"]["parameters_sha256"]==sha(parameters)
             assert manifest["runtime"]["tool_allowlist_sha256"]==sha(tools)
             for organization in manifest["organization_files"]:
@@ -97,6 +105,41 @@ def main() -> int:
     build=values[root/"build/BUILD-LOCK.json"]
     assert sha((root/"Dockerfile").read_bytes())==build["dockerfile_sha256"] and build["authorized_now"] is False
     subprocess.run(["python3",str(root/"scripts/verify-vela-context.py"),"--vela-repo",str(args.vela),"--commit",build["vela_commit"],"--manifest",str(root/"build/vela-context.tsv")],check=True,stdout=subprocess.PIPE)
+    schema=root/"arms/V/review-method.schema.json"
+    assert schema.read_bytes()==git(args.vela,"show",build["vela_commit"]+":schemas/review-method.schema.json")
+    assert git(args.vela,"rev-parse",build["vela_commit"]+":schemas/review-method.schema.json").decode().strip()=="36a185fb5dc4b3dbcb5365825383dfe449dd3ad9"
+    method_command=[
+        "python3",str(root/"scripts/validate-review-method.py"),
+        "--schema",str(schema),
+        "--schema-source-commit",build["vela_commit"],
+        "--schema-git-blob","36a185fb5dc4b3dbcb5365825383dfe449dd3ad9",
+        "--schema-sha256","0b202272637dc5dc0219822116f87488f95c4993230654c5544d35c8a49bbe31",
+        "--method",str(root/"arms/V/blinded-review-method.json"),
+        "--expected-profile","blinded-source-native",
+        "--expected-property","Frozen blinded source-native adjudication",
+        "--expected-actor","verifier:blinded-evaluator",
+        "--expected-reviewer-kind","ai_model",
+        "--expected-reviewer-identifier","gpt-5.6-sol",
+        "--expected-reviewer-provider","OpenAI",
+        "--expected-nonclaim","Canonical mathematical truth, scientific acceptance, source-owner approval, or Standing.",
+        "--expected-nonclaim","Organizational, provider, model, operator, host, or source independence.",
+        "--declared-independent-of","agent:result-producer",
+        "--shared-dependency","Same OpenAI provider and GPT-5.6 Sol model family as candidate production.",
+        "--shared-dependency","Same experiment owner, Docker Desktop host, frozen source mounts, producer fact pack, answer schema, and campaign-local repository.",
+    ]
+    validated=json.loads(subprocess.run(method_command,check=True,stdout=subprocess.PIPE).stdout)
+    assert validated==method_reader
+    lifecycle=(root/"arms/V/lifecycle.sh").read_text()
+    assert lifecycle.index('validate_review_method "$review_method_source"') < lifecycle.index('"$runner" "$receipts/init"')
+    assert lifecycle.index('validate_review_method "$repo/methods/blinded-review.json"') < lifecycle.index('"$runner" "$receipts/verification"')
+    for required in [
+        '--property "$verification_property"',
+        '--does-not-establish "$nonclaim"',
+        '--independent-of "$actor"',
+        '--shared-dependency "$dependency"',
+        '--as "$verification_actor"',
+    ]:
+        assert required in lifecycle
 
     common_result=(root/"fixtures/common/result.json").read_bytes()
     for arm in ("native","graph"):
@@ -133,6 +176,7 @@ def main() -> int:
     print("cells=30")
     print("equivalence_manifests=30")
     print("independent_readers=2")
+    print("frozen_review_method_validators=1")
     print("candidate_inference=false")
     print("validation=pass")
     return 0

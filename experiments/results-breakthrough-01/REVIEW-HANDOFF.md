@@ -1,52 +1,52 @@
-# Corrected immutable preregistration re-review handoff
+# V Review Method correction re-review handoff
 
-Review the single successor commit containing this file on branch
-`codex/results-breakthrough-01-prereg-2026-08-20`. Its predecessor is exactly
-`0bbf3b8578417c928fe2b62ee9912f2c7918e9d5` / tree
-`5f71bffbfad364d628abf8ba70003e91a2dcd643`. The blocking evaluator evidence is
-exactly `43c51f9f893a6919428a290421a8344a11c5f5f4` / tree
-`4069ae9ed804fec3178c548ecc4475179f3568ba`, with report SHA-256
-`93765f10bc011971aac413ecb854b8e641f7630fc3e8a2ceb9f0e74e25de27a6`
+Review the single successor of producer commit
+`161a9af0551b43f7c89aabedc3b7ea4316757741` / tree
+`221f8c3c07a2046f96114f9ca6f4aa89615fd63e` on branch
+`codex/results-breakthrough-01-prereg-2026-08-20`.
+
+The controlling BLOCKED review is evaluator commit
+`03855d5b4a0f7b88385d84df1cf2c3c79abdabfb` / tree
+`ad2921579f888eadcc9c2e17d2cade2a7c3720b2`, report SHA-256
+`220cebb44d252292057002ca62ec36e00591afab8d000690891790669e37cb28`,
 and verdict SHA-256
-`16ecb8fe09d50693b67db1fbbdd892c30ff117397162b3aadcb873ffaac0da7a`.
+`76f3ac97c47c7d41503eafdf095994268d9f31bf798d1782011508c9111d093e`.
+It independently found every prior B1–B6 defect resolved and identified one
+new executable blocker only. This delta does not revisit those resolved
+surfaces.
 
-`HASHES.tsv` binds every other file in this experiment directory. The Git tree
-binds both this handoff and that hash manifest. `EVALUATOR-LOCK.json` binds the
-normative Stage 1 freeze/receipt/rubric/analysis bytes; `SOURCE-LOCK.json` binds
-all source/evaluator bundles, commits, trees, archive hashes, licenses, and
-tool identities.
+## Sole correction
 
-## Corrections presented for exact re-review
+- `arms/V/blinded-review-method.json` is canonical JSON plus one LF and has
+  SHA-256 `03c3add32ac7f33c01afa084233ee2f43b1efc8a1b81873db5b995be0c0bc4e3`.
+- `arms/V/review-method.schema.json` is byte-identical to
+  `vela@88fcc0105eba35ee22ed1816d3aabba3322bebc1:schemas/review-method.schema.json`,
+  Git blob `36a185fb5dc4b3dbcb5365825383dfe449dd3ad9`, SHA-256
+  `0b202272637dc5dc0219822116f87488f95c4993230654c5544d35c8a49bbe31`.
+- The method truthfully binds profile `blinded-source-native`, registered
+  property `Frozen blinded source-native adjudication`, AI reviewer
+  `gpt-5.6-sol` / OpenAI, attesting actor `verifier:blinded-evaluator`, the
+  blinded adjudication procedure, required output, and two exact nonclaims.
+- `scripts/validate-review-method.py` checks the exact frozen schema, canonical
+  framing, reviewer fields, CLI profile/property/actor/nonclaim bindings, and
+  dependency disclosures. `arms/V/lifecycle.sh` runs it with retained
+  stdout/stderr/exit/hashes before either `prepare` or `finalize` may invoke
+  Vela, then validates the retained method again before Verification.
+- Verification declares only execution-scoped checking of
+  `agent:result-producer`. It separately discloses the shared OpenAI/model
+  family, experiment owner, Docker host, source mounts, fact pack, answer
+  schema, and campaign-local repository. Its method explicitly does not claim
+  organizational, provider, model, operator, host, or source independence.
+- Only the V adapter, frozen schema/method validator receipt, V equivalence
+  manifests, evaluator lock, explanatory text/process observation, validator,
+  and final hash bindings change. Candidate cards, fact packs/roots,
+  assignments, N/G adapters/manifests/fixtures, Dockerfile, build context,
+  source locks, and scientific inputs remain byte-identical.
 
-1. The five frozen verdicts, usable definition, scientific recovery,
-   30-assignment ITT denominator, smoke gate, paired summaries, NO-VALUE graph
-   falsifier, and 40–60 scale gate are restored without a competing contract.
-2. T02 is no longer called novel. The duplicate index records three exact Math
-   occurrence/provenance metadata matches for
-   `Erdos138.monoAPNumber_two_two`; neither linked external proof commit is in
-   the frozen FC object database. T02 remains only an independent proof
-   realization target and may not claim theorem novelty. All ten targets were
-   reindexed against exact Math and lean-proofs commits.
-3. Both Docker `FROM` inputs are digest-pinned. The proposed build uses only a
-   verified archive of Vela commit `88fcc0105eba35ee22ed1816d3aabba3322bebc1`
-   / tree `2cb85fe1e1c3525ba97ff2aec25945417ea7b372`, bound by a 412-file context
-   manifest. The deterministic experiment-only machine ID is exactly 32
-   lowercase hex characters plus newline and remains a proposed, unbuilt
-   post-review delta.
-4. Ten producer cards, ten supplied-order fact roots, 30 fixed assignments, a
-   byte-identical common arm wrapper, three minimal adapters, 30 equivalence
-   manifests, mount/materialization/isolation/credential scripts, and N/G
-   no-model receipts are frozen. The source-mount fixture recomputed all four
-   exact Git archive hashes. Two independent readers report PASS with no
-   discrepancies and no candidate-output access.
-5. `PROCESS-LOG.md` retains observed failures and corrections append-only. It
-   is evidence only, adds no gate, and will receive its keep/change/delete
-   retrospective at experiment end.
+## Deterministic validation
 
-## Deterministic local validation
-
-Run from a checkout of this exact commit with the four bundle-reconstructed,
-detached, clean source repositories and the exact evaluator repository:
+Run from a checkout of this exact successor with the four frozen clean source
+clones and the exact evaluator repository:
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 \
@@ -59,24 +59,28 @@ PYTHONDONTWRITEBYTECODE=1 python3 \
   --evaluator /Users/williamblair/Documents/Codex/2026-08-20/results-breakthrough-01
 ```
 
-Expected terminal summary:
+Expected summary:
 
 ```text
-json_files=80
+json_files=83
 targets=10
 cells=30
 equivalence_manifests=30
 independent_readers=2
+frozen_review_method_validators=1
 candidate_inference=false
 validation=pass
 ```
 
-## Current prohibition and smallest next authorization
+`HASHES.tsv` binds every other experiment file by path, byte count, and
+SHA-256; the successor Git tree binds that manifest. The exact successor
+commit/tree, hash-manifest digest, V adapter digest, validator digest, and
+remote equality accompany the task handoff.
 
-No corrected image was built, no Vela lifecycle fixture ran, and no candidate
-inference or scientific/canonical mutation occurred in this correction turn.
-A PASS on this exact commit may authorize only the already bounded next steps:
-create evaluator-held Stage 2 bytes, rebuild the exact proposed image once, run
-one corrected disposable no-model signed Vela lifecycle with retained
-stdout/stderr/exit/hashes, and return those receipts for the frozen launch
-review. Only the later launch PASS may authorize the six T01/T02 smoke cells.
+## Prohibition and next gate
+
+This correction does not build an image, execute a Vela lifecycle or V fixture,
+create Stage 2, start candidate/evaluator inference, or mutate any source,
+provider, canonical record, authority, or Standing. A PASS on this exact
+successor may authorize only the already-frozen next steps; it does not itself
+authorize candidate inference.

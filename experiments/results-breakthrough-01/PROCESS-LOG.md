@@ -339,3 +339,33 @@ fields; the observation remains separate.
   merely for file existence.
 - **Disposition:** fix now because the review handoff hash manifest is
   load-bearing; add no new manifest framework.
+
+## 2026-08-20T22:43:29Z — V adapter emitted an invalid Review Method
+
+- **Stage/time and evidence:** corrected-preregistration re-review; evaluator
+  commit `03855d5b4a0f7b88385d84df1cf2c3c79abdabfb`, report SHA-256
+  `220cebb44d252292057002ca62ec36e00591afab8d000690891790669e37cb28`;
+  frozen Vela schema returned 11 errors for the emitted method.
+- **Observation and impact:** `arms/V/lifecycle.sh` generated a purported
+  `vela.review-method.v1` with an unsupported `environment` block, invalid
+  reviewer kind/field, and seven missing required top-level fields. Vela would
+  reject it before signing a Verification even after the machine-ID repair, so
+  the preregistration remained blocked for one additional review cycle.
+- **Category:** harness/script.
+- **Root cause:** the adapter conflated the distinct Review Method and
+  Verification Method shapes and had no frozen-schema check on runtime-
+  generated method bytes.
+- **Affected:** one evaluator review cycle and correction time; zero candidate
+  or target-evaluator sessions, credits, image builds, Vela lifecycle calls,
+  Stage 2 state, or scientific/canonical authority state.
+- **Immediate correction:** retain one canonical checked-in Review Method with
+  exact profile, registered property, reviewer, actor, procedure, output, and
+  nonclaims; validate it against the exact 0.977.3 schema before either V phase;
+  pass execution-scoped `--independent-of` and all shared dependencies through
+  their supported CLI fields.
+- **Prevention/simplification:** Vela CLI/docs should offer or prominently show
+  a preflight validator for a retained Review Method plus its intended CLI
+  bindings; experiment adapters should copy validated canonical bytes instead
+  of synthesizing protocol manifests inline.
+- **Disposition:** fix now because the defect deterministically blocks V;
+  otherwise advisory, with no protocol/schema redesign or new approval gate.
