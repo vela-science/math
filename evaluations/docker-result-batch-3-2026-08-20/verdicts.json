@@ -1,0 +1,169 @@
+{
+  "schema": "vela-math.docker-batch-3-independent-evaluation.v1",
+  "authority_effect": "none",
+  "frozen_input": {
+    "commit": "082a118ea6ce7c9ca6a62f72aa425373228f7efe",
+    "tree": "480aa298b947b144bdcd9e9574420dcb69b9b486",
+    "parent": "5de716c896065c03c0a470d015ba2a328a527f73",
+    "producer_directory": "results/2026-08-20-docker-batch-3/",
+    "assigned_cases": 10,
+    "evaluated_cases": 10,
+    "producer_model_attempts": 10,
+    "producer_model_retries": 0,
+    "producer_elapsed_seconds": 1290.59,
+    "pre_inference_setup": {
+      "incidents": 1,
+      "process_exits": 5,
+      "model_attempts": 0,
+      "exit_code": 1,
+      "message": "No prompt provided via stdin."
+    }
+  },
+  "rubric": {
+    "qualified_candidate": "Correct and source-backed bounded proposed result.",
+    "needs_correction": "Usable central observation with a material scope, evidence, or classification defect.",
+    "valid_non_result": "Correct scoped abstention or dependency-only result.",
+    "duplicate": "Correct but already covered by an exact prior result.",
+    "invalid": "Wrong or unsupported central conclusion."
+  },
+  "cases": [
+    {
+      "case": 1,
+      "case_id": "batch-3-session-1-erdos-479-domain",
+      "producer_result_type": "proposed_result",
+      "producer_result_status": "statement_correction",
+      "verdict": "qualified_candidate",
+      "correctness_and_scope": "Lean omits exactly natural k=0; n=2^m gives an infinite checked witness family. This repairs statement fidelity but does not prove the k>1 research content.",
+      "exact_evidence_build_outcome": "FC SHA-256 5c034287066750c318dae057cf5cfc5021cd958d7a948f2cd78daf136c1ac98e; exact k=0 Infinite theorem compiled under Lean 4.27.0/Mathlib a3a10db0e9d66acbebf76c5e6a135066525ac900 with axioms propext, Classical.choice, Quot.sound.",
+      "novelty_or_duplication_status": "No exact duplicate or prior correction found.",
+      "unresolved_assumptions_dependencies_rights": "k>1 cases remain open; FC Apache-2.0; independent proof bytes need explicit licensing.",
+      "ready_for_separate_vela_conversion": {"ready": true, "why": "Exact bounded source correction and missing-domain bridge are independently checked."},
+      "minimal_correction_if_not_ready": "None; preserve the bounded scope."
+    },
+    {
+      "case": 2,
+      "case_id": "02-erdos-849-solution-count",
+      "producer_result_type": "proposed_result",
+      "producer_result_status": "statement_correction",
+      "verdict": "needs_correction",
+      "correctness_and_scope": "Pair count equals projected n-count because choose n k is strictly increasing on the admissible half-range. No fidelity defect exists, contrary to the packet status label.",
+      "exact_evidence_build_outcome": "FC SHA-256 0ab7af0a6266830b9527c1a9a1b68ef8ad33a074d2a575c18572766d905ce9de; exact strict adjacent-step lemma compiled with standard axioms; no target theorem proof claimed.",
+      "novelty_or_duplication_status": "No duplicate; this is a fidelity confirmation, not a correction result.",
+      "unresolved_assumptions_dependencies_rights": "Full projection/ncard equivalence term not retained; FC Apache-2.0.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "No defect or scientific target result remains to convert."},
+      "minimal_correction_if_not_ready": "Change result_status to proof_sketch and label the packet a statement-fidelity confirmation."
+    },
+    {
+      "case": 3,
+      "case_id": "03-erdos-850-domain",
+      "producer_result_type": "proposed_result",
+      "producer_result_status": "statement_correction",
+      "verdict": "qualified_candidate",
+      "correctness_and_scope": "Docstring integers is not faithful to the theorem's naturals and Nat.primeFactors conventions; changing prose to natural numbers is the smallest correction.",
+      "exact_evidence_build_outcome": "FC SHA-256 5128fc19d679a8b7f31c9a894c997a66173138192840531b763c4f3df8f06eaa; exact module compiled and direct type/API inspection confirmed domain and zero convention.",
+      "novelty_or_duplication_status": "No alternate integer formulation, proof, or prior packet found.",
+      "unresolved_assumptions_dependencies_rights": "Source-owner intent is editorial and target remains open; FC Apache-2.0.",
+      "ready_for_separate_vela_conversion": {"ready": true, "why": "Bounded exact source-identity correction with no theorem-proof overclaim."},
+      "minimal_correction_if_not_ready": "None; retain the convention caveat."
+    },
+    {
+      "case": 4,
+      "case_id": "batch3-session4-erdos-1074-ehs-init",
+      "producer_result_type": "proposed_result",
+      "producer_result_status": "computational_certificate",
+      "verdict": "qualified_candidate",
+      "correctness_and_scope": "Complete factorizations establish EHSNumbers in 0..17 exactly as 8,9,13,14,15,16,17, hence the first seven increasing members; no Lean proof is claimed.",
+      "exact_evidence_build_outcome": "FC SHA-256 72b74c90c3fbdf66fedcd744d6c90da05fdfc7e87673a016787ae4586c705c45; independent replay reproduced every retained factor, residue, witness, exclusion, and final list; receipt hashes pass.",
+      "novelty_or_duplication_status": "No exact prefix-target duplicate; neighboring examples and infinitude theorem do not prove it.",
+      "unresolved_assumptions_dependencies_rights": "No retained Lean Nat.nth bridge; FC Apache-2.0; attach rights to retained computation bytes.",
+      "ready_for_separate_vela_conversion": {"ready": true, "why": "Exact deterministic program and full stdout are retained and independently reproduced."},
+      "minimal_correction_if_not_ready": "None; preserve the computational and no-Lean-proof scope."
+    },
+    {
+      "case": 5,
+      "case_id": "batch-3-candidate-05",
+      "producer_result_type": "proposed_result",
+      "producer_result_status": "dependency_finding",
+      "verdict": "valid_non_result",
+      "correctness_and_scope": "Correctly reduces membership of k! to one nondivisibility at i=0 and divisibility by k!-i for 0<i<k; no general proof is retained.",
+      "exact_evidence_build_outcome": "FC SHA-256 fc5662ca5de6c05aafd2ad299b1cbab771918474957e6aaf44da523ee23b17f6; exact sInf goal inspected; numerical k=3..12 replay had exceptional set exactly {0}.",
+      "novelty_or_duplication_status": "Useful dependency ledger, not a duplicate or completed Result.",
+      "unresolved_assumptions_dependencies_rights": "Both general divisibility lemmas remain; FC Apache-2.0.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "Target remains a scoped non-result."},
+      "minimal_correction_if_not_ready": "Formalize the cancelled product and its nonzero signed (k-1)! residue modulo k!."
+    },
+    {
+      "case": 6,
+      "case_id": "batch3-session6-erdos1136-multiples-of-three",
+      "producer_result_type": "proposed_result",
+      "producer_result_status": "proof_sketch",
+      "verdict": "qualified_candidate",
+      "correctness_and_scope": "Avoidance and density-one-third routes are mathematically correct, but the producer honestly did not claim a checked target.",
+      "exact_evidence_build_outcome": "FC SHA-256 e9db3914f0a3722670777d3ea9604032e3a37ae15b090488f312e6569b1b9791; avoidance conjunct compiled with standard axioms; card_multiples', zero endpoint, count formula, and hasDensity_even route inspected; combined term absent.",
+      "novelty_or_duplication_status": "No exact variant duplicate; linked main theorem is different.",
+      "unresolved_assumptions_dependencies_rights": "Need exact ncard bridge and three-residue real limit; FC Apache-2.0 and proof-byte licensing.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "No complete retained source-native target proof."},
+      "minimal_correction_if_not_ready": "Retain the exact count lemma, density limit, combined target build, and axioms."
+    },
+    {
+      "case": 7,
+      "case_id": "batch3-session7-erdos120-finite-set",
+      "producer_result_type": "proposed_result",
+      "producer_result_status": "proof_sketch",
+      "verdict": "qualified_candidate",
+      "correctness_and_scope": "Exact negation needs one common affine copy; difference-set Steinhaus alone has the wrong quantifier order, while a density-point finite-intersection argument supplies the common pair.",
+      "exact_evidence_build_outcome": "FC SHA-256 ba3ea6bd91fdf936a6687f386cbfeb7867463035c7250020d4b7b9eb7f6a6450; exact propositional negation compiled with standard axioms; no packaged finite-homothetic-copy lemma or full proof found.",
+      "novelty_or_duplication_status": "No exact target duplicate or packaged bridge.",
+      "unresolved_assumptions_dependencies_rights": "Density-point estimates and finite intersection remain to formalize; FC Apache-2.0.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "Mathematically qualified sketch lacks complete checkable proof bytes."},
+      "minimal_correction_if_not_ready": "Prove a finite-homothetic-copy lemma and close the exact negation."
+    },
+    {
+      "case": 8,
+      "case_id": "batch3-session8-erdos214-bounds-bridge",
+      "producer_result_type": "proposed_result",
+      "producer_result_status": "dependency_finding",
+      "verdict": "valid_non_result",
+      "correctness_and_scope": "Conditional sSup bridge is exact, but antitonicity and the 4-/8-point scientific inputs are not independently proved in retained bytes.",
+      "exact_evidence_build_outcome": "FC SHA-256 7b385ee0fc14ea75c391b84abb6981061a707892c216e4dd163bade87dc5dc1e; generic bridge compiled with BddAbove/nonempty side conditions and standard axioms; source inputs remain sorry.",
+      "novelty_or_duplication_status": "No exact bounds-variant duplicate; linked main theorem is different.",
+      "unresolved_assumptions_dependencies_rights": "Need Antitone HasRedCopies and independent h4/h8 proof evidence; FC Apache-2.0.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "Honest conditional dependency result, not a closed proof."},
+      "minimal_correction_if_not_ready": "Formalize extension/restriction antitonicity, then bind proved h4 and h8 without source sorryAx."
+    },
+    {
+      "case": 9,
+      "case_id": "batch3-session09-erdos251-negative",
+      "producer_result_type": "typed_non_result",
+      "producer_result_status": "typed_non_result",
+      "verdict": "valid_non_result",
+      "correctness_and_scope": "Correct scoped abstention. Lean's zero-based series is twice the prose series subject to convergence/reindexing, and nonzero rational scaling preserves irrationality.",
+      "exact_evidence_build_outcome": "FC SHA-256 d2ab131b7662a7ea25717dc65ca227be0927c63d954c74c5d43680194d633184; real-tsum elaboration, zero-based prime API, and scaling API inspected; no proof/counterexample found.",
+      "novelty_or_duplication_status": "No hidden result or duplicate.",
+      "unresolved_assumptions_dependencies_rights": "Irrationality and formal reindexing remain unproved; FC Apache-2.0.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "Valid negative control, not a Result candidate."},
+      "minimal_correction_if_not_ready": "No packet correction; requires proof or counterexample evidence."
+    },
+    {
+      "case": 10,
+      "case_id": "batch3-session10-erdos938",
+      "producer_result_type": "typed_non_result",
+      "producer_result_status": "typed_non_result",
+      "verdict": "valid_non_result",
+      "correctness_and_scope": "Correct scoped abstention. Inclusion of zero adds one prefix triple and shifts later indexing, which cannot change finiteness; IsAPOfLength 3 prevents collapsed Finsets.",
+      "exact_evidence_build_outcome": "FC SHA-256 23d1782dd0600610fbc0597542be2ae2e86bd14eebc43600e4ab2c1342904ed1; exact nth, Powerful, and AP definitions inspected; no proof/counterexample found.",
+      "novelty_or_duplication_status": "No hidden result or duplicate.",
+      "unresolved_assumptions_dependencies_rights": "Finiteness theorem remains open in inspected bytes; FC Apache-2.0.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "Valid negative control, not a Result candidate."},
+      "minimal_correction_if_not_ready": "No packet correction; requires exact changing evidence."
+    }
+  ],
+  "aggregate": {
+    "proposed_result_precision": {"qualified": 5, "denominator": 8, "rate": 0.625},
+    "valid_non_result_rate": {"valid": 2, "denominator": 2, "rate": 1.0},
+    "verdict_counts": {"qualified_candidate": 5, "needs_correction": 1, "valid_non_result": 4, "duplicate": 0, "invalid": 0},
+    "conversion_ready": {"count": 3, "denominator": 10, "cases": [1, 3, 4]},
+    "evaluation_wall_time_seconds": 1093,
+    "smallest_evidence_backed_next_step": "Open a separate computational conversion task for Case 4 with exact program/stdout/receipts and no-Lean-proof caveat; separately queue statement corrections for Cases 1 and 3."
+  }
+}
