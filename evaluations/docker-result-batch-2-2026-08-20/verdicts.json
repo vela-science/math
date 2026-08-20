@@ -1,0 +1,148 @@
+{
+  "schema": "vela-math.docker-batch-2-independent-evaluation.v1",
+  "authority_effect": "none",
+  "frozen_input": {
+    "commit": "badf9efb9723561d096defbfb7a4567c38fdeb24",
+    "tree": "29979ae495d46a9a7e91335078c75e49f397d040",
+    "parent": "5de716c896065c03c0a470d015ba2a328a527f73",
+    "producer_directory": "results/2026-08-20-docker-batch-2/",
+    "assigned_cases": 10,
+    "evaluated_cases": 10
+  },
+  "rubric": {
+    "qualified_candidate": "Correct and source-backed bounded proposed result.",
+    "needs_correction": "Central observation is usable, but a material scope or evidence statement must be corrected.",
+    "valid_non_result": "Correct, well-scoped abstention.",
+    "invalid": "Central conclusion is wrong or unsupported."
+  },
+  "cases": [
+    {
+      "case": 1,
+      "case_id": "erdos-697-delta-bound",
+      "producer_result_type": "proposed_result",
+      "verdict": "qualified_candidate",
+      "correctness_and_scope": "Exact target is false at m=0: the defining set is empty, delta is zero, and the real quotient is zero. Adding m != 0 removes only this counterexample and does not prove the repaired bound.",
+      "exact_evidence_build_outcome": "FC 9c4d5821819656af53c5473ded2116ea14a7ff1c/4ccf4dbcb68d8cc097551213ed13b184f910f110, SHA-256 52bd695b7cf25cdf02972e50c53b0b3f6290a681d7aa1f58fdcd7618cde9e10a; exact source and scratch counterexample compiled under Lean 4.27.0/Mathlib a3a10db0e9d66acbebf76c5e6a135066525ac900; axioms propext, sorryAx, Classical.choice, Quot.sound, with sorryAx inherited from density_exists.",
+      "novelty_or_duplication_status": "No covering proof or prior packet in exact Math or reachable lean-proofs sources.",
+      "unresolved_assumptions_dependencies_rights": "density_exists remains sorry and the repaired inequality is unproved; Apache-2.0 source attribution and inherited-axiom disclosure required.",
+      "ready_for_separate_vela_conversion": {"ready": true, "why": "Bounded exact source-statement counterexample and minimal domain correction are independently checked."},
+      "minimal_correction_if_not_ready": "None; preserve the inherited sorryAx and do not claim the repaired bound."
+    },
+    {
+      "case": 2,
+      "case_id": "erdos-822-positive-density-negative-control",
+      "producer_result_type": "typed_non_result",
+      "verdict": "valid_non_result",
+      "correctness_and_scope": "Correct abstention for the exact positive-density target, scoped to pinned FC, lean-proofs, and Math audit bytes.",
+      "exact_evidence_build_outcome": "Source SHA-256 0ee0e9ac7f08f6de4ed165f8b6f18ffcadee0021d7170d6a8e0f9d296609b94a; only target sorry and missing-interface TODO found; no proof term to build.",
+      "novelty_or_duplication_status": "No hidden proof, witness, or prior packet found.",
+      "unresolved_assumptions_dependencies_rights": "Formal GIL24 density interface is missing; FC source Apache-2.0; paper not independently evaluated.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "Valid abstention, not a scientific Result candidate."},
+      "minimal_correction_if_not_ready": "No packet correction; provide an exact kernel-checked positive-density theorem."
+    },
+    {
+      "case": 3,
+      "case_id": "erdos-1-least-N-5",
+      "producer_result_type": "proposed_result",
+      "verdict": "needs_correction",
+      "correctness_and_scope": "Witness and minimum are correct, but the producer calls an unretained external run an exact finite certificate.",
+      "exact_evidence_build_outcome": "Source SHA-256 6754c87ff3e02086075f6911afbe771875ae1967f15c41f1f8882fe207da6cf0; independent search found 0/792 at N<=12 and exactly 2/1287 at N=13; exact native_decide theorem compiled with axioms propext, Classical.choice, Lean.ofReduceBool, Lean.trustCompiler, Quot.sound. Producer retains code and exit code but no stdout or checked term.",
+      "novelty_or_duplication_status": "No covering proof or prior packet found.",
+      "unresolved_assumptions_dependencies_rights": "Producer evidence is incomplete; native_decide compiler trust and compatible proof-artifact licence must be disclosed.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "The producer packet does not retain the certificate it claims."},
+      "minimal_correction_if_not_ready": "Retain and build the exact Lean proof, or retain deterministic program/output/digests plus a checked theorem bridge."
+    },
+    {
+      "case": 4,
+      "case_id": "erdos-291-parts-ii-infinite-gcd",
+      "producer_result_type": "typed_non_result",
+      "verdict": "valid_non_result",
+      "correctness_and_scope": "Family 2*3^(r+1) is correct only through the still-unproved steinerberger_generalization; the target remains unproved.",
+      "exact_evidence_build_outcome": "Source SHA-256 f2cbf68a5592d5ba6f2e265fa9e53743b709e510cf02638142134534b004e648; exact family/dependency check passed; no unconditional term or duplicate proof found.",
+      "novelty_or_duplication_status": "Explicit source-dependency instantiation, not an unconditional new proof; no prior packet.",
+      "unresolved_assumptions_dependencies_rights": "Needs steinerberger_generalization or a direct specialized 3-adic lemma; FC source Apache-2.0.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "Correct conditional abstention; essential number-theory dependency remains sorry."},
+      "minimal_correction_if_not_ready": "Prove the specialized divisibility lemma without using the source sorry."
+    },
+    {
+      "case": 5,
+      "case_id": "erdos-399-cambie",
+      "producer_result_type": "proposed_result",
+      "verdict": "qualified_candidate",
+      "correctness_and_scope": "Complete exact coprime plus-sign fourth-power exclusion, including n=0,1,2,3 and n>=4.",
+      "exact_evidence_build_outcome": "Source SHA-256 79c50670ecacbd211abb8211814729c8e3aacc5c7055f3790842e381e53f36be; exact theorem compiled under Lean 4.27.0/Mathlib a3a10db0e9d66acbebf76c5e6a135066525ac900; axioms exactly propext, Classical.choice, Quot.sound.",
+      "novelty_or_duplication_status": "No exact duplicate found; closed main minus-sign counterexample is a different result.",
+      "unresolved_assumptions_dependencies_rights": "No mathematical dependency; retain independently authored/licensed proof bytes and Apache-2.0 source attribution.",
+      "ready_for_separate_vela_conversion": {"ready": true, "why": "Exact theorem fidelity, deterministic build, standard axioms, and no duplicate."},
+      "minimal_correction_if_not_ready": "None; retain proof/toolchain/occurrence roots and non-acceptance caveats."
+    },
+    {
+      "case": 6,
+      "case_id": "erdos-945-equivalence",
+      "producer_result_type": "proposed_result",
+      "verdict": "qualified_candidate",
+      "correctness_and_scope": "Both mathematical directions are faithful to exact F, Erdos945Prop, and Erdos945Constant definitions, including Ioc/Icc endpoints and the early-start branch; no complete Lean proof is claimed.",
+      "exact_evidence_build_outcome": "Source SHA-256 7caf8d1ea9efca08a6ec421c7fb4526f4ad626feb08775d9b6e8c56fa6d3cf41; exact module compiled with source equivalence still sorry; independent endpoint/asymptotic inspection found no contradiction, but no complete inequality chain or proof term was retained.",
+      "novelty_or_duplication_status": "No covering proof or prior packet found.",
+      "unresolved_assumptions_dependencies_rights": "Needs explicit sSup, ceil/floor, real-power monotonicity, threshold, and log-asymptotic details; FC source Apache-2.0.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "Correct bounded sketch is not yet a complete checkable proof artifact."},
+      "minimal_correction_if_not_ready": "Retain a complete proof with explicit thresholds and endpoint/rounding inequalities, preferably a pinned Lean build."
+    },
+    {
+      "case": 7,
+      "case_id": "erdos-318-positive-density-dependency",
+      "producer_result_type": "typed_non_result",
+      "verdict": "valid_non_result",
+      "correctness_and_scope": "Odd naturals union {0} is a valid conditional witness, but contain_single_even and the exact density bridge both remain unproved.",
+      "exact_evidence_build_outcome": "Source SHA-256 a4b903ccdada7879aedb81a9b02c435cc0a45cdcfbbcefb9fbd74b9db4ad5177; exact declarations and density API inspected; no closed target term or duplicate proof found.",
+      "novelty_or_duplication_status": "No covering proof or prior packet found.",
+      "unresolved_assumptions_dependencies_rights": "Needs contain_single_even and density 1/2 for the proposed union; FC source Apache-2.0.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "Valid conditional abstention, not a closed Result."},
+      "minimal_correction_if_not_ready": "Close both named dependencies."
+    },
+    {
+      "case": 8,
+      "case_id": "erdos-697-threshold-identity",
+      "producer_result_type": "proposed_result",
+      "verdict": "qualified_candidate",
+      "correctness_and_scope": "Exact prose/Lean inequality swap confirmed for parts i and ii; conclusions remain unchanged.",
+      "exact_evidence_build_outcome": "Source SHA-256 52bd695b7cf25cdf02972e50c53b0b3f6290a681d7aa1f58fdcd7618cde9e10a; direct lines 51-60 byte comparison and exact-tree search completed; no proof build relevant.",
+      "novelty_or_duplication_status": "No prior packet or duplicate corrected formulation found.",
+      "unresolved_assumptions_dependencies_rights": "Establishes source identity defect, not either analytic limit; Apache-2.0 source and source-owner editorial boundary.",
+      "ready_for_separate_vela_conversion": {"ready": true, "why": "Bounded exact statement-identity correction with no duplicate."},
+      "minimal_correction_if_not_ready": "None; do not imply either limit theorem is proved or adopted upstream."
+    },
+    {
+      "case": 9,
+      "case_id": "erdos-683-961-identity",
+      "producer_result_type": "typed_non_result",
+      "verdict": "needs_correction",
+      "correctness_and_scope": "Substantive abstention is correct, but proposed_result is the empty string; the packet does not state its non-result in the designated field.",
+      "exact_evidence_build_outcome": "Exact source hashes 0b143cd140a099a504577866c493966df2eccd94cbaa1b7ce2d79d260fb017b7 and 667451a3842127bc52225a47cee1d13122fac01886c8f5dcff7ffe820e098e19 matched; no proof beyond the TODO found; proposed_result byte length is zero.",
+      "novelty_or_duplication_status": "No equivalence proof or prior packet; only unproved source TODO.",
+      "unresolved_assumptions_dependencies_rights": "Missing quantitative upgrade, reverse map, rounding/range conditions, and small-start branch; FC source Apache-2.0.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "Blank result field is not a convertable scientific assertion."},
+      "minimal_correction_if_not_ready": "Populate proposed_result with the bounded non-result already supported by the evidence."
+    },
+    {
+      "case": 10,
+      "case_id": "erdos-260-irrational-sum-negative-control",
+      "producer_result_type": "typed_non_result",
+      "verdict": "valid_non_result",
+      "correctness_and_scope": "Correctly finds no proof, counterexample, or proof-bearing bounded lemma in exact reachable bytes; stronger directions are comments only.",
+      "exact_evidence_build_outcome": "Source SHA-256 eeaeb6e213873ec1af670edaca0e422e76f5a98026f78e4006f5efa6f66f13f7; full source and exact searches found only target sorry and two TODO comments; no candidate term to build.",
+      "novelty_or_duplication_status": "No hidden proof, counterexample, formalized stronger variant, or prior packet found.",
+      "unresolved_assumptions_dependencies_rights": "Open universal theorem and both informal variants remain unresolved; FC source Apache-2.0.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "Valid negative control, not a Result candidate."},
+      "minimal_correction_if_not_ready": "No packet correction; provide an exact proof, counterexample, or proved formal stronger variant."
+    }
+  ],
+  "aggregate": {
+    "proposed_result_precision": {"qualified": 4, "denominator": 5, "rate": 0.8},
+    "valid_non_result_rate": {"valid": 4, "denominator": 5, "rate": 0.8},
+    "invalid": {"count": 0, "denominator": 10},
+    "conversion_ready": {"count": 3, "denominator": 10, "cases": [1, 5, 8]},
+    "wall_time_seconds": 1522,
+    "smallest_evidence_backed_next_step": "Open one separate conversion task for Case 5 first and retain its exact Lean proof and pinned roots; queue Cases 1 and 8 as separate source-correction candidates."
+  }
+}
