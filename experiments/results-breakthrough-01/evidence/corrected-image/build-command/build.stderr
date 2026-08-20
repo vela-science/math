@@ -1,0 +1,341 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 770B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/rust:1.97.1-bookworm@sha256:0e2bcaef56d041a486784e54104a81aebe0da44bd03019bd70bc0401e42e4a97
+#2 DONE 0.3s
+
+#3 [internal] load metadata for docker.io/library/vela-math-result-candidate@sha256:c290b6490fb78c3702694b311fe9f07bd03002d7c1c979b3e5723d6b9f579e01
+#3 DONE 0.3s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [vela-builder 1/4] FROM docker.io/library/rust:1.97.1-bookworm@sha256:0e2bcaef56d041a486784e54104a81aebe0da44bd03019bd70bc0401e42e4a97
+#5 resolve docker.io/library/rust:1.97.1-bookworm@sha256:0e2bcaef56d041a486784e54104a81aebe0da44bd03019bd70bc0401e42e4a97 done
+#5 DONE 0.0s
+
+#6 [vela-builder 2/4] WORKDIR /src
+#6 CACHED
+
+#7 [internal] load build context
+#7 transferring context: 6.97MB 0.1s done
+#7 DONE 0.1s
+
+#8 [vela-builder 3/4] COPY . .
+#8 DONE 0.1s
+
+#9 [vela-builder 4/4] RUN cargo build --locked --release -p vela-cli
+#9 ...
+
+#10 [stage-1 1/5] FROM docker.io/library/vela-math-result-candidate@sha256:c290b6490fb78c3702694b311fe9f07bd03002d7c1c979b3e5723d6b9f579e01
+#10 resolve docker.io/library/vela-math-result-candidate@sha256:c290b6490fb78c3702694b311fe9f07bd03002d7c1c979b3e5723d6b9f579e01 0.4s done
+#10 DONE 0.4s
+
+#10 [stage-1 1/5] FROM docker.io/library/vela-math-result-candidate@sha256:c290b6490fb78c3702694b311fe9f07bd03002d7c1c979b3e5723d6b9f579e01
+#10 CACHED
+
+#11 [stage-1 2/5] RUN printf '%s\n' 'af94b40fa642620275e6d617be97a542' > /etc/machine-id
+#11 DONE 0.1s
+
+#9 [vela-builder 4/4] RUN cargo build --locked --release -p vela-cli
+#9 0.270 info: syncing channel updates for 1.97.1-aarch64-unknown-linux-gnu
+#9 0.429 info: latest update on 2026-07-16 for version 1.97.1 (8bab26f4f 2026-07-14)
+#9 0.437 info: downloading component clippy
+#9 1.212     Updating crates.io index
+#9 4.609  Downloading crates ...
+#9 4.662   Downloaded clap_lex v1.1.0
+#9 4.664   Downloaded colorchoice v1.0.5
+#9 4.667   Downloaded base64ct v1.8.3
+#9 4.668   Downloaded anstream v1.0.0
+#9 4.669   Downloaded cipher v0.4.4
+#9 4.670   Downloaded clap_derive v4.6.4
+#9 4.671   Downloaded version_check v0.9.5
+#9 4.672   Downloaded clap_complete v4.6.9
+#9 4.673   Downloaded utf8parse v0.2.2
+#9 4.675   Downloaded cfg-if v1.0.4
+#9 4.676   Downloaded block-buffer v0.10.4
+#9 4.682   Downloaded anstyle-query v1.1.5
+#9 4.684   Downloaded base16ct v0.2.0
+#9 4.685   Downloaded anstyle-parse v1.0.0
+#9 4.687   Downloaded anstyle v1.0.14
+#9 4.687   Downloaded autocfg v1.5.0
+#9 4.688   Downloaded bitflags v2.11.1
+#9 4.690   Downloaded clap v4.6.6
+#9 4.694   Downloaded base64 v0.23.1
+#9 4.696   Downloaded strsim v0.11.1
+#9 4.704   Downloaded clap_builder v4.6.6
+#9 4.707   Downloaded tinyvec_macros v0.1.1
+#9 4.710   Downloaded subtle v2.6.1
+#9 4.712   Downloaded digest v0.10.7
+#9 4.713   Downloaded pem-rfc7468 v0.7.0
+#9 4.716   Downloaded ecdsa v0.16.9
+#9 4.717   Downloaded chrono v0.4.45
+#9 4.720   Downloaded generic-array v0.14.7
+#9 4.721   Downloaded errno v0.3.14
+#9 4.722   Downloaded heck v0.5.0
+#9 4.746   Downloaded rustc_version v0.4.1
+#9 4.748   Downloaded hex v0.4.3
+#9 4.762   Downloaded toml_datetime v1.1.1+spec-1.1.0
+#9 4.762   Downloaded toml_writer v1.1.2+spec-1.1.0
+#9 4.763   Downloaded zeroize v1.8.2
+#9 4.763   Downloaded zmij v1.0.21
+#9 4.764   Downloaded signature v2.2.0
+#9 4.765   Downloaded ssh-cipher v0.2.0
+#9 4.766   Downloaded is_terminal_polyfill v1.70.2
+#9 4.766   Downloaded p256 v0.13.2
+#9 4.768   Downloaded primeorder v0.13.6
+#9 4.768   Downloaded sec1 v0.7.3
+#9 4.769   Downloaded quote v1.0.45
+#9 4.785   Downloaded toml v1.1.4+spec-1.1.0
+#9 4.787   Downloaded toml_parser v1.1.3+spec-1.1.0
+#9 4.788   Downloaded unicode-ident v1.0.24
+#9 4.791   Downloaded serde_derive_internals v0.30.0
+#9 4.792   Downloaded tempfile v3.27.0
+#9 4.793   Downloaded tinyvec v1.11.0
+#9 4.797   Downloaded cpufeatures v0.2.17
+#9 4.798   Downloaded itoa v1.0.18
+#9 4.798   Downloaded lazy_static v1.5.0
+#9 4.799   Downloaded ref-cast v1.0.26
+#9 4.800   Downloaded ssh-encoding v0.2.0
+#9 4.801   Downloaded uuid v1.24.0
+#9 4.804   Downloaded serde_spanned v1.1.1
+#9 4.805   Downloaded spki v0.7.3
+#9 4.808   Downloaded hmac v0.12.1
+#9 4.809   Downloaded once_cell v1.21.4
+#9 4.810   Downloaded getrandom v0.2.17
+#9 4.813   Downloaded typenum v1.20.0
+#9 4.815   Downloaded equivalent v1.0.2
+#9 4.829   Downloaded unicode-normalization v0.1.25
+#9 4.831   Downloaded winnow v1.0.4
+#9 4.835   Downloaded num-iter v0.1.46
+#9 4.836   Downloaded ref-cast-impl v1.0.26
+#9 4.836   Downloaded rfc6979 v0.4.0
+#9 4.836   Downloaded same-file v1.0.6
+#9 4.837   Downloaded crypto-common v0.1.7
+#9 4.837   Downloaded rand_chacha v0.3.1
+#9 4.838   Downloaded dyn-clone v1.0.20
+#9 4.847   Downloaded smallvec v1.15.1
+#9 4.859   Downloaded fastrand v2.4.1
+#9 4.860   Downloaded inout v0.1.4
+#9 4.861   Downloaded pkcs8 v0.10.2
+#9 4.887   Downloaded ed25519 v2.2.3
+#9 4.887   Downloaded group v0.13.0
+#9 4.905   Downloaded ff v0.13.1
+#9 4.906   Downloaded rand_core v0.6.4
+#9 4.907   Downloaded sha2 v0.10.9
+#9 4.910   Downloaded getrandom v0.4.2
+#9 4.918   Downloaded schemars_derive v1.2.2
+#9 4.978   Downloaded ppv-lite86 v0.2.21
+#9 5.053   Downloaded serde_json_canonicalizer v0.3.2
+#9 5.133   Downloaded pkcs1 v0.7.5
+#9 5.153   Downloaded iana-time-zone v0.1.65
+#9 5.224   Downloaded colored v3.1.1
+#9 5.248   Downloaded zerocopy v0.8.55
+#9 5.291   Downloaded proc-macro2 v1.0.106
+#9 5.293   Downloaded spin v0.9.9
+#9 5.314   Downloaded syn v2.0.117
+#9 5.323   Downloaded syn v3.0.3
+#9 5.478   Downloaded num-integer v0.1.46
+#9 5.507   Downloaded const-oid v0.9.6
+#9 5.512   Downloaded semver v1.0.28
+#9 5.538   Downloaded elliptic-curve v0.13.8
+#9 5.542   Downloaded rsa v0.9.10
+#9 5.547   Downloaded serde_core v1.0.228
+#9 5.550   Downloaded num-traits v0.2.19
+#9 5.575   Downloaded serde_derive v1.0.228
+#9 5.640   Downloaded ryu-js v1.0.3
+#9 5.662   Downloaded serde v1.0.228
+#9 5.672   Downloaded der v0.7.10
+#9 5.692   Downloaded memchr v2.8.0
+#9 5.702   Downloaded rand v0.8.7
+#9 5.715   Downloaded schemars v1.2.2
+#9 5.722   Downloaded crypto-bigint v0.5.5
+#9 5.724   Downloaded num-bigint-dig v0.8.6
+#9 5.726   Downloaded indexmap v2.14.0
+#9 5.730   Downloaded ed25519-dalek v2.2.0
+#9 5.755   Downloaded ssh-key v0.6.7
+#9 5.769   Downloaded serde_json v1.0.151
+#9 5.779   Downloaded p521 v0.13.3
+#9 5.797   Downloaded hashbrown v0.17.0
+#9 5.805   Downloaded libm v0.2.16
+#9 5.829   Downloaded p384 v0.13.1
+#9 5.959   Downloaded curve25519-dalek v4.1.3
+#9 6.027   Downloaded rustix v1.1.4
+#9 6.245   Downloaded libc v0.2.189
+#9 ...
+
+#12 [stage-1 3/5] RUN apt-get update     && apt-get install -y --no-install-recommends openssh-client     && rm -rf /var/lib/apt/lists/*
+#12 0.210 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#12 0.548 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#12 0.575 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [34.8 kB]
+#12 0.589 Get:4 http://deb.debian.org/debian bookworm/main arm64 Packages [8689 kB]
+#12 3.406 Get:5 http://deb.debian.org/debian bookworm-updates/main arm64 Packages [6936 B]
+#12 3.406 Get:6 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages [337 kB]
+#12 4.002 Fetched 9275 kB in 4s (2402 kB/s)
+#12 4.002 Reading package lists...
+#12 4.238 Reading package lists...
+#12 4.477 Building dependency tree...
+#12 4.541 Reading state information...
+#12 4.612 The following additional packages will be installed:
+#12 4.612   libbsd0 libcbor0.8 libedit2 libfido2-1
+#12 4.612 Suggested packages:
+#12 4.612   keychain libpam-ssh monkeysphere ssh-askpass
+#12 4.612 Recommended packages:
+#12 4.612   xauth
+#12 4.637 The following NEW packages will be installed:
+#12 4.637   libbsd0 libcbor0.8 libedit2 libfido2-1 openssh-client
+#12 4.653 0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+#12 4.653 Need to get 1236 kB of archives.
+#12 4.653 After this operation, 7486 kB of additional disk space will be used.
+#12 4.653 Get:1 http://deb.debian.org/debian bookworm/main arm64 libbsd0 arm64 0.11.7-2 [115 kB]
+#12 4.670 Get:2 http://deb.debian.org/debian bookworm/main arm64 libedit2 arm64 3.1-20221030-2 [88.1 kB]
+#12 4.693 Get:3 http://deb.debian.org/debian bookworm/main arm64 libcbor0.8 arm64 0.8.0-2+b1 [26.0 kB]
+#12 4.713 Get:4 http://deb.debian.org/debian bookworm/main arm64 libfido2-1 arm64 1.12.0-2+b1 [72.6 kB]
+#12 4.799 Get:5 http://deb.debian.org/debian bookworm/main arm64 openssh-client arm64 1:9.2p1-2+deb12u10 [935 kB]
+#12 5.421 debconf: delaying package configuration, since apt-utils is not installed
+#12 5.441 Fetched 1236 kB in 1s (1962 kB/s)
+#12 5.473 Selecting previously unselected package libbsd0:arm64.
+#12 5.473 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 38947 files and directories currently installed.)
+#12 5.598 Preparing to unpack .../libbsd0_0.11.7-2_arm64.deb ...
+#12 5.601 Unpacking libbsd0:arm64 (0.11.7-2) ...
+#12 5.621 Selecting previously unselected package libedit2:arm64.
+#12 5.623 Preparing to unpack .../libedit2_3.1-20221030-2_arm64.deb ...
+#12 5.624 Unpacking libedit2:arm64 (3.1-20221030-2) ...
+#12 5.651 Selecting previously unselected package libcbor0.8:arm64.
+#12 5.653 Preparing to unpack .../libcbor0.8_0.8.0-2+b1_arm64.deb ...
+#12 5.654 Unpacking libcbor0.8:arm64 (0.8.0-2+b1) ...
+#12 5.668 Selecting previously unselected package libfido2-1:arm64.
+#12 5.669 Preparing to unpack .../libfido2-1_1.12.0-2+b1_arm64.deb ...
+#12 5.670 Unpacking libfido2-1:arm64 (1.12.0-2+b1) ...
+#12 5.690 Selecting previously unselected package openssh-client.
+#12 5.692 Preparing to unpack .../openssh-client_1%3a9.2p1-2+deb12u10_arm64.deb ...
+#12 5.695 Unpacking openssh-client (1:9.2p1-2+deb12u10) ...
+#12 5.754 Setting up libcbor0.8:arm64 (0.8.0-2+b1) ...
+#12 5.760 Setting up libfido2-1:arm64 (1.12.0-2+b1) ...
+#12 5.762 Setting up libbsd0:arm64 (0.11.7-2) ...
+#12 5.768 Setting up libedit2:arm64 (3.1-20221030-2) ...
+#12 5.770 Setting up openssh-client (1:9.2p1-2+deb12u10) ...
+#12 5.804 Processing triggers for libc-bin (2.36-9+deb12u14) ...
+#12 DONE 6.0s
+
+#9 [vela-builder 4/4] RUN cargo build --locked --release -p vela-cli
+#9 6.995   Downloaded linux-raw-sys v0.12.1
+#9 7.048   Downloaded spdx v0.13.5
+#9 7.100    Compiling proc-macro2 v1.0.106
+#9 7.100    Compiling quote v1.0.45
+#9 7.100    Compiling unicode-ident v1.0.24
+#9 7.100    Compiling version_check v0.9.5
+#9 7.100    Compiling libc v0.2.189
+#9 7.101    Compiling typenum v1.20.0
+#9 7.101    Compiling cfg-if v1.0.4
+#9 7.102    Compiling serde_core v1.0.228
+#9 7.102    Compiling semver v1.0.28
+#9 7.103    Compiling zmij v1.0.21
+#9 7.104    Compiling autocfg v1.5.0
+#9 7.105    Compiling getrandom v0.4.2
+#9 7.106    Compiling serde v1.0.228
+#9 7.108    Compiling serde_json v1.0.151
+#9 7.109    Compiling subtle v2.6.1
+#9 7.109    Compiling itoa v1.0.18
+#9 7.350    Compiling signature v2.2.0
+#9 7.376    Compiling zeroize v1.8.2
+#9 7.387    Compiling memchr v2.8.0
+#9 7.435    Compiling rustc_version v0.4.1
+#9 7.445    Compiling ref-cast v1.0.26
+#9 7.462    Compiling generic-array v0.14.7
+#9 7.484    Compiling utf8parse v0.2.2
+#9 7.485    Compiling tinyvec_macros v0.1.1
+#9 7.513    Compiling winnow v1.0.4
+#9 7.515    Compiling anstyle-parse v1.0.0
+#9 7.548    Compiling num-traits v0.2.19
+#9 7.605    Compiling tinyvec v1.11.0
+#9 7.614    Compiling ed25519 v2.2.3
+#9 7.618    Compiling dyn-clone v1.0.20
+#9 7.618    Compiling colorchoice v1.0.5
+#9 7.621    Compiling curve25519-dalek v4.1.3
+#9 7.623    Compiling ryu-js v1.0.3
+#9 7.644    Compiling anstyle v1.0.14
+#9 7.678    Compiling smallvec v1.15.1
+#9 7.681    Compiling anstyle-query v1.1.5
+#9 7.685    Compiling is_terminal_polyfill v1.70.2
+#9 7.727    Compiling toml_parser v1.1.3+spec-1.1.0
+#9 7.746    Compiling base64ct v1.8.3
+#9 7.746    Compiling iana-time-zone v0.1.65
+#9 7.790    Compiling rustix v1.1.4
+#9 7.805    Compiling toml_writer v1.1.2+spec-1.1.0
+#9 7.811    Compiling spdx v0.13.5
+#9 7.813    Compiling anstream v1.0.0
+#9 7.870    Compiling unicode-normalization v0.1.25
+#9 7.898    Compiling heck v0.5.0
+#9 7.925    Compiling pem-rfc7468 v0.7.0
+#9 7.949    Compiling crypto-common v0.1.7
+#9 7.963    Compiling block-buffer v0.10.4
+#9 7.969    Compiling inout v0.1.4
+#9 7.971    Compiling clap_lex v1.1.0
+#9 7.993    Compiling strsim v0.11.1
+#9 8.018    Compiling bitflags v2.11.1
+#9 8.049    Compiling syn v3.0.3
+#9 8.049    Compiling digest v0.10.7
+#9 8.062    Compiling syn v2.0.117
+#9 8.101    Compiling chrono v0.4.45
+#9 8.121    Compiling hex v0.4.3
+#9 8.137    Compiling linux-raw-sys v0.12.1
+#9 8.171    Compiling base64 v0.23.1
+#9 8.236    Compiling cpufeatures v0.2.17
+#9 8.257    Compiling getrandom v0.2.17
+#9 8.268    Compiling sha2 v0.10.9
+#9 8.302    Compiling clap_builder v4.6.6
+#9 8.304    Compiling cipher v0.4.4
+#9 8.318    Compiling rand_core v0.6.4
+#9 8.367    Compiling uuid v1.24.0
+#9 8.370    Compiling ssh-encoding v0.2.0
+#9 8.401    Compiling fastrand v2.4.1
+#9 8.402    Compiling once_cell v1.21.4
+#9 8.514    Compiling ed25519-dalek v2.2.0
+#9 8.517    Compiling ssh-cipher v0.2.0
+#9 8.553    Compiling same-file v1.0.6
+#9 8.571    Compiling ssh-key v0.6.7
+#9 8.582    Compiling colored v3.1.1
+#9 8.710    Compiling serde_spanned v1.1.1
+#9 8.762    Compiling toml_datetime v1.1.1+spec-1.1.0
+#9 8.840    Compiling toml v1.1.4+spec-1.1.0
+#9 9.007    Compiling serde_derive_internals v0.30.0
+#9 9.045    Compiling serde_derive v1.0.228
+#9 9.249    Compiling ref-cast-impl v1.0.26
+#9 9.311    Compiling clap_derive v4.6.4
+#9 9.336    Compiling schemars_derive v1.2.2
+#9 9.435    Compiling tempfile v3.27.0
+#9 10.01    Compiling clap v4.6.6
+#9 10.04    Compiling clap_complete v4.6.9
+#9 10.37    Compiling schemars v1.2.2
+#9 10.37    Compiling serde_json_canonicalizer v0.3.2
+#9 10.72    Compiling vela-protocol v0.977.3 (/src/crates/vela-protocol)
+#9 12.39    Compiling vela-authority v0.977.3 (/src/crates/vela-authority)
+#9 12.39    Compiling vela-repository v0.977.3 (/src/crates/vela-repository)
+#9 13.32    Compiling vela-cli v0.977.3 (/src/crates/vela-cli)
+#9 20.09     Finished `release` profile [optimized] target(s) in 18.95s
+#9 DONE 20.4s
+
+#13 [stage-1 4/5] COPY --from=vela-builder /src/target/release/vela /usr/local/bin/vela
+#13 DONE 0.0s
+
+#14 [stage-1 5/5] WORKDIR /work
+#14 DONE 0.0s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 0.2s done
+#15 exporting manifest sha256:180d887d0c456724fd560d806b2cd1cd9dc71f640deb8fe0eb326fa911615cbc
+#15 exporting manifest sha256:180d887d0c456724fd560d806b2cd1cd9dc71f640deb8fe0eb326fa911615cbc done
+#15 exporting config sha256:83ebc57d094e5a0b12ae73e8179bdba757750f7417fb8403fca3e2f2d2c83fcc done
+#15 exporting attestation manifest sha256:6a339babcf820d2855c2ab3aa9434adcb0b7996ac9e47050489f9f1cd0b184e2 done
+#15 exporting manifest list sha256:76c64845ae35f57835a08f386d4206bf021ccf1169f8a35e59cc68d8e4408e7e done
+#15 naming to docker.io/library/vela-results-breakthrough-01:approved-machine-id done
+#15 unpacking to docker.io/library/vela-results-breakthrough-01:approved-machine-id 0.1s done
+#15 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/7drllqwxl2qa62bqj57yecz13

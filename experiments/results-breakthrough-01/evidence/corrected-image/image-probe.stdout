@@ -1,0 +1,13 @@
+machine_id=af94b40fa642620275e6d617be97a542
+machine_id_bytes=33
+70130fcf77290eece0f9df935fe0990d77a98fa3df25219528a0aa2566f7a58c  /etc/machine-id
+59cc91e9d277d733a8f5b2892653cf5b540778ce26ac794521c63bba0036103b  /usr/local/bin/vela
+134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477  /usr/local/bin/codex
+54af380ba6ca1b36305358e99427a31ae4b0af5dc5cb6d0198c6f2f16e97651d  /usr/bin/git
+304aa87a76ebb13fd22d253ac157f14980ff2cdb23e6274f3b045571405e07dc  /usr/bin/python3
+vela 0.977.3
+codex-cli 0.145.0
+git version 2.39.5
+Python 3.11.2
+3.40.1
+Linux 6.10.14-linuxkit aarch64

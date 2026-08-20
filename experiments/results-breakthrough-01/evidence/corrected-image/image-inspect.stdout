@@ -1,0 +1,58 @@
+[
+    {
+        "Id": "sha256:76c64845ae35f57835a08f386d4206bf021ccf1169f8a35e59cc68d8e4408e7e",
+        "RepoTags": [
+            "vela-results-breakthrough-01:approved-machine-id"
+        ],
+        "RepoDigests": [
+            "vela-results-breakthrough-01@sha256:76c64845ae35f57835a08f386d4206bf021ccf1169f8a35e59cc68d8e4408e7e"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-08-20T22:58:25.993477427Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Architecture": "arm64",
+        "Os": "linux",
+        "Size": 388793249,
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:12cdff3b039e28c684ffd2097ff5a66df274a8500966a1431038b05f50bcf096",
+                "sha256:4c804a5b7391459ae979e13fb40a5f5278aaaf38f73fb75bda6e691f1ffa988e",
+                "sha256:d1166fdcb5128d2263286d648db5d4933ded3d1eeb2fcfe8ce48d27b0c804bf9",
+                "sha256:c74cc87214c17ad5326f80a6fb99fb8d5d1491288f04d98030dc2482b5c6e52d",
+                "sha256:18d8143d60e8c1ca35eb5c43e94ffda48f614c5d9e88857cf9a0ba81005e3836",
+                "sha256:d57964533502ec41d9c4cfa39efe119ac5220673d2ef425e640442d3432b73f9",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-20T22:58:26.204618677Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:76c64845ae35f57835a08f386d4206bf021ccf1169f8a35e59cc68d8e4408e7e",
+            "size": 856
+        },
+        "Config": {
+            "ArgsEscaped": true,
+            "Cmd": [
+                "bash"
+            ],
+            "Entrypoint": null,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Labels": null,
+            "OnBuild": null,
+            "User": "",
+            "Volumes": null,
+            "WorkingDir": "/work"
+        }
+    }
+]

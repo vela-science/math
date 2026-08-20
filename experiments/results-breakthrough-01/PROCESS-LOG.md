@@ -369,3 +369,70 @@ fields; the observation remains separate.
   of synthesizing protocol manifests inline.
 - **Disposition:** fix now because the defect deterministically blocks V;
   otherwise advisory, with no protocol/schema redesign or new approval gate.
+
+## 2026-08-20T23:00:32Z — corrected fixture initialized a non-empty directory
+
+- **Stage/time and evidence:** one authorized no-model V fixture;
+  `evidence/vela-lifecycle-fixture/fixture-command.json` and retained Vela init
+  receipt `session/organization-only/pre-verdict/receipts/init.*`.
+- **Observation and impact:** the Review Method validator passed, but the
+  adapter copied `result.json` and `artifacts/` into `session/repo` before
+  `vela init .`; Vela returned structured domain error `refusing to initialize
+  non-empty directory .`, so no Submission, Verification, Decision, replay,
+  readback, or provider-loss reconstruction was possible.
+- **Category:** harness/script.
+- **Root cause:** lifecycle `prepare` orders retained packet copying before the
+  empty-directory initialization required by Vela.
+- **Affected:** one of one fixture attempts and under one second; zero model,
+  OAuth, or credit-relevant sessions; disposable state only; canonical/source
+  state unchanged.
+- **Immediate correction:** preserve the complete failure, remove the
+  disposable private key, run the credential and no-mutation checks, and make
+  no retry in this turn.
+- **Prevention/simplification:** after separate review, initialize the empty
+  disposable repository first, then copy/commit the retained packet; a single
+  no-model adapter fixture should cover this ordering before launch.
+- **Disposition:** experiment-blocking; stop at the one-shot denominator and
+  hand the smallest ordering correction to independent review.
+
+## 2026-08-20T23:02:00Z — BuildKit inputs were not engine image entries
+
+- **Stage/time and evidence:** post-build reconstruction inspection;
+  `evidence/corrected-image/base-images*.{json,stdout,stderr}`.
+- **Observation and impact:** two read-only `docker image inspect` forms failed
+  because BuildKit had resolved the digest-pinned `FROM` inputs in its cache
+  without materializing them as standalone Docker Engine image entries. The
+  successful build transcript already retains their exact resolved digests.
+- **Category:** Docker/environment.
+- **Root cause:** operator assumed BuildKit input-cache objects were also
+  addressable through the Engine image store.
+- **Affected:** seconds and two read-only diagnostic commands; no build,
+  fixture, session, credential, or state change.
+- **Immediate correction:** rely on the exact BuildKit transcript, output image
+  inspection/history, frozen Dockerfile, and context hashes; do not pull or
+  rebuild solely for redundant inspection.
+- **Prevention/simplification:** do not require standalone local base-image
+  entries when a digest-pinned build transcript already proves resolution.
+- **Disposition:** defer; keep as observational evidence, no new gate.
+
+## 2026-08-20T23:08:00Z — Build transcript CR bytes needed Git protection
+
+- **Stage/time and evidence:** pre-commit evidence inspection; `git diff
+  --cached --check` identified carriage-return progress bytes in
+  `evidence/corrected-image/build-command/build.stderr`.
+- **Observation and impact:** the exact retained BuildKit transcript contains
+  terminal progress carriage returns; automatic text normalization could have
+  changed the retained bytes and invalidated the command receipt hash after a
+  clone.
+- **Category:** harness/script.
+- **Root cause:** experiment evidence preimages did not yet inherit the
+  repository's `records/** -text` protection.
+- **Affected:** one pre-commit near miss and minutes; no build, fixture,
+  session, credential, source, or canonical state.
+- **Immediate correction:** add one evidence-local `.gitattributes` rule
+  (`* binary`, including `-text`) so all retained receipt preimages remain
+  byte-exact and are not reformatted as source diffs.
+- **Prevention/simplification:** protect an evidence directory once at its
+  boundary rather than rewriting or special-casing individual transcripts.
+- **Disposition:** fix now because raw receipt digests are load-bearing; this
+  is preservation metadata, not a new experiment gate.

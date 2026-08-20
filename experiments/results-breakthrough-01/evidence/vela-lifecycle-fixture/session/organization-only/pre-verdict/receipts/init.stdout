@@ -1,0 +1,11 @@
+{
+  "schema": "vela.error.v1",
+  "ok": false,
+  "command": "init",
+  "error": {
+    "kind": "domain",
+    "code": null,
+    "message": "refusing to initialize non-empty directory .",
+    "hint": null
+  }
+}
