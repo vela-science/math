@@ -1,0 +1,110 @@
+{
+  "schema": "results-breakthrough-01.source-lock.v1",
+  "frozen_at": "2026-08-20",
+  "inference_started": false,
+  "authority_effect": "none",
+  "repositories": {
+    "math": {
+      "remote": "https://github.com/vela-science/math.git",
+      "commit": "5de716c896065c03c0a470d015ba2a328a527f73",
+      "tree": "56e37a5058c80e69f3c343b8ae624c08b5417229",
+      "complete_clone": true,
+      "fsck_full": "pass",
+      "repository_manifest_sha256": "a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4",
+      "bundle": {
+        "external_path": "/Users/williamblair/.codex/cache/results-breakthrough-01/source-bundles/math-5de716c896065c03.bundle",
+        "bytes": 12372748,
+        "sha256": "d8f89e9d8b29b6b3feaf64ea6c48b1b5e2669a2b8020ffe5850f9c58a98ae02a",
+        "verify": "pass"
+      }
+    },
+    "formal_conjectures": {
+      "remote": "https://github.com/google-deepmind/formal-conjectures.git",
+      "commit": "e13dd7284e72012a1616806d09cb6b8025e387af",
+      "tree": "7d2b7c17ff144393c2b4a39973ed212387b3e783",
+      "complete_clone": true,
+      "fsck_full": "pass",
+      "lean_toolchain_sha256": "e695e6e5d8e7a8be4d6cf159dfb995847993d26c6cc450353a86f387279025b9",
+      "lake_manifest_sha256": "5b99b5f4f807cbba67bbcd22e5e486c17d6a8d970ea218de08d05830ab350c26",
+      "license": "Apache-2.0",
+      "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bundle": {
+        "external_path": "/Users/williamblair/.codex/cache/results-breakthrough-01/source-bundles/formal-conjectures-e13dd7284e72012a.bundle",
+        "bytes": 7009501,
+        "sha256": "de2e9a710ebb5ee2647726a3ee1fd9ed19e3e39f974522cfc010e609177c2a79",
+        "verify": "pass"
+      }
+    },
+    "lean_proofs": {
+      "remote": "https://github.com/williamjblair/lean-proofs.git",
+      "commit": "accf62cb636c8909dd7e098e3f82b2140d3a192e",
+      "tree": "608ce332d1d5d8f14abc7d39349f4a29102f5aba",
+      "complete_clone": true,
+      "fsck_full": "pass",
+      "lean_toolchain_sha256": "7dc000621e0046d1aada809e2b7177e64454645cf4c741e9daaf79c99ec2e7a2",
+      "lake_manifest_sha256": "f4c3e1fea9e745548c15b78b91015489277625c3dee15ab1ebe8bf6acf57b320",
+      "license": "MIT",
+      "license_sha256": "0665bb5f63d444ca4dcc9ad89e274cf1d657928789bd1cae6ce2524423fe5902",
+      "bundle": {
+        "external_path": "/Users/williamblair/.codex/cache/results-breakthrough-01/source-bundles/lean-proofs-accf62cb636c8909.bundle",
+        "bytes": 121831733,
+        "sha256": "b2e72e94e1ff4231ec1b0659ad670192ec2c6d514ea0ba2176f5e5b4fa20d535",
+        "verify": "pass"
+      }
+    },
+    "vela": {
+      "remote": "https://github.com/vela-science/vela.git",
+      "commit": "88fcc0105eba35ee22ed1816d3aabba3322bebc1",
+      "tree": "2cb85fe1e1c3525ba97ff2aec25945417ea7b372",
+      "complete_clone": true,
+      "fsck_full": "pass",
+      "version": "0.977.3",
+      "rust_toolchain_sha256": "24a5037a8f0a264369ef37bb46e019ade6c524beaead1c28f77a429f856a066b",
+      "cargo_lock_sha256": "2e36edbd65bfef6c783ae11c3e339e3e16b13d0d6992c86766854e10710e0cbc",
+      "license": "Apache-2.0",
+      "license_sha256": "dcfa071fa15664e4f14251a964838811ecc7d0ef07f1982e9aae50330472fbea",
+      "bundle": {
+        "external_path": "/Users/williamblair/.codex/cache/results-breakthrough-01/source-bundles/vela-88fcc0105eba35ee.bundle",
+        "bytes": 66096691,
+        "sha256": "f69fd65aece50dd45f8ae597f3cc1648d39438044110641b952603b720562598",
+        "verify": "pass"
+      }
+    }
+  },
+  "docker": {
+    "required_context": "desktop-linux",
+    "observed_context": "desktop-linux",
+    "client_version": "29.2.1",
+    "server_version": "28.3.2",
+    "image": "vela-results-breakthrough-01@sha256:526fdb202378ca02eb5946c75bc4d319751336c0ad88162c671fbe89950d1750",
+    "base_image": "vela-math-result-candidate@sha256:c290b6490fb78c3702694b311fe9f07bd03002d7c1c979b3e5723d6b9f579e01",
+    "rust_builder": "rust:1.97.1-bookworm@sha256:0e2bcaef56d041a486784e54104a81aebe0da44bd03019bd70bc0401e42e4a97",
+    "platform": "linux/arm64",
+    "codex_version": "0.145.0",
+    "codex_sha256": "134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477",
+    "vela_version": "0.977.3",
+    "vela_sha256": "59cc91e9d277d733a8f5b2892653cf5b540778ce26ac794521c63bba0036103b",
+    "git_version": "2.39.5",
+    "python_version": "3.11.2",
+    "python_sqlite_version": "3.40.1"
+  },
+  "model": {
+    "provider_path": "ChatGPT OAuth",
+    "login_probe": "Logged in using ChatGPT",
+    "credential_bytes_retained": false,
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "high",
+    "service_tier": "default",
+    "runner": "codex exec",
+    "candidate_sessions_max": 30,
+    "evaluator_sessions_max": 10,
+    "oauth_sessions_max": 40,
+    "retries": 0
+  },
+  "answer_contract": {
+    "source_commit": "082a118ea6ce7c9ca6a62f72aa425373228f7efe",
+    "path": "results/2026-08-20-docker-batch-3/result.schema.json",
+    "sha256": "62f7bbc908dbb9020ea39430307c0c685ee30fce2dee496e54b739e4b5a702b6",
+    "modified_for_this_experiment": false
+  }
+}
