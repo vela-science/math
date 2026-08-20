@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "result_type",
+    "question",
+    "proposed_result",
+    "evidence",
+    "build_or_check_outcome",
+    "assumptions_and_dependencies",
+    "limitations",
+    "smallest_independent_check"
+  ],
+  "properties": {
+    "case_id": { "type": "string" },
+    "result_type": {
+      "type": "string",
+      "enum": ["proposed_result", "typed_non_result"]
+    },
+    "question": { "type": "string" },
+    "proposed_result": { "type": "string" },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source", "observation"],
+        "properties": {
+          "source": { "type": "string" },
+          "observation": { "type": "string" }
+        }
+      }
+    },
+    "build_or_check_outcome": { "type": "string" },
+    "assumptions_and_dependencies": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "smallest_independent_check": { "type": "string" }
+  }
+}
+

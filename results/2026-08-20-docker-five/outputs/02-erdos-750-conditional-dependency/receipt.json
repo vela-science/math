@@ -1,0 +1,13 @@
+{
+  "attempt": 2,
+  "case_id": "erdos-750-conditional-dependency",
+  "exit_code": 0,
+  "elapsed_seconds": 102.14,
+  "retry_count": 0,
+  "completed_shell_calls": 7,
+  "input_sha256": "445a678f9ff41100999b5d31e45376cfe247a6fee1ad270cb451b0fb9bb75b19",
+  "candidate_sha256": "4e0b08239dcfd8e5951eedd0c550ddc095cacd0edfbadbfc15a85b2a0602b7f8",
+  "tool_calls_sha256": "c7f2dacd8cd78e9d2293e19d1de4001fbf5fe2b46620d04362382e0f290b7ce5",
+  "raw_event_stream_sha256": "4dfa25d9cd6a589e16f401a8a0b5414406f1dcf9ea88102e0a8042843eb76819",
+  "authority_effect": "none"
+}

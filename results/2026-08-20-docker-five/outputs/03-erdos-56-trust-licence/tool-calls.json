@@ -1,0 +1,18 @@
+[
+  {
+    "command": "/bin/bash -lc \"sed -n '1,260p' /work/results/2026-08-20/erdos-56-transitive-native-decide.md\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"sha256sum evaluations/fc-build-audit-v1/builds.json evaluations/fc-build-audit-v1/findings.json && jq '.builds // . | .. | objects | select((.declaration? // .target? // \\\"\\\") | tostring | contains(\\\"Erdos56\\\"))' evaluations/fc-build-audit-v1/builds.json && jq '.. | objects | select((.declaration? // .target? // .finding_id? // \\\"\\\") | tostring | test(\\\"Erdos56|erdos_56|erdos-56\\\"; \\\"i\\\"))' evaluations/fc-build-audit-v1/findings.json\"",
+    "exit_code": 127
+  },
+  {
+    "command": "/bin/bash -lc \"rg -n -C 12 'Erdos56|erdos_56|erdos-56|bebe632' evaluations/fc-build-audit-v1/builds.json evaluations/fc-build-audit-v1/findings.json && rg --files /work | rg '(\"'^|/)(56'\"\\\\.lean|Erdos56\\\\.lean|LICENSE|LICENCE)(\\\\.|\"'$|/)'\"' | head -200\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"rg -n -C 4 'no repository-level licence|v4\\\\.24\\\\.0.*licen|licence direction|trust policy' /work/results /work/evaluations | head -240 && git status --short && git rev-parse HEAD\"",
+    "exit_code": 128
+  }
+]

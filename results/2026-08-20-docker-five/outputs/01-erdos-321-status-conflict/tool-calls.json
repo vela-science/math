@@ -1,0 +1,18 @@
+[
+  {
+    "command": "/bin/bash -lc \"sed -n '1,240p' /work/results/2026-08-20/erdos-321-status-conflict.md\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"git status --short && git rev-parse HEAD && sha256sum methods/current/known-result-and-duplicate-search.v1.json records/claims/sha256/58f97ba8a90d23d4655c4b71051c6bdd4723c0454f31f4ed3cb3e95b0a6c8b15.json && sed -n '1,220p' records/claims/sha256/58f97ba8a90d23d4655c4b71051c6bdd4723c0454f31f4ed3cb3e95b0a6c8b15.json && rg -n 'b9c6915|58f97ba8|erdos.?321|Erdos 321' .vela/repository.json results methods evidence records -g '\"'!results/2026-08-20/erdos-321-status-conflict.md'\"'\"",
+    "exit_code": 128
+  },
+  {
+    "command": "/bin/bash -lc \"pwd; ls -la .git .vela methods/current records/claims/sha256 | sed -n '1,120p'; sha256sum methods/current/known-result-and-duplicate-search.v1.json records/claims/sha256/58f97ba8a90d23d4655c4b71051c6bdd4723c0454f31f4ed3cb3e95b0a6c8b15.json; sed -n '1,220p' records/claims/sha256/58f97ba8a90d23d4655c4b71051c6bdd4723c0454f31f4ed3cb3e95b0a6c8b15.json; rg -n 'b9c6915|58f97ba8|erdos.?321|Erdos 321' .vela/repository.json results methods evidence records -g '\"'!results/2026-08-20/erdos-321-status-conflict.md'\"'\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"find results/2026-08-20 evidence -type f | sort | rg '321|status|conflict|erdosproblems|formal-conjectures' | sed -n '1,240p'; sed -n '35,90p' evidence/current/erdos-321/sources/formal-conjectures-321.lean; sed -n '1,180p' methods/current/known-result-and-duplicate-search.v1.json; sed -n '1,180p' results/2026-08-20/ADJUDICATION_COMMITMENT.md\"",
+    "exit_code": 0
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "command": "/bin/bash -lc \"pwd && rg --files evidence/current/erdos-94 && git rev-parse HEAD && git status --short && sed -n '1,240p' evidence/current/erdos-94/pilot-input.v1.json && sed -n '1,280p' evidence/current/erdos-94/producer-report.v1.json\"",
+    "exit_code": 128
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,260p' evidence/current/erdos-94/pilot-input.v1.json; sed -n '1,340p' evidence/current/erdos-94/producer-report.v1.json; sed -n '1,320p' evidence/current/erdos-94/occurrence-binding.v2.json; sed -n '1,260p' evidence/current/erdos-94/occurrence-mapping-observation.v1.json; sed -n '1,220p' evidence/current/erdos-94/occurrence-binding.v1.json\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"find /work -path '*/Erdos94SumMultiplicity.lean' -o -path '*/ErdosProblems/94.lean'; rg -n \\\"sum_multiplicity|card_image_offDiag|distanceMultiplicity\\\" /work --glob '*.lean' --glob '*.json'\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc 'for f in records/artifacts/sha256/e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb records/artifacts/sha256/119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad records/artifacts/sha256/06498cbc38514b7995a07e8c3a95901a8fb19763e44c6b9c97f28973104dfca1; do file \"$f\"; wc -c \"$f\"; sed -n '\"'1,220p' \\\"\"'$f\"; done'",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc 'curl -fsSL https://raw.githubusercontent.com/williamjblair/lean-proofs/423344341fbfdf4f8f684a302c5d05379125e7dc/ErdosProblems/Erdos94SumMultiplicity.lean; curl -fsSL https://raw.githubusercontent.com/williamjblair/formal-conjectures/94a278e06a8bcbc2e4f2935e491c0c115ec832e0/FormalConjectures/ErdosProblems/94.lean'",
+    "exit_code": 127
+  },
+  {
+    "command": "/bin/bash -lc 'rg -n \"412975add8b6963b|020a4d72cc7bb170|bbf77e7bf9674bdb|card_image_offDiag|ordered.*unordered|offDiag\" /work --hidden'",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc 'command -v wget || true; command -v git; command -v lean || true; git ls-remote https://github.com/williamjblair/lean-proofs.git 423344341fbfdf4f8f684a302c5d05379125e7dc'",
+    "exit_code": 128
+  },
+  {
+    "command": "/bin/bash -lc 'env -u GIT_DIR -u GIT_WORK_TREE git ls-remote https://github.com/williamjblair/lean-proofs.git | rg 423344341fbfdf4f8f684a302c5d05379125e7dc || true'",
+    "exit_code": 0
+  }
+]

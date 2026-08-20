@@ -1,0 +1,13 @@
+{
+  "attempt": 3,
+  "case_id": "erdos-56-trust-axiom-licence",
+  "exit_code": 0,
+  "elapsed_seconds": 56.04,
+  "retry_count": 0,
+  "completed_shell_calls": 4,
+  "input_sha256": "4cb0ab644406692549e1c59a01ee5d47300d472bc78adf0c239777ead8a40e51",
+  "candidate_sha256": "d88cdfb73c2458bb2ae53bc6a311eda89d751787782abe24b0260012b576f913",
+  "tool_calls_sha256": "fc664d0d71b541a500232723ecf3e37aba20c76ea689013eb17e718003f2c5ac",
+  "raw_event_stream_sha256": "748301800d35f92a4dad5804e9d8773f2e345bb6727bef0401cde7eeea4eb152",
+  "authority_effect": "none"
+}

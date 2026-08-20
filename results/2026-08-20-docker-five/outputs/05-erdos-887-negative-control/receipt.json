@@ -1,0 +1,13 @@
+{
+  "attempt": 5,
+  "case_id": "erdos-887-open-problem-negative-control",
+  "exit_code": 0,
+  "elapsed_seconds": 73.13,
+  "retry_count": 0,
+  "completed_shell_calls": 6,
+  "input_sha256": "a7c4ce002f07f9b0a5df664cf4db57737e54d8743342bc871c8d0bbedeeeb48f",
+  "candidate_sha256": "9d7194b831b8fb7a98b34d533d389490b1b3240e65b82439eaa43e3efceb2cac",
+  "tool_calls_sha256": "9efef6ef46db816ee4d0e4c2f002f071405a76a0ec8d3923b95fbb10191b4780",
+  "raw_event_stream_sha256": "b73be662861e454f49941b13a63e8f895165028e42da36bea0947cb1e3b2d5a6",
+  "authority_effect": "none"
+}

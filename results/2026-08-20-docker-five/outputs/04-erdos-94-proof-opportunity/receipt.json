@@ -1,0 +1,13 @@
+{
+  "attempt": 4,
+  "case_id": "erdos-94-sum-multiplicity-proof",
+  "exit_code": 0,
+  "elapsed_seconds": 106.64,
+  "retry_count": 0,
+  "completed_shell_calls": 8,
+  "input_sha256": "c8d8b9b7b2112d0edb5ba9642748a849be421b0d0b9d3709385e461ecb8b9430",
+  "candidate_sha256": "7758cebb95c02344f4e1218dd9892942e7205ddccb8567780f2a453236716a57",
+  "tool_calls_sha256": "7aa10f217bcd34e7c6a7094ac2501e50bfd85bce0127df485b435385e8098377",
+  "raw_event_stream_sha256": "c5942fa9b8af542cfdb10067fa286f58f986785b2db2c2d6f8e135642ef5656d",
+  "authority_effect": "none"
+}

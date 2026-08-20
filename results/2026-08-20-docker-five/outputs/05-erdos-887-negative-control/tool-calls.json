@@ -1,0 +1,26 @@
+[
+  {
+    "command": "/bin/bash -lc \"git rev-parse HEAD && git status --short && sed -n '1,240p' evidence/current/erdos-887/source.lean && sed -n '1,240p' evidence/current/erdos-887/repair.patch && sed -n '1,240p' evidence/current/erdos-887/replay.v1.json && rg -n 'erdos-887|source\\\\.lean|repair\\\\.patch|replay\\\\.v1\\\\.json' records .vela --glob '\"'!records/**/*.sig'\"'\"",
+    "exit_code": 128
+  },
+  {
+    "command": "/bin/bash -lc \"pwd; ls -la; sed -n '1,260p' evidence/current/erdos-887/source.lean; sed -n '1,260p' evidence/current/erdos-887/repair.patch; sed -n '1,260p' evidence/current/erdos-887/replay.v1.json; rg -n 'erdos-887|source\\\\.lean|repair\\\\.patch|replay\\\\.v1\\\\.json' records .vela 2>/dev/null\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,240p' .vela/repository.json; rg -n 'vcl_8ab5a917|21d7b291|vsb_e804f60a8ffd8658|Erdos 887|erdos:887' records; find records -type f -maxdepth 5 | sort\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"for f in records/submissions/sha256/*.json records/verifications/sha256/*.json; do jq -c '{path:input_filename,id:(.submission_id//.verification_id//.id),claim:(.claim_id//.subject.id//.proposal.subject.id),proposal:(.proposal_id//.proposal.id),outcome,does_not_establish,record}' \\\"\"'$f\"; done; find .vela -type f -maxdepth 4 -print | sort; rg -n '\"'vcl_8ab5a917|vpr_28cbee4|e804f60a|ba440900|21d7b291' .vela records\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"cat .git; rg -n 'erdos-887-open-problem-negative-control|candidate session|session 5|negative/no-result' .; sed -n '1,240p' records/submissions/sha256/e804f60a8ffd86581ba2991da37bddc51618b124af2ec0a8703f5ff42477177d.json; for f in records/verifications/sha256/*.json; do echo \\\"\"'$f\"; sed -n '\"'1,220p' \\\"\"'$f\"; done'",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"rg -n '[0-9a-f]{40}' results/2026-08-20-docker-five README.md MIGRATION.md KNOWN_RESULT_SEARCH.md | head -80; sha256sum evidence/current/erdos-887/source.lean evidence/current/erdos-887/repair.patch evidence/current/erdos-887/replay.v1.json records/claims/sha256/ba44090062b79a6232cc5844e0fe4f3b11e63ae3b65bb971ff3fd9fc6ffe0a8a.json records/proposals/sha256/28cbee4e7d2ec91e5783760e3968c7e247535dd86e64580e344fd426a6dc9d92.json records/submissions/sha256/e804f60a8ffd86581ba2991da37bddc51618b124af2ec0a8703f5ff42477177d.json records/verifications/sha256/3b2f2313628a80187e72fad5f4e670d7f36e41e9d4a28014556f5c7ce1e031d3.json\"",
+    "exit_code": 0
+  }
+]

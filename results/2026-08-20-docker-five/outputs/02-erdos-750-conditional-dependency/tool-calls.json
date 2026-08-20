@@ -1,0 +1,30 @@
+[
+  {
+    "command": "/bin/bash -lc \"sed -n '1,240p' /work/results/2026-08-20/erdos-750-conditional-stiebitz.md && rg -n \\\"Erdos750|stiebitz_lower_bound|Type\\\\*|Type\\\" /work --glob '\"'!records/**'\"' --glob '\"'!evidence/**'\"'\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"jq '.findings[]? // . | select((.target_declaration? // \\\"\\\") == \\\"Erdos750.erdos_750_FC\\\")' evaluations/fc-build-audit-v1/findings.json; jq '.. | objects | select(has(\\\"Erdos750.erdos_750_FC\\\"))' evaluations/fc-build-audit-v1/builds.json; jq '.. | objects | select((.target_declarations? // []) | index(\\\"Erdos750.erdos_750_FC\\\"))' evaluations/fc-conditional-proof-audit-v1/results.json; find /work -path '*Erdos/P750/Proof.lean' -o -path '*ErdosProblems/750.lean'\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '45,90p' evaluations/fc-build-audit-v1/findings.json; sed -n '8490,8540p' evaluations/fc-build-audit-v1/builds.json; sed -n '8550,8600p' evaluations/fc-build-audit-v1/builds.json; sed -n '16600,16660p' evaluations/fc-build-audit-v1/builds.json; sed -n '10700,10765p' evaluations/fc-conditional-proof-audit-v1/results.json; rg -n -C 8 'stiebitz_lower_bound|erdos_750_FC' /work --glob '*.lean' --glob '*.txt' --glob '*.log'\"",
+    "exit_code": 1
+  },
+  {
+    "command": "/bin/bash -lc \"curl -L --fail --silent https://raw.githubusercontent.com/Shashi456/erdos-formalizations/286f856aa3fc08957b80950fd18a45aab8d045ea/Erdos/P750/Proof.lean | sed -n '1,280p'; curl -L --fail --silent https://raw.githubusercontent.com/google-deepmind/formal-conjectures/9f5ee773841921f460b4a26a3552f5eca4accaa0/FormalConjectures/ErdosProblems/750.lean | sed -n '90,155p'; sha256sum evaluations/fc-conditional-proof-audit-v1/results.json evaluations/fc-build-audit-v1/builds.json evaluations/fc-build-audit-v1/findings.json; git rev-parse HEAD; git status --short\"",
+    "exit_code": 128
+  },
+  {
+    "command": "/bin/bash -lc \"command -v wget || command -v git; wget -qO- https://raw.githubusercontent.com/Shashi456/erdos-formalizations/286f856aa3fc08957b80950fd18a45aab8d045ea/Erdos/P750/Proof.lean | sed -n '180,270p'; wget -qO- https://raw.githubusercontent.com/google-deepmind/formal-conjectures/9f5ee773841921f460b4a26a3552f5eca4accaa0/FormalConjectures/ErdosProblems/750.lean | sed -n '95,150p'\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"python3 - <<'PY'\nimport urllib.request\nurls=[\n('external','https://raw.githubusercontent.com/Shashi456/erdos-formalizations/286f856aa3fc08957b80950fd18a45aab8d045ea/Erdos/P750/Proof.lean',180,270),\n('fc','https://raw.githubusercontent.com/google-deepmind/formal-conjectures/9f5ee773841921f460b4a26a3552f5eca4accaa0/FormalConjectures/ErdosProblems/750.lean',95,150)]\nfor name,u,a,b in urls:\n print('###',name)\n s=urllib.request.urlopen(u).read().decode().splitlines()\n for i in range(a-1,min(b,len(s))): print(f'{i+1}: {s[i]}')\nPY\"",
+    "exit_code": 0
+  },
+  {
+    "command": "/bin/bash -lc \"python3 - <<'PY'\nimport urllib.request\nu='https://raw.githubusercontent.com/Shashi456/erdos-formalizations/286f856aa3fc08957b80950fd18a45aab8d045ea/Erdos/P750/Proof.lean'\ns=urllib.request.urlopen(u).read().decode().splitlines()\nfor i,x in enumerate(s):\n if 'erdos_750_FC' in x:\n  for j in range(max(0,i-25),min(len(s),i+25)): print(f'{j+1}: {s[j]}')\nPY\nrg -n '\\\"(commit|resolved_sha|target_rev|mathlib_rev|lean_version|toolchain|build_command|commands|logs|check)' evaluations/fc-build-audit-v1/builds.json | head -80\"",
+    "exit_code": 0
+  }
+]
