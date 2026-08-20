@@ -484,3 +484,28 @@ fields; the observation remains separate.
   nested archive or sealing layer.
 - **Disposition:** fixed now; both deleted administrative directories are
   exactly recoverable from the retained bundle.
+
+## 2026-08-20T23:33:38Z — evidence manifest included ignored runtime state
+
+- **Stage/time and evidence:** independent Fixture-2 review at evaluator commit
+  `80bbb22e0a94dd2a25f8631830f7f55571604ec4`; report SHA-256
+  `b302e376cb7c22743e281d37f4ed389e153acef53ad81ecf6914f572965ea3bd`.
+- **Observation and impact:** `HASHES.tsv` listed 15 ignored
+  `.vela/operation-journals` files that were absent from the committed Git
+  tree. All 317 committed non-manifest files recomputed correctly, and all
+  lifecycle, scientific, isolation, and reconstruction checks passed, but the
+  false 332-row committed-evidence claim blocked independent review.
+- **Category:** harness/script.
+- **Root cause:** manifest generation walked the runtime worktree, including
+  ignored transient journal bytes, instead of enumerating the immutable Git
+  index that the manifest claimed to describe.
+- **Affected:** one metadata review cycle and no fixture, model, OAuth,
+  provider-credit, scientific, source, canonical, or authority state.
+- **Immediate correction:** regenerate `HASHES.tsv` from regular-file entries
+  in the prospective Git index, excluding the manifest itself, and require
+  unique path-set equality plus byte-exact size and SHA-256 recomputation.
+- **Prevention/simplification:** never generate a release or evidence manifest
+  from untracked or ignored runtime state when it claims to describe committed
+  evidence; use the Git index as the sole path and byte source.
+- **Disposition:** fix now because manifest integrity gates independent review;
+  do not rerun or alter the already passing fixture.
