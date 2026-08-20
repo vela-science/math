@@ -1,0 +1,21 @@
+{
+  "accepted_event_count_after": 0,
+  "accepted_event_count_before": 0,
+  "accepted_event_delta": 0,
+  "accepted_state_changed": false,
+  "claim_id": "vcl_20a64141a21c1af453f731501e1070ea6cfc558eae0ef8b2dd5fca7ccf0b4def",
+  "command": "submit",
+  "ok": true,
+  "operation_id": "vop_c34b86e9f9d231a0c750d8e185b8c4ea61ae6bed603a6bf253e501d8559426c6",
+  "proposal_id": "vpr_aff0c9c9ac1d47a6",
+  "proposal_root": "sha256:aff0c9c9ac1d47a67a5489c75152de96f60c77fc2ec8c858fad2d57d5a025f62",
+  "publication": {
+    "commit": "7fecf7157b2b0a9c955b0888dfe351a8302541ab",
+    "state": "committed_local"
+  },
+  "request_id": "vop_c34b86e9f9d231a0c750d8e185b8c4ea61ae6bed603a6bf253e501d8559426c6",
+  "route": "pending_review",
+  "schema": "vela.submit-result.v1",
+  "submission_id": "vsb_33722f0776e05df4",
+  "submission_root": "sha256:33722f0776e05df4013abe952179b6a5f8f9f59cb7771937fc4f653d83f5a79e"
+}

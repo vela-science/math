@@ -1,0 +1,1 @@
+{"command":["/usr/local/bin/vela","replay",".","--json"],"elapsed_seconds":0,"ended_at":"2026-08-20T23:17:08Z","exit_code":0,"schema":"results-breakthrough-command-receipt.v1","started_at":"2026-08-20T23:17:08Z","stderr_sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","stdout_sha256":"a38e7f16a1f46170eba8b6cd67342fc5829d8f5e8232b37b8eb4cb72c1e43fc5"}

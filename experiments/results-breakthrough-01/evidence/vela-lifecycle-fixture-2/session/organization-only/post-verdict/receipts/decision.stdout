@@ -1,0 +1,43 @@
+{
+  "action": "reject",
+  "actor_class": "agent",
+  "actor_id": "agent:experiment-owner",
+  "after_event_log_root": "sha256:7715b81fdaaffe50021bbe221efe30889e30b07744980a574bb9dc3d84852bf3",
+  "authentication": "local_os_session",
+  "authority": {
+    "authentication": "local_os_session",
+    "principal_id": "local:device-sha256:5a24c768e4c15195c18e1693126ebd64d8aa96b7105809dc4e6ae6018203c6fe|uid:0",
+    "transaction_signer": "repository_authority"
+  },
+  "authority_principal_id": "local:device-sha256:5a24c768e4c15195c18e1693126ebd64d8aa96b7105809dc4e6ae6018203c6fe|uid:0",
+  "authority_record_id": "var_b97990582f980a1b",
+  "authority_record_root": "sha256:fc78ee7de5bb78cd6058d5cec83423e30795b40607b70e1a65d5a78a33665dfd",
+  "before_event_log_root": "sha256:b36b094f1eafbb0ab0c0f910d49925c17f2f087b03e81eec3f9c53232fab51b8",
+  "claim_id": "vcl_20a64141a21c1af453f731501e1070ea6cfc558eae0ef8b2dd5fca7ccf0b4def",
+  "claim_root": "sha256:def9ae452f1e385a583843d98aa5f3fe246099bfc15cb61fe6ddedebde64086e",
+  "command": "review.reject",
+  "decision_plan_root": "sha256:c1c35e2bc6909c0fb71d0ec5da7fe69a08beb9cf375eb72a5d058e10419e8d09",
+  "event_ids": [
+    "vev_70453acf93a79164"
+  ],
+  "ok": true,
+  "performer": {
+    "actor_class": "agent",
+    "actor_id": "agent:experiment-owner",
+    "key_read": false,
+    "session_ref": "RESULTS-BREAKTHROUGH-01"
+  },
+  "performer_key_read": false,
+  "principal_id": "local:device-sha256:5a24c768e4c15195c18e1693126ebd64d8aa96b7105809dc4e6ae6018203c6fe|uid:0",
+  "proposal_id": "vpr_aff0c9c9ac1d47a6",
+  "proposal_root": "sha256:aff0c9c9ac1d47a67a5489c75152de96f60c77fc2ec8c858fad2d57d5a025f62",
+  "reason": "Apply frozen blinded pilot verdict: invalid",
+  "repository_before": "sha256:0f25bff69bc1a1419beedc59426e1b7062c05be515fd43826eeb1dab030dbe38",
+  "repository_id": "71c20c8d-a91c-47b6-a62a-002b66875a57",
+  "repository_path": ".",
+  "schema": "vela.review-decision.v5",
+  "scientific_state_changed": false,
+  "session_ref": "RESULTS-BREAKTHROUGH-01",
+  "transaction_signer": "repository_authority",
+  "verification_set_root": "sha256:a5b4e17925c579a574d2169fb8823537a79468bf05d1d0b1282d7cd04f4f09c4"
+}

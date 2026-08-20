@@ -1,0 +1,6 @@
+command_receipts=23
+all_command_receipt_hashes=pass
+signed_lifecycle=pass
+provider_loss_reconstruction=pass
+source_canonical_pre_post=identical
+candidate_inference=false

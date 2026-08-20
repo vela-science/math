@@ -1,0 +1,99 @@
+commit aca01bafd229478a181002b2cc587aa96c53fb8c
+Author:     Vela Repository <vela@invalid>
+AuthorDate: Thu Aug 20 23:17:07 2026 +0000
+Commit:     Vela Repository <vela@invalid>
+CommitDate: Thu Aug 20 23:17:07 2026 +0000
+
+    vela: review review_reject
+    
+    Objects: vpr_aff0c9c9ac1d47a6
+    
+    Delta-root: sha256:62c0ba214e48a61b9ed2dd36e2c7bdabc57ea8f1d196d5e689a20cf91603c3da
+
+ .vela/authority/events/vev_70453acf93a79164.json       | 1 +
+ .vela/authority/records/var_b97990582f980a1b.dsse.json | 1 +
+ .vela/repository.json                                  | 2 +-
+ 3 files changed, 3 insertions(+), 1 deletion(-)
+
+commit 0c8ecd2c2ff9f99ddf616c7458db855454979a81
+Author:     Vela Repository <vela@invalid>
+AuthorDate: Thu Aug 20 23:17:06 2026 +0000
+Commit:     Vela Repository <vela@invalid>
+CommitDate: Thu Aug 20 23:17:06 2026 +0000
+
+    vela: verification import
+    
+    Objects: vvr_b3e980319f24d991
+    
+    Delta-root: sha256:69cf46666aafe51fb60318b6d5cd232be95f3823747d22d10c2e244d9f49ce40
+
+ .vela/repository.json                                                   | 2 +-
+ .../98d9b05a552f248d2afad6a6bd452d45ff12e679130dea79217229268800474a    | 1 +
+ ...3e980319f24d99157d3f2891aa998acad72272130ec48a848a816282a802236.json | 1 +
+ 3 files changed, 3 insertions(+), 1 deletion(-)
+
+commit e682cea2fea1f59aabfd222536569c929e0e44c1
+Author:     RESULTS-BREAKTHROUGH-01 disposable authority <results-breakthrough-01@invalid.local>
+AuthorDate: Thu Aug 20 23:17:05 2026 +0000
+Commit:     RESULTS-BREAKTHROUGH-01 disposable authority <results-breakthrough-01@invalid.local>
+CommitDate: Thu Aug 20 23:17:05 2026 +0000
+
+    Retain locked blinded evaluation evidence and method
+
+ evidence/blinded-verdict.json | 1 +
+ methods/blinded-review.json   | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 7fecf7157b2b0a9c955b0888dfe351a8302541ab
+Author:     Vela Repository <vela@invalid>
+AuthorDate: Thu Aug 20 23:17:05 2026 +0000
+Commit:     Vela Repository <vela@invalid>
+CommitDate: Thu Aug 20 23:17:05 2026 +0000
+
+    vela: submit
+    
+    Objects: vpr_aff0c9c9ac1d47a6
+    
+    Delta-root: sha256:fa6f1d3942a5ae608365841af9ebf936c38726c1c3f29691f0b7d44b8152cdd9
+
+ .vela/repository.json                                                   | 2 +-
+ .../b6c7085de10ab82fe4fc4193cbbc0e37269f499d621a9d86f1728eb3d472438a    | 1 +
+ .../e25486c4ae458b3b79eb11aafcc4174572bf04ddd8aa88afa95d948216cace57    | 1 +
+ ...ef9ae452f1e385a583843d98aa5f3fe246099bfc15cb61fe6ddedebde64086e.json | 1 +
+ ...ff0c9c9ac1d47a67a5489c75152de96f60c77fc2ec8c858fad2d57d5a025f62.json | 1 +
+ ...3722f0776e05df4013abe952179b6a5f8f9f59cb7771937fc4f653d83f5a79e.json | 1 +
+ 6 files changed, 6 insertions(+), 1 deletion(-)
+
+commit e1695b09015b3b7613a059e25334b753e636add0
+Author:     RESULTS-BREAKTHROUGH-01 disposable authority <results-breakthrough-01@invalid.local>
+AuthorDate: Thu Aug 20 23:17:05 2026 +0000
+Commit:     RESULTS-BREAKTHROUGH-01 disposable authority <results-breakthrough-01@invalid.local>
+CommitDate: Thu Aug 20 23:17:05 2026 +0000
+
+    Retain candidate result and supporting evidence
+
+ artifacts/fixture.txt | 1 +
+ result.json           | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit dacf7925a7236eaf1a39d40c9c35f86cc32a0f43
+Author:     Vela Agent <agent@vela.space>
+AuthorDate: Thu Aug 20 23:17:04 2026 +0000
+Commit:     Vela Agent <agent@vela.space>
+CommitDate: Thu Aug 20 23:17:04 2026 +0000
+
+    Initialize current Vela repository
+
+ .gitattributes                                     |  5 +++++
+ .gitignore                                         | 12 +++++++++++
+ .vela/authority/events/vev_3300c8d8e43ea562.json   |  1 +
+ ...7840d0a74e68e4e30fbe63eeb6ed143e6449a1c4d1.json |  1 +
+ ...3582cf63b625a75fedf0928ea2fd32d7cae583177b.json |  1 +
+ .../records/var_4de0b0bcb5da5673.dsse.json         |  1 +
+ .vela/origin.json                                  |  1 +
+ .vela/repository.json                              |  1 +
+ AGENTS.md                                          | 14 +++++++++++++
+ CLAUDE.md                                          |  1 +
+ README.md                                          | 23 ++++++++++++++++++++++
+ vela.toml                                          | 15 ++++++++++++++
+ 12 files changed, 76 insertions(+)

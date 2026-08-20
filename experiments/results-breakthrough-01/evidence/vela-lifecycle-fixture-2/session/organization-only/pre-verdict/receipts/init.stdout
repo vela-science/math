@@ -1,0 +1,47 @@
+{
+  "authority": {
+    "key_fingerprint": "SHA256:qrMd2D964bJtg6e2XpGi/sHpawAZNWuJCYA5EhJImC0",
+    "key_id": "ssh-ed25519:SHA256:qrMd2D964bJtg6e2XpGi/sHpawAZNWuJCYA5EhJImC0",
+    "keyset_root": "sha256:6dededfeacbbd6301457687840d0a74e68e4e30fbe63eeb6ed143e6449a1c4d1",
+    "local_trust": {
+      "anchor_path": "/root/.vela/trust/authorities/71c20c8d-a91c-47b6-a62a-002b66875a57.json",
+      "anchor_root": "sha256:30eaf9fd971951bf678efbfa0d2fed2f413dec0def661039dde8d32fe7dec964",
+      "first_authority_record_root": "sha256:01e730dc3bfcb27d5113251dae61ee1f558503e9d486c8954fafe3c1896ae383",
+      "installed": true,
+      "repository_id": "71c20c8d-a91c-47b6-a62a-002b66875a57",
+      "schema": "vela.authority-trust-anchor.v1"
+    },
+    "policy_root": "sha256:a9f48372545c372ffd70913582cf63b625a75fedf0928ea2fd32d7cae583177b",
+    "principal_id": "local:device-sha256:5a24c768e4c15195c18e1693126ebd64d8aa96b7105809dc4e6ae6018203c6fe|uid:0",
+    "record_id": "var_4de0b0bcb5da5673",
+    "record_root": "sha256:01e730dc3bfcb27d5113251dae61ee1f558503e9d486c8954fafe3c1896ae383",
+    "state": "initialized"
+  },
+  "layout": "vela.repository-bootstrap.v1",
+  "name": "RESULTS-BREAKTHROUGH-01 disposable session",
+  "next_action": "vela submit --repo '.' --help",
+  "ok": true,
+  "operation_id": "vop_c00d4c9ed262ec31cf7f38fcc098ab38e194e0d4430e197f22a2bba8d1b49038",
+  "path": ".",
+  "profile_root": "sha256:28eca86dbf744febec4039b8ecb4f03b064094364ef53864cd870ced30b0c244",
+  "repository": {
+    "git_commit": "dacf7925a7236eaf1a39d40c9c35f86cc32a0f43",
+    "git_tree": "7243dd7b3cae8bfe0f5914b33c3333f7c21549cc",
+    "origin_id": "vro_30ba60cd23ee6323",
+    "origin_root": "sha256:30ba60cd23ee63234f453eb81f5bc6cbaa45cb547c705e08636b325c7063739f",
+    "repository_root": "sha256:c979faa8afc63bbe8d1114176712bd7e6b90b2772d3c118e2cb25269a2e7e4f1"
+  },
+  "repository_id": "71c20c8d-a91c-47b6-a62a-002b66875a57",
+  "resumed": false,
+  "schema": "vela.repository-init.v1",
+  "scientific_object_count": 0,
+  "scope": "Record one bounded experiment cell without canonical authority effect",
+  "wrote": [
+    "README.md",
+    "vela.toml",
+    ".gitignore",
+    ".gitattributes",
+    "AGENTS.md",
+    "CLAUDE.md"
+  ]
+}

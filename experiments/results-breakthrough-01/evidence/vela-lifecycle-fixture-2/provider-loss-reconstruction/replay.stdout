@@ -1,0 +1,23 @@
+{
+  "authority_keyset_root": "sha256:6dededfeacbbd6301457687840d0a74e68e4e30fbe63eeb6ed143e6449a1c4d1",
+  "authority_model_root": "sha256:a9f48372545c372ffd70913582cf63b625a75fedf0928ea2fd32d7cae583177b",
+  "command": "replay",
+  "counts": {
+    "accepted_claims": 0,
+    "artifacts": 3,
+    "pending_claims": 0,
+    "proposal_withdrawals": 0,
+    "proposals": 1,
+    "submissions": 1,
+    "verifications": 1
+  },
+  "git_commit": "aca01bafd229478a181002b2cc587aa96c53fb8c",
+  "git_tree": "b182b3d247dc93be27b91495a299293fa210757d",
+  "ok": true,
+  "origin_id": "vro_30ba60cd23ee6323",
+  "origin_root": "sha256:30ba60cd23ee63234f453eb81f5bc6cbaa45cb547c705e08636b325c7063739f",
+  "repository_id": "71c20c8d-a91c-47b6-a62a-002b66875a57",
+  "repository_path": "/fixture/provider-loss-reconstruction/reconstructed",
+  "repository_root": "sha256:bc3e56d52da5eafa5af8991a8a817745eadee353858418a46fb0cf3e8eb0f486",
+  "schema": "vela.repository-verification.v3"
+}

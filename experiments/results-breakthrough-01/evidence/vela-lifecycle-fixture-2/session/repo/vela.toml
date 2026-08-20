@@ -1,0 +1,15 @@
+schema = "vela.repository-profile.v1"
+repository_id = "71c20c8d-a91c-47b6-a62a-002b66875a57"
+name = "RESULTS-BREAKTHROUGH-01 disposable session"
+summary = "Record one bounded experiment cell without canonical authority effect"
+maintainers = []
+
+[scope]
+question = "Record one bounded experiment cell without canonical authority effect"
+includes = []
+excludes = []
+
+[license]
+content = "CC-BY-4.0"
+code = "Apache-2.0"
+data = "NOASSERTION"

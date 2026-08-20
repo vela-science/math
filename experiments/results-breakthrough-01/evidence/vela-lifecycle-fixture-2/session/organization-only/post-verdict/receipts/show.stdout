@@ -1,0 +1,183 @@
+{
+  "authority_boundary": "Verification records report bounded checks. A producer may close its own pending Proposal; only a repository-authority Decision can change accepted scientific Standing.",
+  "claim": {
+    "assertion": {
+      "kind": "theoretical",
+      "text": "Typed adapter-fixture non-result; no mathematical assertion was attempted."
+    },
+    "claim_id": "vcl_20a64141a21c1af453f731501e1070ea6cfc558eae0ef8b2dd5fca7ccf0b4def",
+    "conditions": [
+      "Caveat: Experiment-local candidate; no truth, source-owner acceptance, or canonical Standing"
+    ],
+    "created_at": "2026-08-20T23:17:05Z",
+    "evidence": [
+      {
+        "artifact_path": "records/artifacts/sha256/e25486c4ae458b3b79eb11aafcc4174572bf04ddd8aa88afa95d948216cace57",
+        "artifact_root": "sha256:e25486c4ae458b3b79eb11aafcc4174572bf04ddd8aa88afa95d948216cace57",
+        "relation": "supports"
+      },
+      {
+        "artifact_path": "records/artifacts/sha256/b6c7085de10ab82fe4fc4193cbbc0e37269f499d621a9d86f1728eb3d472438a",
+        "artifact_root": "sha256:b6c7085de10ab82fe4fc4193cbbc0e37269f499d621a9d86f1728eb3d472438a",
+        "relation": "supports"
+      }
+    ],
+    "provenance": [
+      {
+        "authors": [
+          "agent:result-producer"
+        ],
+        "kind": "submission",
+        "title": "Authenticated Submission vsb_33722f0776e05df4",
+        "year": 2026
+      }
+    ],
+    "relations": [],
+    "revision": 1,
+    "schema": "vela.claim-record.v1"
+  },
+  "command": "review.show",
+  "decision": {
+    "actor": "agent:experiment-owner",
+    "actor_class": "agent",
+    "applied_event_id": null,
+    "authority_principal_id": "local:device-sha256:5a24c768e4c15195c18e1693126ebd64d8aa96b7105809dc4e6ae6018203c6fe|uid:0",
+    "decided_at": "2026-08-20T23:17:07Z",
+    "event_id": "vev_70453acf93a79164",
+    "event_root": "sha256:c001e01d046627617f8f05d99de1dfcc69cd5ad1ffcbcfb8824c8e8dce394eb4",
+    "reason": "Apply frozen blinded pilot verdict: invalid",
+    "session_ref": "RESULTS-BREAKTHROUGH-01",
+    "standing": "rejected"
+  },
+  "decision_inbox": {
+    "entry": null,
+    "projection_root": "sha256:8b3ab933b4afd6798d596a6329c82528acc737f8238efcc50ec67270ed6df5c4"
+  },
+  "ok": true,
+  "proposal": {
+    "action": "claim.add",
+    "actor": "agent:result-producer",
+    "caveats": [
+      "Experiment-local candidate; no truth, source-owner acceptance, or canonical Standing"
+    ],
+    "created_at": "2026-08-20T23:17:05Z",
+    "producer_package": {
+      "id": "vsb_33722f0776e05df4",
+      "kind": "submission",
+      "path": "records/submissions/sha256/33722f0776e05df4013abe952179b6a5f8f9f59cb7771937fc4f653d83f5a79e.json",
+      "root": "sha256:33722f0776e05df4013abe952179b6a5f8f9f59cb7771937fc4f653d83f5a79e"
+    },
+    "reason": "Retain authenticated Submission vsb_33722f0776e05df4 for independent verification and authorized review.",
+    "schema": "vela.proposal.v1",
+    "subject": {
+      "id": "vcl_20a64141a21c1af453f731501e1070ea6cfc558eae0ef8b2dd5fca7ccf0b4def",
+      "kind": "claim",
+      "root": "sha256:def9ae452f1e385a583843d98aa5f3fe246099bfc15cb61fe6ddedebde64086e"
+    }
+  },
+  "proposal_id": "vpr_aff0c9c9ac1d47a6",
+  "proposal_root": "sha256:aff0c9c9ac1d47a67a5489c75152de96f60c77fc2ec8c858fad2d57d5a025f62",
+  "repository_id": "71c20c8d-a91c-47b6-a62a-002b66875a57",
+  "repository_root": "sha256:bc3e56d52da5eafa5af8991a8a817745eadee353858418a46fb0cf3e8eb0f486",
+  "schema": "vela.review.v1",
+  "status": "rejected",
+  "submission": {
+    "artifacts": [
+      {
+        "digest": "sha256:e25486c4ae458b3b79eb11aafcc4174572bf04ddd8aa88afa95d948216cace57",
+        "kind": "result-packet",
+        "path": "result.json"
+      },
+      {
+        "digest": "sha256:b6c7085de10ab82fe4fc4193cbbc0e37269f499d621a9d86f1728eb3d472438a",
+        "kind": "supporting-evidence",
+        "path": "artifacts/fixture.txt"
+      }
+    ],
+    "caveats": [
+      "Experiment-local candidate; no truth, source-owner acceptance, or canonical Standing"
+    ],
+    "claim": {
+      "assertion": "Typed adapter-fixture non-result; no mathematical assertion was attempted.",
+      "conditions": [],
+      "type": "theoretical"
+    },
+    "identity": {
+      "actor_class": "agent",
+      "actor_id": "agent:result-producer",
+      "declared_at": "2026-08-20T23:17:05Z",
+      "public_key_hex": "fc09c39b9d9343ebbed3415ac00aa8553cc6e7024ed58edb9ca55f99e8dcedd6",
+      "schema": "vela.signer-identity.v1"
+    },
+    "producer_checks": [],
+    "provenance": {
+      "emitted_at": "2026-08-20T23:17:05Z",
+      "producer": "agent:result-producer",
+      "source_run": "RESULTS-BREAKTHROUGH-01",
+      "source_system": "vela-cli"
+    },
+    "replayability": "exact",
+    "requested_change": {
+      "kind": "add_claim"
+    },
+    "schema": "vela.submission.v3",
+    "verification_requirements": [
+      "Frozen blinded source-native adjudication"
+    ]
+  },
+  "verification_records": [
+    {
+      "record": {
+        "completed_at": "2026-08-20T23:17:06Z",
+        "identity": {
+          "actor_class": "agent",
+          "actor_id": "verifier:blinded-evaluator",
+          "declared_at": "2026-08-20T23:17:06Z",
+          "public_key_hex": "57862975f0498a7888f633345d6ad73dc12fcca5e09127186fdf1e1db840e2b6",
+          "schema": "vela.signer-identity.v1"
+        },
+        "independence": {
+          "declared_independent_of": [
+            "agent:result-producer"
+          ],
+          "shared_dependencies": [
+            "Same OpenAI provider and GPT-5.6 Sol model family as candidate production.",
+            "Same experiment owner, Docker Desktop host, frozen source mounts, producer fact pack, answer schema, and campaign-local repository."
+          ]
+        },
+        "method": {
+          "environment_root": "sha256:03c3add32ac7f33c01afa084233ee2f43b1efc8a1b81873db5b995be0c0bc4e3",
+          "implementation": "methods/blinded-review.json",
+          "profile": "blinded-source-native"
+        },
+        "outcome": "fail",
+        "output_artifact_ids": [
+          "98d9b05a552f248d2afad6a6bd452d45ff12e679130dea79217229268800474a"
+        ],
+        "schema": "vela.verification-record.v2",
+        "scope": {
+          "does_not_establish": [
+            "Canonical mathematical truth, scientific acceptance, source-owner approval, or Standing.",
+            "Organizational, provider, model, operator, host, or source independence."
+          ],
+          "property": "Frozen blinded source-native adjudication"
+        },
+        "started_at": "2026-08-20T23:17:06Z",
+        "subject": {
+          "artifact_ids": [
+            "e25486c4ae458b3b79eb11aafcc4174572bf04ddd8aa88afa95d948216cace57",
+            "b6c7085de10ab82fe4fc4193cbbc0e37269f499d621a9d86f1728eb3d472438a"
+          ],
+          "claim_id": "vcl_20a64141a21c1af453f731501e1070ea6cfc558eae0ef8b2dd5fca7ccf0b4def",
+          "proposal_id": "vpr_aff0c9c9ac1d47a6",
+          "proposal_root": "sha256:aff0c9c9ac1d47a67a5489c75152de96f60c77fc2ec8c858fad2d57d5a025f62",
+          "submission_id": "vsb_33722f0776e05df4",
+          "submission_root": "sha256:33722f0776e05df4013abe952179b6a5f8f9f59cb7771937fc4f653d83f5a79e"
+        }
+      },
+      "verification_record_id": "vvr_b3e980319f24d991",
+      "verification_record_root": "sha256:b3e980319f24d99157d3f2891aa998acad72272130ec48a848a816282a802236"
+    }
+  ],
+  "withdrawal": null
+}

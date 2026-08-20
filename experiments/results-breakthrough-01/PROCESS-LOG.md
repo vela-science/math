@@ -436,3 +436,51 @@ fields; the observation remains separate.
   boundary rather than rewriting or special-casing individual transcripts.
 - **Disposition:** fix now because raw receipt digests are load-bearing; this
   is preservation metadata, not a new experiment gate.
+
+## 2026-08-20T23:17:04Z — empty-repository ordering correction passed
+
+- **Stage/time and evidence:** independently authorized replacement V fixture;
+  evaluator `03a15b4cda647ee24139921cbce10c47e780e655`, adapter SHA-256
+  `35f6b70adc1ad7dc6d70ea33769db80c8604ee306ef6e329a32f55f8ce09bf50`,
+  and `evidence/vela-lifecycle-fixture-2/fixture-command.json`.
+- **Observation and impact:** moving only the packet copy after successful
+  empty-directory `vela init` removed the prior ordering blocker. The one new
+  network-disabled fixture completed signed Submission, failing Verification,
+  rooted rejection, replay/readback, and complete bundle reconstruction. The
+  prior failed fixture remains retained in the denominator.
+- **Category:** harness/script.
+- **Root cause:** confirmed prior diagnosis—packet bytes were copied into the
+  target before a CLI that intentionally requires an empty directory.
+- **Affected:** one authorized replacement fixture and 5 elapsed seconds; zero
+  model, evaluator-model, OAuth, provider-credit, source, or canonical state.
+- **Immediate correction:** initialize the empty disposable repository first,
+  then copy and commit the unchanged blind packet; update only the ten direct V
+  adapter-hash bindings.
+- **Prevention/simplification:** keep the empty-init invariant as an ordinary
+  no-model adapter fixture; do not add another lifecycle framework or gate.
+- **Disposition:** fixed now; stop after committing the bounded evidence and
+  return it for independent review before any Stage 2 or inference.
+
+## 2026-08-20T23:22:00Z — nested disposable Git metadata was not parent-trackable
+
+- **Stage/time and evidence:** post-fixture evidence packaging;
+  `evidence/vela-lifecycle-fixture-2/postflight/repository-identity.*`,
+  `provider-loss-reconstruction/bundle-verify.*`, and
+  `postflight/nested-git-admin-cleanup.*`.
+- **Observation and impact:** both the source disposable repository and its
+  reconstruction contained nested `.git` directories, which the parent Math
+  repository would encode as unusable embedded-repository gitlinks rather than
+  retain as ordinary evidence bytes.
+- **Category:** harness/script.
+- **Root cause:** ordinary Git cannot recursively track another repository's
+  administrative directory as normal files.
+- **Affected:** one evidence-packaging step; zero fixture/model/OAuth/credit,
+  source, canonical, or scientific state.
+- **Immediate correction:** after matching commit/tree and full-fsck receipts
+  were retained, remove only the two nested administrative directories; keep
+  both working trees and the verified complete provider-loss bundle.
+- **Prevention/simplification:** treat the complete bundle as the portable Git
+  history and reconstruct it with one ordinary `git clone`; do not add a
+  nested archive or sealing layer.
+- **Disposition:** fixed now; both deleted administrative directories are
+  exactly recoverable from the retained bundle.

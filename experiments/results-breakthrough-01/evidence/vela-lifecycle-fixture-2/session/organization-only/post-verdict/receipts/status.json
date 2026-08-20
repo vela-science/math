@@ -1,0 +1,1 @@
+{"command":["/usr/local/bin/vela","status",".","--json"],"elapsed_seconds":1,"ended_at":"2026-08-20T23:17:08Z","exit_code":0,"schema":"results-breakthrough-command-receipt.v1","started_at":"2026-08-20T23:17:07Z","stderr_sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","stdout_sha256":"9ab4985636b2b8e0a1c579d49e4af9f30d7a366be5f9d6cb910df926d1f2c861"}

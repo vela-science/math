@@ -1,0 +1,8 @@
+json_files=175
+targets=10
+cells=30
+equivalence_manifests=30
+independent_readers=2
+frozen_review_method_validators=1
+candidate_inference=false
+validation=pass

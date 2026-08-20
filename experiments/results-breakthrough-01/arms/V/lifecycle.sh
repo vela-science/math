@@ -106,9 +106,6 @@ if [[ "$phase" == prepare ]]; then
   cp "$packet/result.json" "$blind/result.json"
   if [[ -d "$packet/artifacts" ]]; then cp -R "$packet/artifacts" "$blind/artifacts"; fi
   if [[ -d "$packet/commands" ]]; then cp -R "$packet/commands" "$blind/commands"; fi
-  cp "$blind/result.json" "$repo/result.json"
-  if [[ -d "$blind/artifacts" ]]; then cp -R "$blind/artifacts" "$repo/artifacts"; fi
-  if [[ -d "$blind/commands" ]]; then cp -R "$blind/commands" "$repo/commands"; fi
 
   ssh-keygen -q -t ed25519 -N '' -f "$key"
   chmod 0600 "$key"
@@ -116,6 +113,9 @@ if [[ "$phase" == prepare ]]; then
   "$runner" "$receipts/init" "$repo" "$vela_bin" init . \
     --name "RESULTS-BREAKTHROUGH-01 disposable session" \
     --scope "Record one bounded experiment cell without canonical authority effect" --json
+  cp "$blind/result.json" "$repo/result.json"
+  if [[ -d "$blind/artifacts" ]]; then cp -R "$blind/artifacts" "$repo/artifacts"; fi
+  if [[ -d "$blind/commands" ]]; then cp -R "$blind/commands" "$repo/commands"; fi
   git -C "$repo" add -- result.json
   if [[ -d "$repo/artifacts" ]]; then git -C "$repo" add -- artifacts; fi
   if [[ -d "$repo/commands" ]]; then git -C "$repo" add -- commands; fi

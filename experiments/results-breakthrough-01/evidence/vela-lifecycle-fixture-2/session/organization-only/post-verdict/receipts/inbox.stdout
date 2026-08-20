@@ -1,0 +1,133 @@
+{
+  "command": "review.inbox",
+  "entries": [
+    {
+      "assertion": "Typed adapter-fixture non-result; no mathematical assertion was attempted.",
+      "authority_heads": {
+        "authority_event_log_root": "sha256:b36b094f1eafbb0ab0c0f910d49925c17f2f087b03e81eec3f9c53232fab51b8",
+        "authority_keyset_root": "sha256:6dededfeacbbd6301457687840d0a74e68e4e30fbe63eeb6ed143e6449a1c4d1",
+        "authority_record_root": "sha256:01e730dc3bfcb27d5113251dae61ee1f558503e9d486c8954fafe3c1896ae383",
+        "policy_bundle_root": "sha256:a9f48372545c372ffd70913582cf63b625a75fedf0928ea2fd32d7cae583177b"
+      },
+      "claim_id": "vcl_20a64141a21c1af453f731501e1070ea6cfc558eae0ef8b2dd5fca7ccf0b4def",
+      "conditions": [
+        "Caveat: Experiment-local candidate; no truth, source-owner acceptance, or canonical Standing"
+      ],
+      "created_at": "2026-08-20T23:17:05Z",
+      "entry_root": "sha256:8989e4bedece167bd59933435ca903f1535bf45eb81861912eda21c78ff9ebd0",
+      "inputs": {
+        "claim_root": "sha256:def9ae452f1e385a583843d98aa5f3fe246099bfc15cb61fe6ddedebde64086e",
+        "proposal_root": "sha256:aff0c9c9ac1d47a67a5489c75152de96f60c77fc2ec8c858fad2d57d5a025f62",
+        "repository_root": "sha256:0f25bff69bc1a1419beedc59426e1b7062c05be515fd43826eeb1dab030dbe38",
+        "submission_root": "sha256:33722f0776e05df4013abe952179b6a5f8f9f59cb7771937fc4f653d83f5a79e",
+        "verification_set_root": "sha256:a5b4e17925c579a574d2169fb8823537a79468bf05d1d0b1282d7cd04f4f09c4"
+      },
+      "limits": [
+        "Experiment-local candidate; no truth, source-owner acceptance, or canonical Standing"
+      ],
+      "next_obligation": {
+        "if_accept": "Replay the accepted successor repository; source-owning repositories and read products may then recompute exact next obligations.",
+        "if_reject": "Replay the rejected successor repository; source-owning repositories and read products may then recompute exact next obligations without changing accepted Standing.",
+        "now": "Resolve 2 acceptance blocker(s), or reject the Proposal with an attributed reason."
+      },
+      "proposal_action": "claim.add",
+      "proposal_actor": "agent:result-producer",
+      "proposal_id": "vpr_aff0c9c9ac1d47a6",
+      "proposal_reason": "Retain authenticated Submission vsb_33722f0776e05df4 for independent verification and authorized review.",
+      "readiness": {
+        "attributed_decision_required": true,
+        "blockers": [
+          {
+            "code": "failing_verification",
+            "detail": "Verification vvr_b3e980319f24d991 reports fail for Frozen blinded source-native adjudication.",
+            "subject": "vvr_b3e980319f24d991"
+          },
+          {
+            "code": "missing_independent_passing_verification",
+            "detail": "No independent passing Verification Record satisfies \"Frozen blinded source-native adjudication\".",
+            "subject": "Frozen blinded source-native adjudication"
+          }
+        ],
+        "protocol_gate": "blocked",
+        "rejection_available": true
+      },
+      "repository_id": "71c20c8d-a91c-47b6-a62a-002b66875a57",
+      "requested_decision": "accept_or_reject",
+      "schema": "vela.decision-inbox-entry.v3",
+      "staleness": {
+        "invalidated_by": [
+          "repository_root",
+          "proposal_root",
+          "claim_root",
+          "submission_root",
+          "verification_set_root",
+          "policy_bundle_root",
+          "authority_keyset_root",
+          "authority_record_root",
+          "authority_event_log_root"
+        ],
+        "state": "current"
+      },
+      "standing_delta": {
+        "before": {
+          "accepted": [],
+          "repository_root": "sha256:0f25bff69bc1a1419beedc59426e1b7062c05be515fd43826eeb1dab030dbe38"
+        },
+        "counts": {
+          "global_accepted_claims": {
+            "before": 0,
+            "if_accept": 1,
+            "if_reject": 0
+          },
+          "unchanged_accepted_claims": 0
+        },
+        "if_accept": {
+          "accepted": [
+            {
+              "claim_id": "vcl_20a64141a21c1af453f731501e1070ea6cfc558eae0ef8b2dd5fca7ccf0b4def",
+              "claim_root": "sha256:def9ae452f1e385a583843d98aa5f3fe246099bfc15cb61fe6ddedebde64086e"
+            }
+          ],
+          "repository_root": "sha256:d8d2a5533eb6c441ce15720131a62de18b2b7e1412ae413c4fd6a3f4df810a57"
+        },
+        "if_reject": {
+          "accepted": [],
+          "repository_root": "sha256:bc3e56d52da5eafa5af8991a8a817745eadee353858418a46fb0cf3e8eb0f486"
+        },
+        "scope": {
+          "affected_claim_ids": [
+            "vcl_20a64141a21c1af453f731501e1070ea6cfc558eae0ef8b2dd5fca7ccf0b4def"
+          ],
+          "kind": "proposal_affected_claims",
+          "target_claim_id": "vcl_20a64141a21c1af453f731501e1070ea6cfc558eae0ef8b2dd5fca7ccf0b4def"
+        },
+        "transition": "add accepted Claim"
+      },
+      "verification_records": [
+        {
+          "does_not_establish": [
+            "Canonical mathematical truth, scientific acceptance, source-owner approval, or Standing.",
+            "Organizational, provider, model, operator, host, or source independence."
+          ],
+          "independent_of_producer": true,
+          "outcome": "fail",
+          "property": "Frozen blinded source-native adjudication",
+          "protocol_evidence_role": "blocking",
+          "satisfies_requirements": [],
+          "verification_record_id": "vvr_b3e980319f24d991",
+          "verification_record_root": "sha256:b3e980319f24d99157d3f2891aa998acad72272130ec48a848a816282a802236",
+          "verifier": "verifier:blinded-evaluator"
+        }
+      ],
+      "verification_requirements": [
+        "Frozen blinded source-native adjudication"
+      ]
+    }
+  ],
+  "ok": true,
+  "order": "protocol_ready_first_then_created_at_asc_then_proposal_id",
+  "projection_root": "sha256:9ad0f2d8a0da95e720822a09d0e4272c4c23cb8218a55afc97f5044862972ca3",
+  "repository_id": "71c20c8d-a91c-47b6-a62a-002b66875a57",
+  "repository_root": "sha256:0f25bff69bc1a1419beedc59426e1b7062c05be515fd43826eeb1dab030dbe38",
+  "schema": "vela.decision-inbox.v3"
+}

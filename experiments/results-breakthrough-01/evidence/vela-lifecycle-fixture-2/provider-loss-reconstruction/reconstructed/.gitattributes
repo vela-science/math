@@ -1,0 +1,5 @@
+* text=auto eol=lf
+.vela/** -filter -ident -working-tree-encoding -merge -text
+records/** -filter -ident -working-tree-encoding -merge -text
+artifacts/** -filter -ident -working-tree-encoding -merge -text
+vela.toml -filter -ident -working-tree-encoding -merge diff text eol=lf
