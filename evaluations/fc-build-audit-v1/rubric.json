@@ -1,0 +1,65 @@
+{
+ "schema": "vela-math.fc-build-audit-rubric.v1",
+ "authority_effect": "none",
+ "question": "For each (repository, revision) pair Formal Conjectures links a `formal_proof` at, does the project build at the toolchain it pins, and what axiom set does the linked target declaration actually carry?",
+ "why_this_is_not_the_static_audit": "The static audit parsed Lean text. It never elaborated any of it, so its `sorry`/`native_decide` signals were textual and its target locations were name and anchor matches. This audit runs the kernel. Where the two disagree, the kernel is right and the static row was a reading of the source rather than of the proof.",
+ "method": {
+  "order": "Descending link count. `plby/lean-proofs@main` alone carries 104 of the 415 links, so a run that stops early still covers the corpus by weight rather than alphabetically.",
+  "revision": "Each checkout is fetched at the SHA the static audit resolved on its freeze date, not by re-resolving the branch. That keeps both audits talking about the same bytes. For the links that name a branch rather than a commit, the row records that the link itself was unpinned.",
+  "project_selection": "A repository is not always one project, and its links do not all land in the same one. Every directory carrying both a Lake manifest and a `lean-toolchain` counts, including ones nested inside another project: `plby/lean-proofs@main` is three projects and its 104 links split 81/21/2 across them, and `williamjblair/lean-proofs` is a project at its root with twelve more under `starfleet/`, where all 13 of its linked files live. Every project that owns a link is built. The repository's headline outcome is its busiest project's, not its best one's.",
+  "toolchain": "Whatever `lean-toolchain` says, installed through elan if absent. No toolchain is substituted for another.",
+  "cache": "`lake exe cache get` where the project's manifest names Mathlib. A cache miss is not a failure on its own; it makes the build slower and the row records the cache result separately from the build result.",
+  "target": "`lake build` for the modules the linked files resolve to, falling back to the project's default target. The row records which one produced it. Module names are spelled the way Lake spells them, with each path component French-quoted when it is not a Lean identifier.",
+  "axioms": "`#print axioms <decl>` plus the hypothesis metaprogram for every located target in a project, elaborated together in ONE Lean invocation. Importing a Mathlib-dependent module costs 30-60 seconds, so one invocation per declaration would have spent about an hour on a single repository's hundred targets. Lean reports every message a file produced and does not stop at the first error, so a mislocated name costs its own declaration and nothing else; every marker carries its declaration name so the batch can be taken apart again. If a batch yields no usable reading at all, the run falls back to one invocation per declaration.",
+  "disk": "The `.lake` tree is deleted after every project, not merely after every repository, and free space is checked before every build. The shared Mathlib olean tarball cache is pruned under pressure rather than every time, because most checkouts share a toolchain and dropping it each time would spend the budget re-downloading. Below the floor the run stops and the partial state is the result."
+ },
+ "outcomes": {
+  "built": "The project built and at least one located target declaration's axiom set was read from the kernel.",
+  "build_failed": "`lake build` returned non-zero for both the target module and the default target. The first errors are recorded verbatim, capped.",
+  "build_timeout": "The per-repository wall-clock cap was reached. This is a statement about the budget, not about the project.",
+  "toolchain_unavailable": "The toolchain the project pins could not be installed on this host and platform.",
+  "no_manifest": "No directory in the checkout carries both a Lake manifest and a `lean-toolchain`, so there is no Lake project to build.",
+  "target_not_found": "The project built, but no located target declaration could be elaborated under the name the static audit recorded.",
+  "fetch_failed": "The checkout could not be obtained at the resolved SHA.",
+  "skipped_disk_floor": "Not attempted: free disk fell below the floor.",
+  "skipped_budget": "Not attempted: the wall-clock budget was exhausted.",
+  "not_attempted": "Not reached by this run.",
+  "no_github_checkout": "The link does not point at a GitHub repository, so there is nothing to check out and nothing to build. 16 of the 415 links are like this. They stay in the population so the denominator does not quietly change; 399 is the number of links that have a checkout at all."
+ },
+ "trust_surfaces": {
+  "note": "Each located target is recorded on two independent surfaces, and neither is a verdict. One verdict cannot carry both, because each is invisible to the other: a hypothesis parameter never appears in an axiom closure, and an axiom-ed lemma never appears in a type.",
+  "axiom_closure": {
+   "field": "axioms",
+   "read_by": "`#print axioms <decl>`, elaborated against the built module.",
+   "what_it_shows": "Every axiom the kernel actually used to accept the term. It is what catches `sorryAx` regardless of what the source text looked like, and it is what catches `native_decide`.",
+   "known_leaks": [
+    "`@[csimp]` can replace a verified implementation with an unverified one without adding anything to the closure (lean4#7463, open). A clean closure does not rule this out.",
+    "`native_decide` discharges a goal by compiling and running it. It does add `Lean.ofReduceBool` and `Lean.trustCompiler`, so it is visible here — but the `ofReduceBool` route was shown unsound in 2023 (Carneiro), which is why it is flagged rather than merely noted."
+   ],
+   "therefore": "A clean closure is a necessary condition, not a sufficient one. It is reported as what it is: the axioms the kernel used."
+  },
+  "prop_hypotheses": {
+   "field": "prop_hypotheses",
+   "read_by": "A Lean metaprogram over the declaration's own type: `forallTelescope` then `isProp` on each binder's type. It reports the number of propositional binders, the total binder count, and each such type capped at 200 characters.",
+   "why_the_non_reducing_telescope": "`forallTelescopeReducing` unfolds definitions to expose further binders, which walks into the conclusion. On `theorem t (h : 0 < n) : n ≠ 0` it reduces `n ≠ 0` to `n = 0 → False` and reports the conclusion as a third hypothesis. The non-reducing telescope stops at the declared binders, which is what the field is supposed to measure. This was caught by running both against a fixture before the corpus run, not reasoned about.",
+   "what_it_shows": "Whether the declaration proves its conclusion outright or proves an implication. `theorem conj (h : HardThing) : Goal` has a clean closure, contains no `sorry`, builds green, and proves `HardThing → Goal`.",
+   "not_a_defect": "A propositional binder is not a defect and is usually correct. Formal Conjectures statements carry hypotheses of their own, and a linked proof that mirrors them is exactly right. The field is recorded because the ordinary gate cannot see it at all, not because a nonzero count means anything is wrong.",
+   "unavailable_is_not_zero": "This run spans sixteen toolchains from v4.22 to v4.33. Where the metaprogram does not elaborate the field reads `unavailable`, never `0`: 'this declaration has no propositional hypotheses' and 'the probe did not run' are different claims and must not collapse into one number."
+  }
+ },
+ "a_build_failure_is_not_an_accusation": "These repositories were written against the Lean and Mathlib of their own moment. Lean 4 and Mathlib both make breaking changes on a weeks-to-months cadence, and a project pinned to an older toolchain whose dependency resolution or cache no longer resolves is the normal consequence of time passing, not a defect of the mathematics or of the author. A `build_failed` row means only that a third party cannot re-run this proof today by the ordinary route. It says nothing about whether the proof was correct when it was written.",
+ "what_a_clean_axiom_set_does_not_establish": "`#print axioms` returning `propext`, `Classical.choice`, `Quot.sound` means the kernel accepted the term from those three axioms and no others. It does not establish that the declaration states the conjecture Formal Conjectures links it from. Statement fidelity is a separate question this audit does not answer, and the static audit's locator confidence is carried through on every row precisely so that a reader can see how firmly the axiom reading is attached to the intended target.",
+ "flags": {
+  "sorryAx": "The declaration's axiom set contains `sorryAx`. Something in its dependency cone is `sorry`, whatever the source text looked like.",
+  "native_decide": "The axiom set contains `Lean.ofReduceBool` or `Lean.trustCompiler`. A goal was discharged by compiling and running it; the kernel did not re-check that step.",
+  "nonstandard_axiom": "The axiom set contains something else beyond the standard three."
+ },
+ "limitations": [
+  "A build result is a statement about this host, this network, and this date. Another machine on another day can differ, and a cache miss can turn a would-be success into a timeout.",
+  "The per-repository wall-clock cap means `build_timeout` records the budget, not the project. A timed-out row is not a failed row.",
+  "The axiom reading inherits the static audit's locator confidence. Where that confidence is medium or low, the axiom set is a fact about the declaration the locator picked, not necessarily about the declaration the link intended.",
+  "`#print axioms` reports the axiom set, not the statement. A clean axiom set on a declaration that does not state the conjecture is worth nothing, and this audit does not check statement fidelity.",
+  "Fetching at the SHA the static audit resolved means an unpinned link is read at its freeze-date state. The branch may have moved since, in either direction.",
+  "No linked repository is admitted here. Nothing in this directory is a Submission, Verification, Decision, Event, or Standing, and no `vela` command was run."
+ ]
+}

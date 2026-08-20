@@ -1,0 +1,135 @@
+{
+ "schema": "vela-math.fc-build-audit-findings.v1",
+ "authority_effect": "none",
+ "coverage": {
+  "checkouts_total": 143,
+  "checkouts_attempted": 20,
+  "links_total": 415,
+  "links_with_a_checkout": 399,
+  "links_in_attempted_checkouts": 260,
+  "why_partial": "Coverage was capped at the top 20 checkouts by link count. Measured on this host, one Mathlib-dependent Lake project costs 3 to 45 minutes end to end, and the 143 checkouts declare 135 projects between them; running all of them is 20 to 28 hours, which does not fit the budget this audit was given. The cap covers 260 of the 399 links that have a checkout at all — 65.2% — and the 123 checkouts outside it are recorded as `not_attempted` with their link counts rather than dropped. Every checkout inside the cap reached a terminal outcome; the run stopped because the work was done, not because it ran out of budget or disk.",
+  "not_attempted_is_not_a_result": "A `not_attempted` row says nothing whatever about the repository it names. It is a statement about this run's budget."
+ },
+ "cases": [
+  {
+   "id": "erdos-418-native-decide",
+   "kind": "axiom_clause_failure",
+   "links": [
+    "FormalConjectures/ErdosProblems/418.lean:53"
+   ],
+   "target_repository": "plby/lean-proofs",
+   "target_declaration": "Erdos418.erdos_418",
+   "locator_confidence": "high",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Lean.ofReduceBool",
+    "Lean.trustCompiler",
+    "Quot.sound"
+   ],
+   "prop_binders": 0,
+   "finding": "The declaration builds and the kernel accepts it, but its axiom closure is not the standard three: it carries `Lean.ofReduceBool` and `Lean.trustCompiler`, which is what `native_decide` introduces. The ordinary gate's third clause fails here, and nothing in Formal Conjectures runs that clause.",
+   "already_known": "The static audit found this one by reading the source: `native_decide` appears textually inside the declaration. The build confirms it at the kernel.",
+   "not_an_accusation": "Discharging a concrete numeric check by compiled evaluation is a reasonable engineering choice and the repository does not hide it. What the case shows is that a link in this corpus can fail a check the ordinary gate is supposed to run."
+  },
+  {
+   "id": "erdos-56-native-decide-transitive",
+   "kind": "axiom_clause_failure",
+   "links": [
+    "FormalConjectures/ErdosProblems/56.lean:147"
+   ],
+   "target_repository": "plby/lean-proofs",
+   "target_declaration": "Erdos56.erdos_56",
+   "locator_confidence": "high",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Lean.ofReduceBool",
+    "Lean.trustCompiler",
+    "Quot.sound"
+   ],
+   "prop_binders": 0,
+   "finding": "Same axiom closure as Erdos418, reached a different way. There is no `native_decide` anywhere inside this declaration — the static audit recorded its per-declaration token count as empty. The dependency is transitive, through a lemma the theorem uses. Only the kernel's closure shows it.",
+   "why_this_one_matters": "This is the case that justifies building rather than reading. A text-level audit is structurally blind to it: the token is not in the declaration, and grepping the file would flag every declaration in a file that uses `native_decide` anywhere, which is a different and much noisier claim. The closure answers the actual question — did this theorem's proof depend on it — and the answer is yes.",
+   "not_an_accusation": "As above. The repository is not concealing anything; the dependency is simply not visible in the declaration's own text."
+  },
+  {
+   "id": "erdos-750-declared-axiom",
+   "kind": "axiom_clause_failure",
+   "links": [
+    "FormalConjectures/ErdosProblems/750.lean:136"
+   ],
+   "target_repository": "Shashi456/erdos-formalizations",
+   "target_declaration": "Erdos750.erdos_750_FC",
+   "locator_confidence": "medium",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Erdos750.stiebitz_lower_bound",
+    "Quot.sound"
+   ],
+   "prop_binders": 0,
+   "finding": "The closure contains a locally declared `axiom`, `Erdos750.stiebitz_lower_bound`. The proof is conditional on Stiebitz's lower bound being assumed rather than proved, and the kernel says so precisely.",
+   "formal_conjectures_already_says_so": "This link is one of the three that use Formal Conjectures' own `conditional ... assuming` form: the statement is declared conditional and names `erdos_750.variants.stiebitz`. So this is not a gap in Formal Conjectures — it is Formal Conjectures' vocabulary working exactly as designed, and the build corroborates it independently. It is listed here because it is an axiom-clause failure by the mechanical definition, and because it shows what the closure looks like when an assumption really is load-bearing.",
+   "locator_caveat": "The static audit located this target at MEDIUM confidence by file-and-problem-number match, not by an exact name. The axiom reading is a fact about `Erdos750.erdos_750_FC`, the declaration the locator picked.",
+   "not_an_accusation": "Stating an assumption as an axiom and declaring the result conditional is honest formalisation practice, and both the repository and Formal Conjectures do declare it."
+  },
+  {
+   "id": "woett-lean-files-no-lake-project",
+   "kind": "target_not_locatable",
+   "links": [
+    "FormalConjectures/ErdosProblems/1102.lean:46",
+    "FormalConjectures/ErdosProblems/1102.lean:60",
+    "FormalConjectures/ErdosProblems/1102.lean:73",
+    "FormalConjectures/ErdosProblems/1102.lean:87",
+    "FormalConjectures/ErdosProblems/154.lean:74",
+    "FormalConjectures/ErdosProblems/204.lean:43",
+    "FormalConjectures/ErdosProblems/221.lean:42",
+    "FormalConjectures/ErdosProblems/290.lean:47",
+    "FormalConjectures/ErdosProblems/355.lean:44",
+    "FormalConjectures/ErdosProblems/457.lean:36",
+    "FormalConjectures/ErdosProblems/459.lean:46",
+    "FormalConjectures/ErdosProblems/459.lean:53",
+    "FormalConjectures/ErdosProblems/650.lean:61",
+    "FormalConjectures/ErdosProblems/650.lean:81",
+    "FormalConjectures/ErdosProblems/785.lean:77"
+   ],
+   "target_repository": "Woett/Lean-files",
+   "finding": "Neither checkout of `Woett/Lean-files` contains a Lake project. No directory anywhere in either tree carries both a Lake manifest and a `lean-toolchain`, so there is nothing for `lake build` to build and no way to elaborate `#print axioms` against the linked files by the ordinary route. Formal Conjectures links 15 statements to this repository across the two revisions.",
+   "drift_reading": "This is not toolchain drift and not a build failure. The repository is a collection of Lean files rather than a Lake package; that is a legitimate way to publish Lean source and it long predates any expectation of buildability. The finding is about what a third party can mechanically check, not about the mathematics.",
+   "what_it_would_take": "A minimal `lakefile.toml` and `lean-toolchain` would make all 15 links machine-checkable. That is the cheapest single change available anywhere in this corpus."
+  },
+  {
+   "id": "targets-not-elaborable-under-the-recorded-name",
+   "kind": "target_not_locatable",
+   "links": [
+    "FormalConjectures/ErdosProblems/353.lean:108",
+    "FormalConjectures/ErdosProblems/353.lean:120",
+    "FormalConjectures/ErdosProblems/353.lean:53",
+    "FormalConjectures/ErdosProblems/353.lean:72",
+    "FormalConjectures/ErdosProblems/353.lean:91",
+    "FormalConjectures/Paper/MonochromaticQuantumGraph.lean:369",
+    "FormalConjectures/Paper/MonochromaticQuantumGraph.lean:381",
+    "FormalConjectures/Paper/MonochromaticQuantumGraph.lean:394",
+    "FormalConjectures/Paper/MonochromaticQuantumGraph.lean:433",
+    "FormalConjectures/Paper/MonochromaticQuantumGraph.lean:529",
+    "FormalConjectures/Paper/MonochromaticQuantumGraph.lean:580",
+    "FormalConjectures/Paper/MonochromaticQuantumGraph.lean:648",
+    "FormalConjectures/Paper/MonochromaticQuantumGraph.lean:715"
+   ],
+   "finding": "13 links sit in projects that built cleanly but whose target declaration could not be elaborated under the name the static audit recorded. The build is fine; the name is not resolvable.",
+   "drift_reading": "This is a locator result, not a repository defect. The `formal_proof` attribute records a URL and at most a line anchor — it never records which declaration discharges the statement — so the target name is always reconstructed, and the static audit publishes a confidence for exactly this reason. Where the reconstruction is wrong, the honest output is `not_found`, and that is what is recorded. No claim is made about these proofs in either direction.",
+   "underlying_cause": "This is the same defect the static audit named as its largest: the attribute does not say what it points at. Recording the declaration name in the attribute would remove this category entirely."
+  }
+ ],
+ "stated_negatives": {
+  "note": "Each number below is asserted here and independently recomputed from builds.json by `evaluate.py verify`, which rejects the file on any mismatch. These are the headline negative results and they must not drift from the data.",
+  "build_failures_at_a_pinned_revision": 0,
+  "build_failures_at_an_unpinned_revision": 0,
+  "build_timeouts": 0,
+  "toolchains_unavailable": 0,
+  "declarations_whose_closure_contains_sorryAx": 0,
+  "declarations_whose_hypothesis_probe_was_unavailable": 0,
+  "reading": "Not one project in scope failed to build, at a pinned revision or an unpinned one, and none exceeded its wall-clock cap. Every one of the 15 buildable checkouts compiled at the toolchain it pins, across five Lean versions from v4.27.0 to v4.32.0. No axiom closure anywhere in the sample contains `sorryAx`. The expected result was some toolchain drift, since these projects were written months apart against a Lean and a Mathlib that both make breaking changes on a weeks-to-months cadence; there is none in this sample."
+ }
+}

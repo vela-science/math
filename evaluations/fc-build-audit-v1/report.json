@@ -1,0 +1,116 @@
+{
+  "authority_effect": "none",
+  "axioms": {
+    "declarations_read": 204,
+    "distinct_axiom_sets": {
+      "Classical.choice, Erdos750.stiebitz_lower_bound, Quot.sound, propext": 1,
+      "Classical.choice, Lean.ofReduceBool, Lean.trustCompiler, Quot.sound, propext": 2,
+      "Classical.choice, Quot.sound, propext": 199,
+      "Quot.sound, propext": 1,
+      "propext": 1
+    },
+    "flag_counts": {
+      "native_decide": 2,
+      "nonstandard_axiom": 1
+    },
+    "flagged_links_by_locator_confidence": {
+      "high": 2,
+      "medium": 1
+    },
+    "links_with_a_flagged_axiom_set": 3
+  },
+  "build_failures": {
+    "at_a_pinned_revision": 0,
+    "at_an_unpinned_revision": 0,
+    "pinned_repositories": {},
+    "unpinned_repositories": {}
+  },
+  "compute": {
+    "median_seconds_per_built_checkout": 214.9,
+    "note": "Wall-clock timings are one machine, one network, and a shared Mathlib olean cache pruned between checkouts. They bound effort, not difficulty.",
+    "total_hours": 2.37,
+    "total_seconds": 8543.5
+  },
+  "coverage": {
+    "checkouts_attempted": 20,
+    "checkouts_built": 15,
+    "checkouts_total": 143,
+    "links_total": 415,
+    "links_under_a_built_checkout": 229,
+    "links_under_an_attempted_checkout": 260,
+    "links_with_an_axiom_reading": 212,
+    "why_partial": "Coverage was capped at the top 20 checkouts by link count. Measured on this host, one Mathlib-dependent Lake project costs 3 to 45 minutes end to end, and the 143 checkouts declare 135 projects between them; running all of them is 20 to 28 hours, which does not fit the budget this audit was given. The cap covers 260 of the 399 links that have a checkout at all \u2014 65.2% \u2014 and the 123 checkouts outside it are recorded as `not_attempted` with their link counts rather than dropped. Every checkout inside the cap reached a terminal outcome; the run stopped because the work was done, not because it ran out of budget or disk."
+  },
+  "findings": {
+    "by_kind": {
+      "axiom_clause_failure": 3,
+      "target_not_locatable": 2
+    },
+    "cases": 5
+  },
+  "input_roots": {
+    "builds.json": "sha256:7f37db3930c1fcb3b1ed7cd95e9f92b04780c42b7561ead46993d77ebd3a7200",
+    "collector": "sha256:68d209d4146649cd6b7534a0273ecc2e48dd0036f34c7366bee8a91d5ff98507",
+    "evaluation_root": "sha256:ecb435920b954ff6cdc92508159ae9cc22faf02a89515d0a85005f93ebca1484",
+    "findings.json": "sha256:300d62d055c5d40e24841629db4e28b1e3fbe381c8bb651b4c9221dba5a85c13",
+    "implementation": "sha256:9428a716d92dcdc58cecb18fd87d311149f29b5cf2c9fe0cc5eaccabd60fbc15",
+    "rubric.json": "sha256:67664aeb6868d5f995c74fdd95c209b8e7bbc7fa30c2727e9643d47d3d082c79",
+    "static_results": "sha256:7a397be2fd63db8750858016fa78bc68e98dfbe0bea4ffbbac96223e83f37a20"
+  },
+  "limitations": [
+    "A build result is a statement about this host, this network, and this date. Another machine on another day can differ, and a cache miss can turn a would-be success into a timeout.",
+    "The per-repository wall-clock cap means `build_timeout` records the budget, not the project. A timed-out row is not a failed row.",
+    "The axiom reading inherits the static audit's locator confidence. Where that confidence is medium or low, the axiom set is a fact about the declaration the locator picked, not necessarily about the declaration the link intended.",
+    "`#print axioms` reports the axiom set, not the statement. A clean axiom set on a declaration that does not state the conjecture is worth nothing, and this audit does not check statement fidelity.",
+    "Fetching at the SHA the static audit resolved means an unpinned link is read at its freeze-date state. The branch may have moved since, in either direction.",
+    "No linked repository is admitted here. Nothing in this directory is a Submission, Verification, Decision, Event, or Standing, and no `vela` command was run."
+  ],
+  "outcomes": {
+    "by_checkout": {
+      "built": 15,
+      "no_manifest": 2,
+      "not_attempted": 123,
+      "target_not_found": 3
+    },
+    "by_link": {
+      "built": 229,
+      "no_github_checkout": 16,
+      "no_manifest": 15,
+      "not_attempted": 139,
+      "target_not_found": 16
+    }
+  },
+  "prop_hypotheses": {
+    "declarations_probe_unavailable": 0,
+    "declarations_with_a_reading": 204,
+    "declarations_with_at_least_one_prop_binder": 80,
+    "note": "A propositional binder is not a defect. Formal Conjectures statements carry hypotheses of their own and a linked proof mirroring them is correct. This field is recorded because a hypothesis is invisible to `#print axioms`, so the two surfaces have to be read together.",
+    "prop_binder_histogram": {
+      "0": 124,
+      "1": 50,
+      "2": 17,
+      "3": 9,
+      "4": 3,
+      "5": 1
+    }
+  },
+  "schema": "vela-math.fc-build-audit-report.v1",
+  "source": {
+    "formal_conjectures": {
+      "commit": "9f5ee773841921f460b4a26a3552f5eca4accaa0",
+      "repository": "google-deepmind/formal-conjectures"
+    },
+    "static_audit": "evaluations/fc-conditional-proof-audit-v1/results.json",
+    "static_results_root": "sha256:7a397be2fd63db8750858016fa78bc68e98dfbe0bea4ffbbac96223e83f37a20"
+  },
+  "toolchains": {
+    "checkouts_depending_on_mathlib": 18,
+    "declared": {
+      "leanprover/lean4:v4.27.0": 11,
+      "leanprover/lean4:v4.28.0": 2,
+      "leanprover/lean4:v4.29.1": 2,
+      "leanprover/lean4:v4.31.0": 1,
+      "leanprover/lean4:v4.32.0": 2
+    }
+  }
+}
