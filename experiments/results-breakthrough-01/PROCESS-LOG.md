@@ -509,3 +509,25 @@ fields; the observation remains separate.
   evidence; use the Git index as the sole path and byte source.
 - **Disposition:** fix now because manifest integrity gates independent review;
   do not rerun or alter the already passing fixture.
+
+## 2026-08-20T23:49:52Z — concealed-permutation balance assertion caught a bad pair table
+
+- **Stage/time and evidence:** held-out Stage 2 freeze before encryption or
+  commitment; first local invocation of `stage2/scripts/generate-permutation.py`.
+- **Observation and impact:** the generator stopped with `internal error:
+  mapping is not balanced` before writing a map because one listed pair of
+  permutations shared a label position. This cost one local invocation and
+  minutes; no Docker, model, OAuth, credit, candidate, evaluator, scientific,
+  source, canonical, or authority state was affected.
+- **Category:** harness/script.
+- **Root cause:** the finite complementary-pair table was transcribed without
+  asserting position-wise inequality for every listed pair before selection.
+- **Immediate correction:** replace the table with the six position-wise
+  complementary pairs, keep the 3/3/4-per-label assertion, and generate the
+  committed concealed map once from a fresh 32-byte seed.
+- **Prevention/simplification:** retain the ordinary balance assertion and add
+  a direct pair-invariant check if this generator is reused; do not add a
+  permutation framework or review gate.
+- **Disposition:** fixed now because a balanced concealed map is required for
+  Stage 2; the failed pre-output invocation creates no experiment cell or
+  infrastructure denominator entry.
