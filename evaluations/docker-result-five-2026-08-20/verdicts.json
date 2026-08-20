@@ -1,0 +1,87 @@
+{
+  "schema": "vela-math.docker-five-independent-evaluation.v1",
+  "authority_effect": "none",
+  "frozen_input": {
+    "commit": "8b53d5d16b8eb30ba7f3d8e1aaefee3db8b6cc14",
+    "tree": "f2a7be8fd54f6c3fad74e066d79d167f6026076e",
+    "producer_directory": "results/2026-08-20-docker-five/",
+    "assigned_cases": 5,
+    "evaluated_cases": 5
+  },
+  "rubric": {
+    "qualified_candidate": "Correct and source-backed bounded proposed result; duplication and authority are reported separately.",
+    "needs_correction": "Central observation is usable, but a material scope or evidence statement must be corrected.",
+    "valid_non_result": "Correct, well-scoped abstention.",
+    "invalid": "Central conclusion is wrong or unsupported."
+  },
+  "cases": [
+    {
+      "case": 4,
+      "case_id": "erdos-94-sum-multiplicity-proof",
+      "producer_result_type": "proposed_result",
+      "verdict": "qualified_candidate",
+      "correctness_and_scope": "Correct for the sum_multiplicity occurrence only; the Sym2 fiber, swap, parity-before-division, distance partition, and choose-two steps close. It does not address the cubic theorem or other variants.",
+      "exact_evidence_build_outcome": "Clean proof checkout 423344341fbfdf4f8f684a302c5d05379125e7dc/eae3c8d1941c997f1055f5ea561cb719088b9202, SHA-256 412975add8b6963bb44378f5d8ef41fd1f860b9ec06495432ab97e8ca60ffbe0; Lean 4.29.1, Mathlib 5e932f97dd25535344f80f9dd8da3aab83df0fe6; 8248/8248 build; axioms exactly propext, Classical.choice, Quot.sound. Target definitions at 94a278e06a8bcbc2e4f2935e491c0c115ec832e0 match the proof definitions.",
+      "novelty_or_duplication_status": "Exact duplicate of current accepted Claim vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb at sha256:aaaf6ebbf510ad08e6376c5958d23f4eb7704944f7d37916eee4ae253e809b3b.",
+      "unresolved_assumptions_dependencies_rights": "Navigation-only occurrence association and absent external/source-owner acceptance remain explicit; they do not undermine the bounded theorem.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "Already accepted on the same exact proof and target bytes."},
+      "minimal_correction_if_not_ready": "No mathematical correction; deduplicate against current Claims before routing."
+    },
+    {
+      "case": 5,
+      "case_id": "erdos-887-open-problem-negative-control",
+      "producer_result_type": "typed_non_result",
+      "verdict": "needs_correction",
+      "correctness_and_scope": "Core non-result is correct for open variant_i, but the blanket absence of proof-bearing related evidence is too broad.",
+      "exact_evidence_build_outcome": "Exact 288608562e684a2f3c97ba0ce960a2649a71370b repair reproduced content root 249ba4bcc206477d2695e154acda204bed356b99d4f670730ca9adeed08f8f01 and four sorry warnings under Lean 4.22.0. Separately, jarekkoch-hub/erdos887-lean@230bf2cd0bc15f971ad9d0e36f36f2056dd9d8b7 built 7663/7663 and its unconditional Rosenfeld C=64 lower theorem has only standard axioms; the upper K theorem still requires an unclosed package.",
+      "novelty_or_duplication_status": "Negative replay duplicates the retained accepted replay claim; related Rosenfeld evidence was already retained in the conditional-proof audit but omitted by the Docker output.",
+      "unresolved_assumptions_dependencies_rights": "No closed upper-bound K witness. Related theorem is MIT-licensed but not shown statement-faithful to an exact FC occurrence.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "Open assertion remains a non-result; related lower theorem is not the requested witness or a fidelity-checked packet."},
+      "minimal_correction_if_not_ready": "Bound the absence claim to evidence/current and current records; disclose the separate lower theorem and why it does not prove variant_i."
+    },
+    {
+      "case": 1,
+      "case_id": "erdos-321-status-conflict",
+      "producer_result_type": "typed_non_result",
+      "verdict": "valid_non_result",
+      "correctness_and_scope": "Correct metadata-conflict finding; no mathematical or occurrence-level status resolution follows.",
+      "exact_evidence_build_outcome": "Exact checkouts 931e7db4ee3c97705598f802e8358a201b9e422c/9400db56013775cafa03530d85f4090e956d4580 and 9f5ee773841921f460b4a26a3552f5eca4accaa0/cca3d86e3081eaf75667fbc8a62a3fdb03b95ef6; exact status logic returns lean_status open and yaml_status solved for 321.",
+      "novelty_or_duplication_status": "Duplicates the existing status-conflict packet and known mismatch; adds no mathematical Result.",
+      "unresolved_assumptions_dependencies_rights": "The result behind solved and its four-occurrence scope remain unidentified.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "Valid abstention, not a convertable scientific Result."},
+      "minimal_correction_if_not_ready": "No correction; only a source-owner-backed citation plus four-occurrence comparison could change the outcome."
+    },
+    {
+      "case": 2,
+      "case_id": "erdos-750-conditional-dependency",
+      "producer_result_type": "proposed_result",
+      "verdict": "qualified_candidate",
+      "correctness_and_scope": "Correct exact external-source conditional result; not an unconditional Stiebitz proof or an exact universe-polymorphic FC proof.",
+      "exact_evidence_build_outcome": "Clean 286f856aa3fc08957b80950fd18a45aab8d045ea/7afc730ddbd7261707240eeae90a0da808802d72 build under Lean 4.27.0 and Mathlib a3a10db0e9d66acbebf76c5e6a135066525ac900; 7885/7885; axioms exactly propext, Classical.choice, Erdos750.stiebitz_lower_bound, Quot.sound. External proposition is universe 0; literal Type* proposition is universe-polymorphic and not definitionally equal.",
+      "novelty_or_duplication_status": "Duplicates the source packet and build-audit finding.",
+      "unresolved_assumptions_dependencies_rights": "Stiebitz axiom, unchecked universe transport, medium locator confidence; Apache-2.0; current Math authority excludes 750.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "Duplicate, incomplete exact FC fidelity, and outside current Math authority."},
+      "minimal_correction_if_not_ready": "Type-check an explicit lifted-vertex/transport bridge and bind it under a separately scoped Repository before calling it the exact FC result."
+    },
+    {
+      "case": 3,
+      "case_id": "erdos-56-trust-axiom-licence",
+      "producer_result_type": "proposed_result",
+      "verdict": "needs_correction",
+      "correctness_and_scope": "Exact trust closure is correct, but statement fidelity is demonstrably mismatched rather than merely unresolved.",
+      "exact_evidence_build_outcome": "Clean bebe632f2f6227a40e00b145bfbf7b3e1d68f8c2/7747fa02d3b81f88e6000cd589ff2c1b5e9c5ab2 v4.24.0 build under Mathlib f897ebcf72cd16f89ab4577d0c826cd14afaafc7; 7351/7351; axioms exactly propext, Classical.choice, Lean.ofReduceBool, Lean.trustCompiler, Quot.sound. Exact source comparison shows different eventual binders and prime-threshold conditions from FC.",
+      "novelty_or_duplication_status": "Duplicates the retained erdos-56-native-decide-transitive audit finding.",
+      "unresolved_assumptions_dependencies_rights": "Trust policy unknown; no root or v4.24.0 licence, only other-version licences; current Math authority excludes 56.",
+      "ready_for_separate_vela_conversion": {"ready": false, "why": "Duplicate trust fact, statement mismatch, unresolved rights, and out of authority scope."},
+      "minimal_correction_if_not_ready": "State the exact declaration mismatch and scope the disclosure only to the external theorem; do not present it as proof of the FC declaration."
+    }
+  ],
+  "aggregate": {
+    "proposed_result_precision": {"qualified": 2, "denominator": 3, "rate": 0.666667},
+    "valid_non_result_rate": {"valid": 1, "denominator": 2, "rate": 0.5},
+    "invalid": {"count": 0, "denominator": 5},
+    "conversion_ready": {"count": 0, "denominator": 5},
+    "wall_time_seconds": 1921,
+    "smallest_evidence_backed_next_step": "Route no case into a new Vela conversion task; record a stop result. If a later bounded follow-up is justified, close Case 2's universe-transport check under a separately scoped consumer."
+  }
+}
