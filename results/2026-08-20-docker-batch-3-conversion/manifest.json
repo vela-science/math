@@ -1,0 +1,112 @@
+{
+  "schema": "vela-math.batch-3-conversion-handoff.v1",
+  "authority_effect": "none",
+  "producer": {
+    "commit": "082a118ea6ce7c9ca6a62f72aa425373228f7efe",
+    "tree": "480aa298b947b144bdcd9e9574420dcb69b9b486"
+  },
+  "evaluation": {
+    "commit": "be883fe7808e1860373ce19d12d0cb38b409a687",
+    "tree": "4a607a4a4252e927b215c2bce55aff59d6b4d6f7",
+    "report": {
+      "path": "evaluations/docker-result-batch-3-2026-08-20/REPORT.md",
+      "sha256": "d5ef4f3733faafee8749e7a9229b53786d4286c464d1fdfccce07c316f2a2b00"
+    },
+    "verdicts": {
+      "path": "evaluations/docker-result-batch-3-2026-08-20/verdicts.json",
+      "sha256": "688cbdc53e52e69e0aa4adc405bfcf3442980a0d3698cd23ada932013f791abd"
+    }
+  },
+  "current_state": {
+    "checked_on": "2026-08-20",
+    "math_origin_main": "5de716c896065c03c0a470d015ba2a328a527f73",
+    "formal_conjectures_origin_main": "e13dd7284e72012a1616806d09cb6b8025e387af",
+    "formal_conjectures_tree": "7d2b7c17ff144393c2b4a39973ed212387b3e783",
+    "lean_proofs_origin_main": "62444861a41509b90c50499bc923e0ee4235df7d",
+    "lean_proofs_tree": "71f7bd5bd65ae3226f5e48a1c8773aa97333a349",
+    "duplicate_search": "no exact proof or correction beyond assigned FC declarations and subset references"
+  },
+  "cases": [
+    {
+      "case": 1,
+      "problem": "Erdos 479",
+      "declaration": "Erdos479.erdos_479",
+      "packet": {
+        "path": "CASE-1-ERDOS-479.md",
+        "sha256": "4e34630d895bebd0017336d45a788c2cb5f62c94d3bd821c93790776c6acf0bb"
+      },
+      "source": {
+        "repository": "google-deepmind/formal-conjectures",
+        "commit": "9c4d5821819656af53c5473ded2116ea14a7ff1c",
+        "path": "FormalConjectures/ErdosProblems/479.lean",
+        "sha256": "5c034287066750c318dae057cf5cfc5021cd958d7a948f2cd78daf136c1ac98e",
+        "licence": "Apache-2.0"
+      },
+      "producer_artifacts": {
+        "candidate_sha256": "9321f5fb41266e9eacb9d35f3181d0c4adcf772a3fc9060b2aaaf083580d0ec9",
+        "receipt_sha256": "a0af792c9dea1aa39e1078091c47aa2d5c120276e7a05bc156b087384518a190",
+        "tool_calls_sha256": "f49d9393610063ce418f6d7d009096f63245030be46182b4c60ff331a1147c31",
+        "raw_event_stream_sha256": "aa106ab743d455c6e4217831139b64ba8d141ebb23f5b1d3d08e02df18e50e77"
+      },
+      "conversion_kind": "statement_translation_correction_with_checked_bridge_required",
+      "owning_repository": "google-deepmind/formal-conjectures"
+    },
+    {
+      "case": 3,
+      "problem": "Erdos 850",
+      "declaration": "Erdos850.erdos_850",
+      "packet": {
+        "path": "CASE-3-ERDOS-850.md",
+        "sha256": "b300edcdacf208f7e9c0aebcf263c7a7bf84c468055dbae28ce178ed0b555291"
+      },
+      "source": {
+        "repository": "google-deepmind/formal-conjectures",
+        "commit": "9c4d5821819656af53c5473ded2116ea14a7ff1c",
+        "path": "FormalConjectures/ErdosProblems/850.lean",
+        "sha256": "5128fc19d679a8b7f31c9a894c997a66173138192840531b763c4f3df8f06eaa",
+        "licence": "Apache-2.0"
+      },
+      "producer_artifacts": {
+        "candidate_sha256": "8f9012ba17621c3802dbba2f2009c9aa59ea2c9a6a721ce1c0d3ea2b02578bf1",
+        "receipt_sha256": "aab650440957867c1586b9fc78a2a74129c3a2837c534b26caa14aeeaafdbbb4",
+        "tool_calls_sha256": "8ccd8249f169d8ecff7c3175522cde7219a76824486c598a5178270f03a0598a",
+        "raw_event_stream_sha256": "0bb8f83b752c0fb82e5ae46cded62a5ede5963a0214db390c724f6bd0707e3c5"
+      },
+      "conversion_kind": "docstring_translation_correction",
+      "owning_repository": "google-deepmind/formal-conjectures"
+    },
+    {
+      "case": 4,
+      "problem": "Erdos 1074",
+      "declaration": "Erdos1074.erdos_1074.variants.EHSNumbers_init",
+      "packet": {
+        "path": "CASE-4-ERDOS-1074.md",
+        "sha256": "2328187c94682728c8db023ca4027b79656d0e04d2d17019dbca5a26d93f579b"
+      },
+      "source": {
+        "repository": "google-deepmind/formal-conjectures",
+        "commit": "9c4d5821819656af53c5473ded2116ea14a7ff1c",
+        "path": "FormalConjectures/ErdosProblems/1074.lean",
+        "sha256": "72b74c90c3fbdf66fedcd744d6c90da05fdfc7e87673a016787ae4586c705c45",
+        "licence": "Apache-2.0"
+      },
+      "producer_artifacts": {
+        "candidate_sha256": "b7af4927edc477ce0a90bdb1c005812a03345ca03f8900d1578d271679195b89",
+        "receipt_sha256": "4c6c96e1e660a8b4b527d0b6e8fe4d865156c7fb311d037ec8f9565b9c9621f2",
+        "tool_calls_sha256": "03bae4dc933435dd689bb81c5d98e8de80d6519c99ca39659251b4699e57deac",
+        "raw_event_stream_sha256": "2bd4e7a6184f46918c1429ef92e47135b7226aa82572d8203893511b9888c35e"
+      },
+      "certificate": {
+        "program_path": "case-4-ehs-prefix/certificate.py",
+        "program_sha256": "aa18c73e7d44b4b45210256370f4d04fce97b5239a37caf7df55be7b223d0637",
+        "stdout_path": "case-4-ehs-prefix/certificate.stdout.txt",
+        "stdout_sha256": "32dbde16b9754e8d3c8419b93bfd95f766e7930967103a1a3b80c8c11e1a0685",
+        "producer_stdout_byte_match": true,
+        "local_replay_stdout_byte_match": true
+      },
+      "conversion_kind": "executable_certificate_then_separate_exact_lean_theorem",
+      "realization_repository": "williamjblair/lean-proofs",
+      "eventual_source_owner": "google-deepmind/formal-conjectures"
+    }
+  ]
+}

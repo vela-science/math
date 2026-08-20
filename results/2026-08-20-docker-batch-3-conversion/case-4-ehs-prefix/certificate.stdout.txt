@@ -1,0 +1,20 @@
+m=0; factorial_plus_one=2; prime_factorization=2^1; residues_mod_m=[(2, None)]; EHS=False; witness=None
+m=1; factorial_plus_one=2; prime_factorization=2^1; residues_mod_m=[(2, 0)]; EHS=False; witness=None
+m=2; factorial_plus_one=3; prime_factorization=3^1; residues_mod_m=[(3, 1)]; EHS=False; witness=None
+m=3; factorial_plus_one=7; prime_factorization=7^1; residues_mod_m=[(7, 1)]; EHS=False; witness=None
+m=4; factorial_plus_one=25; prime_factorization=5^2; residues_mod_m=[(5, 1)]; EHS=False; witness=None
+m=5; factorial_plus_one=121; prime_factorization=11^2; residues_mod_m=[(11, 1)]; EHS=False; witness=None
+m=6; factorial_plus_one=721; prime_factorization=7^1*103^1; residues_mod_m=[(7, 1), (103, 1)]; EHS=False; witness=None
+m=7; factorial_plus_one=5041; prime_factorization=71^2; residues_mod_m=[(71, 1)]; EHS=False; witness=None
+m=8; factorial_plus_one=40321; prime_factorization=61^1*661^1; residues_mod_m=[(61, 5), (661, 5)]; EHS=True; witness=61
+m=9; factorial_plus_one=362881; prime_factorization=19^1*71^1*269^1; residues_mod_m=[(19, 1), (71, 8), (269, 8)]; EHS=True; witness=71
+m=10; factorial_plus_one=3628801; prime_factorization=11^1*329891^1; residues_mod_m=[(11, 1), (329891, 1)]; EHS=False; witness=None
+m=11; factorial_plus_one=39916801; prime_factorization=39916801^1; residues_mod_m=[(39916801, 1)]; EHS=False; witness=None
+m=12; factorial_plus_one=479001601; prime_factorization=13^2*2834329^1; residues_mod_m=[(13, 1), (2834329, 1)]; EHS=False; witness=None
+m=13; factorial_plus_one=6227020801; prime_factorization=83^1*75024347^1; residues_mod_m=[(83, 5), (75024347, 8)]; EHS=True; witness=83
+m=14; factorial_plus_one=87178291201; prime_factorization=23^1*3790360487^1; residues_mod_m=[(23, 9), (3790360487, 11)]; EHS=True; witness=23
+m=15; factorial_plus_one=1307674368001; prime_factorization=59^1*479^1*46271341^1; residues_mod_m=[(59, 14), (479, 14), (46271341, 1)]; EHS=True; witness=59
+m=16; factorial_plus_one=20922789888001; prime_factorization=17^1*61^1*137^1*139^1*1059511^1; residues_mod_m=[(17, 1), (61, 13), (137, 9), (139, 11), (1059511, 7)]; EHS=True; witness=61
+m=17; factorial_plus_one=355687428096001; prime_factorization=661^1*537913^1*1000357^1; residues_mod_m=[(661, 15), (537913, 16), (1000357, 9)]; EHS=True; witness=661
+EHS_in_0_through_17= [8, 9, 13, 14, 15, 16, 17]
+first_seven= [8, 9, 13, 14, 15, 16, 17]
