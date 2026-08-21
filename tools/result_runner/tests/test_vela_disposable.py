@@ -50,6 +50,8 @@ class DisposableVelaIntegrationTests(unittest.TestCase):
             self.assertEqual(len(value["method_sha256"]), 64)
             self.assertFalse((root / "vela/private/authority-key").exists())
             self.assertFalse((root / "vela/private/authority-key.pub").exists())
+            self.assertFalse((root / "vela/private").exists())
+            self.assertFalse((root / "vela/home").exists())
 
     def test_setup_failures_delete_every_authority_key_file(self) -> None:
         scenarios = {
@@ -110,6 +112,8 @@ class DisposableVelaIntegrationTests(unittest.TestCase):
                 self.assertFalse(
                     (destination / "private" / "authority-key.pub").exists()
                 )
+                self.assertFalse((destination / "private").exists())
+                self.assertFalse((destination / "home").exists())
 
 
 if __name__ == "__main__":

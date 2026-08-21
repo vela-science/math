@@ -1,0 +1,47 @@
+{
+  "authority": {
+    "key_fingerprint": "SHA256:v2jYYGQq04Xb6pl1JIbAxl2awgSE/5euWXJ191WXP2c",
+    "key_id": "ssh-ed25519:SHA256:v2jYYGQq04Xb6pl1JIbAxl2awgSE/5euWXJ191WXP2c",
+    "keyset_root": "sha256:66ddaf692519924c4d1c055861a1ddbea6683e81fe059fce625ae8baf2a5b38a",
+    "local_trust": {
+      "anchor_path": "/Users/williamblair/.vela/trust/authorities/6a995dad-b16c-4b99-a8ec-162166c1f0ce.json",
+      "anchor_root": "sha256:b2a8f49b7646167d17dddb626fd79c8b33ac8c1a2776d41c936c9ec31bca2ceb",
+      "first_authority_record_root": "sha256:2a5654fbdb9e4edaa9395437f493095d9277f8405d818ba7d1caddd8176c38b5",
+      "installed": true,
+      "repository_id": "6a995dad-b16c-4b99-a8ec-162166c1f0ce",
+      "schema": "vela.authority-trust-anchor.v1"
+    },
+    "policy_root": "sha256:a7d69a6b6240ca71a16daefe0210b87f25b370f48c184be2f1cb3147e1683805",
+    "principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+    "record_id": "var_2878a886bdc98747",
+    "record_root": "sha256:2a5654fbdb9e4edaa9395437f493095d9277f8405d818ba7d1caddd8176c38b5",
+    "state": "initialized"
+  },
+  "layout": "vela.repository-bootstrap.v1",
+  "name": "Result Runner disposable qualification",
+  "next_action": "vela submit --repo '.' --help",
+  "ok": true,
+  "operation_id": "vop_20989a8e248451c1c77da6987a0df37588fe27e7a43029b2ea2714b43eba4964",
+  "path": ".",
+  "profile_root": "sha256:33c3741a4b30049481954c28ef964768876a6d32cfef66fe03461f3417baa9b5",
+  "repository": {
+    "git_commit": "1bed2d17fa1ddbe0439afc310021782b982f0e44",
+    "git_tree": "93b60912085820638e5998d087cac1132dc87a7f",
+    "origin_id": "vro_49fce302843f5c71",
+    "origin_root": "sha256:49fce302843f5c716931818d0166b762dac05e8ba88472477a02e0ebd26c3a7b",
+    "repository_root": "sha256:94e020f70dbb3f9a5d912c93096f71accbc395333749e460c472ae0fe00e7a6b"
+  },
+  "repository_id": "6a995dad-b16c-4b99-a8ec-162166c1f0ce",
+  "resumed": false,
+  "schema": "vela.repository-init.v1",
+  "scientific_object_count": 0,
+  "scope": "Retain one non-scientific execution fixture",
+  "wrote": [
+    "README.md",
+    "vela.toml",
+    ".gitignore",
+    ".gitattributes",
+    "AGENTS.md",
+    "CLAUDE.md"
+  ]
+}

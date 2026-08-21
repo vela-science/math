@@ -1,0 +1,20 @@
+{
+  "classification": {
+    "provider_requests": 0,
+    "scientific_state_changed": false
+  },
+  "correction": "Delete the complete disposable Vela HOME and empty private directory inside the existing cleanup guard.",
+  "disposition": "retained_operational_cleanup_failure_not_a_qualification_pass",
+  "observation": "Both signed lifecycles passed, but Vela 0.977.4 created disposable producer/verifier private keys under vela/home after the adapter's authority-key-only cleanup.",
+  "run_summaries": [
+    {
+      "path": "runs/run-1/summary.json",
+      "sha256": "fb44ce259b29b8a41372b3d6e85ff42fabe74cdf34aca02acbf279b3ff8162de"
+    },
+    {
+      "path": "runs/run-2/summary.json",
+      "sha256": "169b601cc6ae616ab8a74cb61bf14104a6c64736beccc52bdc229df966fa81d4"
+    }
+  ],
+  "secret_bytes_retained": false
+}

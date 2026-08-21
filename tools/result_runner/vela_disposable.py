@@ -321,11 +321,12 @@ def record_disposable(
     receipts = destination / "receipts"
     private = destination / "private"
     key = private / "authority-key"
+    home = destination / "home"
     private.mkdir()
     # Install cleanup ownership before setup can create either authority-key
     # file. The mutable environment also retains ssh-agent identity if setup
     # fails after agent creation but before returning.
-    environment = _minimal_environment(destination / "home")
+    environment = _minimal_environment(home)
     try:
         _agent_environment(key, environment)
         repo.mkdir()
@@ -537,8 +538,11 @@ def record_disposable(
             candidate.unlink(missing_ok=True)
         if "SSH_AGENT_PID" in environment:
             run(["ssh-agent", "-k"], env=environment, check=False)
-        if key.exists() or key.with_suffix(".pub").exists():
+        if home.exists():
+            shutil.rmtree(home)
+        private.rmdir()
+        if key.exists() or key.with_suffix(".pub").exists() or home.exists():
             raise RunnerError(
                 "vela_key_delete",
-                "disposable authority private/public key was not deleted",
+                "disposable authority or actor key material was not deleted",
             )

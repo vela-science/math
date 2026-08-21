@@ -1,0 +1,133 @@
+{
+  "command": "review.inbox",
+  "entries": [
+    {
+      "assertion": "Disposable Result Runner qualification completed; no scientific assertion.",
+      "authority_heads": {
+        "authority_event_log_root": "sha256:1cb370a78f387c01c67ecf21dcc79c6f7af0825b8643a7509a9599720cd9a9a1",
+        "authority_keyset_root": "sha256:a4659240064abddd7d65a2e1a98a3ae0fe8569506e36c0dd2e630aa145d43a57",
+        "authority_record_root": "sha256:b7b68d4afd747c172c92ba91baeb55866cdb0bd0db889cec8a4cabdde09599c0",
+        "policy_bundle_root": "sha256:d4976681f32e68115bebe5e4de64cd4e88bb6b788071e46a922d1489b5d5f960"
+      },
+      "claim_id": "vcl_c2ebb8f18f17639cfada7f2fd5ccdc835ffa392815e80844c1b90220005c3488",
+      "conditions": [
+        "Caveat: Disposable runner qualification only; no scientific truth, utility, canonical authority, or Standing."
+      ],
+      "created_at": "2026-08-21T13:28:07Z",
+      "entry_root": "sha256:b034f1ac8130ef7629a7d545bd0798b910569547e44c00b8eaaf9011247b226b",
+      "inputs": {
+        "claim_root": "sha256:c3eefa20f7685c0ca6e7314da0afc0de57410b88d8de7a120ba84fe713c2c15e",
+        "proposal_root": "sha256:c2ce2aa9474ca30007d022f2c41b008769ec9907bd05aeb773792edb835de6ce",
+        "repository_root": "sha256:ee516110b47282b173857da401937d7e01899b6e31fc523696cbe189fa5f1581",
+        "submission_root": "sha256:b9fb55ca899bbf4a96587d8873a978a108b3457e15b7fe94165ac8375ce663d5",
+        "verification_set_root": "sha256:8ff169217effc2bcb152104028b0ab6cb87af116c6f5a41933dd10f4451d4210"
+      },
+      "limits": [
+        "Disposable runner qualification only; no scientific truth, utility, canonical authority, or Standing."
+      ],
+      "next_obligation": {
+        "if_accept": "Replay the accepted successor repository; source-owning repositories and read products may then recompute exact next obligations.",
+        "if_reject": "Replay the rejected successor repository; source-owning repositories and read products may then recompute exact next obligations without changing accepted Standing.",
+        "now": "Resolve 2 acceptance blocker(s), or reject the Proposal with an attributed reason."
+      },
+      "proposal_action": "claim.add",
+      "proposal_actor": "agent:result-runner",
+      "proposal_id": "vpr_c2ce2aa9474ca300",
+      "proposal_reason": "Retain authenticated Submission vsb_b9fb55ca899bbf4a for independent verification and authorized review.",
+      "readiness": {
+        "attributed_decision_required": true,
+        "blockers": [
+          {
+            "code": "failing_verification",
+            "detail": "Verification vvr_d43c9a61470e94a2 reports fail for Qualification establishes scientific truth or independent verification.",
+            "subject": "vvr_d43c9a61470e94a2"
+          },
+          {
+            "code": "missing_independent_passing_verification",
+            "detail": "No independent passing Verification Record satisfies \"Qualification establishes scientific truth or independent verification\".",
+            "subject": "Qualification establishes scientific truth or independent verification"
+          }
+        ],
+        "protocol_gate": "blocked",
+        "rejection_available": true
+      },
+      "repository_id": "c7fc6f2f-15b9-46a8-9363-6a65af9e58cd",
+      "requested_decision": "accept_or_reject",
+      "schema": "vela.decision-inbox-entry.v3",
+      "staleness": {
+        "invalidated_by": [
+          "repository_root",
+          "proposal_root",
+          "claim_root",
+          "submission_root",
+          "verification_set_root",
+          "policy_bundle_root",
+          "authority_keyset_root",
+          "authority_record_root",
+          "authority_event_log_root"
+        ],
+        "state": "current"
+      },
+      "standing_delta": {
+        "before": {
+          "accepted": [],
+          "repository_root": "sha256:ee516110b47282b173857da401937d7e01899b6e31fc523696cbe189fa5f1581"
+        },
+        "counts": {
+          "global_accepted_claims": {
+            "before": 0,
+            "if_accept": 1,
+            "if_reject": 0
+          },
+          "unchanged_accepted_claims": 0
+        },
+        "if_accept": {
+          "accepted": [
+            {
+              "claim_id": "vcl_c2ebb8f18f17639cfada7f2fd5ccdc835ffa392815e80844c1b90220005c3488",
+              "claim_root": "sha256:c3eefa20f7685c0ca6e7314da0afc0de57410b88d8de7a120ba84fe713c2c15e"
+            }
+          ],
+          "repository_root": "sha256:815a72ee09b7b7a078e34f3e4392cbb8f067bdbb93c32ca2d09af31d9d4b9e72"
+        },
+        "if_reject": {
+          "accepted": [],
+          "repository_root": "sha256:f3aa2970b2802d05c24e4cb5e49b12f1d5ac0a1769d9b46c432dfa091e33370e"
+        },
+        "scope": {
+          "affected_claim_ids": [
+            "vcl_c2ebb8f18f17639cfada7f2fd5ccdc835ffa392815e80844c1b90220005c3488"
+          ],
+          "kind": "proposal_affected_claims",
+          "target_claim_id": "vcl_c2ebb8f18f17639cfada7f2fd5ccdc835ffa392815e80844c1b90220005c3488"
+        },
+        "transition": "add accepted Claim"
+      },
+      "verification_records": [
+        {
+          "does_not_establish": [
+            "Any scientific claim, mathematical truth, benchmark result, comparative utility, source-owner approval, canonical authority, or Standing.",
+            "Organizational, operator, host, provider, model, or source independence."
+          ],
+          "independent_of_producer": false,
+          "outcome": "fail",
+          "property": "Qualification establishes scientific truth or independent verification",
+          "protocol_evidence_role": "blocking",
+          "satisfies_requirements": [],
+          "verification_record_id": "vvr_d43c9a61470e94a2",
+          "verification_record_root": "sha256:d43c9a61470e94a28687706f2c9d8d01376b1c349d2b4cd181da9ce39fc61d79",
+          "verifier": "verifier:result-runner-qualification"
+        }
+      ],
+      "verification_requirements": [
+        "Qualification establishes scientific truth or independent verification"
+      ]
+    }
+  ],
+  "ok": true,
+  "order": "protocol_ready_first_then_created_at_asc_then_proposal_id",
+  "projection_root": "sha256:f41cfbccdd24b2a243075c458a2608e91ea05f5eab65ada420ae1e00ec87d0fe",
+  "repository_id": "c7fc6f2f-15b9-46a8-9363-6a65af9e58cd",
+  "repository_root": "sha256:ee516110b47282b173857da401937d7e01899b6e31fc523696cbe189fa5f1581",
+  "schema": "vela.decision-inbox.v3"
+}

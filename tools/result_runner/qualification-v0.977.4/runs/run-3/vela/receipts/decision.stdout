@@ -1,0 +1,43 @@
+{
+  "action": "reject",
+  "actor_class": "agent",
+  "actor_id": "agent:result-runner-qualification-owner",
+  "after_event_log_root": "sha256:6869b457a338f5a02f005510667bc57cd69be5addf1ffb972d0c042da08325c6",
+  "authentication": "local_os_session",
+  "authority": {
+    "authentication": "local_os_session",
+    "principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+    "transaction_signer": "repository_authority"
+  },
+  "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+  "authority_record_id": "var_81116e7913d6146f",
+  "authority_record_root": "sha256:1d42f78ea7af1bfb1e26089a2ad41e593d8b85476c7bbd2cb01ff1bc97ce2928",
+  "before_event_log_root": "sha256:1cb370a78f387c01c67ecf21dcc79c6f7af0825b8643a7509a9599720cd9a9a1",
+  "claim_id": "vcl_c2ebb8f18f17639cfada7f2fd5ccdc835ffa392815e80844c1b90220005c3488",
+  "claim_root": "sha256:c3eefa20f7685c0ca6e7314da0afc0de57410b88d8de7a120ba84fe713c2c15e",
+  "command": "review.reject",
+  "decision_plan_root": "sha256:4990eef72180839726f7771d04e8faa8aed1619299ccae2666b6d9221ba85608",
+  "event_ids": [
+    "vev_771523f8e28527be"
+  ],
+  "ok": true,
+  "performer": {
+    "actor_class": "agent",
+    "actor_id": "agent:result-runner-qualification-owner",
+    "key_read": false,
+    "session_ref": "VELA-RESULT-RUNNER"
+  },
+  "performer_key_read": false,
+  "principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+  "proposal_id": "vpr_c2ce2aa9474ca300",
+  "proposal_root": "sha256:c2ce2aa9474ca30007d022f2c41b008769ec9907bd05aeb773792edb835de6ce",
+  "reason": "Qualification fixture only; rejection prevents scientific or Standing interpretation.",
+  "repository_before": "sha256:ee516110b47282b173857da401937d7e01899b6e31fc523696cbe189fa5f1581",
+  "repository_id": "c7fc6f2f-15b9-46a8-9363-6a65af9e58cd",
+  "repository_path": ".",
+  "schema": "vela.review-decision.v5",
+  "scientific_state_changed": false,
+  "session_ref": "VELA-RESULT-RUNNER",
+  "transaction_signer": "repository_authority",
+  "verification_set_root": "sha256:8ff169217effc2bcb152104028b0ab6cb87af116c6f5a41933dd10f4451d4210"
+}

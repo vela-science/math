@@ -1,0 +1,4 @@
+runs/*/native/.git/
+runs/*/vela/home/
+runs/*/vela/private/
+runs/*/vela/repo/

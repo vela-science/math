@@ -4,6 +4,14 @@
     "scientific_claim": false,
     "scientific_state_changed": false
   },
+  "current_vela_pin": {
+    "binary_sha256": "06f912d107d29e4ce1dadd19bf7ef849ec42d7e62cbc9332c9807e6b8c9bd05e",
+    "path": "tools/result_runner/qualification-v0.977.4/PIN.json",
+    "platform": "macos/aarch64",
+    "source_commit": "1a2e0328620b4e8c4584c3d4baf257adb11f3d45",
+    "status": "pass_pending_independent_review",
+    "tag": "v0.977.4"
+  },
   "correction_validation": {
     "candidate_inference_repeated": false,
     "current_runner_sha256": "6e5ea0fef6f7e4459061b723314b4aec56055ff303b8b110a21710f911644432",
