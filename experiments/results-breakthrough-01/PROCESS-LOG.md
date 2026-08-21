@@ -606,3 +606,68 @@ fields; the observation remains separate.
   ordinary local paths needed for replay.
 - **Disposition:** fixed now because exact-source replayability is required;
   inference remains stopped pending independent review.
+
+## 2026-08-21T00:42:05Z — first assigned relaunch used a relative Docker bind source
+
+- **Stage/time and evidence:** smoke cell `T01-N`;
+  `smoke/runner-receipts/T01-N/` and
+  `smoke/candidates/T01-N/receipts/codex.stderr`.
+- **Observation and impact:** the frozen runner was invoked with a relative
+  work root, so Docker rejected the bind source with exit 125 before creating
+  the container. The assigned cell has no Result and no model attempt.
+- **Category:** operator error.
+- **Root cause:** the caller did not resolve the work-root argument to an
+  absolute host path before invoking the already-frozen runner.
+- **Affected:** one assigned invocation and three seconds; zero provider,
+  candidate-model, evaluator, recovery, tool, credit, source, or authority
+  state.
+- **Immediate correction:** retain the failure without retry or substitution;
+  supply absolute paths to the next fixed-order invocation.
+- **Prevention/simplification:** validate bind-source absoluteness before cell
+  directory creation in a future reviewed runner.
+- **Disposition:** retained; no retry of `T01-N`.
+
+## 2026-08-21T00:42:41Z — frozen runner did not attach prompt stdin
+
+- **Stage/time and evidence:** smoke cell `T02-G`;
+  `smoke/runner-receipts/T02-G/`,
+  `smoke/candidates/T02-G/receipts/codex.stderr`, and frozen
+  `scripts/run-cell.sh` SHA-256
+  `4d7c5312d5002fa3c03f74e1c9337b02b4f49672c5308a8b04ba95e2beeeff9b`.
+- **Observation and impact:** absolute mounts succeeded and the container
+  reached `codex exec`, but `docker run` lacked `-i`; piped prompt bytes were
+  not attached and Codex exited with `No prompt provided via stdin.` No
+  provider inference or Result occurred.
+- **Category:** harness/script.
+- **Root cause:** the frozen cell runner redirects the prompt into the Docker
+  client but does not request interactive stdin attachment.
+- **Affected:** one assigned invocation and one second; zero candidate-model,
+  evaluator, recovery, tool, billable inference, source, canonical, authority,
+  or Standing state. Four later smoke invocations were not manufactured after
+  the shared cause was established.
+- **Immediate correction:** none; stop without editing the protected reviewed
+  runner, retrying either cell, substituting a target, accessing custodian
+  material, or launching an evaluator.
+- **Prevention/simplification:** a future independently reviewed correction
+  should add Docker stdin attachment and run one no-model stdin sentinel before
+  authorizing inference.
+- **Disposition:** experiment-blocking and deferred for separate authorization.
+
+## 2026-08-21T00:46:02Z — validation loop shadowed zsh command search path
+
+- **Stage/time and evidence:** post-abort local manifest validation; terminal
+  diagnostics `command not found: git`, `shasum`, and `awk`; no experiment
+  receipt was produced or changed by the failed validation process.
+- **Observation and impact:** a read-only prospective-index check assigned a
+  tracked filename to zsh's special `path` variable, which rewrote `PATH` for
+  that shell and made later commands unavailable. Output was noisy; validation
+  had to be rerun.
+- **Category:** operator error.
+- **Root cause:** shell-variable naming did not account for zsh's tied `path`
+  array.
+- **Affected:** one local validation invocation and minutes; zero model,
+  evaluator, recovery, credit, source, evidence, index, or authority state.
+- **Immediate correction:** use `tracked_path`, rerun the deterministic check,
+  and regenerate the manifest only after the advisory log update.
+- **Prevention/simplification:** never use `path` as a zsh script variable.
+- **Disposition:** fixed in validation only; no experiment execution resumed.
