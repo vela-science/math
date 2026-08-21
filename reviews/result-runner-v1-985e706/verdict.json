@@ -1,0 +1,43 @@
+{
+  "checks": {
+    "commit_tree_parent_remote": "pass",
+    "compileall_python_3_11_2": "pass",
+    "credential_scan_51_files": "pass_zero_findings",
+    "diff_check": "pass",
+    "docker_dry_path": "pass",
+    "focused_tests_exact_vela": "pass_18_of_18",
+    "graph_json_exact_replay": "pass",
+    "native_exact_replay": "pass",
+    "post_exit_runtime_census": "pass_10_of_10",
+    "portable_manifest": "pass_35_of_35",
+    "ruff_0_5_4_check": "pass",
+    "ruff_0_5_4_format": "pass",
+    "schema_pattern_and_unsupported_rejection": "pass",
+    "sqlite_logical_content_replay": "pass",
+    "sqlite_projection_hash_replay": "pass",
+    "sqlite_same_serializer_bytes": "pass",
+    "sqlite_serializer_preimage_retained": "fail_compile_options_omitted",
+    "vela_failure_path_key_cleanup": "pass_three_hostile_points",
+    "vela_signed_lifecycle": "pass"
+  },
+  "finding": {
+    "id": "RR-04",
+    "priority": "P1",
+    "type": "sqlite_serializer_projection_preimage_not_retained"
+  },
+  "producer": {
+    "branch": "codex/result-runner-v1",
+    "commit": "985e7065a1befa525aef64f45cc61a1f087438d4",
+    "parent": "2ba67830a42e657567bd30755f560183e767c26c",
+    "remote_equal": true,
+    "tree": "7c98f9f67d9361ca969d2ca14ee866e23fe79f7c"
+  },
+  "retained_blockers": {
+    "RR-02": "pass",
+    "RR-03": "pass",
+    "RR-04": "blocked_metadata_only",
+    "RR-05": "pass"
+  },
+  "schema": "vela.result-runner.independent-review.v1",
+  "verdict": "BLOCKED"
+}
