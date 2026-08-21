@@ -1,0 +1,43 @@
+{
+  "authorization": {
+    "full_spend_auth": true,
+    "oauth_usage_available": true,
+    "user_instruction_1": "dont block it, the oauth runner has a ton of usage available",
+    "user_instruction_2": "you have full spend auth"
+  },
+  "candidate_order": [
+    "FIVE-01",
+    "FIVE-02",
+    "FIVE-03",
+    "FIVE-04",
+    "FIVE-05"
+  ],
+  "denominator": {
+    "candidate_sessions": 5,
+    "evaluator_sessions": 1,
+    "planning_ceiling_credits": 240,
+    "planning_ceiling_usd": 9.6,
+    "retries": 0,
+    "total_top_level_sessions": 6
+  },
+  "independent_pass": {
+    "commit": "ec48995ab48449765867e58b5742c1fd9ebcdb57",
+    "report_sha256": "c2446928f34f8e2f2789293f252ffe2e3d6e401025169d774578a51f36e95d6c",
+    "tree": "53b71d24313d7b7b7b9c3b5ee306672a410641f7",
+    "verdict_sha256": "9bb3deb5efbf6acb71e7eed7d122a289791327d2016506cb4bb9f26b05ce9745"
+  },
+  "launched_at_utc": "2026-08-21T15:12:31Z",
+  "model": "gpt-5.6-sol",
+  "producer": {
+    "commit": "5bc876c86a05286ac24336c9f3827ff7cfb95f92",
+    "tree": "ce9d3800d6ff51f91eab0e4e057c4cd86f3972b9"
+  },
+  "reasoning": "high",
+  "source": {
+    "commit": "9cbe1d3c12998c786b7c2cd99ce28a21b6631f66",
+    "repository": "https://github.com/google-deepmind/formal-conjectures.git",
+    "tree": "afc1a5d149d5434089aabe705f3ce450ebfbc244"
+  },
+  "status": "authorized_launch",
+  "total_token_provider_enforcement_available": false
+}

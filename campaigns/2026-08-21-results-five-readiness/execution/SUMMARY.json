@@ -1,0 +1,138 @@
+{
+  "authority_effect": {
+    "canonical_authority_mutated": false,
+    "scientific_standing_changed": false,
+    "source_repository_mutated": false,
+    "vela_lifecycle_executed": false
+  },
+  "budget": {
+    "candidate_credit_estimate": 87.929975,
+    "candidate_usd_estimate": 3.517199,
+    "credit_estimate_basis": "input_tokens includes cached_input_tokens; uncached input 125 credits/M, cached input 12.5 credits/M, output 750 credits/M, USD 0.04/credit",
+    "evaluator_credits_observable": false,
+    "evaluator_token_usage_observable": false,
+    "planning_ceiling_credits": 240,
+    "planning_ceiling_usd": 9.6,
+    "provider_side_aggregate_enforcement_available": false,
+    "seventh_session_started": false
+  },
+  "candidates": [
+    {
+      "case_id": "FIVE-01",
+      "elapsed_seconds": 292.12,
+      "graph_json_sha256": "a9c86056ad2736f3cca196f5e992f2513e7e355e24b990b6cb24fc33aec1142f",
+      "native_commit": "3522bc1236ad67b90756460e2acb14f698a58e87",
+      "native_tree": "dd92f992dcd5b4f00e88d1176383fbd68b3c56d8",
+      "receipt_sha256": "ae662d4666039226b4ab3c8829fa8f165e90081dfb4712c9e695cc10e1a56ab9",
+      "result_sha256": "6f935ef75aecd7bac7ccfa1c2b12b852bc297c362e95a5fc21dd129f9130ea42",
+      "result_status": "proof_sketch",
+      "runner_status": "pass",
+      "sqlite_logical_content_sha256": "a0b8c654a50a870220bb03582642a4351336f6cb5a4269f90529bc8c6d0eb851"
+    },
+    {
+      "case_id": "FIVE-02",
+      "elapsed_seconds": 221.584,
+      "graph_json_sha256": "16d31a2a11829528eb7b508b44e4602313da54e610aaba4a1c63817a201f828f",
+      "native_commit": "4e865d43a0b2e30e0a5fcd7f87d3202bdf97d640",
+      "native_tree": "50cb0babb7b039e6646b51d36b48950d324bdbc2",
+      "receipt_sha256": "e4fff143084343cd953a4d921c7841fe48624c2b0fb4f5bdb3319a3d1eeabdb2",
+      "result_sha256": "8e7a7d66d370a5b1d1e6bec2b76cf312d16f4546f6898268b5fb4732a765ef7a",
+      "result_status": "computational_certificate",
+      "runner_status": "pass",
+      "sqlite_logical_content_sha256": "41a3da450c862be29ce1d01cfa5e8a809a0a6c8e9c846cc21d20a02a134305b5"
+    },
+    {
+      "case_id": "FIVE-03",
+      "elapsed_seconds": 216.812,
+      "graph_json_sha256": "96b7597fba2b1777f689fb459740d9bb89eb682df93d59c59bbb4f7f48337c99",
+      "native_commit": "ddf0e46a6e7d2fe07c81ad37f0497783752398e8",
+      "native_tree": "bc8062332166c05dfdcaaef3518cf43ad7f778ac",
+      "receipt_sha256": "6bf4db356f43be3605f6c1a26b6f2f6ea8ebb32d1dc2146aee1748332bfbc88b",
+      "result_sha256": "76051fc1b3819772e30b586e03c1d6d04e7413a469a32fae5868815564aacd1c",
+      "result_status": "statement_correction",
+      "runner_status": "pass",
+      "sqlite_logical_content_sha256": "98acc3c3c5ecbda8d2aca435b99e18d49878d14963df31ae64187c0b4076af86"
+    },
+    {
+      "case_id": "FIVE-04",
+      "elapsed_seconds": 139.301,
+      "graph_json_sha256": "99dcb3d8704cdaf70fc3c3e31d34d17eb6ccf7bfa5d6fdb210242df4ed7f6b1b",
+      "native_commit": "28b36d00cca41c77c199cf5fcdbcad76febb49ff",
+      "native_tree": "e8c28d193b7b7a0e7bd65dc13daf60cc06f5afd3",
+      "receipt_sha256": "0c04b43180244f7fe8c099a168e5fb3b25c6ad6d05d3f459d5aa41865f1366be",
+      "result_sha256": "b5ea0fc2ffcd45e5c4d57480550ce6cc1a8e0f4ed7a877d91904339baafe8a6c",
+      "result_status": "dependency_finding",
+      "runner_status": "pass",
+      "sqlite_logical_content_sha256": "aa4a0e19d2f566c67fb9c751e07d01f41842a18ffc97473753b292a1c8fd0b89"
+    },
+    {
+      "case_id": "FIVE-05",
+      "elapsed_seconds": 152.291,
+      "graph_json_sha256": "5807346a6e6cfb30283fb64513558ab0968ea1e3340c581019e49796991d248a",
+      "native_commit": "78d86d9172eb74c5c46d6b9e9d6e0cecc1649f67",
+      "native_tree": "962e9199deaa8fe3931b9952a6241cd86b04254a",
+      "receipt_sha256": "b8e3a55f75984e916e148a13ddcc9a378da4a59676a3a7a19a9e846117ad2d5c",
+      "result_sha256": "f38623eefe01c85d8e781e70cdfdd6d5124ab03d359119eb005b72c15f0cbb55",
+      "result_status": "typed_non_result",
+      "runner_status": "pass",
+      "sqlite_logical_content_sha256": "cb5fe22f94047f2f9f2e5855d993a120df47a5d65d079cfaf73e4ac00910e400"
+    }
+  ],
+  "denominator": {
+    "assigned_candidate_sessions": 5,
+    "assigned_evaluator_sessions": 1,
+    "candidate_runner_passes": 5,
+    "evaluator_infrastructure_failures": 1,
+    "executed_top_level_sessions": 6,
+    "retries": 0,
+    "terminal_entries": 6
+  },
+  "evaluator": {
+    "elapsed_seconds": 900.514,
+    "failure_receipt_sha256": "2cfa220d5f66787300b7e8246c6451a4e94c3305f8b2c57a669602e9ef6b7121",
+    "invocation_sha256": "78ec74de3a4fefdd79b13afc262d1e3dcf74676620cd5d4edeb22c0cfe08c13d",
+    "locked_terminal_verdict": false,
+    "partial_output_is_verdict": false,
+    "prompt_build_sha256": "ef84a202d20e05707b74705c114f1a06524f43606a9ea066ef7ea43efb9fb4ef",
+    "prompt_bytes": 13946,
+    "prompt_sha256": "0ef409fd3eef078cd407f5d3c71663ab5c5a19cfce08ae99fb8b3babca9b544a",
+    "status": "infrastructure_timeout",
+    "stderr_sha256": "2cd1497b10974477ddfd67f3cb9ef9587e55e22f4b0bd8fd4fc5e10d1988d740",
+    "stdout_sha256": "c3ed0eb59983be89f7561ddee161e5cc1404542a6b0fdab0e7e3131038057f53",
+    "tool_calls_observed": 70,
+    "unfinished_work": "The evaluator installed Lean 4.27.0 and fetched pinned dependencies in an isolated clone but timed out before completing candidate builds or emitting a locked result."
+  },
+  "integrity": {
+    "candidate_input_packets_losslessly_decoded": true,
+    "credential_scan_findings": 0,
+    "docker_image": "sha256:76c64845ae35f57835a08f386d4206bf021ccf1169f8a35e59cc68d8e4408e7e",
+    "evaluator_archive_sha256": "15cb740028599349afb4a18390177e60a3c702b80baca2086a49ed4789f874cd",
+    "evaluator_builder_sha256": "b8748203a852f3dfd8b31fe72f8b02fe7e88f0f8beb12131d7e6e04741768855",
+    "evaluator_template_sha256": "bed446b8a2c0c25529b1cf7a723954dfdeadccf7888ed4ca878f06897e841d70",
+    "launch_receipt_sha256": "abe437b7196f1a69b0798d9f0293337f74823e98bc6931c5f8998336f431d5d2",
+    "source_after_equals_before": true
+  },
+  "model": {
+    "candidate_model": "gpt-5.6-sol",
+    "evaluator_model": "gpt-5.6-sol",
+    "reasoning": "high",
+    "substitutions": 0
+  },
+  "producer_commit": "5bc876c86a05286ac24336c9f3827ff7cfb95f92",
+  "readiness_review_commit": "ec48995ab48449765867e58b5742c1fd9ebcdb57",
+  "schema": "results-five-execution-summary-v1",
+  "source_commit": "9cbe1d3c12998c786b7c2cd99ce28a21b6631f66",
+  "status": "five_candidates_complete_evaluator_timeout_pending_post_execution_review",
+  "telemetry": {
+    "candidate_cached_input_tokens": 1579008,
+    "candidate_elapsed_seconds": 1022.108,
+    "candidate_input_tokens": 1866505,
+    "candidate_output_tokens": 43007,
+    "candidate_reasoning_output_tokens": 26252,
+    "candidate_tool_calls": 100,
+    "evaluator_elapsed_seconds": 900.514,
+    "evaluator_token_counts_available": false,
+    "evaluator_tool_calls": 70,
+    "total_elapsed_seconds": 1922.622
+  }
+}
