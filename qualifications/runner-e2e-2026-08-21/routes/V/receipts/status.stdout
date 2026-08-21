@@ -1,0 +1,54 @@
+{
+  "schema": "vela.status.v4",
+  "ok": true,
+  "command": "status",
+  "repository": {
+    "id": "c656da87-995f-436b-a4c1-d474c9033b1b",
+    "name": "Runner E2E qualification disposable session",
+    "profile_root": "sha256:8abaa0352441679bc3a55bf2c3de00f274ef6b3e0ce10bf783c9e9170ace8440"
+  },
+  "git": {
+    "role": "repository_head",
+    "commit": "e440476b09c5f38ed9bca7c308a30a949a74900b",
+    "tree": "7a480b8aaad9d216a5458855306a9b5a88160491"
+  },
+  "integrity": {
+    "replay": "verified",
+    "strict": "pass",
+    "blocker_count": 0,
+    "blockers_by_code": {}
+  },
+  "roots": {
+    "origin": "sha256:5aed2b1ead1cb304976fe387726267d1896da6fb3be192ca57b0df3a667a1292",
+    "repository": "sha256:5260c7588c2266bfe327edac13640250ba0aabeaf33b0ddafb908b81e13a040f",
+    "authority_keyset": "sha256:f08d9a9f44facee74b21b5b9f2108a30f924db75061d1a7363b937a630282582",
+    "authority_policy": "sha256:d6bc31dc34094944d873a00f2709715814b994961f421fb232f0e46e719aac7d"
+  },
+  "counts": {
+    "claims": 0,
+    "accepted_claims": 0,
+    "pending_claims": 0,
+    "pending_review": 0,
+    "accepted_review": 0,
+    "rejected_review": 1,
+    "withdrawn_review": 0,
+    "submissions": 1,
+    "verifications": 1,
+    "artifacts": 2
+  },
+  "decision_inbox": {
+    "pending_count": 0,
+    "protocol_ready_count": 0,
+    "protocol_blocked_count": 0,
+    "projection_root": "sha256:d04e74925cedb11152041eaee213babf3033227a708bb606c287f3ba9fcc1c24",
+    "first_entry_root": null
+  },
+  "actions": {
+    "review": null,
+    "work": {
+      "mode": "direct_submission",
+      "command": "vela submit --repo /qualification/routes/V/repo --help",
+      "note": "Submit bounded evidence directly."
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "command": "review.inbox",
+  "entries": [
+    {
+      "assertion": "Non-scoring runner qualification fixture completed; no scientific assertion.",
+      "authority_heads": {
+        "authority_event_log_root": "sha256:989b86b1cc7455c9fd2908706c5d8f1dcbe00f06a798d451b1f1f3dcbc39d13e",
+        "authority_keyset_root": "sha256:f08d9a9f44facee74b21b5b9f2108a30f924db75061d1a7363b937a630282582",
+        "authority_record_root": "sha256:9d4969eb8ba673edef6fb031474b9f19662fcd6d0c84fc38a885b2f8b7ecfbdb",
+        "policy_bundle_root": "sha256:d6bc31dc34094944d873a00f2709715814b994961f421fb232f0e46e719aac7d"
+      },
+      "claim_id": "vcl_4eba9e49066b5fd6961baf283a5b105b4ebab75021e8bca625c76cd0d49f8c3e",
+      "conditions": [
+        "Caveat: Disposable runner qualification only; no scientific truth, utility, canonical authority, or Standing."
+      ],
+      "created_at": "2026-08-21T02:37:41Z",
+      "entry_root": "sha256:67c709193ac6e24a9f0bf28cfd104d568596b8bdf88651afd9c5970f7e9c65e2",
+      "inputs": {
+        "claim_root": "sha256:b93e9c585a7e11b2d8b1796771b60c9907c33be7769771e8e820bca69c55be85",
+        "proposal_root": "sha256:6803638b8ebdee560966063f895440e15e6dbf543b6e6dc70a354d7e688b64f5",
+        "repository_root": "sha256:b4484b544f3b45e583b733ee5b1b8101105f27eb08d21c682fb049e756667184",
+        "submission_root": "sha256:f22204482fbfe6d2a73c654b9d0069a66dc975ca71d99217a6a5171bd1fc0114",
+        "verification_set_root": "sha256:299700af9eac6aeb768a65345c24025370887f6b2a68cff8c925a96f263deeba"
+      },
+      "limits": [
+        "Disposable runner qualification only; no scientific truth, utility, canonical authority, or Standing."
+      ],
+      "next_obligation": {
+        "if_accept": "Replay the accepted successor repository; source-owning repositories and read products may then recompute exact next obligations.",
+        "if_reject": "Replay the rejected successor repository; source-owning repositories and read products may then recompute exact next obligations without changing accepted Standing.",
+        "now": "Resolve 1 acceptance blocker(s), or reject the Proposal with an attributed reason."
+      },
+      "proposal_action": "claim.add",
+      "proposal_actor": "agent:runner-qualification",
+      "proposal_id": "vpr_6803638b8ebdee56",
+      "proposal_reason": "Retain authenticated Submission vsb_f22204482fbfe6d2 for independent verification and authorized review.",
+      "readiness": {
+        "attributed_decision_required": true,
+        "blockers": [
+          {
+            "code": "missing_independent_passing_verification",
+            "detail": "No independent passing Verification Record satisfies \"Exact non-scoring qualification output retention\".",
+            "subject": "Exact non-scoring qualification output retention"
+          }
+        ],
+        "protocol_gate": "blocked",
+        "rejection_available": true
+      },
+      "repository_id": "c656da87-995f-436b-a4c1-d474c9033b1b",
+      "requested_decision": "accept_or_reject",
+      "schema": "vela.decision-inbox-entry.v3",
+      "staleness": {
+        "invalidated_by": [
+          "repository_root",
+          "proposal_root",
+          "claim_root",
+          "submission_root",
+          "verification_set_root",
+          "policy_bundle_root",
+          "authority_keyset_root",
+          "authority_record_root",
+          "authority_event_log_root"
+        ],
+        "state": "current"
+      },
+      "standing_delta": {
+        "before": {
+          "accepted": [],
+          "repository_root": "sha256:b4484b544f3b45e583b733ee5b1b8101105f27eb08d21c682fb049e756667184"
+        },
+        "counts": {
+          "global_accepted_claims": {
+            "before": 0,
+            "if_accept": 1,
+            "if_reject": 0
+          },
+          "unchanged_accepted_claims": 0
+        },
+        "if_accept": {
+          "accepted": [
+            {
+              "claim_id": "vcl_4eba9e49066b5fd6961baf283a5b105b4ebab75021e8bca625c76cd0d49f8c3e",
+              "claim_root": "sha256:b93e9c585a7e11b2d8b1796771b60c9907c33be7769771e8e820bca69c55be85"
+            }
+          ],
+          "repository_root": "sha256:fa087002e2b1cb5bf5c26e59645e8fe63803603ec1bc584abd3e2461ef491911"
+        },
+        "if_reject": {
+          "accepted": [],
+          "repository_root": "sha256:5260c7588c2266bfe327edac13640250ba0aabeaf33b0ddafb908b81e13a040f"
+        },
+        "scope": {
+          "affected_claim_ids": [
+            "vcl_4eba9e49066b5fd6961baf283a5b105b4ebab75021e8bca625c76cd0d49f8c3e"
+          ],
+          "kind": "proposal_affected_claims",
+          "target_claim_id": "vcl_4eba9e49066b5fd6961baf283a5b105b4ebab75021e8bca625c76cd0d49f8c3e"
+        },
+        "transition": "add accepted Claim"
+      },
+      "verification_records": [
+        {
+          "does_not_establish": [
+            "Any scientific claim, mathematical truth, benchmark result, comparative utility, source-owner approval, canonical authority, or Standing.",
+            "Organizational, operator, host, provider, model, or source independence."
+          ],
+          "independent_of_producer": false,
+          "outcome": "pass",
+          "property": "Exact non-scoring qualification output retention",
+          "protocol_evidence_role": "complementary",
+          "satisfies_requirements": [],
+          "verification_record_id": "vvr_5658e1433a740e87",
+          "verification_record_root": "sha256:5658e1433a740e87b963ec94685fe92fc09b5e4be497378487ca3c7da7bdd258",
+          "verifier": "verifier:runner-qualification"
+        }
+      ],
+      "verification_requirements": [
+        "Exact non-scoring qualification output retention"
+      ]
+    }
+  ],
+  "ok": true,
+  "order": "protocol_ready_first_then_created_at_asc_then_proposal_id",
+  "projection_root": "sha256:e90662376bd2c36ac4c8e6fdc750980ac89407e64b310435d11b6f5c76fb92c3",
+  "repository_id": "c656da87-995f-436b-a4c1-d474c9033b1b",
+  "repository_root": "sha256:b4484b544f3b45e583b733ee5b1b8101105f27eb08d21c682fb049e756667184",
+  "schema": "vela.decision-inbox.v3"
+}

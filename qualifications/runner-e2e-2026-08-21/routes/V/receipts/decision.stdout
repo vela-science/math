@@ -1,0 +1,43 @@
+{
+  "action": "reject",
+  "actor_class": "agent",
+  "actor_id": "agent:qualification-owner",
+  "after_event_log_root": "sha256:d527ef3e78eaf4d17e70e7e7e2c555bb63bd1ade1759206c6a5e3a9a247bb44a",
+  "authentication": "local_os_session",
+  "authority": {
+    "authentication": "local_os_session",
+    "principal_id": "local:device-sha256:5a24c768e4c15195c18e1693126ebd64d8aa96b7105809dc4e6ae6018203c6fe|uid:0",
+    "transaction_signer": "repository_authority"
+  },
+  "authority_principal_id": "local:device-sha256:5a24c768e4c15195c18e1693126ebd64d8aa96b7105809dc4e6ae6018203c6fe|uid:0",
+  "authority_record_id": "var_7f75127ff1098bff",
+  "authority_record_root": "sha256:217871c02459f401cb11c1c49e28489076c3f385cd3ace33651d8ec57d630422",
+  "before_event_log_root": "sha256:989b86b1cc7455c9fd2908706c5d8f1dcbe00f06a798d451b1f1f3dcbc39d13e",
+  "claim_id": "vcl_4eba9e49066b5fd6961baf283a5b105b4ebab75021e8bca625c76cd0d49f8c3e",
+  "claim_root": "sha256:b93e9c585a7e11b2d8b1796771b60c9907c33be7769771e8e820bca69c55be85",
+  "command": "review.reject",
+  "decision_plan_root": "sha256:d0620b35e7d287986a2c5b1b6175f8debb8cffc8d8e06d08f2b53299b5e078c9",
+  "event_ids": [
+    "vev_d5a567e17bfd67c1"
+  ],
+  "ok": true,
+  "performer": {
+    "actor_class": "agent",
+    "actor_id": "agent:qualification-owner",
+    "key_read": false,
+    "session_ref": "RUNNER-E2E-QUALIFICATION-2026-08-21"
+  },
+  "performer_key_read": false,
+  "principal_id": "local:device-sha256:5a24c768e4c15195c18e1693126ebd64d8aa96b7105809dc4e6ae6018203c6fe|uid:0",
+  "proposal_id": "vpr_6803638b8ebdee56",
+  "proposal_root": "sha256:6803638b8ebdee560966063f895440e15e6dbf543b6e6dc70a354d7e688b64f5",
+  "reason": "Qualification fixture only; rejection prevents any scientific or Standing interpretation.",
+  "repository_before": "sha256:b4484b544f3b45e583b733ee5b1b8101105f27eb08d21c682fb049e756667184",
+  "repository_id": "c656da87-995f-436b-a4c1-d474c9033b1b",
+  "repository_path": ".",
+  "schema": "vela.review-decision.v5",
+  "scientific_state_changed": false,
+  "session_ref": "RUNNER-E2E-QUALIFICATION-2026-08-21",
+  "transaction_signer": "repository_authority",
+  "verification_set_root": "sha256:299700af9eac6aeb768a65345c24025370887f6b2a68cff8c925a96f263deeba"
+}

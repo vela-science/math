@@ -1,0 +1,131 @@
+{
+  "authority": {
+    "canonical_math_authority_touched": false,
+    "decision": "reject",
+    "decision_event_id": "vev_d5a567e17bfd67c1",
+    "decision_event_root": "sha256:0752916bb8a4a275835269f100d80583b7c8dbb2ed0e94fe6ab756a413f042cc",
+    "disposable_private_key_deleted": true,
+    "scientific_state_changed": false
+  },
+  "classification": {
+    "benchmark_denominator": false,
+    "new_scientific_preregistration": false,
+    "reopens_results_breakthrough_01": false,
+    "scientific_claim": false,
+    "scoring": false
+  },
+  "docker": {
+    "context": "desktop-linux",
+    "image": "sha256:76c64845ae35f57835a08f386d4206bf021ccf1169f8a35e59cc68d8e4408e7e",
+    "platform": "linux/arm64"
+  },
+  "git_source": {
+    "after": {
+      "archive_sha256": "f3b983aba2ea5c8056b82e039204ec973246fe7f7c66a7b250b238a9fe4e6779",
+      "clean": true,
+      "commit": "5de716c896065c03c0a470d015ba2a328a527f73",
+      "complete": true,
+      "shallow": false,
+      "tree": "56e37a5058c80e69f3c343b8ae624c08b5417229"
+    },
+    "before": {
+      "archive_sha256": "f3b983aba2ea5c8056b82e039204ec973246fe7f7c66a7b250b238a9fe4e6779",
+      "clean": true,
+      "commit": "5de716c896065c03c0a470d015ba2a328a527f73",
+      "complete": true,
+      "shallow": false,
+      "tree": "56e37a5058c80e69f3c343b8ae624c08b5417229"
+    },
+    "container_cwd": "/repo",
+    "host_path": "/Users/williamblair/.codex/cache/results-breakthrough-01/smoke-source-mounts-7289afa-fetch/math",
+    "mount_read_only": true
+  },
+  "provider": {
+    "actual_provider_requests": 1,
+    "attempts": [
+      {
+        "elapsed_seconds": 3,
+        "exit_code": 1,
+        "provider_request": false,
+        "retained": true,
+        "root_cause": "The accepted image was launched with a read-only container root, preventing Codex's in-process app-server initialization.",
+        "stderr_sha256": "8e3330eeb312ddb37b9da73c3ece4a8aa7e2ade4b7bb255573aa487bc89f0f58"
+      },
+      {
+        "cached_input_tokens": 0,
+        "elapsed_seconds": 10,
+        "exit_code": 0,
+        "input_tokens": 14612,
+        "output_tokens": 26,
+        "provider_request": true,
+        "reasoning_output_tokens": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "c3e26ad10b62189aaef4959018861977071d54137df7ca47242d38fe181d9db5",
+        "thread_id": "01a0222c-7070-7211-9433-964f06ab6aa1"
+      }
+    ],
+    "container_root_writable_ephemeral": true,
+    "correction": "Removed only Docker's container-root read-only flag; the source checkout and OAuth file remained read-only.",
+    "model": "gpt-5.6-sol",
+    "oauth_mount_read_only": true,
+    "output_bytes": 86,
+    "output_sha256": "b6a44156d823d6d149f7361154deda2f2a9fd15b72fea740dd34bc65e4c11d83",
+    "prompt_sha256": "b95dba6c324e767e498494ee334860febb5a8ce125e3b6741aa9a0a31b637310",
+    "reasoning_effort": "low",
+    "result": {
+      "message": "Codex executed inside the mounted Git repository.",
+      "qualification": "pass"
+    },
+    "schema_sha256": "7173bbbf86263fa226aed254857ea47f1b50ad7d87800123191ced753945faf8",
+    "service_tier": "default"
+  },
+  "routes": {
+    "G": {
+      "graph_json_sha256": "45ccac93eefc3b708ab26ca69fe1a782fb6892075e3b5ba272bf66c422dfa6a0",
+      "graph_sqlite_sha256": "ead2656172d7168a95ae7215dd5fe5e6582bdd1792b533ecfd83f284cc33d335",
+      "recorder_sha256": "aa9105cff44cdfe7dcdb7accf2aafaa539f9d370515dee49b54749b4d73e948e",
+      "result_sha256": "b6a44156d823d6d149f7361154deda2f2a9fd15b72fea740dd34bc65e4c11d83"
+    },
+    "N": {
+      "git_commit": "7f9063bead5760dedf557deeaf2fcfe90bf04470",
+      "git_tree": "90bd6c8d1c895acc068f2c52369116e46245cd3a",
+      "recorder_sha256": "30bb0dd075c909fdecf187ae7bcc7984377c1f1a2c951212cc79a0f58539891b",
+      "result_sha256": "b6a44156d823d6d149f7361154deda2f2a9fd15b72fea740dd34bc65e4c11d83"
+    },
+    "V": {
+      "accepted_claims": 0,
+      "claim_id": "vcl_4eba9e49066b5fd6961baf283a5b105b4ebab75021e8bca625c76cd0d49f8c3e",
+      "decision": "reject",
+      "lifecycle_exit": 0,
+      "method_sha256": "734e0d04673e211e98782b187734b2d93a5cc68e22695f8090ddecd16bba3dc7",
+      "network": "none",
+      "proposal_id": "vpr_6803638b8ebdee56",
+      "proposal_root": "sha256:6803638b8ebdee560966063f895440e15e6dbf543b6e6dc70a354d7e688b64f5",
+      "replay_ok": true,
+      "repository_git_commit": "e440476b09c5f38ed9bca7c308a30a949a74900b",
+      "repository_git_tree": "7a480b8aaad9d216a5458855306a9b5a88160491",
+      "repository_id": "c656da87-995f-436b-a4c1-d474c9033b1b",
+      "repository_root": "sha256:5260c7588c2266bfe327edac13640250ba0aabeaf33b0ddafb908b81e13a040f",
+      "result_sha256": "b6a44156d823d6d149f7361154deda2f2a9fd15b72fea740dd34bc65e4c11d83",
+      "submission_id": "vsb_f22204482fbfe6d2",
+      "submission_root": "sha256:f22204482fbfe6d2a73c654b9d0069a66dc975ca71d99217a6a5171bd1fc0114",
+      "verification_id": "vvr_5658e1433a740e87",
+      "verification_root": "sha256:5658e1433a740e87b963ec94685fe92fc09b5e4be497378487ca3c7da7bdd258"
+    }
+  },
+  "integrity": {
+    "closed_experiment_bytes_changed": false,
+    "credential_findings": 0,
+    "credential_scan": "pass",
+    "exact_result_bytes_across_routes": true
+  },
+  "run_id": "RUNNER-E2E-QUALIFICATION-2026-08-21",
+  "schema": "runner-e2e-qualification-receipt.v1",
+  "status": "pass",
+  "tooling": {
+    "codex_sha256": "134063e133f0b4244fa3b251acf973d4fe4b4aeeacbdc135211bf480f59f1477",
+    "codex_version": "0.145.0",
+    "vela_sha256": "59cc91e9d277d733a8f5b2892653cf5b540778ce26ac794521c63bba0036103b",
+    "vela_version": "0.977.3"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "authority": {
+    "key_fingerprint": "SHA256:X3TxR3wvinytZPovq/xN1ECxY/mZTKpjLgQv0uXujA8",
+    "key_id": "ssh-ed25519:SHA256:X3TxR3wvinytZPovq/xN1ECxY/mZTKpjLgQv0uXujA8",
+    "keyset_root": "sha256:f08d9a9f44facee74b21b5b9f2108a30f924db75061d1a7363b937a630282582",
+    "local_trust": {
+      "anchor_path": "/root/.vela/trust/authorities/c656da87-995f-436b-a4c1-d474c9033b1b.json",
+      "anchor_root": "sha256:0c664e83997fa35ecec37a98a8bfd0d99f4801957e982e474abcb7fa6ae3054a",
+      "first_authority_record_root": "sha256:9d4969eb8ba673edef6fb031474b9f19662fcd6d0c84fc38a885b2f8b7ecfbdb",
+      "installed": true,
+      "repository_id": "c656da87-995f-436b-a4c1-d474c9033b1b",
+      "schema": "vela.authority-trust-anchor.v1"
+    },
+    "policy_root": "sha256:d6bc31dc34094944d873a00f2709715814b994961f421fb232f0e46e719aac7d",
+    "principal_id": "local:device-sha256:5a24c768e4c15195c18e1693126ebd64d8aa96b7105809dc4e6ae6018203c6fe|uid:0",
+    "record_id": "var_b3d2cb2cd98b949f",
+    "record_root": "sha256:9d4969eb8ba673edef6fb031474b9f19662fcd6d0c84fc38a885b2f8b7ecfbdb",
+    "state": "initialized"
+  },
+  "layout": "vela.repository-bootstrap.v1",
+  "name": "Runner E2E qualification disposable session",
+  "next_action": "vela submit --repo '.' --help",
+  "ok": true,
+  "operation_id": "vop_248fc1de8d0d55cc9473b6639c403cd5cf4090d2bde1e95da5faf29ea94bfcff",
+  "path": ".",
+  "profile_root": "sha256:8abaa0352441679bc3a55bf2c3de00f274ef6b3e0ce10bf783c9e9170ace8440",
+  "repository": {
+    "git_commit": "a79bd1b3ebde5914fcf77d4344537a12caf5e57c",
+    "git_tree": "1aada29734478f9604e38c68dd8f8993391443ee",
+    "origin_id": "vro_5aed2b1ead1cb304",
+    "origin_root": "sha256:5aed2b1ead1cb304976fe387726267d1896da6fb3be192ca57b0df3a667a1292",
+    "repository_root": "sha256:883274b0f270fe97907318953293af00d490050775cf1e661f7c6e42281a3ebb"
+  },
+  "repository_id": "c656da87-995f-436b-a4c1-d474c9033b1b",
+  "resumed": false,
+  "schema": "vela.repository-init.v1",
+  "scientific_object_count": 0,
+  "scope": "Record one non-scoring execution fixture without scientific or canonical authority effect",
+  "wrote": [
+    "README.md",
+    "vela.toml",
+    ".gitignore",
+    ".gitattributes",
+    "AGENTS.md",
+    "CLAUDE.md"
+  ]
+}

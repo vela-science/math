@@ -1,0 +1,1 @@
+Return exactly the structured qualification fixture requested by the output schema. This is a tiny non-scoring execution check. Do not inspect or modify repository files, do not make a scientific claim, and do not call tools.
