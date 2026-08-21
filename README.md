@@ -11,6 +11,22 @@ the exact retained current-state inventory.
 Current strict replay and deterministic projection use signed Vela 0.977.3
 (`sha256:3a1173918bdcb887155bab681411bf5e9ff64d925fe1b50369ac37ab020b94ad`).
 
+## Result execution
+
+[`tools/result_runner/`](tools/result_runner/) is the maintained execution
+path for bounded Codex Result candidates. It requires a real clean Git
+checkout, keeps source and OAuth mounts read-only, validates bounded structured
+output, proves source bytes unchanged, and records exact output through Native
+Git and JSON/SQLite routes. Its optional Vela integration is disposable and
+rejection-only; it cannot accept scientific Standing.
+
+Because the source mount is read-only, this runner cannot edit or test source
+changes and is not a proof-editing engine.
+
+The runner replaces copied experiment-specific shell harnesses. Its focused
+tests encode the failures retained in the historical
+`RESULTS-BREAKTHROUGH-01` process log.
+
 ## Evaluation material
 
 [`evaluations/time-frozen-replay/erdos-321-occurrence-v1/`](evaluations/time-frozen-replay/erdos-321-occurrence-v1/)
