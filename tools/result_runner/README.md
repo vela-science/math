@@ -41,8 +41,17 @@ container root and `/output` remain writable. The output directory must not
 already exist. Wall time, prompt/schema/result bytes, captured streams, runtime
 file count, and runtime bytes have explicit hard ceilings. The supported output
 schema subset is a closed object with string properties and only `const`,
-`enum`, `minLength`, `maxLength`, and `pattern` constraints; every other
-type or keyword is rejected before inference.
+`enum`, `minLength`, and `maxLength` constraints; every other type or keyword,
+including `pattern`, is rejected before inference. This avoids claiming that a
+second Python regular-expression validator is equivalent to the JSON Schema
+evaluator inside the pinned container.
+
+Native Git bytes and canonical `graph.json` bytes are reproducible from the
+same payload. `sqlite-projection.json` binds the Python implementation/version,
+SQLite version/source ID, database byte digest, and a canonical logical-content
+root. SQLite byte equality is claimed only under that exact recorded serializer
+environment; portable replay checks database integrity and the canonical
+logical-content root rather than cross-version database bytes.
 
 Run the focused regression suite with:
 
@@ -60,9 +69,16 @@ python3 -m unittest discover -s tools/result_runner/tests -v
 
 The retained qualification is
 [`qualification-v1/`](qualification-v1/). Exactly one provider request
-completed from `/repo` in 11.622 seconds. Its exact 100 output bytes traversed
-deterministic Native and Graph recorders plus a disposable Vela Submission,
-failing Verification, rooted rejection Decision, strict status/readback, and
-replay. Source bytes and accepted Standing remained unchanged. The earlier
+completed from `/repo` in 11.622 seconds under runner SHA-256 `ef2ce961…3561`.
+Its exact 100 output bytes traversed the Native and Graph recorders plus a
+disposable Vela Submission, failing Verification, rooted rejection Decision,
+strict status/readback, and replay. The four subsequent bounded corrections do
+not change that model invocation or its const-only output schema; they are
+covered without another provider request by hostile bounds/schema/key tests,
+exact retained-output recorder replay, and signed disposable-Vela integration.
+The retained SQLite file is an exact historical byte receipt; current replay
+treats its logical rows as portable and binds future serializer bytes to their
+recorded implementation. Source bytes and accepted Standing remained unchanged.
+The earlier
 `5f993c5…` qualification is retained only as predecessor evidence; it did not
 execute this corrected runner and does not qualify this head.

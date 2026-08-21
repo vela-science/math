@@ -175,7 +175,6 @@ class RunnerTests(unittest.TestCase):
                     "enum": ["pass"],
                     "minLength": 4,
                     "maxLength": 4,
-                    "pattern": "^pass$",
                 }
             },
             "required": ["qualification"],
@@ -220,7 +219,10 @@ class RunnerTests(unittest.TestCase):
             "format",
             "default",
             "$ref",
+            "$schema",
+            "description",
             "patternProperties",
+            "title",
         ):
             value = json.loads(json.dumps(base))
             value[keyword] = []
@@ -228,6 +230,10 @@ class RunnerTests(unittest.TestCase):
         nested = json.loads(json.dumps(base))
         nested["properties"]["x"]["format"] = "email"
         hostile.append(nested)
+        for pattern in ("^(?P<python_only>x)$", r"^\d$"):
+            value = json.loads(json.dumps(base))
+            value["properties"]["x"]["pattern"] = pattern
+            hostile.append(value)
         for schema in hostile:
             with self.subTest(schema=schema), self.assertRaises(runner.RunnerError):
                 runner.validate_schema_definition(schema)
@@ -272,7 +278,33 @@ class RunnerTests(unittest.TestCase):
             (root / "link").symlink_to(root / "result.json")
             self.assertEqual(check(), "runtime_symlink_rejected")
 
-    def test_native_and_graph_replay_is_byte_deterministic(self) -> None:
+    def test_post_exit_census_rejects_late_oversized_sibling(self) -> None:
+        for index in range(10):
+            with self.subTest(index=index), tempfile.TemporaryDirectory() as raw:
+                root = pathlib.Path(raw).resolve()
+                completed = runner.run_bounded(
+                    [
+                        sys.executable,
+                        "-c",
+                        "import pathlib,sys; "
+                        "root=pathlib.Path(sys.argv[1]); "
+                        "(root/'result.json').write_text('\\\"ok\\\"\\n'); "
+                        "(root/'late-output.bin').write_bytes(b'x'*4096)",
+                        str(root),
+                    ],
+                    timeout_seconds=2,
+                    stdout_limit=1024,
+                    stderr_limit=1024,
+                    monitor=runner.runtime_monitor(
+                        root,
+                        max_files=4,
+                        max_bytes=128,
+                        max_result_bytes=64,
+                    ),
+                )
+                self.assertEqual(completed.status, "runtime_total_size_exceeded")
+
+    def test_native_and_graph_replay_has_bound_sqlite_determinism(self) -> None:
         with tempfile.TemporaryDirectory() as raw:
             root = pathlib.Path(raw).resolve()
             result = root / "result.json"
@@ -299,6 +331,7 @@ class RunnerTests(unittest.TestCase):
                 "provenance.json",
                 "graph.json",
                 "graph.sqlite",
+                "sqlite-projection.json",
             ):
                 self.assertEqual(
                     (root / "graph-1" / name).read_bytes(),
@@ -320,6 +353,33 @@ class RunnerTests(unittest.TestCase):
                 )
             finally:
                 connection.close()
+            logical = runner.read_sqlite_logical_content(
+                root / "graph-1" / "graph.sqlite"
+            )
+            self.assertEqual(
+                runner.sha256_bytes(runner.canonical_json(logical)),
+                first_graph["sqlite_logical_content_sha256"],
+            )
+            projection = json.loads(
+                (root / "graph-1" / "sqlite-projection.json").read_text()
+            )
+            self.assertEqual(
+                projection["byte_replay_scope"],
+                "exact recorded serializer environment only",
+            )
+            self.assertEqual(
+                projection["portable_replay"],
+                "integrity plus canonical logical content",
+            )
+            self.assertEqual(
+                projection["logical_content_sha256"],
+                first_graph["sqlite_logical_content_sha256"],
+            )
+            self.assertEqual(
+                projection["serializer"]["sqlite_version"],
+                runner.sqlite3.sqlite_version,
+            )
+            self.assertTrue(projection["serializer"]["sqlite_source_id"])
 
     def test_provenance_binds_all_execution_identities(self) -> None:
         source = runner.GitSnapshot(

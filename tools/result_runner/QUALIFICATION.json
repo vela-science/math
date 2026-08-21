@@ -4,6 +4,32 @@
     "scientific_claim": false,
     "scientific_state_changed": false
   },
+  "correction_validation": {
+    "candidate_inference_repeated": false,
+    "current_runner_sha256": "6e5ea0fef6f7e4459061b723314b4aec56055ff303b8b110a21710f911644432",
+    "graph_json_sha256": "f301129777dbe45f686986dc9b44120e0304c28774c766b0bcee179f6ff95bc1",
+    "independent_review": "pending",
+    "native_commit": "501e058abf304fb363e629508af051bce4154de5",
+    "native_tree": "ba38c2fb7bb4cf79137d7f57e1dae3d67550cae7",
+    "provider_requests": 0,
+    "qualification_schema_uses_pattern": false,
+    "retained_result_replayed_through_current_native_and_graph_recorders": true,
+    "sqlite_portable_claim": "integrity_and_canonical_logical_content",
+    "sqlite_replay_logical_content_sha256": "2b8d30c083a2be07a6b67f0c9990663906623125359ed24de725f028fe36fb2a",
+    "sqlite_replay_projection_sha256": "957dc2f5deb808d0e2cdd8d2cf51a3074f8da097d45c392b14e338fb65d56eb6",
+    "sqlite_replay_same_serializer_byte_sha256": "12bd395fa5acfa3c9091a6fd408ce0fbffd88af53e15f5f69840f4057e9e33d2",
+    "sqlite_same_serializer_bytes_reproduced": true,
+    "sqlite_serializer": {
+      "platform_machine": "arm64",
+      "platform_system": "Darwin",
+      "python_cache_tag": "cpython-311",
+      "python_executable_sha256": "94a5f331b4d73cbabad9998057013f4d4b6ab2c2d1c3042a1a6e4e56d94773a6",
+      "python_implementation": "CPython",
+      "python_version": "3.11.2",
+      "sqlite_source_id": "2022-09-29 15:55:41 a29f9949895322123f7c38fbe94c649a9d6e6c9cd0c3b41c96d694552f26b309",
+      "sqlite_version": "3.39.4"
+    }
+  },
   "execution": {
     "cached_input_tokens": 0,
     "elapsed_seconds": 11.622,

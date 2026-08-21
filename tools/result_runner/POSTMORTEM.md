@@ -39,10 +39,12 @@ Verification corrections. It is predecessor evidence, not qualification of
 this implementation.
 
 The retained
-[`qualification-v1/`](qualification-v1/) packet qualifies the corrected
-implementation with one provider request: exact output traversed deterministic
-Native and Graph routes plus disposable Vela Submission, truthful failing
-Verification, rooted rejection Decision, strict status/readback/replay, and
-key deletion. The source checkout remained clean and byte-identical. This is
-an execution qualification only; it is not scientific evidence or a claim
-about Vela utility.
+[`qualification-v1/`](qualification-v1/) packet preserves one provider request:
+exact output traversed deterministic Native and canonical Graph JSON routes
+plus SQLite and disposable Vela Submission, truthful failing Verification,
+rooted rejection Decision, strict status/readback/replay, and key deletion. The
+four final corrections are covered without new inference by hostile tests,
+retained-output replay with an explicit SQLite logical projection/serializer
+binding, and a fresh signed disposable-Vela gate. The source checkout remained
+clean and byte-identical. This is execution qualification evidence only; it is
+not scientific evidence or a claim about Vela utility.

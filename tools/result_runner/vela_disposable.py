@@ -36,8 +36,9 @@ def _minimal_environment(home: pathlib.Path) -> dict[str, str]:
     }
 
 
-def _agent_environment(key: pathlib.Path, home: pathlib.Path) -> dict[str, str]:
-    environment = _minimal_environment(home)
+def _agent_environment(
+    key: pathlib.Path, environment: dict[str, str]
+) -> dict[str, str]:
     socket = pathlib.Path("/tmp") / (
         "vela-rr-" + sha256_bytes(str(key).encode())[:16] + ".sock"
     )
@@ -321,8 +322,12 @@ def record_disposable(
     private = destination / "private"
     key = private / "authority-key"
     private.mkdir()
-    environment = _agent_environment(key, destination / "home")
+    # Install cleanup ownership before setup can create either authority-key
+    # file. The mutable environment also retains ssh-agent identity if setup
+    # fails after agent creation but before returning.
+    environment = _minimal_environment(destination / "home")
     try:
+        _agent_environment(key, environment)
         repo.mkdir()
         init = _receipt(
             receipts / "init",
@@ -530,7 +535,8 @@ def record_disposable(
     finally:
         for candidate in (key, key.with_suffix(".pub")):
             candidate.unlink(missing_ok=True)
-        run(["ssh-agent", "-k"], env=environment, check=False)
+        if "SSH_AGENT_PID" in environment:
+            run(["ssh-agent", "-k"], env=environment, check=False)
         if key.exists() or key.with_suffix(".pub").exists():
             raise RunnerError(
                 "vela_key_delete",

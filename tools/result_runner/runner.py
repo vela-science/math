@@ -8,6 +8,7 @@ import hashlib
 import json
 import os
 import pathlib
+import platform
 import re
 import shutil
 import signal
@@ -33,21 +34,16 @@ HARD_MAX_RUNTIME_BYTES = 16 << 20
 HARD_MAX_RUNTIME_FILES = 256
 HARD_MAX_TIMEOUT_SECONDS = 3600.0
 SCHEMA_TOP_LEVEL_KEYS = {
-    "$schema",
     "additionalProperties",
-    "description",
     "properties",
     "required",
-    "title",
     "type",
 }
 SCHEMA_PROPERTY_KEYS = {
     "const",
-    "description",
     "enum",
     "maxLength",
     "minLength",
-    "pattern",
     "type",
 }
 CREDENTIAL_PATTERNS = (
@@ -134,15 +130,23 @@ def _terminate_process_group(process: subprocess.Popen[bytes]) -> None:
         return
     try:
         os.killpg(process.pid, signal.SIGTERM)
-    except ProcessLookupError:
-        return
+    except (PermissionError, ProcessLookupError):
+        # The session leader can exit between poll and killpg. Fall back to
+        # the child handle, which is either still ours or already terminal.
+        try:
+            process.terminate()
+        except ProcessLookupError:
+            return
     try:
         process.wait(timeout=0.5)
     except subprocess.TimeoutExpired:
         try:
             os.killpg(process.pid, signal.SIGKILL)
-        except ProcessLookupError:
-            pass
+        except (PermissionError, ProcessLookupError):
+            try:
+                process.kill()
+            except ProcessLookupError:
+                pass
 
 
 def run_bounded(
@@ -239,6 +243,13 @@ def run_bounded(
         writer.join()
     if stream_overflow.is_set() and status == "completed":
         status = "stream_limit_exceeded"
+    if monitor is not None and status == "completed":
+        # The child can create its last file after the final in-loop census and
+        # exit before the next poll. Acceptance therefore requires a complete
+        # census after termination and stream/input joins.
+        violation = monitor()
+        if violation:
+            status = violation
     return CommandResult(
         argv=tuple(argv),
         returncode=process.returncode,
@@ -515,17 +526,6 @@ def validate_schema_definition(schema: Any) -> dict[str, Any]:
                 "unsupported_schema",
                 f"{name}.enum must be unique nonempty strings",
             )
-        if "pattern" in rule:
-            if not isinstance(rule["pattern"], str):
-                raise RunnerError(
-                    "unsupported_schema", f"{name}.pattern must be a string"
-                )
-            try:
-                re.compile(rule["pattern"])
-            except re.error as error:
-                raise RunnerError(
-                    "unsupported_schema", f"{name}.pattern is invalid"
-                ) from error
     return schema
 
 
@@ -567,11 +567,6 @@ def validate_small_schema(value: Any, schema: dict[str, Any]) -> None:
             raise RunnerError(
                 "schema_validation",
                 f"output field {name!r} violates length bounds",
-            )
-        if "pattern" in rule and re.search(rule["pattern"], item) is None:
-            raise RunnerError(
-                "schema_validation",
-                f"output field {name!r} does not match pattern",
             )
 
 
@@ -717,7 +712,7 @@ def record_native(
 
 def record_graph(
     result: pathlib.Path, provenance: bytes, destination: pathlib.Path
-) -> dict[str, str]:
+) -> dict[str, Any]:
     destination.mkdir(parents=True)
     result_bytes = result.read_bytes()
     result_digest = sha256_bytes(result_bytes)
@@ -754,6 +749,7 @@ def record_graph(
     }
     graph_json = destination / "graph.json"
     graph_db = destination / "graph.sqlite"
+    projection_json = destination / "sqlite-projection.json"
     write_json(graph_json, graph)
     connection = sqlite3.connect(graph_db)
     try:
@@ -780,13 +776,95 @@ def record_graph(
             )
         connection.commit()
         connection.execute("VACUUM")
+        sqlite_source_id = connection.execute("SELECT sqlite_source_id()").fetchone()[0]
+        sqlite_compile_options = sorted(
+            row[0] for row in connection.execute("PRAGMA compile_options").fetchall()
+        )
     finally:
         connection.close()
+    logical_content = {
+        "edges": sorted(
+            graph["edges"], key=lambda item: (item["from"], item["kind"], item["to"])
+        ),
+        "nodes": sorted(graph["nodes"], key=lambda item: item["id"]),
+        "schema": "vela.result-runner.sqlite-logical.v1",
+    }
+    replayed_logical_content = read_sqlite_logical_content(graph_db)
+    if replayed_logical_content != logical_content:
+        raise RunnerError(
+            "sqlite_logical_content",
+            "SQLite projection does not match canonical Graph content",
+        )
+    logical_content_sha256 = sha256_bytes(canonical_json(logical_content))
+    sqlite_sha256 = sha256_file(graph_db)
+    serializer = {
+        "platform_machine": platform.machine(),
+        "platform_system": platform.system(),
+        "python_cache_tag": sys.implementation.cache_tag,
+        "python_executable_sha256": sha256_file(
+            pathlib.Path(sys.executable).resolve(strict=True)
+        ),
+        "python_implementation": platform.python_implementation(),
+        "python_version": platform.python_version(),
+        "sqlite_compile_options": sqlite_compile_options,
+        "sqlite_source_id": sqlite_source_id,
+        "sqlite_version": sqlite3.sqlite_version,
+    }
+    write_json(
+        projection_json,
+        {
+            "byte_replay_scope": "exact recorded serializer environment only",
+            "byte_sha256": sqlite_sha256,
+            "logical_content_sha256": logical_content_sha256,
+            "portable_replay": "integrity plus canonical logical content",
+            "schema": "vela.result-runner.sqlite-projection.v1",
+            "serializer": serializer,
+        },
+    )
     return {
         "json_sha256": sha256_file(graph_json),
         "provenance_sha256": sha256_file(destination / "provenance.json"),
         "result_sha256": sha256_file(destination / "result.json"),
-        "sqlite_sha256": sha256_file(graph_db),
+        "sqlite_logical_content_sha256": logical_content_sha256,
+        "sqlite_projection_sha256": sha256_file(projection_json),
+        "sqlite_serializer": serializer,
+        "sqlite_sha256": sqlite_sha256,
+    }
+
+
+def read_sqlite_logical_content(database: pathlib.Path) -> dict[str, Any]:
+    """Read the canonical, version-portable logical Graph projection."""
+    connection = sqlite3.connect(f"file:{database}?mode=ro", uri=True)
+    try:
+        integrity = connection.execute("PRAGMA integrity_check").fetchone()[0]
+        if integrity != "ok":
+            raise RunnerError("sqlite_integrity", "SQLite integrity check failed")
+        nodes = []
+        for identifier, kind, payload in connection.execute(
+            "SELECT id, kind, payload FROM nodes ORDER BY id"
+        ).fetchall():
+            node = json.loads(payload)
+            if not isinstance(node, dict) or (
+                node.get("id") != identifier or node.get("kind") != kind
+            ):
+                raise RunnerError(
+                    "sqlite_logical_content",
+                    "SQLite node columns and canonical payload disagree",
+                )
+            nodes.append(node)
+        edges = [
+            {"from": source, "kind": kind, "to": target}
+            for source, kind, target in connection.execute(
+                "SELECT source, kind, target FROM edges "
+                "ORDER BY source, kind, target"
+            ).fetchall()
+        ]
+    finally:
+        connection.close()
+    return {
+        "edges": edges,
+        "nodes": nodes,
+        "schema": "vela.result-runner.sqlite-logical.v1",
     }
 
 
@@ -1182,6 +1260,10 @@ def execute(args: argparse.Namespace) -> int:
         ),
         (output / "routes" / "graph" / "graph.json", "graph.json"),
         (output / "routes" / "graph" / "graph.sqlite", "graph.sqlite"),
+        (
+            output / "routes" / "graph" / "sqlite-projection.json",
+            "sqlite-projection.json",
+        ),
     ):
         shutil.copyfile(source, portable / name)
     if args.disposable_vela:

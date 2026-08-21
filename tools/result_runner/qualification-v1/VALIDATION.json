@@ -6,16 +6,20 @@
     "diff_check": "pass",
     "docker_context": "desktop-linux",
     "docker_dry_path": "pass",
-    "focused_tests": "pass_16_of_16",
-    "graph_json_sqlite_twice_run": "pass_byte_identical",
+    "focused_tests": "pass_18_of_18",
+    "graph_json_sqlite_twice_run": "pass_graph_json_and_same_serializer_bytes_portable_sqlite_logical_root",
+    "key_cleanup_injected_setup_failures": "pass_after_private_after_public_and_during_ssh_add",
     "native_twice_run": "pass_commit_tree_byte_identical",
+    "post_exit_runtime_census": "pass_10_of_10_late_oversized_sibling_rejected",
     "ruff_0_5_4_check": "pass",
     "ruff_0_5_4_format": "pass",
     "signed_vela_0_977_3": "pass_failing_verification_rooted_reject_strict_replay",
-    "supported_schema_hostile_tests": "pass",
+    "sqlite_serializer_binding": "pass_python_sqlite_source_compile_environment_bound",
+    "supported_schema_hostile_tests": "pass_pattern_and_all_unsupported_keywords_rejected",
     "timeout_stream_file_bounds": "pass"
   },
   "provider_requests": 1,
+  "provider_requests_this_correction": 0,
   "schema": "vela.result-runner.qualification-validation.v1",
   "status": "pass"
 }
