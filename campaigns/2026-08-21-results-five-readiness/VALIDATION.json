@@ -4,9 +4,9 @@
     "scope": "campaigns/2026-08-21-results-five-readiness"
   },
   "deterministic_checks": {
-    "approval_json_sha256": "3128863261a66588e8703ca03cc8b68bfb8634d4495b35046ec8487696b5bda3",
+    "approval_json_sha256": "274b57a8499c74f576e7862f1b8170abeb756e577331d5120c4fa6311e6c0f04",
     "json_parse": "pass",
-    "readme_sha256": "dd851bbeda25884a2053bc66e3ab3be62f153f4ed059fbd43994e9c3aeda2d42",
+    "readme_sha256": "c43f296a819938514296ee51fdfe5784915b72a9d76cd75f88ed3763d43339e1",
     "result_schema_sha256": "1a15b581f9e28df656b07a09f5674e8b05e87cdcf50343ccb0730226f0149f2b",
     "runner_tests": {
       "failed": 0,
@@ -34,7 +34,8 @@
   "observations": [
     "A local partial-clone copy could not materialize the frozen Formal Conjectures tree; no runner or provider execution occurred.",
     "A complete clone under the noncanonical macOS /tmp alias was rejected by the runner before Docker; using its canonical /private/tmp root passed.",
-    "No candidate or evaluator inference occurred."
+    "No candidate or evaluator inference occurred.",
+    "The user accepted abundant OAuth usage as an operational condition; the lack of a provider-side aggregate stop remains disclosed but is not a readiness blocker."
   ],
   "prior_work_search": {
     "formal_conjectures_expected_target_occurrences": 6,

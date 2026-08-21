@@ -1,7 +1,7 @@
 {
   "approval": {
     "explicitly_approved": false,
-    "minimum_sentence": "Approve RESULTS-FIVE-01 only after a zero-model receipt proves provider-side hard ceilings of 6 sessions, 240 credits, 9.60 USD, and 19200000 total token events; otherwise do not launch.",
+    "minimum_sentence": "Approve RESULTS-FIVE-01 for exactly five candidate sessions plus one independent evaluator session, zero retries, and an operator-enforced authorization ceiling of 240 credits (9.60 USD API-equivalent); stop before starting any next session once the ceiling is reached.",
     "provider_requests_authorized": 0,
     "scientific_authority_actions_authorized": 0
   },
@@ -21,7 +21,9 @@
       "aggregate_credit_cap_proven": false,
       "aggregate_provider_request_count_cap_proven": false,
       "aggregate_total_token_cap_proven": false,
-      "launch_blocker": "The qualified Codex OAuth runner bounds six top-level sessions, their wall time, local bytes, and files, but exposes neither a provider-request count cap nor an aggregate token/credit stop. Credits do not bound zero-credit cache-write token events. No provider request is permitted until an external fail-closed cap proves every stated aggregate ceiling.",
+      "launch_blocker": null,
+      "operator_stop_rule": "Never start a seventh session. Before each allowed session, read current cumulative usage if observable; do not start it when observed campaign usage is at or above 240 credits. A running session may not expose a mid-session credit stop, so 240 credits is the exact authorized ceiling rather than a claim of provider-side mechanical enforcement.",
+      "operational_usage_risk_accepted_by_user": true,
       "session_count_enforced_by_campaign_order": true,
       "wall_and_local_byte_caps_enforced_by_runner": true
     },
@@ -228,11 +230,16 @@
       "tree": "79e9482b9abe6999d36d63b1cfc62f6f964bda53"
     }
   },
-  "status": "blocked_pending_independent_review_and_enforceable_provider_cap",
+  "status": "pending_independent_review_and_explicit_launch_approval",
   "supervision": {
     "current_supervisor_task": "01a02473-9465-76e2-ac9b-ae41379a3aa6",
     "old_supervisor_must_not_be_used": true,
-    "original_50_case_task_resumable": false
+    "original_50_case_task_resumable": false,
+    "optional_non_scoring_test_models": [
+      "gpt-5.6-luna",
+      "gpt-5.6-terra"
+    ],
+    "provider_test_sessions_in_this_tranche": 0
   },
   "vela": {
     "adapter_sha256": "c96369703ed43b63539e3128ad1771d5fe54a36e8f63ad045529115902033dc7",
