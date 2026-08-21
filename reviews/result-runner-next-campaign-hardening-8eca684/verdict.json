@@ -1,0 +1,66 @@
+{
+  "authorization": {
+    "campaign_freeze": false,
+    "canary": false,
+    "inference": false,
+    "merge": false
+  },
+  "checks": {
+    "credential_scan": {
+      "findings": 0,
+      "scanned_files": 27,
+      "status": "pass"
+    },
+    "focused_tests": {
+      "fresh_clone_passed": 11,
+      "passed": 11,
+      "status": "pass"
+    },
+    "full_tests": {
+      "passed": 28,
+      "skipped_signed_vela_opt_in": 1,
+      "status": "pass"
+    },
+    "proof_replay": {
+      "generated_artifact_root": "8b4cd73516c222e318743bbab0bfbd9e3dbe5cf0b1dc7d277ee4d3e9dd5ed8e7",
+      "olean_sha256": "aaba07269991599e97eb9017ac7ac0cf64102b36bd0bc5b7da60eaaf9cf894e1",
+      "retained_receipt_sha256": "e7888ba566ce34f2c0160dd996f9b4f5bd0c65d192ca774f9922abf288360555",
+      "status": "pass",
+      "verification_root": "ef9fae1891dc0d3fb584935af2e66ed88953a1aa167a023f54f8028528a0d402"
+    },
+    "runtime_preflight": {
+      "network": "none",
+      "retained_receipt_sha256": "5638ae45fe9b8f61a63c9dac3d5aa46e1ccf1541859053de982a0d247a3db01e",
+      "retained_root": "adf51e9a24aab93179930012814586ba25ea7c20447f253522cacc35dfee3a93",
+      "status": "pass",
+      "stderr_sha256": "d47a06d59aba2814c3fb7460049fc2ccbfc834196c956d6c6558e8be8b079e24",
+      "stdout_sha256": "3ab10b8ac25d64132bc28d3b90e5f64dbd565c6f9d5a37e68a676539f56a3f4a"
+    },
+    "static": {
+      "compileall": "pass",
+      "diff_check": "pass",
+      "ruff_check_0_5_4": "pass",
+      "ruff_format_0_5_4": "pass"
+    }
+  },
+  "findings": [],
+  "image": "sha256:eec93eef374618d394269ae1108c0bbe6d247ecc7efdd39eb1a4ba5aec548397",
+  "prior_findings": {
+    "RRH-01": "resolved",
+    "RRH-02": "resolved",
+    "RRH-03": "resolved",
+    "RRH-04": "resolved"
+  },
+  "producer": {
+    "base_commit": "6fea63f2e7882fd9de0398868984cd88a17898f1",
+    "branch": "origin/codex/result-runner-next-campaign-hardening-v1",
+    "commit": "8eca684f02db097ccd25f4e0de0a451bcf7f68eb",
+    "tree": "27f814e77a2afab2c5b4c31fd8e058b3f419573c"
+  },
+  "report_sha256": "2ea85ff80b75a4987b22afdbb112d03d47205c549ae052dec0b40d0c129f2ccb",
+  "review_protocol_commit": "66dd5412761f3f6a1502ce987060de9ef1d95eec",
+  "runtime_pin_sha256": "0c42682ca4b8e77b76c04088fe04adc9baf5e8e1ed72398d43e38a380e51eb71",
+  "schema": "result-runner-independent-review-verdict.v1",
+  "scientific_state_changed": false,
+  "verdict": "PASS"
+}
