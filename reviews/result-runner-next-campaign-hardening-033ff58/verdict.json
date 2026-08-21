@@ -1,0 +1,69 @@
+{
+  "authorization": {
+    "campaign_freeze": false,
+    "canary": false,
+    "inference": false,
+    "merge": false
+  },
+  "checks": {
+    "credential_scan": {
+      "findings": 0,
+      "scanned_files": 18,
+      "status": "pass"
+    },
+    "focused_tests": {
+      "passed": 28,
+      "skipped": 1,
+      "status": "pass"
+    },
+    "proof_replay": {
+      "generated_artifact_root": "19b64487cc00f5fb4dc0b0c4e737558028a27d17425cf19800e357c43b3d0ed8",
+      "olean_sha256": "6aa84a751eed98807ecf18c03127e7cbb5b1d40ea7e06629996230d168964bb9",
+      "status": "pass"
+    },
+    "runtime_preflight": {
+      "network": "none",
+      "status": "pass",
+      "stderr_sha256": "d47a06d59aba2814c3fb7460049fc2ccbfc834196c956d6c6558e8be8b079e24",
+      "stdout_sha256": "3ab10b8ac25d64132bc28d3b90e5f64dbd565c6f9d5a37e68a676539f56a3f4a"
+    },
+    "static": {
+      "compileall": "pass",
+      "ruff_check_0_5_4": "pass",
+      "ruff_format_0_5_4": "pass"
+    }
+  },
+  "findings": [
+    {
+      "code": "RRH-01",
+      "severity": "blocker",
+      "summary": "Terminal and source-verification schemas accept hand-authored receipts that can unlock an evaluator permit."
+    },
+    {
+      "code": "RRH-02",
+      "severity": "blocker",
+      "summary": "Synthetic canary and independent-review assertions can freeze a plan without linked execution evidence."
+    },
+    {
+      "code": "RRH-03",
+      "severity": "blocker",
+      "summary": "Arbitrary regular files can be classified as a valid non-result or duplicate."
+    },
+    {
+      "code": "RRH-04",
+      "severity": "blocker",
+      "summary": "An unknown Result status and an unbound theorem statement can become conversion-ready after compilation."
+    }
+  ],
+  "image": "sha256:eec93eef374618d394269ae1108c0bbe6d247ecc7efdd39eb1a4ba5aec548397",
+  "producer": {
+    "base_commit": "6fea63f2e7882fd9de0398868984cd88a17898f1",
+    "branch": "origin/codex/result-runner-next-campaign-hardening-v1",
+    "commit": "033ff587142f23f67e2b7fb281821c2f6395839f",
+    "tree": "92bdb75914359cfe40c2f93255b169f2dbcd4a1f"
+  },
+  "runtime_pin_sha256": "0c42682ca4b8e77b76c04088fe04adc9baf5e8e1ed72398d43e38a380e51eb71",
+  "schema": "result-runner-independent-review-verdict.v1",
+  "scientific_state_changed": false,
+  "verdict": "BLOCKED"
+}
