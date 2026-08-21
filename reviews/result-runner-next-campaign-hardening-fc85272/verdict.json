@@ -1,0 +1,90 @@
+{
+  "authorization": {
+    "campaign_freeze": false,
+    "canary": false,
+    "inference": false,
+    "merge": false
+  },
+  "checks": {
+    "clean_clone_full_tests": {
+      "passed": 29,
+      "skipped": 1,
+      "total": 30,
+      "status": "pass"
+    },
+    "credential_scan": {
+      "findings": 0,
+      "scanned_corrective_paths": 17,
+      "status": "pass"
+    },
+    "focused_tests": {
+      "passed": 12,
+      "status": "pass"
+    },
+    "full_tests": {
+      "passed": 29,
+      "skipped": 1,
+      "total": 30,
+      "status": "pass"
+    },
+    "proof_replay": {
+      "olean_sha256": "aaba07269991599e97eb9017ac7ac0cf64102b36bd0bc5b7da60eaaf9cf894e1",
+      "proof_artifact_root": "e5144509579b777fb1474ed0ee5d0e766c66c892a54089b3a30caab778b8ea83",
+      "receipt_sha256": "168cd5611bbb7e7c105bf6577dd418ce26d99a3c59994cf5da77c4b6964d5e0d",
+      "status": "pass",
+      "verification_root": "42838c49cd288b9ddeb9f9697bef296736eee061af66a669023a3eb3e613a333"
+    },
+    "runtime_preflight": {
+      "network": "none",
+      "retained_receipt_sha256": "66e83cba7d2fa1847857afcce9a612161400aa615f21457da07ba46d38c1d9e0",
+      "retained_root": "8d7de7c67be9963cb866617c90e64dadad7cf6006cedfb7b8cf5cab3a2687ffe",
+      "status": "pass"
+    },
+    "static": {
+      "compileall": "pass",
+      "diff_check": "pass",
+      "json": "pass",
+      "ruff_check_0_5_4": "pass",
+      "ruff_format_0_5_4": "pass"
+    }
+  },
+  "findings": [
+    {
+      "code": "RRH-01",
+      "disposition": "PASS",
+      "severity": "none",
+      "summary": "Terminal and candidate-verification gates bind the maintained execution, exact proof roots, and fresh Lean replay before evaluator permit issuance."
+    },
+    {
+      "code": "RRH-02",
+      "disposition": "BLOCKED",
+      "severity": "blocker",
+      "summary": "An untracked generated independent-review receipt passes validation and can freeze the ten-cell plan."
+    },
+    {
+      "code": "RRH-03",
+      "disposition": "PASS",
+      "severity": "none",
+      "summary": "Duplicate and non-result evidence are closed and rooted; self-duplication fails."
+    },
+    {
+      "code": "RRH-04",
+      "disposition": "PASS",
+      "severity": "none",
+      "summary": "Unknown statuses fail before compilation and compilation cannot promote a proof sketch."
+    }
+  ],
+  "producer": {
+    "branch": "upstream-review/codex/result-runner-next-campaign-hardening-v1",
+    "commit": "fc852724304896ae8b472f2a76785c4d6562557d",
+    "controlling_review_commit": "d89c99d7f87caadfbc8f79262c1ef35881d7704a",
+    "parent": "8eca684f02db097ccd25f4e0de0a451bcf7f68eb",
+    "tree": "6d92fea4c71bc21f6b5313b31a9db1d0ddf2d134"
+  },
+  "runtime_pin_sha256": "0c42682ca4b8e77b76c04088fe04adc9baf5e8e1ed72398d43e38a380e51eb71",
+  "runtime_verifier_sha256": "81550fb85d4e03f90b855811a071b227c6a96d6c1744ca8b0618ed8e5c432001",
+  "schema": "result-runner-independent-stricter-rereview-verdict.v1",
+  "scientific_state_changed": false,
+  "validation_packet_sha256": "e1902e8aa03348ebd29a95b720e30e1ea653eeb007295e9c2da5710179b1e85e",
+  "verdict": "BLOCKED"
+}
