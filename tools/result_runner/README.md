@@ -90,3 +90,10 @@ recorded implementation. Source bytes and accepted Standing remained unchanged.
 The earlier
 `5f993c5…` qualification is retained only as predecessor evidence; it did not
 execute this corrected runner and does not qualify this head.
+
+The prospective Lean-aware campaign layer is documented in
+[`next_campaign_v1/`](next_campaign_v1/). It requires an exact pinned
+Lean/lake runtime, source-native verification receipts, and one single-use
+permit per fixed candidate or evaluator cell. It is not campaign-ready until
+its neutral provider canary and an independent exact-runtime review pass; this
+patch itself performs no provider inference and changes no scientific state.

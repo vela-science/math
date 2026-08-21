@@ -1,0 +1,15 @@
+/opt/formal-conjectures/ResultRunnerSubmitted.lean:1:0: error: unknown module prefix 'FormalConjectures'
+
+No directory 'FormalConjectures' or file 'FormalConjectures.olean' in the search path entries:
+/opt/formal-conjectures/.lake/packages/Cli/.lake/build/lib/lean
+/opt/formal-conjectures/.lake/packages/batteries/.lake/build/lib/lean
+/opt/formal-conjectures/.lake/packages/Qq/.lake/build/lib/lean
+/opt/formal-conjectures/.lake/packages/aesop/.lake/build/lib/lean
+/opt/formal-conjectures/.lake/packages/proofwidgets/.lake/build/lib/lean
+/opt/formal-conjectures/.lake/packages/importGraph/.lake/build/lib/lean
+/opt/formal-conjectures/.lake/packages/LeanSearchClient/.lake/build/lib/lean
+/opt/formal-conjectures/.lake/packages/plausible/.lake/build/lib/lean
+/opt/formal-conjectures/.lake/packages/mathlib/.lake/build/lib/lean
+/opt/formal-conjectures/.lake/build/lib/lean
+/opt/lean-4.27.0-linux_aarch64/lib/lean
+/opt/lean-4.27.0-linux_aarch64/lib/lean
