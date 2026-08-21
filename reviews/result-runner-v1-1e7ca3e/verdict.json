@@ -1,0 +1,63 @@
+{
+  "authorizations": {
+    "broad_candidate_campaign": false,
+    "merge": false,
+    "one_tiny_corrected_qualification_after_code_gates": true,
+    "scientific_or_authority_change": false
+  },
+  "checks": {
+    "compileall": "pass",
+    "credential_pattern_findings": 0,
+    "diff_check": "pass",
+    "docker_context": "desktop-linux",
+    "focused_tests_exact_vela": "pass_6_of_6",
+    "focused_tests_without_vela": "pass_5_skip_1",
+    "graph_two_run_determinism": "pass_json_and_sqlite",
+    "native_two_run_commit_determinism": "fail",
+    "ruff_check": "pass",
+    "ruff_format": "pass",
+    "vela_current_lifecycle": "pass_verification_then_rooted_reject_zero_accepted_claims",
+    "vela_key_deletion": "pass"
+  },
+  "findings": [
+    {
+      "id": "RR-01",
+      "priority": "P1",
+      "type": "git_root_path_and_source_binding_contract"
+    },
+    {
+      "id": "RR-02",
+      "priority": "P1",
+      "type": "unbounded_runtime_streams_and_output"
+    },
+    {
+      "id": "RR-03",
+      "priority": "P1",
+      "type": "schema_validator_accepts_unsupported_rules"
+    },
+    {
+      "id": "RR-04",
+      "priority": "P1",
+      "type": "nondeterministic_native_and_missing_route_provenance"
+    },
+    {
+      "id": "RR-05",
+      "priority": "P1",
+      "type": "vela_verification_outcome_and_semantic_assertions"
+    },
+    {
+      "id": "RR-06",
+      "priority": "P1",
+      "type": "qualification_pass_not_bound_to_retained_evidence"
+    }
+  ],
+  "producer": {
+    "base": "5de716c896065c03c0a470d015ba2a328a527f73",
+    "branch": "codex/result-runner-v1",
+    "commit": "1e7ca3ec4821651c0697c8952fce7d29d616eb52",
+    "remote_equal": true,
+    "tree": "fc4d629215a66e65027fdff0b8ed602e0eefbe2f"
+  },
+  "schema": "vela.result-runner.independent-review.v1",
+  "verdict": "BLOCKED"
+}
