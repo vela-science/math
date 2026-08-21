@@ -1,0 +1,89 @@
+{
+  "authorization": {
+    "campaign_freeze": false,
+    "canary": false,
+    "inference": false,
+    "merge_exact_reviewed_tree": true
+  },
+  "checks": {
+    "clean_clone_full_tests": {
+      "passed": 29,
+      "skipped": 1,
+      "status": "pass",
+      "total": 30
+    },
+    "credential_scan": {
+      "findings": 0,
+      "scanned_corrective_paths": 3,
+      "status": "pass"
+    },
+    "focused_tests": {
+      "passed": 12,
+      "status": "pass"
+    },
+    "full_tests": {
+      "passed": 29,
+      "skipped": 1,
+      "status": "pass",
+      "total": 30
+    },
+    "proof_replay": {
+      "classification": "checked_proof",
+      "olean_sha256": "aaba07269991599e97eb9017ac7ac0cf64102b36bd0bc5b7da60eaaf9cf894e1",
+      "proof_artifact_root": "e5144509579b777fb1474ed0ee5d0e766c66c892a54089b3a30caab778b8ea83",
+      "status": "pass"
+    },
+    "review_receipt_protocol": {
+      "committed_descendant_accepted": true,
+      "plan_binds_artifact_and_receipt_identities": true,
+      "status": "pass",
+      "untracked_rejected": true
+    },
+    "runtime_preflight": {
+      "network": "none",
+      "status": "pass",
+      "stderr_sha256": "d47a06d59aba2814c3fb7460049fc2ccbfc834196c956d6c6558e8be8b079e24",
+      "stdout_sha256": "3ab10b8ac25d64132bc28d3b90e5f64dbd565c6f9d5a37e68a676539f56a3f4a"
+    },
+    "static": {
+      "compileall": "pass",
+      "diff_check": "pass",
+      "ruff_check_0_5_4": "pass",
+      "ruff_format_0_5_4": "pass"
+    }
+  },
+  "findings": [
+    {
+      "code": "RRH-01",
+      "disposition": "PASS",
+      "severity": "none"
+    },
+    {
+      "code": "RRH-02",
+      "disposition": "PASS",
+      "severity": "none",
+      "summary": "The review receipt must match a committed blob in a strict descendant of the bound report and verdict commit; plan freeze retains both identities."
+    },
+    {
+      "code": "RRH-03",
+      "disposition": "PASS",
+      "severity": "none"
+    },
+    {
+      "code": "RRH-04",
+      "disposition": "PASS",
+      "severity": "none"
+    }
+  ],
+  "producer": {
+    "branch": "origin/codex/result-runner-next-campaign-hardening-v1",
+    "commit": "cf6d76687b205a39e2515e9fec7087c819454d2f",
+    "controlling_review_commit": "898039a8bb4dfe5305dcfc60d537a9f8c45f61a4",
+    "parent": "fc852724304896ae8b472f2a76785c4d6562557d",
+    "tree": "f8e9e8d3b99226ed6bba62026396d5f17ea9351e"
+  },
+  "runtime_verifier_sha256": "34b0f677e07b987dfdd7a64094a54fbd744d50ba32936210ed36b79ede53ce05",
+  "schema": "result-runner-independent-final-rereview-verdict.v1",
+  "scientific_state_changed": false,
+  "verdict": "PASS"
+}
