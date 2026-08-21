@@ -1,0 +1,135 @@
+{
+  "authority_effect": "none",
+  "bindings": {
+    "accepted_image": "sha256:76c64845ae35f57835a08f386d4206bf021ccf1169f8a35e59cc68d8e4408e7e",
+    "answer_schema_sha256": "62f7bbc908dbb9020ea39430307c0c685ee30fce2dee496e54b739e4b5a702b6",
+    "assignments_sha256": "fe2e59f19313846effeb6fe495f0a0477afde73af9e3092113d863da87d6dd26",
+    "derived_validation_sha256": "8b97a4ef3bc086bd21ea6d27dc0790dd58dd86dcfb730417eaafa49474d7f81c",
+    "evaluator_lock_sha256": "9d99fc90555f96b746b345a3e77632414fdb99c1d7fc11fa85b05f1a4ead7d73",
+    "groups": {
+      "arms": {
+        "git_tree": "05ad332796f44fcc54c3356a5d62308cb5bade57",
+        "path": "arms"
+      },
+      "cards": {
+        "git_tree": "f317684ebb449dd5307b7baeb5aaaab4ac70785d",
+        "path": "cards"
+      },
+      "equivalence": {
+        "aggregate_sha256": "8299f0fff60c41eca43caca0d084b3bc9fca968cb3976d6f1a1c72791ceba9f6",
+        "file_count": 30,
+        "git_tree": "2a705b02016b8d05933d0441c357adf90724f17e",
+        "path": "equivalence"
+      },
+      "fact_packs": {
+        "aggregate_sha256": "d051e7572b6c9093fd2474f4e103ee7388774212a27e3e52acf14cef695f4bbd",
+        "file_count": 10,
+        "git_tree": "5178fc587cd91b3c1b1b5d5714c3612a59510437",
+        "path": "fact-packs"
+      },
+      "prompts": {
+        "git_tree": "80c307bce5ef56cf1e20ba04c3b8dc3871fb8b67",
+        "path": "prompts"
+      },
+      "runtime": {
+        "git_tree": "f3856c96318a50c70b25ead9a4909d97e7b3639e",
+        "path": "runtime"
+      },
+      "stage2": {
+        "git_tree": "87077013ba42a732588852849f02aa56127abba2",
+        "path": "stage2"
+      }
+    },
+    "qualified_input": {
+      "commit": "9f9a324dd1eb35e9f189c7ed2e722d2463a35437",
+      "runner_sha256": "4993c068aa35e100953650f41c7c6dd8ad0e77b3a5828c06336d9b5669b42d01",
+      "tree": "4b09dc22f117ed73e71628b1d4d1f62ad3834522"
+    },
+    "runtime_parameters_sha256": "56db8f6cee43cff17d8d8c0d5417462f08b0ff4a4da94287087136adef2a5cf3",
+    "sentinel_receipt_sha256": "05e4a452adf9dd5cb9e1f6396a0dfb9efcb1c78e4398d03b00e1b147c031c004",
+    "source_lock_sha256": "7e6b169c25a91332c6bd40714ef3b751b6ae55a261d74f0dd7b7767761b5b64a",
+    "source_mount_receipt_sha256": "cbe3b821d9dcfefb5286d23fad64fbc52c2ca3da9e0d00ce3b3ced1b58c71bca",
+    "stage2_commitment_sha256": "16c3ac827e63f47412ff9439e4ea742429c153db679c77063d8e701c4be660e0",
+    "stage2_held_out_aggregate_sha256": "d7fd89641e6ca83c21b4b615efedcfce3ff8174b79444a19cf1d08809df56ebd",
+    "stage2_validation_sha256": "da84a1861126b53853c185c9bc69201e3a7e984604d87ebe432b4d0733bbc3e7"
+  },
+  "blind_evaluation": {
+    "candidate_visibility": "Only the frozen candidate card, fact pack, source mounts, objective, arm wrapper, answer schema, and allowed tools; no Stage 2 path or key is mounted.",
+    "custodian": "The neutral custodian alone may decrypt the concealed X/Y/Z map and packages the six locked outputs into anonymized target bundles.",
+    "evaluator_sessions": [
+      "one blinded session for T01",
+      "one blinded session for T02"
+    ],
+    "evaluator_visibility": "Evaluator key and anonymized X/Y/Z target bundle only; never custodian root, custodian key, permutation seed, plaintext map, or arm labels before first-pass lock.",
+    "first_pass_lock": "All six verdicts and correction notices lock before any reveal.",
+    "prior_access_evidence": {
+      "custodian_material_accessed": false,
+      "mapping_accessed_or_revealed": false,
+      "relaunch_abort_sha256": "d53877d88cfe6b145186657ebb36f7987b7fe7ddc07281155430aeeb6aee0d72"
+    }
+  },
+  "fresh_denominator": {
+    "candidate_cells": 6,
+    "cost_and_time_start": "Creation of the reviewed actual start receipt assigns all six cells simultaneously.",
+    "initial_attempts_per_cell": 1,
+    "intention_to_treat": true,
+    "order": [
+      "T01-N",
+      "T02-G",
+      "T01-V",
+      "T02-N",
+      "T01-G",
+      "T02-V"
+    ],
+    "retries_or_substitutions": 0,
+    "run_id": "RESULTS-BREAKTHROUGH-01-SUCCESSOR-SMOKE-01"
+  },
+  "launch": {
+    "actual_start_receipt_path": "successor-smoke-01/launch/start-receipt.json",
+    "launch_authorized": false,
+    "predecessor_start_receipt_role": "The immutable predecessor launch/start-receipt.json may supply only the identical image string required by the qualified runner; it is not authorization or denominator evidence for this run.",
+    "proposed_start_receipt_path": "successor-smoke-01/launch/proposed-start-receipt.json",
+    "review_binding": "Valid only at the exact Git commit and tree named by a new independent PASS handoff; any byte change requires a new review.",
+    "review_required": true
+  },
+  "launch_freshness_checks": {
+    "credential_check": "Existing ChatGPT OAuth file is readable through the frozen read-only mount; retain status only and never credential bytes.",
+    "docker_check": "desktop-linux and accepted image ID must match; reuse the accepted sentinel and do not rerun container preflight.",
+    "git_check": "Review subject commit/tree and all bound Git trees/hashes must match.",
+    "source_check": "Rehash the accepted source receipt and run the frozen mount verifier for exact commit/tree, complete, clean, and non-shallow sources.",
+    "stage2_check": "Commitment and aggregate must match and the neutral custodian must confirm no prior map/key/seed reveal or candidate/evaluator access.",
+    "when": "Immediately before creating the actual start receipt, after independent PASS, with zero model calls on mismatch."
+  },
+  "predecessor_process_evidence": {
+    "excluded_from_this_run_cost_and_outcome_denominator": true,
+    "first_abort_sha256": "975df0936166635207a180547d5991b397bc14c0b318a50e3305898abfe6dcdc",
+    "historical_start_receipt_sha256": "5a38cda460254a1e4bf8855982ce84c8620165e9eb42d65fba7b062eca0acb4d",
+    "original_six_itt_consequences": "Six invalid infrastructure_failure outcomes, usable zero, model_attempt=false; permanently retained only in the stopped predecessor denominator.",
+    "relaunch_abort_sha256": "d53877d88cfe6b145186657ebb36f7987b7fe7ddc07281155430aeeb6aee0d72",
+    "stopped_gate_sha256": "0f13dd2c87fcf4f1506e8cf62a0741ea558d5dc08fe389ccfc3edcffa7b30da0",
+    "terminal_invocation_histories": "T01-N operator bind error and T02-G missing-stdin runner defect remain process evidence with zero model sessions and do not consume either fresh cell.",
+    "terminal_predecessor_id": "RESULTS-BREAKTHROUGH-01"
+  },
+  "recovery": {
+    "eligible_verdict": "needs_correction",
+    "limit": "Exactly one same-session resume per eligible cell using only its original fact pack and locked minimal defect notice.",
+    "other_followup": "prohibited"
+  },
+  "run_id": "RESULTS-BREAKTHROUGH-01-SUCCESSOR-SMOKE-01",
+  "session_contract": {
+    "candidate_sessions": 6,
+    "candidate_wall_seconds_each": 720,
+    "evaluator_sessions": 2,
+    "evaluator_wall_seconds_each": 720,
+    "maximum_oauth_sessions": 8,
+    "model": "gpt-5.6-sol",
+    "parallelism": 1,
+    "provider_path": "ChatGPT OAuth",
+    "reasoning_effort": "high",
+    "scientific_output_budget": "8192 UTF-8 bytes in result JSON",
+    "service_tier": "default",
+    "source_objective_budget_tool_and_answer_contract": "exactly the bound unchanged bytes for every arm"
+  },
+  "status": "preregistered_not_authorized",
+  "stop_rule": "After the six candidate terminals, two target evaluator terminals, any eligible frozen same-session recovery, and smoke packet assembly, stop for independent review before every T03-T10 cell regardless of outcome."
+}

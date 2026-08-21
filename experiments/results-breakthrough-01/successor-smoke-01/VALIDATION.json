@@ -1,0 +1,29 @@
+{
+  "actual_start_receipt_absent": true,
+  "bound_git_trees": 7,
+  "bound_sha256_files": 15,
+  "candidate_or_evaluator_inference_sessions": 0,
+  "candidate_visible_files_scanned": 34,
+  "fresh_candidate_cells": 6,
+  "forbidden_map_key_or_seed_identity_findings": 0,
+  "legacy_stage2_validator": {
+    "disposition": "Do not edit or re-freeze Stage 2. Its exact tree, commitment, validation receipt, custody, and held-out aggregate are reused.",
+    "exit_code": 1,
+    "reason": "The frozen validator asserts protected paths equal its older accepted producer commit. The independently accepted successor runner and rebound fact/equivalence roots intentionally postdate that commit.",
+    "stage2_bytes_changed": false
+  },
+  "outcome": "pass",
+  "predecessor_histories_preserved": true,
+  "preregistration_sha256": "c5111d8bd798447f31c01d542ff332a6d12e32c6bd1692c250d6bae500b566f8",
+  "proposed_start_receipt_sha256": "3c8313b03304eaf48787114d5953fe21d7aadbfa8655e18a55ea80823cdf1b97",
+  "qualified_input_commit": "9f9a324dd1eb35e9f189c7ed2e722d2463a35437",
+  "qualified_input_tree": "4b09dc22f117ed73e71628b1d4d1f62ad3834522",
+  "run_id": "RESULTS-BREAKTHROUGH-01-SUCCESSOR-SMOKE-01",
+  "stage2": {
+    "commitment_sha256": "16c3ac827e63f47412ff9439e4ea742429c153db679c77063d8e701c4be660e0",
+    "git_tree": "87077013ba42a732588852849f02aa56127abba2",
+    "held_out_aggregate_sha256": "d7fd89641e6ca83c21b4b615efedcfce3ff8174b79444a19cf1d08809df56ebd",
+    "prior_private_validation_sha256": "da84a1861126b53853c185c9bc69201e3a7e984604d87ebe432b4d0733bbc3e7"
+  },
+  "validated_at": "2026-08-21T01:17:02Z"
+}

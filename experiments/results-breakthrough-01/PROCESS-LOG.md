@@ -717,3 +717,46 @@ fields; the observation remains separate.
 - **Prevention/simplification:** scope validators to explicit lifecycle states
   and keep command-policy checks token-aware.
 - **Disposition:** fixed locally; advisory only and no new gate added.
+
+## 2026-08-21T01:17:02Z — fresh smoke denominator separated from stopped predecessor
+
+- **Stage/time and evidence:** successor smoke preregistration;
+  `successor-smoke-01/{PREREGISTRATION.json,launch/proposed-start-receipt.json,VALIDATION.json}`.
+- **Observation and impact:** a distinct six-cell run now has its own proposed
+  receipt path, ITT start, cost/outcome denominator, and review binding. The
+  two aborts, original six invalid ITT consequences, and T01-N/T02-G terminal
+  invocation histories remain predecessor process evidence only.
+- **Category:** experiment design.
+- **Root cause:** a terminally stopped run cannot truthfully be relaunched by
+  reusing its old start receipt or denominator.
+- **Affected:** three concise preregistration/validation files and zero Docker,
+  model, evaluator, recovery, OAuth-credit, source, or authority activity.
+- **Immediate correction:** bind all accepted inputs by exact hash/tree, set
+  `launch_authorized=false`, and require a new commit-bound PASS plus minimal
+  launch freshness checks before creating the actual receipt.
+- **Prevention/simplification:** use a distinct run identity and receipt path
+  whenever a preregistered execution is terminally stopped.
+- **Disposition:** fixed in preregistration; stop for independent review.
+
+## 2026-08-21T01:17:02Z — legacy Stage 2 validator retained an old producer assertion
+
+- **Stage/time and evidence:** successor preregistration validation;
+  `successor-smoke-01/VALIDATION.json` and the read-only invocation of
+  `stage2/scripts/validate-stage2.py`.
+- **Observation and impact:** successor-specific hash/tree/leakage validation
+  passed, but the legacy public validator exited 1 when it asserted protected
+  paths still equal the older Stage 2 producer commit. The qualified successor
+  runner and derived fact roots intentionally postdate that commit; Stage 2
+  bytes, commitment, custody, and aggregate did not change.
+- **Category:** harness/script and experiment design.
+- **Root cause:** the frozen Stage 2 validator combines held-out commitment
+  validation with a fixed pre-successor protected-tree identity.
+- **Affected:** one read-only local validation command and minutes; zero model,
+  evaluator, recovery, Docker, source, custody, or authority state.
+- **Immediate correction:** do not edit Stage 2. Bind its exact unchanged Git
+  tree, commitment, prior private validation receipt, and held-out aggregate
+  alongside the independently qualified successor input.
+- **Prevention/simplification:** future validators should distinguish an
+  immutable held-out commitment from separately reviewed harness successors.
+- **Disposition:** defer tooling change; not experiment-blocking because the
+  exact successor and Stage 2 identities are independently reviewable.
