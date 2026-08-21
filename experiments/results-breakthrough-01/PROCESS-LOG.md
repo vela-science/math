@@ -531,3 +531,50 @@ fields; the observation remains separate.
 - **Disposition:** fixed now because a balanced concealed map is required for
   Stage 2; the failed pre-output invocation creates no experiment cell or
   infrastructure denominator entry.
+
+## 2026-08-21T00:05:00Z — complete bundles had no clone-default branch
+
+- **Stage/time and evidence:** smoke preflight source reconstruction;
+  `launch/preflight/source-reconstruction.json` and the four frozen bundle
+  identities in `SOURCE-LOCK.json`.
+- **Observation and impact:** ordinary `git clone <bundle>` created an empty
+  repository and detached checkout failed because each complete bundle exposes
+  only `refs/remotes/origin/main`, not a clone-default branch. The first attempt
+  exited 128 before any model or Docker candidate call.
+- **Category:** harness/script.
+- **Root cause:** bundle creation retained a remote-tracking ref that verifies
+  and fetches exactly but is unsuitable as an implicit clone HEAD.
+- **Affected:** one setup invocation and minutes; zero candidate/evaluator
+  sessions, OAuth credits, source/canonical/authority state, or experiment
+  cells.
+- **Immediate correction:** once only, use ordinary `git init`, explicitly
+  fetch the frozen bundle ref, and detach at the bound commit; all four
+  corrected checkouts were complete, exact, non-shallow, and clean.
+- **Prevention/simplification:** either bundle an advertised branch/HEAD or
+  document the one explicit fetch command; no clone wrapper or archive layer.
+- **Disposition:** fixed once during preflight; the partial empty checkout is
+  retained externally and was not reused.
+
+## 2026-08-21T00:12:19Z — fail-closed identity probe aborted smoke before inference
+
+- **Stage/time and evidence:** final launch preflight;
+  `launch/preflight/container-probe.*`, `launch/ABORT.json`, and
+  `smoke/SMOKE-GATE.json`.
+- **Observation and impact:** Docker context and accepted image ID matched and
+  both binaries were found, but the probe exited 1 with `/bin/bash: line 6:
+  $1: unbound variable` before binary hashes, OAuth status, source-mount
+  receipt, or start receipt. The six authorized smoke cells produced no model
+  calls or outputs and remain retained as shared pre-inference ITT failures.
+- **Category:** harness/script.
+- **Root cause:** the nested probe used a double-quoted `awk` program, causing
+  the inner shell to expand `$1` under `set -u` before `awk` executed; this is
+  not evidence of an image, OAuth, protocol, or scientific mismatch.
+- **Affected:** one no-network Docker probe, one launch abort, six smoke ITT
+  cells at usable zero, and zero candidate/evaluator/recovery sessions or
+  provider credits; no source, canonical, authority, or Standing effect.
+- **Immediate correction:** none in this turn. Preserve stdout/stderr/exit/time
+  and obey the frozen instruction to abort without model calls on any mismatch.
+- **Prevention/simplification:** use a single-quoted `awk` program or avoid the
+  nested shell by hashing through direct argv in a separately reviewed launch.
+- **Disposition:** experiment-blocking and retained; stop for independent
+  review without relaunch, mapping access, evaluator sessions, or T03-T10.
