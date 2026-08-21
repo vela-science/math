@@ -1,0 +1,62 @@
+{
+  "checks": {
+    "compileall_python_3_11_2": "pass",
+    "credential_scan_51_files": "pass_zero_findings",
+    "diff_check": "pass",
+    "docker_dry_path": "pass",
+    "focused_tests": "pass_15_skip_1",
+    "graph_json_exact_replay": "pass",
+    "graph_sqlite_exact_replay": "fail_unbound_sqlite_version",
+    "graph_sqlite_integrity_and_rows": "pass",
+    "native_exact_replay": "pass_commit_and_tree",
+    "portable_manifest": "pass_35_of_35",
+    "post_exit_runtime_bound": "fail_race_reproduced",
+    "qualification_bindings": "pass",
+    "ruff_0_5_4_check": "pass",
+    "ruff_0_5_4_format": "pass",
+    "schema_closed_keywords_and_types": "pass",
+    "schema_pattern_evaluator_equivalence": "fail_unbound",
+    "vela_exact_digest_integration": "pass",
+    "vela_failure_path_key_deletion": "fail_pre_try_setup",
+    "vela_retained_lifecycle_semantics": "pass"
+  },
+  "findings": [
+    {
+      "id": "RR-02",
+      "priority": "P1",
+      "type": "post_exit_output_bound_race"
+    },
+    {
+      "id": "RR-03",
+      "priority": "P1",
+      "type": "unbound_pattern_regex_dialect"
+    },
+    {
+      "id": "RR-04",
+      "priority": "P1",
+      "type": "unbound_sqlite_serialization_runtime"
+    },
+    {
+      "id": "RR-05",
+      "priority": "P1",
+      "type": "authority_key_cleanup_starts_after_key_creation"
+    }
+  ],
+  "producer": {
+    "branch": "codex/result-runner-v1",
+    "commit": "2ba67830a42e657567bd30755f560183e767c26c",
+    "parent": "1e7ca3ec4821651c0697c8952fce7d29d616eb52",
+    "remote_equal": true,
+    "tree": "7e6ec37b2e7eb94be789949abf4a78aba33d3f86"
+  },
+  "rr_disposition": {
+    "RR-01": "pass",
+    "RR-02": "blocked",
+    "RR-03": "blocked",
+    "RR-04": "blocked",
+    "RR-05": "blocked",
+    "RR-06": "pass"
+  },
+  "schema": "vela.result-runner.independent-review.v1",
+  "verdict": "BLOCKED"
+}
