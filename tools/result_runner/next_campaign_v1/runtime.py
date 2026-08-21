@@ -1984,7 +1984,7 @@ def _validate_independent_review(
     review_repo: pathlib.Path,
 ) -> dict[str, Any]:
     review_path = _regular_file(path, "independent review receipt")
-    review_commit, review_tree = _git_identity(review_repo, "review")
+    receipt_commit, receipt_tree = _git_identity(review_repo, "review")
     root = review_path.parent
     expected_verdict = _review_verdict_expected(
         producer_commit=producer_commit,
@@ -2014,6 +2014,34 @@ def _validate_independent_review(
         },
         "independent review receipt",
     )
+    review_commit = review["review_commit"]
+    review_tree = review["review_tree"]
+    _hex(review_commit, "review artifact commit", git=True)
+    _hex(review_tree, "review artifact tree", git=True)
+    if runner.git(review_repo, "rev-parse", f"{review_commit}^{{tree}}") != review_tree:
+        raise HardeningError(
+            "independent_review", "review artifact commit/tree mismatch"
+        )
+    _tracked_blob_matches(
+        review_repo, review_path, receipt_commit, "independent review receipt"
+    )
+    descendant = runner.run(
+        [
+            "git",
+            "-C",
+            str(review_repo),
+            "merge-base",
+            "--is-ancestor",
+            review_commit,
+            receipt_commit,
+        ],
+        check=False,
+    )
+    if review_commit == receipt_commit or descendant.returncode != 0:
+        raise HardeningError(
+            "independent_review",
+            "review receipt must be committed in a descendant of its artifacts",
+        )
     expected_receipt = {
         name: expected_verdict[name]
         for name in expected_verdict
@@ -2050,7 +2078,11 @@ def _validate_independent_review(
     protocol_root = runner.sha256_bytes(runner.canonical_json(protocol))
     if review["review_protocol_root"] != protocol_root:
         raise HardeningError("independent_review", "review protocol root mismatch")
-    return review | {"review_protocol_root": protocol_root}
+    return review | {
+        "receipt_commit": receipt_commit,
+        "receipt_tree": receipt_tree,
+        "review_protocol_root": protocol_root,
+    }
 
 
 def freeze_cell_plan(
@@ -2166,6 +2198,8 @@ def freeze_cell_plan(
         "producer_tree": producer_tree,
         "review_commit": review["review_commit"],
         "review_protocol_root": review["review_protocol_root"],
+        "review_receipt_commit": review["receipt_commit"],
+        "review_receipt_tree": review["receipt_tree"],
         "review_tree": review["review_tree"],
         "retries": 0,
         "runtime_pin_sha256": runtime_pin_sha,

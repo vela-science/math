@@ -70,9 +70,12 @@ and verdict against the same image, configuration, source, runtime, and exact
 canary root. The canary terminal and receipt must be generated through
 `record-terminal` and `record-canary`, then committed as exact Git bytes. The
 independent report and closed verdict must be committed in its separate review
-repository before `record-runtime-review` creates the handoff. Freeze recomputes
-both repositories' commits, trees, and protocol roots; uncommitted or merely
-shape-valid assertions fail closed. This patch does
+repository before `record-runtime-review` creates the handoff. The generated
+review receipt must then be committed in a descendant commit. Freeze verifies
+the receipt against that exact committed blob while resolving the report and
+verdict against their embedded predecessor commit/tree, and binds both
+identities into the plan. Freeze recomputes both repositories' commits, trees,
+and protocol roots; uncommitted or merely shape-valid assertions fail closed. This patch does
 not run the canary or authorize inference.
 
 `correction-validation/` retains the bounded offline/container correction

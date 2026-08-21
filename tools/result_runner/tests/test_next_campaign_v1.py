@@ -1118,6 +1118,45 @@ class NextCampaignTests(unittest.TestCase):
                 verdict=verdict,
                 expected_verdict=expected,
             )
+            review_arguments = {
+                "producer_commit": producer_commit,
+                "producer_tree": producer_tree,
+                "runtime_pin_sha256": runner.sha256_file(pin),
+                "runtime_verifier_sha256": runner.sha256_file(
+                    pathlib.Path(runtime.__file__)
+                ),
+                "image": IMAGE,
+                "config_root": canary["config_root"],
+                "source_root": canary["source_root"],
+                "canary_sha256": runner.sha256_file(canary["receipt"]),
+                "canary_commit": validated["commit"],
+                "canary_tree": validated["tree"],
+                "canary_protocol_root": validated["protocol_root"],
+                "review_repo": review_dir,
+            }
+            with self.assertRaisesRegex(runtime.HardeningError, "committed blob"):
+                runtime._validate_independent_review(review, **review_arguments)
+            subprocess.run(
+                ["git", "-C", str(review_dir), "add", "review.json"], check=True
+            )
+            environment.update(
+                {
+                    "GIT_AUTHOR_DATE": "2001-01-04T00:00:00Z",
+                    "GIT_COMMITTER_DATE": "2001-01-04T00:00:00Z",
+                }
+            )
+            subprocess.run(
+                ["git", "-C", str(review_dir), "commit", "-q", "-m", "receipt"],
+                check=True,
+                env=environment,
+            )
+            validated_review = runtime._validate_independent_review(
+                review, **review_arguments
+            )
+            self.assertNotEqual(
+                validated_review["review_commit"],
+                validated_review["receipt_commit"],
+            )
             assignments = [
                 {
                     "assignment_root": f"{index:x}" * 64,
@@ -1159,6 +1198,9 @@ class NextCampaignTests(unittest.TestCase):
                 (plan["candidate_denominator"], plan["evaluator_denominator"]), (5, 5)
             )
             self.assertEqual(plan["retries"], 0)
+            self.assertEqual(
+                plan["review_receipt_commit"], validated_review["receipt_commit"]
+            )
             teardown = canary["receipt"].parent / "teardown.json"
             value = json.loads(teardown.read_text())
             value["credential_retained"] = True
@@ -1246,6 +1288,13 @@ class NextCampaignTests(unittest.TestCase):
                 "canary_protocol_root": "a" * 64,
                 "review_repo": root,
             }
+            with self.assertRaisesRegex(runtime.HardeningError, "committed blob"):
+                runtime._validate_independent_review(review, **arguments)
+            subprocess.run(["git", "-C", str(root), "add", "review.json"], check=True)
+            subprocess.run(
+                ["git", "-C", str(root), "commit", "-q", "-m", "receipt"],
+                check=True,
+            )
             self.assertEqual(
                 runtime._validate_independent_review(review, **arguments)["status"],
                 "pass",
