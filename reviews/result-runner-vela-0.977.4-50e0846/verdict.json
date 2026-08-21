@@ -1,0 +1,42 @@
+{
+  "authorization": {
+    "merge_consideration": true,
+    "scope": "exact_commit_and_tree_only"
+  },
+  "boundaries": {
+    "canonical_authority_changed": false,
+    "provider_requests": 0,
+    "scientific_acceptance": false,
+    "scientific_state_changed": false,
+    "standing_changed": false
+  },
+  "evidence": {
+    "archive_sha256": "023bf4d98766e9d7b1d0c7504fcade78220b3fe4f544daca1faaeace98d25d65",
+    "binary_sha256": "06f912d107d29e4ce1dadd19bf7ef849ec42d7e62cbc9332c9807e6b8c9bd05e",
+    "clean_clone_archive_sha256": "31fbd97f6352f93881f1450e8c22b40aeb8a17f3c9bad8aa5b961a0a1366fa89",
+    "clean_clone_dry_receipt_sha256": "d9a0f2faa3417ea70011c5f334a2a1fe5dc2a4b4988bbbf0203ee69b61012d6a",
+    "credential_scan": {
+      "files": 80,
+      "findings": 0
+    },
+    "docker_sentinel_stdout_sha256": "8073252a57ee9f6d5879b5d4e3e0f46f34b4ea47e229d845029834483367b661",
+    "focused_tests": "18/18 pass",
+    "pin_sha256": "24e2282e151b1feb53072da58be81cbc561d35890c8248b3c46c8852b2e31c0f",
+    "provider_manifest": {
+      "files": 35,
+      "sha256": "4546a3b38537ba7d146a3e6e81a865edfca71cc7dccab3ef4daee714542f49ce"
+    },
+    "run_summary_sha256": [
+      "5a5d2a538a77ee1531948d404bb2bc418290150bb8f50d166774801813607c6b",
+      "49fb2fd1f85ce33ac1a906deabef9903f525660f21ee1bef9610122850993ef3"
+    ]
+  },
+  "producer": {
+    "branch": "codex/result-runner-vela-0.977.4",
+    "commit": "50e0846dcc6751e358fb047f4841f6fa50bb4d9b",
+    "parent": "7a535164d1a5f1139997f875a586f58fce7e2563",
+    "tree": "79e9482b9abe6999d36d63b1cfc62f6f964bda53"
+  },
+  "schema": "vela.result-runner-independent-review.v1",
+  "verdict": "PASS"
+}
