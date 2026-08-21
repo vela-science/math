@@ -1,0 +1,6 @@
+Lean (version 4.27.0, aarch64-unknown-linux-gnu, commit db93fe1608548721853390a10cd40580fe7d22ae, Release)
+codex-cli 0.145.0
+FormalConjectures/ErdosProblems/1052.lean:39:8: warning: declaration uses 'sorry'
+FormalConjectures/ErdosProblems/1052.lean:49:8: warning: declaration uses 'sorry'
+FormalConjectures/ErdosProblems/1052.lean:68:8: warning: declaration uses 'sorry'
+FormalConjectures/ErdosProblems/1052.lean:75:8: warning: declaration uses 'sorry'

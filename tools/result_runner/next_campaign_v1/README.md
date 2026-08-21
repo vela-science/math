@@ -31,7 +31,9 @@ receipt; it never upgrades that submission.
 Duplicate audits and supported typed non-results are valid non-conversion task
 outcomes only when their closed evidence schemas bind exact current source
 files, statements, commit/tree/archive, and Result bytes. Arbitrary evidence
-files fail closed. Valid duplicate and non-result receipts are neither
+files fail closed. Duplicate evidence additionally binds two recomputed
+occurrence roots and must identify a distinct repository/commit/path/declaration
+identity; a target cannot serve as its own duplicate. Valid duplicate and non-result receipts are neither
 infrastructure failures nor proof successes.
 
 ## One cell, one permit
@@ -45,6 +47,17 @@ actual bounded runner bundle and match those roots. An evaluator permit also
 requires the complete source-native verification directory to replay against
 the same immutable runtime and source. Hand-authored terminal or verification
 JSON cannot advance custody or unlock evaluation.
+
+Runner-bundle validation reconstructs the exact maintained Docker/Codex argv
+from its canonical source, OAuth, schema, and output paths and matches the
+closed assignment/run specifications to the semantic invocation. Proof
+validation accepts only the approved network-disabled `lake env lean` command,
+recomputes the submitted/audited/statement/stream/OLean artifact root, and
+requires a nonempty sole `Submitted.olean` before a checked proof can satisfy
+the compile gate. Immediately before evaluator binding and canary consumption,
+the verifier reruns that exact network-disabled Lean command in fresh output
+state and requires byte-identical streams and OLean. Evaluator permits carry both that proof root and the complete
+verification-directory root.
 The controller returns to `operator_hold`; only then may the next permit be
 minted. There are zero retries and no substitution.
 
@@ -54,7 +67,12 @@ cannot freeze until offline tests, that canary, and an independent exact-runtime
 review all pass. Freeze validates the complete canary permit, runner execution,
 compile, preflight, credential/teardown receipts and an independent PASS report
 and verdict against the same image, configuration, source, runtime, and exact
-canary root. Scalar or synthetic pass assertions fail closed. This patch does
+canary root. The canary terminal and receipt must be generated through
+`record-terminal` and `record-canary`, then committed as exact Git bytes. The
+independent report and closed verdict must be committed in its separate review
+repository before `record-runtime-review` creates the handoff. Freeze recomputes
+both repositories' commits, trees, and protocol roots; uncommitted or merely
+shape-valid assertions fail closed. This patch does
 not run the canary or authorize inference.
 
 `correction-validation/` retains the bounded offline/container correction

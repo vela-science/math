@@ -12,8 +12,8 @@ from unittest import mock
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-import runner  # noqa: E402
-from next_campaign_v1 import runtime  # noqa: E402
+import runner
+from next_campaign_v1 import runtime
 
 REAL_RUN_BOUNDED = runner.run_bounded
 IMAGE = "sha256:" + "a" * 64
@@ -192,29 +192,64 @@ class NextCampaignTests(unittest.TestCase):
             )
 
     @staticmethod
-    def semantic(repo: pathlib.Path) -> dict:
+    def semantic(repo: pathlib.Path, schema: pathlib.Path) -> dict:
         return runner.semantic_invocation(
             model="gpt-5.6-sol",
             reasoning="high",
             image=runner.DockerImage(IMAGE, IMAGE, "linux", "arm64"),
             source=runner.git_snapshot(repo),
             prompt_sha256="1" * 64,
-            schema_sha256="2" * 64,
+            schema_sha256=runner.sha256_file(schema),
             runner_sha256=runner.sha256_file(ROOT / "runner.py"),
         )
 
     def control(
         self, root: pathlib.Path, repo: pathlib.Path, pin: pathlib.Path, evaluator=False
     ) -> dict:
-        semantic = self.semantic(repo)
+        schema = root / "output.schema.json"
+        if not schema.exists():
+            runner.write_json(
+                schema,
+                {
+                    "additionalProperties": False,
+                    "properties": {"status": {"const": "pass", "type": "string"}},
+                    "required": ["status"],
+                    "type": "object",
+                },
+            )
+        auth = root / "auth.json"
+        auth.touch(exist_ok=True)
+        semantic = self.semantic(repo, schema)
         cells, files = [], {}
         for ordinal, (cell_id, role) in enumerate(
             [("C1", "candidate")] + ([("E1", "evaluator")] if evaluator else []), 1
         ):
             assignment = root / f"{cell_id}-assignment.json"
             run_spec = root / f"{cell_id}-run.json"
-            runner.write_json(assignment, {"cell_id": cell_id, "objective": "fixed"})
-            runner.write_json(run_spec, {"cell_id": cell_id, "run": 1})
+            runner.write_json(
+                assignment,
+                {
+                    "cell_id": cell_id,
+                    "prompt_sha256": semantic["prompt_sha256"],
+                    "role": role,
+                    "schema": "result-runner-cell-assignment.v1",
+                    "target_ordinal": 1,
+                },
+            )
+            runner.write_json(
+                run_spec,
+                {
+                    "cell_id": cell_id,
+                    "image": IMAGE,
+                    "model": semantic["model"],
+                    "output_schema_sha256": semantic["schema_sha256"],
+                    "prompt_sha256": semantic["prompt_sha256"],
+                    "reasoning": semantic["reasoning"],
+                    "runner_sha256": semantic["runner_sha256"],
+                    "schema": "result-runner-cell-run.v1",
+                    "source_root": runtime._source_root(semantic["source"]),
+                },
+            )
             cells.append(
                 {
                     "assignment_root": runner.sha256_file(assignment),
@@ -252,7 +287,13 @@ class NextCampaignTests(unittest.TestCase):
                 "verifications": {},
             },
         )
-        return {"plan": plan, "state": state, "files": files}
+        return {
+            "auth": auth,
+            "plan": plan,
+            "schema": schema,
+            "state": state,
+            "files": files,
+        }
 
     def execution(
         self,
@@ -263,13 +304,30 @@ class NextCampaignTests(unittest.TestCase):
         result: dict | None,
         status="completed",
         exit_code=0,
+        schema: pathlib.Path | None = None,
+        auth: pathlib.Path | None = None,
+        bundle_name: str | None = None,
     ) -> pathlib.Path:
-        bundle = root / f"execution-{permit['cell_id']}"
+        bundle = root / (
+            f"execution-{permit['cell_id']}" if bundle_name is None else bundle_name
+        )
         bundle.mkdir()
         shutil.copyfile(source_files[0], bundle / "assignment.json")
         shutil.copyfile(source_files[1], bundle / "run.json")
-        semantic = self.semantic(repo)
-        argv = ["docker", "run", "--rm", "-i", IMAGE]
+        schema = root / "output.schema.json" if schema is None else schema
+        auth = root / "auth.json" if auth is None else auth
+        semantic = self.semantic(repo, schema)
+        runner_output = bundle / "runner-output"
+        runner_output.mkdir()
+        argv = runner.docker_codex_command(
+            image=IMAGE,
+            repo=repo,
+            auth=auth,
+            schema=schema,
+            output=runner_output,
+            model=semantic["model"],
+            reasoning=semantic["reasoning"],
+        )
         runner.write_json(
             bundle / "invocation.json",
             {
@@ -344,12 +402,17 @@ class NextCampaignTests(unittest.TestCase):
         pin = make_pin(root, repo)
         evidence = root / "evidence.json"
         if kind == "duplicate":
+            target_value = target(repo)
+            duplicate_value = target(repo, "Source.source_duplicate")
             value = {
                 "comparison": "exact_statement_bytes",
-                "duplicate": target(repo, "Source.source_duplicate"),
+                "duplicate": duplicate_value,
+                "duplicate_occurrence_root": runtime._occurrence_root(duplicate_value),
                 "kind": kind,
+                "occurrences_are_distinct": True,
                 "schema": "source-native-duplicate-evidence.v1",
-                "target": target(repo),
+                "target": target_value,
+                "target_occurrence_root": runtime._occurrence_root(target_value),
             }
         else:
             value = {
@@ -382,42 +445,120 @@ class NextCampaignTests(unittest.TestCase):
     def canary_fixture(
         self, root: pathlib.Path, repo: pathlib.Path, pin: pathlib.Path
     ) -> dict:
-        canary = root / "canary"
+        canary_repo = root / "canary-repo"
+        subprocess.run(["git", "init", "-q", str(canary_repo)], check=True)
+        subprocess.run(
+            ["git", "-C", str(canary_repo), "config", "user.name", "Canary"],
+            check=True,
+        )
+        subprocess.run(
+            [
+                "git",
+                "-C",
+                str(canary_repo),
+                "config",
+                "user.email",
+                "canary@invalid.local",
+            ],
+            check=True,
+        )
+        canary = canary_repo / "canary"
         canary.mkdir()
         fixture = self.proof_fixture(root, repo, pin)
         compile_dir = canary / "compile"
         self.verify(fixture, compile_dir, completed_command())
-        semantic = self.semantic(repo)
+        schema = root / "canary-output.schema.json"
+        runner.write_json(
+            schema,
+            {
+                "additionalProperties": False,
+                "properties": {"status": {"const": "pass", "type": "string"}},
+                "required": ["status"],
+                "type": "object",
+            },
+        )
+        auth = root / "canary-auth.json"
+        auth.touch()
+        semantic = self.semantic(repo, schema)
         source_root = runtime._source_root(runner.git_snapshot(repo).as_json())
         assignment = root / "canary-assignment.json"
         run_spec = root / "canary-run.json"
-        runner.write_json(assignment, {"cell_id": "CANARY", "objective": "neutral"})
-        runner.write_json(run_spec, {"cell_id": "CANARY", "run": 1})
-        permit = {
-            "assignment_root": runner.sha256_file(assignment),
-            "campaign_id": "RESULT-RUNNER-NEUTRAL-CANARY",
-            "cell_id": "CANARY",
-            "config_root": semantic["identity_sha256"],
-            "image": IMAGE,
-            "ordinal": 1,
-            "plan_sha256": "9" * 64,
-            "role": "candidate",
-            "run_root": runner.sha256_file(run_spec),
-            "single_use": True,
-            "source_root": source_root,
-            "target_ordinal": 0,
-            "type": "result-runner-single-use-permit-v1",
-        }
-        permit["permit_root"] = runner.sha256_bytes(runner.canonical_json(permit))
-        runner.write_json(canary / "permit.json", permit)
-        execution = self.execution(
+        runner.write_json(
+            assignment,
+            {
+                "cell_id": "CANARY",
+                "prompt_sha256": semantic["prompt_sha256"],
+                "role": "candidate",
+                "schema": "result-runner-cell-assignment.v1",
+                "target_ordinal": 0,
+            },
+        )
+        runner.write_json(
+            run_spec,
+            {
+                "cell_id": "CANARY",
+                "image": IMAGE,
+                "model": semantic["model"],
+                "output_schema_sha256": semantic["schema_sha256"],
+                "prompt_sha256": semantic["prompt_sha256"],
+                "reasoning": semantic["reasoning"],
+                "runner_sha256": semantic["runner_sha256"],
+                "schema": "result-runner-cell-run.v1",
+                "source_root": source_root,
+            },
+        )
+        plan = root / "canary-plan.json"
+        runner.write_json(
+            plan,
+            {
+                "campaign_id": "RESULT-RUNNER-NEUTRAL-CANARY",
+                "cells": [
+                    {
+                        "assignment_root": runner.sha256_file(assignment),
+                        "cell_id": "CANARY",
+                        "ordinal": 1,
+                        "role": "candidate",
+                        "run_root": runner.sha256_file(run_spec),
+                        "target_ordinal": 0,
+                    }
+                ],
+                "config_root": semantic["identity_sha256"],
+                "image": IMAGE,
+                "runtime_pin_sha256": runner.sha256_file(pin),
+                "source_root": source_root,
+            },
+        )
+        state = root / "canary-state.json"
+        runner.write_json(
+            state,
+            {
+                "active_permit": None,
+                "completed": [],
+                "next_ordinal": 1,
+                "plan_sha256": runner.sha256_file(plan),
+                "status": "operator_hold",
+                "verifications": {},
+            },
+        )
+        permit_dir = root / "canary-permit"
+        permit = runtime.mint_permit(plan, state, "CANARY", permit_dir)
+        shutil.copyfile(permit_dir / "permit.json", canary / "permit.json")
+        runtime.consume_permit(canary / "permit.json", state)
+        self.execution(
             canary,
             permit,
             repo,
             (assignment, run_spec),
             json.loads(fixture["result"].read_text()),
+            schema=schema,
+            auth=auth,
+            bundle_name="execution",
         )
-        execution.rename(canary / "execution")
+        terminal_dir = root / "canary-terminal"
+        runtime.record_terminal(
+            canary / "permit.json", state, canary / "execution", terminal_dir
+        )
+        shutil.copyfile(terminal_dir / "terminal.json", canary / "terminal.json")
         preflight = canary / "preflight"
         image = runner.DockerImage(IMAGE, IMAGE, "linux", "arm64")
 
@@ -445,47 +586,36 @@ class NextCampaignTests(unittest.TestCase):
             },
         )
         spec = root / "canary-spec.json"
-        runner.write_json(spec, {"schema": "result-runner.neutral-canary-spec.v1"})
-        plan_binding = {
-            "image": IMAGE,
-            "runtime_pin_sha256": runner.sha256_file(pin),
-            "source_root": source_root,
-        }
-        verification = runtime._validate_source_verification_directory(
-            compile_dir, plan=plan_binding, pin_path=pin, repo=repo
-        )
-        execution_value = runtime._validate_runner_bundle(canary / "execution", permit)
-        preflight_value = runtime._validate_preflight_directory(
-            preflight, pin_path=pin, source_root=source_root
-        )
+        shutil.copyfile(ROOT / "next_campaign_v1" / "canary-spec.json", spec)
         receipt = canary / "receipt.json"
-        runner.write_json(
-            receipt,
+        with mock.patch.object(runtime, "_replay_proof_verification"):
+            runtime.record_canary_receipt(
+                canary,
+                canary_spec=spec,
+                runtime_pin=pin,
+                config_root=semantic["identity_sha256"],
+                image=IMAGE,
+                source_root=source_root,
+                source_repo=repo,
+                producer_repo=repo,
+            )
+        subprocess.run(["git", "-C", str(canary_repo), "add", "canary"], check=True)
+        environment = os.environ.copy()
+        environment.update(
             {
-                "campaign_denominator_effect": "excluded",
-                "canary_spec_sha256": runner.sha256_file(spec),
-                "compile_receipt_sha256": verification["receipt_sha256"],
-                "compile_verification_root": verification["verification_root"],
-                "config_root": semantic["identity_sha256"],
-                "credential_findings": 0,
-                "execution_root": execution_value["evidence_root"],
-                "image": IMAGE,
-                "permit_sha256": runner.sha256_file(canary / "permit.json"),
-                "preflight_receipt_sha256": preflight_value["receipt_sha256"],
-                "preflight_root": preflight_value["root"],
-                "provider_requests": 1,
-                "runtime_pin_sha256": runner.sha256_file(pin),
-                "runtime_verifier_sha256": runner.sha256_file(
-                    pathlib.Path(runtime.__file__)
-                ),
-                "schema": "result-runner.neutral-canary-receipt.v1",
-                "source_root": source_root,
-                "status": "pass",
-                "teardown_sha256": runner.sha256_file(teardown),
-            },
+                "GIT_AUTHOR_DATE": "2001-01-02T00:00:00Z",
+                "GIT_COMMITTER_DATE": "2001-01-02T00:00:00Z",
+            }
+        )
+        subprocess.run(
+            ["git", "-C", str(canary_repo), "commit", "-q", "-m", "canary"],
+            check=True,
+            env=environment,
         )
         return {
+            "canary_repo": canary_repo,
             "config_root": semantic["identity_sha256"],
+            "producer_repo": repo,
             "receipt": receipt,
             "source_root": source_root,
             "spec": spec,
@@ -500,10 +630,11 @@ class NextCampaignTests(unittest.TestCase):
             value = json.loads(fixture["result"].read_text())
             value["result_status"] = "unsupported"
             runner.write_json(fixture["result"], value)
-            with mock.patch.object(
-                runtime, "_docker_context"
-            ) as docker, self.assertRaisesRegex(
-                runtime.HardeningError, "unsupported Result status"
+            with (
+                mock.patch.object(runtime, "_docker_context") as docker,
+                self.assertRaisesRegex(
+                    runtime.HardeningError, "unsupported Result status"
+                ),
             ):
                 runtime.verify_proof(
                     pin_path=pin,
@@ -572,9 +703,10 @@ class NextCampaignTests(unittest.TestCase):
                 )
                 self.assertTrue(receipt["task_outcome_valid"])
                 self.assertFalse(receipt["conversion_ready"])
-            with self.subTest(
-                kind=kind, mutation="extra"
-            ), tempfile.TemporaryDirectory() as raw:
+            with (
+                self.subTest(kind=kind, mutation="extra"),
+                tempfile.TemporaryDirectory() as raw,
+            ):
                 root = pathlib.Path(raw).resolve()
                 repo, pin, result, evidence = self.nonconversion_fixture(root, kind)
                 value = json.loads(evidence.read_text())
@@ -594,9 +726,10 @@ class NextCampaignTests(unittest.TestCase):
                         evidence=evidence,
                         output=root / "bad",
                     )
-            with self.subTest(
-                kind=kind, mutation="source_hash"
-            ), tempfile.TemporaryDirectory() as raw:
+            with (
+                self.subTest(kind=kind, mutation="source_hash"),
+                tempfile.TemporaryDirectory() as raw,
+            ):
                 root = pathlib.Path(raw).resolve()
                 repo, pin, result, evidence = self.nonconversion_fixture(root, kind)
                 value = json.loads(evidence.read_text())
@@ -657,6 +790,24 @@ class NextCampaignTests(unittest.TestCase):
                     status=status,
                     exit_code=0 if status == "completed" else -15,
                 )
+                invocation_path = bundle / "invocation.json"
+                original_invocation = json.loads(invocation_path.read_text())
+                invalid_invocation = dict(original_invocation)
+                invalid_invocation["argv"] = ["not-the-maintained-runner"]
+                invalid_invocation["host_argv_sha256"] = runner.sha256_bytes(
+                    runner.canonical_json(invalid_invocation["argv"])
+                )
+                runner.write_json(invocation_path, invalid_invocation)
+                with self.assertRaisesRegex(
+                    runtime.HardeningError, "maintained runner|argv"
+                ):
+                    runtime.record_terminal(
+                        root / "permit" / "permit.json",
+                        control["state"],
+                        bundle,
+                        root / "terminal-nonrunner",
+                    )
+                runner.write_json(invocation_path, original_invocation)
                 original_stdout = (bundle / "codex.stdout").read_bytes()
                 (bundle / "codex.stdout").write_bytes(original_stdout + b"mutated")
                 with self.assertRaisesRegex(runner.RunnerError, "stdout"):
@@ -678,6 +829,29 @@ class NextCampaignTests(unittest.TestCase):
                     runtime.mint_permit(
                         control["plan"], control["state"], "C1", root / "retry"
                     )
+
+    def test_duplicate_cannot_bind_target_as_its_own_occurrence(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            root = pathlib.Path(raw).resolve()
+            repo, pin, result, evidence = self.nonconversion_fixture(root, "duplicate")
+            value = json.loads(evidence.read_text())
+            value["duplicate"] = value["target"]
+            value["duplicate_occurrence_root"] = value["target_occurrence_root"]
+            runner.write_json(evidence, value)
+            result_value = json.loads(result.read_text())
+            result_value["evidence_sha256"] = runner.sha256_file(evidence)
+            runner.write_json(result, result_value)
+            with self.assertRaisesRegex(
+                runtime.HardeningError, "distinct retained source occurrence"
+            ):
+                runtime.verify_nonconversion(
+                    kind="duplicate",
+                    pin_path=pin,
+                    repo=repo,
+                    candidate_result=result,
+                    evidence=evidence,
+                    output=root / "self-duplicate",
+                )
 
     def test_fabricated_verification_cannot_unlock_evaluator(self) -> None:
         with tempfile.TemporaryDirectory() as raw:
@@ -725,6 +899,8 @@ class NextCampaignTests(unittest.TestCase):
                     control["plan"],
                     control["state"],
                     "C1",
+                    root / "permit" / "permit.json",
+                    bundle,
                     root / "terminal" / "terminal.json",
                     fake,
                     pin,
@@ -760,15 +936,51 @@ class NextCampaignTests(unittest.TestCase):
                 root / "terminal",
             )
             self.verify(fixture, root / "verification", completed_command())
-            runtime.bind_source_verification(
-                control["plan"],
-                control["state"],
-                "C1",
-                root / "terminal" / "terminal.json",
-                root / "verification",
-                pin,
-                repo,
+            invalid_verification = root / "invalid-verification"
+            shutil.copytree(root / "verification", invalid_verification)
+            (invalid_verification / "runtime-output" / "Submitted.olean").write_bytes(
+                b""
             )
+            invalid_receipt_path = invalid_verification / "receipt.json"
+            invalid_receipt = json.loads(invalid_receipt_path.read_text())
+            invalid_receipt["command"] = ["not-lean"]
+            generated = [invalid_verification / "runtime-output" / "Submitted.olean"]
+            invalid_receipt["generated_files"] = runner.manifest(
+                generated, invalid_verification / "runtime-output"
+            )
+            invalid_receipt["generated_artifact_root"] = runtime._tree_root(
+                generated, invalid_verification / "runtime-output"
+            )
+            invalid_receipt["proof_artifact_root"] = runtime._proof_artifact_root(
+                invalid_verification
+            )
+            runner.write_json(invalid_receipt_path, invalid_receipt)
+            with self.assertRaisesRegex(
+                runtime.HardeningError, "nonempty Submitted.olean|approved Lean"
+            ):
+                runtime.bind_source_verification(
+                    control["plan"],
+                    control["state"],
+                    "C1",
+                    root / "permit" / "permit.json",
+                    bundle,
+                    root / "terminal" / "terminal.json",
+                    invalid_verification,
+                    pin,
+                    repo,
+                )
+            with mock.patch.object(runtime, "_replay_proof_verification"):
+                runtime.bind_source_verification(
+                    control["plan"],
+                    control["state"],
+                    "C1",
+                    root / "permit" / "permit.json",
+                    bundle,
+                    root / "terminal" / "terminal.json",
+                    root / "verification",
+                    pin,
+                    repo,
+                )
             evaluator = runtime.mint_permit(
                 control["plan"], control["state"], "E1", root / "evaluator"
             )
@@ -806,6 +1018,8 @@ class NextCampaignTests(unittest.TestCase):
                         runner.git_snapshot(repo).as_json()
                     ),
                     source_repo=repo,
+                    producer_repo=repo,
+                    canary_repo=repo,
                 )
 
     def test_linked_canary_and_review_are_required_for_exact_five_by_five(self) -> None:
@@ -814,45 +1028,95 @@ class NextCampaignTests(unittest.TestCase):
             repo = make_repo(root)
             pin = make_pin(root, repo)
             canary = self.canary_fixture(root, repo, pin)
-            validated = runtime.validate_canary(
-                canary["receipt"],
-                canary_spec=canary["spec"],
-                runtime_pin=pin,
-                config_root=canary["config_root"],
-                image=IMAGE,
-                source_root=canary["source_root"],
-                source_repo=repo,
-            )
+            synthetic = root / "synthetic-canary"
+            shutil.copytree(canary["receipt"].parent, synthetic)
+            with self.assertRaisesRegex(
+                runtime.HardeningError, "outside repository|committed blob"
+            ):
+                runtime.validate_canary(
+                    synthetic / "receipt.json",
+                    canary_spec=canary["spec"],
+                    runtime_pin=pin,
+                    config_root=canary["config_root"],
+                    image=IMAGE,
+                    source_root=canary["source_root"],
+                    source_repo=repo,
+                    producer_repo=canary["producer_repo"],
+                    canary_repo=canary["canary_repo"],
+                )
+            with mock.patch.object(runtime, "_replay_proof_verification"):
+                validated = runtime.validate_canary(
+                    canary["receipt"],
+                    canary_spec=canary["spec"],
+                    runtime_pin=pin,
+                    config_root=canary["config_root"],
+                    image=IMAGE,
+                    source_root=canary["source_root"],
+                    source_repo=repo,
+                    producer_repo=canary["producer_repo"],
+                    canary_repo=canary["canary_repo"],
+                )
             self.assertEqual(validated["receipt"]["status"], "pass")
-            producer_commit, producer_tree = "1" * 40, "2" * 40
+            producer_commit, producer_tree = runtime._git_identity(repo, "producer")
             review_dir = root / "review"
-            review_dir.mkdir()
+            subprocess.run(["git", "init", "-q", str(review_dir)], check=True)
+            subprocess.run(
+                ["git", "-C", str(review_dir), "config", "user.name", "Review"],
+                check=True,
+            )
+            subprocess.run(
+                [
+                    "git",
+                    "-C",
+                    str(review_dir),
+                    "config",
+                    "user.email",
+                    "review@invalid.local",
+                ],
+                check=True,
+            )
             report = review_dir / "REPORT.md"
             report.write_text("Independent PASS.\n")
-            expected = {
-                "canary_receipt_sha256": runner.sha256_file(canary["receipt"]),
-                "config_root": canary["config_root"],
-                "image": IMAGE,
-                "producer_commit": producer_commit,
-                "producer_tree": producer_tree,
-                "runtime_pin_sha256": runner.sha256_file(pin),
-                "runtime_verifier_sha256": runner.sha256_file(
+            expected = runtime._review_verdict_expected(
+                producer_commit=producer_commit,
+                producer_tree=producer_tree,
+                runtime_pin_sha256=runner.sha256_file(pin),
+                runtime_verifier_sha256=runner.sha256_file(
                     pathlib.Path(runtime.__file__)
                 ),
-                "schema": "result-runner-independent-runtime-review.v1",
-                "source_root": canary["source_root"],
-                "status": "pass",
-            }
+                image=IMAGE,
+                config_root=canary["config_root"],
+                source_root=canary["source_root"],
+                canary_sha256=runner.sha256_file(canary["receipt"]),
+                canary_commit=validated["commit"],
+                canary_tree=validated["tree"],
+                canary_protocol_root=validated["protocol_root"],
+            )
             verdict = review_dir / "verdict.json"
-            runner.write_json(verdict, expected | {"verdict": "PASS"})
+            runner.write_json(verdict, expected)
+            subprocess.run(
+                ["git", "-C", str(review_dir), "add", "REPORT.md", "verdict.json"],
+                check=True,
+            )
+            environment = os.environ.copy()
+            environment.update(
+                {
+                    "GIT_AUTHOR_DATE": "2001-01-03T00:00:00Z",
+                    "GIT_COMMITTER_DATE": "2001-01-03T00:00:00Z",
+                }
+            )
+            subprocess.run(
+                ["git", "-C", str(review_dir), "commit", "-q", "-m", "review"],
+                check=True,
+                env=environment,
+            )
             review = review_dir / "review.json"
-            runner.write_json(
+            runtime.record_independent_review_receipt(
                 review,
-                expected
-                | {
-                    "report_sha256": runner.sha256_file(report),
-                    "verdict_sha256": runner.sha256_file(verdict),
-                },
+                review_repo=review_dir,
+                report=report,
+                verdict=verdict,
+                expected_verdict=expected,
             )
             assignments = [
                 {
@@ -871,22 +1135,26 @@ class NextCampaignTests(unittest.TestCase):
                 }
                 for index, value in enumerate(assignments, 1)
             ]
-            plan = runtime.freeze_cell_plan(
-                campaign_id="FUTURE-FIVE",
-                config_root=canary["config_root"],
-                image=IMAGE,
-                source_root=canary["source_root"],
-                candidate_assignments=assignments,
-                evaluator_assignments=evaluators,
-                canary_spec=canary["spec"],
-                canary_receipt=canary["receipt"],
-                runtime_pin=pin,
-                independent_review=review,
-                producer_commit=producer_commit,
-                producer_tree=producer_tree,
-                source_repo=repo,
-                output=root / "control",
-            )
+            with mock.patch.object(runtime, "_replay_proof_verification"):
+                plan = runtime.freeze_cell_plan(
+                    campaign_id="FUTURE-FIVE",
+                    config_root=canary["config_root"],
+                    image=IMAGE,
+                    source_root=canary["source_root"],
+                    candidate_assignments=assignments,
+                    evaluator_assignments=evaluators,
+                    canary_spec=canary["spec"],
+                    canary_receipt=canary["receipt"],
+                    runtime_pin=pin,
+                    independent_review=review,
+                    producer_commit=producer_commit,
+                    producer_tree=producer_tree,
+                    producer_repo=repo,
+                    canary_repo=canary["canary_repo"],
+                    review_repo=review_dir,
+                    source_repo=repo,
+                    output=root / "control",
+                )
             self.assertEqual(
                 (plan["candidate_denominator"], plan["evaluator_denominator"]), (5, 5)
             )
@@ -895,7 +1163,10 @@ class NextCampaignTests(unittest.TestCase):
             value = json.loads(teardown.read_text())
             value["credential_retained"] = True
             runner.write_json(teardown, value)
-            with self.assertRaises(runtime.HardeningError):
+            with (
+                mock.patch.object(runtime, "_replay_proof_verification"),
+                self.assertRaises(runtime.HardeningError),
+            ):
                 runtime.validate_canary(
                     canary["receipt"],
                     canary_spec=canary["spec"],
@@ -904,52 +1175,93 @@ class NextCampaignTests(unittest.TestCase):
                     image=IMAGE,
                     source_root=canary["source_root"],
                     source_repo=repo,
+                    producer_repo=canary["producer_repo"],
+                    canary_repo=canary["canary_repo"],
                 )
 
     def test_review_receipt_binds_report_verdict_and_runtime(self) -> None:
         with tempfile.TemporaryDirectory() as raw:
             root = pathlib.Path(raw).resolve()
+            subprocess.run(["git", "init", "-q", str(root)], check=True)
+            subprocess.run(
+                ["git", "-C", str(root), "config", "user.name", "Review"],
+                check=True,
+            )
+            subprocess.run(
+                [
+                    "git",
+                    "-C",
+                    str(root),
+                    "config",
+                    "user.email",
+                    "review@invalid.local",
+                ],
+                check=True,
+            )
             report = root / "REPORT.md"
             report.write_text("Independent PASS.\n")
-            expected = {
-                "canary_receipt_sha256": "3" * 64,
-                "config_root": "4" * 64,
-                "image": IMAGE,
-                "producer_commit": "1" * 40,
-                "producer_tree": "2" * 40,
-                "runtime_pin_sha256": "5" * 64,
-                "runtime_verifier_sha256": "6" * 64,
-                "schema": "result-runner-independent-runtime-review.v1",
-                "source_root": "7" * 64,
-                "status": "pass",
-            }
+            verifier_sha = runner.sha256_file(pathlib.Path(runtime.__file__))
+            expected = runtime._review_verdict_expected(
+                producer_commit="1" * 40,
+                producer_tree="2" * 40,
+                runtime_pin_sha256="5" * 64,
+                runtime_verifier_sha256=verifier_sha,
+                image=IMAGE,
+                config_root="4" * 64,
+                source_root="7" * 64,
+                canary_sha256="3" * 64,
+                canary_commit="8" * 40,
+                canary_tree="9" * 40,
+                canary_protocol_root="a" * 64,
+            )
             verdict = root / "verdict.json"
-            runner.write_json(verdict, expected | {"verdict": "PASS"})
+            runner.write_json(verdict, expected)
+            subprocess.run(
+                ["git", "-C", str(root), "add", "REPORT.md", "verdict.json"],
+                check=True,
+            )
+            subprocess.run(
+                ["git", "-C", str(root), "commit", "-q", "-m", "review"],
+                check=True,
+            )
             review = root / "review.json"
-            runner.write_json(
+            runtime.record_independent_review_receipt(
                 review,
-                expected
-                | {
-                    "report_sha256": runner.sha256_file(report),
-                    "verdict_sha256": runner.sha256_file(verdict),
-                },
+                review_repo=root,
+                report=report,
+                verdict=verdict,
+                expected_verdict=expected,
             )
             arguments = {
                 "producer_commit": "1" * 40,
                 "producer_tree": "2" * 40,
                 "runtime_pin_sha256": "5" * 64,
-                "runtime_verifier_sha256": "6" * 64,
+                "runtime_verifier_sha256": verifier_sha,
                 "image": IMAGE,
                 "config_root": "4" * 64,
                 "source_root": "7" * 64,
                 "canary_sha256": "3" * 64,
+                "canary_commit": "8" * 40,
+                "canary_tree": "9" * 40,
+                "canary_protocol_root": "a" * 64,
+                "review_repo": root,
             }
             self.assertEqual(
                 runtime._validate_independent_review(review, **arguments)["status"],
                 "pass",
             )
+            synthetic = root / "synthetic"
+            synthetic.mkdir()
+            for name in ("REPORT.md", "verdict.json", "review.json"):
+                shutil.copyfile(root / name, synthetic / name)
+            with self.assertRaisesRegex(runtime.HardeningError, "exact committed blob"):
+                runtime._validate_independent_review(
+                    synthetic / "review.json", **arguments
+                )
             report.write_text("mutated\n")
-            with self.assertRaisesRegex(runtime.HardeningError, "digest mismatch"):
+            with self.assertRaisesRegex(
+                runtime.HardeningError, "exact committed blob|digest mismatch"
+            ):
                 runtime._validate_independent_review(review, **arguments)
 
     def test_reviewer_correction_stays_separate(self) -> None:
