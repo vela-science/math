@@ -4,7 +4,16 @@
   "bound_sha256_files": 15,
   "candidate_or_evaluator_inference_sessions": 0,
   "candidate_visible_files_scanned": 34,
+  "controlling_blocked_review": {
+    "evaluator_commit": "59f2b604abf46cacd449bb2beb7026c514c83760",
+    "evaluator_tree": "05a03f1b7aa5a51492816465ffe88f57bd01013a",
+    "producer_commit": "5757ab7e30ea3157319081976e90c5fa0dde7efe",
+    "producer_tree": "af0c1b360d53433f0ea1604f144f270ce7912168",
+    "report_sha256": "1b07a081c04734742ce33c5e22e764458b09acb23cee4ee8789443c0ccd7c033",
+    "verdict_sha256": "18bbef0d78088f2bc1972bf7482b52de1733d4f9bf2db477b1fad4bb8f13fb7a"
+  },
   "fresh_candidate_cells": 6,
+  "frozen_launch_binding_count": 12,
   "forbidden_map_key_or_seed_identity_findings": 0,
   "legacy_stage2_validator": {
     "disposition": "Do not edit or re-freeze Stage 2. Its exact tree, commitment, validation receipt, custody, and held-out aggregate are reused.",
@@ -14,10 +23,31 @@
   },
   "outcome": "pass",
   "predecessor_histories_preserved": true,
-  "preregistration_sha256": "c5111d8bd798447f31c01d542ff332a6d12e32c6bd1692c250d6bae500b566f8",
-  "proposed_start_receipt_sha256": "3c8313b03304eaf48787114d5953fe21d7aadbfa8655e18a55ea80823cdf1b97",
-  "qualified_input_commit": "9f9a324dd1eb35e9f189c7ed2e722d2463a35437",
-  "qualified_input_tree": "4b09dc22f117ed73e71628b1d4d1f62ad3834522",
+  "negative_checks": {
+    "case_count": 18,
+    "docker_or_model_execution": false,
+    "first_failed_harness_invocation_retained_in_process_log": true,
+    "receipt_sha256": "29dbc3041baa57372da17f75598a547c4344fb312f14b90f14363dc0261bb1a7",
+    "state_created": false,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "validator_sha256": "980d39cb904a24e2bee7eef85c897d6cb321378ed3e8695dd4229d007f76ee7e"
+  },
+  "preregistration_sha256": "df4cfb5d30aa7fb600154fbb1d7a310dcbd06b5421eeca2a40393968a8879302",
+  "proposed_start_receipt_sha256": "363f602fca2b9ae7248ff2549c1f21009d04d9a3c3c1254b27a281c54746f648",
+  "receipt_gate": {
+    "actual_receipt_absent": true,
+    "exact_successor_path_required": true,
+    "fail_before_state_or_docker": true,
+    "predecessor_receipt_consulted": false,
+    "review_and_frozen_binding_validation": "pass_negative_cases"
+  },
+  "runner": {
+    "byte_length": 8890,
+    "docker_i_segment_identical_to_qualified_runner": true,
+    "new_sha256": "86b685839340274d2af33f89060490db9313acc21f0cfe17bc14ac8836913baa",
+    "parent_sha256": "4993c068aa35e100953650f41c7c6dd8ad0e77b3a5828c06336d9b5669b42d01",
+    "sentinel_receipt_sha256": "05e4a452adf9dd5cb9e1f6396a0dfb9efcb1c78e4398d03b00e1b147c031c004"
+  },
   "run_id": "RESULTS-BREAKTHROUGH-01-SUCCESSOR-SMOKE-01",
   "stage2": {
     "commitment_sha256": "16c3ac827e63f47412ff9439e4ea742429c153db679c77063d8e701c4be660e0",
@@ -25,5 +55,5 @@
     "held_out_aggregate_sha256": "d7fd89641e6ca83c21b4b615efedcfce3ff8174b79444a19cf1d08809df56ebd",
     "prior_private_validation_sha256": "da84a1861126b53853c185c9bc69201e3a7e984604d87ebe432b4d0733bbc3e7"
   },
-  "validated_at": "2026-08-21T01:17:02Z"
+  "validated_at": "2026-08-21T01:40:01Z"
 }

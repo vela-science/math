@@ -1,31 +1,133 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if [[ $# -ne 11 ]]; then
-  echo "usage: run-cell.sh CELL ARM TARGET_CARD FACT_PACK ANSWER_SCHEMA WORK_ROOT AUTH_FILE MATH_DIR FC_DIR LEAN_DIR VELA_DIR" >&2
+if [[ $# -ne 12 ]]; then
+  echo "usage: run-cell.sh CELL ARM TARGET_CARD FACT_PACK ANSWER_SCHEMA WORK_ROOT AUTH_FILE MATH_DIR FC_DIR LEAN_DIR VELA_DIR START_RECEIPT" >&2
   exit 64
 fi
-cell=$1 arm=$2 card=$3 facts=$4 schema=$5 work_root=$6 auth=$7 math=$8 fc=$9 lean=${10} vela=${11}
+cell=$1 arm=$2 card=$3 facts=$4 schema=$5 work_root=$6 auth=$7 math=$8 fc=$9 lean=${10} vela=${11} start_receipt=${12}
 if [[ "$work_root" != /* ]]; then
   echo "work root must be an absolute host path: $work_root" >&2
   exit 64
 fi
-root=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+if [[ "$start_receipt" != /* ]]; then
+  echo "start receipt must be an absolute host path: $start_receipt" >&2
+  exit 64
+fi
+root=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)
+expected_start_receipt="$root/successor-smoke-01/launch/start-receipt.json"
+if [[ "$start_receipt" != "$expected_start_receipt" ]]; then
+  echo "unexpected start receipt path: $start_receipt" >&2
+  exit 64
+fi
+if [[ -L "$start_receipt" ]] || [[ ! -f "$start_receipt" ]]; then
+  echo "start receipt must be a non-symlink regular file: $start_receipt" >&2
+  exit 64
+fi
+repo=$(git -C "$root/../.." rev-parse --show-toplevel)
+image=$(python3 - "$start_receipt" "$root" "$root/scripts/run-cell.sh" "$repo" <<'PY'
+import hashlib
+import json
+import pathlib
+import re
+import subprocess
+import sys
+
+receipt_path, root, runner, repo = map(pathlib.Path, sys.argv[1:])
+
+def fail(message):
+    raise SystemExit(f"invalid successor start receipt: {message}")
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+try:
+    value = json.loads(receipt_path.read_text())
+except Exception as error:
+    fail(f"unreadable JSON: {error}")
+
+if value.get("run_id") != "RESULTS-BREAKTHROUGH-01-SUCCESSOR-SMOKE-01":
+    fail("wrong run_id")
+if value.get("launch_authorized") is not True:
+    fail("launch_authorized must be true")
+if value.get("consumable_by_run_cell") is not True:
+    fail("consumable_by_run_cell must be true")
+if value.get("not_a_launch_receipt") is not False:
+    fail("not_a_launch_receipt must be false")
+if value.get("candidate_generation_started") is not False:
+    fail("candidate_generation_started must be false")
+accepted_image = "sha256:76c64845ae35f57835a08f386d4206bf021ccf1169f8a35e59cc68d8e4408e7e"
+if value.get("accepted_image") != accepted_image or value.get("runtime_image") != accepted_image:
+    fail("wrong accepted image")
+runner_hash = sha(runner)
+if value.get("runner_sha256") != runner_hash:
+    fail("wrong runner hash")
+
+reviewed = value.get("reviewed_producer")
+if not isinstance(reviewed, dict):
+    fail("missing reviewed producer")
+commit = subprocess.check_output(["git", "-C", str(repo), "rev-parse", "HEAD"], text=True).strip()
+tree = subprocess.check_output(["git", "-C", str(repo), "rev-parse", "HEAD^{tree}"], text=True).strip()
+if reviewed.get("commit") != commit or reviewed.get("tree") != tree:
+    fail("wrong reviewed producer commit/tree")
+review = value.get("independent_launch_review")
+if not isinstance(review, dict) or review.get("verdict") != "PASS":
+    fail("independent launch review is not PASS")
+for field in ("evaluator_commit", "evaluator_tree"):
+    if not re.fullmatch(r"[0-9a-f]{40}", str(review.get(field, ""))):
+        fail(f"invalid review {field}")
+for field in ("report_sha256", "verdict_sha256"):
+    if not re.fullmatch(r"[0-9a-f]{64}", str(review.get(field, ""))):
+        fail(f"invalid review {field}")
+
+source_receipt_hash = "cbe3b821d9dcfefb5286d23fad64fbc52c2ca3da9e0d00ce3b3ced1b58c71bca"
+stage2_aggregate = "d7fd89641e6ca83c21b4b615efedcfce3ff8174b79444a19cf1d08809df56ebd"
+if value.get("source_mount_receipt_sha256") != source_receipt_hash:
+    fail("wrong source receipt hash")
+if value.get("stage2_held_out_aggregate_sha256") != stage2_aggregate:
+    fail("wrong Stage2 aggregate")
+
+files = {
+    "answer_schema_sha256": root / "launch/inputs/result.schema.json",
+    "assignments_sha256": root / "assignments.json",
+    "derived_validation_sha256": root / "successor-harness/DERIVED-VALIDATION.json",
+    "evaluator_lock_sha256": root / "EVALUATOR-LOCK.json",
+    "preregistration_sha256": root / "successor-smoke-01/PREREGISTRATION.json",
+    "runtime_parameters_sha256": root / "runtime/parameters.json",
+    "sentinel_receipt_sha256": root / "successor-harness/stdin-sentinel/receipt.json",
+    "source_lock_sha256": root / "SOURCE-LOCK.json",
+    "source_mount_receipt_sha256": root / "launch/source-mount-receipt.json",
+    "stage2_commitment_sha256": root / "stage2/COMMITMENT.json",
+}
+computed = {name: sha(path) for name, path in files.items()}
+
+def aggregate(directory):
+    lines = []
+    for path in sorted(item for item in directory.iterdir() if item.is_file()):
+        lines.append(f"{sha(path)}\t{path.relative_to(root)}\n")
+    return hashlib.sha256("".join(lines).encode()).hexdigest()
+
+computed["fact_packs_aggregate_sha256"] = aggregate(root / "fact-packs")
+computed["equivalence_aggregate_sha256"] = aggregate(root / "equivalence")
+if value.get("frozen_launch_bindings") != computed:
+    fail("wrong frozen launch bindings")
+if value.get("preregistration_sha256") != computed["preregistration_sha256"]:
+    fail("wrong preregistration hash")
+if value.get("source_mount_receipt_sha256") != computed["source_mount_receipt_sha256"]:
+    fail("source receipt bytes do not match")
+if value.get("stage2_commitment_sha256") != computed["stage2_commitment_sha256"]:
+    fail("wrong Stage2 commitment hash")
+docker_stdin_segment = b"docker run --rm " + b"-i --name"
+if runner.read_bytes().count(docker_stdin_segment) != 1:
+    fail("qualified Docker stdin segment missing or duplicated")
+print(accepted_image)
+PY
+)
 case "$arm" in N|G|V) ;; *) exit 64 ;; esac
 test "$(docker context show)" = desktop-linux
-test -f "$root/launch/start-receipt.json"
-python3 - "$root/launch/start-receipt.json" <<'PY'
-import json, sys
-v=json.load(open(sys.argv[1]))
-assert v["candidate_generation_started"] is False
-assert len(v["stage2_held_out_aggregate_sha256"]) == 64
-assert v["independent_launch_review"] == "PASS"
-assert len(v["source_mount_receipt_sha256"]) == 64
-PY
 mount_receipt="$root/launch/source-mount-receipt.json"
 test -f "$mount_receipt"
-expected_mount_receipt=$(python3 -c 'import json; print(json.load(open("'"$root"'/launch/start-receipt.json"))["source_mount_receipt_sha256"])')
-test "$(shasum -a 256 "$mount_receipt" | awk '{print $1}')" = "$expected_mount_receipt"
+test "$(shasum -a 256 "$mount_receipt" | awk '{print $1}')" = cbe3b821d9dcfefb5286d23fad64fbc52c2ca3da9e0d00ce3b3ced1b58c71bca
 verify_checkout() {
   local repo=$1 commit=$2 tree=$3
   test "$(git -C "$repo" rev-parse HEAD)" = "$commit"
@@ -47,7 +149,6 @@ import pathlib, sys
 common, card, arm, output = map(pathlib.Path, sys.argv[1:])
 output.write_bytes(common.read_bytes() + b"\n<producer_target_card>\n" + card.read_bytes() + b"</producer_target_card>\n<organization_only>\n" + arm.read_bytes() + b"</organization_only>\n")
 PY
-image=$(python3 -c 'import json; print(json.load(open("'"$root"'/launch/start-receipt.json"))["runtime_image"])')
 set +e
 docker run --rm -i --name "rb01-${cell,,}" \
   --read-only --tmpfs /tmp:rw,noexec,nosuid,size=1g \

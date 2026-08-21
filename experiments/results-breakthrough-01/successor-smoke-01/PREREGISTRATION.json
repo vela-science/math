@@ -4,7 +4,7 @@
     "accepted_image": "sha256:76c64845ae35f57835a08f386d4206bf021ccf1169f8a35e59cc68d8e4408e7e",
     "answer_schema_sha256": "62f7bbc908dbb9020ea39430307c0c685ee30fce2dee496e54b739e4b5a702b6",
     "assignments_sha256": "fe2e59f19313846effeb6fe495f0a0477afde73af9e3092113d863da87d6dd26",
-    "derived_validation_sha256": "8b97a4ef3bc086bd21ea6d27dc0790dd58dd86dcfb730417eaafa49474d7f81c",
+    "derived_validation_sha256": "8e516894b2efb05e5cb9e1e05b78a64ffca2c05dd75bac031f6b20dc76b9dd8b",
     "evaluator_lock_sha256": "9d99fc90555f96b746b345a3e77632414fdb99c1d7fc11fa85b05f1a4ead7d73",
     "groups": {
       "arms": {
@@ -16,15 +16,15 @@
         "path": "cards"
       },
       "equivalence": {
-        "aggregate_sha256": "8299f0fff60c41eca43caca0d084b3bc9fca968cb3976d6f1a1c72791ceba9f6",
+        "aggregate_sha256": "0fa1ea1724711dad8a8727ee189e75c00f5c68ba7530dbc4965f98c320497f55",
         "file_count": 30,
-        "git_tree": "2a705b02016b8d05933d0441c357adf90724f17e",
+        "git_tree": "5ae3defe8469b85877591b22d09a8c41bdc86488",
         "path": "equivalence"
       },
       "fact_packs": {
-        "aggregate_sha256": "d051e7572b6c9093fd2474f4e103ee7388774212a27e3e52acf14cef695f4bbd",
+        "aggregate_sha256": "788995224e9a8e5b68ebd3b445476ac97bcba6e1bf3523afb7f79a4d1a40580d",
         "file_count": 10,
-        "git_tree": "5178fc587cd91b3c1b1b5d5714c3612a59510437",
+        "git_tree": "6db470c1a9554af7619180e470c68f560dabc9d7",
         "path": "fact-packs"
       },
       "prompts": {
@@ -40,13 +40,15 @@
         "path": "stage2"
       }
     },
-    "qualified_input": {
-      "commit": "9f9a324dd1eb35e9f189c7ed2e722d2463a35437",
-      "runner_sha256": "4993c068aa35e100953650f41c7c6dd8ad0e77b3a5828c06336d9b5669b42d01",
-      "tree": "4b09dc22f117ed73e71628b1d4d1f62ad3834522"
+    "receipt_parameterization": {
+      "blocked_preregistration_commit": "5757ab7e30ea3157319081976e90c5fa0dde7efe",
+      "blocked_preregistration_tree": "af0c1b360d53433f0ea1604f144f270ce7912168",
+      "corrected_runner_sha256": "86b685839340274d2af33f89060490db9313acc21f0cfe17bc14ac8836913baa",
+      "qualified_stdin_runner_sha256": "4993c068aa35e100953650f41c7c6dd8ad0e77b3a5828c06336d9b5669b42d01"
     },
     "runtime_parameters_sha256": "56db8f6cee43cff17d8d8c0d5417462f08b0ff4a4da94287087136adef2a5cf3",
     "sentinel_receipt_sha256": "05e4a452adf9dd5cb9e1f6396a0dfb9efcb1c78e4398d03b00e1b147c031c004",
+    "sentinel_scope": "The corrected runner retains exactly one byte-identical `docker run --rm -i --name` segment from the qualified runner; the accepted sentinel binds that segment only and is not rerun.",
     "source_lock_sha256": "7e6b169c25a91332c6bd40714ef3b751b6ae55a261d74f0dd7b7767761b5b64a",
     "source_mount_receipt_sha256": "cbe3b821d9dcfefb5286d23fad64fbc52c2ca3da9e0d00ce3b3ced1b58c71bca",
     "stage2_commitment_sha256": "16c3ac827e63f47412ff9439e4ea742429c153db679c77063d8e701c4be660e0",
@@ -87,10 +89,19 @@
   "launch": {
     "actual_start_receipt_path": "successor-smoke-01/launch/start-receipt.json",
     "launch_authorized": false,
-    "predecessor_start_receipt_role": "The immutable predecessor launch/start-receipt.json may supply only the identical image string required by the qualified runner; it is not authorization or denominator evidence for this run.",
+    "predecessor_start_receipt_role": "Immutable historical evidence only. The corrected runner rejects its path and never reads or consults it.",
     "proposed_start_receipt_path": "successor-smoke-01/launch/proposed-start-receipt.json",
     "review_binding": "Valid only at the exact Git commit and tree named by a new independent PASS handoff; any byte change requires a new review.",
-    "review_required": true
+    "review_required": true,
+    "runner_receipt_gate": {
+      "argument_position": 12,
+      "fail_before_state_or_docker": true,
+      "path": "successor-smoke-01/launch/start-receipt.json",
+      "path_must_be_absolute": true,
+      "predecessor_fallback": false,
+      "regular_file_required": true,
+      "symlink_allowed": false
+    }
   },
   "launch_freshness_checks": {
     "credential_check": "Existing ChatGPT OAuth file is readable through the frozen read-only mount; retain status only and never credential bytes.",

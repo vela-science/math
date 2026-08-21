@@ -760,3 +760,53 @@ fields; the observation remains separate.
   immutable held-out commitment from separately reviewed harness successors.
 - **Disposition:** defer tooling change; not experiment-blocking because the
   exact successor and Stage 2 identities are independently reviewable.
+
+## 2026-08-21T01:40:01Z — successor receipt gate made executable
+
+- **Stage/time and evidence:** blocked-preregistration correction;
+  `scripts/run-cell.sh`, `successor-smoke-01/validate-start-receipt.sh`, and
+  `successor-smoke-01/negative-checks.json`.
+- **Observation and impact:** the prior runner still consumed the stopped
+  predecessor receipt, making the declared successor gate ineffective. The
+  corrected runner requires argument 12 to be the exact absolute successor
+  receipt, rejects symlink/non-regular or mismatched paths, and validates run,
+  review, runner, source, Stage 2, image, preregistration, and frozen bindings
+  before creating state or invoking Docker.
+- **Category:** harness/script and experiment design.
+- **Root cause:** the preregistration introduced a distinct receipt path
+  without parameterizing the already-frozen runner's receipt lookup.
+- **Affected:** one runner and mechanical 10-fact/30-equivalence rebinding;
+  zero Docker, model, evaluator, recovery, source, custody, or authority state.
+- **Immediate correction:** remove every predecessor-receipt read and fallback;
+  retain the exact prior `docker run --rm -i --name` segment bound to the
+  accepted sentinel.
+- **Prevention/simplification:** require executable consumers, not prose alone,
+  to bind a run's distinct authorization receipt and reviewed Git identity.
+- **Disposition:** fixed for commit-bound review; no actual receipt or launch.
+
+## 2026-08-21T01:40:01Z — negative-check harness exposed macOS path aliasing
+
+- **Stage/time and evidence:** pre-Docker receipt-gate checks; first invocation
+  exited 1 with empty output before case serialization, and traced invocation
+  showed the symlink case was rejected as an unexpected path because `mktemp`
+  returned `/var/...` while `pwd -P` resolved `/private/var/...`.
+- **Observation and impact:** the first checker did not produce its intended
+  receipt despite no Docker or state creation. A prospective-tree diagnostic
+  also omitted braces around a zsh variable followed by `:`, producing two
+  harmless ambiguous-revision messages before the corrected tree lookup. A
+  final source audit then caught that the Docker marker appeared once in the
+  command and once as a literal inside its own count check; an initial final
+  whitelist comprehension also referenced an undefined local variable.
+- **Category:** harness/script and operator error.
+- **Root cause:** the validator did not canonicalize its temporary root, and a
+  zsh parameter adjacent to a Git revision colon was not delimited.
+- **Affected:** failed local validation invocations and minutes; zero Docker,
+  model/evaluator sessions, credits, experiment state, source, or authority.
+- **Immediate correction:** canonicalize the scratch root with `pwd -P`, make
+  assertion failures display their retained stderr, delimit the Git tree
+  variable, construct the self-check marker from split bytes, and correct the
+  comprehension name. The final 18-case receipt is PASS with no state or
+  Docker marker.
+- **Prevention/simplification:** canonicalize temp paths before exact-path tests
+  and always use `${variable}:path` for constructed Git object expressions.
+- **Disposition:** fixed in validation only; advisory and no new launch gate.
