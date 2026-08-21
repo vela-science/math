@@ -1,0 +1,79 @@
+{
+  "authorization": {
+    "campaign_freeze": false,
+    "canary": false,
+    "inference": false,
+    "merge": false
+  },
+  "checks": {
+    "clean_clone_focused_tests": {
+      "passed": 11,
+      "status": "pass"
+    },
+    "credential_scan": {
+      "findings": 0,
+      "scanned_corrective_paths": 27,
+      "status": "pass"
+    },
+    "full_tests": {
+      "passed": 28,
+      "skipped": 1,
+      "status": "pass"
+    },
+    "proof_replay": {
+      "generated_artifact_root": "8b4cd73516c222e318743bbab0bfbd9e3dbe5cf0b1dc7d277ee4d3e9dd5ed8e7",
+      "olean_sha256": "aaba07269991599e97eb9017ac7ac0cf64102b36bd0bc5b7da60eaaf9cf894e1",
+      "status": "pass",
+      "verification_root": "ef9fae1891dc0d3fb584935af2e66ed88953a1aa167a023f54f8028528a0d402"
+    },
+    "runtime_preflight": {
+      "network": "none",
+      "receipt_sha256": "5638ae45fe9b8f61a63c9dac3d5aa46e1ccf1541859053de982a0d247a3db01e",
+      "status": "pass"
+    },
+    "static": {
+      "compileall": "pass",
+      "ruff_check_0_5_4": "pass",
+      "ruff_format_0_5_4": "pass"
+    }
+  },
+  "findings": [
+    {
+      "code": "RRH-01",
+      "disposition": "BLOCKED",
+      "severity": "blocker",
+      "summary": "A shaped bundle with non-runner argv and a verification with non-Lean command plus empty OLean can unlock an evaluator."
+    },
+    {
+      "code": "RRH-02",
+      "disposition": "BLOCKED",
+      "severity": "blocker",
+      "summary": "A complete synthetic canary and review packet can freeze the ten-cell plan without execution."
+    },
+    {
+      "code": "RRH-03",
+      "disposition": "BLOCKED",
+      "severity": "blocker",
+      "summary": "Closed duplicate evidence accepts the target occurrence as its own duplicate."
+    },
+    {
+      "code": "RRH-04",
+      "disposition": "PASS",
+      "severity": "none",
+      "summary": "Result status is closed and successful compilation cannot promote a proof sketch."
+    }
+  ],
+  "producer": {
+    "branch": "origin/codex/result-runner-next-campaign-hardening-v1",
+    "commit": "8eca684f02db097ccd25f4e0de0a451bcf7f68eb",
+    "parent_review_commit": "6ce4bfbcfeab4428cdec9e3726471d9d7064d9ba",
+    "prior_producer_commit": "033ff587142f23f67e2b7fb281821c2f6395839f",
+    "tree": "27f814e77a2afab2c5b4c31fd8e058b3f419573c"
+  },
+  "runtime_pin_sha256": "0c42682ca4b8e77b76c04088fe04adc9baf5e8e1ed72398d43e38a380e51eb71",
+  "runtime_verifier_sha256": "5f954a638a9c5e0f0451a10865a009a1f7fc1b3a2405172356f0d10bc118f5e5",
+  "schema": "result-runner-independent-rereview-verdict.v1",
+  "scientific_state_changed": false,
+  "validation_packet_sha256": "7f1ec0486905ccc96bd05e4b5bda8efbd31c3d38be56b19f2b195e9e9ca3db10",
+  "verdict": "BLOCKED"
+}
