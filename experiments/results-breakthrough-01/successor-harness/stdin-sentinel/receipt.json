@@ -1,0 +1,50 @@
+{
+  "accepted_image": "sha256:76c64845ae35f57835a08f386d4206bf021ccf1169f8a35e59cc68d8e4408e7e",
+  "candidate_or_evaluator_inference": false,
+  "controlling_review": {
+    "evaluator_commit": "6e0b6b5f83d9b280bef470060663cd44de5f83da",
+    "evaluator_tree": "f7d0f54f75042561f8a1108f51de02a7a556c87f",
+    "report_sha256": "049486ad36b05e4c6276f88c0f2e99561c9d56978dd118cf095a10a1afe99745",
+    "verdict": "PASS",
+    "verdict_sha256": "03b6d0ac8693cfc868d97035405d6f78a828d93ce918488886b4b0a51de5398e"
+  },
+  "docker": {
+    "context": "desktop-linux",
+    "context_receipt_sha256": "75270b95abcf0516180e80ce1a2b6f98e42b13765c38de5239be80925439ba63",
+    "image_identity_sha256": "89db414e28a79291cf4987c2947eab642f92d14c500a00965bc42ff2b1b57431",
+    "network": "none"
+  },
+  "execution": {
+    "elapsed_seconds": 2,
+    "elapsed_seconds_receipt_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+    "ended_at": "2026-08-21T00:59:15Z",
+    "ended_at_receipt_sha256": "1e2138c2d636f50c4baac03506f9d13a4263673f49bb3f1b19f09b2b9d997ad5",
+    "exit_code": 0,
+    "exit_code_receipt_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "started_at": "2026-08-21T00:59:13Z",
+    "started_at_receipt_sha256": "ac1751cd88b1ba3cebd22a332e47014cb4a433d046f759682dfcdf702790ac50"
+  },
+  "infrastructure_denominator": {
+    "authorized_sentinel_runs": 1,
+    "model_attempts": 0,
+    "sentinel_failures": 0,
+    "sentinel_passes": 1
+  },
+  "inputs": {
+    "invocation_sha256": "3c5dd307612843b1a916db0a39cf5bd2f5e5cbe563d231e4dd783a7e75a5bc08",
+    "observer_sha256": "91214ef17d978bef7da07767e2b5081911a952fb2b92e5780df595471bc32b4f",
+    "payload_bytes": 52,
+    "payload_sha256": "2db19651adf2d4c5448f021b4a8606d59ba3dceea403286364dcca822865c056",
+    "runner_sha256": "4993c068aa35e100953650f41c7c6dd8ad0e77b3a5828c06336d9b5669b42d01"
+  },
+  "outcome": "pass",
+  "outputs": {
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "df3b5a692375a3354883bf72bb7cd10d47b37e748576205c0d049b8cc7b30c41"
+  },
+  "pilot_execution_status": "terminal_stop",
+  "schema": "results-breakthrough-stdin-sentinel-receipt.v1",
+  "scientific_execution_authorized": false,
+  "stdin_observed_byte_exactly": true
+}

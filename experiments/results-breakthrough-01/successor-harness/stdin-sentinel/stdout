@@ -1,0 +1,1 @@
+{"network_required":false,"payload_bytes":52,"payload_sha256":"2db19651adf2d4c5448f021b4a8606d59ba3dceea403286364dcca822865c056","runner_absolute_work_root_guard":true,"runner_docker_stdin_attachment":"-i","runner_sha256":"4993c068aa35e100953650f41c7c6dd8ad0e77b3a5828c06336d9b5669b42d01","schema":"results-breakthrough-stdin-sentinel.v1","sentinel":"pass"}

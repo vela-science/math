@@ -6,6 +6,10 @@ if [[ $# -ne 11 ]]; then
   exit 64
 fi
 cell=$1 arm=$2 card=$3 facts=$4 schema=$5 work_root=$6 auth=$7 math=$8 fc=$9 lean=${10} vela=${11}
+if [[ "$work_root" != /* ]]; then
+  echo "work root must be an absolute host path: $work_root" >&2
+  exit 64
+fi
 root=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 case "$arm" in N|G|V) ;; *) exit 64 ;; esac
 test "$(docker context show)" = desktop-linux
@@ -45,7 +49,7 @@ output.write_bytes(common.read_bytes() + b"\n<producer_target_card>\n" + card.re
 PY
 image=$(python3 -c 'import json; print(json.load(open("'"$root"'/launch/start-receipt.json"))["runtime_image"])')
 set +e
-docker run --rm --name "rb01-${cell,,}" \
+docker run --rm -i --name "rb01-${cell,,}" \
   --read-only --tmpfs /tmp:rw,noexec,nosuid,size=1g \
   --mount "type=bind,src=$session/work,dst=/work" \
   --mount "type=bind,src=$math,dst=/inputs/math,readonly" \

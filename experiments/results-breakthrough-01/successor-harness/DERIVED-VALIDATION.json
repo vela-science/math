@@ -1,0 +1,40 @@
+{
+  "arm_semantics_unchanged": true,
+  "equivalence_manifest_count": 30,
+  "fact_pack_count": 10,
+  "fact_roots": {
+    "T01": "f8bead631c81c594475c315c3074e48d99ab6029070a5173528c0d1b67107489",
+    "T02": "c9eb0a8c0df86691fca2124c4f8da7f740827be1c5feaebde99b2b1fddd31f1d",
+    "T03": "17c4e99e229459f0ce587273fe704e899c967363e95b7188feaebcf6784d0cd9",
+    "T04": "6ef507a9f27e6b96667765a5638dd6d931b5bed1d732edd4fdfe49337984ba17",
+    "T05": "fe7ffc17582f6734647d3895bdc2a30e2663b18b9b9f422df184b3758fd52f0e",
+    "T06": "83dbfa57b5d8a4c5416dd9512c7483e2008be117b9c58a7fa43d6f9abc8b3b23",
+    "T07": "d0a38be930822ae9dc434a6f701a0ba5702aac8886b5a0da71518436808c6ff3",
+    "T08": "354f635429d8e3a8f46bdc0fe8b983cad64998688ee7d4e14a746c06f3901c04",
+    "T09": "c4966518aff903071201e3a4fa04349200e05979466745e5682d60eecc6b80e2",
+    "T10": "ecde5812b1767ad5b70c34511e935d418056a452df634dfbaf87673f152173f2"
+  },
+  "historical_execution_evidence_changed": false,
+  "outcome": "pass",
+  "pilot_execution_status": "terminal_stop",
+  "prereg_validator_note": "The frozen prelaunch validator passed fact-pack and equivalence checks, then reached its expected assertion that launch/start-receipt.json must be absent; this successor correction intentionally preserves that historical postlaunch receipt.",
+  "runner": {
+    "absolute_work_root_check": "fail_closed_before_directory_or_bind_construction",
+    "byte_length": 4380,
+    "new_sha256": "4993c068aa35e100953650f41c7c6dd8ad0e77b3a5828c06336d9b5669b42d01",
+    "old_sha256": "4d7c5312d5002fa3c03f74e1c9337b02b4f49672c5308a8b04ba95e2beeeff9b",
+    "stdin_attachment_delta": "exactly -i"
+  },
+  "schema": "results-breakthrough-successor-derived-validation.v1",
+  "scientific_inputs_unchanged": true,
+  "validated_changes": {
+    "each_equivalence_manifest": [
+      "scientific_fact_root"
+    ],
+    "each_fact_pack": [
+      "facts[cell-runner].payload_sha256",
+      "facts[cell-runner].byte_length",
+      "scientific_fact_root"
+    ]
+  }
+}

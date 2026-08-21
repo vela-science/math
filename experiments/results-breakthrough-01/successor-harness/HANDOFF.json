@@ -1,0 +1,34 @@
+{
+  "controlling_review": {
+    "evaluator_commit": "6e0b6b5f83d9b280bef470060663cd44de5f83da",
+    "evaluator_tree": "f7d0f54f75042561f8a1108f51de02a7a556c87f",
+    "producer_commit": "28d4965dd8196d457acaaf8f98800e118ea872aa",
+    "producer_tree": "2027d020ad91507ab52eb20bf52fa6b93f5c8e2c",
+    "report_sha256": "049486ad36b05e4c6276f88c0f2e99561c9d56978dd118cf095a10a1afe99745",
+    "verdict": "PASS",
+    "verdict_sha256": "03b6d0ac8693cfc868d97035405d6f78a828d93ce918488886b4b0a51de5398e"
+  },
+  "historical_evidence": {
+    "launch_abort_sha256": "975df0936166635207a180547d5991b397bc14c0b318a50e3305898abfe6dcdc",
+    "relaunch_abort_sha256": "d53877d88cfe6b145186657ebb36f7987b7fe7ddc07281155430aeeb6aee0d72",
+    "smoke_gate_sha256": "0f13dd2c87fcf4f1506e8cf62a0741ea558d5dc08fe389ccfc3edcffa7b30da0",
+    "start_receipt_sha256": "5a38cda460254a1e4bf8855982ce84c8620165e9eb42d65fba7b062eca0acb4d"
+  },
+  "inference": {
+    "candidate_sessions": 0,
+    "evaluator_sessions": 0,
+    "model_attempts": 0,
+    "scientific_execution_authorized": false
+  },
+  "next_gate": "Independent review of this bounded successor harness. Any fresh six-cell run requires a genuinely new preregistration retaining both abort histories.",
+  "pilot_execution_status": "terminal_stop",
+  "schema": "results-breakthrough-successor-harness-handoff.v1",
+  "sentinel": {
+    "accepted_image": "sha256:76c64845ae35f57835a08f386d4206bf021ccf1169f8a35e59cc68d8e4408e7e",
+    "network": "none",
+    "outcome": "pass",
+    "receipt_sha256": "05e4a452adf9dd5cb9e1f6396a0dfb9efcb1c78e4398d03b00e1b147c031c004",
+    "secret_scan_sha256": "33152c576cbd8e68f867b51a04b841e89b21d5163d1f772eb387c680e30b2aac",
+    "runs": 1
+  }
+}

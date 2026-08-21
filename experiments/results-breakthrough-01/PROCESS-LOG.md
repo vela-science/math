@@ -671,3 +671,49 @@ fields; the observation remains separate.
   and regenerate the manifest only after the advisory log update.
 - **Prevention/simplification:** never use `path` as a zsh script variable.
 - **Disposition:** fixed in validation only; no experiment execution resumed.
+
+## 2026-08-21T00:59:15Z — successor runner delivered stdin byte-exactly
+
+- **Stage/time and evidence:** terminal-pilot successor harness correction;
+  `successor-harness/stdin-sentinel/{invocation.json,stdin-observer.py,payload.txt,stdout,stderr,exit-code.txt,receipt.json}`.
+- **Observation and impact:** the corrected runner rejects non-absolute work
+  roots before creating state and adds exactly `-i` to Docker. One authorized
+  network-none, no-model sentinel observed the expected 52-byte payload and
+  corrected runner SHA-256 byte-exactly, exiting 0 in two seconds.
+- **Category:** harness/script.
+- **Root cause:** the frozen predecessor runner neither validated its host bind
+  root nor attached redirected stdin to the container.
+- **Affected:** one no-model Docker sentinel, two seconds, zero candidate,
+  evaluator, recovery, tool, provider-credit, source, canonical, authority, or
+  Standing state. Both abort histories and their assigned consequences remain.
+- **Immediate correction:** add the fail-closed absolute-root guard and exactly
+  `-i`; update only the runner-derived fact roots and equivalence manifests.
+- **Prevention/simplification:** require one network-none byte sentinel for a
+  newly preregistered runner before scientific launch.
+- **Disposition:** fixed for successor review only. The current pilot remains
+  terminally stopped and this evidence is not a consumable launch receipt.
+
+## 2026-08-21T01:02:00Z — local successor validation exposed two receipt near misses
+
+- **Stage/time and evidence:** successor evidence validation; terminal output
+  from the frozen preregistration validator and the pre-sentinel local argv
+  check; no failed Docker execution or experiment receipt was produced.
+- **Observation and impact:** the first validator invocation omitted required
+  source arguments; the corrected invocation passed fact/equivalence checks
+  and then reached its expected prelaunch-only assertion because the terminal
+  pilot retains `launch/start-receipt.json`. Separately, a naive substring
+  test for a model command matched `.codex` in ordinary host paths before the
+  sentinel launch. Both diagnostics were corrected locally without changing
+  experiment behavior.
+- **Category:** operator error and harness/script.
+- **Root cause:** a prelaunch validator was reused after launch without first
+  accounting for its terminal-state guard, and the argv check did not compare
+  command tokens exactly.
+- **Affected:** minutes of local validation; zero extra Docker runs, model or
+  evaluator sessions, credits, source, evidence-history, or authority state.
+- **Immediate correction:** use a targeted successor validator that compares
+  old/new JSON fields and recomputes every derived root; test for exact model
+  command tokens rather than substrings in paths.
+- **Prevention/simplification:** scope validators to explicit lifecycle states
+  and keep command-policy checks token-aware.
+- **Disposition:** fixed locally; advisory only and no new gate added.
