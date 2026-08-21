@@ -1,0 +1,18 @@
+{
+  "schema": "results-breakthrough-tool-allowlist.v1",
+  "allowed": [
+    "shell commands inside the isolated campaign workspace",
+    "read-only access to frozen Math, Formal Conjectures, lean-proofs, and Vela mounts",
+    "Lean and Lake from the frozen Formal Conjectures toolchain",
+    "Git, Python standard library, SQLite, SHA-256 utilities, and the frozen Vela CLI"
+  ],
+  "forbidden": [
+    "Docker socket",
+    "host filesystem outside declared mounts",
+    "source discovery or downloads",
+    "outreach or external posts",
+    "canonical Math authority credentials",
+    "cross-arm candidate outputs"
+  ],
+  "network": "Provider OAuth inference only; any other observed network use is a protocol failure."
+}

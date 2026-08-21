@@ -810,3 +810,30 @@ fields; the observation remains separate.
 - **Prevention/simplification:** canonicalize temp paths before exact-path tests
   and always use `${variable}:path` for constructed Git object expressions.
 - **Disposition:** fixed in validation only; advisory and no new launch gate.
+
+## 2026-08-21T02:07:07Z — candidate runner omitted Codex repository trust setup
+
+- **Stage/time and evidence:** successor smoke candidate execution;
+  `successor-smoke-01/{EXECUTION.json,SMOKE-ABORT.json,candidates/*/receipts}`.
+- **Observation and impact:** all six frozen cells ran once in the assigned
+  order and terminated before provider inference because the container's empty
+  `/work` mount was not a trusted Git directory and the runner did not supply
+  the Codex repository-check override. No Result or blind bundle existed, so
+  custodian packaging, the two scientific evaluator sessions, Vela readback,
+  and recovery were not truthfully executable.
+- **Category:** harness/script.
+- **Root cause:** the no-model stdin sentinel established byte delivery but did
+  not exercise Codex's working-directory trust requirement; the frozen runner
+  created an empty host work directory without initializing Git.
+- **Affected:** six newly assigned ITT cells, six CLI invocations, about 5.62
+  observed wall seconds, zero provider model sessions, zero evaluator or
+  recovery sessions, zero observable credits, and no source or authority state.
+- **Immediate correction:** preserve all six failures, make no retry or runner
+  change, do not fabricate evaluator inputs, and stop for independent review.
+- **Prevention/simplification:** a future distinct preregistration should bind
+  exactly one reviewed solution—initialize the disposable work directory as a
+  Git repository or freeze Codex's repository-check override—and test the
+  actual candidate command once before assigning a scientific denominator.
+- **Disposition:** defer; experiment-blocking but prohibited inside this frozen
+  run. Delete repeated no-model gates that do not exercise the actual Codex
+  candidate entrypoint.
