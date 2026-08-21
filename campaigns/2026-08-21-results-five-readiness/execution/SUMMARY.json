@@ -110,6 +110,8 @@
     "evaluator_builder_sha256": "b8748203a852f3dfd8b31fe72f8b02fe7e88f0f8beb12131d7e6e04741768855",
     "evaluator_template_sha256": "bed446b8a2c0c25529b1cf7a723954dfdeadccf7888ed4ca878f06897e841d70",
     "launch_receipt_sha256": "abe437b7196f1a69b0798d9f0293337f74823e98bc6931c5f8998336f431d5d2",
+    "native_nested_git_repositories_tracked": false,
+    "native_payloads_retained_in_portable_evidence": true,
     "source_after_equals_before": true
   },
   "model": {

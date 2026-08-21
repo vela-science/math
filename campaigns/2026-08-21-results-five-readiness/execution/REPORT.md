@@ -14,6 +14,12 @@ All passed the maintained runner, recorded Native and Graph roots, and left the
 exact Formal Conjectures source commit clean and unchanged. None is a checked
 Lean proof or scientific acceptance.
 
+The runner-created Native directories are nested Git repositories and are not
+tracked as unusable gitlinks. Their exact `result.json` and `provenance.json`
+payloads are retained as ordinary files in each `portable-evidence/` directory;
+the Native commit and tree identities remain in the receipts and are
+deterministically reproducible from those bytes.
+
 The evaluator appendix losslessly encoded all five raw `result.json` byte
 strings and receipt hashes. Decoding and every candidate hash were checked
 before launch. The unchanged template hash is `bed446b8…`; the 13,946-byte
