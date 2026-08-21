@@ -14,7 +14,7 @@
     "ruff_0_5_4_check": "pass",
     "ruff_0_5_4_format": "pass",
     "signed_vela_0_977_3": "pass_failing_verification_rooted_reject_strict_replay",
-    "sqlite_serializer_binding": "pass_python_sqlite_source_compile_environment_bound",
+    "sqlite_serializer_binding": "pass_complete_python_sqlite_source_compile_environment_preimage_retained_in_qualification",
     "supported_schema_hostile_tests": "pass_pattern_and_all_unsupported_keywords_rejected",
     "timeout_stream_file_bounds": "pass"
   },
