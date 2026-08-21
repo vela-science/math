@@ -1,0 +1,23 @@
+{
+  "authority_keyset_root": "sha256:66ddaf692519924c4d1c055861a1ddbea6683e81fe059fce625ae8baf2a5b38a",
+  "authority_model_root": "sha256:a7d69a6b6240ca71a16daefe0210b87f25b370f48c184be2f1cb3147e1683805",
+  "command": "replay",
+  "counts": {
+    "accepted_claims": 0,
+    "artifacts": 3,
+    "pending_claims": 0,
+    "proposal_withdrawals": 0,
+    "proposals": 1,
+    "submissions": 1,
+    "verifications": 1
+  },
+  "git_commit": "2e53415b2b62564deef858f147c77244bdd0f288",
+  "git_tree": "b7c20ae9710614da652610401f471264af6bbe05",
+  "ok": true,
+  "origin_id": "vro_49fce302843f5c71",
+  "origin_root": "sha256:49fce302843f5c716931818d0166b762dac05e8ba88472477a02e0ebd26c3a7b",
+  "repository_id": "6a995dad-b16c-4b99-a8ec-162166c1f0ce",
+  "repository_path": "/Users/williamblair/personal/math/tools/result_runner/qualification-v0.977.4/runs/run-4/vela/repo",
+  "repository_root": "sha256:67dbf9ee8963905c21d303ba1aaacbe14c7d4e65461d0c3e6ae67140469ad735",
+  "schema": "vela.repository-verification.v3"
+}

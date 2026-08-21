@@ -1,0 +1,80 @@
+{
+  "classification": {
+    "benchmark_denominator": false,
+    "provider_requests": 0,
+    "scientific_claim": false,
+    "scientific_state_changed": false
+  },
+  "docker": {
+    "dry_invocation_sha256": "ac55b6d06f145e6716144ebf58335edcd668c418066a89c22150a1e43277615f",
+    "dry_receipt_sha256": "2dea3b904fdca94adc0ff9de13e4df3a293d670b4faba99e99a95575e9cc3b9d",
+    "image": "sha256:76c64845ae35f57835a08f386d4206bf021ccf1169f8a35e59cc68d8e4408e7e",
+    "platform": "linux/arm64",
+    "sentinel_network": "none",
+    "sentinel_receipt_sha256": "87fb643c4354741c1ab3b9abce168fceab4eeccecdb6a070d17ff934fc340ac0",
+    "sentinel_stdout_sha256": "47c000cf24993c96c1c443370d18645d4acb8b4f12759d4d93fba6c10e4fb103",
+    "status": "pass_no_model"
+  },
+  "math": {
+    "canonical_merge_commit": "7a535164d1a5f1139997f875a586f58fce7e2563",
+    "canonical_merge_tree": "e26ac495152437e6a7b31daf4924e63808f7a677",
+    "clean_clone_archive_sha256": "48b5e80bfe83d6b707f8ac30ad62a7c3b88d8a2b1c8e5539794838f7c1283fa7",
+    "repository": "https://github.com/vela-science/math.git"
+  },
+  "qualification": {
+    "final_runs": [
+      {
+        "proposal_id": "vpr_c2ce2aa9474ca300",
+        "repository_root": "sha256:f3aa2970b2802d05c24e4cb5e49b12f1d5ac0a1769d9b46c432dfa091e33370e",
+        "summary_sha256": "5a5d2a538a77ee1531948d404bb2bc418290150bb8f50d166774801813607c6b"
+      },
+      {
+        "proposal_id": "vpr_d86ccb3cddd3ec38",
+        "repository_root": "sha256:67dbf9ee8963905c21d303ba1aaacbe14c7d4e65461d0c3e6ae67140469ad735",
+        "summary_sha256": "49fb2fd1f85ce33ac1a906deabef9903f525660f21ee1bef9610122850993ef3"
+      }
+    ],
+    "graph_json_sha256": "f301129777dbe45f686986dc9b44120e0304c28774c766b0bcee179f6ff95bc1",
+    "method_sha256": "e858e506ac8d8c75d96710057e2f5e2b2da834ab2672f8e568db867908ebf946",
+    "native_commit": "501e058abf304fb363e629508af051bce4154de5",
+    "native_tree": "ba38c2fb7bb4cf79137d7f57e1dae3d67550cae7",
+    "pre_fix_runs": 2,
+    "repeated_final_runs": 2,
+    "result_sha256": "9e8be05dd593a10733bddf370e92cdac2b537b7b4e99ebc8ceafc0c782c21139",
+    "sqlite_logical_content_sha256": "2b8d30c083a2be07a6b67f0c9990663906623125359ed24de725f028fe36fb2a",
+    "sqlite_projection_sha256": "957dc2f5deb808d0e2cdd8d2cf51a3074f8da097d45c392b14e338fb65d56eb6",
+    "status": "pass_pending_independent_review"
+  },
+  "release": {
+    "allowed_signers_blob": "90b14f69eaa5f95a1d027eaa6c1742ee962a5e44",
+    "allowed_signers_sha256": "dc471fc1ff1960879f39cc52cbe46b87142e1ccfb3b4d567eaae9ac4d26d0d10",
+    "archive": "vela-macos-aarch64.zip",
+    "archive_bytes": 2713635,
+    "archive_sha256": "023bf4d98766e9d7b1d0c7504fcade78220b3fe4f544daca1faaeace98d25d65",
+    "binary_sha256": "06f912d107d29e4ce1dadd19bf7ef849ec42d7e62cbc9332c9807e6b8c9bd05e",
+    "manifest_sha256": "210a12c9aada097fc64d4222e199c785b2b3281d0924d3ba68f3779580cabbdc",
+    "manifest_signature_sha256": "5fc8ee418fd17dd99bad6c0446b283a5c52399efa901e825405c7ea552224e51",
+    "manifest_signature_verification": "pass",
+    "platform": "macos/aarch64",
+    "release_url": "https://github.com/vela-science/vela/releases/tag/v0.977.4",
+    "signature_fingerprint": "SHA256:MX3Eo1o9S5pLnx2kiNyAy2aME7PAWDtvqtUBljJst1M",
+    "signature_identity": "release@vela.space",
+    "signature_namespace": "vela-release",
+    "source_commit": "1a2e0328620b4e8c4584c3d4baf257adb11f3d45",
+    "source_tree": "1bd8ed4e11d3745f159b32f23539f5174fd44803",
+    "tag": "v0.977.4",
+    "tag_object": "388c3a5d1b71a8b6dacfcfa17ffcd395710f3858",
+    "tag_signature_verification": "pass",
+    "triple": "aarch64-apple-darwin",
+    "version": "0.977.4"
+  },
+  "retained_provider_evidence": {
+    "files": 35,
+    "manifest_sha256": "4546a3b38537ba7d146a3e6e81a865edfca71cc7dccab3ef4daee714542f49ce",
+    "provider_request_reused": true
+  },
+  "runner": {
+    "runner_sha256": "6e5ea0fef6f7e4459061b723314b4aec56055ff303b8b110a21710f911644432",
+    "vela_adapter_sha256": "c96369703ed43b63539e3128ad1771d5fe54a36e8f63ad045529115902033dc7"
+  }
+}

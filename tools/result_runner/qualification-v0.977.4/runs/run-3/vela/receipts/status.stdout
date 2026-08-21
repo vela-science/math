@@ -1,0 +1,54 @@
+{
+  "schema": "vela.status.v4",
+  "ok": true,
+  "command": "status",
+  "repository": {
+    "id": "c7fc6f2f-15b9-46a8-9363-6a65af9e58cd",
+    "name": "Result Runner disposable qualification",
+    "profile_root": "sha256:59c3c343f4aab380892102354811575227eb08fab63dd96dbae0232aacfd7616"
+  },
+  "git": {
+    "role": "repository_head",
+    "commit": "e8d5fd8160d0e4276d5aa5f0044267847632c4e9",
+    "tree": "000319c045d9c929e141aa6611b1101b06725603"
+  },
+  "integrity": {
+    "replay": "verified",
+    "strict": "pass",
+    "blocker_count": 0,
+    "blockers_by_code": {}
+  },
+  "roots": {
+    "origin": "sha256:fd91dcd009dcdf1eeaa7dc179e9aa092ab37df658838e4e24fe95452bb110650",
+    "repository": "sha256:f3aa2970b2802d05c24e4cb5e49b12f1d5ac0a1769d9b46c432dfa091e33370e",
+    "authority_keyset": "sha256:a4659240064abddd7d65a2e1a98a3ae0fe8569506e36c0dd2e630aa145d43a57",
+    "authority_policy": "sha256:d4976681f32e68115bebe5e4de64cd4e88bb6b788071e46a922d1489b5d5f960"
+  },
+  "counts": {
+    "claims": 0,
+    "accepted_claims": 0,
+    "pending_claims": 0,
+    "pending_review": 0,
+    "accepted_review": 0,
+    "rejected_review": 1,
+    "withdrawn_review": 0,
+    "submissions": 1,
+    "verifications": 1,
+    "artifacts": 3
+  },
+  "decision_inbox": {
+    "pending_count": 0,
+    "protocol_ready_count": 0,
+    "protocol_blocked_count": 0,
+    "projection_root": "sha256:7884b8d0884515a66faae2f45769c8c68d99dfadf2a17c6cd44785eb0925efe1",
+    "first_entry_root": null
+  },
+  "actions": {
+    "review": null,
+    "work": {
+      "mode": "direct_submission",
+      "command": "vela submit --repo /Users/williamblair/personal/math/tools/result_runner/qualification-v0.977.4/runs/run-3/vela/repo --help",
+      "note": "Submit bounded evidence directly."
+    }
+  }
+}

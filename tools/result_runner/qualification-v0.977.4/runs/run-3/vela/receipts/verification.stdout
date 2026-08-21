@@ -1,0 +1,15 @@
+{
+  "schema": "vela.verification-import-result.v1",
+  "operation_id": "vop_216187bba3f08c8011e79c2130913313a13d51b2a4acac667a10986416def5db",
+  "verification_record_id": "vvr_d43c9a61470e94a2",
+  "verification_record_root": "sha256:d43c9a61470e94a28687706f2c9d8d01376b1c349d2b4cd181da9ce39fc61d79",
+  "proposal_id": "vpr_c2ce2aa9474ca300",
+  "claim_id": "vcl_c2ebb8f18f17639cfada7f2fd5ccdc835ffa392815e80844c1b90220005c3488",
+  "outcome": "fail",
+  "idempotent": false,
+  "accepted_event_delta": 0,
+  "publication": {
+    "state": "committed_local",
+    "commit": "b55c3107e6e59b73f586805914f64a903785f2c6"
+  }
+}
