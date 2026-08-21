@@ -1,0 +1,246 @@
+{
+  "approval": {
+    "explicitly_approved": false,
+    "minimum_sentence": "Approve RESULTS-FIVE-01 only after a zero-model receipt proves provider-side hard ceilings of 6 sessions, 240 credits, 9.60 USD, and 19200000 total token events; otherwise do not launch.",
+    "provider_requests_authorized": 0,
+    "scientific_authority_actions_authorized": 0
+  },
+  "budget": {
+    "aggregate": {
+      "candidate_sessions": 5,
+      "evaluator_sessions": 1,
+      "maximum_api_equivalent_usd": 9.6,
+      "maximum_billable_token_events_derived_at_lowest_nonzero_credit_rate": 19200000,
+      "maximum_credits": 240,
+      "maximum_provider_sessions": 6,
+      "maximum_session_wall_seconds": 5400,
+      "maximum_total_token_events": null,
+      "total_campaign_wall_seconds_after_first_launch": 7200
+    },
+    "enforcement": {
+      "aggregate_credit_cap_proven": false,
+      "aggregate_provider_request_count_cap_proven": false,
+      "aggregate_total_token_cap_proven": false,
+      "launch_blocker": "The qualified Codex OAuth runner bounds six top-level sessions, their wall time, local bytes, and files, but exposes neither a provider-request count cap nor an aggregate token/credit stop. Credits do not bound zero-credit cache-write token events. No provider request is permitted until an external fail-closed cap proves every stated aggregate ceiling.",
+      "session_count_enforced_by_campaign_order": true,
+      "wall_and_local_byte_caps_enforced_by_runner": true
+    },
+    "official_rate_card_snapshot": {
+      "cached_input_credits_per_million_tokens": 12.5,
+      "cache_write_credits_per_million_tokens": 0,
+      "input_credits_per_million_tokens": 125,
+      "model": "gpt-5.6-sol",
+      "output_credits_per_million_tokens": 750,
+      "source": "https://help.openai.com/en/articles/11481834",
+      "usd_per_credit_derived_from_published_rates": 0.04
+    },
+    "provider_native_per_request_caps": {
+      "context_tokens": 1050000,
+      "max_output_tokens": 128000,
+      "runner_can_lower_context_cap": false,
+      "runner_can_lower_output_token_cap": false,
+      "source": "https://developers.openai.com/api/docs/models/gpt-5.6-sol"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "FIVE-01",
+      "class": "proof_opportunity",
+      "declaration": "Erdos359.erdos_359.variants.isGoodFor_1_low_values",
+      "file_blob": "62635546c38f181610242b83e1e5d5ca86b5d64a",
+      "file_sha256": "184ece2c4fb5e0d29e72210c9d75573b93ba3ccc4b559619e1f3b4319ea20f61",
+      "line": 55,
+      "path": "FormalConjectures/ErdosProblems/359.lean",
+      "prompt_sha256": "edf930fc8c1ae654d891d33d13f6aa023471bb5c7f72a7781f6805dbd5b92961",
+      "question": "Produce the smallest credible proof or proof sketch of the exact first-eight-values image theorem."
+    },
+    {
+      "case_id": "FIVE-02",
+      "class": "computational_proof_opportunity",
+      "declaration": "Erdos1052.isUnitaryPerfect_87360",
+      "file_blob": "7cad758989e63bf21308e2738e2a1b2bd1730d70",
+      "file_sha256": "1be8d7df96b8c3fa3ce6bc0c341ed62a023850a04e889fd5c9d8d91baacfcffe",
+      "line": 68,
+      "path": "FormalConjectures/ErdosProblems/1052.lean",
+      "prompt_sha256": "f0fa349fd05c2b15d6ccaafcc23bc802261b5f2f110bbf374ba596d0f881adcb",
+      "question": "Produce an exact certificate or credible Lean proof strategy for IsUnitaryPerfect 87360 without conflating computation with a theorem."
+    },
+    {
+      "case_id": "FIVE-03",
+      "class": "statement_correction",
+      "declaration": "Erdos1062.ForkFree; Erdos1062.f",
+      "file_blob": "3f7ccf1a845ef966b2dfbcb11918f88308c336bb",
+      "file_sha256": "ee47c66fe29bcdd5e6bde2d8c325fcf8a511f5a147f8cef8c1065cd28716fae3",
+      "line": 32,
+      "path": "FormalConjectures/ErdosProblems/1062.lean",
+      "prompt_sha256": "4d6ec8432dc4dbe0e49e0d82becc25a58a5735007d67fa85fe321b25659768c0",
+      "question": "Resolve the positive-integers docstring versus Set Nat semantics and identify the smallest truthful source-native correction."
+    },
+    {
+      "case_id": "FIVE-04",
+      "class": "dependency_trust",
+      "declaration": "Erdos835.johnsonGraph_chromaticNumber_odd_of_johnson_chromaticNumber_composite",
+      "file_blob": "948ac76c6dacca85e312edfb8d550d9b5f8d768f",
+      "file_sha256": "f163f1f5a6fead133f3a66ae400305fcb40c6019321ce21e869ce5b3c0ab89a0",
+      "line": 146,
+      "path": "FormalConjectures/ErdosProblems/835.lean",
+      "prompt_sha256": "222763a0116e0ac094661cb73c6bccbd6dbc2ab5155fc59075291bf6068e7a1f",
+      "question": "Expose or discharge the exact sorry-backed dependency behind the checked composite-to-odd bridge."
+    },
+    {
+      "case_id": "FIVE-05",
+      "class": "negative_control",
+      "declaration": "Erdos14.erdos_14.parts.i",
+      "file_blob": "52016d0053f4656cca69c135f4e95ef1449d63f6",
+      "file_sha256": "63e02a65ab619a881bcbec9319e71a61fc26bf8bdb9be069c85149bfcfc0cf4c",
+      "line": 51,
+      "path": "FormalConjectures/ErdosProblems/14.lean",
+      "prompt_sha256": "2548d9bd9143b2926ac9527c6f6413942e5bb0e2e6a42e779d79009288d2a659",
+      "question": "Perform a bounded source search and return a precise typed non-result unless exact bytes establish an actionable result."
+    }
+  ],
+  "decision": {
+    "recommendation": "smaller_bounded_five_attempt_scientific_tranche",
+    "recommendation_reason": "It is the smallest design that tests five distinct scientific failure modes through the independently qualified maintained runner. The 50-case design spent a 210-session theoretical envelope and produced zero science; the fixed-cell benchmark repeatedly produced infrastructure-only denominators and tests organizational arms rather than source-native throughput.",
+    "rejected_alternatives": {
+      "fixed_cell_benchmark": "Do not launch: it adds three-arm/custody/evaluator machinery, its retained attempts were infrastructure failures, and it does not answer the immediate scientific-throughput question.",
+      "original_50_case_200_500_attempt_design": "Do not launch: the retained terminal packet records zero model sessions/results and a 6236.25-credit, 249.45-USD unused maximum dominated by VM/archive/seal machinery."
+    }
+  },
+  "denominator_and_scoring": {
+    "all_assigned_candidates_count": true,
+    "candidate_denominator": 5,
+    "candidate_order": [
+      "FIVE-01",
+      "FIVE-02",
+      "FIVE-03",
+      "FIVE-04",
+      "FIVE-05"
+    ],
+    "duplicate_counts_as": "attempted_not_actionable",
+    "evaluator_denominator": 1,
+    "infrastructure_failure_counts_as": "assigned_infrastructure_failure",
+    "invalid_schema_counts_as": "attempted_invalid",
+    "recovery_sessions": 0,
+    "retries": 0,
+    "typed_non_result_counts_as": "attempted_valid_non_result_if_independently_supported"
+  },
+  "dry_validation": {
+    "candidate_inference": false,
+    "desktop_context": "desktop-linux",
+    "provider_requests": 0,
+    "receipts": {
+      "FIVE-01": {
+        "invocation_sha256": "0a7cb763d48330c29eb930bf7b8845008f1e5a4ffe21065d1605937f9be304d9",
+        "manifest_sha256": "f092950e4cc7b39f58e077465674877d3c4557086578d62ae321151848502210",
+        "receipt_sha256": "87ac9bb0071e51a7c07574ecdf622f5f374ca0b9062e66dc82c191442f9f7f1a"
+      },
+      "FIVE-02": {
+        "invocation_sha256": "b9bf28d698aeb7f43cacd5bbb39a99c02228f5a28fa5336845a353e1f958f5ac",
+        "manifest_sha256": "fbe004d1fd1aea481cc1cd279060aee177712470b5d1a8701d6d608768214df6",
+        "receipt_sha256": "87ac9bb0071e51a7c07574ecdf622f5f374ca0b9062e66dc82c191442f9f7f1a"
+      },
+      "FIVE-03": {
+        "invocation_sha256": "e9c1599d0f2478f5d633fb5c68733468108dd6acc1ead7cdc0578990a9cddfdd",
+        "manifest_sha256": "ad1562192e9b54d15c065390cede09e74b017dce6380e1f5298e7cc62464f5bd",
+        "receipt_sha256": "87ac9bb0071e51a7c07574ecdf622f5f374ca0b9062e66dc82c191442f9f7f1a"
+      },
+      "FIVE-04": {
+        "invocation_sha256": "57ee6f6b5e9a1626c3d18a7a20b8d560d3f9a84090e210910e48a12e2d5dc8e8",
+        "manifest_sha256": "151ca9e00c94d5a2d2fc8a4f7a36d30da0c314cf30991cd97749ec1e57819470",
+        "receipt_sha256": "87ac9bb0071e51a7c07574ecdf622f5f374ca0b9062e66dc82c191442f9f7f1a"
+      },
+      "FIVE-05": {
+        "invocation_sha256": "1161bcda599ab57d630b112b8116ef825d60bac8819998c5b59609f30ae112a7",
+        "manifest_sha256": "8558c1d8e55bfda1585db96e19da709e5f1a607f385cab2a568b503d7a638824",
+        "receipt_sha256": "87ac9bb0071e51a7c07574ecdf622f5f374ca0b9062e66dc82c191442f9f7f1a"
+      }
+    },
+    "status": "pass"
+  },
+  "execution": {
+    "cancellation": "Each runner process owns a new process group; timeout, stream overflow, runtime byte/file overflow, or post-exit census mismatch terminates the process tree and fails closed.",
+    "cleanup": "Sequential cells use a new output directory. Temporary disposable Vela keys, when later authorized, are guarded before creation and deleted on every exit. Source and OAuth mounts remain read-only.",
+    "docker_image": "sha256:76c64845ae35f57835a08f386d4206bf021ccf1169f8a35e59cc68d8e4408e7e",
+    "docker_platform": "linux/arm64",
+    "model": "gpt-5.6-sol",
+    "provider_http_request_body_cap_proven": false,
+    "provider_http_request_body_max_bytes": null,
+    "provider_request_context_cap_tokens": 1050000,
+    "provider_response_native_cap_tokens": 128000,
+    "reasoning": "high",
+    "result_max_bytes": 16384,
+    "runtime_max_bytes": 1048576,
+    "runtime_max_files": 64,
+    "schema_max_bytes": 8192,
+    "service_tier": "default",
+    "session_timeout_seconds": 900,
+    "stderr_max_bytes": 1048576,
+    "stdout_max_bytes": 1048576,
+    "user_prompt_max_bytes": 16384
+  },
+  "independent_review": {
+    "evaluator_prompt_template_sha256": "bed446b8a2c0c25529b1cf7a723954dfdeadccf7888ed4ca878f06897e841d70",
+    "evaluator_task": "01a02023-2b70-7580-bc03-8beb07400178",
+    "one_session_after_all_candidates_locked": true,
+    "producer_may_not_self_accept": true,
+    "review_status": "not_yet_reviewed"
+  },
+  "packet_kind": "campaign-readiness-approval",
+  "packet_version": 1,
+  "prior_work_search": {
+    "formal_conjectures_expected_occurrences": 6,
+    "formal_conjectures_target_paths_only": true,
+    "legacy_50_case_corpus_matches": 0,
+    "lean_proofs_matches": 0,
+    "math_matches": 0,
+    "result_factory_batch_1_matches": 0,
+    "result_factory_batch_2_matches": 0,
+    "result_factory_batch_3_matches": 0,
+    "search_terms": "isGoodFor_1_low_values|isUnitaryPerfect_87360|Erdos1062|johnsonGraph_chromaticNumber_odd_of_johnson_chromaticNumber_composite|erdos_14.parts.i"
+  },
+  "result_contract": {
+    "existing_batch_3_fields_preserved": true,
+    "new_scientific_object_or_vela_schema": false,
+    "schema_sha256": "1a15b581f9e28df656b07a09f5674e8b05e87cdcf50343ccb0730226f0149f2b",
+    "string_encoding_note": "The maintained runner supports a closed string-only JSON Schema subset. Existing Batch 3 list fields are encoded as compact newline-delimited strings; their scientific meaning is unchanged.",
+    "typed_non_result_requires_nonblank_proposed_result": true
+  },
+  "source_lock": {
+    "formal_conjectures": {
+      "archive_sha256": "ba47fe3d14126eda45870d40ea951fdaa14a5135dafcf449f8b28f49c53cf6fa",
+      "commit": "9cbe1d3c12998c786b7c2cd99ce28a21b6631f66",
+      "license": "Apache-2.0",
+      "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "repository": "https://github.com/google-deepmind/formal-conjectures.git",
+      "tree": "afc1a5d149d5434089aabe705f3ce450ebfbc244"
+    },
+    "lean_proofs_duplicate_index": {
+      "archive_sha256": "b28285a85b08e472cc5183c4dfeebaea821127f0c65baa3a4eb865daf5ed6ee9",
+      "commit": "accf62cb636c8909dd7e098e3f82b2140d3a192e",
+      "repository": "https://github.com/williamjblair/lean-proofs.git",
+      "tree": "608ce332d1d5d8f14abc7d39349f4a29102f5aba"
+    },
+    "math": {
+      "archive_sha256": "f1f957620c97ead3dc3236206d754464a3877e2e2e0f618a8b83394e4545914a",
+      "commit": "6fea63f2e7882fd9de0398868984cd88a17898f1",
+      "repository": "https://github.com/vela-science/math.git",
+      "tree": "79e9482b9abe6999d36d63b1cfc62f6f964bda53"
+    }
+  },
+  "status": "blocked_pending_independent_review_and_enforceable_provider_cap",
+  "supervision": {
+    "current_supervisor_task": "01a02473-9465-76e2-ac9b-ae41379a3aa6",
+    "old_supervisor_must_not_be_used": true,
+    "original_50_case_task_resumable": false
+  },
+  "vela": {
+    "adapter_sha256": "c96369703ed43b63539e3128ad1771d5fe54a36e8f63ad045529115902033dc7",
+    "binary_sha256": "06f912d107d29e4ce1dadd19bf7ef849ec42d7e62cbc9332c9807e6b8c9bd05e",
+    "pin_sha256": "24e2282e151b1feb53072da58be81cbc561d35890c8248b3c46c8852b2e31c0f",
+    "source_commit": "1a2e0328620b4e8c4584c3d4baf257adb11f3d45",
+    "standing_changes": 0,
+    "tag": "v0.977.4",
+    "use": "No Vela scientific lifecycle occurs in readiness. If a candidate is later conversion-worthy, its disposable failing-verification/rooted-reject route is separate from independent scientific evaluation and never mutates canonical Math authority."
+  }
+}

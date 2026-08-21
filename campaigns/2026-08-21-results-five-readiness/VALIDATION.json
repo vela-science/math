@@ -1,0 +1,47 @@
+{
+  "credential_scan": {
+    "findings": 0,
+    "scope": "campaigns/2026-08-21-results-five-readiness"
+  },
+  "deterministic_checks": {
+    "approval_json_sha256": "3128863261a66588e8703ca03cc8b68bfb8634d4495b35046ec8487696b5bda3",
+    "json_parse": "pass",
+    "readme_sha256": "dd851bbeda25884a2053bc66e3ab3be62f153f4ed059fbd43994e9c3aeda2d42",
+    "result_schema_sha256": "1a15b581f9e28df656b07a09f5674e8b05e87cdcf50343ccb0730226f0149f2b",
+    "runner_tests": {
+      "failed": 0,
+      "passed": 18,
+      "skipped": 0,
+      "signed_disposable_vela_exercised": true
+    }
+  },
+  "dry_runs": {
+    "failed": 0,
+    "passed": 5,
+    "provider_requests": 0,
+    "status": "dry_run",
+    "source_after_equals_before": true
+  },
+  "environment": {
+    "docker_context": "desktop-linux",
+    "docker_image": "sha256:76c64845ae35f57835a08f386d4206bf021ccf1169f8a35e59cc68d8e4408e7e",
+    "formal_conjectures_clean_complete_clone": true,
+    "formal_conjectures_commit": "9cbe1d3c12998c786b7c2cd99ce28a21b6631f66",
+    "formal_conjectures_tree": "afc1a5d149d5434089aabe705f3ce450ebfbc244",
+    "vela_binary_sha256": "06f912d107d29e4ce1dadd19bf7ef849ec42d7e62cbc9332c9807e6b8c9bd05e",
+    "vela_version": "0.977.4"
+  },
+  "observations": [
+    "A local partial-clone copy could not materialize the frozen Formal Conjectures tree; no runner or provider execution occurred.",
+    "A complete clone under the noncanonical macOS /tmp alias was rejected by the runner before Docker; using its canonical /private/tmp root passed.",
+    "No candidate or evaluator inference occurred."
+  ],
+  "prior_work_search": {
+    "formal_conjectures_expected_target_occurrences": 6,
+    "legacy_50_case_corpus_matches": 0,
+    "lean_proofs_matches": 0,
+    "math_matches": 0,
+    "result_factory_batch_matches": 0
+  },
+  "status": "pass_readiness_bytes_only"
+}

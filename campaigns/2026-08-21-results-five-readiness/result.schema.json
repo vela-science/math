@@ -1,0 +1,81 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "assumptions_and_dependencies": {
+      "maxLength": 4096,
+      "minLength": 1,
+      "type": "string"
+    },
+    "build_or_check_outcome": {
+      "maxLength": 4096,
+      "minLength": 1,
+      "type": "string"
+    },
+    "case_id": {
+      "enum": [
+        "FIVE-01",
+        "FIVE-02",
+        "FIVE-03",
+        "FIVE-04",
+        "FIVE-05"
+      ],
+      "type": "string"
+    },
+    "evidence": {
+      "maxLength": 8192,
+      "minLength": 1,
+      "type": "string"
+    },
+    "limitations": {
+      "maxLength": 4096,
+      "minLength": 1,
+      "type": "string"
+    },
+    "proposed_result": {
+      "maxLength": 8192,
+      "minLength": 1,
+      "type": "string"
+    },
+    "question": {
+      "maxLength": 2048,
+      "minLength": 1,
+      "type": "string"
+    },
+    "result_status": {
+      "enum": [
+        "checked_proof",
+        "computational_certificate",
+        "proof_sketch",
+        "statement_correction",
+        "dependency_finding",
+        "typed_non_result"
+      ],
+      "type": "string"
+    },
+    "result_type": {
+      "enum": [
+        "proposed_result",
+        "typed_non_result"
+      ],
+      "type": "string"
+    },
+    "smallest_independent_check": {
+      "maxLength": 4096,
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "case_id",
+    "result_type",
+    "result_status",
+    "question",
+    "proposed_result",
+    "evidence",
+    "build_or_check_outcome",
+    "assumptions_and_dependencies",
+    "limitations",
+    "smallest_independent_check"
+  ],
+  "type": "object"
+}

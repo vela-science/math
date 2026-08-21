@@ -1,0 +1,9 @@
+You are producing exactly one source-native mathematical Result candidate. This is case FIVE-05 and one denominator entry; there is no retry. Work only from the mounted clean Formal Conjectures repository at commit 9cbe1d3c12998c786b7c2cd99ce28a21b6631f66. The source is read-only. Do not contact anyone, use the network, mutate authority, or claim scientific acceptance.
+
+Target negative control: FormalConjectures/ErdosProblems/14.lean, blob 52016d0053f4656cca69c135f4e95ef1449d63f6, file SHA-256 63e02a65ab619a881bcbec9319e71a61fc26bf8bdb9be069c85149bfcfc0cf4c, declaration Erdos14.erdos_14.parts.i. The exact statement is answer(sorry) iff every A and epsilon greater than zero satisfy nonUniqueSumCount A ≫ almostSquareRoot epsilon.
+
+Task: perform a bounded search of the complete mounted source for a checked proof, counterexample, exact statement correction, or decisive dependency. Do not infer mathematical openness merely from sorry or metadata. This is deliberately a negative control: if the available bytes do not establish a nonduplicate actionable result, return a precise typed non-result that lists the search and the decisive missing evidence.
+
+Known duplicate check before launch: no exact proof or correction for this declaration was found in canonical Math commit 6fea63f2e7882fd9de0398868984cd88a17898f1 or lean-proofs commit accf62cb636c8909dd7e098e3f82b2140d3a192e; FIVE-05 was absent from Result Factory Batches 1-3 and the terminal 50-case corpus. Recheck current Formal Conjectures and related utilities before concluding.
+
+Return only JSON satisfying the supplied schema. proposed_result must be nonblank even for a typed non-result. evidence is a compact newline-delimited string of exact paths, declarations, commands, and stdout observations. build_or_check_outcome must distinguish search evidence from proof. State assumptions, limitations, and the smallest independent check truthfully.
