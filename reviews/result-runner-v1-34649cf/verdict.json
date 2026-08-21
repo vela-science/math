@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "changed_paths": "pass_exactly_two_metadata_files",
+    "code_test_execution_bytes_unchanged": true,
+    "diff_check": "pass",
+    "metadata_credential_findings": 0,
+    "portable_manifest": "pass_35_of_35_unchanged",
+    "projection_bytes": 1791,
+    "projection_sha256": "957dc2f5deb808d0e2cdd8d2cf51a3074f8da097d45c392b14e338fb65d56eb6",
+    "projection_sha256_match": true,
+    "qualification_sha256": "9944ce7db2890c01662bc0ce730b494ebe48d804bdb521f1be23d8a82a5f47d8",
+    "serializer_matches_bound_environment": true,
+    "sqlite_compile_options_count": 45,
+    "sqlite_compile_options_sorted": true,
+    "sqlite_compile_options_unique": true,
+    "validation_sha256": "a761528d88fc07561ae43d1caa9fe88daec88346b3f5c82c645fffc993473648"
+  },
+  "findings": [],
+  "producer": {
+    "branch": "codex/result-runner-v1",
+    "commit": "34649cf2fc7f58df6ce28beaac4207edd6fc33ab",
+    "parent": "985e7065a1befa525aef64f45cc61a1f087438d4",
+    "remote_equal": true,
+    "tree": "e26ac495152437e6a7b31daf4924e63808f7a677"
+  },
+  "schema": "vela.result-runner.independent-review.v1",
+  "verdict": "PASS"
+}
