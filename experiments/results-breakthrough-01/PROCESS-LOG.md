@@ -578,3 +578,31 @@ fields; the observation remains separate.
   nested shell by hashing through direct argv in a separately reviewed launch.
 - **Disposition:** experiment-blocking and retained; stop for independent
   review without relaunch, mapping access, evaluator sessions, or T03-T10.
+
+## 2026-08-21T00:27:15Z — redacted command description was not replayable evidence
+
+- **Stage/time and evidence:** corrected smoke launch preflight;
+  `launch/preflight/container-probe.sh`,
+  `corrected-container-probe.invocation.json`, and the retained predecessor
+  `container-probe.command.txt`.
+- **Observation and impact:** the predecessor retained exact stdout, stderr,
+  exit, and timing but replaced the executable body and host auth path with
+  narrative placeholders. The failure was credible but its precise quoting
+  preimage could not be independently replayed, blocking one review cycle.
+- **Category:** harness/script.
+- **Root cause:** credential redaction was applied to the entire command
+  receipt instead of only credential bytes; command identity and secret
+  content were incorrectly treated as the same thing.
+- **Affected:** one review cycle and one authorized two-second no-model
+  replacement preflight; zero candidate, evaluator, recovery, or billable
+  inference sessions and no source, canonical, authority, or Standing state.
+- **Immediate correction:** retain an exact standalone probe with literal safe
+  `awk '{print $1}'`, an exact argv array naming the read-only auth mount but
+  never its bytes, and stdout/stderr/exit/time/image/context/hash receipts. The
+  single corrected network-none probe passed; fresh source verification and a
+  non-consumable proposed start receipt were retained.
+- **Prevention/simplification:** retain executable scripts and exact argv as
+  separate immutable files; redact values, never executable structure or
+  ordinary local paths needed for replay.
+- **Disposition:** fixed now because exact-source replayability is required;
+  inference remains stopped pending independent review.
