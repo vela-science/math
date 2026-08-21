@@ -1,0 +1,1 @@
+{"additionalProperties":false,"properties":{"message":{"const":"Codex executed from the exact read-only mounted Git repository.","type":"string"},"qualification":{"const":"pass","type":"string"}},"required":["message","qualification"],"type":"object"}

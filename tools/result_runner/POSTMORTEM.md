@@ -32,7 +32,17 @@ template for future campaigns.
   whose only purpose is validating other review machinery.
 - Any artifact unused by execution, adjudication, or replay.
 
-The successor qualification at commit
-`5f993c5bafe834828c50bca60830e7bc8488d340` proved the corrected path: one
-provider request completed from `/repo` in ten seconds, exact output traversed
-Native, Graph, and disposable Vela routes, and source bytes remained unchanged.
+The run at commit `5f993c5bafe834828c50bca60830e7bc8488d340`
+proved the general `/repo` product path but predates this maintained runner's
+source-binding, bounds, schema, deterministic provenance, and failing-
+Verification corrections. It is predecessor evidence, not qualification of
+this implementation.
+
+The retained
+[`qualification-v1/`](qualification-v1/) packet qualifies the corrected
+implementation with one provider request: exact output traversed deterministic
+Native and Graph routes plus disposable Vela Submission, truthful failing
+Verification, rooted rejection Decision, strict status/readback/replay, and
+key deletion. The source checkout remained clean and byte-identical. This is
+an execution qualification only; it is not scientific evidence or a claim
+about Vela utility.

@@ -1,0 +1,1 @@
+Return exactly one JSON object. Set "qualification" to "pass". Set "message" to "Codex executed from the exact read-only mounted Git repository." Do not call tools, edit files, or make any scientific claim.

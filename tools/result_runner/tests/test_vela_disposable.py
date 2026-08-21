@@ -31,6 +31,7 @@ class DisposableVelaIntegrationTests(unittest.TestCase):
             result.write_bytes(b'{"message":"integration","qualification":"pass"}\n')
             value = record_disposable(
                 result=result,
+                provenance=b'{"schema":"vela.result-runner.provenance.v1"}\n',
                 destination=root / "vela",
                 vela_bin=binary,
                 expected_vela_sha256=expected_digest,
@@ -40,6 +41,11 @@ class DisposableVelaIntegrationTests(unittest.TestCase):
             self.assertFalse(value["scientific_state_changed"])
             self.assertTrue(value["proposal_id"].startswith("vpr_"))
             self.assertTrue(value["verification_id"].startswith("vvr_"))
+            self.assertEqual(value["verification_outcome"], "fail")
+            self.assertEqual(value["accepted_claims"], 0)
+            self.assertTrue(value["replay_ok"])
+            self.assertEqual(len(value["vela_binary_sha256"]), 64)
+            self.assertEqual(len(value["method_sha256"]), 64)
             self.assertFalse((root / "vela/private/authority-key").exists())
             self.assertFalse((root / "vela/private/authority-key.pub").exists())
 

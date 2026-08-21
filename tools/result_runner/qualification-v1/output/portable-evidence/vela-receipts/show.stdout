@@ -1,0 +1,180 @@
+{
+  "authority_boundary": "Verification records report bounded checks. A producer may close its own pending Proposal; only a repository-authority Decision can change accepted scientific Standing.",
+  "claim": {
+    "assertion": {
+      "kind": "theoretical",
+      "text": "Disposable Result Runner qualification completed; no scientific assertion."
+    },
+    "claim_id": "vcl_b1da9d54c79a9a677b27db393847d9d9621f7e8ac0585d703e4380106af17f09",
+    "conditions": [
+      "Caveat: Disposable runner qualification only; no scientific truth, utility, canonical authority, or Standing."
+    ],
+    "created_at": "2026-08-21T03:30:31Z",
+    "evidence": [
+      {
+        "artifact_path": "records/artifacts/sha256/9e8be05dd593a10733bddf370e92cdac2b537b7b4e99ebc8ceafc0c782c21139",
+        "artifact_root": "sha256:9e8be05dd593a10733bddf370e92cdac2b537b7b4e99ebc8ceafc0c782c21139",
+        "relation": "supports"
+      },
+      {
+        "artifact_path": "records/artifacts/sha256/28bfec40509f8fe084e77f9e8e342af5db0366acf02933025212310c7d7315bb",
+        "artifact_root": "sha256:28bfec40509f8fe084e77f9e8e342af5db0366acf02933025212310c7d7315bb",
+        "relation": "supports"
+      }
+    ],
+    "provenance": [
+      {
+        "authors": [
+          "agent:result-runner"
+        ],
+        "kind": "submission",
+        "title": "Authenticated Submission vsb_ccce6e72ca161390",
+        "year": 2026
+      }
+    ],
+    "relations": [],
+    "revision": 1,
+    "schema": "vela.claim-record.v1"
+  },
+  "command": "review.show",
+  "decision": {
+    "actor": "agent:result-runner-qualification-owner",
+    "actor_class": "agent",
+    "applied_event_id": null,
+    "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+    "decided_at": "2026-08-21T03:30:39Z",
+    "event_id": "vev_2d035a4c43e2cfa7",
+    "event_root": "sha256:fc8e833ede7876f2c31ee3ee15d20864bc4850de87eb9d2c4829096ba61a7ae1",
+    "reason": "Qualification fixture only; rejection prevents scientific or Standing interpretation.",
+    "session_ref": "VELA-RESULT-RUNNER",
+    "standing": "rejected"
+  },
+  "decision_inbox": {
+    "entry": null,
+    "projection_root": "sha256:15928b9667b67d1f26e47fdc3cb522c34a5b8cefe6149621f865be5c7dcf9b99"
+  },
+  "ok": true,
+  "proposal": {
+    "action": "claim.add",
+    "actor": "agent:result-runner",
+    "caveats": [
+      "Disposable runner qualification only; no scientific truth, utility, canonical authority, or Standing."
+    ],
+    "created_at": "2026-08-21T03:30:32Z",
+    "producer_package": {
+      "id": "vsb_ccce6e72ca161390",
+      "kind": "submission",
+      "path": "records/submissions/sha256/ccce6e72ca161390e8b006dcfde5e57d58c643041f05e0643018e7e9fe28f54f.json",
+      "root": "sha256:ccce6e72ca161390e8b006dcfde5e57d58c643041f05e0643018e7e9fe28f54f"
+    },
+    "reason": "Retain authenticated Submission vsb_ccce6e72ca161390 for independent verification and authorized review.",
+    "schema": "vela.proposal.v1",
+    "subject": {
+      "id": "vcl_b1da9d54c79a9a677b27db393847d9d9621f7e8ac0585d703e4380106af17f09",
+      "kind": "claim",
+      "root": "sha256:deda9e71806dd8ca6455a89c4c6f51b35fe179acc080cd2a1f9fd99fa3759d16"
+    }
+  },
+  "proposal_id": "vpr_c9047650c8b1914f",
+  "proposal_root": "sha256:c9047650c8b1914fd68bbc6aae48c960138eccffe7aff5c3ecbfe9d164573dd1",
+  "repository_id": "173d83bc-679b-4eac-9d4c-08277ce29ceb",
+  "repository_root": "sha256:17d2ab2a360eddc39cf8d32d44ae39a2d3fb11db3429ed14793d9d245d58dd3b",
+  "schema": "vela.review.v1",
+  "status": "rejected",
+  "submission": {
+    "artifacts": [
+      {
+        "digest": "sha256:9e8be05dd593a10733bddf370e92cdac2b537b7b4e99ebc8ceafc0c782c21139",
+        "kind": "qualification-output",
+        "path": "result.json"
+      },
+      {
+        "digest": "sha256:28bfec40509f8fe084e77f9e8e342af5db0366acf02933025212310c7d7315bb",
+        "kind": "qualification-provenance",
+        "path": "provenance.json"
+      }
+    ],
+    "caveats": [
+      "Disposable runner qualification only; no scientific truth, utility, canonical authority, or Standing."
+    ],
+    "claim": {
+      "assertion": "Disposable Result Runner qualification completed; no scientific assertion.",
+      "conditions": [],
+      "type": "theoretical"
+    },
+    "identity": {
+      "actor_class": "agent",
+      "actor_id": "agent:result-runner",
+      "declared_at": "2026-08-21T03:30:31Z",
+      "public_key_hex": "4977cffe5dd9a1f6043248a76cd3b8b7a3673afd044841c7379addf631f9bda7",
+      "schema": "vela.signer-identity.v1"
+    },
+    "producer_checks": [],
+    "provenance": {
+      "emitted_at": "2026-08-21T03:30:31Z",
+      "producer": "agent:result-runner",
+      "source_run": "VELA-RESULT-RUNNER",
+      "source_system": "vela-cli"
+    },
+    "replayability": "exact",
+    "requested_change": {
+      "kind": "add_claim"
+    },
+    "schema": "vela.submission.v3",
+    "verification_requirements": [
+      "Qualification establishes scientific truth or independent verification"
+    ]
+  },
+  "verification_records": [
+    {
+      "record": {
+        "completed_at": "2026-08-21T03:30:34Z",
+        "identity": {
+          "actor_class": "agent",
+          "actor_id": "verifier:result-runner-qualification",
+          "declared_at": "2026-08-21T03:30:34Z",
+          "public_key_hex": "1a23dbba5d88e0cea9e9df6a119a44d997e7d02e485da9c158d65c023cd54dbe",
+          "schema": "vela.signer-identity.v1"
+        },
+        "independence": {
+          "declared_independent_of": [],
+          "shared_dependencies": [
+            "Same operator and host as candidate execution; no independence claim."
+          ]
+        },
+        "method": {
+          "environment_root": "sha256:e858e506ac8d8c75d96710057e2f5e2b2da834ab2672f8e568db867908ebf946",
+          "implementation": "methods/runner.json",
+          "profile": "result-runner-qualification"
+        },
+        "outcome": "fail",
+        "output_artifact_ids": [
+          "27eac2014cc681493d0866a966ad9a8b447e2a82e4a0f95f3d40895f29acde70"
+        ],
+        "schema": "vela.verification-record.v2",
+        "scope": {
+          "does_not_establish": [
+            "Any scientific claim, mathematical truth, benchmark result, comparative utility, source-owner approval, canonical authority, or Standing.",
+            "Organizational, operator, host, provider, model, or source independence."
+          ],
+          "property": "Qualification establishes scientific truth or independent verification"
+        },
+        "started_at": "2026-08-21T03:30:34Z",
+        "subject": {
+          "artifact_ids": [
+            "9e8be05dd593a10733bddf370e92cdac2b537b7b4e99ebc8ceafc0c782c21139",
+            "28bfec40509f8fe084e77f9e8e342af5db0366acf02933025212310c7d7315bb"
+          ],
+          "claim_id": "vcl_b1da9d54c79a9a677b27db393847d9d9621f7e8ac0585d703e4380106af17f09",
+          "proposal_id": "vpr_c9047650c8b1914f",
+          "proposal_root": "sha256:c9047650c8b1914fd68bbc6aae48c960138eccffe7aff5c3ecbfe9d164573dd1",
+          "submission_id": "vsb_ccce6e72ca161390",
+          "submission_root": "sha256:ccce6e72ca161390e8b006dcfde5e57d58c643041f05e0643018e7e9fe28f54f"
+        }
+      },
+      "verification_record_id": "vvr_c89283aedba736cc",
+      "verification_record_root": "sha256:c89283aedba736ccf4c612854620bdd2adff186193b3f675614fdd6d571d404c"
+    }
+  ],
+  "withdrawal": null
+}

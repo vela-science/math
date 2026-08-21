@@ -20,6 +20,9 @@ output, proves source bytes unchanged, and records exact output through Native
 Git and JSON/SQLite routes. Its optional Vela integration is disposable and
 rejection-only; it cannot accept scientific Standing.
 
+Because the source mount is read-only, this runner cannot edit or test source
+changes and is not a proof-editing engine.
+
 The runner replaces copied experiment-specific shell harnesses. Its focused
 tests encode the failures retained in the historical
 `RESULTS-BREAKTHROUGH-01` process log.
