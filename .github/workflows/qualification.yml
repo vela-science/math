@@ -44,6 +44,16 @@ jobs:
           python-version: "3.13"
           enable-cache: false
 
+      - name: Assert the accepted Python interpreter
+        run: |
+          uv run --python 3.13 --no-project python - <<'PY'
+          import sys
+
+          if sys.version_info[:2] != (3, 13):
+              raise SystemExit(f"expected Python 3.13, got {sys.version}")
+          print(sys.version)
+          PY
+
       - name: Acquire and verify signed Vela
         run: |
           release_dir="$RUNNER_TEMP/vela-release"
@@ -145,7 +155,8 @@ jobs:
           VELA_TEST_SHA256: 5b21415c98503b20518c0e68714b0b4f4b3c371525ea110563b89a53a0d3dbb3
         run: |
           PYTHONDONTWRITEBYTECODE=1 \
-            python3 -m unittest discover -s tools/result_runner/tests -v
+            uv run --python 3.13 --no-project \
+              python -m unittest discover -s tools/result_runner/tests -v
 
       - name: Qualification preimages and Python hygiene
         run: |
@@ -155,8 +166,9 @@ jobs:
           (cd tools/result_runner/qualification-v0.977.6/math-read && \
             shasum -a 256 -c SHA256SUMS)
           PYTHONPYCACHEPREFIX="$RUNNER_TEMP/pycache" \
-            python3 -m compileall -q tools/result_runner
-          uvx ruff@0.5.4 format --check tools/result_runner
+            uv run --python 3.13 --no-project \
+              python -m compileall -q tools/result_runner
+          uvx --python 3.13 ruff@0.5.4 format --check tools/result_runner
 
       - name: Authority and patch hygiene
         run: |
