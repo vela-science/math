@@ -8,8 +8,12 @@ The current prelaunch state is a compact Submission v3 repository with three
 accepted Claims and no pending review. See [`MIGRATION.md`](MIGRATION.md) for
 the exact retained current-state inventory.
 
-Current strict replay and deterministic projection use signed Vela 0.977.3
-(`sha256:3a1173918bdcb887155bab681411bf5e9ff64d925fe1b50369ac37ab020b94ad`).
+Current strict replay and deterministic projection use signed Vela 0.977.6
+(`sha256:5b21415c98503b20518c0e68714b0b4f4b3c371525ea110563b89a53a0d3dbb3`).
+The consumer qualification is retained under
+[`tools/result_runner/qualification-v0.977.6/`](tools/result_runner/qualification-v0.977.6/).
+This Git documentation/consumer-pin change does not alter the rooted Vela
+Repository, authority history, Decisions, or Standing.
 
 ## Result execution
 

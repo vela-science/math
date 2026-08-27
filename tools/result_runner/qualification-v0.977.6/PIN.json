@@ -1,0 +1,83 @@
+{
+  "authority": {
+    "authority_effect": "none",
+    "authority_keyset_root": "sha256:370c9924a2e25716403b7f771d5ebf90e86f6ac96ad4351063e02e5a3f974081",
+    "authority_policy_root": "sha256:a18d5c0938a934d73d297ae073c2fae7bf045462b4d8e9a3fc7f66b4ad5366aa",
+    "decision_or_event_created": false,
+    "standing_changed": false,
+    "trust_anchor_changed": false
+  },
+  "classification": {
+    "benchmark_denominator": false,
+    "provider_requests": 0,
+    "scientific_claim": false,
+    "scientific_state_changed": false
+  },
+  "math": {
+    "accepted_claims": 3,
+    "base_commit": "cf6d76687b205a39e2515e9fec7087c819454d2f",
+    "base_tree": "f8e9e8d3b99226ed6bba62026396d5f17ea9351e",
+    "pending_review": 0,
+    "projection_root": "sha256:b1cfb5e64c2046ed2b4ce5c9f9551e582004f4df31c402b417eb3c2159271138",
+    "repository": "https://github.com/vela-science/math.git",
+    "repository_root": "sha256:a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4",
+    "strict_replay": "pass"
+  },
+  "protected_paths": {
+    "baseline_git_index_manifest_sha256": "4c7c5615d3ac6d2ea6b6a4704be250ed8b3c942e549a6ea76cb4837979fbd575",
+    "baseline_tracked_files": 224,
+    "comparison": "byte_identical_by_git_blob_id",
+    "paths": {
+      ".vela": 24,
+      "evaluations/far-probxiv-result-boundary-v1": 13,
+      "evidence/current": 19,
+      "methods/current": 7,
+      "records": 34,
+      "results/2026-08-20": 5,
+      "tools/result_runner/qualification-v0.977.4": 80,
+      "tools/result_runner/qualification-v1": 42
+    }
+  },
+  "qualification": {
+    "complete_existing_result_runner_tests": "pass_30_of_30",
+    "disposable_summary_sha256": "f238c5b683ea6654198ae60caf85fb2c33afe29eb1b5c84e77a2d4d15acd07ce",
+    "full_provider_qualification_rerun": false,
+    "limitation": "Ruff 0.5.4 check retains three pre-existing E402 findings in unchanged out-of-scope files; formatting and compileall pass.",
+    "provider_requests": 0,
+    "status": "pass_bounded_consumer_documentation_qualification"
+  },
+  "receipts": {
+    "math_read_sha256sums_sha256": "dfe5179b7bb7995e67f80d6300d1027692950f150c3041d9181562890a9e707d",
+    "projection_1_sha256": "503e7439522eda371793907cf86d949b3df6ebdbc257d728d5afab4f21f53ff1",
+    "projection_2_sha256": "503e7439522eda371793907cf86d949b3df6ebdbc257d728d5afab4f21f53ff1",
+    "projections_byte_identical": true,
+    "replay_sha256": "708524c77060abfc4a400626939abd477286c65de53de527e18bce602c5bc037",
+    "status_sha256": "6a1ef42131aaff1c06f40bb6f61cc5090de18790aee9e8b5f91e8363d964f4f5"
+  },
+  "release": {
+    "allowed_signers_blob": "90b14f69eaa5f95a1d027eaa6c1742ee962a5e44",
+    "allowed_signers_sha256": "dc471fc1ff1960879f39cc52cbe46b87142e1ccfb3b4d567eaae9ac4d26d0d10",
+    "archive": "vela-macos-aarch64.zip",
+    "archive_bytes": 2752120,
+    "archive_sha256": "62ea9006e086b40f0431b2ce2cf74827518f37dc58e329353920083f50dad874",
+    "binary_sha256": "5b21415c98503b20518c0e68714b0b4f4b3c371525ea110563b89a53a0d3dbb3",
+    "manifest_sha256": "596273b718661899ad10cb65d82c8c0d92240939899e72042180ef4912acfa2c",
+    "manifest_signature_sha256": "f4bbfe43dd3528b9a3a2de6f5efd00a7e1585aa1d813cbe09841bf35a42d123b",
+    "manifest_signature_verification": "pass",
+    "platform": "macos/aarch64",
+    "protocol_1_root": "sha256:bf1ef68165bccbc4d2e8a854f78c70448cc7de771bac23329f7a8ca115303f56",
+    "release_url": "https://github.com/vela-science/vela/releases/tag/v0.977.6",
+    "signature_fingerprint": "SHA256:MX3Eo1o9S5pLnx2kiNyAy2aME7PAWDtvqtUBljJst1M",
+    "signature_identity": "release@vela.space",
+    "signature_namespace": "vela-release",
+    "source_commit": "9ac8e7730bfb63a3b8eb1d2e1d91081c3e703c59",
+    "source_tree": "1332713f627ac73c235e4f9a7afe206499717154",
+    "tag": "v0.977.6",
+    "tag_object": "4a562d4529f6a329d938fc427bc73c4cbff90767",
+    "tag_signature_verification": "pass",
+    "triple": "aarch64-apple-darwin",
+    "version": "0.977.6"
+  },
+  "schema": "vela.math-result-runner-pin.v1",
+  "status": "pass_bounded_consumer_documentation_qualification"
+}

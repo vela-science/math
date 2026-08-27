@@ -1,0 +1,54 @@
+{
+  "schema": "vela.status.v4",
+  "ok": true,
+  "command": "status",
+  "repository": {
+    "id": "3d012325-3768-4b95-a385-c94e9f2a57a6",
+    "name": "Vela Mathematics Program",
+    "profile_root": "sha256:e1607a49a7e89ba709bac1c3b1d0abffaedfd3cf851b0f027945d73adaea9674"
+  },
+  "git": {
+    "role": "repository_head",
+    "commit": "cf6d76687b205a39e2515e9fec7087c819454d2f",
+    "tree": "f8e9e8d3b99226ed6bba62026396d5f17ea9351e"
+  },
+  "integrity": {
+    "replay": "verified",
+    "strict": "pass",
+    "blocker_count": 0,
+    "blockers_by_code": {}
+  },
+  "roots": {
+    "origin": "sha256:a6a12da8762f1252afe1ac1c75361ef54c583924a2b88474232ead6227873dca",
+    "repository": "sha256:a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4",
+    "authority_keyset": "sha256:370c9924a2e25716403b7f771d5ebf90e86f6ac96ad4351063e02e5a3f974081",
+    "authority_policy": "sha256:a18d5c0938a934d73d297ae073c2fae7bf045462b4d8e9a3fc7f66b4ad5366aa"
+  },
+  "counts": {
+    "claims": 3,
+    "accepted_claims": 3,
+    "pending_claims": 0,
+    "pending_review": 0,
+    "accepted_review": 6,
+    "rejected_review": 0,
+    "withdrawn_review": 0,
+    "submissions": 6,
+    "verifications": 6,
+    "artifacts": 10
+  },
+  "decision_inbox": {
+    "pending_count": 0,
+    "protocol_ready_count": 0,
+    "protocol_blocked_count": 0,
+    "projection_root": "sha256:93ce4f9dc6d9b62ccf09eac8e4ff214afc24cb817a45f2311ec9999d79bfcdc1",
+    "first_entry_root": null
+  },
+  "actions": {
+    "review": null,
+    "work": {
+      "mode": "direct_submission",
+      "command": "vela submit --repo /private/tmp/vela-math-0.977.6-read-full --help",
+      "note": "Submit bounded evidence directly."
+    }
+  }
+}

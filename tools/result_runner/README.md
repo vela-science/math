@@ -67,13 +67,14 @@ VELA_TEST_SHA256=<approved-binary-sha256> \
 python3 -m unittest discover -s tools/result_runner/tests -v
 ```
 
-The active signed Vela pin is `v0.977.4` for macOS arm64, binary SHA-256
-`06f912d107d29e4ce1dadd19bf7ef849ec42d7e62cbc9332c9807e6b8c9bd05e`.
-Exact tag/source, release-manifest, detached-signature, platform, and repeated
-non-scoring lifecycle receipts are retained in
-[`qualification-v0.977.4/`](qualification-v0.977.4/). The older Vela 0.977.3
-objects under `qualification-v1/` remain historical preimages and are not
-rewritten by the active pin.
+The active signed Vela pin is `v0.977.6` for macOS arm64, binary SHA-256
+`5b21415c98503b20518c0e68714b0b4f4b3c371525ea110563b89a53a0d3dbb3`.
+Exact tag/source, Protocol 1 root, release-manifest, detached signature,
+platform, Math read receipts, and the bounded non-scoring test qualification
+are retained in
+[`qualification-v0.977.6/`](qualification-v0.977.6/). The Vela 0.977.4
+qualification and older 0.977.3 objects under `qualification-v1/` remain
+historical preimages and are not rewritten by the active pin.
 
 The retained qualification is
 [`qualification-v1/`](qualification-v1/). Exactly one provider request

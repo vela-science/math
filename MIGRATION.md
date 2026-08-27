@@ -40,7 +40,14 @@ external acceptance, a Decision, or Standing.
 
 The accepted inventory is derived by strict replay. Current state does not
 depend on an auxiliary recovery branch or a legacy Submission envelope.
-Signed Vela 0.977.3
-(`sha256:3a1173918bdcb887155bab681411bf5e9ff64d925fe1b50369ac37ab020b94ad`)
+Signed Vela 0.977.6
+(`sha256:5b21415c98503b20518c0e68714b0b4f4b3c371525ea110563b89a53a0d3dbb3`)
 replays and projects the complete two-generation Erdős 94 correction chain by
 the exact Claim roots bound in its authority Events.
+
+The v0.977.6 repin changes the enclosing Git tree because it adds consumer
+qualification receipts and updates documentation. It does not rewrite
+`.vela/`, `records/`, `evidence/current/`, or `methods/current/`; consequently
+the Vela Repository root remains
+`sha256:a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4`,
+with three accepted Claims and no pending review.

@@ -1,0 +1,2810 @@
+{
+  "schema": "vela.repository-projection.v1",
+  "ok": true,
+  "command": "projection",
+  "authority_effect": "none",
+  "projection_root": "sha256:b1cfb5e64c2046ed2b4ce5c9f9551e582004f4df31c402b417eb3c2159271138",
+  "projection_root_definition": "sha256 of RFC 8785 canonical JSON after removing only projection_root",
+  "reader_version": "0.977.6",
+  "repository": {
+    "repository_id": "3d012325-3768-4b95-a385-c94e9f2a57a6",
+    "name": "Vela Mathematics Program",
+    "profile_root": "sha256:e1607a49a7e89ba709bac1c3b1d0abffaedfd3cf851b0f027945d73adaea9674",
+    "origin_id": "vro_a6a12da8762f1252",
+    "origin_root": "sha256:a6a12da8762f1252afe1ac1c75361ef54c583924a2b88474232ead6227873dca",
+    "origin_generation": 1,
+    "initial_object_set_root": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "repository_index_path": ".vela/repository.json",
+    "repository_root": "sha256:a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4",
+    "authority_keyset_root": "sha256:370c9924a2e25716403b7f771d5ebf90e86f6ac96ad4351063e02e5a3f974081",
+    "authority_policy_root": "sha256:a18d5c0938a934d73d297ae073c2fae7bf045462b4d8e9a3fc7f66b4ad5366aa",
+    "authority_record_root": "sha256:f056106a7c033dbfb6d7d7fc5f967fd8d384ddd8e5cdda5f9b24d5830cab57c4",
+    "authority_event_log_root": "sha256:753889ef627bba1073e9bc0586f798fb52ebbbfb5fe4d5f2a8a66d2f1b32d135"
+  },
+  "git": {
+    "role": "repository_head",
+    "commit": "cf6d76687b205a39e2515e9fec7087c819454d2f",
+    "tree": "f8e9e8d3b99226ed6bba62026396d5f17ea9351e"
+  },
+  "integrity": {
+    "replay": "verified",
+    "strict": "pass",
+    "blocker_count": 0,
+    "blockers_by_code": {}
+  },
+  "roots": {
+    "origin": "sha256:a6a12da8762f1252afe1ac1c75361ef54c583924a2b88474232ead6227873dca",
+    "repository": "sha256:a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4",
+    "authority_keyset": "sha256:370c9924a2e25716403b7f771d5ebf90e86f6ac96ad4351063e02e5a3f974081",
+    "authority_policy": "sha256:a18d5c0938a934d73d297ae073c2fae7bf045462b4d8e9a3fc7f66b4ad5366aa"
+  },
+  "counts": {
+    "claims": 3,
+    "accepted_claims": 3,
+    "pending_claims": 0,
+    "pending_review": 0,
+    "accepted_review": 6,
+    "rejected_review": 0,
+    "withdrawn_review": 0,
+    "submissions": 6,
+    "verifications": 6,
+    "artifacts": 10
+  },
+  "decision_inbox_summary": {
+    "pending_count": 0,
+    "protocol_ready_count": 0,
+    "protocol_blocked_count": 0,
+    "projection_root": "sha256:93ce4f9dc6d9b62ccf09eac8e4ff214afc24cb817a45f2311ec9999d79bfcdc1",
+    "first_entry_root": null
+  },
+  "actions": {
+    "review": null,
+    "work": {
+      "mode": "direct_submission",
+      "command": "vela submit --repo . --help",
+      "note": "Submit bounded evidence directly."
+    }
+  },
+  "claims": [
+    {
+      "claim_id": "vcl_1da4282b752192c52c2a985476fc13bfe460da01e4fe26c5543b7acb37d8b120",
+      "claim_root": "sha256:470072c1a598409aa8d27e420de7e24ea66dce94cf5fb3fcb97d9578d8991c63",
+      "source_path": "records/claims/sha256/470072c1a598409aa8d27e420de7e24ea66dce94cf5fb3fcb97d9578d8991c63.json",
+      "active": false,
+      "standing": "superseded",
+      "proposal_status": "accepted",
+      "assertion": "The Lean development starfleet/erdos-321 establishes a two-sided asymptotic bound on extremalSize, which denotes the same quantity as Formal Conjectures' Erdos321.R at pages commit 59f30aa3, and which therefore supplies a candidate answer for erdos_321.variants.isTheta rather than a proof of it.",
+      "assertion_kind": "theoretical",
+      "record": {
+        "assertion": {
+          "kind": "theoretical",
+          "text": "The Lean development starfleet/erdos-321 establishes a two-sided asymptotic bound on extremalSize, which denotes the same quantity as Formal Conjectures' Erdos321.R at pages commit 59f30aa3, and which therefore supplies a candidate answer for erdos_321.variants.isTheta rather than a proof of it."
+        },
+        "claim_id": "vcl_1da4282b752192c52c2a985476fc13bfe460da01e4fe26c5543b7acb37d8b120",
+        "conditions": [
+          "Exact source revisions and retained evidence/current/erdos-321 inputs only.",
+          "Caveat: Erdos problem 321 remains open; this does not assert resolution or optimality.",
+          "Caveat: The kernel gate is a recorded exact-commit CI attestation, not a fresh rebuild."
+        ],
+        "created_at": "2026-08-17T18:32:29Z",
+        "evidence": [
+          {
+            "artifact_path": "records/artifacts/sha256/789c9dc5e4c1c234450a7ebd03d7b4fb8e0ba6deab12098e2fb17b3e74bada10",
+            "artifact_root": "sha256:789c9dc5e4c1c234450a7ebd03d7b4fb8e0ba6deab12098e2fb17b3e74bada10",
+            "relation": "supports"
+          }
+        ],
+        "provenance": [
+          {
+            "authors": [
+              "agent:submission-v3-migration"
+            ],
+            "kind": "submission",
+            "title": "Authenticated Submission vsb_6cc500cc8153c8f5",
+            "year": 2026
+          }
+        ],
+        "relations": [],
+        "revision": 1,
+        "schema": "vela.claim-record.v1"
+      }
+    },
+    {
+      "claim_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+      "claim_root": "sha256:aedff5078a30bea1f8a51c1188f2f0aa9bc43da06c894706297d8bd7a4830767",
+      "source_path": "records/claims/sha256/aedff5078a30bea1f8a51c1188f2f0aa9bc43da06c894706297d8bd7a4830767.json",
+      "active": false,
+      "standing": "superseded",
+      "proposal_status": "accepted",
+      "assertion": "At lean-proofs commit 423344341fbfdf4f8f684a302c5d05379125e7dc, Erdos94.variants.sum_multiplicity proves that for every finite planar point set P, the sum over its distinct determined distances of the unordered-pair distance multiplicities equals P.card.choose 2, matching Formal Conjectures commit 94a278e06a8bcbc2e4f2935e491c0c115ec832e0. For occurrence resolution only, the exact occurrence Erdos94.erdos_94.variants.sum_multiplicity is associated with problem:erdos:94 under resolver entity root sha256:32f6e98a826da23c12c7cfcb8853e4712de130136c59f0454bd115c3fdb1e6b1. That occurrence is one of four Erdős 94 declarations Formal Conjectures publishes, and this identity does not establish the cubic distance-multiplicity conjecture.",
+      "assertion_kind": "theoretical",
+      "record": {
+        "assertion": {
+          "kind": "theoretical",
+          "text": "At lean-proofs commit 423344341fbfdf4f8f684a302c5d05379125e7dc, Erdos94.variants.sum_multiplicity proves that for every finite planar point set P, the sum over its distinct determined distances of the unordered-pair distance multiplicities equals P.card.choose 2, matching Formal Conjectures commit 94a278e06a8bcbc2e4f2935e491c0c115ec832e0. For occurrence resolution only, the exact occurrence Erdos94.erdos_94.variants.sum_multiplicity is associated with problem:erdos:94 under resolver entity root sha256:32f6e98a826da23c12c7cfcb8853e4712de130136c59f0454bd115c3fdb1e6b1. That occurrence is one of four Erdős 94 declarations Formal Conjectures publishes, and this identity does not establish the cubic distance-multiplicity conjecture."
+        },
+        "claim_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+        "conditions": [
+          "Exact source, proof, target, toolchain, integration, and Method roots retained in evidence/current/erdos-94/pilot-input.v1.json.",
+          "Occurrence association with problem:erdos:94 is navigation-only and establishes no statement identity or semantic equivalence.",
+          "Caveat: This proves only the elementary sum_multiplicity identity, not the cubic Erdős 94 theorem or either other variant.",
+          "Caveat: The Formal Conjectures build needs the mechanical Sym2.mk.uncurry to Sym2.mk API spelling change between its pinned Mathlib and lean-proofs.",
+          "Caveat: No external source-owner review, human review, upstream acceptance, or external adoption occurred.",
+          "Caveat: Producer checks are not Verification, Decision, or Standing.",
+          "Caveat: The predecessor's distance_multiplicity_double_counting Verification remains recoverable at rollback/submission-v2-coh-00 (508b39a) and is not re-attested over the compact v3 bytes."
+        ],
+        "created_at": "2026-08-17T18:40:05Z",
+        "evidence": [
+          {
+            "artifact_path": "records/artifacts/sha256/e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+            "artifact_root": "sha256:e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+            "relation": "supports"
+          },
+          {
+            "artifact_path": "records/artifacts/sha256/119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad",
+            "artifact_root": "sha256:119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad",
+            "relation": "supports"
+          },
+          {
+            "artifact_path": "records/artifacts/sha256/2db17099b421eff43d4892ddedcdd7b1bfecfbc6cca013447b3b94a81c3cd0f8",
+            "artifact_root": "sha256:2db17099b421eff43d4892ddedcdd7b1bfecfbc6cca013447b3b94a81c3cd0f8",
+            "relation": "supports"
+          }
+        ],
+        "provenance": [
+          {
+            "authors": [
+              "agent:submission-v3-migration"
+            ],
+            "kind": "submission",
+            "title": "Authenticated Submission vsb_d49869f07a7907d4",
+            "year": 2026
+          }
+        ],
+        "relations": [
+          {
+            "kind": "corrects",
+            "target_claim_id": "vcl_9ba852a45d8bc6f9dd024d85ff19e0b81317945f45e9eb073a89e44760a6b009"
+          }
+        ],
+        "revision": 2,
+        "schema": "vela.claim-record.v1"
+      }
+    },
+    {
+      "claim_id": "vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+      "claim_root": "sha256:aaaf6ebbf510ad08e6376c5958d23f4eb7704944f7d37916eee4ae253e809b3b",
+      "source_path": "records/claims/sha256/aaaf6ebbf510ad08e6376c5958d23f4eb7704944f7d37916eee4ae253e809b3b.json",
+      "active": true,
+      "standing": "accepted",
+      "proposal_status": "accepted",
+      "assertion": "At lean-proofs commit 423344341fbfdf4f8f684a302c5d05379125e7dc, Erdos94.variants.sum_multiplicity proves that for every finite planar point set P, the sum over its distinct determined distances of the unordered-pair distance multiplicities equals P.card.choose 2, matching Formal Conjectures commit 94a278e06a8bcbc2e4f2935e491c0c115ec832e0. For occurrence resolution only, the exact occurrence Erdos94.erdos_94.variants.sum_multiplicity is associated with problem:erdos:94 under resolver entity root sha256:32f6e98a826da23c12c7cfcb8853e4712de130136c59f0454bd115c3fdb1e6b1. That occurrence is one of four Erdős 94 declarations Formal Conjectures publishes, and this identity does not establish the cubic distance-multiplicity conjecture.",
+      "assertion_kind": "theoretical",
+      "record": {
+        "assertion": {
+          "kind": "theoretical",
+          "text": "At lean-proofs commit 423344341fbfdf4f8f684a302c5d05379125e7dc, Erdos94.variants.sum_multiplicity proves that for every finite planar point set P, the sum over its distinct determined distances of the unordered-pair distance multiplicities equals P.card.choose 2, matching Formal Conjectures commit 94a278e06a8bcbc2e4f2935e491c0c115ec832e0. For occurrence resolution only, the exact occurrence Erdos94.erdos_94.variants.sum_multiplicity is associated with problem:erdos:94 under resolver entity root sha256:32f6e98a826da23c12c7cfcb8853e4712de130136c59f0454bd115c3fdb1e6b1. That occurrence is one of four Erdős 94 declarations Formal Conjectures publishes, and this identity does not establish the cubic distance-multiplicity conjecture."
+        },
+        "claim_id": "vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+        "conditions": [
+          "Exact source, proof, target, toolchain, integration, and Method roots retained in evidence/current/erdos-94/pilot-input.v1.json.",
+          "Occurrence association with problem:erdos:94 is navigation-only and establishes no statement identity or semantic equivalence.",
+          "Caveat: This proves only the elementary sum_multiplicity identity, not the cubic Erdős 94 theorem or either other variant.",
+          "Caveat: The Formal Conjectures build needs the mechanical Sym2.mk.uncurry to Sym2.mk API spelling change between its pinned Mathlib and lean-proofs.",
+          "Caveat: No external source-owner review, human review, upstream acceptance, or external adoption occurred.",
+          "Caveat: Producer checks are not Verification, Decision, or Standing."
+        ],
+        "created_at": "2026-08-18T18:37:55Z",
+        "evidence": [
+          {
+            "artifact_path": "records/artifacts/sha256/e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+            "artifact_root": "sha256:e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+            "relation": "supports"
+          },
+          {
+            "artifact_path": "records/artifacts/sha256/119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad",
+            "artifact_root": "sha256:119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad",
+            "relation": "supports"
+          },
+          {
+            "artifact_path": "records/artifacts/sha256/06498cbc38514b7995a07e8c3a95901a8fb19763e44c6b9c97f28973104dfca1",
+            "artifact_root": "sha256:06498cbc38514b7995a07e8c3a95901a8fb19763e44c6b9c97f28973104dfca1",
+            "relation": "supports"
+          }
+        ],
+        "provenance": [
+          {
+            "authors": [
+              "agent:submission-v3-cleanup"
+            ],
+            "kind": "submission",
+            "title": "Authenticated Submission vsb_2d10ba2ff1aff901",
+            "year": 2026
+          }
+        ],
+        "relations": [
+          {
+            "kind": "corrects",
+            "target_claim_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165"
+          }
+        ],
+        "revision": 3,
+        "schema": "vela.claim-record.v1"
+      }
+    },
+    {
+      "claim_id": "vcl_8ab5a917ccc077f1971f630bae293a0e5bbed3156320e0b7223ffbd75d7b0464",
+      "claim_root": "sha256:ba44090062b79a6232cc5844e0fe4f3b11e63ae3b65bb971ff3fd9fc6ffe0a8a",
+      "source_path": "records/claims/sha256/ba44090062b79a6232cc5844e0fe4f3b11e63ae3b65bb971ff3fd9fc6ffe0a8a.json",
+      "active": true,
+      "standing": "accepted",
+      "proposal_status": "accepted",
+      "assertion": "Under the retained exact public compiled-cache replay, Lean 4.22.0 elaborates the scoped Erdos 887 repaired source with the four expected sorry warnings.",
+      "assertion_kind": "computational",
+      "record": {
+        "assertion": {
+          "kind": "computational",
+          "text": "Under the retained exact public compiled-cache replay, Lean 4.22.0 elaborates the scoped Erdos 887 repaired source with the four expected sorry warnings."
+        },
+        "claim_id": "vcl_8ab5a917ccc077f1971f630bae293a0e5bbed3156320e0b7223ffbd75d7b0464",
+        "conditions": [
+          "Exact evidence/current/erdos-887 source, patch, Lake manifest, and two compiled-cache inputs only.",
+          "Caveat: Lean elaboration with sorry does not prove Erdős problem 887.",
+          "Caveat: This is not a from-source dependency build.",
+          "Caveat: The same operator does not establish independent reproduction.",
+          "Caveat: The replay result does not establish source-owner acceptance, Vela Decision, or Standing."
+        ],
+        "created_at": "2026-08-17T18:33:59Z",
+        "evidence": [
+          {
+            "artifact_path": "records/artifacts/sha256/21d7b2911f116db1c57bbbf4b86c72d690cd7b727823d72ae50ba5742621dc6a",
+            "artifact_root": "sha256:21d7b2911f116db1c57bbbf4b86c72d690cd7b727823d72ae50ba5742621dc6a",
+            "relation": "supports"
+          }
+        ],
+        "provenance": [
+          {
+            "authors": [
+              "agent:submission-v3-migration"
+            ],
+            "kind": "submission",
+            "title": "Authenticated Submission vsb_e804f60a8ffd8658",
+            "year": 2026
+          }
+        ],
+        "relations": [],
+        "revision": 1,
+        "schema": "vela.claim-record.v1"
+      }
+    },
+    {
+      "claim_id": "vcl_9ba852a45d8bc6f9dd024d85ff19e0b81317945f45e9eb073a89e44760a6b009",
+      "claim_root": "sha256:8e762a3a7dff021b90d15618d8197ed2454d457416a494ae57e90d2b00688fb4",
+      "source_path": "records/claims/sha256/8e762a3a7dff021b90d15618d8197ed2454d457416a494ae57e90d2b00688fb4.json",
+      "active": false,
+      "standing": "superseded",
+      "proposal_status": "accepted",
+      "assertion": "At lean-proofs commit 423344341fbfdf4f8f684a302c5d05379125e7dc, Erdos94.variants.sum_multiplicity proves that for every finite planar point set P, the sum over its distinct determined distances of the unordered-pair distance multiplicities equals P.card.choose 2, matching Formal Conjectures commit 94a278e06a8bcbc2e4f2935e491c0c115ec832e0.",
+      "assertion_kind": "theoretical",
+      "record": {
+        "assertion": {
+          "kind": "theoretical",
+          "text": "At lean-proofs commit 423344341fbfdf4f8f684a302c5d05379125e7dc, Erdos94.variants.sum_multiplicity proves that for every finite planar point set P, the sum over its distinct determined distances of the unordered-pair distance multiplicities equals P.card.choose 2, matching Formal Conjectures commit 94a278e06a8bcbc2e4f2935e491c0c115ec832e0."
+        },
+        "claim_id": "vcl_9ba852a45d8bc6f9dd024d85ff19e0b81317945f45e9eb073a89e44760a6b009",
+        "conditions": [
+          "Exact source, proof, target, toolchain, integration, and Method roots retained in evidence/current/erdos-94/pilot-input.v1.json.",
+          "Caveat: This proves only the elementary sum_multiplicity identity, not the cubic Erdős 94 theorem or either other variant.",
+          "Caveat: The Formal Conjectures build needs the mechanical Sym2.mk.uncurry to Sym2.mk API spelling change between its pinned Mathlib and lean-proofs.",
+          "Caveat: No external source-owner review, human review, upstream acceptance, or external adoption occurred.",
+          "Caveat: Producer checks are not Verification, Decision, or Standing."
+        ],
+        "created_at": "2026-08-17T18:34:55Z",
+        "evidence": [
+          {
+            "artifact_path": "records/artifacts/sha256/e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+            "artifact_root": "sha256:e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+            "relation": "supports"
+          },
+          {
+            "artifact_path": "records/artifacts/sha256/119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad",
+            "artifact_root": "sha256:119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad",
+            "relation": "supports"
+          }
+        ],
+        "provenance": [
+          {
+            "authors": [
+              "agent:submission-v3-migration"
+            ],
+            "kind": "submission",
+            "title": "Authenticated Submission vsb_f43df4adcf653c88",
+            "year": 2026
+          }
+        ],
+        "relations": [],
+        "revision": 1,
+        "schema": "vela.claim-record.v1"
+      }
+    },
+    {
+      "claim_id": "vcl_b9c6915de55e15c69d06b9aeed786b0e632986374a347d77ff447ad244f67a2e",
+      "claim_root": "sha256:58f97ba8a90d23d4655c4b71051c6bdd4723c0454f31f4ed3cb3e95b0a6c8b15",
+      "source_path": "records/claims/sha256/58f97ba8a90d23d4655c4b71051c6bdd4723c0454f31f4ed3cb3e95b0a6c8b15.json",
+      "active": true,
+      "standing": "accepted",
+      "proposal_status": "accepted",
+      "assertion": "At Formal Conjectures commit 59f30aa314ba225fcd9268723ce8291616df1ab0, the Lean development starfleet/erdos-321 establishes a two-sided asymptotic bound on extremalSize, which denotes the same quantity as Formal Conjectures' Erdos321.R and therefore supplies a candidate answer for the exact occurrence Erdos321.erdos_321.variants.isTheta, not a proof of it. For occurrence resolution only, the exact occurrences Erdos321.erdos_321 and Erdos321.erdos_321.variants.isTheta are associated with problem:erdos:321 under resolver root sha256:a9d6787719c5c8069a9e14ade0f5a62975410272e6cd1583865b282d1d8669dd. At the exact retained Erdős 321 source revisions, the terminal theorem and structural comparison do not establish implication to either fixed Nat.log variant.",
+      "assertion_kind": "theoretical",
+      "record": {
+        "assertion": {
+          "kind": "theoretical",
+          "text": "At Formal Conjectures commit 59f30aa314ba225fcd9268723ce8291616df1ab0, the Lean development starfleet/erdos-321 establishes a two-sided asymptotic bound on extremalSize, which denotes the same quantity as Formal Conjectures' Erdos321.R and therefore supplies a candidate answer for the exact occurrence Erdos321.erdos_321.variants.isTheta, not a proof of it. For occurrence resolution only, the exact occurrences Erdos321.erdos_321 and Erdos321.erdos_321.variants.isTheta are associated with problem:erdos:321 under resolver root sha256:a9d6787719c5c8069a9e14ade0f5a62975410272e6cd1583865b282d1d8669dd. At the exact retained Erdős 321 source revisions, the terminal theorem and structural comparison do not establish implication to either fixed Nat.log variant."
+        },
+        "claim_id": "vcl_b9c6915de55e15c69d06b9aeed786b0e632986374a347d77ff447ad244f67a2e",
+        "conditions": [
+          "Exact source revisions, occurrence resolver root, and retained evidence/current/erdos-321 inputs only.",
+          "Caveat: Erdos problem 321 remains open; this does not assert resolution or optimality.",
+          "Caveat: Occurrence association is navigation-only and establishes no statement equivalence.",
+          "Caveat: The negative comparison does not show that a bridge is impossible or that either statement is false.",
+          "Caveat: The retained terminal and fixed sources have no exact resolved joint Lean environment."
+        ],
+        "created_at": "2026-08-17T18:33:12Z",
+        "evidence": [
+          {
+            "artifact_path": "records/artifacts/sha256/789c9dc5e4c1c234450a7ebd03d7b4fb8e0ba6deab12098e2fb17b3e74bada10",
+            "artifact_root": "sha256:789c9dc5e4c1c234450a7ebd03d7b4fb8e0ba6deab12098e2fb17b3e74bada10",
+            "relation": "supports"
+          }
+        ],
+        "provenance": [
+          {
+            "authors": [
+              "agent:submission-v3-migration"
+            ],
+            "kind": "submission",
+            "title": "Authenticated Submission vsb_a72e375d5b327714",
+            "year": 2026
+          }
+        ],
+        "relations": [
+          {
+            "kind": "corrects",
+            "target_claim_id": "vcl_1da4282b752192c52c2a985476fc13bfe460da01e4fe26c5543b7acb37d8b120"
+          }
+        ],
+        "revision": 2,
+        "schema": "vela.claim-record.v1"
+      }
+    }
+  ],
+  "proposals": [
+    {
+      "proposal_id": "vpr_28cbee4e7d2ec91e",
+      "proposal_root": "sha256:28cbee4e7d2ec91e5783760e3968c7e247535dd86e64580e344fd426a6dc9d92",
+      "source_path": "records/proposals/sha256/28cbee4e7d2ec91e5783760e3968c7e247535dd86e64580e344fd426a6dc9d92.json",
+      "status": "accepted",
+      "subject_standing": "accepted",
+      "submission_id": "vsb_e804f60a8ffd8658",
+      "submission_root": "sha256:e804f60a8ffd86581ba2991da37bddc51618b124af2ec0a8703f5ff42477177d",
+      "verification_record_ids": [
+        "vvr_3b2f2313628a8018"
+      ],
+      "record": {
+        "action": "claim.add",
+        "actor": "agent:submission-v3-migration",
+        "caveats": [
+          "Lean elaboration with sorry does not prove Erdős problem 887.",
+          "This is not a from-source dependency build.",
+          "The same operator does not establish independent reproduction.",
+          "The replay result does not establish source-owner acceptance, Vela Decision, or Standing."
+        ],
+        "created_at": "2026-08-17T18:34:01Z",
+        "producer_package": {
+          "id": "vsb_e804f60a8ffd8658",
+          "kind": "submission",
+          "path": "records/submissions/sha256/e804f60a8ffd86581ba2991da37bddc51618b124af2ec0a8703f5ff42477177d.json",
+          "root": "sha256:e804f60a8ffd86581ba2991da37bddc51618b124af2ec0a8703f5ff42477177d"
+        },
+        "reason": "Retain authenticated Submission vsb_e804f60a8ffd8658 for independent verification and authorized review.",
+        "schema": "vela.proposal.v1",
+        "subject": {
+          "id": "vcl_8ab5a917ccc077f1971f630bae293a0e5bbed3156320e0b7223ffbd75d7b0464",
+          "kind": "claim",
+          "root": "sha256:ba44090062b79a6232cc5844e0fe4f3b11e63ae3b65bb971ff3fd9fc6ffe0a8a"
+        }
+      },
+      "decision": {
+        "verdict": "accepted",
+        "decided_at": "2026-08-17T18:34:38Z",
+        "reason": "Accept the exact current bounded Erdős 887 replay assertion in the compact v3 lineage after a scoped fidelity check; this does not claim a proof or independent reproduction.",
+        "actor_id": "agent:submission-v3-migration",
+        "actor_class": "agent",
+        "session_ref": null,
+        "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+        "repository_before": "sha256:74d86b44986ac4a1851cea2f75ee53385baab316daa237ce6b9bebeb9a3a7fb6",
+        "repository_after": "sha256:0f6f1ed9291aaa4b39230758ea0331ca93bcc1895b82c95e8b802b0b2ad9b3e3",
+        "decision_event": {
+          "authority_event_id": "vev_a13da65173024317",
+          "authority_event_root": "sha256:f52a91f63be0c4a7b045b1e17fc5edef9778392363185fd990297c3038688ada",
+          "semantic_event_id": "vev_b5328546e6742152"
+        },
+        "applied_event": {
+          "authority_event_id": "vev_78f4df2422924722",
+          "authority_event_root": "sha256:14bde9dc68c3af4756f6e5e4fe9910ca1095aeeeb6b9f3d787aeb4e6ab672948",
+          "semantic_event_id": "vev_aa272d8889d709e8"
+        }
+      },
+      "withdrawal": null,
+      "decision_inbox_entry": null,
+      "consequence": {
+        "detail": "The current checkout retains the terminal Decision, but its exact pre-Decision Inbox belongs to the parent checkout.",
+        "state": "historical_base_required"
+      }
+    },
+    {
+      "proposal_id": "vpr_2c3fe5888b00366a",
+      "proposal_root": "sha256:2c3fe5888b00366ae66d638ada6511253311df9885474c48c3345d4adb45b730",
+      "source_path": "records/proposals/sha256/2c3fe5888b00366ae66d638ada6511253311df9885474c48c3345d4adb45b730.json",
+      "status": "accepted",
+      "subject_standing": "accepted",
+      "submission_id": "vsb_a72e375d5b327714",
+      "submission_root": "sha256:a72e375d5b327714edea3a4fca5397389ddbae68519ad46162d36773eefe18e1",
+      "verification_record_ids": [
+        "vvr_bcfb5c7a0812619d"
+      ],
+      "record": {
+        "action": "claim.revise",
+        "actor": "agent:submission-v3-migration",
+        "caveats": [
+          "Erdos problem 321 remains open; this does not assert resolution or optimality.",
+          "Occurrence association is navigation-only and establishes no statement equivalence.",
+          "The negative comparison does not show that a bridge is impossible or that either statement is false.",
+          "The retained terminal and fixed sources have no exact resolved joint Lean environment."
+        ],
+        "created_at": "2026-08-17T18:33:14Z",
+        "producer_package": {
+          "id": "vsb_a72e375d5b327714",
+          "kind": "submission",
+          "path": "records/submissions/sha256/a72e375d5b327714edea3a4fca5397389ddbae68519ad46162d36773eefe18e1.json",
+          "root": "sha256:a72e375d5b327714edea3a4fca5397389ddbae68519ad46162d36773eefe18e1"
+        },
+        "reason": "Retain authenticated Submission vsb_a72e375d5b327714 for independent verification and authorized review.",
+        "schema": "vela.proposal.v1",
+        "subject": {
+          "id": "vcl_b9c6915de55e15c69d06b9aeed786b0e632986374a347d77ff447ad244f67a2e",
+          "kind": "claim",
+          "root": "sha256:58f97ba8a90d23d4655c4b71051c6bdd4723c0454f31f4ed3cb3e95b0a6c8b15"
+        }
+      },
+      "decision": {
+        "verdict": "accepted",
+        "decided_at": "2026-08-17T18:33:47Z",
+        "reason": "Accept the exact current Erdős 321 assertion in the compact v3 lineage after a scoped fidelity check; preserve the correction relation and limitations without changing the scientific content.",
+        "actor_id": "agent:submission-v3-migration",
+        "actor_class": "agent",
+        "session_ref": null,
+        "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+        "repository_before": "sha256:6da29efeedc34fb6e505c7546e894390418c807342940ecbf60cc025f99ddc1c",
+        "repository_after": "sha256:f231a54f1a82991a02685719158814d168e418fc2091ca299486fae13743901c",
+        "decision_event": {
+          "authority_event_id": "vev_4a63ac7192f2a992",
+          "authority_event_root": "sha256:3f60b7bfeb48a6241c8f01d690ba9d424e4c28f5b2e354aa152ea077af336f17",
+          "semantic_event_id": "vev_15632b53fb7fd674"
+        },
+        "applied_event": {
+          "authority_event_id": "vev_78692c4be0e4d315",
+          "authority_event_root": "sha256:f9e4f4468ec9af9be660cba5f70095043ad36b2609b8b724d0780b47982bde86",
+          "semantic_event_id": "vev_b1a3213862d0bd53"
+        }
+      },
+      "withdrawal": null,
+      "decision_inbox_entry": null,
+      "consequence": {
+        "detail": "The current checkout retains the terminal Decision, but its exact pre-Decision Inbox belongs to the parent checkout.",
+        "state": "historical_base_required"
+      }
+    },
+    {
+      "proposal_id": "vpr_5949c53e3adbf1b9",
+      "proposal_root": "sha256:5949c53e3adbf1b9c7854551dbb50510edd63881ba008390ee73ec9ffed6aa79",
+      "source_path": "records/proposals/sha256/5949c53e3adbf1b9c7854551dbb50510edd63881ba008390ee73ec9ffed6aa79.json",
+      "status": "accepted",
+      "subject_standing": "superseded",
+      "submission_id": "vsb_6cc500cc8153c8f5",
+      "submission_root": "sha256:6cc500cc8153c8f5004f4c240efb64f67ab8f8bebcc1d26497942499a8cbf375",
+      "verification_record_ids": [],
+      "record": {
+        "action": "claim.add",
+        "actor": "agent:submission-v3-migration",
+        "caveats": [
+          "Erdos problem 321 remains open; this does not assert resolution or optimality.",
+          "The kernel gate is a recorded exact-commit CI attestation, not a fresh rebuild."
+        ],
+        "created_at": "2026-08-17T18:32:30Z",
+        "producer_package": {
+          "id": "vsb_6cc500cc8153c8f5",
+          "kind": "submission",
+          "path": "records/submissions/sha256/6cc500cc8153c8f5004f4c240efb64f67ab8f8bebcc1d26497942499a8cbf375.json",
+          "root": "sha256:6cc500cc8153c8f5004f4c240efb64f67ab8f8bebcc1d26497942499a8cbf375"
+        },
+        "reason": "Retain authenticated Submission vsb_6cc500cc8153c8f5 for independent verification and authorized review.",
+        "schema": "vela.proposal.v1",
+        "subject": {
+          "id": "vcl_1da4282b752192c52c2a985476fc13bfe460da01e4fe26c5543b7acb37d8b120",
+          "kind": "claim",
+          "root": "sha256:470072c1a598409aa8d27e420de7e24ea66dce94cf5fb3fcb97d9578d8991c63"
+        }
+      },
+      "decision": {
+        "verdict": "accepted",
+        "decided_at": "2026-08-17T18:32:56Z",
+        "reason": "Re-admit the exact intended Erdős 321 predecessor assertion into the compact prelaunch v3 lineage so its current correction remains explicit; this migration Decision does not change the scientific assertion.",
+        "actor_id": "agent:submission-v3-migration",
+        "actor_class": "agent",
+        "session_ref": null,
+        "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+        "repository_before": "sha256:1941e8aa2ae7c0404fd2bb401f2cc07b79403dbcfec93683a2ff5de74902f2be",
+        "repository_after": "sha256:744e8cdfdc93ae4ba6d70df12c977aa6efefaa9ced8ecfa7e09c45ff8445fdbe",
+        "decision_event": {
+          "authority_event_id": "vev_160a0cf2f12b7c75",
+          "authority_event_root": "sha256:04dda8fa282d6c592bce502e70e39ea433c966a9e5ba7f05a72459888bf685b5",
+          "semantic_event_id": "vev_5ca30142def02fd6"
+        },
+        "applied_event": {
+          "authority_event_id": "vev_1bf4273f8bf8bc98",
+          "authority_event_root": "sha256:90fc7ab5f3fd747049ca6ff4482491b11dec886a451bb1476664371d17cd2116",
+          "semantic_event_id": "vev_d554c42475e6095c"
+        }
+      },
+      "withdrawal": null,
+      "decision_inbox_entry": null,
+      "consequence": {
+        "detail": "The current checkout retains the terminal Decision, but its exact pre-Decision Inbox belongs to the parent checkout.",
+        "state": "historical_base_required"
+      }
+    },
+    {
+      "proposal_id": "vpr_76b66eb81ceb198d",
+      "proposal_root": "sha256:76b66eb81ceb198da2db05bddd75e246cf8ebca0567c7a758bdb979041e7fa4b",
+      "source_path": "records/proposals/sha256/76b66eb81ceb198da2db05bddd75e246cf8ebca0567c7a758bdb979041e7fa4b.json",
+      "status": "accepted",
+      "subject_standing": "superseded",
+      "submission_id": "vsb_f43df4adcf653c88",
+      "submission_root": "sha256:f43df4adcf653c88afb0f770236c509d19e828c2ce47cdfe5c9b8eda3e719965",
+      "verification_record_ids": [],
+      "record": {
+        "action": "claim.add",
+        "actor": "agent:submission-v3-migration",
+        "caveats": [
+          "This proves only the elementary sum_multiplicity identity, not the cubic Erdős 94 theorem or either other variant.",
+          "The Formal Conjectures build needs the mechanical Sym2.mk.uncurry to Sym2.mk API spelling change between its pinned Mathlib and lean-proofs.",
+          "No external source-owner review, human review, upstream acceptance, or external adoption occurred.",
+          "Producer checks are not Verification, Decision, or Standing."
+        ],
+        "created_at": "2026-08-17T18:34:58Z",
+        "producer_package": {
+          "id": "vsb_f43df4adcf653c88",
+          "kind": "submission",
+          "path": "records/submissions/sha256/f43df4adcf653c88afb0f770236c509d19e828c2ce47cdfe5c9b8eda3e719965.json",
+          "root": "sha256:f43df4adcf653c88afb0f770236c509d19e828c2ce47cdfe5c9b8eda3e719965"
+        },
+        "reason": "Retain authenticated Submission vsb_f43df4adcf653c88 for independent verification and authorized review.",
+        "schema": "vela.proposal.v1",
+        "subject": {
+          "id": "vcl_9ba852a45d8bc6f9dd024d85ff19e0b81317945f45e9eb073a89e44760a6b009",
+          "kind": "claim",
+          "root": "sha256:8e762a3a7dff021b90d15618d8197ed2454d457416a494ae57e90d2b00688fb4"
+        }
+      },
+      "decision": {
+        "verdict": "accepted",
+        "decided_at": "2026-08-17T18:35:19Z",
+        "reason": "Re-admit the exact intended Erdős 94 predecessor assertion only to preserve current correction truth in the compact v3 lineage. Its pre-v3 distance-multiplicity Verification remains recoverable at the signed rollback ref and is not re-attested over new bytes.",
+        "actor_id": "agent:submission-v3-migration",
+        "actor_class": "agent",
+        "session_ref": null,
+        "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+        "repository_before": "sha256:d8ff654b13215de6ee62c1d090c27ec62f7da286204f379881a5261e74e0cdb8",
+        "repository_after": "sha256:ec317d24a37314e71be6e74f9adf4ea34edb1ecb61aeb4578344a11132f91230",
+        "decision_event": {
+          "authority_event_id": "vev_970d4fef876f9ce4",
+          "authority_event_root": "sha256:62f64b83f256ac9824d9b9bca2c5de1ba8de9cb84a43d6f4766d7fd809852bbd",
+          "semantic_event_id": "vev_12a7c721cb506211"
+        },
+        "applied_event": {
+          "authority_event_id": "vev_82477af63e76141c",
+          "authority_event_root": "sha256:017b1815d2e10029b56223a294c0f9b2b03f1d4a02ee2cdc40008a242baea92e",
+          "semantic_event_id": "vev_6132d5e831ac0641"
+        }
+      },
+      "withdrawal": null,
+      "decision_inbox_entry": null,
+      "consequence": {
+        "detail": "The current checkout retains the terminal Decision, but its exact pre-Decision Inbox belongs to the parent checkout.",
+        "state": "historical_base_required"
+      }
+    },
+    {
+      "proposal_id": "vpr_b5ca521d2a892eee",
+      "proposal_root": "sha256:b5ca521d2a892eee2c156f25f6ef4849edab5b436e6855fd924a25d7427ac882",
+      "source_path": "records/proposals/sha256/b5ca521d2a892eee2c156f25f6ef4849edab5b436e6855fd924a25d7427ac882.json",
+      "status": "accepted",
+      "subject_standing": "accepted",
+      "submission_id": "vsb_2d10ba2ff1aff901",
+      "submission_root": "sha256:2d10ba2ff1aff901aeb8d16993fee8933938345ae32fe3e458ad2a4a60ff1adf",
+      "verification_record_ids": [
+        "vvr_ac3996330910c9fb",
+        "vvr_f89662daad9537c0"
+      ],
+      "record": {
+        "action": "claim.revise",
+        "actor": "agent:submission-v3-cleanup",
+        "caveats": [
+          "This proves only the elementary sum_multiplicity identity, not the cubic Erdős 94 theorem or either other variant.",
+          "The Formal Conjectures build needs the mechanical Sym2.mk.uncurry to Sym2.mk API spelling change between its pinned Mathlib and lean-proofs.",
+          "No external source-owner review, human review, upstream acceptance, or external adoption occurred.",
+          "Producer checks are not Verification, Decision, or Standing."
+        ],
+        "created_at": "2026-08-18T18:38:01Z",
+        "producer_package": {
+          "id": "vsb_2d10ba2ff1aff901",
+          "kind": "submission",
+          "path": "records/submissions/sha256/2d10ba2ff1aff901aeb8d16993fee8933938345ae32fe3e458ad2a4a60ff1adf.json",
+          "root": "sha256:2d10ba2ff1aff901aeb8d16993fee8933938345ae32fe3e458ad2a4a60ff1adf"
+        },
+        "reason": "Retain authenticated Submission vsb_2d10ba2ff1aff901 for independent verification and authorized review.",
+        "schema": "vela.proposal.v1",
+        "subject": {
+          "id": "vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+          "kind": "claim",
+          "root": "sha256:aaaf6ebbf510ad08e6376c5958d23f4eb7704944f7d37916eee4ae253e809b3b"
+        }
+      },
+      "decision": {
+        "verdict": "accepted",
+        "decided_at": "2026-08-18T18:46:11Z",
+        "reason": "Accept the byte-identical Erdős 94 assertion as the current Submission v3 revision after two scoped actor-separated fidelity reviews. This removes only the obsolete recovery caveat, preserves the exact occurrence mapping and every scientific limit, and adds no new validation.",
+        "actor_id": "agent:submission-v3-cleanup-decision",
+        "actor_class": "agent",
+        "session_ref": "codex:019fe903-28b7-73d1-bd26-bdd9a083c1a4",
+        "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+        "repository_before": "sha256:c465145c974a09e8b535efc7e3b6e7755e8b73916d4bad3403c2a41c12841875",
+        "repository_after": "sha256:a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4",
+        "decision_event": {
+          "authority_event_id": "vev_5d0ab1bf4dc7df99",
+          "authority_event_root": "sha256:f41713fe1c360035a7ff5f8587582289c74a743dec0a82d5e4a0ccd4d7689045",
+          "semantic_event_id": "vev_1bb01953aec0d5ca"
+        },
+        "applied_event": {
+          "authority_event_id": "vev_4de946c32ad32331",
+          "authority_event_root": "sha256:549a092971512300aa7f01e35905f268e44cd54b4afc839a60483935958bfa10",
+          "semantic_event_id": "vev_e04b25b2a4c02a15"
+        }
+      },
+      "withdrawal": null,
+      "decision_inbox_entry": null,
+      "consequence": {
+        "detail": "The current checkout retains the terminal Decision, but its exact pre-Decision Inbox belongs to the parent checkout.",
+        "state": "historical_base_required"
+      }
+    },
+    {
+      "proposal_id": "vpr_d7253663013962ba",
+      "proposal_root": "sha256:d7253663013962ba402bd22b0ddcf83b4f7910648272d802c619f82bf67487e5",
+      "source_path": "records/proposals/sha256/d7253663013962ba402bd22b0ddcf83b4f7910648272d802c619f82bf67487e5.json",
+      "status": "accepted",
+      "subject_standing": "superseded",
+      "submission_id": "vsb_d49869f07a7907d4",
+      "submission_root": "sha256:d49869f07a7907d411135d70a562636d3b57b79eb6ab05f334028682ee036085",
+      "verification_record_ids": [
+        "vvr_b485b7d408095f94",
+        "vvr_fb7cbd5546644686"
+      ],
+      "record": {
+        "action": "claim.revise",
+        "actor": "agent:submission-v3-migration",
+        "caveats": [
+          "This proves only the elementary sum_multiplicity identity, not the cubic Erdős 94 theorem or either other variant.",
+          "The Formal Conjectures build needs the mechanical Sym2.mk.uncurry to Sym2.mk API spelling change between its pinned Mathlib and lean-proofs.",
+          "No external source-owner review, human review, upstream acceptance, or external adoption occurred.",
+          "Producer checks are not Verification, Decision, or Standing.",
+          "The predecessor's distance_multiplicity_double_counting Verification remains recoverable at rollback/submission-v2-coh-00 (508b39a) and is not re-attested over the compact v3 bytes."
+        ],
+        "created_at": "2026-08-17T18:40:10Z",
+        "producer_package": {
+          "id": "vsb_d49869f07a7907d4",
+          "kind": "submission",
+          "path": "records/submissions/sha256/d49869f07a7907d411135d70a562636d3b57b79eb6ab05f334028682ee036085.json",
+          "root": "sha256:d49869f07a7907d411135d70a562636d3b57b79eb6ab05f334028682ee036085"
+        },
+        "reason": "Retain authenticated Submission vsb_d49869f07a7907d4 for independent verification and authorized review.",
+        "schema": "vela.proposal.v1",
+        "subject": {
+          "id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+          "kind": "claim",
+          "root": "sha256:aedff5078a30bea1f8a51c1188f2f0aa9bc43da06c894706297d8bd7a4830767"
+        }
+      },
+      "decision": {
+        "verdict": "accepted",
+        "decided_at": "2026-08-17T18:48:36Z",
+        "reason": "Accept the exact current Erdős 94 assertion in the compact v3 lineage after independent scoped checks of occurrence mapping and correction scope. Preserve the correction and all nonclaims without changing the scientific assertion.",
+        "actor_id": "agent:submission-v3-migration",
+        "actor_class": "agent",
+        "session_ref": null,
+        "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+        "repository_before": "sha256:d48ea1c5bd4ac89149733e37b17b0baa8ae9b79b10539c911e8e98cf07ee168c",
+        "repository_after": "sha256:45640c5eea54693df444eada6dd1a7c1f5a4b4ef266fddf79cf51d083233ebba",
+        "decision_event": {
+          "authority_event_id": "vev_6760e3d5ca23ae40",
+          "authority_event_root": "sha256:a04af2d5dd136ef3e5347403b0c217ed0a5453a6c0b18678e4a7f11d688c0f31",
+          "semantic_event_id": "vev_aefe96c39e957fef"
+        },
+        "applied_event": {
+          "authority_event_id": "vev_adb8a979e3f549b6",
+          "authority_event_root": "sha256:9310fa5b861ce1f90226c6ba4b4cd1491125d784b1d03ea365319fb1676d21e0",
+          "semantic_event_id": "vev_b2787993800e9001"
+        }
+      },
+      "withdrawal": null,
+      "decision_inbox_entry": null,
+      "consequence": {
+        "detail": "The current checkout retains the terminal Decision, but its exact pre-Decision Inbox belongs to the parent checkout.",
+        "state": "historical_base_required"
+      }
+    }
+  ],
+  "submissions": [
+    {
+      "object_id": "vsb_2d10ba2ff1aff901",
+      "object_root": "sha256:2d10ba2ff1aff901aeb8d16993fee8933938345ae32fe3e458ad2a4a60ff1adf",
+      "source_path": "records/submissions/sha256/2d10ba2ff1aff901aeb8d16993fee8933938345ae32fe3e458ad2a4a60ff1adf.json",
+      "envelope": {
+        "payload": "eyJhcnRpZmFjdHMiOlt7ImRpZ2VzdCI6InNoYTI1NjplMjA1NGU3ZDVkNTdkMWQxZjRmZDMxMWQyNmRiYTY1YWZiOTBlZjg3M2U3ZjA0Y2I3YmI1ZTQzMWU0MzE0OGViIiwia2luZCI6InNvdXJjZS1ldmlkZW5jZSIsInBhdGgiOiJldmlkZW5jZS9jdXJyZW50L2VyZG9zLTk0L3BpbG90LWlucHV0LnYxLmpzb24ifSx7ImRpZ2VzdCI6InNoYTI1NjoxMTllNGQyMmMxZThlNWYyOTMxZjU3NmU2ZTFhZjkyZjkwNmY3YmQ0OWQ3ZjRkZTI4YjIyY2I5Mjk1NTYwMGFkIiwia2luZCI6InByb2R1Y2VyLXJlcG9ydCIsInBhdGgiOiJldmlkZW5jZS9jdXJyZW50L2VyZG9zLTk0L3Byb2R1Y2VyLXJlcG9ydC52MS5qc29uIn0seyJkaWdlc3QiOiJzaGEyNTY6MDY0OThjYmMzODUxNGI3OTk1YTA3ZThjM2E5NTkwMWE4ZmIxOTc2M2U0NGM2YjljOTdmMjg5NzMxMDRkZmNhMSIsImtpbmQiOiJvY2N1cnJlbmNlLWJpbmRpbmciLCJwYXRoIjoiZXZpZGVuY2UvY3VycmVudC9lcmRvcy05NC9vY2N1cnJlbmNlLWJpbmRpbmcudjIuanNvbiJ9XSwiY2F2ZWF0cyI6WyJUaGlzIHByb3ZlcyBvbmx5IHRoZSBlbGVtZW50YXJ5IHN1bV9tdWx0aXBsaWNpdHkgaWRlbnRpdHksIG5vdCB0aGUgY3ViaWMgRXJkxZFzIDk0IHRoZW9yZW0gb3IgZWl0aGVyIG90aGVyIHZhcmlhbnQuIiwiVGhlIEZvcm1hbCBDb25qZWN0dXJlcyBidWlsZCBuZWVkcyB0aGUgbWVjaGFuaWNhbCBTeW0yLm1rLnVuY3VycnkgdG8gU3ltMi5tayBBUEkgc3BlbGxpbmcgY2hhbmdlIGJldHdlZW4gaXRzIHBpbm5lZCBNYXRobGliIGFuZCBsZWFuLXByb29mcy4iLCJObyBleHRlcm5hbCBzb3VyY2Utb3duZXIgcmV2aWV3LCBodW1hbiByZXZpZXcsIHVwc3RyZWFtIGFjY2VwdGFuY2UsIG9yIGV4dGVybmFsIGFkb3B0aW9uIG9jY3VycmVkLiIsIlByb2R1Y2VyIGNoZWNrcyBhcmUgbm90IFZlcmlmaWNhdGlvbiwgRGVjaXNpb24sIG9yIFN0YW5kaW5nLiJdLCJjbGFpbSI6eyJhc3NlcnRpb24iOiJBdCBsZWFuLXByb29mcyBjb21taXQgNDIzMzQ0MzQxZmJmZGY0ZjhmNjg0YTMwMmM1ZDA1Mzc5MTI1ZTdkYywgRXJkb3M5NC52YXJpYW50cy5zdW1fbXVsdGlwbGljaXR5IHByb3ZlcyB0aGF0IGZvciBldmVyeSBmaW5pdGUgcGxhbmFyIHBvaW50IHNldCBQLCB0aGUgc3VtIG92ZXIgaXRzIGRpc3RpbmN0IGRldGVybWluZWQgZGlzdGFuY2VzIG9mIHRoZSB1bm9yZGVyZWQtcGFpciBkaXN0YW5jZSBtdWx0aXBsaWNpdGllcyBlcXVhbHMgUC5jYXJkLmNob29zZSAyLCBtYXRjaGluZyBGb3JtYWwgQ29uamVjdHVyZXMgY29tbWl0IDk0YTI3OGUwNmE4YmNiYzJlNGYyOTM1ZTQ5MWMwYzExNWVjODMyZTAuIEZvciBvY2N1cnJlbmNlIHJlc29sdXRpb24gb25seSwgdGhlIGV4YWN0IG9jY3VycmVuY2UgRXJkb3M5NC5lcmRvc185NC52YXJpYW50cy5zdW1fbXVsdGlwbGljaXR5IGlzIGFzc29jaWF0ZWQgd2l0aCBwcm9ibGVtOmVyZG9zOjk0IHVuZGVyIHJlc29sdmVyIGVudGl0eSByb290IHNoYTI1NjozMmY2ZTk4YTgyNmRhMjNjMTJjN2NmY2I4ODUzZTQ3MTJkZTEzMDEzNmM1OWYwNDU0YmQxMTVjM2ZkYjFlNmIxLiBUaGF0IG9jY3VycmVuY2UgaXMgb25lIG9mIGZvdXIgRXJkxZFzIDk0IGRlY2xhcmF0aW9ucyBGb3JtYWwgQ29uamVjdHVyZXMgcHVibGlzaGVzLCBhbmQgdGhpcyBpZGVudGl0eSBkb2VzIG5vdCBlc3RhYmxpc2ggdGhlIGN1YmljIGRpc3RhbmNlLW11bHRpcGxpY2l0eSBjb25qZWN0dXJlLiIsImNvbmRpdGlvbnMiOlsiRXhhY3Qgc291cmNlLCBwcm9vZiwgdGFyZ2V0LCB0b29sY2hhaW4sIGludGVncmF0aW9uLCBhbmQgTWV0aG9kIHJvb3RzIHJldGFpbmVkIGluIGV2aWRlbmNlL2N1cnJlbnQvZXJkb3MtOTQvcGlsb3QtaW5wdXQudjEuanNvbi4iLCJPY2N1cnJlbmNlIGFzc29jaWF0aW9uIHdpdGggcHJvYmxlbTplcmRvczo5NCBpcyBuYXZpZ2F0aW9uLW9ubHkgYW5kIGVzdGFibGlzaGVzIG5vIHN0YXRlbWVudCBpZGVudGl0eSBvciBzZW1hbnRpYyBlcXVpdmFsZW5jZS4iXSwidHlwZSI6InRoZW9yZXRpY2FsIn0sImlkZW50aXR5Ijp7ImFjdG9yX2NsYXNzIjoiYWdlbnQiLCJhY3Rvcl9pZCI6ImFnZW50OnN1Ym1pc3Npb24tdjMtY2xlYW51cCIsImRlY2xhcmVkX2F0IjoiMjAyNi0wOC0xOFQxODozNzo1NVoiLCJwdWJsaWNfa2V5X2hleCI6IjgwNGQxZDMxODhjNTk2NWY5OTExMjQ4MTkzY2NiOTAzZTI5ZjZiMTllNjQyZGJkYjZkMjA2ZmU0OGI1ZTlkZTUiLCJzY2hlbWEiOiJ2ZWxhLnNpZ25lci1pZGVudGl0eS52MSJ9LCJwcm9kdWNlcl9jaGVja3MiOlt7ImF1dGhvcml0eSI6InByb2R1Y2VyX3JlcG9ydGVkIiwibWV0aG9kIjoibGVhbi1idWlsZCIsIm91dGNvbWUiOiJwYXNzIn0seyJhdXRob3JpdHkiOiJwcm9kdWNlcl9yZXBvcnRlZCIsIm1ldGhvZCI6ImF4aW9tLWF1ZGl0Iiwib3V0Y29tZSI6InBhc3MifV0sInByb3ZlbmFuY2UiOnsiZW1pdHRlZF9hdCI6IjIwMjYtMDgtMThUMTg6Mzc6NTVaIiwicHJvZHVjZXIiOiJhZ2VudDpzdWJtaXNzaW9uLXYzLWNsZWFudXAiLCJzb3VyY2Vfc3lzdGVtIjoidmVsYS1jbGkifSwicmVwbGF5YWJpbGl0eSI6ImV4YWN0IiwicmVxdWVzdGVkX2NoYW5nZSI6eyJraW5kIjoiY29ycmVjdF9jbGFpbSIsInRhcmdldCI6eyJjbGFpbV9pZCI6InZjbF80Y2FlMGQ0MTJhOTVkMTk2NWI5MjdlMWY3ZGJhYTQyNDVmNWI5YzNmODRjNTkxM2UxZDZhNzg4MGQ2MzQ5MTY1IiwiY2xhaW1fcm9vdCI6InNoYTI1NjphZWRmZjUwNzhhMzBiZWExZjhhNTFjMTE4OGYyZjBhYTliYzQzZGEwNmM4OTQ3MDYyOTdkOGJkN2E0ODMwNzY3In19LCJzY2hlbWEiOiJ2ZWxhLnN1Ym1pc3Npb24udjMiLCJ2ZXJpZmljYXRpb25fcmVxdWlyZW1lbnRzIjpbInN1Ym1pc3Npb25fdjNfcmV2aXNpb25fZmlkZWxpdHkiLCJzY2llbnRpZmljX21lYW5pbmdfYW5kX3N0YXRlX2ZpZGVsaXR5Il19",
+        "payloadType": "application/vnd.vela.submission.v3+json",
+        "signatures": [
+          {
+            "keyid": "804d1d3188c5965f9911248193ccb903e29f6b19e642dbdb6d206fe48b5e9de5",
+            "sig": "L4pjqLaW+gj2BPxW2ym72FVY0ceTRn6ZpuWYHYR9lSLSWr7zU7SC/CRdb4wpFV5cjJUI0Td36qV+1z4s5y6TAg=="
+          }
+        ]
+      },
+      "payload": {
+        "artifacts": [
+          {
+            "digest": "sha256:e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+            "kind": "source-evidence",
+            "path": "evidence/current/erdos-94/pilot-input.v1.json"
+          },
+          {
+            "digest": "sha256:119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad",
+            "kind": "producer-report",
+            "path": "evidence/current/erdos-94/producer-report.v1.json"
+          },
+          {
+            "digest": "sha256:06498cbc38514b7995a07e8c3a95901a8fb19763e44c6b9c97f28973104dfca1",
+            "kind": "occurrence-binding",
+            "path": "evidence/current/erdos-94/occurrence-binding.v2.json"
+          }
+        ],
+        "caveats": [
+          "This proves only the elementary sum_multiplicity identity, not the cubic Erdős 94 theorem or either other variant.",
+          "The Formal Conjectures build needs the mechanical Sym2.mk.uncurry to Sym2.mk API spelling change between its pinned Mathlib and lean-proofs.",
+          "No external source-owner review, human review, upstream acceptance, or external adoption occurred.",
+          "Producer checks are not Verification, Decision, or Standing."
+        ],
+        "claim": {
+          "assertion": "At lean-proofs commit 423344341fbfdf4f8f684a302c5d05379125e7dc, Erdos94.variants.sum_multiplicity proves that for every finite planar point set P, the sum over its distinct determined distances of the unordered-pair distance multiplicities equals P.card.choose 2, matching Formal Conjectures commit 94a278e06a8bcbc2e4f2935e491c0c115ec832e0. For occurrence resolution only, the exact occurrence Erdos94.erdos_94.variants.sum_multiplicity is associated with problem:erdos:94 under resolver entity root sha256:32f6e98a826da23c12c7cfcb8853e4712de130136c59f0454bd115c3fdb1e6b1. That occurrence is one of four Erdős 94 declarations Formal Conjectures publishes, and this identity does not establish the cubic distance-multiplicity conjecture.",
+          "conditions": [
+            "Exact source, proof, target, toolchain, integration, and Method roots retained in evidence/current/erdos-94/pilot-input.v1.json.",
+            "Occurrence association with problem:erdos:94 is navigation-only and establishes no statement identity or semantic equivalence."
+          ],
+          "type": "theoretical"
+        },
+        "identity": {
+          "actor_class": "agent",
+          "actor_id": "agent:submission-v3-cleanup",
+          "declared_at": "2026-08-18T18:37:55Z",
+          "public_key_hex": "804d1d3188c5965f9911248193ccb903e29f6b19e642dbdb6d206fe48b5e9de5",
+          "schema": "vela.signer-identity.v1"
+        },
+        "producer_checks": [
+          {
+            "authority": "producer_reported",
+            "method": "lean-build",
+            "outcome": "pass"
+          },
+          {
+            "authority": "producer_reported",
+            "method": "axiom-audit",
+            "outcome": "pass"
+          }
+        ],
+        "provenance": {
+          "emitted_at": "2026-08-18T18:37:55Z",
+          "producer": "agent:submission-v3-cleanup",
+          "source_system": "vela-cli"
+        },
+        "replayability": "exact",
+        "requested_change": {
+          "kind": "correct_claim",
+          "target": {
+            "claim_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+            "claim_root": "sha256:aedff5078a30bea1f8a51c1188f2f0aa9bc43da06c894706297d8bd7a4830767"
+          }
+        },
+        "schema": "vela.submission.v3",
+        "verification_requirements": [
+          "submission_v3_revision_fidelity",
+          "scientific_meaning_and_state_fidelity"
+        ]
+      },
+      "authentication": {
+        "signature_verified": true,
+        "actor_id": "agent:submission-v3-cleanup"
+      },
+      "review_method": null
+    },
+    {
+      "object_id": "vsb_6cc500cc8153c8f5",
+      "object_root": "sha256:6cc500cc8153c8f5004f4c240efb64f67ab8f8bebcc1d26497942499a8cbf375",
+      "source_path": "records/submissions/sha256/6cc500cc8153c8f5004f4c240efb64f67ab8f8bebcc1d26497942499a8cbf375.json",
+      "envelope": {
+        "payload": "eyJhcnRpZmFjdHMiOlt7ImRpZ2VzdCI6InNoYTI1Njo3ODljOWRjNWU0YzFjMjM0NDUwYTdlYmQwM2Q3YjRmYjhlMGJhNmRlYWIxMjA5OGUyZmIxN2IzZTc0YmFkYTEwIiwia2luZCI6InNjaWVudGlmaWMtZXZpZGVuY2UiLCJwYXRoIjoiZXZpZGVuY2UvY3VycmVudC9lcmRvcy0zMjEvY29ycmVjdGlvbi1jaGFpbi52MS5qc29uIn1dLCJjYXZlYXRzIjpbIkVyZG9zIHByb2JsZW0gMzIxIHJlbWFpbnMgb3BlbjsgdGhpcyBkb2VzIG5vdCBhc3NlcnQgcmVzb2x1dGlvbiBvciBvcHRpbWFsaXR5LiIsIlRoZSBrZXJuZWwgZ2F0ZSBpcyBhIHJlY29yZGVkIGV4YWN0LWNvbW1pdCBDSSBhdHRlc3RhdGlvbiwgbm90IGEgZnJlc2ggcmVidWlsZC4iXSwiY2xhaW0iOnsiYXNzZXJ0aW9uIjoiVGhlIExlYW4gZGV2ZWxvcG1lbnQgc3RhcmZsZWV0L2VyZG9zLTMyMSBlc3RhYmxpc2hlcyBhIHR3by1zaWRlZCBhc3ltcHRvdGljIGJvdW5kIG9uIGV4dHJlbWFsU2l6ZSwgd2hpY2ggZGVub3RlcyB0aGUgc2FtZSBxdWFudGl0eSBhcyBGb3JtYWwgQ29uamVjdHVyZXMnIEVyZG9zMzIxLlIgYXQgcGFnZXMgY29tbWl0IDU5ZjMwYWEzLCBhbmQgd2hpY2ggdGhlcmVmb3JlIHN1cHBsaWVzIGEgY2FuZGlkYXRlIGFuc3dlciBmb3IgZXJkb3NfMzIxLnZhcmlhbnRzLmlzVGhldGEgcmF0aGVyIHRoYW4gYSBwcm9vZiBvZiBpdC4iLCJjb25kaXRpb25zIjpbIkV4YWN0IHNvdXJjZSByZXZpc2lvbnMgYW5kIHJldGFpbmVkIGV2aWRlbmNlL2N1cnJlbnQvZXJkb3MtMzIxIGlucHV0cyBvbmx5LiJdLCJ0eXBlIjoidGhlb3JldGljYWwifSwiaWRlbnRpdHkiOnsiYWN0b3JfY2xhc3MiOiJhZ2VudCIsImFjdG9yX2lkIjoiYWdlbnQ6c3VibWlzc2lvbi12My1taWdyYXRpb24iLCJkZWNsYXJlZF9hdCI6IjIwMjYtMDgtMTdUMTg6MzI6MjlaIiwicHVibGljX2tleV9oZXgiOiI4ZTQyYzBjNGY0OWE4ZTdkODlkZmQxMWQ0YzMwYzA1YWI2MzIyZTRlZDJkMjEwZDIwYzRiZDg1MDYwYmZkNGM0Iiwic2NoZW1hIjoidmVsYS5zaWduZXItaWRlbnRpdHkudjEifSwicHJvZHVjZXJfY2hlY2tzIjpbXSwicHJvdmVuYW5jZSI6eyJlbWl0dGVkX2F0IjoiMjAyNi0wOC0xN1QxODozMjoyOVoiLCJwcm9kdWNlciI6ImFnZW50OnN1Ym1pc3Npb24tdjMtbWlncmF0aW9uIiwic291cmNlX3N5c3RlbSI6InZlbGEtY2xpIn0sInJlcGxheWFiaWxpdHkiOiJ1bmF2YWlsYWJsZSIsInJlcXVlc3RlZF9jaGFuZ2UiOnsia2luZCI6ImFkZF9jbGFpbSJ9LCJzY2hlbWEiOiJ2ZWxhLnN1Ym1pc3Npb24udjMiLCJ2ZXJpZmljYXRpb25fcmVxdWlyZW1lbnRzIjpbXX0=",
+        "payloadType": "application/vnd.vela.submission.v3+json",
+        "signatures": [
+          {
+            "keyid": "8e42c0c4f49a8e7d89dfd11d4c30c05ab6322e4ed2d210d20c4bd85060bfd4c4",
+            "sig": "vlxEUxbW17TtySq5VSS8ZH0sbXOkLEjg9Bj22F4e/+DmJDHV3VRUHXCRWt4iovMqqG11ngnUKzGZKjPsRaOsDQ=="
+          }
+        ]
+      },
+      "payload": {
+        "artifacts": [
+          {
+            "digest": "sha256:789c9dc5e4c1c234450a7ebd03d7b4fb8e0ba6deab12098e2fb17b3e74bada10",
+            "kind": "scientific-evidence",
+            "path": "evidence/current/erdos-321/correction-chain.v1.json"
+          }
+        ],
+        "caveats": [
+          "Erdos problem 321 remains open; this does not assert resolution or optimality.",
+          "The kernel gate is a recorded exact-commit CI attestation, not a fresh rebuild."
+        ],
+        "claim": {
+          "assertion": "The Lean development starfleet/erdos-321 establishes a two-sided asymptotic bound on extremalSize, which denotes the same quantity as Formal Conjectures' Erdos321.R at pages commit 59f30aa3, and which therefore supplies a candidate answer for erdos_321.variants.isTheta rather than a proof of it.",
+          "conditions": [
+            "Exact source revisions and retained evidence/current/erdos-321 inputs only."
+          ],
+          "type": "theoretical"
+        },
+        "identity": {
+          "actor_class": "agent",
+          "actor_id": "agent:submission-v3-migration",
+          "declared_at": "2026-08-17T18:32:29Z",
+          "public_key_hex": "8e42c0c4f49a8e7d89dfd11d4c30c05ab6322e4ed2d210d20c4bd85060bfd4c4",
+          "schema": "vela.signer-identity.v1"
+        },
+        "producer_checks": [],
+        "provenance": {
+          "emitted_at": "2026-08-17T18:32:29Z",
+          "producer": "agent:submission-v3-migration",
+          "source_system": "vela-cli"
+        },
+        "replayability": "unavailable",
+        "requested_change": {
+          "kind": "add_claim"
+        },
+        "schema": "vela.submission.v3",
+        "verification_requirements": []
+      },
+      "authentication": {
+        "signature_verified": true,
+        "actor_id": "agent:submission-v3-migration"
+      },
+      "review_method": null
+    },
+    {
+      "object_id": "vsb_a72e375d5b327714",
+      "object_root": "sha256:a72e375d5b327714edea3a4fca5397389ddbae68519ad46162d36773eefe18e1",
+      "source_path": "records/submissions/sha256/a72e375d5b327714edea3a4fca5397389ddbae68519ad46162d36773eefe18e1.json",
+      "envelope": {
+        "payload": "eyJhcnRpZmFjdHMiOlt7ImRpZ2VzdCI6InNoYTI1Njo3ODljOWRjNWU0YzFjMjM0NDUwYTdlYmQwM2Q3YjRmYjhlMGJhNmRlYWIxMjA5OGUyZmIxN2IzZTc0YmFkYTEwIiwia2luZCI6InNjaWVudGlmaWMtZXZpZGVuY2UiLCJwYXRoIjoiZXZpZGVuY2UvY3VycmVudC9lcmRvcy0zMjEvY29ycmVjdGlvbi1jaGFpbi52MS5qc29uIn1dLCJjYXZlYXRzIjpbIkVyZG9zIHByb2JsZW0gMzIxIHJlbWFpbnMgb3BlbjsgdGhpcyBkb2VzIG5vdCBhc3NlcnQgcmVzb2x1dGlvbiBvciBvcHRpbWFsaXR5LiIsIk9jY3VycmVuY2UgYXNzb2NpYXRpb24gaXMgbmF2aWdhdGlvbi1vbmx5IGFuZCBlc3RhYmxpc2hlcyBubyBzdGF0ZW1lbnQgZXF1aXZhbGVuY2UuIiwiVGhlIG5lZ2F0aXZlIGNvbXBhcmlzb24gZG9lcyBub3Qgc2hvdyB0aGF0IGEgYnJpZGdlIGlzIGltcG9zc2libGUgb3IgdGhhdCBlaXRoZXIgc3RhdGVtZW50IGlzIGZhbHNlLiIsIlRoZSByZXRhaW5lZCB0ZXJtaW5hbCBhbmQgZml4ZWQgc291cmNlcyBoYXZlIG5vIGV4YWN0IHJlc29sdmVkIGpvaW50IExlYW4gZW52aXJvbm1lbnQuIl0sImNsYWltIjp7ImFzc2VydGlvbiI6IkF0IEZvcm1hbCBDb25qZWN0dXJlcyBjb21taXQgNTlmMzBhYTMxNGJhMjI1ZmNkOTI2ODcyM2NlODI5MTYxNmRmMWFiMCwgdGhlIExlYW4gZGV2ZWxvcG1lbnQgc3RhcmZsZWV0L2VyZG9zLTMyMSBlc3RhYmxpc2hlcyBhIHR3by1zaWRlZCBhc3ltcHRvdGljIGJvdW5kIG9uIGV4dHJlbWFsU2l6ZSwgd2hpY2ggZGVub3RlcyB0aGUgc2FtZSBxdWFudGl0eSBhcyBGb3JtYWwgQ29uamVjdHVyZXMnIEVyZG9zMzIxLlIgYW5kIHRoZXJlZm9yZSBzdXBwbGllcyBhIGNhbmRpZGF0ZSBhbnN3ZXIgZm9yIHRoZSBleGFjdCBvY2N1cnJlbmNlIEVyZG9zMzIxLmVyZG9zXzMyMS52YXJpYW50cy5pc1RoZXRhLCBub3QgYSBwcm9vZiBvZiBpdC4gRm9yIG9jY3VycmVuY2UgcmVzb2x1dGlvbiBvbmx5LCB0aGUgZXhhY3Qgb2NjdXJyZW5jZXMgRXJkb3MzMjEuZXJkb3NfMzIxIGFuZCBFcmRvczMyMS5lcmRvc18zMjEudmFyaWFudHMuaXNUaGV0YSBhcmUgYXNzb2NpYXRlZCB3aXRoIHByb2JsZW06ZXJkb3M6MzIxIHVuZGVyIHJlc29sdmVyIHJvb3Qgc2hhMjU2OmE5ZDY3ODc3MTljNWM4MDY5YTllMTRhZGUwZjVhNjI5NzU0MTAyNzJlNmNkMTU4Mzg2NWIyODJkMWQ4NjY5ZGQuIEF0IHRoZSBleGFjdCByZXRhaW5lZCBFcmTFkXMgMzIxIHNvdXJjZSByZXZpc2lvbnMsIHRoZSB0ZXJtaW5hbCB0aGVvcmVtIGFuZCBzdHJ1Y3R1cmFsIGNvbXBhcmlzb24gZG8gbm90IGVzdGFibGlzaCBpbXBsaWNhdGlvbiB0byBlaXRoZXIgZml4ZWQgTmF0LmxvZyB2YXJpYW50LiIsImNvbmRpdGlvbnMiOlsiRXhhY3Qgc291cmNlIHJldmlzaW9ucywgb2NjdXJyZW5jZSByZXNvbHZlciByb290LCBhbmQgcmV0YWluZWQgZXZpZGVuY2UvY3VycmVudC9lcmRvcy0zMjEgaW5wdXRzIG9ubHkuIl0sInR5cGUiOiJ0aGVvcmV0aWNhbCJ9LCJpZGVudGl0eSI6eyJhY3Rvcl9jbGFzcyI6ImFnZW50IiwiYWN0b3JfaWQiOiJhZ2VudDpzdWJtaXNzaW9uLXYzLW1pZ3JhdGlvbiIsImRlY2xhcmVkX2F0IjoiMjAyNi0wOC0xN1QxODozMzoxMloiLCJwdWJsaWNfa2V5X2hleCI6IjhlNDJjMGM0ZjQ5YThlN2Q4OWRmZDExZDRjMzBjMDVhYjYzMjJlNGVkMmQyMTBkMjBjNGJkODUwNjBiZmQ0YzQiLCJzY2hlbWEiOiJ2ZWxhLnNpZ25lci1pZGVudGl0eS52MSJ9LCJwcm9kdWNlcl9jaGVja3MiOltdLCJwcm92ZW5hbmNlIjp7ImVtaXR0ZWRfYXQiOiIyMDI2LTA4LTE3VDE4OjMzOjEyWiIsInByb2R1Y2VyIjoiYWdlbnQ6c3VibWlzc2lvbi12My1taWdyYXRpb24iLCJzb3VyY2Vfc3lzdGVtIjoidmVsYS1jbGkifSwicmVwbGF5YWJpbGl0eSI6ImV4YWN0IiwicmVxdWVzdGVkX2NoYW5nZSI6eyJraW5kIjoiY29ycmVjdF9jbGFpbSIsInRhcmdldCI6eyJjbGFpbV9pZCI6InZjbF8xZGE0MjgyYjc1MjE5MmM1MmMyYTk4NTQ3NmZjMTNiZmU0NjBkYTAxZTRmZTI2YzU1NDNiN2FjYjM3ZDhiMTIwIiwiY2xhaW1fcm9vdCI6InNoYTI1Njo0NzAwNzJjMWE1OTg0MDlhYThkMjdlNDIwZGU3ZTI0ZWE2NmRjZTk0Y2Y1ZmIzZmNiOTdkOTU3OGQ4OTkxYzYzIn19LCJzY2hlbWEiOiJ2ZWxhLnN1Ym1pc3Npb24udjMiLCJ2ZXJpZmljYXRpb25fcmVxdWlyZW1lbnRzIjpbXX0=",
+        "payloadType": "application/vnd.vela.submission.v3+json",
+        "signatures": [
+          {
+            "keyid": "8e42c0c4f49a8e7d89dfd11d4c30c05ab6322e4ed2d210d20c4bd85060bfd4c4",
+            "sig": "ZaOPfpPWGr/x8UroUUv+hhwfHrhcPcE7OJIxxRGYM9HbsFWOOkFZM+FIpOYy/LwdiW46F3b4SKDx4SL0G2TSCw=="
+          }
+        ]
+      },
+      "payload": {
+        "artifacts": [
+          {
+            "digest": "sha256:789c9dc5e4c1c234450a7ebd03d7b4fb8e0ba6deab12098e2fb17b3e74bada10",
+            "kind": "scientific-evidence",
+            "path": "evidence/current/erdos-321/correction-chain.v1.json"
+          }
+        ],
+        "caveats": [
+          "Erdos problem 321 remains open; this does not assert resolution or optimality.",
+          "Occurrence association is navigation-only and establishes no statement equivalence.",
+          "The negative comparison does not show that a bridge is impossible or that either statement is false.",
+          "The retained terminal and fixed sources have no exact resolved joint Lean environment."
+        ],
+        "claim": {
+          "assertion": "At Formal Conjectures commit 59f30aa314ba225fcd9268723ce8291616df1ab0, the Lean development starfleet/erdos-321 establishes a two-sided asymptotic bound on extremalSize, which denotes the same quantity as Formal Conjectures' Erdos321.R and therefore supplies a candidate answer for the exact occurrence Erdos321.erdos_321.variants.isTheta, not a proof of it. For occurrence resolution only, the exact occurrences Erdos321.erdos_321 and Erdos321.erdos_321.variants.isTheta are associated with problem:erdos:321 under resolver root sha256:a9d6787719c5c8069a9e14ade0f5a62975410272e6cd1583865b282d1d8669dd. At the exact retained Erdős 321 source revisions, the terminal theorem and structural comparison do not establish implication to either fixed Nat.log variant.",
+          "conditions": [
+            "Exact source revisions, occurrence resolver root, and retained evidence/current/erdos-321 inputs only."
+          ],
+          "type": "theoretical"
+        },
+        "identity": {
+          "actor_class": "agent",
+          "actor_id": "agent:submission-v3-migration",
+          "declared_at": "2026-08-17T18:33:12Z",
+          "public_key_hex": "8e42c0c4f49a8e7d89dfd11d4c30c05ab6322e4ed2d210d20c4bd85060bfd4c4",
+          "schema": "vela.signer-identity.v1"
+        },
+        "producer_checks": [],
+        "provenance": {
+          "emitted_at": "2026-08-17T18:33:12Z",
+          "producer": "agent:submission-v3-migration",
+          "source_system": "vela-cli"
+        },
+        "replayability": "exact",
+        "requested_change": {
+          "kind": "correct_claim",
+          "target": {
+            "claim_id": "vcl_1da4282b752192c52c2a985476fc13bfe460da01e4fe26c5543b7acb37d8b120",
+            "claim_root": "sha256:470072c1a598409aa8d27e420de7e24ea66dce94cf5fb3fcb97d9578d8991c63"
+          }
+        },
+        "schema": "vela.submission.v3",
+        "verification_requirements": []
+      },
+      "authentication": {
+        "signature_verified": true,
+        "actor_id": "agent:submission-v3-migration"
+      },
+      "review_method": null
+    },
+    {
+      "object_id": "vsb_d49869f07a7907d4",
+      "object_root": "sha256:d49869f07a7907d411135d70a562636d3b57b79eb6ab05f334028682ee036085",
+      "source_path": "records/submissions/sha256/d49869f07a7907d411135d70a562636d3b57b79eb6ab05f334028682ee036085.json",
+      "envelope": {
+        "payload": "eyJhcnRpZmFjdHMiOlt7ImRpZ2VzdCI6InNoYTI1NjplMjA1NGU3ZDVkNTdkMWQxZjRmZDMxMWQyNmRiYTY1YWZiOTBlZjg3M2U3ZjA0Y2I3YmI1ZTQzMWU0MzE0OGViIiwia2luZCI6InNvdXJjZS1ldmlkZW5jZSIsInBhdGgiOiJldmlkZW5jZS9jdXJyZW50L2VyZG9zLTk0L3BpbG90LWlucHV0LnYxLmpzb24ifSx7ImRpZ2VzdCI6InNoYTI1NjoxMTllNGQyMmMxZThlNWYyOTMxZjU3NmU2ZTFhZjkyZjkwNmY3YmQ0OWQ3ZjRkZTI4YjIyY2I5Mjk1NTYwMGFkIiwia2luZCI6InByb2R1Y2VyLXJlcG9ydCIsInBhdGgiOiJldmlkZW5jZS9jdXJyZW50L2VyZG9zLTk0L3Byb2R1Y2VyLXJlcG9ydC52MS5qc29uIn0seyJkaWdlc3QiOiJzaGEyNTY6MmRiMTcwOTliNDIxZWZmNDNkNDg5MmRkZWRjZGQ3YjFiZmVjZmJjNmNjYTAxMzQ0N2IzYjk0YTgxYzNjZDBmOCIsImtpbmQiOiJvY2N1cnJlbmNlLWJpbmRpbmciLCJwYXRoIjoiZXZpZGVuY2UvY3VycmVudC9lcmRvcy05NC9vY2N1cnJlbmNlLWJpbmRpbmcudjEuanNvbiJ9XSwiY2F2ZWF0cyI6WyJUaGlzIHByb3ZlcyBvbmx5IHRoZSBlbGVtZW50YXJ5IHN1bV9tdWx0aXBsaWNpdHkgaWRlbnRpdHksIG5vdCB0aGUgY3ViaWMgRXJkxZFzIDk0IHRoZW9yZW0gb3IgZWl0aGVyIG90aGVyIHZhcmlhbnQuIiwiVGhlIEZvcm1hbCBDb25qZWN0dXJlcyBidWlsZCBuZWVkcyB0aGUgbWVjaGFuaWNhbCBTeW0yLm1rLnVuY3VycnkgdG8gU3ltMi5tayBBUEkgc3BlbGxpbmcgY2hhbmdlIGJldHdlZW4gaXRzIHBpbm5lZCBNYXRobGliIGFuZCBsZWFuLXByb29mcy4iLCJObyBleHRlcm5hbCBzb3VyY2Utb3duZXIgcmV2aWV3LCBodW1hbiByZXZpZXcsIHVwc3RyZWFtIGFjY2VwdGFuY2UsIG9yIGV4dGVybmFsIGFkb3B0aW9uIG9jY3VycmVkLiIsIlByb2R1Y2VyIGNoZWNrcyBhcmUgbm90IFZlcmlmaWNhdGlvbiwgRGVjaXNpb24sIG9yIFN0YW5kaW5nLiIsIlRoZSBwcmVkZWNlc3NvcidzIGRpc3RhbmNlX211bHRpcGxpY2l0eV9kb3VibGVfY291bnRpbmcgVmVyaWZpY2F0aW9uIHJlbWFpbnMgcmVjb3ZlcmFibGUgYXQgcm9sbGJhY2svc3VibWlzc2lvbi12Mi1jb2gtMDAgKDUwOGIzOWEpIGFuZCBpcyBub3QgcmUtYXR0ZXN0ZWQgb3ZlciB0aGUgY29tcGFjdCB2MyBieXRlcy4iXSwiY2xhaW0iOnsiYXNzZXJ0aW9uIjoiQXQgbGVhbi1wcm9vZnMgY29tbWl0IDQyMzM0NDM0MWZiZmRmNGY4ZjY4NGEzMDJjNWQwNTM3OTEyNWU3ZGMsIEVyZG9zOTQudmFyaWFudHMuc3VtX211bHRpcGxpY2l0eSBwcm92ZXMgdGhhdCBmb3IgZXZlcnkgZmluaXRlIHBsYW5hciBwb2ludCBzZXQgUCwgdGhlIHN1bSBvdmVyIGl0cyBkaXN0aW5jdCBkZXRlcm1pbmVkIGRpc3RhbmNlcyBvZiB0aGUgdW5vcmRlcmVkLXBhaXIgZGlzdGFuY2UgbXVsdGlwbGljaXRpZXMgZXF1YWxzIFAuY2FyZC5jaG9vc2UgMiwgbWF0Y2hpbmcgRm9ybWFsIENvbmplY3R1cmVzIGNvbW1pdCA5NGEyNzhlMDZhOGJjYmMyZTRmMjkzNWU0OTFjMGMxMTVlYzgzMmUwLiBGb3Igb2NjdXJyZW5jZSByZXNvbHV0aW9uIG9ubHksIHRoZSBleGFjdCBvY2N1cnJlbmNlIEVyZG9zOTQuZXJkb3NfOTQudmFyaWFudHMuc3VtX211bHRpcGxpY2l0eSBpcyBhc3NvY2lhdGVkIHdpdGggcHJvYmxlbTplcmRvczo5NCB1bmRlciByZXNvbHZlciBlbnRpdHkgcm9vdCBzaGEyNTY6MzJmNmU5OGE4MjZkYTIzYzEyYzdjZmNiODg1M2U0NzEyZGUxMzAxMzZjNTlmMDQ1NGJkMTE1YzNmZGIxZTZiMS4gVGhhdCBvY2N1cnJlbmNlIGlzIG9uZSBvZiBmb3VyIEVyZMWRcyA5NCBkZWNsYXJhdGlvbnMgRm9ybWFsIENvbmplY3R1cmVzIHB1Ymxpc2hlcywgYW5kIHRoaXMgaWRlbnRpdHkgZG9lcyBub3QgZXN0YWJsaXNoIHRoZSBjdWJpYyBkaXN0YW5jZS1tdWx0aXBsaWNpdHkgY29uamVjdHVyZS4iLCJjb25kaXRpb25zIjpbIkV4YWN0IHNvdXJjZSwgcHJvb2YsIHRhcmdldCwgdG9vbGNoYWluLCBpbnRlZ3JhdGlvbiwgYW5kIE1ldGhvZCByb290cyByZXRhaW5lZCBpbiBldmlkZW5jZS9jdXJyZW50L2VyZG9zLTk0L3BpbG90LWlucHV0LnYxLmpzb24uIiwiT2NjdXJyZW5jZSBhc3NvY2lhdGlvbiB3aXRoIHByb2JsZW06ZXJkb3M6OTQgaXMgbmF2aWdhdGlvbi1vbmx5IGFuZCBlc3RhYmxpc2hlcyBubyBzdGF0ZW1lbnQgaWRlbnRpdHkgb3Igc2VtYW50aWMgZXF1aXZhbGVuY2UuIl0sInR5cGUiOiJ0aGVvcmV0aWNhbCJ9LCJpZGVudGl0eSI6eyJhY3Rvcl9jbGFzcyI6ImFnZW50IiwiYWN0b3JfaWQiOiJhZ2VudDpzdWJtaXNzaW9uLXYzLW1pZ3JhdGlvbiIsImRlY2xhcmVkX2F0IjoiMjAyNi0wOC0xN1QxODo0MDowNVoiLCJwdWJsaWNfa2V5X2hleCI6IjhlNDJjMGM0ZjQ5YThlN2Q4OWRmZDExZDRjMzBjMDVhYjYzMjJlNGVkMmQyMTBkMjBjNGJkODUwNjBiZmQ0YzQiLCJzY2hlbWEiOiJ2ZWxhLnNpZ25lci1pZGVudGl0eS52MSJ9LCJwcm9kdWNlcl9jaGVja3MiOlt7ImF1dGhvcml0eSI6InByb2R1Y2VyX3JlcG9ydGVkIiwibWV0aG9kIjoibGVhbi1idWlsZCIsIm91dGNvbWUiOiJwYXNzIn0seyJhdXRob3JpdHkiOiJwcm9kdWNlcl9yZXBvcnRlZCIsIm1ldGhvZCI6ImF4aW9tLWF1ZGl0Iiwib3V0Y29tZSI6InBhc3MifV0sInByb3ZlbmFuY2UiOnsiZW1pdHRlZF9hdCI6IjIwMjYtMDgtMTdUMTg6NDA6MDVaIiwicHJvZHVjZXIiOiJhZ2VudDpzdWJtaXNzaW9uLXYzLW1pZ3JhdGlvbiIsInNvdXJjZV9zeXN0ZW0iOiJ2ZWxhLWNsaSJ9LCJyZXBsYXlhYmlsaXR5IjoiZXhhY3QiLCJyZXF1ZXN0ZWRfY2hhbmdlIjp7ImtpbmQiOiJjb3JyZWN0X2NsYWltIiwidGFyZ2V0Ijp7ImNsYWltX2lkIjoidmNsXzliYTg1MmE0NWQ4YmM2ZjlkZDAyNGQ4NWZmMTllMGI4MTMxNzk0NWY0NWU5ZWIwNzNhODllNDQ3NjBhNmIwMDkiLCJjbGFpbV9yb290Ijoic2hhMjU2OjhlNzYyYTNhN2RmZjAyMWI5MGQxNTYxOGQ4MTk3ZWQyNDU0ZDQ1NzQxNmE0OTRhZTU3ZTkwZDJiMDA2ODhmYjQifX0sInNjaGVtYSI6InZlbGEuc3VibWlzc2lvbi52MyIsInZlcmlmaWNhdGlvbl9yZXF1aXJlbWVudHMiOlsib2NjdXJyZW5jZV9tYXBwaW5nX2ZpZGVsaXR5IiwiY29ycmVjdGVkX3JlY29yZF9zY29wZV9maWRlbGl0eSJdfQ==",
+        "payloadType": "application/vnd.vela.submission.v3+json",
+        "signatures": [
+          {
+            "keyid": "8e42c0c4f49a8e7d89dfd11d4c30c05ab6322e4ed2d210d20c4bd85060bfd4c4",
+            "sig": "QmGWh8RHBj/iJeNz4zWytpW5rkg9BXCFqne4OgsTUSrjA0Wpaqdu/u5PuwSLjljqoP+UTmjbV26YgCzOJHtkAg=="
+          }
+        ]
+      },
+      "payload": {
+        "artifacts": [
+          {
+            "digest": "sha256:e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+            "kind": "source-evidence",
+            "path": "evidence/current/erdos-94/pilot-input.v1.json"
+          },
+          {
+            "digest": "sha256:119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad",
+            "kind": "producer-report",
+            "path": "evidence/current/erdos-94/producer-report.v1.json"
+          },
+          {
+            "digest": "sha256:2db17099b421eff43d4892ddedcdd7b1bfecfbc6cca013447b3b94a81c3cd0f8",
+            "kind": "occurrence-binding",
+            "path": "evidence/current/erdos-94/occurrence-binding.v1.json"
+          }
+        ],
+        "caveats": [
+          "This proves only the elementary sum_multiplicity identity, not the cubic Erdős 94 theorem or either other variant.",
+          "The Formal Conjectures build needs the mechanical Sym2.mk.uncurry to Sym2.mk API spelling change between its pinned Mathlib and lean-proofs.",
+          "No external source-owner review, human review, upstream acceptance, or external adoption occurred.",
+          "Producer checks are not Verification, Decision, or Standing.",
+          "The predecessor's distance_multiplicity_double_counting Verification remains recoverable at rollback/submission-v2-coh-00 (508b39a) and is not re-attested over the compact v3 bytes."
+        ],
+        "claim": {
+          "assertion": "At lean-proofs commit 423344341fbfdf4f8f684a302c5d05379125e7dc, Erdos94.variants.sum_multiplicity proves that for every finite planar point set P, the sum over its distinct determined distances of the unordered-pair distance multiplicities equals P.card.choose 2, matching Formal Conjectures commit 94a278e06a8bcbc2e4f2935e491c0c115ec832e0. For occurrence resolution only, the exact occurrence Erdos94.erdos_94.variants.sum_multiplicity is associated with problem:erdos:94 under resolver entity root sha256:32f6e98a826da23c12c7cfcb8853e4712de130136c59f0454bd115c3fdb1e6b1. That occurrence is one of four Erdős 94 declarations Formal Conjectures publishes, and this identity does not establish the cubic distance-multiplicity conjecture.",
+          "conditions": [
+            "Exact source, proof, target, toolchain, integration, and Method roots retained in evidence/current/erdos-94/pilot-input.v1.json.",
+            "Occurrence association with problem:erdos:94 is navigation-only and establishes no statement identity or semantic equivalence."
+          ],
+          "type": "theoretical"
+        },
+        "identity": {
+          "actor_class": "agent",
+          "actor_id": "agent:submission-v3-migration",
+          "declared_at": "2026-08-17T18:40:05Z",
+          "public_key_hex": "8e42c0c4f49a8e7d89dfd11d4c30c05ab6322e4ed2d210d20c4bd85060bfd4c4",
+          "schema": "vela.signer-identity.v1"
+        },
+        "producer_checks": [
+          {
+            "authority": "producer_reported",
+            "method": "lean-build",
+            "outcome": "pass"
+          },
+          {
+            "authority": "producer_reported",
+            "method": "axiom-audit",
+            "outcome": "pass"
+          }
+        ],
+        "provenance": {
+          "emitted_at": "2026-08-17T18:40:05Z",
+          "producer": "agent:submission-v3-migration",
+          "source_system": "vela-cli"
+        },
+        "replayability": "exact",
+        "requested_change": {
+          "kind": "correct_claim",
+          "target": {
+            "claim_id": "vcl_9ba852a45d8bc6f9dd024d85ff19e0b81317945f45e9eb073a89e44760a6b009",
+            "claim_root": "sha256:8e762a3a7dff021b90d15618d8197ed2454d457416a494ae57e90d2b00688fb4"
+          }
+        },
+        "schema": "vela.submission.v3",
+        "verification_requirements": [
+          "occurrence_mapping_fidelity",
+          "corrected_record_scope_fidelity"
+        ]
+      },
+      "authentication": {
+        "signature_verified": true,
+        "actor_id": "agent:submission-v3-migration"
+      },
+      "review_method": null
+    },
+    {
+      "object_id": "vsb_e804f60a8ffd8658",
+      "object_root": "sha256:e804f60a8ffd86581ba2991da37bddc51618b124af2ec0a8703f5ff42477177d",
+      "source_path": "records/submissions/sha256/e804f60a8ffd86581ba2991da37bddc51618b124af2ec0a8703f5ff42477177d.json",
+      "envelope": {
+        "payload": "eyJhcnRpZmFjdHMiOlt7ImRpZ2VzdCI6InNoYTI1NjoyMWQ3YjI5MTFmMTE2ZGIxYzU3YmJiZjRiODZjNzJkNjkwY2Q3YjcyNzgyM2Q3MmFlNTBiYTU3NDI2MjFkYzZhIiwia2luZCI6InNjaWVudGlmaWMtZXZpZGVuY2UiLCJwYXRoIjoiZXZpZGVuY2UvY3VycmVudC9lcmRvcy04ODcvcmVwbGF5LnYxLmpzb24ifV0sImNhdmVhdHMiOlsiTGVhbiBlbGFib3JhdGlvbiB3aXRoIHNvcnJ5IGRvZXMgbm90IHByb3ZlIEVyZMWRcyBwcm9ibGVtIDg4Ny4iLCJUaGlzIGlzIG5vdCBhIGZyb20tc291cmNlIGRlcGVuZGVuY3kgYnVpbGQuIiwiVGhlIHNhbWUgb3BlcmF0b3IgZG9lcyBub3QgZXN0YWJsaXNoIGluZGVwZW5kZW50IHJlcHJvZHVjdGlvbi4iLCJUaGUgcmVwbGF5IHJlc3VsdCBkb2VzIG5vdCBlc3RhYmxpc2ggc291cmNlLW93bmVyIGFjY2VwdGFuY2UsIFZlbGEgRGVjaXNpb24sIG9yIFN0YW5kaW5nLiJdLCJjbGFpbSI6eyJhc3NlcnRpb24iOiJVbmRlciB0aGUgcmV0YWluZWQgZXhhY3QgcHVibGljIGNvbXBpbGVkLWNhY2hlIHJlcGxheSwgTGVhbiA0LjIyLjAgZWxhYm9yYXRlcyB0aGUgc2NvcGVkIEVyZG9zIDg4NyByZXBhaXJlZCBzb3VyY2Ugd2l0aCB0aGUgZm91ciBleHBlY3RlZCBzb3JyeSB3YXJuaW5ncy4iLCJjb25kaXRpb25zIjpbIkV4YWN0IGV2aWRlbmNlL2N1cnJlbnQvZXJkb3MtODg3IHNvdXJjZSwgcGF0Y2gsIExha2UgbWFuaWZlc3QsIGFuZCB0d28gY29tcGlsZWQtY2FjaGUgaW5wdXRzIG9ubHkuIl0sInR5cGUiOiJjb21wdXRhdGlvbmFsIn0sImlkZW50aXR5Ijp7ImFjdG9yX2NsYXNzIjoiYWdlbnQiLCJhY3Rvcl9pZCI6ImFnZW50OnN1Ym1pc3Npb24tdjMtbWlncmF0aW9uIiwiZGVjbGFyZWRfYXQiOiIyMDI2LTA4LTE3VDE4OjMzOjU5WiIsInB1YmxpY19rZXlfaGV4IjoiOGU0MmMwYzRmNDlhOGU3ZDg5ZGZkMTFkNGMzMGMwNWFiNjMyMmU0ZWQyZDIxMGQyMGM0YmQ4NTA2MGJmZDRjNCIsInNjaGVtYSI6InZlbGEuc2lnbmVyLWlkZW50aXR5LnYxIn0sInByb2R1Y2VyX2NoZWNrcyI6W10sInByb3ZlbmFuY2UiOnsiZW1pdHRlZF9hdCI6IjIwMjYtMDgtMTdUMTg6MzM6NTlaIiwicHJvZHVjZXIiOiJhZ2VudDpzdWJtaXNzaW9uLXYzLW1pZ3JhdGlvbiIsInNvdXJjZV9zeXN0ZW0iOiJ2ZWxhLWNsaSJ9LCJyZXBsYXlhYmlsaXR5IjoiZXhhY3QiLCJyZXF1ZXN0ZWRfY2hhbmdlIjp7ImtpbmQiOiJhZGRfY2xhaW0ifSwic2NoZW1hIjoidmVsYS5zdWJtaXNzaW9uLnYzIiwidmVyaWZpY2F0aW9uX3JlcXVpcmVtZW50cyI6W119",
+        "payloadType": "application/vnd.vela.submission.v3+json",
+        "signatures": [
+          {
+            "keyid": "8e42c0c4f49a8e7d89dfd11d4c30c05ab6322e4ed2d210d20c4bd85060bfd4c4",
+            "sig": "ggS0jxvxWI4YRTK8QYyuRy5LMXL1O8/Mns91L0t72An0ew29TUPT/2AFy9ICkLyG5dSdVBvIVUThdaXNn5lGDw=="
+          }
+        ]
+      },
+      "payload": {
+        "artifacts": [
+          {
+            "digest": "sha256:21d7b2911f116db1c57bbbf4b86c72d690cd7b727823d72ae50ba5742621dc6a",
+            "kind": "scientific-evidence",
+            "path": "evidence/current/erdos-887/replay.v1.json"
+          }
+        ],
+        "caveats": [
+          "Lean elaboration with sorry does not prove Erdős problem 887.",
+          "This is not a from-source dependency build.",
+          "The same operator does not establish independent reproduction.",
+          "The replay result does not establish source-owner acceptance, Vela Decision, or Standing."
+        ],
+        "claim": {
+          "assertion": "Under the retained exact public compiled-cache replay, Lean 4.22.0 elaborates the scoped Erdos 887 repaired source with the four expected sorry warnings.",
+          "conditions": [
+            "Exact evidence/current/erdos-887 source, patch, Lake manifest, and two compiled-cache inputs only."
+          ],
+          "type": "computational"
+        },
+        "identity": {
+          "actor_class": "agent",
+          "actor_id": "agent:submission-v3-migration",
+          "declared_at": "2026-08-17T18:33:59Z",
+          "public_key_hex": "8e42c0c4f49a8e7d89dfd11d4c30c05ab6322e4ed2d210d20c4bd85060bfd4c4",
+          "schema": "vela.signer-identity.v1"
+        },
+        "producer_checks": [],
+        "provenance": {
+          "emitted_at": "2026-08-17T18:33:59Z",
+          "producer": "agent:submission-v3-migration",
+          "source_system": "vela-cli"
+        },
+        "replayability": "exact",
+        "requested_change": {
+          "kind": "add_claim"
+        },
+        "schema": "vela.submission.v3",
+        "verification_requirements": []
+      },
+      "authentication": {
+        "signature_verified": true,
+        "actor_id": "agent:submission-v3-migration"
+      },
+      "review_method": null
+    },
+    {
+      "object_id": "vsb_f43df4adcf653c88",
+      "object_root": "sha256:f43df4adcf653c88afb0f770236c509d19e828c2ce47cdfe5c9b8eda3e719965",
+      "source_path": "records/submissions/sha256/f43df4adcf653c88afb0f770236c509d19e828c2ce47cdfe5c9b8eda3e719965.json",
+      "envelope": {
+        "payload": "eyJhcnRpZmFjdHMiOlt7ImRpZ2VzdCI6InNoYTI1NjplMjA1NGU3ZDVkNTdkMWQxZjRmZDMxMWQyNmRiYTY1YWZiOTBlZjg3M2U3ZjA0Y2I3YmI1ZTQzMWU0MzE0OGViIiwia2luZCI6InNvdXJjZS1ldmlkZW5jZSIsInBhdGgiOiJldmlkZW5jZS9jdXJyZW50L2VyZG9zLTk0L3BpbG90LWlucHV0LnYxLmpzb24ifSx7ImRpZ2VzdCI6InNoYTI1NjoxMTllNGQyMmMxZThlNWYyOTMxZjU3NmU2ZTFhZjkyZjkwNmY3YmQ0OWQ3ZjRkZTI4YjIyY2I5Mjk1NTYwMGFkIiwia2luZCI6InByb2R1Y2VyLXJlcG9ydCIsInBhdGgiOiJldmlkZW5jZS9jdXJyZW50L2VyZG9zLTk0L3Byb2R1Y2VyLXJlcG9ydC52MS5qc29uIn1dLCJjYXZlYXRzIjpbIlRoaXMgcHJvdmVzIG9ubHkgdGhlIGVsZW1lbnRhcnkgc3VtX211bHRpcGxpY2l0eSBpZGVudGl0eSwgbm90IHRoZSBjdWJpYyBFcmTFkXMgOTQgdGhlb3JlbSBvciBlaXRoZXIgb3RoZXIgdmFyaWFudC4iLCJUaGUgRm9ybWFsIENvbmplY3R1cmVzIGJ1aWxkIG5lZWRzIHRoZSBtZWNoYW5pY2FsIFN5bTIubWsudW5jdXJyeSB0byBTeW0yLm1rIEFQSSBzcGVsbGluZyBjaGFuZ2UgYmV0d2VlbiBpdHMgcGlubmVkIE1hdGhsaWIgYW5kIGxlYW4tcHJvb2ZzLiIsIk5vIGV4dGVybmFsIHNvdXJjZS1vd25lciByZXZpZXcsIGh1bWFuIHJldmlldywgdXBzdHJlYW0gYWNjZXB0YW5jZSwgb3IgZXh0ZXJuYWwgYWRvcHRpb24gb2NjdXJyZWQuIiwiUHJvZHVjZXIgY2hlY2tzIGFyZSBub3QgVmVyaWZpY2F0aW9uLCBEZWNpc2lvbiwgb3IgU3RhbmRpbmcuIl0sImNsYWltIjp7ImFzc2VydGlvbiI6IkF0IGxlYW4tcHJvb2ZzIGNvbW1pdCA0MjMzNDQzNDFmYmZkZjRmOGY2ODRhMzAyYzVkMDUzNzkxMjVlN2RjLCBFcmRvczk0LnZhcmlhbnRzLnN1bV9tdWx0aXBsaWNpdHkgcHJvdmVzIHRoYXQgZm9yIGV2ZXJ5IGZpbml0ZSBwbGFuYXIgcG9pbnQgc2V0IFAsIHRoZSBzdW0gb3ZlciBpdHMgZGlzdGluY3QgZGV0ZXJtaW5lZCBkaXN0YW5jZXMgb2YgdGhlIHVub3JkZXJlZC1wYWlyIGRpc3RhbmNlIG11bHRpcGxpY2l0aWVzIGVxdWFscyBQLmNhcmQuY2hvb3NlIDIsIG1hdGNoaW5nIEZvcm1hbCBDb25qZWN0dXJlcyBjb21taXQgOTRhMjc4ZTA2YThiY2JjMmU0ZjI5MzVlNDkxYzBjMTE1ZWM4MzJlMC4iLCJjb25kaXRpb25zIjpbIkV4YWN0IHNvdXJjZSwgcHJvb2YsIHRhcmdldCwgdG9vbGNoYWluLCBpbnRlZ3JhdGlvbiwgYW5kIE1ldGhvZCByb290cyByZXRhaW5lZCBpbiBldmlkZW5jZS9jdXJyZW50L2VyZG9zLTk0L3BpbG90LWlucHV0LnYxLmpzb24uIl0sInR5cGUiOiJ0aGVvcmV0aWNhbCJ9LCJpZGVudGl0eSI6eyJhY3Rvcl9jbGFzcyI6ImFnZW50IiwiYWN0b3JfaWQiOiJhZ2VudDpzdWJtaXNzaW9uLXYzLW1pZ3JhdGlvbiIsImRlY2xhcmVkX2F0IjoiMjAyNi0wOC0xN1QxODozNDo1NVoiLCJwdWJsaWNfa2V5X2hleCI6IjhlNDJjMGM0ZjQ5YThlN2Q4OWRmZDExZDRjMzBjMDVhYjYzMjJlNGVkMmQyMTBkMjBjNGJkODUwNjBiZmQ0YzQiLCJzY2hlbWEiOiJ2ZWxhLnNpZ25lci1pZGVudGl0eS52MSJ9LCJwcm9kdWNlcl9jaGVja3MiOlt7ImF1dGhvcml0eSI6InByb2R1Y2VyX3JlcG9ydGVkIiwibWV0aG9kIjoibGVhbi1idWlsZCIsIm91dGNvbWUiOiJwYXNzIn0seyJhdXRob3JpdHkiOiJwcm9kdWNlcl9yZXBvcnRlZCIsIm1ldGhvZCI6ImF4aW9tLWF1ZGl0Iiwib3V0Y29tZSI6InBhc3MifV0sInByb3ZlbmFuY2UiOnsiZW1pdHRlZF9hdCI6IjIwMjYtMDgtMTdUMTg6MzQ6NTVaIiwicHJvZHVjZXIiOiJhZ2VudDpzdWJtaXNzaW9uLXYzLW1pZ3JhdGlvbiIsInNvdXJjZV9ydW4iOiJnaXRodWI6d2lsbGlhbWpibGFpci9sZWFuLXByb29mc0A0MjMzNDQzNDFmYmZkZjRmOGY2ODRhMzAyYzVkMDUzNzkxMjVlN2RjIiwic291cmNlX3N5c3RlbSI6InZlbGEtY2xpIn0sInJlcGxheWFiaWxpdHkiOiJleGFjdCIsInJlcXVlc3RlZF9jaGFuZ2UiOnsia2luZCI6ImFkZF9jbGFpbSJ9LCJzY2hlbWEiOiJ2ZWxhLnN1Ym1pc3Npb24udjMiLCJ2ZXJpZmljYXRpb25fcmVxdWlyZW1lbnRzIjpbXX0=",
+        "payloadType": "application/vnd.vela.submission.v3+json",
+        "signatures": [
+          {
+            "keyid": "8e42c0c4f49a8e7d89dfd11d4c30c05ab6322e4ed2d210d20c4bd85060bfd4c4",
+            "sig": "9LPMFb0/C02wBi2YMNMstizXyaEidh+QWlcXq0US7mxoyMgTgoHli6xq+s6C88TTGRVVuL0CHIrOZWAyyzcCAQ=="
+          }
+        ]
+      },
+      "payload": {
+        "artifacts": [
+          {
+            "digest": "sha256:e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+            "kind": "source-evidence",
+            "path": "evidence/current/erdos-94/pilot-input.v1.json"
+          },
+          {
+            "digest": "sha256:119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad",
+            "kind": "producer-report",
+            "path": "evidence/current/erdos-94/producer-report.v1.json"
+          }
+        ],
+        "caveats": [
+          "This proves only the elementary sum_multiplicity identity, not the cubic Erdős 94 theorem or either other variant.",
+          "The Formal Conjectures build needs the mechanical Sym2.mk.uncurry to Sym2.mk API spelling change between its pinned Mathlib and lean-proofs.",
+          "No external source-owner review, human review, upstream acceptance, or external adoption occurred.",
+          "Producer checks are not Verification, Decision, or Standing."
+        ],
+        "claim": {
+          "assertion": "At lean-proofs commit 423344341fbfdf4f8f684a302c5d05379125e7dc, Erdos94.variants.sum_multiplicity proves that for every finite planar point set P, the sum over its distinct determined distances of the unordered-pair distance multiplicities equals P.card.choose 2, matching Formal Conjectures commit 94a278e06a8bcbc2e4f2935e491c0c115ec832e0.",
+          "conditions": [
+            "Exact source, proof, target, toolchain, integration, and Method roots retained in evidence/current/erdos-94/pilot-input.v1.json."
+          ],
+          "type": "theoretical"
+        },
+        "identity": {
+          "actor_class": "agent",
+          "actor_id": "agent:submission-v3-migration",
+          "declared_at": "2026-08-17T18:34:55Z",
+          "public_key_hex": "8e42c0c4f49a8e7d89dfd11d4c30c05ab6322e4ed2d210d20c4bd85060bfd4c4",
+          "schema": "vela.signer-identity.v1"
+        },
+        "producer_checks": [
+          {
+            "authority": "producer_reported",
+            "method": "lean-build",
+            "outcome": "pass"
+          },
+          {
+            "authority": "producer_reported",
+            "method": "axiom-audit",
+            "outcome": "pass"
+          }
+        ],
+        "provenance": {
+          "emitted_at": "2026-08-17T18:34:55Z",
+          "producer": "agent:submission-v3-migration",
+          "source_run": "github:williamjblair/lean-proofs@423344341fbfdf4f8f684a302c5d05379125e7dc",
+          "source_system": "vela-cli"
+        },
+        "replayability": "exact",
+        "requested_change": {
+          "kind": "add_claim"
+        },
+        "schema": "vela.submission.v3",
+        "verification_requirements": []
+      },
+      "authentication": {
+        "signature_verified": true,
+        "actor_id": "agent:submission-v3-migration"
+      },
+      "review_method": null
+    }
+  ],
+  "verifications": [
+    {
+      "object_id": "vvr_3b2f2313628a8018",
+      "object_root": "sha256:3b2f2313628a80187e72fad5f4e670d7f36e41e9d4a28014556f5c7ce1e031d3",
+      "source_path": "records/verifications/sha256/3b2f2313628a80187e72fad5f4e670d7f36e41e9d4a28014556f5c7ce1e031d3.json",
+      "envelope": {
+        "payload": "eyJjb21wbGV0ZWRfYXQiOiIyMDI2LTA4LTE3VDE4OjM0OjIzWiIsImlkZW50aXR5Ijp7ImFjdG9yX2NsYXNzIjoiYWdlbnQiLCJhY3Rvcl9pZCI6InZlcmlmaWVyOmNvZGV4LXN1Ym1pc3Npb24tdjMtbWlncmF0aW9uLXJldmlldyIsImRlY2xhcmVkX2F0IjoiMjAyNi0wOC0xN1QxODozNDoyM1oiLCJwdWJsaWNfa2V5X2hleCI6IjI3MzQ4MGEwOWQwOWU1OGU3YWM1ZDEzYTg5MDMxZGYyZDExODYzNWIwMDU2NWZhNzcwOGViMTE4YTllNDRiOTQiLCJzY2hlbWEiOiJ2ZWxhLnNpZ25lci1pZGVudGl0eS52MSJ9LCJpbmRlcGVuZGVuY2UiOnsiZGVjbGFyZWRfaW5kZXBlbmRlbnRfb2YiOltdLCJzaGFyZWRfZGVwZW5kZW5jaWVzIjpbIlRoZSBwcm9kdWNlciBhbmQgdmVyaWZpZXIgc2hhcmUgdGhlIHNhbWUgcmV0YWluZWQgc291cmNlLCBwYXRjaCwgbWFuaWZlc3QsIGNvbXBpbGVkIGNhY2hlcywgYW5kIG1pZ3JhdGVkIHJlc3VsdC4gVGhpcyBpcyBhIGNvbXBsZW1lbnRhcnkgZmlkZWxpdHkgcmV2aWV3LCBub3QgaW5kZXBlbmRlbnQgcmVwcm9kdWN0aW9uLiJdfSwibWV0aG9kIjp7ImVudmlyb25tZW50X3Jvb3QiOiJzaGEyNTY6MGMxNDdkOTQzOTRmNmU0MzdkN2ZhNWU3ZGJhZGM2ZDQ0ZWE3YWE2MWFiODFmYTljNTQyMzM5ZTBhY2NmNzFjNiIsImltcGxlbWVudGF0aW9uIjoibWV0aG9kcy9jdXJyZW50L2VyZG9zLTg4Ny1yZXBsYXkudjEuanNvbiIsInByb2ZpbGUiOiJjb2gtMDAtZXJkb3MtODg3LXJlcGxheS12MSJ9LCJvdXRjb21lIjoicGFzcyIsIm91dHB1dF9hcnRpZmFjdF9pZHMiOltdLCJzY2hlbWEiOiJ2ZWxhLnZlcmlmaWNhdGlvbi1yZWNvcmQudjIiLCJzY29wZSI6eyJkb2VzX25vdF9lc3RhYmxpc2giOlsiQSBwcm9vZiBvZiBFcmTFkXMgcHJvYmxlbSA4ODcsIGEgZnJvbS1zb3VyY2UgZGVwZW5kZW5jeSBidWlsZCwgaW5kZXBlbmRlbnQgcmVwcm9kdWN0aW9uLCBzb3VyY2Utb3duZXIgYWNjZXB0YW5jZSwgYSBEZWNpc2lvbiwgb3IgU3RhbmRpbmcuIl0sInByb3BlcnR5IjoiY29tcGlsZWRfY2FjaGVfcmVwbGF5In0sInN0YXJ0ZWRfYXQiOiIyMDI2LTA4LTE3VDE4OjM0OjIzWiIsInN1YmplY3QiOnsiYXJ0aWZhY3RfaWRzIjpbIjIxZDdiMjkxMWYxMTZkYjFjNTdiYmJmNGI4NmM3MmQ2OTBjZDdiNzI3ODIzZDcyYWU1MGJhNTc0MjYyMWRjNmEiXSwiY2xhaW1faWQiOiJ2Y2xfOGFiNWE5MTdjY2MwNzdmMTk3MWY2MzBiYWUyOTNhMGU1YmJlZDMxNTYzMjBlMGI3MjIzZmZiZDc1ZDdiMDQ2NCIsInByb3Bvc2FsX2lkIjoidnByXzI4Y2JlZTRlN2QyZWM5MWUiLCJwcm9wb3NhbF9yb290Ijoic2hhMjU2OjI4Y2JlZTRlN2QyZWM5MWU1NzgzNzYwZTM5NjhjN2UyNDc1MzVkZDg2ZTY0NTgwZTM0NGZkNDI2YTZkYzlkOTIiLCJzdWJtaXNzaW9uX2lkIjoidnNiX2U4MDRmNjBhOGZmZDg2NTgiLCJzdWJtaXNzaW9uX3Jvb3QiOiJzaGEyNTY6ZTgwNGY2MGE4ZmZkODY1ODFiYTI5OTFkYTM3YmRkYzUxNjE4YjEyNGFmMmVjMGE4NzAzZjVmZjQyNDc3MTc3ZCJ9fQ==",
+        "payloadType": "application/vnd.vela.verification-record.v2+json",
+        "signatures": [
+          {
+            "keyid": "273480a09d09e58e7ac5d13a89031df2d118635b00565fa7708eb118a9e44b94",
+            "sig": "ldAdWQULt5+fj6ymeykc1nE8QxATxGo5MkHuS6HIAeT8+X5ZwQu7LdM4GxmYA9DBKRD7WFg82vkUFrhv+hULCQ=="
+          }
+        ]
+      },
+      "payload": {
+        "completed_at": "2026-08-17T18:34:23Z",
+        "identity": {
+          "actor_class": "agent",
+          "actor_id": "verifier:codex-submission-v3-migration-review",
+          "declared_at": "2026-08-17T18:34:23Z",
+          "public_key_hex": "273480a09d09e58e7ac5d13a89031df2d118635b00565fa7708eb118a9e44b94",
+          "schema": "vela.signer-identity.v1"
+        },
+        "independence": {
+          "declared_independent_of": [],
+          "shared_dependencies": [
+            "The producer and verifier share the same retained source, patch, manifest, compiled caches, and migrated result. This is a complementary fidelity review, not independent reproduction."
+          ]
+        },
+        "method": {
+          "environment_root": "sha256:0c147d94394f6e437d7fa5e7dbadc6d44ea7aa61ab81fa9c542339e0accf71c6",
+          "implementation": "methods/current/erdos-887-replay.v1.json",
+          "profile": "coh-00-erdos-887-replay-v1"
+        },
+        "outcome": "pass",
+        "output_artifact_ids": [],
+        "schema": "vela.verification-record.v2",
+        "scope": {
+          "does_not_establish": [
+            "A proof of Erdős problem 887, a from-source dependency build, independent reproduction, source-owner acceptance, a Decision, or Standing."
+          ],
+          "property": "compiled_cache_replay"
+        },
+        "started_at": "2026-08-17T18:34:23Z",
+        "subject": {
+          "artifact_ids": [
+            "21d7b2911f116db1c57bbbf4b86c72d690cd7b727823d72ae50ba5742621dc6a"
+          ],
+          "claim_id": "vcl_8ab5a917ccc077f1971f630bae293a0e5bbed3156320e0b7223ffbd75d7b0464",
+          "proposal_id": "vpr_28cbee4e7d2ec91e",
+          "proposal_root": "sha256:28cbee4e7d2ec91e5783760e3968c7e247535dd86e64580e344fd426a6dc9d92",
+          "submission_id": "vsb_e804f60a8ffd8658",
+          "submission_root": "sha256:e804f60a8ffd86581ba2991da37bddc51618b124af2ec0a8703f5ff42477177d"
+        }
+      },
+      "authentication": {
+        "signature_verified": true,
+        "actor_id": "verifier:codex-submission-v3-migration-review"
+      },
+      "review_method": {
+        "root": "sha256:0c147d94394f6e437d7fa5e7dbadc6d44ea7aa61ab81fa9c542339e0accf71c6",
+        "source_path": "methods/current/erdos-887-replay.v1.json",
+        "state": "opaque"
+      }
+    },
+    {
+      "object_id": "vvr_ac3996330910c9fb",
+      "object_root": "sha256:ac3996330910c9fb5e9e1c1e64a2c64badc3f8bc0e6007eebec7e70de0816e87",
+      "source_path": "records/verifications/sha256/ac3996330910c9fb5e9e1c1e64a2c64badc3f8bc0e6007eebec7e70de0816e87.json",
+      "envelope": {
+        "payload": "eyJjb21wbGV0ZWRfYXQiOiIyMDI2LTA4LTE4VDE4OjQ1OjM3WiIsImlkZW50aXR5Ijp7ImFjdG9yX2NsYXNzIjoiYWdlbnQiLCJhY3Rvcl9pZCI6InZlcmlmaWVyOmNvZGV4LXYzLXNjaWVudGlmaWMtc3RhdGUtZmlkZWxpdHkiLCJkZWNsYXJlZF9hdCI6IjIwMjYtMDgtMThUMTg6NDU6MzdaIiwicHVibGljX2tleV9oZXgiOiJjNTRlNTgzNjJlZjlhM2NlMjAyZDhlYmM5OTM5NzRhN2VhNGJmMGJjZTg2NDJjYWQxYTMxODFmMTlhOWU1NTAzIiwic2NoZW1hIjoidmVsYS5zaWduZXItaWRlbnRpdHkudjEifSwiaW5kZXBlbmRlbmNlIjp7ImRlY2xhcmVkX2luZGVwZW5kZW50X29mIjpbImFnZW50OnN1Ym1pc3Npb24tdjMtY2xlYW51cCJdLCJzaGFyZWRfZGVwZW5kZW5jaWVzIjpbIlNhbWUgT3BlbkFJIENvZGV4IHByb3ZpZGVyIGFuZCBtb2RlbCBmYW1pbHksIGxvY2FsIG1hY09TIGhvc3QsIE1hdGggcmVwb3NpdG9yeSBhbmQgc291cmNlIGJ5dGVzLCBzaWduZWQgVmVsYSBiaW5hcnksIEdpdCBvYmplY3QgZGF0YWJhc2UsIHNoZWxsLCBqcSwgYW5kIGhhc2ggdG9vbGluZzsgYWN0b3Itc2VwYXJhdGVkIHJldmlldyBvbmx5LiJdfSwibWV0aG9kIjp7ImVudmlyb25tZW50X3Jvb3QiOiJzaGEyNTY6MGEzMjMwNGQyYzNlODAxMWU2NGFmZDY4MzdlNTQyYjM0MTU1ZTgzNWZlYjQ5OTYzMjZlYzZkOWE5NDFjNTRhNSIsImltcGxlbWVudGF0aW9uIjoibWV0aG9kcy9jdXJyZW50L2VyZG9zLTk0LXNjaWVudGlmaWMtc3RhdGUtZmlkZWxpdHkudjEuanNvbiIsInByb2ZpbGUiOiJlcmRvcy05NC1zY2llbnRpZmljLXN0YXRlLWZpZGVsaXR5LXYxIn0sIm91dGNvbWUiOiJwYXNzIiwib3V0cHV0X2FydGlmYWN0X2lkcyI6WyI2OWU2NWVlNDBjMzk2NmMxYjkyODZhNTZiNWQyNTE4N2YwNzVlNTBkYTYyNGVjNGFkYWQ5MDRjODkyYzA2ZGM3Il0sInNjaGVtYSI6InZlbGEudmVyaWZpY2F0aW9uLXJlY29yZC52MiIsInNjb3BlIjp7ImRvZXNfbm90X2VzdGFibGlzaCI6WyJBIG5ldyBwcm9vZiwgZnJlc2gga2VybmVsIGV4ZWN1dGlvbiwgc2VtYW50aWMgZXF1aXZhbGVuY2UsIG9yIHJlc29sdXRpb24gb2YgdGhlIGN1YmljIEVyZMWRcyA5NCBjb25qZWN0dXJlLiIsIkV4dGVybmFsIHNvdXJjZS1vd25lciByZXZpZXcsIHVwc3RyZWFtIGFjY2VwdGFuY2UsIG9yIGFkb3B0aW9uLiIsIlNjaWVudGlmaWMgYWNjZXB0YW5jZSwgYSBEZWNpc2lvbiwgb3IgU3RhbmRpbmcuIiwiUHJvdmlkZXItLCBob3N0LSwgc291cmNlLWJ5dGUtLCByZXBvc2l0b3J5LSwgb3IgdG9vbC1pbmRlcGVuZGVudCByZXByb2R1Y3Rpb24uIl0sInByb3BlcnR5Ijoic2NpZW50aWZpY19tZWFuaW5nX2FuZF9zdGF0ZV9maWRlbGl0eSJ9LCJzdGFydGVkX2F0IjoiMjAyNi0wOC0xOFQxODo0NTozN1oiLCJzdWJqZWN0Ijp7ImFydGlmYWN0X2lkcyI6WyJlMjA1NGU3ZDVkNTdkMWQxZjRmZDMxMWQyNmRiYTY1YWZiOTBlZjg3M2U3ZjA0Y2I3YmI1ZTQzMWU0MzE0OGViIiwiMTE5ZTRkMjJjMWU4ZTVmMjkzMWY1NzZlNmUxYWY5MmY5MDZmN2JkNDlkN2Y0ZGUyOGIyMmNiOTI5NTU2MDBhZCIsIjA2NDk4Y2JjMzg1MTRiNzk5NWEwN2U4YzNhOTU5MDFhOGZiMTk3NjNlNDRjNmI5Yzk3ZjI4OTczMTA0ZGZjYTEiXSwiY2xhaW1faWQiOiJ2Y2xfNjc2M2JhMjQ3ZDQwMzAzNDA4YTI2OGIyMjZjM2UyN2Q3YTc1M2I2M2ZjYTNlYjBkZTk5NjE5ZDUwOTM0NmJmYiIsInByb3Bvc2FsX2lkIjoidnByX2I1Y2E1MjFkMmE4OTJlZWUiLCJwcm9wb3NhbF9yb290Ijoic2hhMjU2OmI1Y2E1MjFkMmE4OTJlZWUyYzE1NmYyNWY2ZWY0ODQ5ZWRhYjViNDM2ZTY4NTVmZDkyNGEyNWQ3NDI3YWM4ODIiLCJzdWJtaXNzaW9uX2lkIjoidnNiXzJkMTBiYTJmZjFhZmY5MDEiLCJzdWJtaXNzaW9uX3Jvb3QiOiJzaGEyNTY6MmQxMGJhMmZmMWFmZjkwMWFlYjhkMTY5OTNmZWU4OTMzOTM4MzQ1YWUzMmZlM2U0NThhZDJhNGE2MGZmMWFkZiJ9fQ==",
+        "payloadType": "application/vnd.vela.verification-record.v2+json",
+        "signatures": [
+          {
+            "keyid": "c54e58362ef9a3ce202d8ebc993974a7ea4bf0bce8642cad1a3181f19a9e5503",
+            "sig": "S8HA7EjihUC/x0UyN44PukA5em3cMCxMIJfLkaWYyqy/jOWkjucWwVuuInHkc5wD89awu0MV9n3w2mmr+S1+Dg=="
+          }
+        ]
+      },
+      "payload": {
+        "completed_at": "2026-08-18T18:45:37Z",
+        "identity": {
+          "actor_class": "agent",
+          "actor_id": "verifier:codex-v3-scientific-state-fidelity",
+          "declared_at": "2026-08-18T18:45:37Z",
+          "public_key_hex": "c54e58362ef9a3ce202d8ebc993974a7ea4bf0bce8642cad1a3181f19a9e5503",
+          "schema": "vela.signer-identity.v1"
+        },
+        "independence": {
+          "declared_independent_of": [
+            "agent:submission-v3-cleanup"
+          ],
+          "shared_dependencies": [
+            "Same OpenAI Codex provider and model family, local macOS host, Math repository and source bytes, signed Vela binary, Git object database, shell, jq, and hash tooling; actor-separated review only."
+          ]
+        },
+        "method": {
+          "environment_root": "sha256:0a32304d2c3e8011e64afd6837e542b34155e835feb4996326ec6d9a941c54a5",
+          "implementation": "methods/current/erdos-94-scientific-state-fidelity.v1.json",
+          "profile": "erdos-94-scientific-state-fidelity-v1"
+        },
+        "outcome": "pass",
+        "output_artifact_ids": [
+          "69e65ee40c3966c1b9286a56b5d25187f075e50da624ec4adad904c892c06dc7"
+        ],
+        "schema": "vela.verification-record.v2",
+        "scope": {
+          "does_not_establish": [
+            "A new proof, fresh kernel execution, semantic equivalence, or resolution of the cubic Erdős 94 conjecture.",
+            "External source-owner review, upstream acceptance, or adoption.",
+            "Scientific acceptance, a Decision, or Standing.",
+            "Provider-, host-, source-byte-, repository-, or tool-independent reproduction."
+          ],
+          "property": "scientific_meaning_and_state_fidelity"
+        },
+        "started_at": "2026-08-18T18:45:37Z",
+        "subject": {
+          "artifact_ids": [
+            "e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+            "119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad",
+            "06498cbc38514b7995a07e8c3a95901a8fb19763e44c6b9c97f28973104dfca1"
+          ],
+          "claim_id": "vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+          "proposal_id": "vpr_b5ca521d2a892eee",
+          "proposal_root": "sha256:b5ca521d2a892eee2c156f25f6ef4849edab5b436e6855fd924a25d7427ac882",
+          "submission_id": "vsb_2d10ba2ff1aff901",
+          "submission_root": "sha256:2d10ba2ff1aff901aeb8d16993fee8933938345ae32fe3e458ad2a4a60ff1adf"
+        }
+      },
+      "authentication": {
+        "signature_verified": true,
+        "actor_id": "verifier:codex-v3-scientific-state-fidelity"
+      },
+      "review_method": {
+        "method": {
+          "attested_by_actor_id": "verifier:codex-v3-scientific-state-fidelity",
+          "does_not_establish": [
+            "A new proof, fresh kernel execution, semantic equivalence, or resolution of the cubic Erdős 94 conjecture.",
+            "External source-owner review, upstream acceptance, or adoption.",
+            "Scientific acceptance, a Decision, or Standing.",
+            "Provider-, host-, source-byte-, repository-, or tool-independent reproduction."
+          ],
+          "procedure": [
+            "Compare the accepted predecessor and pending successor assertions, bounded occurrence selector, pinned commits, evidence rights, caveats, and correction relation.",
+            "Confirm the mathematical assertion is byte-for-byte unchanged and the exact sum_multiplicity occurrence remains the only selected occurrence.",
+            "Confirm every scientific limitation and nonclaim remains present, including the cubic-conjecture, semantic-equivalence, source-owner, external-adoption, producer-check, Decision, and Standing boundaries.",
+            "Compare the repository manifest before Submission with the pending state and confirm no accepted Claim or Standing changes before a Decision.",
+            "Refuse any revision that broadens scope, adds validation, changes a pinned scientific input, or implies the retired v2 Verification carries forward."
+          ],
+          "profile": "erdos-94-scientific-state-fidelity-v1",
+          "property": "scientific_meaning_and_state_fidelity",
+          "question": "Does the pending Erdős 94 successor preserve scientific meaning and pre-Decision Standing exactly while removing no substantive limitation?",
+          "required_output": [
+            "Exact assertion equality and occurrence-selection result.",
+            "A limitation and rights-boundary preservation matrix.",
+            "Accepted Claim and Standing counts before Decision, plus the sole expected predecessor-to-successor delta if accepted."
+          ],
+          "reviewer": {
+            "display_name": "Codex scientific-state fidelity reviewer",
+            "identifier": "verifier:codex-v3-scientific-state-fidelity",
+            "kind": "ai_model",
+            "provider": "OpenAI",
+            "version": null
+          },
+          "schema": "vela.review-method.v1"
+        },
+        "root": "sha256:0a32304d2c3e8011e64afd6837e542b34155e835feb4996326ec6d9a941c54a5",
+        "schema": "vela.review-method.v1",
+        "source_path": "methods/current/erdos-94-scientific-state-fidelity.v1.json",
+        "state": "verified"
+      }
+    },
+    {
+      "object_id": "vvr_b485b7d408095f94",
+      "object_root": "sha256:b485b7d408095f94029bd93f4042cdf93a8f3046d252c19d391a94338caad22a",
+      "source_path": "records/verifications/sha256/b485b7d408095f94029bd93f4042cdf93a8f3046d252c19d391a94338caad22a.json",
+      "envelope": {
+        "payload": "eyJjb21wbGV0ZWRfYXQiOiIyMDI2LTA4LTE3VDE4OjQ4OjA1WiIsImlkZW50aXR5Ijp7ImFjdG9yX2NsYXNzIjoiYWdlbnQiLCJhY3Rvcl9pZCI6InZlcmlmaWVyOmluZGVwZW5kZW50LXN1Ym1pc3Npb24tdjMtcmV2aWV3IiwiZGVjbGFyZWRfYXQiOiIyMDI2LTA4LTE3VDE4OjQ4OjA1WiIsInB1YmxpY19rZXlfaGV4IjoiN2JlMmM5N2UxNWYxYjRhOTkyYWY1YzAxNDFlOGZjM2QxMGEzNDdlZDQ3MjQ0ODA4MWQ0MGZjYmFkMDQxNDVlYyIsInNjaGVtYSI6InZlbGEuc2lnbmVyLWlkZW50aXR5LnYxIn0sImluZGVwZW5kZW5jZSI6eyJkZWNsYXJlZF9pbmRlcGVuZGVudF9vZiI6WyJhZ2VudDpzdWJtaXNzaW9uLXYzLW1pZ3JhdGlvbiJdLCJzaGFyZWRfZGVwZW5kZW5jaWVzIjpbIlNhbWUgTWF0aCBieXRlcywgaG9zdCwgYnJhbmNoLWJ1aWx0IFZlbGEgYmluYXJ5LCBsb2NhbCBoYXNoIGFuZCBKU09OIHRvb2xpbmcsIGFuZCBPcGVuQUkgcHJvdmlkZXIvbW9kZWwgZmFtaWx5OyBhY3Rvci1pbmRlcGVuZGVudCwgbm90IHByb3ZpZGVyLSwgaG9zdC0sIG9yIHNvdXJjZS1ieXRlLWluZGVwZW5kZW50LiJdfSwibWV0aG9kIjp7ImVudmlyb25tZW50X3Jvb3QiOiJzaGEyNTY6MjkxNjkzOTQwMjQ0YjBlMTFhMjk5Y2QwNjZhNzg1MzhhMzFlM2FjYjU0YzYzYjlhZWEwYzk2NTA3ZWU0YTIzMCIsImltcGxlbWVudGF0aW9uIjoibWV0aG9kcy9jdXJyZW50L2VyZG9zLTk0LW9jY3VycmVuY2UtbWFwcGluZy1taWdyYXRpb24tcmV2aWV3LnYxLmpzb24iLCJwcm9maWxlIjoiZXJkb3MtOTQtb2NjdXJyZW5jZS1tYXBwaW5nLW1pZ3JhdGlvbi1yZXZpZXctdjEifSwib3V0Y29tZSI6InBhc3MiLCJvdXRwdXRfYXJ0aWZhY3RfaWRzIjpbIjE3ZmZjYTczNDQ5OGZiZGI2Mzc3YjZjM2JhYzE2NjNmNjZhMjkwZWQzNDk3YjVhODUxMTA2ZDNjM2IxNTgxYzkiXSwic2NoZW1hIjoidmVsYS52ZXJpZmljYXRpb24tcmVjb3JkLnYyIiwic2NvcGUiOnsiZG9lc19ub3RfZXN0YWJsaXNoIjpbIlN0YXRlbWVudCBpZGVudGl0eSBvciBzZW1hbnRpYyBlcXVpdmFsZW5jZSBiZXR3ZWVuIGFueSB0d28gb2NjdXJyZW5jZXMuIiwiVGhhdCB0aGUgQ2xhaW0gcHJvdmVzIHRoZSBQcm9ibGVtIGl0cyBvY2N1cnJlbmNlIGlzIGdyb3VwZWQgdW5kZXIuIiwiQW55IGNoYW5nZSB0byBTdGFuZGluZywgYW5kIGFueSBEZWNpc2lvbiBvciBhY2NlcHRhbmNlLiIsIlRoZSBjb3JyZWN0bmVzcyBvZiB0aGUgbWF0aGVtYXRpY3MgdGhlIENsYWltIGFzc2VydHMsIHdoaWNoIHRoaXMgb2JzZXJ2YXRpb24gZG9lcyBub3QgcmVhZC4iXSwicHJvcGVydHkiOiJvY2N1cnJlbmNlX21hcHBpbmdfZmlkZWxpdHkifSwic3RhcnRlZF9hdCI6IjIwMjYtMDgtMTdUMTg6NDg6MDVaIiwic3ViamVjdCI6eyJhcnRpZmFjdF9pZHMiOlsiZTIwNTRlN2Q1ZDU3ZDFkMWY0ZmQzMTFkMjZkYmE2NWFmYjkwZWY4NzNlN2YwNGNiN2JiNWU0MzFlNDMxNDhlYiIsIjExOWU0ZDIyYzFlOGU1ZjI5MzFmNTc2ZTZlMWFmOTJmOTA2ZjdiZDQ5ZDdmNGRlMjhiMjJjYjkyOTU1NjAwYWQiLCIyZGIxNzA5OWI0MjFlZmY0M2Q0ODkyZGRlZGNkZDdiMWJmZWNmYmM2Y2NhMDEzNDQ3YjNiOTRhODFjM2NkMGY4Il0sImNsYWltX2lkIjoidmNsXzRjYWUwZDQxMmE5NWQxOTY1YjkyN2UxZjdkYmFhNDI0NWY1YjljM2Y4NGM1OTEzZTFkNmE3ODgwZDYzNDkxNjUiLCJwcm9wb3NhbF9pZCI6InZwcl9kNzI1MzY2MzAxMzk2MmJhIiwicHJvcG9zYWxfcm9vdCI6InNoYTI1NjpkNzI1MzY2MzAxMzk2MmJhNDAyYmQyMmIwZGRjZjgzYjRmNzkxMDY0ODI3MmQ4MDJjNjE5ZjgyYmY2NzQ4N2U1Iiwic3VibWlzc2lvbl9pZCI6InZzYl9kNDk4NjlmMDdhNzkwN2Q0Iiwic3VibWlzc2lvbl9yb290Ijoic2hhMjU2OmQ0OTg2OWYwN2E3OTA3ZDQxMTEzNWQ3MGE1NjI2MzZkM2I1N2I3OWViNmFiMDVmMzM0MDI4NjgyZWUwMzYwODUifX0=",
+        "payloadType": "application/vnd.vela.verification-record.v2+json",
+        "signatures": [
+          {
+            "keyid": "7be2c97e15f1b4a992af5c0141e8fc3d10a347ed472448081d40fcbad04145ec",
+            "sig": "D56Ta5dDYwhFAnDvfk5S5O7LzASJz7HDzaRiPWXf0/Cljj1LFuhWCtACQAu7LXmS88EaK3WHhWZ6B8m515nPBw=="
+          }
+        ]
+      },
+      "payload": {
+        "completed_at": "2026-08-17T18:48:05Z",
+        "identity": {
+          "actor_class": "agent",
+          "actor_id": "verifier:independent-submission-v3-review",
+          "declared_at": "2026-08-17T18:48:05Z",
+          "public_key_hex": "7be2c97e15f1b4a992af5c0141e8fc3d10a347ed472448081d40fcbad04145ec",
+          "schema": "vela.signer-identity.v1"
+        },
+        "independence": {
+          "declared_independent_of": [
+            "agent:submission-v3-migration"
+          ],
+          "shared_dependencies": [
+            "Same Math bytes, host, branch-built Vela binary, local hash and JSON tooling, and OpenAI provider/model family; actor-independent, not provider-, host-, or source-byte-independent."
+          ]
+        },
+        "method": {
+          "environment_root": "sha256:291693940244b0e11a299cd066a78538a31e3acb54c63b9aea0c96507ee4a230",
+          "implementation": "methods/current/erdos-94-occurrence-mapping-migration-review.v1.json",
+          "profile": "erdos-94-occurrence-mapping-migration-review-v1"
+        },
+        "outcome": "pass",
+        "output_artifact_ids": [
+          "17ffca734498fbdb6377b6c3bac1663f66a290ed3497b5a851106d3c3b1581c9"
+        ],
+        "schema": "vela.verification-record.v2",
+        "scope": {
+          "does_not_establish": [
+            "Statement identity or semantic equivalence between any two occurrences.",
+            "That the Claim proves the Problem its occurrence is grouped under.",
+            "Any change to Standing, and any Decision or acceptance.",
+            "The correctness of the mathematics the Claim asserts, which this observation does not read."
+          ],
+          "property": "occurrence_mapping_fidelity"
+        },
+        "started_at": "2026-08-17T18:48:05Z",
+        "subject": {
+          "artifact_ids": [
+            "e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+            "119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad",
+            "2db17099b421eff43d4892ddedcdd7b1bfecfbc6cca013447b3b94a81c3cd0f8"
+          ],
+          "claim_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+          "proposal_id": "vpr_d7253663013962ba",
+          "proposal_root": "sha256:d7253663013962ba402bd22b0ddcf83b4f7910648272d802c619f82bf67487e5",
+          "submission_id": "vsb_d49869f07a7907d4",
+          "submission_root": "sha256:d49869f07a7907d411135d70a562636d3b57b79eb6ab05f334028682ee036085"
+        }
+      },
+      "authentication": {
+        "signature_verified": true,
+        "actor_id": "verifier:independent-submission-v3-review"
+      },
+      "review_method": {
+        "method": {
+          "attested_by_actor_id": "verifier:independent-submission-v3-review",
+          "does_not_establish": [
+            "Statement identity or semantic equivalence between any two occurrences.",
+            "That the Claim proves the Problem its occurrence is grouped under.",
+            "Any change to Standing, and any Decision or acceptance.",
+            "The correctness of the mathematics the Claim asserts, which this observation does not read."
+          ],
+          "procedure": [
+            "Read evidence/current/erdos-94/occurrence-binding.v1.json from the exact retained Repository bytes and confirm its sha256 matches the Artifact root the corrected Claim binds.",
+            "Confirm occurrence_resolution.entity_id names a reviewed resolver entity and that resolver_root equals that entity's own root, not the root of the whole resolution file.",
+            "Confirm occurrence_resolution.canonical matches the entity's canonical occurrence by source, native identifier, and content root.",
+            "Confirm every related occurrence is drawn from the entity's reviewed occurrences at the exact content root recorded there, and that the packet selects the sum_multiplicity occurrence alone.",
+            "Confirm semantic_equivalence is unresolved and scope is navigation grouping only, and refuse any packet that omits its equivalence nonclaim.",
+            "Confirm the packet records the predecessor Claim and does not contain the successor Claim root, which would make either root uncomputable."
+          ],
+          "profile": "erdos-94-occurrence-mapping-migration-review-v1",
+          "property": "occurrence_mapping_fidelity",
+          "question": "Does the retained occurrence-binding packet name exactly the reviewed resolver entity's occurrence, at the exact content root that entity records, and keep the association navigation-only?",
+          "required_output": [
+            "The entity root the packet pins and the entity root recomputed from the reviewed resolver.",
+            "The full list of occurrences the packet selects.",
+            "The predecessor Claim identifier and root the packet records."
+          ],
+          "reviewer": {
+            "display_name": "Independent Submission v3 reviewer",
+            "identifier": "verifier:independent-submission-v3-review",
+            "kind": "ai_model",
+            "provider": "OpenAI",
+            "version": "gpt-5.6-sol"
+          },
+          "schema": "vela.review-method.v1"
+        },
+        "root": "sha256:291693940244b0e11a299cd066a78538a31e3acb54c63b9aea0c96507ee4a230",
+        "schema": "vela.review-method.v1",
+        "source_path": "methods/current/erdos-94-occurrence-mapping-migration-review.v1.json",
+        "state": "verified"
+      }
+    },
+    {
+      "object_id": "vvr_bcfb5c7a0812619d",
+      "object_root": "sha256:bcfb5c7a0812619df542fc4327b9a95c8ebf2bad800047b6111dff37337c111b",
+      "source_path": "records/verifications/sha256/bcfb5c7a0812619df542fc4327b9a95c8ebf2bad800047b6111dff37337c111b.json",
+      "envelope": {
+        "payload": "eyJjb21wbGV0ZWRfYXQiOiIyMDI2LTA4LTE3VDE4OjMzOjM0WiIsImlkZW50aXR5Ijp7ImFjdG9yX2NsYXNzIjoiYWdlbnQiLCJhY3Rvcl9pZCI6InZlcmlmaWVyOmNvZGV4LXN1Ym1pc3Npb24tdjMtbWlncmF0aW9uLXJldmlldyIsImRlY2xhcmVkX2F0IjoiMjAyNi0wOC0xN1QxODozMzozNFoiLCJwdWJsaWNfa2V5X2hleCI6IjI3MzQ4MGEwOWQwOWU1OGU3YWM1ZDEzYTg5MDMxZGYyZDExODYzNWIwMDU2NWZhNzcwOGViMTE4YTllNDRiOTQiLCJzY2hlbWEiOiJ2ZWxhLnNpZ25lci1pZGVudGl0eS52MSJ9LCJpbmRlcGVuZGVuY2UiOnsiZGVjbGFyZWRfaW5kZXBlbmRlbnRfb2YiOltdLCJzaGFyZWRfZGVwZW5kZW5jaWVzIjpbIlRoZSBwcm9kdWNlciBhbmQgdmVyaWZpZXIgc2hhcmUgdGhlIHNhbWUgY3VycmVudCBwYWNrZXQgYW5kIGV4YWN0IHNvdXJjZSBzbmFwc2hvdHM7IHRoaXMgaXMgYW4gYXR0cmlidXRlZCBjb21wbGVtZW50YXJ5IHJldmlldywgbm90IGV4dGVybmFsIGluZGVwZW5kZW5jZS4iXX0sIm1ldGhvZCI6eyJlbnZpcm9ubWVudF9yb290Ijoic2hhMjU2OjY0MWYyYmUzNjAzZTZmMzk4NzI0Y2U1YmNhYWQ0Yzg4NzBlZjEyOTkyMzY2ZGVkZTk4MzVhOTg4OTM1YzZlMjciLCJpbXBsZW1lbnRhdGlvbiI6Im1ldGhvZHMvY3VycmVudC9lcmRvcy0zMjEtY29ycmVjdGlvbi1jaGFpbi52MS5qc29uIiwicHJvZmlsZSI6ImNvaC0wMC1lcmRvcy0zMjEtY29ycmVjdGlvbi1jaGFpbi12MSJ9LCJvdXRjb21lIjoicGFzcyIsIm91dHB1dF9hcnRpZmFjdF9pZHMiOltdLCJzY2hlbWEiOiJ2ZWxhLnZlcmlmaWNhdGlvbi1yZWNvcmQudjIiLCJzY29wZSI6eyJkb2VzX25vdF9lc3RhYmxpc2giOlsiQSBwcm9vZiwgcmVzb2x1dGlvbiwgc3RhdGVtZW50IGVxdWl2YWxlbmNlLCBmcmVzaCBrZXJuZWwgZXhlY3V0aW9uLCBpbmRlcGVuZGVudCByZXByb2R1Y3Rpb24sIGFjY2VwdGFuY2UsIG9yIFN0YW5kaW5nLiJdLCJwcm9wZXJ0eSI6ImNsYWltX2NoYWluX2ZpZGVsaXR5In0sInN0YXJ0ZWRfYXQiOiIyMDI2LTA4LTE3VDE4OjMzOjM0WiIsInN1YmplY3QiOnsiYXJ0aWZhY3RfaWRzIjpbIjc4OWM5ZGM1ZTRjMWMyMzQ0NTBhN2ViZDAzZDdiNGZiOGUwYmE2ZGVhYjEyMDk4ZTJmYjE3YjNlNzRiYWRhMTAiXSwiY2xhaW1faWQiOiJ2Y2xfYjljNjkxNWRlNTVlMTVjNjlkMDZiOWFlZWQ3ODZiMGU2MzI5ODYzNzRhMzQ3ZDc3ZmY0NDdhZDI0NGY2N2EyZSIsInByb3Bvc2FsX2lkIjoidnByXzJjM2ZlNTg4OGIwMDM2NmEiLCJwcm9wb3NhbF9yb290Ijoic2hhMjU2OjJjM2ZlNTg4OGIwMDM2NmFlNjZkNjM4YWRhNjUxMTI1MzMxMWRmOTg4NTQ3NGM0OGMzMzQ1ZDRhZGI0NWI3MzAiLCJzdWJtaXNzaW9uX2lkIjoidnNiX2E3MmUzNzVkNWIzMjc3MTQiLCJzdWJtaXNzaW9uX3Jvb3QiOiJzaGEyNTY6YTcyZTM3NWQ1YjMyNzcxNGVkZWEzYTRmY2E1Mzk3Mzg5ZGRiYWU2ODUxOWFkNDYxNjJkMzY3NzNlZWZlMThlMSJ9fQ==",
+        "payloadType": "application/vnd.vela.verification-record.v2+json",
+        "signatures": [
+          {
+            "keyid": "273480a09d09e58e7ac5d13a89031df2d118635b00565fa7708eb118a9e44b94",
+            "sig": "y2vYXJc+axahzA5P4mi7HrPVq0uJEHVWNFyTrauoCc/CkZZCcqWvAI35z8ncQsAOOP/kJDiQB6ST510AdnxLBA=="
+          }
+        ]
+      },
+      "payload": {
+        "completed_at": "2026-08-17T18:33:34Z",
+        "identity": {
+          "actor_class": "agent",
+          "actor_id": "verifier:codex-submission-v3-migration-review",
+          "declared_at": "2026-08-17T18:33:34Z",
+          "public_key_hex": "273480a09d09e58e7ac5d13a89031df2d118635b00565fa7708eb118a9e44b94",
+          "schema": "vela.signer-identity.v1"
+        },
+        "independence": {
+          "declared_independent_of": [],
+          "shared_dependencies": [
+            "The producer and verifier share the same current packet and exact source snapshots; this is an attributed complementary review, not external independence."
+          ]
+        },
+        "method": {
+          "environment_root": "sha256:641f2be3603e6f398724ce5bcaad4c8870ef12992366dede9835a988935c6e27",
+          "implementation": "methods/current/erdos-321-correction-chain.v1.json",
+          "profile": "coh-00-erdos-321-correction-chain-v1"
+        },
+        "outcome": "pass",
+        "output_artifact_ids": [],
+        "schema": "vela.verification-record.v2",
+        "scope": {
+          "does_not_establish": [
+            "A proof, resolution, statement equivalence, fresh kernel execution, independent reproduction, acceptance, or Standing."
+          ],
+          "property": "claim_chain_fidelity"
+        },
+        "started_at": "2026-08-17T18:33:34Z",
+        "subject": {
+          "artifact_ids": [
+            "789c9dc5e4c1c234450a7ebd03d7b4fb8e0ba6deab12098e2fb17b3e74bada10"
+          ],
+          "claim_id": "vcl_b9c6915de55e15c69d06b9aeed786b0e632986374a347d77ff447ad244f67a2e",
+          "proposal_id": "vpr_2c3fe5888b00366a",
+          "proposal_root": "sha256:2c3fe5888b00366ae66d638ada6511253311df9885474c48c3345d4adb45b730",
+          "submission_id": "vsb_a72e375d5b327714",
+          "submission_root": "sha256:a72e375d5b327714edea3a4fca5397389ddbae68519ad46162d36773eefe18e1"
+        }
+      },
+      "authentication": {
+        "signature_verified": true,
+        "actor_id": "verifier:codex-submission-v3-migration-review"
+      },
+      "review_method": {
+        "root": "sha256:641f2be3603e6f398724ce5bcaad4c8870ef12992366dede9835a988935c6e27",
+        "source_path": "methods/current/erdos-321-correction-chain.v1.json",
+        "state": "opaque"
+      }
+    },
+    {
+      "object_id": "vvr_f89662daad9537c0",
+      "object_root": "sha256:f89662daad9537c02564da205c6e3ecf045f920ad39eddfd845eb6634abe24f0",
+      "source_path": "records/verifications/sha256/f89662daad9537c02564da205c6e3ecf045f920ad39eddfd845eb6634abe24f0.json",
+      "envelope": {
+        "payload": "eyJjb21wbGV0ZWRfYXQiOiIyMDI2LTA4LTE4VDE4OjQ1OjE0WiIsImlkZW50aXR5Ijp7ImFjdG9yX2NsYXNzIjoiYWdlbnQiLCJhY3Rvcl9pZCI6InZlcmlmaWVyOmNvZGV4LXYzLXJldmlzaW9uLWZpZGVsaXR5IiwiZGVjbGFyZWRfYXQiOiIyMDI2LTA4LTE4VDE4OjQ1OjE0WiIsInB1YmxpY19rZXlfaGV4IjoiYzFjYjMxYWYxZjQxYmRjMzYwMWNkMGI2MzE3Njk3ZDVjMDI4N2IyMTIyM2U4OTRlNDZiN2E5MDJlM2Q5Y2Y1YiIsInNjaGVtYSI6InZlbGEuc2lnbmVyLWlkZW50aXR5LnYxIn0sImluZGVwZW5kZW5jZSI6eyJkZWNsYXJlZF9pbmRlcGVuZGVudF9vZiI6WyJhZ2VudDpzdWJtaXNzaW9uLXYzLWNsZWFudXAiXSwic2hhcmVkX2RlcGVuZGVuY2llcyI6WyJTYW1lIE9wZW5BSSBDb2RleCBwcm92aWRlciBhbmQgbW9kZWwgZmFtaWx5LCBsb2NhbCBtYWNPUyBob3N0LCBNYXRoIHJlcG9zaXRvcnkgYW5kIHNvdXJjZSBieXRlcywgc2lnbmVkIFZlbGEgYmluYXJ5LCBHaXQgb2JqZWN0IGRhdGFiYXNlLCBzaGVsbCwganEsIGFuZCBoYXNoIHRvb2xpbmc7IGFjdG9yLXNlcGFyYXRlZCByZXZpZXcgb25seS4iXX0sIm1ldGhvZCI6eyJlbnZpcm9ubWVudF9yb290Ijoic2hhMjU2OjFhZGE5MGQ1NzU4YTE2ZDk3M2E1NmE0MTVhM2E4ZDMzOGJlZGE1ZjBhMTFjZGFlOTgzMmU3ZWIxMTI2YTI4MGUiLCJpbXBsZW1lbnRhdGlvbiI6Im1ldGhvZHMvY3VycmVudC9lcmRvcy05NC1zdWJtaXNzaW9uLXYzLXJldmlzaW9uLWZpZGVsaXR5LnYxLmpzb24iLCJwcm9maWxlIjoiZXJkb3MtOTQtc3VibWlzc2lvbi12My1yZXZpc2lvbi1maWRlbGl0eS12MSJ9LCJvdXRjb21lIjoicGFzcyIsIm91dHB1dF9hcnRpZmFjdF9pZHMiOlsiZGRmNTdiZTAyZGMzNGMwN2U4YTY2YTIyZjRkZmI1MmEwNjRkM2VlZWY4ODY4MDQ3ZTk4NTVmZjhmYzY3YmM3NiJdLCJzY2hlbWEiOiJ2ZWxhLnZlcmlmaWNhdGlvbi1yZWNvcmQudjIiLCJzY29wZSI6eyJkb2VzX25vdF9lc3RhYmxpc2giOlsiQ29ycmVjdG5lc3Mgb2YgdGhlIG1hdGhlbWF0aWNhbCBwcm9vZiBvciBhIGZyZXNoIGtlcm5lbCByZWJ1aWxkLiIsIlNjaWVudGlmaWMgYWNjZXB0YW5jZSwgYSBEZWNpc2lvbiwgb3IgU3RhbmRpbmcuIiwiUHJvdmlkZXItLCBob3N0LSwgc291cmNlLWJ5dGUtLCByZXBvc2l0b3J5LSwgb3IgdG9vbC1pbmRlcGVuZGVudCByZXByb2R1Y3Rpb24uIl0sInByb3BlcnR5Ijoic3VibWlzc2lvbl92M19yZXZpc2lvbl9maWRlbGl0eSJ9LCJzdGFydGVkX2F0IjoiMjAyNi0wOC0xOFQxODo0NToxNFoiLCJzdWJqZWN0Ijp7ImFydGlmYWN0X2lkcyI6WyJlMjA1NGU3ZDVkNTdkMWQxZjRmZDMxMWQyNmRiYTY1YWZiOTBlZjg3M2U3ZjA0Y2I3YmI1ZTQzMWU0MzE0OGViIiwiMTE5ZTRkMjJjMWU4ZTVmMjkzMWY1NzZlNmUxYWY5MmY5MDZmN2JkNDlkN2Y0ZGUyOGIyMmNiOTI5NTU2MDBhZCIsIjA2NDk4Y2JjMzg1MTRiNzk5NWEwN2U4YzNhOTU5MDFhOGZiMTk3NjNlNDRjNmI5Yzk3ZjI4OTczMTA0ZGZjYTEiXSwiY2xhaW1faWQiOiJ2Y2xfNjc2M2JhMjQ3ZDQwMzAzNDA4YTI2OGIyMjZjM2UyN2Q3YTc1M2I2M2ZjYTNlYjBkZTk5NjE5ZDUwOTM0NmJmYiIsInByb3Bvc2FsX2lkIjoidnByX2I1Y2E1MjFkMmE4OTJlZWUiLCJwcm9wb3NhbF9yb290Ijoic2hhMjU2OmI1Y2E1MjFkMmE4OTJlZWUyYzE1NmYyNWY2ZWY0ODQ5ZWRhYjViNDM2ZTY4NTVmZDkyNGEyNWQ3NDI3YWM4ODIiLCJzdWJtaXNzaW9uX2lkIjoidnNiXzJkMTBiYTJmZjFhZmY5MDEiLCJzdWJtaXNzaW9uX3Jvb3QiOiJzaGEyNTY6MmQxMGJhMmZmMWFmZjkwMWFlYjhkMTY5OTNmZWU4OTMzOTM4MzQ1YWUzMmZlM2U0NThhZDJhNGE2MGZmMWFkZiJ9fQ==",
+        "payloadType": "application/vnd.vela.verification-record.v2+json",
+        "signatures": [
+          {
+            "keyid": "c1cb31af1f41bdc3601cd0b6317697d5c0287b21223e894e46b7a902e3d9cf5b",
+            "sig": "yL1ZRhoim/U97YCRI1oS2QQQ3nKSQsZEQIEp7UEgZPQ1ZfDQvgYLM2xQCnL0FJOS9/g5C36JVu6dy6uK/Lc0Ag=="
+          }
+        ]
+      },
+      "payload": {
+        "completed_at": "2026-08-18T18:45:14Z",
+        "identity": {
+          "actor_class": "agent",
+          "actor_id": "verifier:codex-v3-revision-fidelity",
+          "declared_at": "2026-08-18T18:45:14Z",
+          "public_key_hex": "c1cb31af1f41bdc3601cd0b6317697d5c0287b21223e894e46b7a902e3d9cf5b",
+          "schema": "vela.signer-identity.v1"
+        },
+        "independence": {
+          "declared_independent_of": [
+            "agent:submission-v3-cleanup"
+          ],
+          "shared_dependencies": [
+            "Same OpenAI Codex provider and model family, local macOS host, Math repository and source bytes, signed Vela binary, Git object database, shell, jq, and hash tooling; actor-separated review only."
+          ]
+        },
+        "method": {
+          "environment_root": "sha256:1ada90d5758a16d973a56a415a3a8d338beda5f0a11cdae9832e7eb1126a280e",
+          "implementation": "methods/current/erdos-94-submission-v3-revision-fidelity.v1.json",
+          "profile": "erdos-94-submission-v3-revision-fidelity-v1"
+        },
+        "outcome": "pass",
+        "output_artifact_ids": [
+          "ddf57be02dc34c07e8a66a22f4dfb52a064d3eeef8868047e9855ff8fc67bc76"
+        ],
+        "schema": "vela.verification-record.v2",
+        "scope": {
+          "does_not_establish": [
+            "Correctness of the mathematical proof or a fresh kernel rebuild.",
+            "Scientific acceptance, a Decision, or Standing.",
+            "Provider-, host-, source-byte-, repository-, or tool-independent reproduction."
+          ],
+          "property": "submission_v3_revision_fidelity"
+        },
+        "started_at": "2026-08-18T18:45:14Z",
+        "subject": {
+          "artifact_ids": [
+            "e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+            "119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad",
+            "06498cbc38514b7995a07e8c3a95901a8fb19763e44c6b9c97f28973104dfca1"
+          ],
+          "claim_id": "vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+          "proposal_id": "vpr_b5ca521d2a892eee",
+          "proposal_root": "sha256:b5ca521d2a892eee2c156f25f6ef4849edab5b436e6855fd924a25d7427ac882",
+          "submission_id": "vsb_2d10ba2ff1aff901",
+          "submission_root": "sha256:2d10ba2ff1aff901aeb8d16993fee8933938345ae32fe3e458ad2a4a60ff1adf"
+        }
+      },
+      "authentication": {
+        "signature_verified": true,
+        "actor_id": "verifier:codex-v3-revision-fidelity"
+      },
+      "review_method": {
+        "method": {
+          "attested_by_actor_id": "verifier:codex-v3-revision-fidelity",
+          "does_not_establish": [
+            "Correctness of the mathematical proof or a fresh kernel rebuild.",
+            "Scientific acceptance, a Decision, or Standing.",
+            "Provider-, host-, source-byte-, repository-, or tool-independent reproduction."
+          ],
+          "procedure": [
+            "Read the exact accepted predecessor Claim, pending successor Claim, Submission v3 envelope, Proposal, and occurrence-binding packet.",
+            "Confirm the successor assertion is byte-for-byte identical to the predecessor assertion.",
+            "Confirm the successor retains the predecessor's scientific conditions, caveats, source and producer evidence, rights boundaries, occurrence mapping, limitations, and correction truth.",
+            "Confirm the sole removed condition is the transient legacy-recovery pointer and the sole replaced evidence input is the occurrence-binding packet updated to name the immediate predecessor without containing the successor root.",
+            "Confirm the Submission uses the current schema and has no legacy-envelope or rollback-ref dependency."
+          ],
+          "profile": "erdos-94-submission-v3-revision-fidelity-v1",
+          "property": "submission_v3_revision_fidelity",
+          "question": "Is the pending Erdős 94 successor the smallest current-schema revision that removes only the obsolete recovery dependency?",
+          "required_output": [
+            "Exact predecessor and successor Claim identifiers, roots, assertions, conditions, relations, and evidence roots.",
+            "An explicit field-level delta and Submission schema check.",
+            "An explicit zero-reference result for the obsolete recovery ref within the pending successor package."
+          ],
+          "reviewer": {
+            "display_name": "Codex Submission v3 revision-fidelity reviewer",
+            "identifier": "verifier:codex-v3-revision-fidelity",
+            "kind": "ai_model",
+            "provider": "OpenAI",
+            "version": null
+          },
+          "schema": "vela.review-method.v1"
+        },
+        "root": "sha256:1ada90d5758a16d973a56a415a3a8d338beda5f0a11cdae9832e7eb1126a280e",
+        "schema": "vela.review-method.v1",
+        "source_path": "methods/current/erdos-94-submission-v3-revision-fidelity.v1.json",
+        "state": "verified"
+      }
+    },
+    {
+      "object_id": "vvr_fb7cbd5546644686",
+      "object_root": "sha256:fb7cbd55466446867dc3a32494db1ffdba1d338667205e1b7c76ad15bbb67a66",
+      "source_path": "records/verifications/sha256/fb7cbd55466446867dc3a32494db1ffdba1d338667205e1b7c76ad15bbb67a66.json",
+      "envelope": {
+        "payload": "eyJjb21wbGV0ZWRfYXQiOiIyMDI2LTA4LTE3VDE4OjQ4OjE3WiIsImlkZW50aXR5Ijp7ImFjdG9yX2NsYXNzIjoiYWdlbnQiLCJhY3Rvcl9pZCI6InZlcmlmaWVyOmluZGVwZW5kZW50LXN1Ym1pc3Npb24tdjMtcmV2aWV3IiwiZGVjbGFyZWRfYXQiOiIyMDI2LTA4LTE3VDE4OjQ4OjE3WiIsInB1YmxpY19rZXlfaGV4IjoiN2JlMmM5N2UxNWYxYjRhOTkyYWY1YzAxNDFlOGZjM2QxMGEzNDdlZDQ3MjQ0ODA4MWQ0MGZjYmFkMDQxNDVlYyIsInNjaGVtYSI6InZlbGEuc2lnbmVyLWlkZW50aXR5LnYxIn0sImluZGVwZW5kZW5jZSI6eyJkZWNsYXJlZF9pbmRlcGVuZGVudF9vZiI6WyJhZ2VudDpzdWJtaXNzaW9uLXYzLW1pZ3JhdGlvbiJdLCJzaGFyZWRfZGVwZW5kZW5jaWVzIjpbIlNhbWUgTWF0aCBieXRlcywgaG9zdCwgYnJhbmNoLWJ1aWx0IFZlbGEgYmluYXJ5LCBsb2NhbCBoYXNoIGFuZCBKU09OIHRvb2xpbmcsIGFuZCBPcGVuQUkgcHJvdmlkZXIvbW9kZWwgZmFtaWx5OyBhY3Rvci1pbmRlcGVuZGVudCwgbm90IHByb3ZpZGVyLSwgaG9zdC0sIG9yIHNvdXJjZS1ieXRlLWluZGVwZW5kZW50LiJdfSwibWV0aG9kIjp7ImVudmlyb25tZW50X3Jvb3QiOiJzaGEyNTY6ZjAxZWM1YmUxZjMyYjVlYTFiYzBlNWRmMTM2NGE2NzQ3OWUzNGZjMDc5OWVlMmM0ZDQwY2FkYzI4YTk4MGVlOCIsImltcGxlbWVudGF0aW9uIjoibWV0aG9kcy9jdXJyZW50L2VyZG9zLTk0LWNvcnJlY3RlZC1yZWNvcmQtc2NvcGUtbWlncmF0aW9uLXJldmlldy52MS5qc29uIiwicHJvZmlsZSI6ImVyZG9zLTk0LWNvcnJlY3RlZC1yZWNvcmQtc2NvcGUtbWlncmF0aW9uLXJldmlldy12MSJ9LCJvdXRjb21lIjoicGFzcyIsIm91dHB1dF9hcnRpZmFjdF9pZHMiOlsiMzk0MWU2NmNlMTBjY2I0MzY3YmYyODZjYTU2N2ZhODQ0MjhhOTcxNWNlYTIzNjM0YmM5M2I4ZDZhZjQwMTM4MiJdLCJzY2hlbWEiOiJ2ZWxhLnZlcmlmaWNhdGlvbi1yZWNvcmQudjIiLCJzY29wZSI6eyJkb2VzX25vdF9lc3RhYmxpc2giOlsiVGhlIGN1YmljIEVyZMWRcyA5NCBkaXN0YW5jZS1tdWx0aXBsaWNpdHkgY29uamVjdHVyZS4iLCJUaGF0IHRoZSB1bmRlcmx5aW5nIExlYW4gcHJvb2YgaXMgY29ycmVjdCwgd2hpY2ggdGhpcyBvYnNlcnZhdGlvbiBkb2VzIG5vdCByZWJ1aWxkLiIsIkV4dGVybmFsIHNvdXJjZS1vd25lciByZXZpZXcsIGh1bWFuIHJldmlldywgb3IgdXBzdHJlYW0gYWNjZXB0YW5jZS4iLCJBbnkgY2hhbmdlIHRvIFN0YW5kaW5nLCBhbmQgYW55IERlY2lzaW9uIG9yIGFjY2VwdGFuY2UuIl0sInByb3BlcnR5IjoiY29ycmVjdGVkX3JlY29yZF9zY29wZV9maWRlbGl0eSJ9LCJzdGFydGVkX2F0IjoiMjAyNi0wOC0xN1QxODo0ODoxN1oiLCJzdWJqZWN0Ijp7ImFydGlmYWN0X2lkcyI6WyJlMjA1NGU3ZDVkNTdkMWQxZjRmZDMxMWQyNmRiYTY1YWZiOTBlZjg3M2U3ZjA0Y2I3YmI1ZTQzMWU0MzE0OGViIiwiMTE5ZTRkMjJjMWU4ZTVmMjkzMWY1NzZlNmUxYWY5MmY5MDZmN2JkNDlkN2Y0ZGUyOGIyMmNiOTI5NTU2MDBhZCIsIjJkYjE3MDk5YjQyMWVmZjQzZDQ4OTJkZGVkY2RkN2IxYmZlY2ZiYzZjY2EwMTM0NDdiM2I5NGE4MWMzY2QwZjgiXSwiY2xhaW1faWQiOiJ2Y2xfNGNhZTBkNDEyYTk1ZDE5NjViOTI3ZTFmN2RiYWE0MjQ1ZjViOWMzZjg0YzU5MTNlMWQ2YTc4ODBkNjM0OTE2NSIsInByb3Bvc2FsX2lkIjoidnByX2Q3MjUzNjYzMDEzOTYyYmEiLCJwcm9wb3NhbF9yb290Ijoic2hhMjU2OmQ3MjUzNjYzMDEzOTYyYmE0MDJiZDIyYjBkZGNmODNiNGY3OTEwNjQ4MjcyZDgwMmM2MTlmODJiZjY3NDg3ZTUiLCJzdWJtaXNzaW9uX2lkIjoidnNiX2Q0OTg2OWYwN2E3OTA3ZDQiLCJzdWJtaXNzaW9uX3Jvb3QiOiJzaGEyNTY6ZDQ5ODY5ZjA3YTc5MDdkNDExMTM1ZDcwYTU2MjYzNmQzYjU3Yjc5ZWI2YWIwNWYzMzQwMjg2ODJlZTAzNjA4NSJ9fQ==",
+        "payloadType": "application/vnd.vela.verification-record.v2+json",
+        "signatures": [
+          {
+            "keyid": "7be2c97e15f1b4a992af5c0141e8fc3d10a347ed472448081d40fcbad04145ec",
+            "sig": "gHNZjsK8iO6vnp62k7vDX28HjG07rZue5zVKD9kRN5hVZWbk3IEnkFuxwTYfq7vlOtro6rtQVcnM4vvfN7R0DQ=="
+          }
+        ]
+      },
+      "payload": {
+        "completed_at": "2026-08-17T18:48:17Z",
+        "identity": {
+          "actor_class": "agent",
+          "actor_id": "verifier:independent-submission-v3-review",
+          "declared_at": "2026-08-17T18:48:17Z",
+          "public_key_hex": "7be2c97e15f1b4a992af5c0141e8fc3d10a347ed472448081d40fcbad04145ec",
+          "schema": "vela.signer-identity.v1"
+        },
+        "independence": {
+          "declared_independent_of": [
+            "agent:submission-v3-migration"
+          ],
+          "shared_dependencies": [
+            "Same Math bytes, host, branch-built Vela binary, local hash and JSON tooling, and OpenAI provider/model family; actor-independent, not provider-, host-, or source-byte-independent."
+          ]
+        },
+        "method": {
+          "environment_root": "sha256:f01ec5be1f32b5ea1bc0e5df1364a67479e34fc0799ee2c4d40cadc28a980ee8",
+          "implementation": "methods/current/erdos-94-corrected-record-scope-migration-review.v1.json",
+          "profile": "erdos-94-corrected-record-scope-migration-review-v1"
+        },
+        "outcome": "pass",
+        "output_artifact_ids": [
+          "3941e66ce10ccb4367bf286ca567fa84428a9715cea23634bc93b8d6af401382"
+        ],
+        "schema": "vela.verification-record.v2",
+        "scope": {
+          "does_not_establish": [
+            "The cubic Erdős 94 distance-multiplicity conjecture.",
+            "That the underlying Lean proof is correct, which this observation does not rebuild.",
+            "External source-owner review, human review, or upstream acceptance.",
+            "Any change to Standing, and any Decision or acceptance."
+          ],
+          "property": "corrected_record_scope_fidelity"
+        },
+        "started_at": "2026-08-17T18:48:17Z",
+        "subject": {
+          "artifact_ids": [
+            "e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+            "119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad",
+            "2db17099b421eff43d4892ddedcdd7b1bfecfbc6cca013447b3b94a81c3cd0f8"
+          ],
+          "claim_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+          "proposal_id": "vpr_d7253663013962ba",
+          "proposal_root": "sha256:d7253663013962ba402bd22b0ddcf83b4f7910648272d802c619f82bf67487e5",
+          "submission_id": "vsb_d49869f07a7907d4",
+          "submission_root": "sha256:d49869f07a7907d411135d70a562636d3b57b79eb6ab05f334028682ee036085"
+        }
+      },
+      "authentication": {
+        "signature_verified": true,
+        "actor_id": "verifier:independent-submission-v3-review"
+      },
+      "review_method": {
+        "method": {
+          "attested_by_actor_id": "verifier:independent-submission-v3-review",
+          "does_not_establish": [
+            "The cubic Erdős 94 distance-multiplicity conjecture.",
+            "That the underlying Lean proof is correct, which this observation does not rebuild.",
+            "External source-owner review, human review, or upstream acceptance.",
+            "Any change to Standing, and any Decision or acceptance."
+          ],
+          "procedure": [
+            "Read the predecessor assertion recorded in the occurrence-binding packet and the corrected assertion carried by this Proposal.",
+            "Confirm the predecessor's mathematical sentence appears in the successor unchanged, including both pinned commits.",
+            "Confirm every sentence the successor adds concerns occurrence association or narrowing, and that none widens the mathematical result.",
+            "Confirm the successor states explicitly that the identity does not establish the cubic distance-multiplicity conjecture.",
+            "Confirm the retained conditions still carry the predecessor's bounded-scope caveat.",
+            "Refuse any correction whose added text could be read as resolving Erdős 94."
+          ],
+          "profile": "erdos-94-corrected-record-scope-migration-review-v1",
+          "property": "corrected_record_scope_fidelity",
+          "question": "Does the corrected Claim state the predecessor's mathematical content unchanged, and does everything it adds narrow rather than widen what is asserted?",
+          "required_output": [
+            "The predecessor and successor assertions, quoted exactly.",
+            "Each sentence added by the successor, classified as association, narrowing, or other.",
+            "An explicit statement of whether any added sentence widens the result."
+          ],
+          "reviewer": {
+            "display_name": "Independent Submission v3 reviewer",
+            "identifier": "verifier:independent-submission-v3-review",
+            "kind": "ai_model",
+            "provider": "OpenAI",
+            "version": "gpt-5.6-sol"
+          },
+          "schema": "vela.review-method.v1"
+        },
+        "root": "sha256:f01ec5be1f32b5ea1bc0e5df1364a67479e34fc0799ee2c4d40cadc28a980ee8",
+        "schema": "vela.review-method.v1",
+        "source_path": "methods/current/erdos-94-corrected-record-scope-migration-review.v1.json",
+        "state": "verified"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "artifact_id": "06498cbc38514b7995a07e8c3a95901a8fb19763e44c6b9c97f28973104dfca1",
+      "artifact_root": "sha256:06498cbc38514b7995a07e8c3a95901a8fb19763e44c6b9c97f28973104dfca1",
+      "source_path": "records/artifacts/sha256/06498cbc38514b7995a07e8c3a95901a8fb19763e44c6b9c97f28973104dfca1",
+      "byte_length": 3113
+    },
+    {
+      "artifact_id": "119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad",
+      "artifact_root": "sha256:119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad",
+      "source_path": "records/artifacts/sha256/119e4d22c1e8e5f2931f576e6e1af92f906f7bd49d7f4de28b22cb92955600ad",
+      "byte_length": 2506
+    },
+    {
+      "artifact_id": "17ffca734498fbdb6377b6c3bac1663f66a290ed3497b5a851106d3c3b1581c9",
+      "artifact_root": "sha256:17ffca734498fbdb6377b6c3bac1663f66a290ed3497b5a851106d3c3b1581c9",
+      "source_path": "records/artifacts/sha256/17ffca734498fbdb6377b6c3bac1663f66a290ed3497b5a851106d3c3b1581c9",
+      "byte_length": 1272
+    },
+    {
+      "artifact_id": "21d7b2911f116db1c57bbbf4b86c72d690cd7b727823d72ae50ba5742621dc6a",
+      "artifact_root": "sha256:21d7b2911f116db1c57bbbf4b86c72d690cd7b727823d72ae50ba5742621dc6a",
+      "source_path": "records/artifacts/sha256/21d7b2911f116db1c57bbbf4b86c72d690cd7b727823d72ae50ba5742621dc6a",
+      "byte_length": 2435
+    },
+    {
+      "artifact_id": "2db17099b421eff43d4892ddedcdd7b1bfecfbc6cca013447b3b94a81c3cd0f8",
+      "artifact_root": "sha256:2db17099b421eff43d4892ddedcdd7b1bfecfbc6cca013447b3b94a81c3cd0f8",
+      "source_path": "records/artifacts/sha256/2db17099b421eff43d4892ddedcdd7b1bfecfbc6cca013447b3b94a81c3cd0f8",
+      "byte_length": 2716
+    },
+    {
+      "artifact_id": "3941e66ce10ccb4367bf286ca567fa84428a9715cea23634bc93b8d6af401382",
+      "artifact_root": "sha256:3941e66ce10ccb4367bf286ca567fa84428a9715cea23634bc93b8d6af401382",
+      "source_path": "records/artifacts/sha256/3941e66ce10ccb4367bf286ca567fa84428a9715cea23634bc93b8d6af401382",
+      "byte_length": 2225
+    },
+    {
+      "artifact_id": "69e65ee40c3966c1b9286a56b5d25187f075e50da624ec4adad904c892c06dc7",
+      "artifact_root": "sha256:69e65ee40c3966c1b9286a56b5d25187f075e50da624ec4adad904c892c06dc7",
+      "source_path": "records/artifacts/sha256/69e65ee40c3966c1b9286a56b5d25187f075e50da624ec4adad904c892c06dc7",
+      "byte_length": 3544
+    },
+    {
+      "artifact_id": "789c9dc5e4c1c234450a7ebd03d7b4fb8e0ba6deab12098e2fb17b3e74bada10",
+      "artifact_root": "sha256:789c9dc5e4c1c234450a7ebd03d7b4fb8e0ba6deab12098e2fb17b3e74bada10",
+      "source_path": "records/artifacts/sha256/789c9dc5e4c1c234450a7ebd03d7b4fb8e0ba6deab12098e2fb17b3e74bada10",
+      "byte_length": 5271
+    },
+    {
+      "artifact_id": "ddf57be02dc34c07e8a66a22f4dfb52a064d3eeef8868047e9855ff8fc67bc76",
+      "artifact_root": "sha256:ddf57be02dc34c07e8a66a22f4dfb52a064d3eeef8868047e9855ff8fc67bc76",
+      "source_path": "records/artifacts/sha256/ddf57be02dc34c07e8a66a22f4dfb52a064d3eeef8868047e9855ff8fc67bc76",
+      "byte_length": 4506
+    },
+    {
+      "artifact_id": "e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+      "artifact_root": "sha256:e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+      "source_path": "records/artifacts/sha256/e2054e7d5d57d1d1f4fd311d26dba65afb90ef873e7f04cb7bb5e431e43148eb",
+      "byte_length": 3535
+    }
+  ],
+  "authority_events": [
+    {
+      "event": {
+        "authority_event_id": "vev_160a0cf2f12b7c75",
+        "authority_event_root": "sha256:04dda8fa282d6c592bce502e70e39ea433c966a9e5ba7f05a72459888bf685b5",
+        "semantic_event_id": "vev_5ca30142def02fd6"
+      },
+      "kind": "review.accepted",
+      "actor_id": "agent:submission-v3-migration",
+      "target_id": "vpr_5949c53e3adbf1b9",
+      "target_type": "proposal",
+      "timestamp": "2026-08-17T18:32:56Z",
+      "record": {
+        "content": {
+          "actor": {
+            "id": "agent:submission-v3-migration",
+            "type": "agent"
+          },
+          "after_hash": "sha256:null",
+          "authority_mode": "repository_authority",
+          "before_hash": "sha256:null",
+          "caveats": [],
+          "kind": "review.accepted",
+          "payload": {
+            "applied_event_id": "vev_d554c42475e6095c",
+            "decision_performer": {
+              "actor_class": "agent",
+              "actor_id": "agent:submission-v3-migration",
+              "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+              "schema": "vela.decision-performer.v1",
+              "session_ref": null
+            },
+            "proposal_id": "vpr_5949c53e3adbf1b9",
+            "proposal_kind": "claim.add",
+            "repository_after": "sha256:744e8cdfdc93ae4ba6d70df12c977aa6efefaa9ced8ecfa7e09c45ff8445fdbe",
+            "repository_before": "sha256:1941e8aa2ae7c0404fd2bb401f2cc07b79403dbcfec93683a2ff5de74902f2be",
+            "verdict": "accepted"
+          },
+          "principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+          "reason": "Re-admit the exact intended Erdős 321 predecessor assertion into the compact prelaunch v3 lineage so its current correction remains explicit; this migration Decision does not change the scientific assertion.",
+          "target": {
+            "id": "vpr_5949c53e3adbf1b9",
+            "type": "proposal"
+          },
+          "timestamp": "2026-08-17T18:32:56Z",
+          "transaction_id": "vtx_fe24353841160b3a1a8034f0bd96f4e2cd9c386ee470a87b63502dd23aa9cfe2"
+        },
+        "id": "vev_160a0cf2f12b7c75",
+        "schema": "vela.event.v1"
+      }
+    },
+    {
+      "event": {
+        "authority_event_id": "vev_1bf4273f8bf8bc98",
+        "authority_event_root": "sha256:90fc7ab5f3fd747049ca6ff4482491b11dec886a451bb1476664371d17cd2116",
+        "semantic_event_id": "vev_d554c42475e6095c"
+      },
+      "kind": "claim.asserted",
+      "actor_id": "agent:submission-v3-migration",
+      "target_id": "vcl_1da4282b752192c52c2a985476fc13bfe460da01e4fe26c5543b7acb37d8b120",
+      "target_type": "claim",
+      "timestamp": "2026-08-17T18:32:56Z",
+      "record": {
+        "content": {
+          "actor": {
+            "id": "agent:submission-v3-migration",
+            "type": "agent"
+          },
+          "after_hash": "sha256:470072c1a598409aa8d27e420de7e24ea66dce94cf5fb3fcb97d9578d8991c63",
+          "authority_mode": "repository_authority",
+          "before_hash": "sha256:null",
+          "caveats": [
+            "Erdos problem 321 remains open; this does not assert resolution or optimality.",
+            "The kernel gate is a recorded exact-commit CI attestation, not a fresh rebuild."
+          ],
+          "kind": "claim.asserted",
+          "payload": {
+            "claim_id": "vcl_1da4282b752192c52c2a985476fc13bfe460da01e4fe26c5543b7acb37d8b120",
+            "claim_root": "sha256:470072c1a598409aa8d27e420de7e24ea66dce94cf5fb3fcb97d9578d8991c63",
+            "decision_performer": {
+              "actor_class": "agent",
+              "actor_id": "agent:submission-v3-migration",
+              "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+              "schema": "vela.decision-performer.v1",
+              "session_ref": null
+            },
+            "proposal_id": "vpr_5949c53e3adbf1b9",
+            "repository_after": "sha256:744e8cdfdc93ae4ba6d70df12c977aa6efefaa9ced8ecfa7e09c45ff8445fdbe",
+            "repository_before": "sha256:1941e8aa2ae7c0404fd2bb401f2cc07b79403dbcfec93683a2ff5de74902f2be"
+          },
+          "principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+          "reason": "Re-admit the exact intended Erdős 321 predecessor assertion into the compact prelaunch v3 lineage so its current correction remains explicit; this migration Decision does not change the scientific assertion.",
+          "target": {
+            "id": "vcl_1da4282b752192c52c2a985476fc13bfe460da01e4fe26c5543b7acb37d8b120",
+            "type": "claim"
+          },
+          "timestamp": "2026-08-17T18:32:56Z",
+          "transaction_id": "vtx_fe24353841160b3a1a8034f0bd96f4e2cd9c386ee470a87b63502dd23aa9cfe2"
+        },
+        "id": "vev_1bf4273f8bf8bc98",
+        "schema": "vela.event.v1"
+      }
+    },
+    {
+      "event": {
+        "authority_event_id": "vev_3005186760dd9b97",
+        "authority_event_root": "sha256:4bc78cc9d81f47f4e9b19c66566328d4761f2de0796fc1e89badc0995abf06c3",
+        "semantic_event_id": "vev_cc3aabb2ee490a8f"
+      },
+      "kind": "authority.initialized",
+      "actor_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+      "target_id": "3d012325-3768-4b95-a385-c94e9f2a57a6",
+      "target_type": "repository",
+      "timestamp": "2026-08-17T18:29:16Z",
+      "record": {
+        "content": {
+          "actor": {
+            "id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+            "type": "human"
+          },
+          "after_hash": "sha256:null",
+          "authority_mode": "repository_authority",
+          "before_hash": "sha256:null",
+          "caveats": [
+            "Repository authority authenticates writes; it does not establish scientific truth."
+          ],
+          "kind": "authority.initialized",
+          "payload": {
+            "initial_actor_registry_root": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "initial_event_log_root": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "minimum_writer_version": "0.977.0",
+            "new_authority_keyset_root": "sha256:370c9924a2e25716403b7f771d5ebf90e86f6ac96ad4351063e02e5a3f974081",
+            "new_authorization_model_root": "sha256:a18d5c0938a934d73d297ae073c2fae7bf045462b4d8e9a3fc7f66b4ad5366aa",
+            "new_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+            "reason": "Establish the compact Submission v3 prelaunch mathematics authority.",
+            "repository_id": "3d012325-3768-4b95-a385-c94e9f2a57a6",
+            "schema": "vela.authority-initialization.v1"
+          },
+          "principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+          "reason": "Establish the compact Submission v3 prelaunch mathematics authority.",
+          "target": {
+            "id": "3d012325-3768-4b95-a385-c94e9f2a57a6",
+            "type": "repository"
+          },
+          "timestamp": "2026-08-17T18:29:16Z",
+          "transaction_id": "vtx_76fc2ace76980d0baa07f15477025835c7d7f816337916e5941081b2a0b543f7"
+        },
+        "id": "vev_3005186760dd9b97",
+        "schema": "vela.event.v1"
+      }
+    },
+    {
+      "event": {
+        "authority_event_id": "vev_4a63ac7192f2a992",
+        "authority_event_root": "sha256:3f60b7bfeb48a6241c8f01d690ba9d424e4c28f5b2e354aa152ea077af336f17",
+        "semantic_event_id": "vev_15632b53fb7fd674"
+      },
+      "kind": "review.accepted",
+      "actor_id": "agent:submission-v3-migration",
+      "target_id": "vpr_2c3fe5888b00366a",
+      "target_type": "proposal",
+      "timestamp": "2026-08-17T18:33:47Z",
+      "record": {
+        "content": {
+          "actor": {
+            "id": "agent:submission-v3-migration",
+            "type": "agent"
+          },
+          "after_hash": "sha256:null",
+          "authority_mode": "repository_authority",
+          "before_hash": "sha256:null",
+          "caveats": [],
+          "kind": "review.accepted",
+          "payload": {
+            "applied_event_id": "vev_b1a3213862d0bd53",
+            "decision_performer": {
+              "actor_class": "agent",
+              "actor_id": "agent:submission-v3-migration",
+              "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+              "schema": "vela.decision-performer.v1",
+              "session_ref": null
+            },
+            "proposal_id": "vpr_2c3fe5888b00366a",
+            "proposal_kind": "claim.revise",
+            "repository_after": "sha256:f231a54f1a82991a02685719158814d168e418fc2091ca299486fae13743901c",
+            "repository_before": "sha256:6da29efeedc34fb6e505c7546e894390418c807342940ecbf60cc025f99ddc1c",
+            "verdict": "accepted"
+          },
+          "principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+          "reason": "Accept the exact current Erdős 321 assertion in the compact v3 lineage after a scoped fidelity check; preserve the correction relation and limitations without changing the scientific content.",
+          "target": {
+            "id": "vpr_2c3fe5888b00366a",
+            "type": "proposal"
+          },
+          "timestamp": "2026-08-17T18:33:47Z",
+          "transaction_id": "vtx_c34565bb709790120854cf5582b56ecb2d90ef73299adbb80b392a71d43e8444"
+        },
+        "id": "vev_4a63ac7192f2a992",
+        "schema": "vela.event.v1"
+      }
+    },
+    {
+      "event": {
+        "authority_event_id": "vev_4de946c32ad32331",
+        "authority_event_root": "sha256:549a092971512300aa7f01e35905f268e44cd54b4afc839a60483935958bfa10",
+        "semantic_event_id": "vev_e04b25b2a4c02a15"
+      },
+      "kind": "claim.superseded",
+      "actor_id": "agent:submission-v3-cleanup-decision",
+      "target_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+      "target_type": "claim",
+      "timestamp": "2026-08-18T18:46:11Z",
+      "record": {
+        "content": {
+          "actor": {
+            "id": "agent:submission-v3-cleanup-decision",
+            "type": "agent"
+          },
+          "after_hash": "sha256:aaaf6ebbf510ad08e6376c5958d23f4eb7704944f7d37916eee4ae253e809b3b",
+          "authority_mode": "repository_authority",
+          "before_hash": "sha256:aedff5078a30bea1f8a51c1188f2f0aa9bc43da06c894706297d8bd7a4830767",
+          "caveats": [
+            "This proves only the elementary sum_multiplicity identity, not the cubic Erdős 94 theorem or either other variant.",
+            "The Formal Conjectures build needs the mechanical Sym2.mk.uncurry to Sym2.mk API spelling change between its pinned Mathlib and lean-proofs.",
+            "No external source-owner review, human review, upstream acceptance, or external adoption occurred.",
+            "Producer checks are not Verification, Decision, or Standing."
+          ],
+          "kind": "claim.superseded",
+          "payload": {
+            "claim_id": "vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+            "claim_root": "sha256:aaaf6ebbf510ad08e6376c5958d23f4eb7704944f7d37916eee4ae253e809b3b",
+            "decision_performer": {
+              "actor_class": "agent",
+              "actor_id": "agent:submission-v3-cleanup-decision",
+              "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+              "schema": "vela.decision-performer.v1",
+              "session_ref": "codex:019fe903-28b7-73d1-bd26-bdd9a083c1a4"
+            },
+            "proposal_id": "vpr_b5ca521d2a892eee",
+            "repository_after": "sha256:a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4",
+            "repository_before": "sha256:c465145c974a09e8b535efc7e3b6e7755e8b73916d4bad3403c2a41c12841875"
+          },
+          "principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+          "reason": "Accept the byte-identical Erdős 94 assertion as the current Submission v3 revision after two scoped actor-separated fidelity reviews. This removes only the obsolete recovery caveat, preserves the exact occurrence mapping and every scientific limit, and adds no new validation.",
+          "target": {
+            "id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+            "type": "claim"
+          },
+          "timestamp": "2026-08-18T18:46:11Z",
+          "transaction_id": "vtx_9463c27964117e426d95b944fd698c1c0cacafce16f6ca17280e28b199d9b756"
+        },
+        "id": "vev_4de946c32ad32331",
+        "schema": "vela.event.v1"
+      }
+    },
+    {
+      "event": {
+        "authority_event_id": "vev_5d0ab1bf4dc7df99",
+        "authority_event_root": "sha256:f41713fe1c360035a7ff5f8587582289c74a743dec0a82d5e4a0ccd4d7689045",
+        "semantic_event_id": "vev_1bb01953aec0d5ca"
+      },
+      "kind": "review.accepted",
+      "actor_id": "agent:submission-v3-cleanup-decision",
+      "target_id": "vpr_b5ca521d2a892eee",
+      "target_type": "proposal",
+      "timestamp": "2026-08-18T18:46:11Z",
+      "record": {
+        "content": {
+          "actor": {
+            "id": "agent:submission-v3-cleanup-decision",
+            "type": "agent"
+          },
+          "after_hash": "sha256:null",
+          "authority_mode": "repository_authority",
+          "before_hash": "sha256:null",
+          "caveats": [],
+          "kind": "review.accepted",
+          "payload": {
+            "applied_event_id": "vev_e04b25b2a4c02a15",
+            "decision_performer": {
+              "actor_class": "agent",
+              "actor_id": "agent:submission-v3-cleanup-decision",
+              "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+              "schema": "vela.decision-performer.v1",
+              "session_ref": "codex:019fe903-28b7-73d1-bd26-bdd9a083c1a4"
+            },
+            "proposal_id": "vpr_b5ca521d2a892eee",
+            "proposal_kind": "claim.revise",
+            "repository_after": "sha256:a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4",
+            "repository_before": "sha256:c465145c974a09e8b535efc7e3b6e7755e8b73916d4bad3403c2a41c12841875",
+            "verdict": "accepted"
+          },
+          "principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+          "reason": "Accept the byte-identical Erdős 94 assertion as the current Submission v3 revision after two scoped actor-separated fidelity reviews. This removes only the obsolete recovery caveat, preserves the exact occurrence mapping and every scientific limit, and adds no new validation.",
+          "target": {
+            "id": "vpr_b5ca521d2a892eee",
+            "type": "proposal"
+          },
+          "timestamp": "2026-08-18T18:46:11Z",
+          "transaction_id": "vtx_9463c27964117e426d95b944fd698c1c0cacafce16f6ca17280e28b199d9b756"
+        },
+        "id": "vev_5d0ab1bf4dc7df99",
+        "schema": "vela.event.v1"
+      }
+    },
+    {
+      "event": {
+        "authority_event_id": "vev_6760e3d5ca23ae40",
+        "authority_event_root": "sha256:a04af2d5dd136ef3e5347403b0c217ed0a5453a6c0b18678e4a7f11d688c0f31",
+        "semantic_event_id": "vev_aefe96c39e957fef"
+      },
+      "kind": "review.accepted",
+      "actor_id": "agent:submission-v3-migration",
+      "target_id": "vpr_d7253663013962ba",
+      "target_type": "proposal",
+      "timestamp": "2026-08-17T18:48:36Z",
+      "record": {
+        "content": {
+          "actor": {
+            "id": "agent:submission-v3-migration",
+            "type": "agent"
+          },
+          "after_hash": "sha256:null",
+          "authority_mode": "repository_authority",
+          "before_hash": "sha256:null",
+          "caveats": [],
+          "kind": "review.accepted",
+          "payload": {
+            "applied_event_id": "vev_b2787993800e9001",
+            "decision_performer": {
+              "actor_class": "agent",
+              "actor_id": "agent:submission-v3-migration",
+              "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+              "schema": "vela.decision-performer.v1",
+              "session_ref": null
+            },
+            "proposal_id": "vpr_d7253663013962ba",
+            "proposal_kind": "claim.revise",
+            "repository_after": "sha256:45640c5eea54693df444eada6dd1a7c1f5a4b4ef266fddf79cf51d083233ebba",
+            "repository_before": "sha256:d48ea1c5bd4ac89149733e37b17b0baa8ae9b79b10539c911e8e98cf07ee168c",
+            "verdict": "accepted"
+          },
+          "principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+          "reason": "Accept the exact current Erdős 94 assertion in the compact v3 lineage after independent scoped checks of occurrence mapping and correction scope. Preserve the correction and all nonclaims without changing the scientific assertion.",
+          "target": {
+            "id": "vpr_d7253663013962ba",
+            "type": "proposal"
+          },
+          "timestamp": "2026-08-17T18:48:36Z",
+          "transaction_id": "vtx_1d230f64e6ee1ab9595adbacbb9988ab2a06afe54c69b79dc6597690c1ed67ca"
+        },
+        "id": "vev_6760e3d5ca23ae40",
+        "schema": "vela.event.v1"
+      }
+    },
+    {
+      "event": {
+        "authority_event_id": "vev_78692c4be0e4d315",
+        "authority_event_root": "sha256:f9e4f4468ec9af9be660cba5f70095043ad36b2609b8b724d0780b47982bde86",
+        "semantic_event_id": "vev_b1a3213862d0bd53"
+      },
+      "kind": "claim.superseded",
+      "actor_id": "agent:submission-v3-migration",
+      "target_id": "vcl_1da4282b752192c52c2a985476fc13bfe460da01e4fe26c5543b7acb37d8b120",
+      "target_type": "claim",
+      "timestamp": "2026-08-17T18:33:47Z",
+      "record": {
+        "content": {
+          "actor": {
+            "id": "agent:submission-v3-migration",
+            "type": "agent"
+          },
+          "after_hash": "sha256:58f97ba8a90d23d4655c4b71051c6bdd4723c0454f31f4ed3cb3e95b0a6c8b15",
+          "authority_mode": "repository_authority",
+          "before_hash": "sha256:470072c1a598409aa8d27e420de7e24ea66dce94cf5fb3fcb97d9578d8991c63",
+          "caveats": [
+            "Erdos problem 321 remains open; this does not assert resolution or optimality.",
+            "Occurrence association is navigation-only and establishes no statement equivalence.",
+            "The negative comparison does not show that a bridge is impossible or that either statement is false.",
+            "The retained terminal and fixed sources have no exact resolved joint Lean environment."
+          ],
+          "kind": "claim.superseded",
+          "payload": {
+            "claim_id": "vcl_b9c6915de55e15c69d06b9aeed786b0e632986374a347d77ff447ad244f67a2e",
+            "claim_root": "sha256:58f97ba8a90d23d4655c4b71051c6bdd4723c0454f31f4ed3cb3e95b0a6c8b15",
+            "decision_performer": {
+              "actor_class": "agent",
+              "actor_id": "agent:submission-v3-migration",
+              "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+              "schema": "vela.decision-performer.v1",
+              "session_ref": null
+            },
+            "proposal_id": "vpr_2c3fe5888b00366a",
+            "repository_after": "sha256:f231a54f1a82991a02685719158814d168e418fc2091ca299486fae13743901c",
+            "repository_before": "sha256:6da29efeedc34fb6e505c7546e894390418c807342940ecbf60cc025f99ddc1c"
+          },
+          "principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+          "reason": "Accept the exact current Erdős 321 assertion in the compact v3 lineage after a scoped fidelity check; preserve the correction relation and limitations without changing the scientific content.",
+          "target": {
+            "id": "vcl_1da4282b752192c52c2a985476fc13bfe460da01e4fe26c5543b7acb37d8b120",
+            "type": "claim"
+          },
+          "timestamp": "2026-08-17T18:33:47Z",
+          "transaction_id": "vtx_c34565bb709790120854cf5582b56ecb2d90ef73299adbb80b392a71d43e8444"
+        },
+        "id": "vev_78692c4be0e4d315",
+        "schema": "vela.event.v1"
+      }
+    },
+    {
+      "event": {
+        "authority_event_id": "vev_78f4df2422924722",
+        "authority_event_root": "sha256:14bde9dc68c3af4756f6e5e4fe9910ca1095aeeeb6b9f3d787aeb4e6ab672948",
+        "semantic_event_id": "vev_aa272d8889d709e8"
+      },
+      "kind": "claim.asserted",
+      "actor_id": "agent:submission-v3-migration",
+      "target_id": "vcl_8ab5a917ccc077f1971f630bae293a0e5bbed3156320e0b7223ffbd75d7b0464",
+      "target_type": "claim",
+      "timestamp": "2026-08-17T18:34:38Z",
+      "record": {
+        "content": {
+          "actor": {
+            "id": "agent:submission-v3-migration",
+            "type": "agent"
+          },
+          "after_hash": "sha256:ba44090062b79a6232cc5844e0fe4f3b11e63ae3b65bb971ff3fd9fc6ffe0a8a",
+          "authority_mode": "repository_authority",
+          "before_hash": "sha256:null",
+          "caveats": [
+            "Lean elaboration with sorry does not prove Erdős problem 887.",
+            "This is not a from-source dependency build.",
+            "The same operator does not establish independent reproduction.",
+            "The replay result does not establish source-owner acceptance, Vela Decision, or Standing."
+          ],
+          "kind": "claim.asserted",
+          "payload": {
+            "claim_id": "vcl_8ab5a917ccc077f1971f630bae293a0e5bbed3156320e0b7223ffbd75d7b0464",
+            "claim_root": "sha256:ba44090062b79a6232cc5844e0fe4f3b11e63ae3b65bb971ff3fd9fc6ffe0a8a",
+            "decision_performer": {
+              "actor_class": "agent",
+              "actor_id": "agent:submission-v3-migration",
+              "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+              "schema": "vela.decision-performer.v1",
+              "session_ref": null
+            },
+            "proposal_id": "vpr_28cbee4e7d2ec91e",
+            "repository_after": "sha256:0f6f1ed9291aaa4b39230758ea0331ca93bcc1895b82c95e8b802b0b2ad9b3e3",
+            "repository_before": "sha256:74d86b44986ac4a1851cea2f75ee53385baab316daa237ce6b9bebeb9a3a7fb6"
+          },
+          "principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+          "reason": "Accept the exact current bounded Erdős 887 replay assertion in the compact v3 lineage after a scoped fidelity check; this does not claim a proof or independent reproduction.",
+          "target": {
+            "id": "vcl_8ab5a917ccc077f1971f630bae293a0e5bbed3156320e0b7223ffbd75d7b0464",
+            "type": "claim"
+          },
+          "timestamp": "2026-08-17T18:34:38Z",
+          "transaction_id": "vtx_164afc3a4f4294e695d857bd983d3fe75920fab2b0280207864af25ed04883c2"
+        },
+        "id": "vev_78f4df2422924722",
+        "schema": "vela.event.v1"
+      }
+    },
+    {
+      "event": {
+        "authority_event_id": "vev_82477af63e76141c",
+        "authority_event_root": "sha256:017b1815d2e10029b56223a294c0f9b2b03f1d4a02ee2cdc40008a242baea92e",
+        "semantic_event_id": "vev_6132d5e831ac0641"
+      },
+      "kind": "claim.asserted",
+      "actor_id": "agent:submission-v3-migration",
+      "target_id": "vcl_9ba852a45d8bc6f9dd024d85ff19e0b81317945f45e9eb073a89e44760a6b009",
+      "target_type": "claim",
+      "timestamp": "2026-08-17T18:35:19Z",
+      "record": {
+        "content": {
+          "actor": {
+            "id": "agent:submission-v3-migration",
+            "type": "agent"
+          },
+          "after_hash": "sha256:8e762a3a7dff021b90d15618d8197ed2454d457416a494ae57e90d2b00688fb4",
+          "authority_mode": "repository_authority",
+          "before_hash": "sha256:null",
+          "caveats": [
+            "This proves only the elementary sum_multiplicity identity, not the cubic Erdős 94 theorem or either other variant.",
+            "The Formal Conjectures build needs the mechanical Sym2.mk.uncurry to Sym2.mk API spelling change between its pinned Mathlib and lean-proofs.",
+            "No external source-owner review, human review, upstream acceptance, or external adoption occurred.",
+            "Producer checks are not Verification, Decision, or Standing."
+          ],
+          "kind": "claim.asserted",
+          "payload": {
+            "claim_id": "vcl_9ba852a45d8bc6f9dd024d85ff19e0b81317945f45e9eb073a89e44760a6b009",
+            "claim_root": "sha256:8e762a3a7dff021b90d15618d8197ed2454d457416a494ae57e90d2b00688fb4",
+            "decision_performer": {
+              "actor_class": "agent",
+              "actor_id": "agent:submission-v3-migration",
+              "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+              "schema": "vela.decision-performer.v1",
+              "session_ref": null
+            },
+            "proposal_id": "vpr_76b66eb81ceb198d",
+            "repository_after": "sha256:ec317d24a37314e71be6e74f9adf4ea34edb1ecb61aeb4578344a11132f91230",
+            "repository_before": "sha256:d8ff654b13215de6ee62c1d090c27ec62f7da286204f379881a5261e74e0cdb8"
+          },
+          "principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+          "reason": "Re-admit the exact intended Erdős 94 predecessor assertion only to preserve current correction truth in the compact v3 lineage. Its pre-v3 distance-multiplicity Verification remains recoverable at the signed rollback ref and is not re-attested over new bytes.",
+          "target": {
+            "id": "vcl_9ba852a45d8bc6f9dd024d85ff19e0b81317945f45e9eb073a89e44760a6b009",
+            "type": "claim"
+          },
+          "timestamp": "2026-08-17T18:35:19Z",
+          "transaction_id": "vtx_42549402ce81b67fb1b8c30f9d7b6e8b695e72e03ba84314769df6d8b0ae656c"
+        },
+        "id": "vev_82477af63e76141c",
+        "schema": "vela.event.v1"
+      }
+    },
+    {
+      "event": {
+        "authority_event_id": "vev_970d4fef876f9ce4",
+        "authority_event_root": "sha256:62f64b83f256ac9824d9b9bca2c5de1ba8de9cb84a43d6f4766d7fd809852bbd",
+        "semantic_event_id": "vev_12a7c721cb506211"
+      },
+      "kind": "review.accepted",
+      "actor_id": "agent:submission-v3-migration",
+      "target_id": "vpr_76b66eb81ceb198d",
+      "target_type": "proposal",
+      "timestamp": "2026-08-17T18:35:19Z",
+      "record": {
+        "content": {
+          "actor": {
+            "id": "agent:submission-v3-migration",
+            "type": "agent"
+          },
+          "after_hash": "sha256:null",
+          "authority_mode": "repository_authority",
+          "before_hash": "sha256:null",
+          "caveats": [],
+          "kind": "review.accepted",
+          "payload": {
+            "applied_event_id": "vev_6132d5e831ac0641",
+            "decision_performer": {
+              "actor_class": "agent",
+              "actor_id": "agent:submission-v3-migration",
+              "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+              "schema": "vela.decision-performer.v1",
+              "session_ref": null
+            },
+            "proposal_id": "vpr_76b66eb81ceb198d",
+            "proposal_kind": "claim.add",
+            "repository_after": "sha256:ec317d24a37314e71be6e74f9adf4ea34edb1ecb61aeb4578344a11132f91230",
+            "repository_before": "sha256:d8ff654b13215de6ee62c1d090c27ec62f7da286204f379881a5261e74e0cdb8",
+            "verdict": "accepted"
+          },
+          "principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+          "reason": "Re-admit the exact intended Erdős 94 predecessor assertion only to preserve current correction truth in the compact v3 lineage. Its pre-v3 distance-multiplicity Verification remains recoverable at the signed rollback ref and is not re-attested over new bytes.",
+          "target": {
+            "id": "vpr_76b66eb81ceb198d",
+            "type": "proposal"
+          },
+          "timestamp": "2026-08-17T18:35:19Z",
+          "transaction_id": "vtx_42549402ce81b67fb1b8c30f9d7b6e8b695e72e03ba84314769df6d8b0ae656c"
+        },
+        "id": "vev_970d4fef876f9ce4",
+        "schema": "vela.event.v1"
+      }
+    },
+    {
+      "event": {
+        "authority_event_id": "vev_a13da65173024317",
+        "authority_event_root": "sha256:f52a91f63be0c4a7b045b1e17fc5edef9778392363185fd990297c3038688ada",
+        "semantic_event_id": "vev_b5328546e6742152"
+      },
+      "kind": "review.accepted",
+      "actor_id": "agent:submission-v3-migration",
+      "target_id": "vpr_28cbee4e7d2ec91e",
+      "target_type": "proposal",
+      "timestamp": "2026-08-17T18:34:38Z",
+      "record": {
+        "content": {
+          "actor": {
+            "id": "agent:submission-v3-migration",
+            "type": "agent"
+          },
+          "after_hash": "sha256:null",
+          "authority_mode": "repository_authority",
+          "before_hash": "sha256:null",
+          "caveats": [],
+          "kind": "review.accepted",
+          "payload": {
+            "applied_event_id": "vev_aa272d8889d709e8",
+            "decision_performer": {
+              "actor_class": "agent",
+              "actor_id": "agent:submission-v3-migration",
+              "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+              "schema": "vela.decision-performer.v1",
+              "session_ref": null
+            },
+            "proposal_id": "vpr_28cbee4e7d2ec91e",
+            "proposal_kind": "claim.add",
+            "repository_after": "sha256:0f6f1ed9291aaa4b39230758ea0331ca93bcc1895b82c95e8b802b0b2ad9b3e3",
+            "repository_before": "sha256:74d86b44986ac4a1851cea2f75ee53385baab316daa237ce6b9bebeb9a3a7fb6",
+            "verdict": "accepted"
+          },
+          "principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+          "reason": "Accept the exact current bounded Erdős 887 replay assertion in the compact v3 lineage after a scoped fidelity check; this does not claim a proof or independent reproduction.",
+          "target": {
+            "id": "vpr_28cbee4e7d2ec91e",
+            "type": "proposal"
+          },
+          "timestamp": "2026-08-17T18:34:38Z",
+          "transaction_id": "vtx_164afc3a4f4294e695d857bd983d3fe75920fab2b0280207864af25ed04883c2"
+        },
+        "id": "vev_a13da65173024317",
+        "schema": "vela.event.v1"
+      }
+    },
+    {
+      "event": {
+        "authority_event_id": "vev_adb8a979e3f549b6",
+        "authority_event_root": "sha256:9310fa5b861ce1f90226c6ba4b4cd1491125d784b1d03ea365319fb1676d21e0",
+        "semantic_event_id": "vev_b2787993800e9001"
+      },
+      "kind": "claim.superseded",
+      "actor_id": "agent:submission-v3-migration",
+      "target_id": "vcl_9ba852a45d8bc6f9dd024d85ff19e0b81317945f45e9eb073a89e44760a6b009",
+      "target_type": "claim",
+      "timestamp": "2026-08-17T18:48:36Z",
+      "record": {
+        "content": {
+          "actor": {
+            "id": "agent:submission-v3-migration",
+            "type": "agent"
+          },
+          "after_hash": "sha256:aedff5078a30bea1f8a51c1188f2f0aa9bc43da06c894706297d8bd7a4830767",
+          "authority_mode": "repository_authority",
+          "before_hash": "sha256:8e762a3a7dff021b90d15618d8197ed2454d457416a494ae57e90d2b00688fb4",
+          "caveats": [
+            "This proves only the elementary sum_multiplicity identity, not the cubic Erdős 94 theorem or either other variant.",
+            "The Formal Conjectures build needs the mechanical Sym2.mk.uncurry to Sym2.mk API spelling change between its pinned Mathlib and lean-proofs.",
+            "No external source-owner review, human review, upstream acceptance, or external adoption occurred.",
+            "Producer checks are not Verification, Decision, or Standing.",
+            "The predecessor's distance_multiplicity_double_counting Verification remains recoverable at rollback/submission-v2-coh-00 (508b39a) and is not re-attested over the compact v3 bytes."
+          ],
+          "kind": "claim.superseded",
+          "payload": {
+            "claim_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+            "claim_root": "sha256:aedff5078a30bea1f8a51c1188f2f0aa9bc43da06c894706297d8bd7a4830767",
+            "decision_performer": {
+              "actor_class": "agent",
+              "actor_id": "agent:submission-v3-migration",
+              "authority_principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+              "schema": "vela.decision-performer.v1",
+              "session_ref": null
+            },
+            "proposal_id": "vpr_d7253663013962ba",
+            "repository_after": "sha256:45640c5eea54693df444eada6dd1a7c1f5a4b4ef266fddf79cf51d083233ebba",
+            "repository_before": "sha256:d48ea1c5bd4ac89149733e37b17b0baa8ae9b79b10539c911e8e98cf07ee168c"
+          },
+          "principal_id": "local:device-sha256:67fbb8e56377e6868e9f941524e0bf39cfb4fd2a4bfdd25c2edb93fc82f86213|uid:501",
+          "reason": "Accept the exact current Erdős 94 assertion in the compact v3 lineage after independent scoped checks of occurrence mapping and correction scope. Preserve the correction and all nonclaims without changing the scientific assertion.",
+          "target": {
+            "id": "vcl_9ba852a45d8bc6f9dd024d85ff19e0b81317945f45e9eb073a89e44760a6b009",
+            "type": "claim"
+          },
+          "timestamp": "2026-08-17T18:48:36Z",
+          "transaction_id": "vtx_1d230f64e6ee1ab9595adbacbb9988ab2a06afe54c69b79dc6597690c1ed67ca"
+        },
+        "id": "vev_adb8a979e3f549b6",
+        "schema": "vela.event.v1"
+      }
+    }
+  ],
+  "transitions": [
+    {
+      "authority_event_kind": "claim.superseded",
+      "relation_kind": "corrects",
+      "predecessor_claim_id": "vcl_1da4282b752192c52c2a985476fc13bfe460da01e4fe26c5543b7acb37d8b120",
+      "predecessor_claim_root": "sha256:470072c1a598409aa8d27e420de7e24ea66dce94cf5fb3fcb97d9578d8991c63",
+      "successor_claim_id": "vcl_b9c6915de55e15c69d06b9aeed786b0e632986374a347d77ff447ad244f67a2e",
+      "successor_claim_root": "sha256:58f97ba8a90d23d4655c4b71051c6bdd4723c0454f31f4ed3cb3e95b0a6c8b15",
+      "proposal_id": "vpr_2c3fe5888b00366a",
+      "decision_event": {
+        "authority_event_id": "vev_4a63ac7192f2a992",
+        "authority_event_root": "sha256:3f60b7bfeb48a6241c8f01d690ba9d424e4c28f5b2e354aa152ea077af336f17",
+        "semantic_event_id": "vev_15632b53fb7fd674"
+      },
+      "applied_event": {
+        "authority_event_id": "vev_78692c4be0e4d315",
+        "authority_event_root": "sha256:f9e4f4468ec9af9be660cba5f70095043ad36b2609b8b724d0780b47982bde86",
+        "semantic_event_id": "vev_b1a3213862d0bd53"
+      }
+    },
+    {
+      "authority_event_kind": "claim.superseded",
+      "relation_kind": "corrects",
+      "predecessor_claim_id": "vcl_9ba852a45d8bc6f9dd024d85ff19e0b81317945f45e9eb073a89e44760a6b009",
+      "predecessor_claim_root": "sha256:8e762a3a7dff021b90d15618d8197ed2454d457416a494ae57e90d2b00688fb4",
+      "successor_claim_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+      "successor_claim_root": "sha256:aedff5078a30bea1f8a51c1188f2f0aa9bc43da06c894706297d8bd7a4830767",
+      "proposal_id": "vpr_d7253663013962ba",
+      "decision_event": {
+        "authority_event_id": "vev_6760e3d5ca23ae40",
+        "authority_event_root": "sha256:a04af2d5dd136ef3e5347403b0c217ed0a5453a6c0b18678e4a7f11d688c0f31",
+        "semantic_event_id": "vev_aefe96c39e957fef"
+      },
+      "applied_event": {
+        "authority_event_id": "vev_adb8a979e3f549b6",
+        "authority_event_root": "sha256:9310fa5b861ce1f90226c6ba4b4cd1491125d784b1d03ea365319fb1676d21e0",
+        "semantic_event_id": "vev_b2787993800e9001"
+      }
+    },
+    {
+      "authority_event_kind": "claim.superseded",
+      "relation_kind": "corrects",
+      "predecessor_claim_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+      "predecessor_claim_root": "sha256:aedff5078a30bea1f8a51c1188f2f0aa9bc43da06c894706297d8bd7a4830767",
+      "successor_claim_id": "vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+      "successor_claim_root": "sha256:aaaf6ebbf510ad08e6376c5958d23f4eb7704944f7d37916eee4ae253e809b3b",
+      "proposal_id": "vpr_b5ca521d2a892eee",
+      "decision_event": {
+        "authority_event_id": "vev_5d0ab1bf4dc7df99",
+        "authority_event_root": "sha256:f41713fe1c360035a7ff5f8587582289c74a743dec0a82d5e4a0ccd4d7689045",
+        "semantic_event_id": "vev_1bb01953aec0d5ca"
+      },
+      "applied_event": {
+        "authority_event_id": "vev_4de946c32ad32331",
+        "authority_event_root": "sha256:549a092971512300aa7f01e35905f268e44cd54b4afc839a60483935958bfa10",
+        "semantic_event_id": "vev_e04b25b2a4c02a15"
+      }
+    },
+    {
+      "authority_event_kind": "claim.asserted",
+      "relation_kind": null,
+      "predecessor_claim_id": null,
+      "predecessor_claim_root": null,
+      "successor_claim_id": "vcl_8ab5a917ccc077f1971f630bae293a0e5bbed3156320e0b7223ffbd75d7b0464",
+      "successor_claim_root": "sha256:ba44090062b79a6232cc5844e0fe4f3b11e63ae3b65bb971ff3fd9fc6ffe0a8a",
+      "proposal_id": "vpr_28cbee4e7d2ec91e",
+      "decision_event": {
+        "authority_event_id": "vev_a13da65173024317",
+        "authority_event_root": "sha256:f52a91f63be0c4a7b045b1e17fc5edef9778392363185fd990297c3038688ada",
+        "semantic_event_id": "vev_b5328546e6742152"
+      },
+      "applied_event": {
+        "authority_event_id": "vev_78f4df2422924722",
+        "authority_event_root": "sha256:14bde9dc68c3af4756f6e5e4fe9910ca1095aeeeb6b9f3d787aeb4e6ab672948",
+        "semantic_event_id": "vev_aa272d8889d709e8"
+      }
+    }
+  ],
+  "correction_impacts": [
+    {
+      "command": "correction impact",
+      "ok": true,
+      "predecessor_retired": true,
+      "projection": {
+        "affected_claims": [],
+        "bounds": {
+          "complete_claim_set": true,
+          "complete_relation_set": true,
+          "max_claims": 5,
+          "max_relations": 0
+        },
+        "diagnostics": [],
+        "fixture_id": "3d012325-3768-4b95-a385-c94e9f2a57a6:vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+        "lost_support_routes": [],
+        "repair_obligations": [],
+        "retained_predecessor": {
+          "claim_id": "vcl_9ba852a45d8bc6f9dd024d85ff19e0b81317945f45e9eb073a89e44760a6b009",
+          "claim_root": "sha256:8e762a3a7dff021b90d15618d8197ed2454d457416a494ae57e90d2b00688fb4"
+        },
+        "schema": "vela.correction-impact-projection.v1",
+        "status": "complete",
+        "surviving_support_routes": [],
+        "transition": {
+          "kind": "correct_claim",
+          "predecessor": {
+            "claim_id": "vcl_9ba852a45d8bc6f9dd024d85ff19e0b81317945f45e9eb073a89e44760a6b009",
+            "claim_root": "sha256:8e762a3a7dff021b90d15618d8197ed2454d457416a494ae57e90d2b00688fb4"
+          },
+          "successor": {
+            "claim_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+            "claim_root": "sha256:aedff5078a30bea1f8a51c1188f2f0aa9bc43da06c894706297d8bd7a4830767"
+          }
+        },
+        "unaffected_claims": [
+          {
+            "claim_id": "vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+            "claim_root": "sha256:aaaf6ebbf510ad08e6376c5958d23f4eb7704944f7d37916eee4ae253e809b3b"
+          },
+          {
+            "claim_id": "vcl_8ab5a917ccc077f1971f630bae293a0e5bbed3156320e0b7223ffbd75d7b0464",
+            "claim_root": "sha256:ba44090062b79a6232cc5844e0fe4f3b11e63ae3b65bb971ff3fd9fc6ffe0a8a"
+          },
+          {
+            "claim_id": "vcl_b9c6915de55e15c69d06b9aeed786b0e632986374a347d77ff447ad244f67a2e",
+            "claim_root": "sha256:58f97ba8a90d23d4655c4b71051c6bdd4723c0454f31f4ed3cb3e95b0a6c8b15"
+          }
+        ]
+      },
+      "projection_root": "sha256:97798ec8edf349fbd5595aebb9d8f7dd6cfe47d8a396ed1fa254107ce8f57c47",
+      "relations_excluded": {
+        "endpoint_not_held": [],
+        "self_loop": [],
+        "unmapped_kind": [
+          {
+            "count": 3,
+            "kind": "corrects"
+          }
+        ]
+      },
+      "repair_conditions": [],
+      "repository_id": "3d012325-3768-4b95-a385-c94e9f2a57a6",
+      "repository_root": "sha256:a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4",
+      "schema": "vela.correction-impact.v1",
+      "successor_standing": "superseded"
+    },
+    {
+      "command": "correction impact",
+      "ok": true,
+      "predecessor_retired": true,
+      "projection": {
+        "affected_claims": [],
+        "bounds": {
+          "complete_claim_set": true,
+          "complete_relation_set": true,
+          "max_claims": 4,
+          "max_relations": 0
+        },
+        "diagnostics": [],
+        "fixture_id": "3d012325-3768-4b95-a385-c94e9f2a57a6:vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+        "lost_support_routes": [],
+        "repair_obligations": [],
+        "retained_predecessor": {
+          "claim_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+          "claim_root": "sha256:aedff5078a30bea1f8a51c1188f2f0aa9bc43da06c894706297d8bd7a4830767"
+        },
+        "schema": "vela.correction-impact-projection.v1",
+        "status": "complete",
+        "surviving_support_routes": [],
+        "transition": {
+          "kind": "correct_claim",
+          "predecessor": {
+            "claim_id": "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+            "claim_root": "sha256:aedff5078a30bea1f8a51c1188f2f0aa9bc43da06c894706297d8bd7a4830767"
+          },
+          "successor": {
+            "claim_id": "vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+            "claim_root": "sha256:aaaf6ebbf510ad08e6376c5958d23f4eb7704944f7d37916eee4ae253e809b3b"
+          }
+        },
+        "unaffected_claims": [
+          {
+            "claim_id": "vcl_8ab5a917ccc077f1971f630bae293a0e5bbed3156320e0b7223ffbd75d7b0464",
+            "claim_root": "sha256:ba44090062b79a6232cc5844e0fe4f3b11e63ae3b65bb971ff3fd9fc6ffe0a8a"
+          },
+          {
+            "claim_id": "vcl_b9c6915de55e15c69d06b9aeed786b0e632986374a347d77ff447ad244f67a2e",
+            "claim_root": "sha256:58f97ba8a90d23d4655c4b71051c6bdd4723c0454f31f4ed3cb3e95b0a6c8b15"
+          }
+        ]
+      },
+      "projection_root": "sha256:393837a1e6efdab5b30ceaed467d52d1b39a479f5924eb59eb850efcc7cb9623",
+      "relations_excluded": {
+        "endpoint_not_held": [],
+        "self_loop": [],
+        "unmapped_kind": [
+          {
+            "count": 3,
+            "kind": "corrects"
+          }
+        ]
+      },
+      "repair_conditions": [],
+      "repository_id": "3d012325-3768-4b95-a385-c94e9f2a57a6",
+      "repository_root": "sha256:a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4",
+      "schema": "vela.correction-impact.v1",
+      "successor_standing": "accepted"
+    },
+    {
+      "command": "correction impact",
+      "ok": true,
+      "predecessor_retired": true,
+      "projection": {
+        "affected_claims": [],
+        "bounds": {
+          "complete_claim_set": true,
+          "complete_relation_set": true,
+          "max_claims": 4,
+          "max_relations": 0
+        },
+        "diagnostics": [],
+        "fixture_id": "3d012325-3768-4b95-a385-c94e9f2a57a6:vcl_b9c6915de55e15c69d06b9aeed786b0e632986374a347d77ff447ad244f67a2e",
+        "lost_support_routes": [],
+        "repair_obligations": [],
+        "retained_predecessor": {
+          "claim_id": "vcl_1da4282b752192c52c2a985476fc13bfe460da01e4fe26c5543b7acb37d8b120",
+          "claim_root": "sha256:470072c1a598409aa8d27e420de7e24ea66dce94cf5fb3fcb97d9578d8991c63"
+        },
+        "schema": "vela.correction-impact-projection.v1",
+        "status": "complete",
+        "surviving_support_routes": [],
+        "transition": {
+          "kind": "correct_claim",
+          "predecessor": {
+            "claim_id": "vcl_1da4282b752192c52c2a985476fc13bfe460da01e4fe26c5543b7acb37d8b120",
+            "claim_root": "sha256:470072c1a598409aa8d27e420de7e24ea66dce94cf5fb3fcb97d9578d8991c63"
+          },
+          "successor": {
+            "claim_id": "vcl_b9c6915de55e15c69d06b9aeed786b0e632986374a347d77ff447ad244f67a2e",
+            "claim_root": "sha256:58f97ba8a90d23d4655c4b71051c6bdd4723c0454f31f4ed3cb3e95b0a6c8b15"
+          }
+        },
+        "unaffected_claims": [
+          {
+            "claim_id": "vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+            "claim_root": "sha256:aaaf6ebbf510ad08e6376c5958d23f4eb7704944f7d37916eee4ae253e809b3b"
+          },
+          {
+            "claim_id": "vcl_8ab5a917ccc077f1971f630bae293a0e5bbed3156320e0b7223ffbd75d7b0464",
+            "claim_root": "sha256:ba44090062b79a6232cc5844e0fe4f3b11e63ae3b65bb971ff3fd9fc6ffe0a8a"
+          }
+        ]
+      },
+      "projection_root": "sha256:e26ee63aef17aa9826bec5bd83d4b9f3ad50fe7c1f4e1e74a18fe78df10c79c2",
+      "relations_excluded": {
+        "endpoint_not_held": [],
+        "self_loop": [],
+        "unmapped_kind": [
+          {
+            "count": 2,
+            "kind": "corrects"
+          }
+        ]
+      },
+      "repair_conditions": [],
+      "repository_id": "3d012325-3768-4b95-a385-c94e9f2a57a6",
+      "repository_root": "sha256:a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4",
+      "schema": "vela.correction-impact.v1",
+      "successor_standing": "accepted"
+    }
+  ],
+  "decision_inbox": {
+    "entries": [],
+    "order": "protocol_ready_first_then_created_at_asc_then_proposal_id",
+    "projection_root": "sha256:93ce4f9dc6d9b62ccf09eac8e4ff214afc24cb817a45f2311ec9999d79bfcdc1",
+    "repository_id": "3d012325-3768-4b95-a385-c94e9f2a57a6",
+    "repository_root": "sha256:a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4",
+    "schema": "vela.decision-inbox.v3"
+  },
+  "handoff": {
+    "accepted_claim_ids": [
+      "vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+      "vcl_8ab5a917ccc077f1971f630bae293a0e5bbed3156320e0b7223ffbd75d7b0464",
+      "vcl_b9c6915de55e15c69d06b9aeed786b0e632986374a347d77ff447ad244f67a2e"
+    ],
+    "active_pending_claim_ids": [],
+    "inactive_unassessed_claim_ids": [],
+    "retired_claim_ids": [
+      "vcl_1da4282b752192c52c2a985476fc13bfe460da01e4fe26c5543b7acb37d8b120",
+      "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+      "vcl_9ba852a45d8bc6f9dd024d85ff19e0b81317945f45e9eb073a89e44760a6b009"
+    ],
+    "pending_proposal_ids": [],
+    "correction_successor_ids": [
+      "vcl_4cae0d412a95d1965b927e1f7dbaa4245f5b9c3f84c5913e1d6a7880d6349165",
+      "vcl_6763ba247d40303408a268b226c3e27d7a753b63fca3eb0de99619d509346bfb",
+      "vcl_b9c6915de55e15c69d06b9aeed786b0e632986374a347d77ff447ad244f67a2e"
+    ],
+    "exact_next_actions": [
+      {
+        "kind": "submission",
+        "command": "vela submit --repo . --help",
+        "note": "Submit bounded evidence directly."
+      }
+    ],
+    "failed_routes": [],
+    "nonclaims": [
+      "This read projection does not execute a Method or reproduce scientific evidence.",
+      "A Submission, Verification, Git commit, or projection does not change Standing.",
+      "Only an authorized Repository Decision changes accepted Standing."
+    ]
+  }
+}

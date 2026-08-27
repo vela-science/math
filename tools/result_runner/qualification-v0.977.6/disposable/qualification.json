@@ -1,0 +1,49 @@
+{
+  "authority_effect": "none",
+  "classification": {
+    "benchmark_denominator": false,
+    "provider_requests": 0,
+    "scientific_claim": false,
+    "scientific_state_changed": false
+  },
+  "environment": {
+    "math_read_repository_path": "/private/tmp/vela-math-0.977.6-read-full",
+    "mutable_timestamps_retained": false,
+    "private_or_credential_paths_retained": false,
+    "raw_test_logs_retained": false
+  },
+  "gates": {
+    "compileall": "pass",
+    "partial_clone_exact_read": {
+      "outcome": "fail_closed",
+      "reason": "Exact offline reads reject partial-clone/promisor storage. A complete clean clone was used for the retained receipts."
+    },
+    "ruff_0_5_4_check": {
+      "findings": [
+        "tools/result_runner/next_campaign_v1/runtime.py:27:E402",
+        "tools/result_runner/tests/test_next_campaign_v1.py:15:E402",
+        "tools/result_runner/tests/test_next_campaign_v1.py:16:E402"
+      ],
+      "outcome": "fail_preexisting_unchanged_out_of_scope"
+    },
+    "ruff_0_5_4_format": "pass_8_files",
+    "signed_result_runner_tests": {
+      "failed": 0,
+      "passed": 30,
+      "skipped": 0,
+      "status": "pass",
+      "vela_binary_sha256": "5b21415c98503b20518c0e68714b0b4f4b3c371525ea110563b89a53a0d3dbb3"
+    }
+  },
+  "limitations": [
+    "No provider inference or benchmark session was run.",
+    "The historical one-request qualification remains historical and was not rerun.",
+    "The unchanged Ruff E402 findings are not represented as a passing lint gate."
+  ],
+  "math_base": {
+    "commit": "cf6d76687b205a39e2515e9fec7087c819454d2f",
+    "tree": "f8e9e8d3b99226ed6bba62026396d5f17ea9351e"
+  },
+  "schema": "vela.math-consumer-qualification.v1",
+  "status": "pass_bounded_consumer_documentation_qualification"
+}

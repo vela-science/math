@@ -1,0 +1,23 @@
+{
+  "authority_keyset_root": "sha256:370c9924a2e25716403b7f771d5ebf90e86f6ac96ad4351063e02e5a3f974081",
+  "authority_model_root": "sha256:a18d5c0938a934d73d297ae073c2fae7bf045462b4d8e9a3fc7f66b4ad5366aa",
+  "command": "replay",
+  "counts": {
+    "accepted_claims": 3,
+    "artifacts": 10,
+    "pending_claims": 0,
+    "proposal_withdrawals": 0,
+    "proposals": 6,
+    "submissions": 6,
+    "verifications": 6
+  },
+  "git_commit": "cf6d76687b205a39e2515e9fec7087c819454d2f",
+  "git_tree": "f8e9e8d3b99226ed6bba62026396d5f17ea9351e",
+  "ok": true,
+  "origin_id": "vro_a6a12da8762f1252",
+  "origin_root": "sha256:a6a12da8762f1252afe1ac1c75361ef54c583924a2b88474232ead6227873dca",
+  "repository_id": "3d012325-3768-4b95-a385-c94e9f2a57a6",
+  "repository_path": "/private/tmp/vela-math-0.977.6-read-full",
+  "repository_root": "sha256:a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4",
+  "schema": "vela.repository-verification.v3"
+}

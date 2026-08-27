@@ -5,12 +5,12 @@
     "scientific_state_changed": false
   },
   "current_vela_pin": {
-    "binary_sha256": "06f912d107d29e4ce1dadd19bf7ef849ec42d7e62cbc9332c9807e6b8c9bd05e",
-    "path": "tools/result_runner/qualification-v0.977.4/PIN.json",
+    "binary_sha256": "5b21415c98503b20518c0e68714b0b4f4b3c371525ea110563b89a53a0d3dbb3",
+    "path": "tools/result_runner/qualification-v0.977.6/PIN.json",
     "platform": "macos/aarch64",
-    "source_commit": "1a2e0328620b4e8c4584c3d4baf257adb11f3d45",
-    "status": "pass_pending_independent_review",
-    "tag": "v0.977.4"
+    "source_commit": "9ac8e7730bfb63a3b8eb1d2e1d91081c3e703c59",
+    "status": "pass_bounded_consumer_documentation_qualification",
+    "tag": "v0.977.6"
   },
   "correction_validation": {
     "candidate_inference_repeated": false,
