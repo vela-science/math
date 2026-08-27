@@ -1,0 +1,171 @@
+# Public, credential-free qualification for the Math Repository. The Vela read
+# boundary still requires an independently selected sequence-one authority
+# root, so the accepted root is installed only into the disposable hosted
+# runner account. This never writes Math records, Decisions, Events, or Standing.
+name: Math replay and domain
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: math-replay-domain-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  qualify:
+    runs-on: macos-15
+    timeout-minutes: 20
+    env:
+      VELA_VERSION: "0.977.6"
+      VELA_ARCHIVE_SHA256: 62ea9006e086b40f0431b2ce2cf74827518f37dc58e329353920083f50dad874
+      VELA_BINARY_SHA256: 5b21415c98503b20518c0e68714b0b4f4b3c371525ea110563b89a53a0d3dbb3
+      MATH_REPOSITORY_ID: 3d012325-3768-4b95-a385-c94e9f2a57a6
+      MATH_FIRST_AUTHORITY_RECORD_ROOT: sha256:efae3e02b5be6dfccf6701ebe26f87f00bb64f5b4372674e572a633844d95469
+      MATH_REPOSITORY_ROOT: sha256:a956b84c437202e5a02cc9e036a621bd14a302b34a75758115730bdbb77c52a4
+      MATH_AUTHORITY_KEYSET_ROOT: sha256:370c9924a2e25716403b7f771d5ebf90e86f6ac96ad4351063e02e5a3f974081
+      MATH_AUTHORITY_POLICY_ROOT: sha256:a18d5c0938a934d73d297ae073c2fae7bf045462b4d8e9a3fc7f66b4ad5366aa
+    steps:
+      - name: Checkout the complete Math Repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Install the accepted Python tooling
+        uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          version: "0.11.32"
+          python-version: "3.13"
+          enable-cache: false
+
+      - name: Acquire and verify signed Vela
+        run: |
+          release_dir="$RUNNER_TEMP/vela-release"
+          retained=tools/result_runner/qualification-v0.977.6/release
+          mkdir -p "$release_dir"
+          base="https://github.com/vela-science/vela/releases/download/v${VELA_VERSION}"
+          curl --fail --location --proto '=https' --tlsv1.2 --retry 3 \
+            --output "$release_dir/vela-macos-aarch64.zip" \
+            "$base/vela-macos-aarch64.zip"
+          curl --fail --location --proto '=https' --tlsv1.2 --retry 3 \
+            --output "$release_dir/vela-macos-aarch64.zip.release-manifest.json" \
+            "$base/vela-macos-aarch64.zip.release-manifest.json"
+          curl --fail --location --proto '=https' --tlsv1.2 --retry 3 \
+            --output "$release_dir/vela-macos-aarch64.zip.release-manifest.json.sig" \
+            "$base/vela-macos-aarch64.zip.release-manifest.json.sig"
+          curl --fail --location --proto '=https' --tlsv1.2 --retry 3 \
+            --output "$release_dir/vela-macos-aarch64.zip.sha256" \
+            "$base/vela-macos-aarch64.zip.sha256"
+          cmp "$release_dir/vela-macos-aarch64.zip.release-manifest.json" \
+            "$retained/vela-macos-aarch64.zip.release-manifest.json"
+          cmp "$release_dir/vela-macos-aarch64.zip.release-manifest.json.sig" \
+            "$retained/vela-macos-aarch64.zip.release-manifest.json.sig"
+          cmp "$release_dir/vela-macos-aarch64.zip.sha256" \
+            "$retained/vela-macos-aarch64.zip.sha256"
+          ssh-keygen -Y verify \
+            -f "$retained/allowed_signers" \
+            -I release@vela.space \
+            -n vela-release \
+            -s "$release_dir/vela-macos-aarch64.zip.release-manifest.json.sig" \
+            < "$release_dir/vela-macos-aarch64.zip.release-manifest.json"
+          test "$(shasum -a 256 "$release_dir/vela-macos-aarch64.zip" | awk '{print $1}')" \
+            = "$VELA_ARCHIVE_SHA256"
+          (cd "$release_dir" && shasum -a 256 -c vela-macos-aarch64.zip.sha256)
+          ditto -x -k "$release_dir/vela-macos-aarch64.zip" "$release_dir"
+          test "$(shasum -a 256 "$release_dir/vela" | awk '{print $1}')" \
+            = "$VELA_BINARY_SHA256"
+          test "$("$release_dir/vela" --version)" = "vela ${VELA_VERSION}"
+
+      - name: Install the accepted authority pin in the disposable runner account
+        env:
+          VELA_EPHEMERAL_ACCOUNT_HOME: "1"
+        run: |
+          trust="$HOME/.vela/trust/authorities/${MATH_REPOSITORY_ID}.json"
+          test ! -e "$trust"
+          VELA_ADVICE=0 "$RUNNER_TEMP/vela-release/vela" authority trust pin . \
+            --record-root "$MATH_FIRST_AUTHORITY_RECORD_ROOT" \
+            --json > "$RUNNER_TEMP/math-trust-pin.json"
+          test -f "$trust"
+
+      - name: Strict repository read, replay, and deterministic projection
+        run: |
+          vela="$RUNNER_TEMP/vela-release/vela"
+          VELA_ADVICE=0 "$vela" status . --json > "$RUNNER_TEMP/status.json"
+          VELA_ADVICE=0 "$vela" replay . --json > "$RUNNER_TEMP/replay.json"
+          VELA_ADVICE=0 "$vela" projection . --json > "$RUNNER_TEMP/projection-1.json"
+          VELA_ADVICE=0 "$vela" projection . --json > "$RUNNER_TEMP/projection-2.json"
+          cmp "$RUNNER_TEMP/projection-1.json" "$RUNNER_TEMP/projection-2.json"
+          jq -e \
+            --arg repository "$MATH_REPOSITORY_ROOT" \
+            --arg keyset "$MATH_AUTHORITY_KEYSET_ROOT" \
+            --arg policy "$MATH_AUTHORITY_POLICY_ROOT" \
+            '.ok == true and
+             .integrity.replay == "verified" and
+             .integrity.strict == "pass" and
+             .integrity.blocker_count == 0 and
+             .roots.repository == $repository and
+             .roots.authority_keyset == $keyset and
+             .roots.authority_policy == $policy and
+             .counts.accepted_claims == 3 and
+             .counts.pending_review == 0' \
+            "$RUNNER_TEMP/status.json"
+          jq -e \
+            --arg repository "$MATH_REPOSITORY_ROOT" \
+            --arg keyset "$MATH_AUTHORITY_KEYSET_ROOT" \
+            --arg policy "$MATH_AUTHORITY_POLICY_ROOT" \
+            '.ok == true and
+             .repository_root == $repository and
+             .authority_keyset_root == $keyset and
+             .authority_model_root == $policy and
+             .counts.accepted_claims == 3 and
+             .counts.pending_claims == 0' \
+            "$RUNNER_TEMP/replay.json"
+          jq -e \
+            --arg repository "$MATH_REPOSITORY_ROOT" \
+            --arg keyset "$MATH_AUTHORITY_KEYSET_ROOT" \
+            --arg policy "$MATH_AUTHORITY_POLICY_ROOT" \
+            '.ok == true and
+             .authority_effect == "none" and
+             .repository.repository_root == $repository and
+             .repository.authority_keyset_root == $keyset and
+             .repository.authority_policy_root == $policy and
+             .counts.accepted_claims == 3 and
+             .counts.pending_review == 0' \
+            "$RUNNER_TEMP/projection-1.json"
+
+      - name: Complete Result Runner domain suite
+        env:
+          VELA_TEST_BIN: ${{ runner.temp }}/vela-release/vela
+          VELA_TEST_SHA256: 5b21415c98503b20518c0e68714b0b4f4b3c371525ea110563b89a53a0d3dbb3
+        run: |
+          PYTHONDONTWRITEBYTECODE=1 \
+            python3 -m unittest discover -s tools/result_runner/tests -v
+
+      - name: Qualification preimages and Python hygiene
+        run: |
+          find tools/result_runner/qualification-v0.977.6 \
+            -type f -name '*.json' -print0 | xargs -0 -n1 jq empty
+          jq empty tools/result_runner/QUALIFICATION.json
+          (cd tools/result_runner/qualification-v0.977.6/math-read && \
+            shasum -a 256 -c SHA256SUMS)
+          PYTHONPYCACHEPREFIX="$RUNNER_TEMP/pycache" \
+            python3 -m compileall -q tools/result_runner
+          uvx ruff@0.5.4 format --check tools/result_runner
+
+      - name: Authority and patch hygiene
+        run: |
+          test "$(jq -r .authority.authority_effect \
+            tools/result_runner/qualification-v0.977.6/PIN.json)" = none
+          test "$(jq -r .authority.decision_or_event_created \
+            tools/result_runner/qualification-v0.977.6/PIN.json)" = false
+          test "$(jq -r .authority.standing_changed \
+            tools/result_runner/qualification-v0.977.6/PIN.json)" = false
+          git diff --check
+          git diff --exit-code
+          test -z "$(git status --porcelain --untracked-files=all)"
